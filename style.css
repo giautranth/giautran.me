@@ -1836,122 +1836,6 @@ button, select, input, textarea {
   text-align: left;
 }
 
-/* ================================================================
-   INTERACTIVE MAP (Slide 6, 12, 13)
-   ================================================================ */
-.map-container {
-  background: var(--white);
-  border: 1px solid var(--slate-200);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  box-shadow: var(--shadow-md);
-}
-
-.map-legend {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 28px;
-}
-/* Dots defined in map legend */
-.legend-dot.active { background: var(--primary-red); border-color: var(--primary-red); box-shadow: 0 0 6px var(--primary-red-glow); }
-.legend-dot.building { background: #f59e0b; border-color: #f59e0b; }
-.legend-dot.invest { background: #38bdf8; border-color: #38bdf8; }
-.legend-dot.planned { background: #a78bfa; border-color: #a78bfa; }
-
-.map-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 32px;
-  align-items: start;
-}
-
-.map-wrapper {
-  background: var(--dark-bg);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-.svg-map {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.svg-zone {
-  cursor: pointer;
-  outline: none;
-}
-.svg-zone .zone-hover-rect {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.svg-zone:hover .zone-hover-rect, .svg-zone:focus .zone-hover-rect {
-  opacity: 1;
-}
-.svg-zone .zone-bg {
-  transition: filter 0.3s;
-}
-.svg-zone:hover .zone-bg, .svg-zone:focus .zone-bg {
-  filter: brightness(1.25);
-}
-
-/* Glassmorphism Zone Details card */
-.map-detail-card {
-  background: linear-gradient(135deg, var(--secondary-blue-dark) 0%, var(--dark-bg) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 32px;
-  border-radius: var(--radius-md);
-  color: var(--white);
-  box-shadow: var(--shadow-lg);
-}
-.map-detail-card h3 {
-  font-family: var(--font-headings);
-  font-size: 1.15rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-.status-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.72rem;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-.md-desc {
-  font-size: 0.88rem;
-  color: var(--slate-300);
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-.md-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-.md-stat-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-sm);
-}
-.md-stat-label {
-  font-size: 0.78rem;
-  color: var(--slate-400);
-}
-.md-stat-val {
-  font-size: 0.78rem;
-  font-weight: 700;
-}
 
 /* ================================================================
    TOUR 3D (Slide 18, 19)
@@ -2931,9 +2815,7 @@ button, select, input, textarea {
   .awards-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .map-layout {
-    grid-template-columns: 1fr;
-  }
+
   .tour-grid {
     grid-template-columns: 1fr;
   }

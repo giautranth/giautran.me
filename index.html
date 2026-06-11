@@ -338,17 +338,14 @@
           <p class="founder-desc-p">
             Bà Trần Thị Lâm là nhà sáng lập và Chủ tịch Tập đoàn Hoa Lâm, doanh nhân tiên phong trong lĩnh vực xã hội hóa y tế tại Việt Nam. Từ khởi nghiệp trong thương mại và sản xuất, bà đã dẫn dắt Hoa Lâm trở thành tập đoàn đa ngành, đặc biệt nổi bật trong đầu tư y tế kỹ thuật cao. Với tầm nhìn nhân văn và bền bỉ, bà luôn hướng tới sứ mệnh mang dịch vụ y tế chất lượng quốc tế đến gần hơn với người dân Việt Nam.
           </p>
-          <div class="founder-quote">
-            <p>“Sức khỏe là tài sản quý giá nhất của con người. Mang dịch vụ y tế chuẩn quốc tế về phục vụ đồng bào với chi phí hợp lý chính là tâm nguyện lớn nhất cuộc đời tôi.”</p>
-            <cite>— Madam Trần Thị Lâm</cite>
-          </div>
+
         </div>
       </div>
 
       <!-- Infographic Timeline Madam Lâm (Slide 11) -->
       <div class="founder-timeline-section reveal">
         <h3 class="timeline-title">Hành trình cống hiến & Thành tựu</h3>
-        <p class="timeline-subtitle">Infographic dòng thời gian phát triển của Madam Trần Thị Lâm</p>
+
         
         <div class="vertical-timeline" id="founderTimeline">
           <div class="v-line-path"></div>
@@ -661,138 +658,7 @@
     </div>
   </section>
 
-  <!-- ========== BẢN ĐỒ TƯƠNG TÁC 37.5 HA (Slide 6, 12, 13) ========== -->
-  <section class="section interactive-map-section" id="interactive-map">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-tag">Mặt Bằng Quy Hoạch</div>
-        <h2 class="section-title">Bản Đồ Phân Khu 37,5 Ha</h2>
-        <p class="section-desc">Khám phá tổng thể khu y tế kỹ thuật cao Hoa Lâm - Shangrila. Bấm vào từng phân khu trên bản đồ để xem chi tiết dự án.</p>
-      </div>
 
-      <div class="map-container reveal">
-        <div class="map-legend">
-          <div class="legend-item"><span class="legend-dot active"></span> Đang hoạt động</div>
-          <div class="legend-item"><span class="legend-dot building"></span> Đang xây dựng</div>
-          <div class="legend-item"><span class="legend-dot invest"></span> Kêu gọi đầu tư</div>
-          <div class="legend-item"><span class="legend-dot planned"></span> Quy hoạch</div>
-        </div>
-
-        <div class="map-layout">
-          <!-- Vector Map SVG -->
-          <div class="map-wrapper">
-            <svg viewBox="0 0 900 520" class="svg-map" id="healthcareMap">
-              <defs>
-                <linearGradient id="svgMapBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#0f1d3a;stop-opacity:1" />
-                  <stop offset="100%" style="stop-color:#142952;stop-opacity:1" />
-                </linearGradient>
-              </defs>
-              <rect width="900" height="520" fill="url(#svgMapBg)" rx="16"/>
-              
-              <!-- Roads -->
-              <line x1="0" y1="260" x2="900" y2="260" stroke="#1d3463" stroke-width="18" />
-              <line x1="450" y1="0" x2="450" y2="520" stroke="#1d3463" stroke-width="12" />
-              <line x1="200" y1="0" x2="200" y2="520" stroke="#14264b" stroke-width="6" />
-              <line x1="700" y1="0" x2="700" y2="520" stroke="#14264b" stroke-width="6" />
-              <line x1="0" y1="130" x2="900" y2="130" stroke="#14264b" stroke-width="6" />
-              <line x1="0" y1="390" x2="900" y2="390" stroke="#14264b" stroke-width="6" />
-
-              <!-- Green spaces -->
-              <rect x="25" y="280" width="80" height="95" rx="8" fill="#153d26" opacity="0.5"/>
-              <rect x="780" y="280" width="90" height="85" rx="8" fill="#153d26" opacity="0.5"/>
-              <circle cx="450" cy="260" r="24" fill="#153d26" opacity="0.6"/>
-
-              <!-- Zone 1: CIH (Active) -->
-              <g class="svg-zone active-z" data-zone="cih" tabindex="0">
-                <rect x="220" y="30" width="200" height="200" rx="12" fill="#152d59" stroke="#E31E24" stroke-width="2.5" class="zone-bg"/>
-                <rect x="220" y="30" width="200" height="200" rx="12" fill="#E31E24" opacity="0.12" class="zone-hover-rect"/>
-                <text x="320" y="110" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">Bệnh Viện Quốc Tế</text>
-                <text x="320" y="128" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">City (CIH)</text>
-                <text x="320" y="152" text-anchor="middle" fill="#4ade80" font-size="11">● Đang hoạt động</text>
-                <circle cx="370" cy="55" r="16" fill="#E31E24"/>
-                <text x="370" y="60" text-anchor="middle" fill="white" font-size="10" font-weight="700">CIH</text>
-              </g>
-
-              <!-- Zone 2: Gia An 115 (Active) -->
-              <g class="svg-zone active-z" data-zone="giaan" tabindex="0">
-                <rect x="460" y="30" width="200" height="200" rx="12" fill="#152d59" stroke="#E31E24" stroke-width="2.5" class="zone-bg"/>
-                <rect x="460" y="30" width="200" height="200" rx="12" fill="#E31E24" opacity="0.12" class="zone-hover-rect"/>
-                <text x="560" y="110" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">Bệnh Viện</text>
-                <text x="560" y="128" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">Gia An 115</text>
-                <text x="560" y="152" text-anchor="middle" fill="#4ade80" font-size="11">● Đang hoạt động</text>
-                <circle cx="610" cy="55" r="16" fill="#0D568D" stroke="white" stroke-width="1"/>
-                <text x="610" y="59" text-anchor="middle" fill="white" font-size="8" font-weight="700">GA115</text>
-              </g>
-
-              <!-- Zone 3: Stem Cell (Building) -->
-              <g class="svg-zone building-z" data-zone="stemcell" tabindex="0">
-                <rect x="220" y="290" width="130" height="120" rx="12" fill="#152d59" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4" class="zone-bg"/>
-                <rect x="220" y="290" width="130" height="120" rx="12" fill="#f59e0b" opacity="0.08" class="zone-hover-rect"/>
-                <text x="285" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">Trung Tâm</text>
-                <text x="285" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">Tế Bào Gốc</text>
-                <text x="285" y="378" text-anchor="middle" fill="#fbbf24" font-size="10">⚙️ Đang xây dựng</text>
-              </g>
-
-              <!-- Zone 4: Hospital 3 (Invest) -->
-              <g class="svg-zone invest-z" data-zone="hospital3" tabindex="0">
-                <rect x="380" y="290" width="160" height="120" rx="12" fill="#152d59" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4" class="zone-bg"/>
-                <rect x="380" y="290" width="160" height="120" rx="12" fill="#38bdf8" opacity="0.06" class="zone-hover-rect"/>
-                <text x="460" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">BV Chuyên Khoa</text>
-                <text x="460" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">Tim Mạch / Ung Bướu</text>
-                <text x="460" y="378" text-anchor="middle" fill="#38bdf8" font-size="10">💰 Kêu gọi đầu tư</text>
-              </g>
-
-              <!-- Zone 5: Research & Training (Planned) -->
-              <g class="svg-zone planned-z" data-zone="research" tabindex="0">
-                <rect x="575" y="290" width="150" height="120" rx="12" fill="#152d59" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 4" class="zone-bg"/>
-                <rect x="575" y="290" width="150" height="120" rx="12" fill="#a78bfa" opacity="0.05" class="zone-hover-rect"/>
-                <text x="650" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">Nghiên Cứu</text>
-                <text x="650" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">& Đào Tạo</text>
-                <text x="650" y="378" text-anchor="middle" fill="#c4b5fd" font-size="10">📋 Đã quy hoạch</text>
-              </g>
-
-              <!-- Zone 6: Hospital 4,5,6 (Planned) -->
-              <g class="svg-zone planned-z" data-zone="hospitals456" tabindex="0">
-                <rect x="30" y="30" width="170" height="200" rx="12" fill="#152d59" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 4" class="zone-bg"/>
-                <rect x="30" y="30" width="170" height="200" rx="12" fill="#a78bfa" opacity="0.05" class="zone-hover-rect"/>
-                <text x="115" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="600">Phân Khu Bệnh Viện</text>
-                <text x="115" y="126" text-anchor="middle" fill="white" font-size="11" font-weight="600">Nhi · Sản · Lão Khoa</text>
-                <text x="115" y="148" text-anchor="middle" fill="#c4b5fd" font-size="10">📋 Quy hoạch (4, 5, 6)</text>
-              </g>
-
-              <!-- Zone 7: Commercial & AEON Mall -->
-              <g class="svg-zone active-z" data-zone="commercial" tabindex="0">
-                <rect x="730" y="30" width="145" height="200" rx="12" fill="#152d59" stroke="#E31E24" stroke-width="2" class="zone-bg"/>
-                <rect x="730" y="30" width="145" height="200" rx="12" fill="#E31E24" opacity="0.1" class="zone-hover-rect"/>
-                <text x="802" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="700">AEON Mall</text>
-                <text x="802" y="126" text-anchor="middle" fill="white" font-size="11">Bình Tân</text>
-                <text x="802" y="148" text-anchor="middle" fill="#4ade80" font-size="10">● Đang hoạt động</text>
-              </g>
-
-              <!-- Zone 8: Rehabilitation Hospital (Invest) -->
-              <g class="svg-zone invest-z" data-zone="rehab" tabindex="0">
-                <rect x="730" y="290" width="145" height="120" rx="12" fill="#152d59" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4" class="zone-bg"/>
-                <rect x="730" y="290" width="145" height="120" rx="12" fill="#38bdf8" opacity="0.06" class="zone-hover-rect"/>
-                <text x="802" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">Bệnh Viện Phục Hồi</text>
-                <text x="802" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">Chức Năng & Dưỡng Lão</text>
-                <text x="802" y="378" text-anchor="middle" fill="#38bdf8" font-size="10">💰 Kêu gọi đầu tư</text>
-              </g>
-            </svg>
-          </div>
-
-          <!-- Glassmorphism Zone Details card -->
-          <div class="map-detail-card" id="mapDetailCard">
-            <h3 id="mdTitle">🏥 Chọn một phân khu</h3>
-            <span class="status-badge" id="mdStatus">Đang chờ lựa chọn</span>
-            <p class="md-desc" id="mdDesc">Nhấp vào một trong các phân khu trên bản đồ 37.5 ha để xem thông tin chi tiết về hiện trạng vận hành và định hướng phát triển.</p>
-            <div class="md-stats" id="mdStats"></div>
-            <a href="#contact" class="btn btn-primary btn-sm" id="mdCta" style="display:none">Liên hệ Hợp tác</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========== TOUR THAM QUAN 3D (Slide 18, 19) ========== -->
   <section class="section tour-3d" id="tour">
@@ -1124,8 +990,8 @@
           <ul>
             <li><a href="#ecosystem">Bệnh viện Quốc tế City</a></li>
             <li><a href="#ecosystem">Bệnh viện Gia An 115</a></li>
-            <li><a href="#interactive-map">Trung tâm Tế bào gốc</a></li>
-            <li><a href="#interactive-map">Khu Đào tạo & Nghiên cứu</a></li>
+            <li><a href="#">Trung tâm Tế bào gốc</a></li>
+            <li><a href="#">Khu Đào tạo & Nghiên cứu</a></li>
           </ul>
         </div>
         <div class="footer-links-col">

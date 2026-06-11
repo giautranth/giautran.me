@@ -118,7 +118,7 @@ button, select, input, textarea {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 60px 0;
   position: relative;
 }
 
@@ -914,6 +914,11 @@ button, select, input, textarea {
   line-height: 1.25;
   color: var(--secondary-blue);
 }
+@media (min-width: 1025px) {
+  .side-title {
+    white-space: nowrap;
+  }
+}
 .red-glow {
   color: var(--primary-red);
 }
@@ -975,6 +980,8 @@ button, select, input, textarea {
   font-size: 0.9rem;
   color: var(--slate-600);
   line-height: 1.6;
+  text-align: justify;
+  text-align-last: left;
 }
 
 /* ================================================================
@@ -988,13 +995,15 @@ button, select, input, textarea {
   grid-template-columns: 1.2fr 1fr;
   gap: 60px;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .about-lead {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--slate-800);
   margin-bottom: 24px;
+  text-align: justify;
+  text-align-last: left;
 }
 .group-bullets {
   display: flex;
@@ -1006,6 +1015,8 @@ button, select, input, textarea {
   color: var(--slate-600);
   position: relative;
   padding-left: 20px;
+  text-align: justify;
+  text-align-last: left;
 }
 .group-bullets li::before {
   content: '✓';
@@ -1054,8 +1065,8 @@ button, select, input, textarea {
 /* History Timeline (Slide 8) */
 .history-timeline {
   border-top: 1px solid var(--slate-200);
-  padding-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 40px;
+  margin-bottom: 50px;
 }
 .timeline-section-title {
   font-family: var(--font-headings);
@@ -1136,7 +1147,7 @@ button, select, input, textarea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 .vmg-card {
   background: var(--slate-50);
@@ -1273,7 +1284,7 @@ button, select, input, textarea {
   grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .founder-portrait-wrap {
   position: relative;
@@ -1314,6 +1325,8 @@ button, select, input, textarea {
   line-height: 1.75;
   color: var(--slate-600);
   margin-bottom: 28px;
+  text-align: justify;
+  text-align-last: left;
 }
 .founder-quote {
   background: var(--white);
@@ -1339,7 +1352,7 @@ button, select, input, textarea {
 /* Vertical timeline Madam Lâm (Slide 11) */
 .founder-timeline-section {
   border-top: 1px solid var(--slate-200);
-  padding-top: 80px;
+  padding-top: 40px;
 }
 .founder-timeline-section .timeline-title {
   font-family: var(--font-headings);
@@ -1444,13 +1457,14 @@ button, select, input, textarea {
   color: var(--slate-600);
   font-size: 1.05rem;
   line-height: 1.8;
+  text-align: justify;
 }
 
 /* Horizontal story timeline (Slide 13) */
 .shangrila-story {
   border-top: 1px solid var(--slate-200);
-  padding-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 40px;
+  margin-bottom: 40px;
 }
 .story-title {
   font-family: var(--font-headings);
@@ -1542,7 +1556,7 @@ button, select, input, textarea {
 /* Vision Boxes (Slide 14) */
 .shangrila-vision {
   border-top: 1px solid var(--slate-200);
-  padding-top: 80px;
+  padding-top: 40px;
 }
 .shangrila-vision h3 {
   font-family: var(--font-headings);
@@ -2057,6 +2071,8 @@ button, select, input, textarea {
   font-size: 0.8rem;
   color: var(--slate-600);
   line-height: 1.5;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .coop-opps {
@@ -2097,6 +2113,8 @@ button, select, input, textarea {
   font-size: 0.88rem;
   line-height: 1.5;
   color: var(--slate-200);
+  text-align: justify;
+  text-align-last: left;
 }
 
 /* Carousel infinite (Slide 6) */
@@ -2273,6 +2291,8 @@ button, select, input, textarea {
   line-height: 1.6;
   margin-bottom: 20px;
   flex: 1;
+  text-align: justify;
+  text-align-last: left;
 }
 .news-more-link {
   font-weight: 700;
@@ -2305,6 +2325,8 @@ button, select, input, textarea {
 }
 .contact-section .section-desc {
   color: var(--slate-300);
+  text-align: justify;
+  text-align-last: left;
 }
 
 .contact-grid {
@@ -2862,7 +2884,7 @@ button, select, input, textarea {
 
 @media (max-width: 768px) {
   .section {
-    padding: 70px 0;
+    padding: 40px 0;
   }
   
   /* Mobile Menu */

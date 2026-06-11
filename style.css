@@ -767,19 +767,71 @@ button, select, input, textarea {
   background: var(--white);
   border: 1px solid var(--slate-200);
   border-radius: var(--radius-lg);
-  padding: 48px;
+  padding: 0;
   text-align: center;
   transition: var(--transition-normal);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
 }
 .eco-hospital-card:hover {
   border-color: var(--primary-red);
   box-shadow: var(--shadow-lg);
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+}
+.hospital-card-header {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--slate-100);
+}
+.hospital-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.eco-hospital-card:hover .hospital-card-img {
+  transform: scale(1.06);
+}
+.hospital-card-logo-badge {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  padding: 6px 16px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--slate-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 128px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.eco-hospital-card:hover .hospital-card-logo-badge {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--primary-red);
+}
+.hospital-logo-badge-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.hospital-card-body {
+  padding: 44px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 .hospital-logo {
   height: 72px;
@@ -808,20 +860,45 @@ button, select, input, textarea {
   font-weight: 800;
   color: var(--secondary-blue);
   margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+.eco-hospital-card:hover h3 {
+  color: var(--primary-red);
 }
 .eco-hospital-card p {
   font-size: 0.95rem;
   color: var(--slate-600);
   margin-bottom: 24px;
   max-width: 420px;
+  line-height: 1.6;
 }
 .hospital-link {
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--primary-red);
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+.hospital-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-red);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.eco-hospital-card:hover .hospital-link::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .hospital-link:hover {
-  color: var(--primary-red-dark);
+  color: var(--primary-red-hover, var(--primary-red));
 }
 
 .highlights-grid {

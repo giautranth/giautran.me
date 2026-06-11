@@ -2800,25 +2800,35 @@ button, select, input, textarea {
   .story-nodes {
     grid-template-columns: 1fr;
     gap: 30px;
+    position: relative;
   }
   .story-timeline-line {
-    top: 10px;
-    bottom: 10px;
-    left: 20px;
+    top: 0;
+    bottom: 0;
+    left: 16px;
     width: 2px;
     height: auto;
+    position: absolute;
   }
   .story-node {
-    display: flex;
+    display: block;
     text-align: left;
-    gap: 24px;
-    align-items: flex-start;
+    padding-left: 36px;
+    position: relative;
+  }
+  .s-year {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    display: block;
   }
   .s-dot {
-    margin: 6px 0 0 0;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    margin: 0;
   }
   .s-info {
-    flex: 1;
+    width: 100%;
   }
   .vision-grid {
     grid-template-columns: 1fr;
@@ -2945,21 +2955,38 @@ button, select, input, textarea {
   }
   
   .v-line-path {
-    left: 20px;
+    left: 16px;
+  }
+  .vt-item {
+    display: block;
+    padding-left: 36px;
+    position: relative;
   }
   .vt-year {
     width: auto;
     text-align: left;
     margin-bottom: 6px;
-  }
-  .vt-item {
-    flex-direction: column;
+    padding-top: 0;
+    display: block;
   }
   .vt-dot {
-    margin: 0 0 12px 10px;
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    margin: 0;
   }
   .vt-content {
-    margin-left: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .vmg-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+  .vmg-wide {
+    grid-column: auto;
   }
   
   .metric-sub-cards {

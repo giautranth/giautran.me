@@ -1126,10 +1126,10 @@ button, select, input, textarea {
   gap: 20px;
 }
 .brand-item {
-  background: var(--slate-50);
-  border: 1px solid var(--slate-200);
+  background: var(--white);
+  border: 1px solid var(--slate-100);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1138,6 +1138,21 @@ button, select, input, textarea {
   color: var(--secondary-blue);
   font-size: 0.95rem;
   line-height: 1.2;
+  height: 90px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+.brand-item img {
+  max-height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.brand-item span {
+  text-align: center;
+  transition: color 0.3s;
 }
 .brand-item small {
   display: block;
@@ -1147,12 +1162,17 @@ button, select, input, textarea {
   margin-top: 4px;
 }
 .brand-item:hover {
-  background: var(--secondary-blue);
-  color: var(--white);
-  border-color: var(--secondary-blue);
+  border-color: rgba(227, 30, 36, 0.3);
+  box-shadow: 0 10px 25px rgba(227, 30, 36, 0.08);
+  transform: translateY(-4px);
 }
-.brand-item:hover small {
-  color: var(--gold-light);
+.brand-item:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+.brand-item:hover span {
+  color: var(--primary-red);
 }
 
 /* ================================================================

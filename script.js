@@ -581,8 +581,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const code = opt.getAttribute('data-code');
 
       // Update button flag & code
-      langCurrent.querySelector('.lang-flag').textContent = flag;
-      langCurrent.querySelector('.lang-code').textContent = code;
+      const flagEl = langCurrent.querySelector('.lang-flag');
+      if (flagEl) flagEl.textContent = flag;
+      const codeEl = langCurrent.querySelector('.lang-code');
+      if (codeEl) codeEl.textContent = code;
 
       langBox.classList.remove('open');
 

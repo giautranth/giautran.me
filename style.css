@@ -327,6 +327,7 @@ button, select, input, textarea {
   display: flex;
   align-items: center;
   gap: 4px;
+  white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active {
   color: var(--white);

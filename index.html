@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoa Lâm – Shangrila | Khu Y Tế Kỹ Thuật Cao Đẳng Cấp Quốc Tế</title>
+  <meta name="description" content="Khu Y Tế Kỹ Thuật Cao Hoa Lâm – Shangrila: Quy mô 37,5 ha, tổ hợp y tế chuẩn quốc tế hàng đầu Việt Nam. Khám phá cơ hội hợp tác và đầu tư y tế chiến lược." />
+  
+  <!-- Preconnect & Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION (Slide 3) ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="navLogo">
+        <img src="assets/logo.png" alt="Hoa Lâm Corporation Logo" class="logo-img" />
+        <div class="logo-text-wrap">
+          <span class="logo-name">HOA LÂM</span>
+          <span class="logo-sub">SHANGRILA HEALTHCARE PARK</span>
+        </div>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" id="link-home">Trang Chủ</a></li>
+        <li class="nav-dropdown">
+          <a href="#about-group" class="nav-link" id="link-about">Giới Thiệu <span class="arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#about-group" id="link-about-group">Tập Đoàn Hoa Lâm</a></li>
+            <li><a href="#founder" id="link-founder">Người Sáng Lập</a></li>
+            <li><a href="#about-shangrila" id="link-about-shangrila">Về Hoa Lâm Shangrila</a></li>
+            <li><a href="#awards" id="link-awards">Thành Tựu & Giải Thưởng</a></li>
+          </ul>
+        </li>
+        <li><a href="#ecosystem" class="nav-link" id="link-ecosystem">Hệ Sinh Thái</a></li>
+        <li><a href="#tour" class="nav-link" id="link-tour">Tour 3D</a></li>
+        <li><a href="#partners" class="nav-link" id="link-partners">Đối Tác</a></li>
+        <li><a href="#news" class="nav-link" id="link-news">Tin Tức</a></li>
+        <li><a href="#contact" class="nav-link" id="link-contact">Liên Hệ</a></li>
+        
+        <!-- Language Selector (Slide 27) -->
+        <li class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag">🇻🇳</span>
+            <span class="lang-code">VI</span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="vi" data-flag="🇻🇳" data-code="VI" role="option"><span class="flag">🇻🇳</span><span class="lng">Tiếng Việt</span></li>
+            <li class="lang-opt" data-lang="en" data-flag="🇺🇸" data-code="EN" role="option"><span class="flag">🇺🇸</span><span class="lng">English</span></li>
+            <li class="lang-opt" data-lang="ja" data-flag="🇯🇵" data-code="JA" role="option"><span class="flag">🇯🇵</span><span class="lng">日本語</span></li>
+            <li class="lang-opt" data-lang="zh" data-flag="🇨🇳" data-code="ZH" role="option"><span class="flag">🇨🇳</span><span class="lng">中文</span></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Menu di động">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO (Slide 4) ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="assets/hero_banner.png" alt="Khuôn viên Hoa Lâm Shangrila" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Khu Y Tế Kỹ Thuật Cao Đẳng Cấp Quốc Tế
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="hero-title-line">Hoa Lâm – Shangrila</span>
+        <span class="hero-title-sub">Hi-Tech Healthcare Park</span>
+      </h1>
+      <p class="hero-desc reveal">
+        Hội tụ công nghệ y tế tiên tiến, chuyên gia hàng đầu và tiên phong trong nghiên cứu - đổi mới vì sức khỏe cộng đồng.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary" id="heroCtaContact">
+          <span>Liên hệ ngay</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#tour" class="btn btn-outline-light" id="heroCtaTour">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <span>Khám Phá Tour 3D</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Float Target & stats from PDF (Slide 15 & 21) -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-target="37.5">0</span>
+        <span class="stat-unit">ha</span>
+        <span class="stat-label">Tổng diện tích</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="1" data-prefix="~" data-suffix=" tỷ USD">0</span>
+        <span class="stat-label">Tổng vốn đầu tư</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="6">0</span>
+        <span class="stat-unit">BV</span>
+        <span class="stat-label">Bệnh viện quy hoạch</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="500" data-suffix=".000+">0</span>
+        <span class="stat-label">Lượt bệnh nhân / năm</span>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Cuộn xuống</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== GIỚI THIỆU MỤC TIÊU & ĐỐI TƯỢNG (Slide 2) ========== -->
+  <section class="section objective" id="objective">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Định Hướng Chiến Lược</div>
+        <h2 class="section-title">Mục Tiêu & Đối Tượng Hướng Đến</h2>
+        <p class="section-desc">Website là cổng thông tin chính thống kết nối hệ sinh thái y tế kỹ thuật cao Hoa Lâm - Shangrila toàn cầu.</p>
+      </div>
+      <div class="obj-grid">
+        <div class="obj-card reveal">
+          <div class="obj-icon-box">🎯</div>
+          <h3>Mục Tiêu Website</h3>
+          <ul>
+            <li>Cổng thông tin chính thức của <strong>Khu Y tế Kỹ thuật cao Hoa Lâm-Shangrila</strong>.</li>
+            <li>Truyền tải tầm nhìn, sứ mệnh và hình ảnh chuyên nghiệp của hệ sinh thái y tế.</li>
+            <li>Cung cấp thông tin đáng tin cậy cho bệnh nhân, đối tác, nhà đầu tư.</li>
+            <li>Tăng cường nhận diện thương hiệu và kết nối hợp tác trong - ngoài nước.</li>
+          </ul>
+        </div>
+        <div class="obj-card reveal">
+          <div class="obj-icon-box">👥</div>
+          <h3>Đối Tượng Hướng Đến</h3>
+          <ul>
+            <li><strong>Đối tác & nhà đầu tư:</strong> Tìm hiểu cơ hội hợp tác và thông tin dự án y tế đang triển khai.</li>
+            <li><strong>Cộng đồng & truyền thông:</strong> Theo dõi các tin tức chính thống, hoạt động xã hội, sự kiện.</li>
+            <li><strong>Bệnh nhân & gia đình:</strong> Tra cứu thông tin bệnh viện để tìm dịch vụ khám chữa phù hợp.</li>
+            <li><strong>Bác sĩ & nhân viên y tế:</strong> Tìm hiểu cơ sở vật chất, trang thiết bị và chuyên khoa tuyển dụng.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HỆ SINH THÁI & THẾ MẠNH (Slide 5) ========== -->
+  <section class="section ecosystem-highlights" id="ecosystem">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Hệ Sinh Thái Y Tế</div>
+        <h2 class="section-title">Hệ Sinh Thái & Thế Mạnh Nổi Bật</h2>
+        <p class="section-desc">Hoa Lâm–Shangrila hướng tới trở thành hệ sinh thái y tế dẫn đầu, kiến tạo chuỗi giá trị toàn diện nhằm chăm sóc sức khỏe, nâng cao chất lượng sống và mang đến hạnh phúc bền vững cho mỗi gia đình Việt.</p>
+      </div>
+      
+      <!-- Eco Showcase -->
+      <div class="eco-showcase reveal">
+        <div class="eco-hospital-card">
+          <img src="assets/logo_benhvienquoctecity.png" alt="City International Hospital Logo" class="hospital-logo" />
+          <h3>Bệnh viện Quốc tế City (CIH)</h3>
+          <p>Bệnh viện đa khoa quốc tế hàng đầu với quy mô 320 giường bệnh, cung cấp dịch vụ chăm sóc y tế toàn diện chuẩn quốc tế, đạt chứng nhận chất lượng Hoa Kỳ AACI.</p>
+          <a href="https://cih.com.vn" target="_blank" rel="noopener" class="hospital-link">Xem website chính thức ↗</a>
+        </div>
+        <div class="eco-hospital-card">
+          <div class="hospital-icon-replacement">GA115</div>
+          <h3>Bệnh viện Gia An 115</h3>
+          <p>Mô hình hợp tác công tư (PPP) tiên phong giữa Tập đoàn Hoa Lâm và Bệnh viện Nhân dân 115. Bệnh viện đa khoa ứng dụng công nghệ chẩn đoán và điều trị hiện đại bậc nhất.</p>
+          <a href="https://giaan115.com" target="_blank" rel="noopener" class="hospital-link">Xem website chính thức ↗</a>
+        </div>
+      </div>
+      
+      <!-- Highlights Grid -->
+      <div class="highlights-grid">
+        <div class="highlight-title-col reveal">
+          <h3 class="side-title">Thế mạnh<br/><span class="red-glow">nổi bật</span></h3>
+          <p>Cơ sở hạ tầng và định hướng chuyên môn y khoa vượt trội tạo nên uy tín thương hiệu Hoa Lâm Shangrila.</p>
+        </div>
+        <div class="highlight-cards-col">
+          <div class="highlight-card reveal">
+            <div class="hl-icon">🔬</div>
+            <div>
+              <h4>Công nghệ y tế tiên tiến</h4>
+              <p>Đầu tư liên tục vào nghiên cứu y học, ứng dụng công nghệ mới như xạ trị proton, liệu pháp tế bào gốc và các phương pháp điều trị cá thể hóa.</p>
+            </div>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="hl-icon">👨‍⚕️</div>
+            <div>
+              <h4>Chuyên gia hàng đầu</h4>
+              <p>Quy tụ đội ngũ bác sĩ, giáo sư, chuyên gia được đào tạo tại các trung tâm y khoa uy tín thế giới; hợp tác chặt chẽ với mạng lưới y tế quốc tế.</p>
+            </div>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="hl-icon">🏆</div>
+            <div>
+              <h4>Chất lượng quốc tế</h4>
+              <p>Hạ tầng bệnh viện và quy trình chăm sóc theo tiêu chuẩn Singapore và JCI, đảm bảo an toàn, hiệu quả và trải nghiệm bệnh nhân tối ưu.</p>
+            </div>
+          </div>
+          <div class="highlight-card reveal">
+            <div class="hl-icon">🔄</div>
+            <div>
+              <h4>Liên tục nghiên cứu và đổi mới</h4>
+              <p>Đẩy mạnh nghiên cứu lâm sàng, chuyển giao kỹ thuật và luôn đi đầu trong việc cập nhật các phác đồ điều trị tiên tiến nhất thế giới.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VỀ TẬP ĐOÀN HOA LÂM (Slide 7, 8, 9, 10) ========== -->
+  <section class="section about-group" id="about-group">
+    <div class="container">
+      <div class="about-group-grid">
+        <div class="group-content reveal">
+          <div class="section-tag">Tập Đoàn Đa Ngành</div>
+          <h2 class="section-title">Tập đoàn Hoa Lâm – Hành trình phát triển vì sức khỏe cộng đồng</h2>
+          <p class="about-lead">
+            Được thành lập từ năm 1993, Tập đoàn Hoa Lâm đã xây dựng một danh tiếng vững chắc dựa trên sự cống hiến, uy tín và trách nhiệm xã hội.
+          </p>
+          <ul class="group-bullets">
+            <li><strong>Thành lập năm 1993:</strong> Khởi đầu bởi bà Trần Thị Lâm và ông Dương Ngọc Hòa trong lĩnh vực thương mại - xe máy (thương hiệu Halim, liên doanh Hoa Lâm - Kymco).</li>
+            <li><strong>Mở rộng sang y tế (Từ 2008):</strong> Dự án Khu Y tế Kỹ thuật cao Hoa Lâm–Shangrila quy mô 37,5 ha tại TP.HCM, tổng vốn đầu tư ~1 tỷ USD.</li>
+            <li><strong>Bất động sản & Tài chính:</strong> Chủ đầu tư các tòa nhà văn phòng cao cấp Lim Tower 1 & 2 và đồng sáng lập/đối tác lớn ngân hàng Vietbank.</li>
+          </ul>
+        </div>
+        <div class="group-visual reveal">
+          <div class="glass-visual-box">
+            <img src="assets/building.png" alt="Tòa nhà văn phòng Lim Tower" class="visual-img" />
+            <div class="glass-card-float">
+              <h4>Uy tín xây dựng từ 1993</h4>
+              <p>Hành trình đa ngành kiến tạo giá trị bền vững cho xã hội.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Timeline Giai Đoạn (Slide 8) -->
+      <div class="history-timeline reveal">
+        <h3 class="timeline-section-title">Lịch sử hình thành & phát triển</h3>
+        <div class="horizontal-timeline">
+          <div class="t-line"></div>
+          
+          <div class="t-node" data-year="1993 – 2000">
+            <div class="t-dot"></div>
+            <div class="t-box">
+              <h4>Giai đoạn khởi đầu</h4>
+              <span>(1993 – 2000)</span>
+              <p>Khởi nghiệp từ lĩnh vực thương mại – dịch vụ – vận tải. Sau đó, Hoa Lâm mở rộng sang ngành sản xuất và kinh doanh xe máy.</p>
+            </div>
+          </div>
+          
+          <div class="t-node" data-year="2000 – 2010">
+            <div class="t-dot"></div>
+            <div class="t-box">
+              <h4>Mở rộng đa ngành</h4>
+              <span>(2000 – 2010)</span>
+              <p>Hoa Lâm dần phát triển thành tập đoàn đa lĩnh vực, đầu tư vào tài chính – ngân hàng, bất động sản và dịch vụ thương mại.</p>
+            </div>
+          </div>
+          
+          <div class="t-node" data-year="2010 – Nay">
+            <div class="t-dot"></div>
+            <div class="t-box">
+              <h4>Tăng trưởng & Khẳng định</h4>
+              <span>(2010 – nay)</span>
+              <p>Tập trung vào các lĩnh vực có giá trị xã hội cao, đặc biệt là y tế, giáo dục và nghiên cứu. Song song đầu tư vào bất động sản cao cấp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tầm nhìn - Sứ mệnh - Giá trị cốt lõi (Slide 9) -->
+      <div class="vmg-grid reveal">
+        <div class="vmg-card">
+          <div class="vmg-badge">👁️</div>
+          <h3>Tầm Nhìn</h3>
+          <p>Trở thành tập đoàn đầu tư y tế hàng đầu Việt Nam, mang chuẩn y tế kỹ thuật cao quốc tế đến gần hơn với mọi người dân Việt.</p>
+        </div>
+        <div class="vmg-card">
+          <div class="vmg-badge">📢</div>
+          <h3>Sứ Mệnh</h3>
+          <p>Kiến tạo hệ sinh thái chăm sóc sức khỏe toàn diện và hiện đại – nơi lấy con người và sự tận tâm làm trung tâm của mọi hoạt động.</p>
+        </div>
+        <div class="vmg-card vmg-wide">
+          <h3>Giá Trị Cốt Lõi</h3>
+          <div class="vmg-values">
+            <div class="v-val">
+              <strong>“Chất lượng”</strong>
+              <p>Luôn đặt chất lượng làm tiêu chuẩn hàng đầu trong mọi hoạt động – từ sản phẩm, dịch vụ đến con người.</p>
+            </div>
+            <div class="v-val">
+              <strong>“Đổi mới”</strong>
+              <p>Không ngừng đổi mới tư duy và ứng dụng công nghệ, chủ động nắm bắt xu hướng để tạo ra giá trị khác biệt.</p>
+            </div>
+            <div class="v-val">
+              <strong>“Trách nhiệm”</strong>
+              <p>Cam kết hành động có trách nhiệm với xã hội, nhân viên, khách hàng và đối tác, hướng tới phát triển bền vững.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hệ sinh thái Hoa Lâm (Slide 10) -->
+      <div class="brand-ecosystem reveal">
+        <p class="brand-eco-label">Hệ sinh thái các thương hiệu Tập đoàn Hoa Lâm</p>
+        <div class="brand-eco-grid">
+          <div class="brand-item"><span>HOA LÂM<br/><small>CORPORATION</small></span></div>
+          <div class="brand-item"><span>LIM TOWER<br/><small>OFFICE BUILDING</small></span></div>
+          <div class="brand-item"><span>AIO CITY<br/><small>RESIDENCE</small></span></div>
+          <div class="brand-item"><span>KINGDOM 101<br/><small>LUXURY APARTMENT</small></span></div>
+          <div class="brand-item"><span>VIETLOTT<br/><small>ENTERTAINMENT</small></span></div>
+          <div class="brand-item"><span>CIH<br/><small>INTERNATIONAL HOSPITAL</small></span></div>
+          <div class="brand-item"><span>GIA AN 115<br/><small>HOSPITAL</small></span></div>
+          <div class="brand-item"><span>VIETBANK<br/><small>COMMERCIAL BANK</small></span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== NGƯỜI SÁNG LẬP - MADAM TRẦN THỊ LÂM (Slide 11) ========== -->
+  <section class="section founder" id="founder">
+    <div class="container">
+      <div class="founder-intro-grid">
+        <div class="founder-visual reveal">
+          <div class="founder-portrait-wrap">
+            <img src="assets/doctor_female_1.png" alt="Madam Trần Thị Lâm" class="founder-img" />
+            <div class="founder-name-tag">
+              <h3>Bà Trần Thị Lâm</h3>
+              <span>Nhà sáng lập & Chủ tịch Tập đoàn Hoa Lâm</span>
+            </div>
+          </div>
+        </div>
+        <div class="founder-text reveal">
+          <div class="section-tag">Người Sáng Lập</div>
+          <h2 class="section-title">Doanh Nhân Tiên Phong Xã Hội Hóa Y Tế</h2>
+          <p class="founder-desc-p">
+            Bà Trần Thị Lâm là nhà sáng lập và Chủ tịch Tập đoàn Hoa Lâm, doanh nhân tiên phong trong lĩnh vực xã hội hóa y tế tại Việt Nam. Từ khởi nghiệp trong thương mại và sản xuất, bà đã dẫn dắt Hoa Lâm trở thành tập đoàn đa ngành, đặc biệt nổi bật trong đầu tư y tế kỹ thuật cao. Với tầm nhìn nhân văn và bền bỉ, bà luôn hướng tới sứ mệnh mang dịch vụ y tế chất lượng quốc tế đến gần hơn với người dân Việt Nam.
+          </p>
+          <div class="founder-quote">
+            <p>“Sức khỏe là tài sản quý giá nhất của con người. Mang dịch vụ y tế chuẩn quốc tế về phục vụ đồng bào với chi phí hợp lý chính là tâm nguyện lớn nhất cuộc đời tôi.”</p>
+            <cite>— Madam Trần Thị Lâm</cite>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infographic Timeline Madam Lâm (Slide 11) -->
+      <div class="founder-timeline-section reveal">
+        <h3 class="timeline-title">Hành trình cống hiến & Thành tựu</h3>
+        <p class="timeline-subtitle">Infographic dòng thời gian phát triển của Madam Trần Thị Lâm</p>
+        
+        <div class="vertical-timeline" id="founderTimeline">
+          <div class="v-line-path"></div>
+          
+          <div class="vt-item">
+            <div class="vt-year">1957</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Bà Lâm sinh ra tại một miền quê nghèo thuộc huyện Sơn Tịnh, tỉnh Quảng Ngãi. Ý chí vượt khó vươn lên được nuôi dưỡng từ đây.</p>
+            </div>
+          </div>
+          
+          <div class="vt-item">
+            <div class="vt-year">1982</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Bà lập gia đình và luôn khao khát xây dựng một sự nghiệp bền vững để lo cho tương lai của các con sau này.</p>
+            </div>
+          </div>
+          
+          <div class="vt-item">
+            <div class="vt-year">1993</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Bà cùng chồng là ông Dương Ngọc Hòa thành lập Công ty TNHH thương mại dịch vụ vận tải Nhất Nguyên, sau này đổi tên thành Công ty CP đầu tư và phát triển Hoa Lâm.</p>
+            </div>
+          </div>
+          
+          <div class="vt-item">
+            <div class="vt-year">1999 - 2004</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Hoa Lâm sản xuất và kinh doanh xe gắn máy thương hiệu Halim cực kỳ thành công trên cả nước, sau đó thành lập liên doanh Hoa Lâm - Kymco.</p>
+            </div>
+          </div>
+          
+          <div class="vt-item">
+            <div class="vt-year">2006</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Tập đoàn Hoa Lâm tham gia sáng lập Ngân hàng Thương mại Cổ phần Việt Nam Thương Tín (Vietbank), khẳng định uy tín tài chính vững mạnh.</p>
+            </div>
+          </div>
+          
+          <div class="vt-item">
+            <div class="vt-year">2007</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Bà Lâm quyết định rút toàn bộ vốn trong liên doanh Hoa Lâm - Kymco để tập trung chuẩn bị nguồn lực đầu tư lớn cho lĩnh vực y tế kỹ thuật cao.</p>
+            </div>
+          </div>
+          
+          <div class="vt-item">
+            <div class="vt-year">2008</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Chính thức được cấp phép và bắt đầu xây dựng Khu y tế kỹ thuật cao quy mô sáu bệnh viện đạt tiêu chuẩn quốc tế tại quận Bình Tân, TP. HCM.</p>
+            </div>
+          </div>
+          
+          <div class="vt-item">
+            <div class="vt-year">2019</div>
+            <div class="vt-dot"></div>
+            <div class="vt-content">
+              <p>Bà Trần Thị Lâm vinh dự góp mặt trong danh sách Top 50 người phụ nữ có tầm ảnh hưởng nhất Việt Nam do tạp chí Forbes bình chọn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VỀ HOA LÂM SHANGRILA (Slide 12, 13, 14) ========== -->
+  <section class="section about-shangrila" id="about-shangrila">
+    <div class="container">
+      <div class="shangrila-intro reveal">
+        <div class="section-tag">Tổ Hợp Y Tế</div>
+        <h2 class="section-title">Chào mừng đến với Hoa Lâm–Shangrila</h2>
+        <p class="shangrila-lead">
+          Tổ hợp y tế kỹ thuật cao hàng đầu Việt Nam - nơi hội tụ công nghệ, chuyên gia và dịch vụ chăm sóc sức khỏe đạt chuẩn quốc tế.
+        </p>
+        <p class="shangrila-body-text">
+          Hoa Lâm-Shangrila là khu y tế kỹ thuật cao quy mô 37,5 ha tại Quận Bình Tân, TP.HCM, được hợp tác đầu tư giữa Tập đoàn Hoa Lâm (Việt Nam) và Shangrila Healthcare Investment (Singapore) với tổng vốn khoảng 1 tỷ USD. Dự án hướng tới việc xây dựng trung tâm y khoa tích hợp hàng đầu, quy tụ 6 bệnh viện tiêu chuẩn quốc tế cùng các trung tâm nghiên cứu, đào tạo và dịch vụ chăm sóc sức khỏe toàn diện, góp phần đưa nền y tế Việt Nam vươn tầm khu vực Đông Nam Á.
+        </p>
+      </div>
+
+      <!-- Câu chuyện của chúng tôi (Slide 13) -->
+      <div class="shangrila-story reveal">
+        <h3 class="story-title">Câu chuyện của chúng tôi</h3>
+        <p class="story-desc">Hành trình từ tầm nhìn đến hiện thực</p>
+        
+        <div class="story-timeline-wrap">
+          <div class="story-timeline-line"></div>
+          <div class="story-nodes">
+            
+            <div class="story-node">
+              <span class="s-year">2008</span>
+              <div class="s-dot"></div>
+              <div class="s-info">
+                <h4>Cấp đất dự án</h4>
+                <p>Dự án được cấp phép quỹ đất 37,5 ha tại quận Bình Tân để xây dựng khu y tế.</p>
+              </div>
+            </div>
+            
+            <div class="story-node">
+              <span class="s-year">2010</span>
+              <div class="s-dot"></div>
+              <div class="s-info">
+                <h4>Thành lập Liên doanh</h4>
+                <p>Thành lập Liên doanh giữa Tập đoàn Hoa Lâm và Shangrila Healthcare Investment (Singapore).</p>
+              </div>
+            </div>
+            
+            <div class="story-node">
+              <span class="s-year">2014</span>
+              <div class="s-dot"></div>
+              <div class="s-info">
+                <h4>Bệnh viện đầu tiên</h4>
+                <p>Khánh thành Bệnh viện Quốc tế City (CIH) – bệnh viện đa khoa đầu tiên đi vào hoạt động.</p>
+              </div>
+            </div>
+            
+            <div class="story-node">
+              <span class="s-year">2018</span>
+              <div class="s-dot"></div>
+              <div class="s-info">
+                <h4>Mở rộng Gia An 115</h4>
+                <p>Khánh thành Bệnh viện Gia An 115, hợp tác công tư (PPP) với Bệnh viện Nhân dân 115.</p>
+              </div>
+            </div>
+            
+            <div class="story-node">
+              <span class="s-year">2020 - Nay</span>
+              <div class="s-dot"></div>
+              <div class="s-info">
+                <h4>Phát triển chuyên sâu</h4>
+                <p>Tiếp tục phát triển các bệnh viện chuyên khoa mới, trung tâm tế bào gốc và cơ sở đào tạo.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Tầm nhìn (Slide 14) -->
+      <div class="shangrila-vision reveal">
+        <h3>Tầm Nhìn Hoa Lâm – Shangrila</h3>
+        <div class="vision-grid">
+          <div class="vision-box">
+            <div class="vb-num">01</div>
+            <p>Trở thành trung tâm y tế kỹ thuật cao hàng đầu khu vực Đông Nam Á.</p>
+          </div>
+          <div class="vision-box">
+            <div class="vb-num">02</div>
+            <p>Đưa công nghệ y học tiên tiến và tiêu chuẩn điều trị quốc tế đến gần hơn với người Việt.</p>
+          </div>
+          <div class="vision-box">
+            <div class="vb-num">03</div>
+            <p>Xây dựng môi trường khám - chữa - đào tạo - nghiên cứu toàn diện, nhân văn và hiện đại.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NĂNG LỰC HỆ THỐNG & CON SỐ (Slide 15 & 21) ========== -->
+  <section class="section capacity" id="capacity">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Năng Lực Vận Hành</div>
+        <h2 class="section-title">Năng Lực Hệ Thống Vượt Trội</h2>
+        <p class="section-desc">Số liệu thực tế khẳng định quy mô và uy tín phục vụ của Hoa Lâm Shangrila.</p>
+      </div>
+      
+      <!-- Metrics Dashboard -->
+      <div class="metrics-grid reveal">
+        <div class="metric-main-card">
+          <span class="metric-big-num">85%</span>
+          <h4>NES (Điểm xuất sắc ròng)</h4>
+          <p>Mức độ hài lòng của bệnh nhân và khách hàng đối với dịch vụ chăm sóc y tế tại hệ thống.</p>
+        </div>
+        <div class="metric-sub-cards">
+          
+          <div class="metric-card">
+            <span class="m-num" data-target="1505">0</span>
+            <span class="m-label">Giường bệnh toàn khu</span>
+          </div>
+          
+          <div class="metric-card">
+            <span class="m-num" data-target="6" data-suffix=" triệu">0</span>
+            <span class="m-label">Khách hàng được phục vụ</span>
+          </div>
+          
+          <div class="metric-card">
+            <span class="m-num" data-target="4" data-suffix=" triệu">0</span>
+            <span class="m-label">Lượt khách ngoại trú</span>
+          </div>
+          
+          <div class="metric-card">
+            <span class="m-num" data-target="626" data-suffix=" triệu">0</span>
+            <span class="m-label">Lượt phẫu thuật & thủ thuật</span>
+          </div>
+          
+          <div class="metric-card">
+            <span class="m-num" data-target="11">0</span>
+            <span class="m-label">Bệnh viện & Phòng khám thành viên</span>
+          </div>
+          
+          <div class="metric-card">
+            <span class="m-num" data-target="3782">0</span>
+            <span class="m-label">Nhân sự chuyên môn</span>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Doctors count from system capacity -->
+      <div class="staff-breakdown reveal">
+        <div class="staff-bar-item">
+          <span class="sb-num" data-target="597">0</span>
+          <span class="sb-label">Bác sĩ chuyên khoa</span>
+        </div>
+        <div class="staff-bar-item">
+          <span class="sb-num" data-target="1626">0</span>
+          <span class="sb-label">Điều dưỡng lành nghề</span>
+        </div>
+        <div class="staff-bar-item">
+          <span class="sb-num" data-target="135">0</span>
+          <span class="sb-label">Dược sĩ đại học</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== THÀNH TỰU & GIẢI THƯỞNG (Slide 16, 17) ========== -->
+  <section class="section awards-section" id="awards">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Chứng Nhận Chất Lượng</div>
+        <h2 class="section-title">Giải Thưởng & Thành Tựu Nổi Bật</h2>
+        <p class="section-desc">Hành trình khẳng định vị thế y tế chất lượng quốc tế của Hoa Lâm – Shangrila và các bệnh viện thành viên.</p>
+      </div>
+
+      <!-- Awards Cards Grid (Click to open details) -->
+      <div class="awards-grid reveal">
+        
+        <div class="award-card" data-award="2019" tabindex="0">
+          <div class="award-badge-img">🏆</div>
+          <div class="award-info">
+            <span class="award-year">2019</span>
+            <h4>Excellence Award từ HMA</h4>
+            <p class="award-summary">Gia An 115 Hospital nhận giải thưởng danh giá từ Hiệp hội Quản lý Bệnh viện Châu Á.</p>
+          </div>
+        </div>
+
+        <div class="award-card" data-award="2023-hsa" tabindex="0">
+          <div class="award-badge-img">🥇</div>
+          <div class="award-info">
+            <span class="award-year">2023</span>
+            <h4>Healthcare Asia Awards 2023</h4>
+            <p class="award-summary">CIH & Gia An 115 là hai bệnh viện tư nhân đầu tiên tại Việt Nam cùng đoạt giải thưởng uy tín này.</p>
+          </div>
+        </div>
+
+        <div class="award-card" data-award="2023-aaci" tabindex="0">
+          <div class="award-badge-img">🇺🇸</div>
+          <div class="award-info">
+            <span class="award-year">2023 (Tháng 11)</span>
+            <h4>Đạt Chuẩn AACI Hoa Kỳ</h4>
+            <p class="award-summary">CIH & Gia An 115 là hai bệnh viện đầu tiên tại Việt Nam đạt tiêu chuẩn chất lượng AACI quốc tế.</p>
+          </div>
+        </div>
+
+        <div class="award-card" data-award="2024" tabindex="0">
+          <div class="award-badge-img">⭐</div>
+          <div class="award-info">
+            <span class="award-year">2024</span>
+            <h4>Best Quality Leadership 2024</h4>
+            <p class="award-summary">Gia An 115 nhận giải thưởng từ Hiệp hội Nghiên cứu Chất lượng Châu Âu (ESQR).</p>
+          </div>
+        </div>
+
+        <div class="award-card" data-award="2025-leader" tabindex="0">
+          <div class="award-badge-img">👑</div>
+          <div class="award-info">
+            <span class="award-year">2025</span>
+            <h4>Asia's Excellent Leader 2025</h4>
+            <p class="award-summary">Bà Trần Thị Lâm được vinh danh vì những cống hiến vượt trội cho xã hội hóa y tế.</p>
+          </div>
+        </div>
+
+        <div class="award-card" data-award="2025-green" tabindex="0">
+          <div class="award-badge-img">🌿</div>
+          <div class="award-info">
+            <span class="award-year">2025</span>
+            <h4>Green – Clean – Smart Hospital</h4>
+            <p class="award-summary">Gia An 115 được ghi nhận đạt chuẩn bệnh viện xanh, sạch và thông minh của Việt Nam.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Award Detail Modal (Popup) -->
+      <div class="award-modal" id="awardModal">
+        <div class="award-modal-content">
+          <button class="modal-close" id="modalClose" aria-label="Đóng cửa sổ">✕</button>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BẢN ĐỒ TƯƠNG TÁC 37.5 HA (Slide 6, 12, 13) ========== -->
+  <section class="section interactive-map-section" id="interactive-map">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Mặt Bằng Quy Hoạch</div>
+        <h2 class="section-title">Bản Đồ Phân Khu 37,5 Ha</h2>
+        <p class="section-desc">Khám phá tổng thể khu y tế kỹ thuật cao Hoa Lâm - Shangrila. Bấm vào từng phân khu trên bản đồ để xem chi tiết dự án.</p>
+      </div>
+
+      <div class="map-container reveal">
+        <div class="map-legend">
+          <div class="legend-item"><span class="legend-dot active"></span> Đang hoạt động</div>
+          <div class="legend-item"><span class="legend-dot building"></span> Đang xây dựng</div>
+          <div class="legend-item"><span class="legend-dot invest"></span> Kêu gọi đầu tư</div>
+          <div class="legend-item"><span class="legend-dot planned"></span> Quy hoạch</div>
+        </div>
+
+        <div class="map-layout">
+          <!-- Vector Map SVG -->
+          <div class="map-wrapper">
+            <svg viewBox="0 0 900 520" class="svg-map" id="healthcareMap">
+              <defs>
+                <linearGradient id="svgMapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0f1d3a;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#142952;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+              <rect width="900" height="520" fill="url(#svgMapBg)" rx="16"/>
+              
+              <!-- Roads -->
+              <line x1="0" y1="260" x2="900" y2="260" stroke="#1d3463" stroke-width="18" />
+              <line x1="450" y1="0" x2="450" y2="520" stroke="#1d3463" stroke-width="12" />
+              <line x1="200" y1="0" x2="200" y2="520" stroke="#14264b" stroke-width="6" />
+              <line x1="700" y1="0" x2="700" y2="520" stroke="#14264b" stroke-width="6" />
+              <line x1="0" y1="130" x2="900" y2="130" stroke="#14264b" stroke-width="6" />
+              <line x1="0" y1="390" x2="900" y2="390" stroke="#14264b" stroke-width="6" />
+
+              <!-- Green spaces -->
+              <rect x="25" y="280" width="80" height="95" rx="8" fill="#153d26" opacity="0.5"/>
+              <rect x="780" y="280" width="90" height="85" rx="8" fill="#153d26" opacity="0.5"/>
+              <circle cx="450" cy="260" r="24" fill="#153d26" opacity="0.6"/>
+
+              <!-- Zone 1: CIH (Active) -->
+              <g class="svg-zone active-z" data-zone="cih" tabindex="0">
+                <rect x="220" y="30" width="200" height="200" rx="12" fill="#152d59" stroke="#E31E24" stroke-width="2.5" class="zone-bg"/>
+                <rect x="220" y="30" width="200" height="200" rx="12" fill="#E31E24" opacity="0.12" class="zone-hover-rect"/>
+                <text x="320" y="110" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">Bệnh Viện Quốc Tế</text>
+                <text x="320" y="128" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">City (CIH)</text>
+                <text x="320" y="152" text-anchor="middle" fill="#4ade80" font-size="11">● Đang hoạt động</text>
+                <circle cx="370" cy="55" r="16" fill="#E31E24"/>
+                <text x="370" y="60" text-anchor="middle" fill="white" font-size="10" font-weight="700">CIH</text>
+              </g>
+
+              <!-- Zone 2: Gia An 115 (Active) -->
+              <g class="svg-zone active-z" data-zone="giaan" tabindex="0">
+                <rect x="460" y="30" width="200" height="200" rx="12" fill="#152d59" stroke="#E31E24" stroke-width="2.5" class="zone-bg"/>
+                <rect x="460" y="30" width="200" height="200" rx="12" fill="#E31E24" opacity="0.12" class="zone-hover-rect"/>
+                <text x="560" y="110" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">Bệnh Viện</text>
+                <text x="560" y="128" text-anchor="middle" fill="white" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', sans-serif">Gia An 115</text>
+                <text x="560" y="152" text-anchor="middle" fill="#4ade80" font-size="11">● Đang hoạt động</text>
+                <circle cx="610" cy="55" r="16" fill="#1B3A6B" stroke="white" stroke-width="1"/>
+                <text x="610" y="59" text-anchor="middle" fill="white" font-size="8" font-weight="700">GA115</text>
+              </g>
+
+              <!-- Zone 3: Stem Cell (Building) -->
+              <g class="svg-zone building-z" data-zone="stemcell" tabindex="0">
+                <rect x="220" y="290" width="130" height="120" rx="12" fill="#152d59" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4" class="zone-bg"/>
+                <rect x="220" y="290" width="130" height="120" rx="12" fill="#f59e0b" opacity="0.08" class="zone-hover-rect"/>
+                <text x="285" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">Trung Tâm</text>
+                <text x="285" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">Tế Bào Gốc</text>
+                <text x="285" y="378" text-anchor="middle" fill="#fbbf24" font-size="10">⚙️ Đang xây dựng</text>
+              </g>
+
+              <!-- Zone 4: Hospital 3 (Invest) -->
+              <g class="svg-zone invest-z" data-zone="hospital3" tabindex="0">
+                <rect x="380" y="290" width="160" height="120" rx="12" fill="#152d59" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4" class="zone-bg"/>
+                <rect x="380" y="290" width="160" height="120" rx="12" fill="#38bdf8" opacity="0.06" class="zone-hover-rect"/>
+                <text x="460" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">BV Chuyên Khoa</text>
+                <text x="460" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">Tim Mạch / Ung Bướu</text>
+                <text x="460" y="378" text-anchor="middle" fill="#38bdf8" font-size="10">💰 Kêu gọi đầu tư</text>
+              </g>
+
+              <!-- Zone 5: Research & Training (Planned) -->
+              <g class="svg-zone planned-z" data-zone="research" tabindex="0">
+                <rect x="575" y="290" width="150" height="120" rx="12" fill="#152d59" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 4" class="zone-bg"/>
+                <rect x="575" y="290" width="150" height="120" rx="12" fill="#a78bfa" opacity="0.05" class="zone-hover-rect"/>
+                <text x="650" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">Nghiên Cứu</text>
+                <text x="650" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">& Đào Tạo</text>
+                <text x="650" y="378" text-anchor="middle" fill="#c4b5fd" font-size="10">📋 Đã quy hoạch</text>
+              </g>
+
+              <!-- Zone 6: Hospital 4,5,6 (Planned) -->
+              <g class="svg-zone planned-z" data-zone="hospitals456" tabindex="0">
+                <rect x="30" y="30" width="170" height="200" rx="12" fill="#152d59" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 4" class="zone-bg"/>
+                <rect x="30" y="30" width="170" height="200" rx="12" fill="#a78bfa" opacity="0.05" class="zone-hover-rect"/>
+                <text x="115" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="600">Phân Khu Bệnh Viện</text>
+                <text x="115" y="126" text-anchor="middle" fill="white" font-size="11" font-weight="600">Nhi · Sản · Lão Khoa</text>
+                <text x="115" y="148" text-anchor="middle" fill="#c4b5fd" font-size="10">📋 Quy hoạch (4, 5, 6)</text>
+              </g>
+
+              <!-- Zone 7: Commercial & AEON Mall -->
+              <g class="svg-zone active-z" data-zone="commercial" tabindex="0">
+                <rect x="730" y="30" width="145" height="200" rx="12" fill="#152d59" stroke="#E31E24" stroke-width="2" class="zone-bg"/>
+                <rect x="730" y="30" width="145" height="200" rx="12" fill="#E31E24" opacity="0.1" class="zone-hover-rect"/>
+                <text x="802" y="110" text-anchor="middle" fill="white" font-size="12" font-weight="700">AEON Mall</text>
+                <text x="802" y="126" text-anchor="middle" fill="white" font-size="11">Bình Tân</text>
+                <text x="802" y="148" text-anchor="middle" fill="#4ade80" font-size="10">● Đang hoạt động</text>
+              </g>
+
+              <!-- Zone 8: Rehabilitation Hospital (Invest) -->
+              <g class="svg-zone invest-z" data-zone="rehab" tabindex="0">
+                <rect x="730" y="290" width="145" height="120" rx="12" fill="#152d59" stroke="#38bdf8" stroke-width="2" stroke-dasharray="6 4" class="zone-bg"/>
+                <rect x="730" y="290" width="145" height="120" rx="12" fill="#38bdf8" opacity="0.06" class="zone-hover-rect"/>
+                <text x="802" y="340" text-anchor="middle" fill="white" font-size="11" font-weight="600">Bệnh Viện Phục Hồi</text>
+                <text x="802" y="356" text-anchor="middle" fill="white" font-size="11" font-weight="600">Chức Năng & Dưỡng Lão</text>
+                <text x="802" y="378" text-anchor="middle" fill="#38bdf8" font-size="10">💰 Kêu gọi đầu tư</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Glassmorphism Zone Details card -->
+          <div class="map-detail-card" id="mapDetailCard">
+            <h3 id="mdTitle">🏥 Chọn một phân khu</h3>
+            <span class="status-badge" id="mdStatus">Đang chờ lựa chọn</span>
+            <p class="md-desc" id="mdDesc">Nhấp vào một trong các phân khu trên bản đồ 37.5 ha để xem thông tin chi tiết về hiện trạng vận hành và định hướng phát triển.</p>
+            <div class="md-stats" id="mdStats"></div>
+            <a href="#contact" class="btn btn-primary btn-sm" id="mdCta" style="display:none">Liên hệ Hợp tác</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TOUR THAM QUAN 3D (Slide 18, 19) ========== -->
+  <section class="section tour-3d" id="tour">
+    <div class="tour-banner-bg">
+      <img src="assets/interior.png" alt="Không gian nội thất bệnh viện hiện đại" class="tour-bg-image" />
+      <div class="tour-overlay-glass"></div>
+    </div>
+    <div class="container">
+      <div class="tour-grid">
+        <div class="tour-text-col reveal">
+          <div class="section-tag section-tag-light">Trải Nghiệm Trực Quan</div>
+          <h2 class="section-title text-white">Tour Tham Quan 3D Ảo</h2>
+          <p class="section-desc text-light">
+            Không chỉ giới hạn ở việc mô tả bằng hình ảnh, chúng tôi ứng dụng công nghệ Tour ảo 360 độ giúp đối tác và bệnh nhân dễ dàng khám phá chi tiết toàn bộ khuôn viên 37,5 ha từ xa.
+          </p>
+          
+          <div class="tour-benefits">
+            <div class="t-benefit">
+              <span class="tb-emoji">🌍</span>
+              <div>
+                <h4>Khám phá từ xa</h4>
+                <p>Cho phép người xem khám phá chân thực các bệnh viện và trung tâm y tế từ xa, bất kể địa điểm địa lý.</p>
+              </div>
+            </div>
+            <div class="t-benefit">
+              <span class="tb-emoji">📈</span>
+              <div>
+                <h4>Tăng cường tiếp cận</h4>
+                <p>Tăng khả năng tiếp cận đối tác tiềm năng, nhà đầu tư và khách hàng cuối ngay cả trước khi họ đặt chân tới cơ sở.</p>
+              </div>
+            </div>
+            <div class="t-benefit">
+              <span class="tb-emoji">🏢</span>
+              <div>
+                <h4>Chuyên nghiệp & Minh bạch</h4>
+                <p>Gây ấn tượng mạnh mẽ về sự hiện đại và chuyên nghiệp của thương hiệu y tế hàng đầu, tăng độ thuyết phục nhà đầu tư.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tour-action-row">
+            <button class="btn btn-primary" id="start3dBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>Bắt Đầu Tour 3D</span>
+            </button>
+            <span class="tour-ref-text">Tham khảo: 360.benhvienphuongdong.vn</span>
+          </div>
+        </div>
+        
+        <div class="tour-visual-col reveal">
+          <div class="mockup-frame">
+            <div class="mockup-header">
+              <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
+              <div class="mock-url">https://360.hoalamshangrila.me</div>
+            </div>
+            <div class="mockup-screen">
+              <img src="assets/interior.png" alt="Mô phỏng tour 3D" class="mockup-img" />
+              <div class="tour-pulse-btn" id="pulseTourBtn">
+                <span class="p-btn-icon">▶</span>
+                <span class="p-btn-ring"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DÀNH CHO ĐỐI TÁC & CƠ HỘI HỢP TÁC (Slide 20, 22) ========== -->
+  <section class="section partners-section" id="partners">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Cơ Hội Hợp Tác</div>
+        <h2 class="section-title">Lý Do Đồng Hành Cùng Chúng Tôi</h2>
+        <p class="section-desc">Hoa Lâm – Shangrila mở ra những cơ hội hợp tác mang tính chiến lược cho các đối tác y tế, tài chính và quản lý hàng đầu trên thế giới.</p>
+      </div>
+
+      <!-- 5 Reasons Grid (Slide 20) -->
+      <div class="reasons-grid reveal">
+        <div class="reason-card">
+          <div class="rc-num">01</div>
+          <h4>Vị thế chiến lược</h4>
+          <p>Tọa lạc tại cửa ngõ phía Tây TP.HCM, kết nối trực tiếp với trung tâm thành phố và các trục giao thông huyết mạch liên tỉnh miền Tây.</p>
+        </div>
+        <div class="reason-card">
+          <div class="rc-num">02</div>
+          <h4>Tầm nhìn dài hạn</h4>
+          <p>Phát triển khu y tế kỹ thuật cao chuẩn quốc tế đồng bộ gồm 6 bệnh viện lớn, các trung tâm nghiên cứu tế bào và đào tạo y khoa.</p>
+        </div>
+        <div class="reason-card">
+          <div class="rc-num">03</div>
+          <h4>Khả năng mở rộng</h4>
+          <p>Còn nhiều phân khu trong quy hoạch đang mở rộng kêu gọi đầu tư, tạo cơ hội lớn cho các nhà đầu tư tiên phong tham gia sớm.</p>
+        </div>
+        <div class="reason-card">
+          <div class="rc-num">04</div>
+          <h4>Uy tín nhà đầu tư</h4>
+          <p>Dẫn dắt bởi Tập đoàn Hoa Lâm – doanh nghiệp tiên phong xã hội hóa y tế Việt Nam, cùng Shangrila Healthcare Singapore.</p>
+        </div>
+        <div class="reason-card">
+          <div class="rc-num">05</div>
+          <h4>Hỗ trợ & Kết nối</h4>
+          <p>Sẵn sàng hỗ trợ và hợp tác chặt chẽ về tài chính, vận hành pháp lý, nghiên cứu hoặc cung cấp dịch vụ phụ trợ trong hệ sinh thái.</p>
+        </div>
+      </div>
+
+      <!-- Opportunities Lists (Slide 22) -->
+      <div class="coop-opps reveal">
+        <h3>Các Lĩnh Vực Hợp Tác Trọng Điểm</h3>
+        <div class="opps-list-grid">
+          <div class="opp-item">
+            <span class="opp-check">✓</span>
+            <p>Hợp tác đầu tư xây dựng - vận hành bệnh viện chuyên khoa (tim mạch, nhi, ung bướu, phục hồi chức năng...).</p>
+          </div>
+          <div class="opp-item">
+            <span class="opp-check">✓</span>
+            <p>Đầu tư phát triển khu nghiên cứu, trung tâm xét nghiệm hiện đại và trường đào tạo nhân lực y tế.</p>
+          </div>
+          <div class="opp-item">
+            <span class="opp-check">✓</span>
+            <p>Liên kết chuyển giao công nghệ mới, thiết bị y tế kỹ thuật cao và giải pháp quản lý bệnh viện thông minh.</p>
+          </div>
+          <div class="opp-item">
+            <span class="opp-check">✓</span>
+            <p>Phát triển các dịch vụ phụ trợ như chuỗi nhà thuốc đạt chuẩn, phòng khám vệ tinh, khu nhà ở nhân viên và thương mại dịch vụ.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Partners Carousel (Slide 6 - 10 Logo) -->
+      <div class="logo-carousel-section reveal">
+        <p class="carousel-title">Đối tác chiến lược trong & ngoài nước</p>
+        <div class="infinite-carousel">
+          <div class="carousel-track">
+            <!-- 10 Logos repeated for infinite scroll -->
+            <div class="c-logo-item"><img src="assets/logo_benhvienquoctecity.png" alt="CIH" /></div>
+            <div class="c-logo-item"><img src="assets/logo_cih_acci.png" alt="AACI" /></div>
+            <div class="c-logo-item"><span>Vietbank</span></div>
+            <div class="c-logo-item"><span>Shangrila SG</span></div>
+            <div class="c-logo-item"><span>Japan Medical</span></div>
+            <div class="c-logo-item"><span>Korea Biotech</span></div>
+            <div class="c-logo-item"><span>Lim Tower</span></div>
+            <div class="c-logo-item"><span>AEON Mall</span></div>
+            <div class="c-logo-item"><span>Kingdom 101</span></div>
+            <div class="c-logo-item"><span>Aio City</span></div>
+            <!-- Repeat -->
+            <div class="c-logo-item"><img src="assets/logo_benhvienquoctecity.png" alt="CIH" /></div>
+            <div class="c-logo-item"><img src="assets/logo_cih_acci.png" alt="AACI" /></div>
+            <div class="c-logo-item"><span>Vietbank</span></div>
+            <div class="c-logo-item"><span>Shangrila SG</span></div>
+            <div class="c-logo-item"><span>Japan Medical</span></div>
+            <div class="c-logo-item"><span>Korea Biotech</span></div>
+            <div class="c-logo-item"><span>Lim Tower</span></div>
+            <div class="c-logo-item"><span>AEON Mall</span></div>
+            <div class="c-logo-item"><span>Kingdom 101</span></div>
+            <div class="c-logo-item"><span>Aio City</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to Action Pitch Deck -->
+      <div class="coop-cta reveal">
+        <div class="cta-inner">
+          <div class="cta-text">
+            <h3>Tài liệu Dự án & Pitch Deck Hợp tác</h3>
+            <p>Tải xuống tài liệu phân tích cơ hội đầu tư chi tiết vào Khu y tế kỹ thuật cao Hoa Lâm - Shangrila.</p>
+          </div>
+          <div class="cta-btns">
+            <a href="#contact" class="btn btn-primary">Yêu Cầu Gặp Mặt</a>
+            <a href="#" class="btn btn-outline" id="downloadDeckBtn">Tải Pitch Deck (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIN TỨC & SỰ KIỆN (Slide 6 & 23) ========== -->
+  <section class="section news-section" id="news">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">Trung Tâm Tin Tức</div>
+        <h2 class="section-title">Tin Tức – Sự Kiện</h2>
+        <p class="section-desc">Cập nhật nhanh chóng các thông tin chính thống về hoạt động hợp tác, tiến độ dự án và văn hóa của Hoa Lâm – Shangrila.</p>
+      </div>
+
+      <!-- Categories Tabs -->
+      <div class="news-tabs reveal">
+        <button class="tab-btn active" data-filter="all">Tất cả</button>
+        <button class="tab-btn" data-filter="hot">Tin nóng</button>
+        <button class="tab-btn" data-filter="project">Dự án</button>
+        <button class="tab-btn" data-filter="culture">Văn hóa Hoa Lâm</button>
+      </div>
+
+      <!-- News Grid -->
+      <div class="news-cards-grid">
+        
+        <!-- Hot News -->
+        <article class="news-card reveal" data-category="hot">
+          <div class="news-img-box">
+            <img src="assets/building.png" alt="Bệnh viện Quốc tế City" class="news-card-img" />
+            <span class="news-badge">Tin Nóng</span>
+          </div>
+          <div class="news-card-content">
+            <span class="news-date">Tháng 11/2023</span>
+            <h4 class="news-card-title">CIH & Gia An 115 — Hai bệnh viện tư nhân đầu tiên đạt chuẩn chất lượng AACI Hoa Kỳ</h4>
+            <p class="news-excerpt">Việc đạt chuẩn AACI là cột mốc khẳng định chất lượng khám chữa bệnh an toàn và đẳng cấp quốc tế của hai bệnh viện...</p>
+            <a href="#" class="news-more-link">Chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- Project News -->
+        <article class="news-card reveal" data-category="project">
+          <div class="news-img-box">
+            <img src="assets/equipment.png" alt="Thiết bị y tế hiện đại" class="news-card-img" />
+            <span class="news-badge">Dự Án</span>
+          </div>
+          <div class="news-card-content">
+            <span class="news-date">10/06/2025</span>
+            <h4 class="news-card-title">Hoa Lâm Shangri-La xúc tiến hợp tác quốc tế tại Khu Y tế kỹ thuật cao TP.HCM</h4>
+            <p class="news-excerpt">Nhiều đoàn nhà đầu tư quốc tế từ Singapore và Nhật Bản đến tham quan tìm hiểu hợp tác xây dựng trung tâm y tế chất lượng cao...</p>
+            <a href="#" class="news-more-link">Chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- Culture News -->
+        <article class="news-card reveal" data-category="culture">
+          <div class="news-img-box">
+            <img src="assets/doctor_consult.png" alt="Các bác sĩ đang hội chẩn" class="news-card-img" />
+            <span class="news-badge">Văn Hóa</span>
+          </div>
+          <div class="news-card-content">
+            <span class="news-date">08/06/2025</span>
+            <h4 class="news-card-title">Hành trình y đức: Những câu chuyện nhân văn trong văn hóa Hoa Lâm</h4>
+            <p class="news-excerpt">Phát huy tinh thần tận tụy vì người bệnh, lấy sự hài lòng và sức khỏe của bệnh nhân làm mục tiêu cống hiến hàng đầu...</p>
+            <a href="#" class="news-more-link">Chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- Additional News 1 (Hidden initially, loaded via button) -->
+        <article class="news-card reveal extra-news" data-category="hot" style="display:none">
+          <div class="news-img-box">
+            <img src="assets/doctor_female_1.png" alt="Lễ ký kết" class="news-card-img" />
+            <span class="news-badge">Tin Nóng</span>
+          </div>
+          <div class="news-card-content">
+            <span class="news-date">05/06/2025</span>
+            <h4 class="news-card-title">Hoa Lâm Shangri-La Healthcare ký kết hợp tác y khoa Cyto-Facto, Nhật Bản</h4>
+            <p class="news-excerpt">Ký kết biên bản ghi nhớ chuyển giao công nghệ điều trị tế bào thế hệ mới, nâng tầm điều trị chuyên sâu ung thư tại Việt Nam...</p>
+            <a href="#" class="news-more-link">Chi tiết →</a>
+          </div>
+        </article>
+
+        <!-- Additional News 2 (Hidden initially) -->
+        <article class="news-card reveal extra-news" data-category="culture" style="display:none">
+          <div class="news-img-box">
+            <img src="assets/doctor_team.png" alt="Đội ngũ bác sĩ" class="news-card-img" />
+            <span class="news-badge">Văn Hóa</span>
+          </div>
+          <div class="news-card-content">
+            <span class="news-date">01/06/2025</span>
+            <h4 class="news-card-title">Hoa Lâm Shangri-La diện kiến và làm việc với các cơ quan ban ngành</h4>
+            <p class="news-excerpt">Báo cáo tiến độ vận hành các phân khu y tế chất lượng cao và định hướng phát triển trường đại học y tế tương lai...</p>
+            <a href="#" class="news-more-link">Chi tiết →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="news-load-more reveal">
+        <button class="btn btn-outline" id="loadNewsBtn">Xem Thêm Tin Tức</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LIÊN HỆ (Slide 24) ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <div class="contact-text-col reveal">
+          <div class="section-tag">Thông Tin Liên Hệ</div>
+          <h2 class="section-title text-white">Kết Nối Với Chúng Tôi</h2>
+          <p class="section-desc text-light">Mọi yêu cầu hợp tác đầu tư, chuyển giao công nghệ hoặc giải đáp thông tin dịch vụ, xin vui lòng liên hệ trực tiếp với bộ phận đối ngoại Hoa Lâm - Shangrila.</p>
+          
+          <div class="contact-info-list">
+            <div class="c-info-item">
+              <span class="c-i-emoji">📍</span>
+              <div>
+                <strong>Trụ Sở Chính</strong>
+                <p>3 Đường Số 17A, Bình Trị Đông B, Bình Tân, TP. Hồ Chí Minh (Khu Y tế Kỹ thuật cao Hoa Lâm - Shangrila)</p>
+              </div>
+            </div>
+            <div class="c-info-item">
+              <span class="c-i-emoji">📞</span>
+              <div>
+                <strong>Điện thoại</strong>
+                <p>(+84) 23 6381 9181</p>
+              </div>
+            </div>
+            <div class="c-info-item">
+              <span class="c-i-emoji">✉️</span>
+              <div>
+                <strong>Email Liên Hệ</strong>
+                <p>info@hoalam-shangrila.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-col reveal">
+          <div class="form-glass-box">
+            <h3>Gửi Tin Nhắn / Đăng Ký Đối Tác</h3>
+            <p>Chúng tôi sẽ phản hồi yêu cầu của bạn trong vòng 24 giờ làm việc.</p>
+            
+            <form class="c-form" id="coopForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nameInput">Họ và Tên *</label>
+                  <input type="text" id="nameInput" placeholder="Ví dụ: Nguyễn Văn A" required />
+                </div>
+                <div class="form-group">
+                  <label for="phoneInput">Số Điện Thoại *</label>
+                  <input type="tel" id="phoneInput" placeholder="Ví dụ: 0901234567" required />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="emailInput">Địa chỉ Email *</label>
+                <input type="email" id="emailInput" placeholder="name@company.com" required />
+              </div>
+              
+              <div class="form-group">
+                <label for="coopInterest">Lĩnh vực hợp tác đầu tư quan tâm</label>
+                <select id="coopInterest">
+                  <option value="Bệnh viện chuyên khoa">Đầu tư xây dựng & vận hành Bệnh viện chuyên khoa</option>
+                  <option value="Trung tâm Tế bào gốc">Hợp tác nghiên cứu Tế bào gốc</option>
+                  <option value="Đào tạo nhân lực">Khu Nghiên cứu & Đào tạo y khoa</option>
+                  <option value="Chuyển giao công nghệ">Chuyển giao thiết bị & công nghệ y tế</option>
+                  <option value="Dịch vụ phụ trợ">Phát triển dịch vụ phụ trợ / AEON Mall</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="messageInput">Nội dung yêu cầu</label>
+                <textarea id="messageInput" rows="4" placeholder="Mô tả tóm tắt nhu cầu hợp tác của bạn..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-full" id="submitFormBtn">Gửi Yêu Cầu Hợp Tác</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <img src="assets/logo.png" alt="Hoa Lâm Logo" class="footer-logo-img" />
+          <h4 class="footer-brand-title">HOA LÂM</h4>
+          <span class="footer-brand-sub">SHANGRILA HEALTHCARE PARK</span>
+          <p class="footer-brand-desc">Khu y tế kỹ thuật cao chuẩn quốc tế hàng đầu tại Việt Nam, mang giải pháp y khoa tiên tiến nhất đến cho cộng đồng.</p>
+        </div>
+        <div class="footer-links-col">
+          <h5>Phân Khu Chức Năng</h5>
+          <ul>
+            <li><a href="#ecosystem">Bệnh viện Quốc tế City</a></li>
+            <li><a href="#ecosystem">Bệnh viện Gia An 115</a></li>
+            <li><a href="#interactive-map">Trung tâm Tế bào gốc</a></li>
+            <li><a href="#interactive-map">Khu Đào tạo & Nghiên cứu</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Liên Kết Nhanh</h5>
+          <ul>
+            <li><a href="#about-group">Về Tập Đoàn</a></li>
+            <li><a href="#founder">Người Sáng Lập</a></li>
+            <li><a href="#tour">Tour 3D Tham Quan</a></li>
+            <li><a href="#partners">Cơ Hội Đầu Tư</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Liên Hệ</h5>
+          <p>📍 3 Đường Số 17A, Bình Trị Đông B, Bình Tân, TP.HCM</p>
+          <p>📞 (+84) 23 6381 9181</p>
+          <p>✉️ info@hoalam-shangrila.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Hoa Lâm – Shangrila Healthcare Park. Thiết kế demo chạy trên giautran.me.</p>
+        <div class="footer-legal">
+          <a href="#">Điều khoản sử dụng</a>
+          <a href="#">Chính sách bảo mật</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CHATBOT AI WIDGET (Slide 25, 26) ========== -->
+  <div class="chatbot-widget" id="chatbotWidget">
+    <button class="chatbot-btn" id="chatbotBtn" aria-label="Mở khung trò chuyện AI">
+      <span class="c-btn-icon">💬</span>
+      <span class="c-btn-pulse"></span>
+    </button>
+    <div class="chatbot-box" id="chatbotBox">
+      <div class="chat-header">
+        <span class="chat-avatar">🤖</span>
+        <div class="chat-header-info">
+          <strong>Hoa Lâm AI Assistant</strong>
+          <span>● Trực tuyến 24/7 (Đa ngôn ngữ)</span>
+        </div>
+        <button class="chat-close" id="chatClose">✕</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-msg bot">
+          <div class="msg-bubble">
+            Xin chào! Tôi là trợ lý ảo AI của Hoa Lâm – Shangrila. Tôi có thể hỗ trợ bạn tìm hiểu về cơ hội đầu tư, thông tin các bệnh viện và các số liệu vận hành của chúng tôi. 🏥
+          </div>
+        </div>
+        <div class="chat-msg bot">
+          <div class="msg-bubble">Bạn quan tâm đến thông tin nào sau đây?</div>
+          <div class="chat-options">
+            <button class="chat-opt-btn">💰 Cơ hội đầu tư</button>
+            <button class="chat-opt-btn">🏥 Các bệnh viện thành viên</button>
+            <button class="chat-opt-btn">📊 Con số ấn tượng</button>
+            <button class="chat-opt-btn">📅 Đặt lịch làm việc</button>
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Nhập câu hỏi của bạn..." />
+        <button id="chatSendBtn" aria-label="Gửi tin nhắn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

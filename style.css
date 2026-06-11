@@ -257,7 +257,7 @@ button, select, input, textarea {
 }
 
 .navbar.scrolled {
-  background: hsla(217, 60%, 9%, 0.96);
+  background: hsla(206, 83%, 9%, 0.96);
   backdrop-filter: blur(15px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   border-color: rgba(255, 255, 255, 0.05);
@@ -280,7 +280,7 @@ button, select, input, textarea {
 }
 
 .logo-img {
-  height: 52px;
+  height: 38px;
   width: auto;
   object-fit: contain;
   background: transparent;
@@ -1029,7 +1029,7 @@ button, select, input, textarea {
   position: absolute;
   bottom: -30px;
   left: -30px;
-  background: hsla(217, 60%, 14%, 0.9);
+  background: hsla(206, 83%, 14%, 0.9);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 24px;

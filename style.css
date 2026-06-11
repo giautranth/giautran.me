@@ -2269,33 +2269,6 @@ button, select, input, textarea {
   object-fit: contain;
 }
 
-.coop-cta {
-  background: var(--slate-100);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-}
-.cta-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.cta-text h3 {
-  font-family: var(--font-headings);
-  font-weight: 800;
-  font-size: 1.35rem;
-  color: var(--secondary-blue);
-  margin-bottom: 6px;
-}
-.cta-text p {
-  color: var(--slate-600);
-  font-size: 0.9rem;
-}
-.cta-btns {
-  display: flex;
-  gap: 14px;
-}
 
 /* ================================================================
    NEWS SECTION (Slide 6 & 23)

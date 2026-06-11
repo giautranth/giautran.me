@@ -1,6 +1,6 @@
 /* ============================================================
    HOA LÂM – SHANGRILA · WEBSITE DESIGN SYSTEM
-   Colors: Logo Red #E31E24 · Logo Blue #1B3A6B · Gold #C9A84C
+   Colors: Logo Red #E31E24 · Logo Blue #0D568D · Gold #C9A84C
    ============================================================ */
 
 /* ── RESET & VARIABLES ───────────────────────────────────────── */
@@ -17,9 +17,9 @@
   --primary-red-light: hsl(358, 85%, 93%);
   --primary-red-glow:  hsla(358, 85%, 51%, 0.35);
   
-  --secondary-blue:      hsl(208, 87%, 29%);    /* #0a508c */
-  --secondary-blue-dark: hsl(208, 87%, 18%);
-  --secondary-blue-light:hsl(208, 87%, 38%);
+  --secondary-blue:      hsl(206, 83%, 30%);    /* #0d568d */
+  --secondary-blue-dark: hsl(206, 83%, 19%);
+  --secondary-blue-light:hsl(206, 83%, 39%);
   
   --gold:              hsl(45, 54%, 54%);       /* #C9A84C */
   --gold-light:        hsl(45, 74%, 66%);
@@ -37,8 +37,8 @@
   --slate-800:         #1e293b;
   --slate-900:         #0f172a;
   
-  --dark-bg:           hsl(208, 87%, 9%);       /* Deepest Navy Background */
-  --dark-bg-card:      hsl(208, 87%, 14%);
+  --dark-bg:           hsl(206, 83%, 9%);       /* Deepest Navy Background */
+  --dark-bg-card:      hsl(206, 83%, 14%);
   --text-dark:         hsl(217, 40%, 12%);
   --text-light:        hsl(217, 20%, 90%);
   --text-muted:        hsl(217, 15%, 45%);

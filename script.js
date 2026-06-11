@@ -644,5 +644,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Console greeting
   console.log('%c🏥 Hoa Lâm – Shangrila Healthcare Park Website Demo', 'color:#E31E24;font-size:1.3em;font-weight:bold;');
-  console.log('%cPowered by Antigravity AI', 'color:#1B3A6B;font-size:1.0em;');
+  console.log('%cPowered by Antigravity AI', 'color:#0D568D;font-size:1.0em;');
 });

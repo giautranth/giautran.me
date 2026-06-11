@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderZoneDetails(zoneId) {
     const data = mapZones[zoneId];
-    if (!data) return;
+    if (!data || !mdTitle || !mdStatus || !mdDesc || !mdStats || !mdCta) return;
 
     mdTitle.textContent = data.title;
     mdStatus.textContent = data.statusLabel;

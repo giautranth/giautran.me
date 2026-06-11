@@ -17,9 +17,9 @@
   --primary-red-light: hsl(358, 85%, 93%);
   --primary-red-glow:  hsla(358, 85%, 51%, 0.35);
   
-  --secondary-blue:      hsl(217, 60%, 26%);    /* #1B3A6B */
-  --secondary-blue-dark: hsl(217, 60%, 15%);
-  --secondary-blue-light:hsl(217, 60%, 36%);
+  --secondary-blue:      hsl(208, 87%, 29%);    /* #0a508c */
+  --secondary-blue-dark: hsl(208, 87%, 18%);
+  --secondary-blue-light:hsl(208, 87%, 38%);
   
   --gold:              hsl(45, 54%, 54%);       /* #C9A84C */
   --gold-light:        hsl(45, 74%, 66%);
@@ -37,8 +37,8 @@
   --slate-800:         #1e293b;
   --slate-900:         #0f172a;
   
-  --dark-bg:           hsl(217, 60%, 9%);       /* Deepest Navy Background */
-  --dark-bg-card:      hsl(217, 60%, 14%);
+  --dark-bg:           hsl(208, 87%, 9%);       /* Deepest Navy Background */
+  --dark-bg-card:      hsl(208, 87%, 14%);
   --text-dark:         hsl(217, 40%, 12%);
   --text-light:        hsl(217, 20%, 90%);
   --text-muted:        hsl(217, 15%, 45%);
@@ -1129,25 +1129,23 @@ button, select, input, textarea {
   background: var(--white);
   border: 1px solid var(--slate-100);
   border-radius: var(--radius-md);
-  padding: 16px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-headings);
   font-weight: 800;
   color: var(--secondary-blue);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.2;
-  height: 90px;
+  height: 80px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
 }
 .brand-item img {
-  max-height: 50px;
+  max-height: 38px;
   max-width: 100%;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.8;
   transition: all 0.3s ease;
 }
 .brand-item span {
@@ -1159,16 +1157,14 @@ button, select, input, textarea {
   font-weight: 600;
   color: var(--slate-400);
   font-size: 0.65rem;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 .brand-item:hover {
   border-color: rgba(227, 30, 36, 0.3);
-  box-shadow: 0 10px 25px rgba(227, 30, 36, 0.08);
-  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(227, 30, 36, 0.08);
+  transform: translateY(-3px);
 }
 .brand-item:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
   transform: scale(1.05);
 }
 .brand-item:hover span {

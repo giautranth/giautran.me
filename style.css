@@ -118,7 +118,7 @@ button, select, input, textarea {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 45px 0;
   position: relative;
 }
 
@@ -236,7 +236,7 @@ button, select, input, textarea {
 }
 
 .section-header {
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2981,7 +2981,7 @@ button, select, input, textarea {
 
 @media (max-width: 768px) {
   .section {
-    padding: 40px 0;
+    padding: 25px 0;
   }
   
   /* Mobile Menu */

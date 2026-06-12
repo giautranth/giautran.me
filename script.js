@@ -555,4 +555,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startInterval();
   }
+
+  // Prevent Google Translate from changing body top position
+  const bodyStyleObserver = new MutationObserver(() => {
+    if (document.body.style.top && document.body.style.top !== '0px' && document.body.style.top !== '0') {
+      document.body.style.top = '0px';
+    }
+  });
+  bodyStyleObserver.observe(document.body, { attributes: true, attributeFilter: ['style'] });
 });

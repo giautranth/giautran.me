@@ -246,14 +246,12 @@ button, select, input, textarea {
    NAVIGATION BAR (Slide 3)
    ================================================================ */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 1000;
-  background: transparent;
+  background: var(--dark-bg);
   transition: var(--transition-normal);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navbar.scrolled {
@@ -607,7 +605,7 @@ button, select, input, textarea {
   position: relative;
   z-index: 3;
   max-width: 900px;
-  padding: 120px 24px 60px;
+  padding: 80px 24px;
   text-align: center;
 }
 
@@ -2612,7 +2610,7 @@ button, select, input, textarea {
 }
 .chatbot-btn {
   width: 60px;
-  height: 90px;
+  height: 60px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
   border: none;
@@ -3194,11 +3192,20 @@ button, select, input, textarea {
 #goog-gt-tt *,
 .goog-te-balloon-frame,
 iframe.VIpgJd-ZVi9od-ORHb-OEVmcd,
-.VIpgJd-ZVi9od-ORHb-OEVmcd {
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+iframe.goog-te-banner-frame,
+iframe.skiptranslate,
+.goog-tooltip,
+.goog-tooltip:hover {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;
   opacity: 0 !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 body {
   top: 0 !important;

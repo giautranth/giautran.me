@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Update button flag & code
       const flagEl = langCurrent.querySelector('.lang-flag');
-      if (flagEl) flagEl.textContent = flag;
+      if (flagEl) flagEl.innerHTML = `<img src="https://flagcdn.com/w20/${flag}.png" alt="${flag}" width="20" style="vertical-align: middle; border-radius: 2px;" />`;
       const codeEl = langCurrent.querySelector('.lang-code');
       if (codeEl) codeEl.textContent = code;
 

@@ -3148,3 +3148,9 @@ button, select, input, textarea {
 body {
   top: 0 !important;
 }
+
+.lang-flag, .lang-opt .flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

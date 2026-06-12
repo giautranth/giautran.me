@@ -16,15 +16,15 @@
   --primary-red-dark:  hsl(358, 85%, 42%);
   --primary-red-light: hsl(358, 85%, 93%);
   --primary-red-glow:  hsla(358, 85%, 51%, 0.35);
-  
+
   --secondary-blue:      hsl(206, 83%, 30%);    /* #0d568d */
   --secondary-blue-dark: hsl(206, 83%, 19%);
   --secondary-blue-light:hsl(206, 83%, 39%);
-  
+
   --gold:              hsl(45, 54%, 54%);       /* #C9A84C */
   --gold-light:        hsl(45, 74%, 66%);
   --gold-glow:         hsla(45, 74%, 66%, 0.4);
-  
+
   /* Neutral Palette */
   --white:             #ffffff;
   --off-white:         #f8fafc;
@@ -36,17 +36,17 @@
   --slate-600:         #475569;
   --slate-800:         #1e293b;
   --slate-900:         #0f172a;
-  
+
   --dark-bg:           hsl(206, 83%, 9%);       /* Deepest Navy Background */
   --dark-bg-card:      hsl(206, 83%, 14%);
   --text-dark:         hsl(217, 40%, 12%);
   --text-light:        hsl(217, 20%, 90%);
   --text-muted:        hsl(217, 15%, 45%);
-  
+
   /* Typography */
   --font-headings:     'Plus Jakarta Sans', system-ui, sans-serif;
   --font-body:         'Inter', system-ui, sans-serif;
-  
+
   /* Design Tokens */
   --radius-sm:         8px;
   --radius-md:         12px;
@@ -1080,7 +1080,6 @@ button, select, input, textarea {
   line-height: 1.6;
 }
 
-
 /* ================================================================
    ABOUT GROUP (Slide 7, 8, 9, 10)
    ================================================================ */
@@ -1473,15 +1472,28 @@ button, select, input, textarea {
 .v-line-path {
   position: absolute;
   left: 120px;
-  top: 10px;
-  bottom: 10px;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: #475569; /* Road color */
+  border-radius: 5px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.v-line-path::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--primary-red), var(--secondary-blue) 60%, rgba(27, 58, 107, 0.1));
+  background: repeating-linear-gradient(to bottom, #fff 0px, #fff 8px, transparent 8px, transparent 16px);
+  transform: translateX(-50%);
 }
 .vt-item {
   position: relative;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   align-items: start;
 }
 .vt-item:last-child {
@@ -1497,14 +1509,15 @@ button, select, input, textarea {
   padding-top: 4px;
 }
 .vt-dot {
-  width: 18px;
-  height: 36px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--white);
   border: 4px solid var(--secondary-blue);
   margin: 8px 12px 0;
   position: relative;
   z-index: 2;
+  transition: var(--transition-fast);
 }
 .vt-item:hover .vt-dot {
   border-color: var(--primary-red);
@@ -1516,7 +1529,7 @@ button, select, input, textarea {
   background: var(--white);
   border: 1px solid var(--slate-200);
   border-radius: var(--radius-md);
-  padding: 18px 24px;
+  padding: 16px 20px;
   box-shadow: var(--shadow-sm);
   transition: var(--transition-fast);
 }
@@ -1529,6 +1542,140 @@ button, select, input, textarea {
   font-size: 0.92rem;
   color: var(--slate-600);
   line-height: 1.6;
+}
+
+/* Horizontal Timeline for Desktop / Winding Path (Cung đường) */
+@media (min-width: 992px) {
+  .vertical-timeline {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 40px;
+    padding: 60px 40px;
+    max-width: 100%;
+    height: 520px;
+    align-items: center;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-blue) var(--slate-100);
+  }
+  .vertical-timeline::-webkit-scrollbar {
+    height: 6px;
+  }
+  .vertical-timeline::-webkit-scrollbar-track {
+    background: var(--slate-100);
+    border-radius: 3px;
+  }
+  .vertical-timeline::-webkit-scrollbar-thumb {
+    background: var(--secondary-blue);
+    border-radius: 3px;
+  }
+  .v-line-path {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 14px;
+    width: 100%;
+    background: #475569; /* Slate road */
+    border-radius: 7px;
+    transform: translateY(-50%);
+    z-index: 1;
+    bottom: auto;
+  }
+  .v-line-path::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background: repeating-linear-gradient(to right, #fff 0px, #fff 10px, transparent 10px, transparent 20px);
+    transform: translateY(-50%);
+  }
+  .vt-item {
+    flex: 0 0 280px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .vt-dot {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 3;
+    background: var(--white);
+    border: 5px solid var(--secondary-blue);
+    border-radius: 50%;
+    transition: var(--transition-fast);
+  }
+  .vt-item:hover .vt-dot {
+    border-color: var(--primary-red);
+    background: var(--primary-red);
+    box-shadow: 0 0 12px var(--primary-red-glow);
+  }
+  
+  /* Odd items: Content top, Year bottom */
+  .vt-item:nth-child(odd) .vt-content {
+    position: absolute;
+    bottom: calc(50% + 25px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    text-align: center;
+  }
+  .vt-item:nth-child(odd) .vt-year {
+    position: absolute;
+    top: calc(50% + 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: var(--slate-50);
+    padding: 2px 12px;
+    border-radius: 12px;
+    width: auto;
+    text-align: center;
+  }
+  .vt-item:nth-child(odd):hover .vt-content {
+    transform: translateY(-6px);
+  }
+
+  /* Even items: Year top, Content bottom */
+  .vt-item:nth-child(even) .vt-content {
+    position: absolute;
+    top: calc(50% + 25px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: translateY(0);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+    text-align: center;
+  }
+  .vt-item:nth-child(even) .vt-year {
+    position: absolute;
+    bottom: calc(50% + 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: var(--slate-50);
+    padding: 2px 12px;
+    border-radius: 12px;
+    width: auto;
+    text-align: center;
+  }
+  .vt-item:nth-child(even):hover .vt-content {
+    transform: translateY(6px);
+  }
 }
 
 /* ================================================================
@@ -1961,7 +2108,6 @@ button, select, input, textarea {
   text-align: left;
 }
 
-
 /* ================================================================
    TOUR 3D (Slide 18, 19)
    ================================================================ */
@@ -2281,7 +2427,6 @@ button, select, input, textarea {
   max-width: 130px;
   object-fit: contain;
 }
-
 
 /* ================================================================
    NEWS SECTION (Slide 6 & 23)
@@ -2983,7 +3128,7 @@ button, select, input, textarea {
   .section {
     padding: 25px 0;
   }
-  
+
   /* Mobile Menu */
   .nav-container {
     position: relative !important;
@@ -2992,7 +3137,7 @@ button, select, input, textarea {
     align-items: center !important;
     height: 90px !important;
   }
-  
+
   .nav-logo {
     position: absolute !important;
     left: 50% !important;
@@ -3001,7 +3146,7 @@ button, select, input, textarea {
     margin: 0 !important;
     z-index: 1002 !important;
   }
-  
+
   .nav-toggle {
     display: flex !important;
     order: 1 !important;
@@ -3009,7 +3154,7 @@ button, select, input, textarea {
     z-index: 1002 !important;
     margin: 0 !important;
   }
-  
+
   .lang-box {
     display: block !important;
     order: 3 !important;
@@ -3020,18 +3165,18 @@ button, select, input, textarea {
     margin-left: 0 !important;
     margin-top: 0 !important;
   }
-  
+
   .lang-current {
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
     box-shadow: none !important;
   }
-  
+
   .lang-chevron {
     display: none !important;
   }
-  
+
   .lang-flag img {
     width: 28px !important;
     height: 28px !important;
@@ -3040,7 +3185,7 @@ button, select, input, textarea {
     border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
   }
-  
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -3056,16 +3201,16 @@ button, select, input, textarea {
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.4);
     z-index: 1000;
   }
-  
+
   .nav-links.open {
     left: 0;
   }
-  
+
   .nav-link {
     font-size: 1.1rem;
     width: 100%;
   }
-  
+
   .nav-dropdown {
     width: 100%;
   }
@@ -3081,7 +3226,7 @@ button, select, input, textarea {
     box-shadow: none;
     width: 100%;
   }
-  
+
   /* Hamburger state change */
   .nav-links.open ~ .nav-toggle span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -3093,8 +3238,6 @@ button, select, input, textarea {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-
-  
   .hero-stats {
     flex-direction: column;
     padding: 24px 20px;
@@ -3106,19 +3249,19 @@ button, select, input, textarea {
     width: 100%;
     height: 1px;
   }
-  
+
   .hero-scroll {
     display: none;
   }
-  
+
   .eco-showcase {
     grid-template-columns: 1fr;
   }
-  
+
   .brand-eco-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .v-line-path {
     left: 16px;
   }
@@ -3144,7 +3287,7 @@ button, select, input, textarea {
     margin-left: 0;
     width: 100%;
   }
-  
+
   .vmg-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -3153,28 +3296,28 @@ button, select, input, textarea {
   .vmg-wide {
     grid-column: auto;
   }
-  
+
   .metric-sub-cards {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .staff-breakdown {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  
+
   .awards-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .reasons-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .news-cards-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-top {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -3186,15 +3329,15 @@ button, select, input, textarea {
     font-size: clamp(1.5rem, 7.5vw, 2.3rem);
     white-space: nowrap;
   }
-  
+
   .metric-sub-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .form-glass-box {
     padding: 24px 20px;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;

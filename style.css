@@ -354,7 +354,8 @@ button, select, input, textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
   padding: 10px;
-  min-width: 220px;
+  min-width: 240px;
+  width: max-content;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -375,6 +376,7 @@ button, select, input, textarea {
   border-radius: var(--radius-sm);
   font-family: var(--font-headings);
   font-weight: 500;
+  white-space: nowrap;
 }
 .dropdown-menu a:hover {
   background: rgba(227, 30, 36, 0.12);
@@ -786,8 +788,13 @@ button, select, input, textarea {
   position: relative;
   height: 220px;
   width: 100%;
+}
+.hospital-card-img-wrap {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  background-color: var(--slate-100);
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 .hospital-card-img {
   width: 100%;
@@ -814,6 +821,7 @@ button, select, input, textarea {
   height: 56px;
   width: 128px;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  z-index: 2;
 }
 .eco-hospital-card:hover .hospital-card-logo-badge {
   transform: translateX(-50%) translateY(-2px);
@@ -826,7 +834,7 @@ button, select, input, textarea {
   object-fit: contain;
 }
 .hospital-card-body {
-  padding: 44px 32px 32px 32px;
+  padding: 44px 24px 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -869,9 +877,10 @@ button, select, input, textarea {
   font-size: 0.95rem;
   color: var(--slate-600);
   margin-bottom: 24px;
-  max-width: 420px;
+  max-width: 440px;
   line-height: 1.6;
 }
+
 .hospital-link {
   font-weight: 700;
   font-size: 0.95rem;
@@ -935,54 +944,57 @@ button, select, input, textarea {
 }
 .highlight-card {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: var(--white);
-  border: 1px solid var(--slate-150, #f1f5f9);
-  border-radius: var(--radius-md);
-  padding: 28px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
 }
 .highlight-card:hover {
   background: var(--white);
-  border-color: var(--secondary-blue);
-  box-shadow: 0 15px 35px rgba(13, 86, 141, 0.08);
-  transform: translateY(-4px);
+  border-color: var(--primary-red);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
 }
 .hl-icon {
-  font-size: 1.6rem;
-  width: 56px;
-  height: 56px;
+  font-size: 2rem;
+  width: 64px;
+  height: 64px;
   background: rgba(13, 86, 141, 0.06);
-  border-radius: 14px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.4s ease;
+  margin-bottom: 20px;
+  transition: var(--transition-normal);
+  color: var(--secondary-blue);
 }
 .highlight-card:hover .hl-icon {
-  background: var(--primary-red-light, rgba(227, 30, 36, 0.08));
-  transform: scale(1.08) rotate(6deg);
+  background: var(--primary-red-light);
+  color: var(--primary-red);
+  transform: scale(1.1);
 }
 .highlight-card h4 {
   font-family: var(--font-headings);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: var(--secondary-blue);
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   transition: color 0.3s ease;
 }
 .highlight-card:hover h4 {
   color: var(--primary-red);
 }
 .highlight-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--slate-600);
   line-height: 1.6;
-  text-align: justify;
-  text-align-last: left;
 }
+
 
 /* ================================================================
    ABOUT GROUP (Slide 7, 8, 9, 10)

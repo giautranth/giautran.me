@@ -202,7 +202,7 @@ button, select, input, textarea {
 
 .section-title {
   font-family: var(--font-headings);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--secondary-blue);
   line-height: 1.25;
@@ -821,7 +821,7 @@ button, select, input, textarea {
   height: 56px;
   width: 128px;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-  z-index: 2;
+  z-index: 10;
 }
 .eco-hospital-card:hover .hospital-card-logo-badge {
   transform: translateX(-50%) translateY(-2px);
@@ -912,9 +912,12 @@ button, select, input, textarea {
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: 1fr 2.2fr;
-  gap: 60px;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
   align-items: start;
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--slate-200);
 }
 .side-title {
   font-family: var(--font-headings);

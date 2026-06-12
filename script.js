@@ -518,11 +518,25 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentSlide = 0;
   let slideInterval;
 
+  const heroContent = document.querySelector('.hero-content');
+
   function showSlide(index) {
     if (slides.length === 0) return;
     slides.forEach(s => s.classList.remove('active'));
     currentSlide = (index + slides.length) % slides.length;
     slides[currentSlide].classList.add('active');
+
+    if (heroContent) {
+      if (currentSlide === 0) {
+        heroContent.style.opacity = '1';
+        heroContent.style.visibility = 'visible';
+        heroContent.style.pointerEvents = 'auto';
+      } else {
+        heroContent.style.opacity = '0';
+        heroContent.style.visibility = 'hidden';
+        heroContent.style.pointerEvents = 'none';
+      }
+    }
   }
 
   function nextSlide() {

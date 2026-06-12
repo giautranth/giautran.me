@@ -149,6 +149,18 @@ button, select, input, textarea {
   box-shadow: 0 10px 25px var(--primary-red-glow);
 }
 
+.btn-blue {
+  background: var(--secondary-blue);
+  color: var(--white);
+  box-shadow: 0 6px 20px rgba(13, 86, 141, 0.3);
+}
+.btn-blue:hover {
+  background: var(--secondary-blue-light);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(13, 86, 141, 0.4);
+}
+
 .btn-outline {
   background: transparent;
   color: var(--secondary-blue);
@@ -246,7 +258,8 @@ button, select, input, textarea {
    NAVIGATION BAR (Slide 3)
    ================================================================ */
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   background: var(--dark-bg);
   transition: var(--transition-normal);
@@ -607,6 +620,7 @@ button, select, input, textarea {
   max-width: 900px;
   padding: 80px 24px;
   text-align: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .hero-badge {
@@ -653,6 +667,7 @@ button, select, input, textarea {
   line-height: 1.1;
   letter-spacing: -0.03em;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
 }
 .hero-title-sub {
   font-family: var(--font-headings);
@@ -3168,7 +3183,8 @@ button, select, input, textarea {
 
 @media (max-width: 480px) {
   .hero-title-line {
-    font-size: 2.3rem;
+    font-size: clamp(1.5rem, 7.5vw, 2.3rem);
+    white-space: nowrap;
   }
   
   .metric-sub-cards {

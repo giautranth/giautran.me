@@ -1,5 +1,5 @@
 /* ================================================================
-   HOA LÂM – SHANGRILA · WEBSITE LOGIC & INTERACTION
+   HOA LÂM - SHANGRILA · WEBSITE LOGIC & INTERACTION
    ================================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -305,10 +305,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const botResponses = {
-    'đầu tư': 'Hoa Lâm – Shangrila đang mở rộng cơ hội đầu tư BOT, PPP hoặc liên doanh vào các phân khu:\n• Bệnh viện Chuyên khoa Tim mạch/Ung bướu (Slide 22)\n• Bệnh viện Phục hồi chức năng & Dưỡng lão\n• Trường Đào tạo y dược & Khu nghiên cứu.\nChúng tôi sẵn sàng kết nối hợp tác tài chính và vận hành y tế! 🤝',
+    'đầu tư': 'HOA LÂM - SHANGRILA đang mở rộng cơ hội đầu tư BOT, PPP hoặc liên doanh vào các phân khu:\n• Bệnh viện Chuyên khoa Tim mạch/Ung bướu (Slide 22)\n• Bệnh viện Phục hồi chức năng & Dưỡng lão\n• Trường Đào tạo y dược & Khu nghiên cứu.\nChúng tôi sẵn sàng kết nối hợp tác tài chính và vận hành y tế! 🤝',
     'bệnh viện': 'Hiện tại khu y tế có 2 bệnh viện tiêu chuẩn quốc tế đang hoạt động:\n1. Bệnh viện Quốc tế City (CIH) - Quy mô 320 giường bệnh.\n2. Bệnh viện Gia An 115 - Mô hình PPP đầu tiên tại miền Nam.\nCả 2 đều đạt chất lượng AACI (Hoa Kỳ) và đoạt nhiều giải thưởng quốc tế. 🏥',
     'con số': 'Những con số ấn tượng của dự án:\n• Tổng diện tích: 37,5 ha\n• Tổng vốn đầu tư: ~1 tỷ USD\n• Quy hoạch: 6 Bệnh viện chuẩn quốc tế\n• Nhân sự: 3.782 nhân viên, 597 bác sĩ, 1.626 điều dưỡng.\n• Điểm hài lòng NES: 85% 📊',
-    'đặt lịch': 'Để đặt lịch làm việc với ban quản lý dự án Hoa Lâm – Shangrila, xin vui lòng điền form Liên hệ ở bên dưới, hoặc gửi email đến: <strong>info@hoalam-shangrila.com</strong>. Hotline: <strong>(+84) 23 6381 9181</strong>. Chúng tôi sẽ liên hệ lại ngay! 📅',
+    'đặt lịch': 'Để đặt lịch làm việc với ban quản lý dự án HOA LÂM - SHANGRILA, xin vui lòng điền form Liên hệ ở bên dưới, hoặc gửi email đến: <strong>info@hoalam-shangrila.com</strong>. Hotline: <strong>(+84) 23 6381 9181</strong>. Chúng tôi sẽ liên hệ lại ngay! 📅',
     'default': 'Cảm ơn bạn đã trò chuyện! Tôi là trợ lý ảo hỗ trợ thông tin dự án Hoa Lâm - Shangrila. Bạn có thể hỏi tôi về các chuyên mục như: "cơ hội đầu tư", "thông tin bệnh viện", hoặc "các số liệu thống kê".'
   };
 
@@ -498,6 +498,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Console greeting
-  console.log('%c🏥 Hoa Lâm – Shangrila Healthcare Park Website Demo', 'color:#E31E24;font-size:1.3em;font-weight:bold;');
+  console.log('%c🏥 HOA LÂM - SHANGRILA Healthcare Park Website Demo', 'color:#E31E24;font-size:1.3em;font-weight:bold;');
   console.log('%cPowered by Antigravity AI', 'color:#0D568D;font-size:1.0em;');
 });

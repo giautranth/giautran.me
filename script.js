@@ -446,6 +446,16 @@ document.addEventListener('DOMContentLoaded', () => {
       // Trigger translate function (Simple header transition translation demo)
       translateInterface(lang);
 
+      // Google Translate Integration
+      let googleLangCode = lang;
+      if (lang === 'zh') googleLangCode = 'zh-CN';
+      
+      const selectEl = document.querySelector('.goog-te-combo');
+      if (selectEl) {
+        selectEl.value = googleLangCode;
+        selectEl.dispatchEvent(new Event('change'));
+      }
+
       // Show toast message
       const toastText = i18n[lang]?.toast || 'Language changed';
       const toast = document.createElement('div');

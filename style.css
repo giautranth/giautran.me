@@ -272,7 +272,7 @@ button, select, input, textarea {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 60px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -285,7 +285,7 @@ button, select, input, textarea {
 }
 
 .logo-img {
-  height: 18px;
+  height: 36px;
   width: auto;
   object-fit: contain;
   background: transparent;
@@ -481,7 +481,7 @@ button, select, input, textarea {
   flex-direction: column;
   justify-content: space-between;
   width: 26px;
-  height: 18px;
+  height: 36px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -785,7 +785,7 @@ button, select, input, textarea {
 }
 .obj-icon-box {
   width: 60px;
-  height: 60px;
+  height: 90px;
   border-radius: var(--radius-md);
   background: var(--primary-red-light);
   font-size: 1.8rem;
@@ -1482,7 +1482,7 @@ button, select, input, textarea {
 }
 .vt-dot {
   width: 18px;
-  height: 18px;
+  height: 36px;
   border-radius: 50%;
   background: var(--white);
   border: 4px solid var(--secondary-blue);
@@ -2248,7 +2248,7 @@ button, select, input, textarea {
 
 .c-logo-item {
   width: 160px;
-  height: 60px;
+  height: 90px;
   background: var(--slate-50);
   border: 1px solid var(--slate-200);
   border-radius: var(--radius-sm);
@@ -2609,7 +2609,7 @@ button, select, input, textarea {
 }
 .chatbot-btn {
   width: 60px;
-  height: 60px;
+  height: 90px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-dark) 100%);
   border: none;
@@ -3136,4 +3136,15 @@ button, select, input, textarea {
     grid-template-columns: 1fr;
     gap: 0;
   }
+}
+
+/* Hide Google Translate top bar & tooltips */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+body {
+  top: 0 !important;
 }

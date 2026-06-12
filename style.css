@@ -320,6 +320,7 @@ button, select, input, textarea {
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -481,7 +482,7 @@ button, select, input, textarea {
   flex-direction: column;
   justify-content: space-between;
   width: 26px;
-  height: 36px;
+  height: 18px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -500,7 +501,9 @@ button, select, input, textarea {
    ================================================================ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  width: 100%;
+  aspect-ratio: 1920/600;
+  min-height: 520px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -604,7 +607,7 @@ button, select, input, textarea {
   position: relative;
   z-index: 3;
   max-width: 900px;
-  padding: 140px 24px 180px;
+  padding: 120px 24px 60px;
   text-align: center;
 }
 
@@ -733,7 +736,7 @@ button, select, input, textarea {
   right: 48px;
   bottom: 120px;
   z-index: 3;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: 12px;
@@ -2969,9 +2972,60 @@ button, select, input, textarea {
   }
   
   /* Mobile Menu */
+  .nav-container {
+    position: relative !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 90px !important;
+  }
+  
+  .nav-logo {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    z-index: 1002 !important;
+  }
+  
   .nav-toggle {
-    display: flex;
-    z-index: 1001;
+    display: flex !important;
+    order: 1 !important;
+    position: relative !important;
+    z-index: 1002 !important;
+    margin: 0 !important;
+  }
+  
+  .lang-box {
+    display: block !important;
+    order: 3 !important;
+    position: relative !important;
+    z-index: 1002 !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  .lang-current {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  .lang-chevron {
+    display: none !important;
+  }
+  
+  .lang-flag img {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
   }
   
   .nav-links {
@@ -3026,12 +3080,7 @@ button, select, input, textarea {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .lang-box {
-    border-left: none;
-    padding-left: 0;
-    margin-left: 14px;
-    margin-top: 10px;
-  }
+
   
   .hero-stats {
     flex-direction: column;

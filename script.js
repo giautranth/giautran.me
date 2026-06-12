@@ -500,4 +500,49 @@ document.addEventListener('DOMContentLoaded', () => {
   // Console greeting
   console.log('%c🏥 HOA LÂM - SHANGRILA Healthcare Park Website Demo', 'color:#E31E24;font-size:1.3em;font-weight:bold;');
   console.log('%cPowered by Antigravity AI', 'color:#0D568D;font-size:1.0em;');
+
+  /* ── HERO SLIDER (Slide Transition like AIH) ───────────────── */
+  const slides = document.querySelectorAll('.hero-slide');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  let currentSlide = 0;
+  let slideInterval;
+
+  function showSlide(index) {
+    if (slides.length === 0) return;
+    slides.forEach(s => s.classList.remove('active'));
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function startInterval() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function resetInterval() {
+    clearInterval(slideInterval);
+    startInterval();
+  }
+
+  if (slides.length > 0) {
+    prevBtn?.addEventListener('click', () => {
+      prevSlide();
+      resetInterval();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      nextSlide();
+      resetInterval();
+    });
+
+    startInterval();
+  }
 });

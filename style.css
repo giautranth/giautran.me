@@ -202,7 +202,7 @@ button, select, input, textarea {
 
 .section-title {
   font-family: var(--font-headings);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 800;
   color: var(--secondary-blue);
   line-height: 1.25;
@@ -493,7 +493,8 @@ button, select, input, textarea {
 /* ================================================================
    HERO SECTION (Slide 4)
    ================================================================ */
-.hero {
+.hero,
+.hero-section {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -501,7 +502,21 @@ button, select, input, textarea {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: url('assets/cih1.jpg') center/cover no-repeat;
 }
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 25, 49, 0.88) 0%,
+    rgba(27, 58, 107, 0.72) 50%,
+    rgba(227, 30, 36, 0.12) 100%
+  );
+  z-index: 1;
+}
+
 
 .hero-bg {
   position: absolute;
@@ -807,21 +822,21 @@ button, select, input, textarea {
 }
 .hospital-card-logo-badge {
   position: absolute;
-  bottom: -28px;
+  bottom: -24px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--white);
   padding: 6px 16px;
   border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.04);
   border: 1px solid var(--slate-200);
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  width: 128px;
+  height: 52px;
+  width: 132px;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-  z-index: 2;
+  z-index: 10;
 }
 .eco-hospital-card:hover .hospital-card-logo-badge {
   transform: translateX(-50%) translateY(-2px);
@@ -834,7 +849,7 @@ button, select, input, textarea {
   object-fit: contain;
 }
 .hospital-card-body {
-  padding: 44px 24px 32px 24px;
+  padding: 38px 24px 28px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -879,6 +894,8 @@ button, select, input, textarea {
   margin-bottom: 24px;
   max-width: 440px;
   line-height: 1.6;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .hospital-link {
@@ -912,9 +929,12 @@ button, select, input, textarea {
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: 1fr 2.2fr;
-  gap: 60px;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
   align-items: start;
+  margin-top: 60px;
+  padding-top: 48px;
+  border-top: 1px solid var(--slate-200);
 }
 .side-title {
   font-family: var(--font-headings);

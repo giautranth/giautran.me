@@ -3044,7 +3044,7 @@ button, select, input, textarea {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    left: -280px;
     width: 280px;
     height: 100vh;
     background: var(--dark-bg);
@@ -3052,13 +3052,13 @@ button, select, input, textarea {
     padding: 100px 24px 40px;
     align-items: flex-start;
     gap: 16px;
-    transition: right var(--transition-normal);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.4);
+    transition: left var(--transition-normal);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.4);
     z-index: 1000;
   }
   
   .nav-links.open {
-    right: 0;
+    left: 0;
   }
   
   .nav-link {

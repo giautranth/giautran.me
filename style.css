@@ -3821,5 +3821,127 @@ html {
   }
 }
 
+/* Partners Page Metrics Dashboard (Light Theme) */
+.partners-section .metrics-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 30px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 991px) {
+  .partners-section .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partners-section .metric-main-card {
+  background: linear-gradient(135deg, var(--secondary-blue-dark) 0%, var(--secondary-blue) 100%);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(13, 86, 141, 0.15);
+  color: var(--white);
+  transition: transform 0.3s;
+}
+
+.partners-section .metric-main-card:hover {
+  transform: translateY(-5px);
+}
+
+.partners-section .metric-big-num {
+  font-family: var(--font-headings);
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.partners-section .metric-main-card h4 {
+  font-family: var(--font-headings);
+  font-size: 1.25rem;
+  color: var(--gold-light);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+}
+
+.partners-section .metric-main-card p {
+  color: var(--slate-200);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.partners-section .metric-sub-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .partners-section .metric-sub-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .partners-section .metric-sub-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partners-section .metric-card {
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.partners-section .metric-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-red-light);
+  box-shadow: 0 12px 25px rgba(227, 30, 36, 0.06);
+}
+
+.partners-section .m-num {
+  display: block;
+  font-family: var(--font-headings);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--secondary-blue);
+  line-height: 1.1;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.partners-section .metric-card:hover .m-num {
+  color: var(--primary-red);
+}
+
+.partners-section .m-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--slate-500);
+  line-height: 1.4;
+  font-weight: 600;
+}
+
 
 

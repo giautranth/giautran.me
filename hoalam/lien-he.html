@@ -12,7 +12,265 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../style.css?v=1.39" />
+  <link rel="stylesheet" href="../style.css?v=1.40" />
+  <style>
+    /* Contact Page Specific Premium Styling */
+    .contact-hero {
+      position: relative;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+      background: linear-gradient(rgba(10, 25, 49, 0.82), rgba(13, 86, 141, 0.88)), url('../assets/building.png') no-repeat center center / cover;
+      background-attachment: scroll;
+      margin-bottom: 40px;
+      border-bottom: 4px solid var(--gold);
+    }
+    .contact-hero h1 {
+      font-family: var(--font-headings);
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+    .contact-hero p {
+      font-size: 1.05rem;
+      max-width: 600px;
+      line-height: 1.5;
+      color: var(--slate-200);
+      margin: 0 auto;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+      padding: 0 20px;
+    }
+    
+    .contact-grid-container {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 20px;
+    }
+    
+    @media (max-width: 991px) {
+      .contact-grid-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .contact-hero h1 {
+        font-size: 2.2rem;
+      }
+      .contact-hero p {
+        font-size: 0.95rem;
+      }
+    }
+    
+    /* Left Column Styling */
+    .contact-info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    
+    .building-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--slate-200);
+      aspect-ratio: 16/9;
+      background: var(--dark-bg);
+    }
+    .building-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .building-card:hover img {
+      transform: scale(1.04);
+    }
+    .building-card-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.3) 70%, transparent 100%);
+      padding: 20px 24px;
+      color: var(--white);
+    }
+    .building-card-overlay h4 {
+      font-family: var(--font-headings);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+    }
+    .building-card-overlay p {
+      font-size: 0.85rem;
+      color: var(--slate-200);
+    }
+    
+    /* Contact Detail Cards Grid */
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 576px) {
+      .contact-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .contact-detail-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      display: flex;
+      gap: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.01);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .contact-detail-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-red-glow, var(--primary-red));
+      box-shadow: 0 10px 20px rgba(227, 30, 36, 0.05);
+    }
+    .contact-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: rgba(13, 86, 141, 0.06);
+      color: var(--secondary-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s;
+    }
+    .contact-detail-card:hover .contact-card-icon {
+      background: var(--primary-red-light);
+      color: var(--primary-red);
+    }
+    .contact-card-info strong {
+      display: block;
+      font-family: var(--font-headings);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--secondary-blue);
+      margin-bottom: 4px;
+    }
+    .contact-card-info p, .contact-card-info a {
+      font-size: 0.88rem;
+      color: var(--slate-600);
+      line-height: 1.4;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-card-info a:hover {
+      color: var(--primary-red);
+    }
+    
+    /* Map Styling */
+    .map-container {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-sm);
+      height: 280px;
+      background: var(--white);
+    }
+    
+    /* Right Column - Premium Form Card */
+    .premium-form-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+    }
+    .premium-form-card h2 {
+      font-family: var(--font-headings);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--secondary-blue);
+      margin-bottom: 8px;
+    }
+    .premium-form-card p.form-subtitle {
+      font-size: 0.88rem;
+      color: var(--slate-500);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+    .premium-form-card .form-group {
+      margin-bottom: 20px;
+    }
+    .premium-form-card .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--slate-800);
+      margin-bottom: 8px;
+    }
+    .premium-form-card input[type="text"],
+    .premium-form-card input[type="tel"],
+    .premium-form-card input[type="email"],
+    .premium-form-card textarea {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--slate-800);
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 12px 16px;
+      outline: none;
+      transition: all 0.3s;
+    }
+    .premium-form-card input:focus,
+    .premium-form-card textarea:focus {
+      border-color: var(--secondary-blue);
+      background: var(--white);
+      box-shadow: 0 0 0 4px rgba(13, 86, 141, 0.08);
+    }
+    .premium-form-card .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 576px) {
+      .premium-form-card .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+    .premium-form-card .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--secondary-blue-dark) 100%);
+      color: var(--white);
+      padding: 14px;
+      border: none;
+      border-radius: var(--radius-full);
+      font-family: var(--font-headings);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(13, 86, 141, 0.2);
+      transition: all 0.3s;
+    }
+    .premium-form-card .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(13, 86, 141, 0.3);
+      filter: brightness(1.1);
+    }
+  </style>
 </head>
 <body>
 
@@ -60,76 +318,119 @@
   </nav>
 
   <!-- ========== MAIN CONTENT ========== -->
-  <main style="padding: 35px 0; min-height: 65vh; background: var(--slate-50);">
-    <div class="container">
-      <div class="section-header" style="text-align: left; margin-bottom: 24px; max-width: 800px; margin-left: 0; align-items: flex-start;">
-        <h1 class="section-title" style="color: var(--primary-red); font-size: 2.2rem; margin: 10px 0 0 0;">LIÊN HỆ</h1>
-      </div>
+  <main style="min-height: 70vh; background: var(--slate-50); padding: 0 0 50px 0;">
+    
+    <!-- Hero Header Banner -->
+    <div class="contact-hero">
+      <h1>LIÊN HỆ</h1>
+      <p>Hợp tác phát triển y tế kỹ thuật cao và kiến tạo giá trị bền vững cùng Tập đoàn Hoa Lâm</p>
+    </div>
 
-      <!-- ========== LIÊN HỆ SECTION ========== -->
-      <section class="section contact-section" id="contact" style="border-radius: var(--radius-lg); padding: 50px 40px; margin-bottom: 40px;">
-        <div class="contact-grid">
+    <div class="container" style="max-width: 1140px; margin: 0 auto; padding: 0 20px;">
+      <div class="contact-grid-container">
+        
+        <!-- Cột trái: Ảnh & Cards & Bản đồ -->
+        <div class="contact-info-panel reveal">
           
-          <div class="contact-text-col reveal">
-            <div class="section-tag">Thông Tin Liên Hệ</div>
-            <div class="contact-info-list">
-              <div class="c-info-item">
-                <span class="c-i-emoji">📍</span>
-                <div>
-                  <strong>Trụ Sở Chính</strong>
-                  <p>Số 3 Đường 17A, Phường An Lạc, TP. HCM</p>
-                </div>
-              </div>
-              <div class="c-info-item">
-                <span class="c-i-emoji">📞</span>
-                <div>
-                  <strong>Điện thoại</strong>
-                  <p><a href="tel:+842363819181" class="footer-contact-link">(+84) 23 6381 9181</a></p>
-                </div>
-              </div>
-              <div class="c-info-item">
-                <span class="c-i-emoji">✉️</span>
-                <div>
-                  <strong>Email</strong>
-                  <p><a href="mailto:info@hoalam.com" class="footer-contact-link">info@hoalam.com</a></p>
-                </div>
-              </div>
+          <!-- Building Visual Image -->
+          <div class="building-card">
+            <img src="../assets/building.png" alt="Khu Y Tế Kỹ Thuật Cao Hoa Lâm Shangri-La" />
+            <div class="building-card-overlay">
+              <h4>Khu Y Tế Kỹ Thuật Cao Hoa Lâm - Shangrila</h4>
+              <p>📍 Số 3 Đường 17A, Phường An Lạc, Bình Tân, TP. HCM</p>
             </div>
           </div>
-
-          <div class="contact-form-col reveal">
-            <div class="form-glass-box">
-              <h3>Liên hệ</h3>
-              
-              
-              <form class="c-form" id="coopForm">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label for="nameInput">Họ tên</label>
-                    <input type="text" id="nameInput" required />
-                  </div>
-                  <div class="form-group">
-                    <label for="phoneInput">Số điện thoại</label>
-                    <input type="tel" id="phoneInput" required />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="emailInput">Email</label>
-                  <input type="email" id="emailInput" required />
-                </div>
-
-                <div class="form-group">
-                  <label for="messageInput">Nội dung</label>
-                  <textarea id="messageInput" rows="4" required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-full" id="submitFormBtn">Gửi</button>
-              </form>
+          
+          <!-- Contact details cards -->
+          <div class="contact-cards-grid">
+            
+            <!-- Address Card -->
+            <div class="contact-detail-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-info">
+                <strong>Trụ Sở Chính</strong>
+                <p>Số 3 Đường 17A, Phường An Lạc, Bình Tân, TP. HCM</p>
+              </div>
             </div>
+            
+            <!-- Phone Card -->
+            <div class="contact-detail-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-card-info">
+                <strong>Điện thoại</strong>
+                <p><a href="tel:+842363819181">(+84) 23 6381 9181</a></p>
+              </div>
+            </div>
+            
+            <!-- Email Card -->
+            <div class="contact-detail-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card-info">
+                <strong>Email</strong>
+                <p><a href="mailto:info@hoalam.com">info@hoalam.com</a></p>
+              </div>
+            </div>
+            
+            <!-- Working Hours Card -->
+            <div class="contact-detail-card">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="contact-card-info">
+                <strong>Giờ làm việc</strong>
+                <p>Thứ Hai - Thứ Sáu<br>8:00 - 17:00</p>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Interactive Map -->
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3920.0818296317786!2d106.61171827581561!3d10.728180459998188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dd12404e76d%3A0xc3ec5bfb206cd2a!2sKhu%20Y%20T%E1%BA%BF%20K%E1%BB%B9%20Thu%E1%BA%ADt%20Cao%20Hoa%20L%C3%A2m%20Shangri-La!5e0!3m2!1svi!2s!4v1718260000000!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          
+        </div>
+        
+        <!-- Cột phải: Form liên hệ -->
+        <div class="contact-form-col reveal">
+          <div class="premium-form-card">
+            <h2>Gửi tin nhắn</h2>
+            <p class="form-subtitle">Chúng tôi rất mong nhận được ý kiến đóng góp hoặc đề xuất hợp tác từ bạn. Vui lòng để lại thông tin bên dưới.</p>
+            
+            <form id="coopForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nameInput">Họ tên</label>
+                  <input type="text" id="nameInput" placeholder="Nguyễn Văn A" required />
+                </div>
+                <div class="form-group">
+                  <label for="phoneInput">Số điện thoại</label>
+                  <input type="tel" id="phoneInput" placeholder="0901234567" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="emailInput">Email</label>
+                <input type="email" id="emailInput" placeholder="example@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="messageInput">Nội dung</label>
+                <textarea id="messageInput" rows="5" placeholder="Nhập nội dung tin nhắn hoặc đề xuất hợp tác..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitFormBtn">Gửi Yêu Cầu Liên Hệ</button>
+            </form>
           </div>
         </div>
-      </section>
+        
+      </div>
     </div>
   </main>
 
@@ -228,7 +529,7 @@
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <script src="../script.js?v=1.39"></script>
+  <script src="../script.js?v=1.40"></script>
 
 </body>
 </html>

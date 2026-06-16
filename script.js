@@ -24,10 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('open');
   });
 
-  // Close menu on link click
+  // Close menu on link click (excluding parent dropdown links)
   document.querySelectorAll('.nav-link, .dropdown-menu a').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      if (link.parentNode.classList.contains('nav-dropdown')) {
+        return; // Don't close mobile menu when clicking parent dropdown item
+      }
       navLinks.classList.remove('open');
+    });
+  });
+
+  // Toggle dropdown menu on click (especially for mobile)
+  document.querySelectorAll('.nav-dropdown > a').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const parent = trigger.parentNode;
+      parent.classList.toggle('active');
     });
   });
 

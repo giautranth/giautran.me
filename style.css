@@ -357,6 +357,11 @@ button, select, input, textarea {
 .arrow {
   font-size: 0.65rem;
   opacity: 0.7;
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+.nav-dropdown.active .arrow {
+  transform: rotate(180deg);
 }
 
 /* Nav Dropdown */
@@ -3310,15 +3315,16 @@ button, select, input, textarea {
   }
   .dropdown-menu {
     position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
+    display: none;
     background: rgba(255, 255, 255, 0.03);
     border: none;
     border-radius: var(--radius-sm);
     margin-top: 8px;
     box-shadow: none;
     width: 100%;
+  }
+  .nav-dropdown.active .dropdown-menu {
+    display: block;
   }
 
   /* Hamburger state change */

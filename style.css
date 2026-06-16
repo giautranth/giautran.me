@@ -1316,6 +1316,9 @@ button, select, input, textarea {
 
 /* Brand Ecosytem (Slide 10) */
 .brand-ecosystem {
+  border-top: 1px solid var(--slate-200);
+  padding-top: 50px;
+  margin-top: 60px;
   text-align: center;
 }
 .brand-eco-label {
@@ -3538,7 +3541,7 @@ html {
     position: absolute;
     top: 50px; /* Middle of 100px circle */
     left: 12.5%;
-    right: 0;
+    right: 100px; /* Ends exactly at the start of the right-side curve */
     height: 4px;
     background: var(--secondary-blue);
     z-index: 1;
@@ -3550,7 +3553,7 @@ html {
     position: absolute;
     top: 50px; /* Middle of 100px circle */
     left: 12.5%; /* Corrected: Starts exactly from Node 8 center on the left */
-    right: 0; /* Goes to the right edge to meet the curve */
+    right: 100px; /* Ends exactly at the start of the right-side curve */
     height: 4px;
     background: var(--secondary-blue);
     z-index: 1;
@@ -3943,5 +3946,8 @@ html {
   font-weight: 600;
 }
 
-
-
+/* Article Detail Styles - Justify text */
+.article-body,
+.article-body p {
+  text-align: justify;
+}

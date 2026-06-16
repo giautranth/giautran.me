@@ -2318,6 +2318,90 @@ button, select, input, textarea {
   text-align-last: left;
 }
 
+/* Fact cards styling for Partners page */
+.fact-section-title {
+  font-family: var(--font-headings);
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--secondary-blue);
+  margin-top: 60px;
+  margin-bottom: 35px;
+}
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+.fact-card {
+  background: var(--white);
+  border: 1px solid var(--slate-150);
+  border-radius: var(--radius-lg);
+  padding: 30px 24px;
+  text-align: center;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.fact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-red);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+.fact-card:hover::before {
+  opacity: 1;
+}
+.fact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(227, 30, 36, 0.15);
+}
+.fact-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  background: var(--slate-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: var(--transition-fast);
+}
+.fact-card:hover .fact-icon-wrapper {
+  background: rgba(227, 30, 36, 0.05);
+}
+.fact-number {
+  font-family: var(--font-headings);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--secondary-blue);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.fact-title {
+  font-family: var(--font-headings);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--slate-800);
+  margin-bottom: 6px;
+}
+.fact-desc {
+  font-size: 0.82rem;
+  color: var(--slate-500);
+  line-height: 1.4;
+}
+
 .coop-opps {
   background: var(--secondary-blue);
   border-radius: var(--radius-lg);

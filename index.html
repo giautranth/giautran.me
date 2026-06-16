@@ -22,7 +22,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=1.29" />
+  <link rel="stylesheet" href="style.css?v=1.30" />
 
 </head>
 
@@ -380,7 +380,7 @@
 
         <!-- Bài 1: TBT Tô Lâm (Văn hóa) -->
 
-        <a href="https://giaan115.com/tin-tuc/cong-ty-shangri-la-healthcare-investment-dien-kien-va-lam-viec-voi-tong-bi-thu-to-lam-ve-dau-tu-phat-trien-y-te-tai-viet-nam" target="_blank" class="news-card reveal" data-category="culture" style="text-decoration: none; color: inherit;">
+        <a href="javascript:void(0)" class="news-card reveal" data-category="culture" data-news-id="1" style="text-decoration: none; color: inherit;">
 
           <div class="news-img-box">
 
@@ -396,13 +396,15 @@
 
             <h4 class="news-card-title" style="margin-bottom: 0;">Hoa Lâm Shangri-La diện kiến và làm việc với các cơ quan ban ngành</h4>
 
+            <div class="news-read-more">Xem thêm <span class="r-arrow">&rarr;</span></div>
+
           </div>
 
         </a>
 
         <!-- Bài 2: Cyto-Facto (Tin Nóng) -->
 
-        <a href="https://tuoitre.vn/hoa-lam-shangri-la-healthcare-ky-ket-hop-tac-cyto-facto-nhat-ban-20241218151843301.htm" target="_blank" class="news-card reveal" data-category="hot" style="text-decoration: none; color: inherit;">
+        <a href="javascript:void(0)" class="news-card reveal" data-category="hot" data-news-id="3" style="text-decoration: none; color: inherit;">
 
           <div class="news-img-box">
 
@@ -417,6 +419,8 @@
             <span class="news-date">18/12/2024</span>
 
             <h4 class="news-card-title" style="margin-bottom: 0;">Hoa Lâm Shangri-La Healthcare ký kết hợp tác y khoa Cyto-Facto, Nhật Bản</h4>
+
+            <div class="news-read-more">Xem thêm <span class="r-arrow">&rarr;</span></div>
 
           </div>
 
@@ -617,7 +621,15 @@
 
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <script src="script.js?v=1.29"></script>
+  <!-- ========== NEWS DETAIL MODAL (Popup) ========== -->
+  <div class="news-modal" id="newsModal">
+    <div class="news-modal-content">
+      <button class="modal-close" id="newsModalClose" aria-label="Đóng cửa sổ">✕</button>
+      <div id="newsModalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js?v=1.30"></script>
 
 </body>
 

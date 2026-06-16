@@ -583,6 +583,108 @@ document.addEventListener('DOMContentLoaded', () => {
     startInterval();
   }
 
+  /* ── NEWS MODAL POPUP SYSTEM ──────────────────────────────── */
+  const newsDetails = {
+    '1': {
+      title: 'Hoa Lâm Shangri-La diện kiến và làm việc với các cơ quan ban ngành',
+      date: '12/03/2025',
+      img: 'https://giaan115.com/uploads/files/2025/03/12/T-ng-B-th-T-L-m-nh-gi-cao-ng-g-p-c-a-Shangri-La-Healthcare-Investment.jpg',
+      content: [
+        'Ngày 11/3/2025, trong khuôn khổ chuyến thăm chính thức tại nước bạn, Tổng Bí thư Tô Lâm đã tiếp kiến bà Trần Thị Lâm – Cố vấn Công ty Shangri-La Healthcare Investment, nhà sáng lập kiêm Chủ tịch Tập đoàn Hoa Lâm.',
+        'Tại buổi gặp mặt, bà Trần Thị Lâm đã báo cáo tình hình đầu tư dự án Khu Y tế Kỹ thuật cao TP.HCM (Hoa Lâm - Shangrila), quy mô 37,5 ha với cam kết hoàn thiện các hạng mục còn lại giai đoạn 2025-2030, hướng đến các công nghệ y tế tiên tiến như điều trị tế bào và xạ trị proton để phục vụ chăm sóc sức khỏe nhân dân tốt nhất.',
+        'Tổng Bí thư Tô Lâm đánh giá cao những đóng góp bền bỉ của Hoa Lâm Shangri-La trong lĩnh vực chăm sóc sức khỏe nhân dân gần 20 năm qua. Ông nhấn mạnh Việt Nam luôn chào đón các nhà đầu tư nước ngoài và cam kết hỗ trợ, tạo điều kiện thuận lợi nhất để các doanh nghiệp phát triển công nghệ y tế kỹ thuật cao.'
+      ]
+    },
+    '2': {
+      title: 'Chủ tịch Tập đoàn Hoa Lâm Trần Thị Lâm được vinh danh "Asia\'s Excellent Leader 2025"',
+      date: '15/01/2025',
+      img: 'assets/madam.png',
+      content: [
+        'Vào đầu năm 2025, tại Diễn đàn Kinh tế Châu Á, bà Trần Thị Lâm – Chủ tịch Tập đoàn Hoa Lâm – đã vinh dự được trao tặng giải thưởng danh giá "Asia\'s Excellent Leader 2025". Giải thưởng này nhằm tôn vinh các nhà lãnh đạo xuất sắc có tầm nhìn chiến lược và đóng góp to lớn cho sự phát triển kinh tế - xã hội khu vực.',
+        'Giải thưởng là sự ghi nhận xứng đáng cho hành trình hơn 3 thập kỷ cống hiến bền bỉ của bà Trần Thị Lâm, người được biết đến là cánh chim đầu đàn tiên phong trong xã hội hóa y tế kỹ thuật cao tại Việt Nam. Dưới sự dẫn dắt của bà, Tập đoàn Hoa Lâm đã xây dựng thành công Khu y tế kỹ thuật cao Hoa Lâm - Shangrila, tạo cơ sở khám chữa bệnh chất lượng quốc tế cho hàng triệu người dân.',
+        'Phát biểu tại lễ vinh danh, bà Trần Thị Lâm chia sẻ: "Giải thưởng này không chỉ dành riêng cho tôi mà là sự khích lệ to lớn đối với toàn thể cán bộ nhân viên Tập đoàn Hoa Lâm. Chúng tôi cam kết sẽ tiếp tục cống hiến, nghiên cứu và đổi mới y học để mang lại chất lượng chăm sóc sức khỏe tốt nhất cho cộng đồng."'
+      ]
+    },
+    '3': {
+      title: 'Hoa Lâm Shangri-La Healthcare ký kết hợp tác y khoa Cyto-Facto, Nhật Bản',
+      date: '18/12/2024',
+      img: 'https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/12/18/photo-1734509460087-17345094607461584815944.jpg',
+      content: [
+        'Vào tháng 12 năm 2024, Hoa Lâm Shangri-La Healthcare và Cyto-Facto Inc (Nhật Bản) đã ký kết Biên bản ghi nhớ (MOU) nhằm thúc đẩy phát triển các liệu pháp tế bào, tế bào gốc và liệu pháp gene tại Việt Nam.',
+        'Theo thỏa thuận, Cyto-Facto sẽ hỗ trợ đào tạo, tư vấn và chuyển giao công nghệ sản xuất tế bào và tế bào gốc (bao gồm sản xuất tế bào gốc trung mô từ màng hoạt dịch khớp gối) theo tiêu chuẩn kiểm soát chất lượng khắt khe PMDA Nhật Bản. Đồng thời hỗ trợ xây dựng Trung tâm kiểm chuẩn chất lượng tế bào đạt tiêu chuẩn quốc tế ngay tại Khu Y tế kỹ thuật cao Bình Tân.',
+        'Sự hợp tác này tiếp tục khẳng định sứ mệnh của Hoa Lâm Shangri-La trong việc ứng dụng y học tái tạo và công nghệ y khoa tiên tiến hàng đầu thế giới, mang đến cơ hội điều trị các bệnh lý hiểm nghèo, mãn tính ngay tại nội địa cho người bệnh.'
+      ]
+    },
+    '4': {
+      title: 'Hoa Lâm Shangri-La xúc tiến hợp tác quốc tế tại Khu Y tế kỹ thuật cao TP.HCM',
+      date: '17/06/2024',
+      img: 'https://giaan115.com/uploads/files/2024/06/18/L-x-c-ti-n-h-p-t-c-qu-c-t-Hoa-L-m-v-Siemens.jpg',
+      content: [
+        'Ngày 07/06/2024, Tập đoàn Hoa Lâm đã chính thức ký kết thỏa thuận hợp tác chiến lược dài hạn với tập đoàn thiết bị y tế Siemens Healthineers (Đức). Đây là bước đi quan trọng trong việc hiện đại hóa hạ tầng y khoa tại Khu Y tế kỹ thuật cao Bình Tân.',
+        'Trong khuôn khổ hợp tác, Siemens Healthineers trở thành đối tác công nghệ và cung cấp các trang thiết bị chẩn đoán hình ảnh cao cấp nhất như máy CT, MRI thế hệ mới và hỗ trợ phát triển chuyên khoa sâu về Ung bướu và Y học hạt nhân. Thỏa thuận cũng định hướng chuyển đổi số y tế toàn diện thông qua việc tích hợp trí tuệ nhân tạo (AI) vào chẩn đoán và quản lý vận hành bệnh viện.',
+        'Sự kiện này giúp Hoa Lâm Shangri-La củng cố vị thế dẫn đầu trong việc cung cấp dịch vụ khám chữa bệnh chất lượng cao tiêu chuẩn quốc tế, giúp người bệnh tiếp cận các giải pháp chẩn đoán chuẩn xác và nhanh chóng ngay tại Việt Nam.'
+      ]
+    },
+    '5': {
+      title: 'CIH & Gia An 115 — Hai bệnh viện tư nhân đầu tiên đạt chuẩn chất lượng AACI Hoa Kỳ',
+      date: '28/11/2023',
+      img: 'https://cih.com.vn/wp-content/uploads/2024/09/hai-benh-vien-dau-tien-tai-viet-nam-dat-chuan-chat-luong-aaci-cua-hoa-ky_66f8e58e5070f-png.avif',
+      content: [
+        'Ngày 28/11/2023, Bệnh viện Gia An 115 và Bệnh viện Quốc tế City (CIH) đã chính thức đón nhận chứng nhận chất lượng quốc tế và an toàn người bệnh từ Hội đồng Hiệp hội Chứng nhận Chất lượng Y tế Hoa Kỳ (AACI).',
+        'Chứng nhận AACI đòi hỏi bệnh viện phải tuân thủ nghiêm ngặt các quy trình an toàn người bệnh, kiểm soát nhiễm khuẩn, hướng dẫn lâm sàng và quản lý rủi ro với bộ tiêu chuẩn hơn 140 tiêu chí cực kỳ khắt khe được công nhận bởi ISQua.',
+        'Sự kiện vinh danh hai bệnh viện thành viên của hệ sinh thái Hoa Lâm - Shangrila đạt chuẩn chất lượng AACI khẳng định tầm nhìn và cam kết cung cấp dịch vụ khám chữa bệnh đạt chuẩn quốc tế hàng đầu tại Việt Nam, mang đến chất lượng phục vụ an toàn và hiệu quả tối ưu cho cộng đồng.'
+      ]
+    }
+  };
+
+  const newsModal = document.getElementById('newsModal');
+  const newsModalClose = document.getElementById('newsModalClose');
+  const newsModalBody = document.getElementById('newsModalBody');
+
+  document.querySelectorAll('.news-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+      const newsId = card.getAttribute('data-news-id');
+      if (newsId && newsDetails[newsId]) {
+        e.preventDefault();
+        openNewsDetails(newsId);
+      }
+    });
+  });
+
+  function openNewsDetails(newsId) {
+    const data = newsDetails[newsId];
+    if (!data || !newsModalBody || !newsModal) return;
+
+    // Handle image path relative to current page location
+    let imgPath = data.img;
+    const isSubpage = window.location.pathname.includes('/hoalam/');
+    if (imgPath.startsWith('assets/')) {
+      imgPath = isSubpage ? '../' + imgPath : imgPath;
+    }
+
+    const paragraphs = data.content.map(p => `<p>${p}</p>`).join('');
+
+    newsModalBody.innerHTML = `
+      <div class="modal-news-detail">
+        <img src="${imgPath}" alt="${data.title}" class="detail-img" />
+        <span class="detail-date">${data.date}</span>
+        <h3 class="detail-title">${data.title}</h3>
+        <div class="detail-content">${paragraphs}</div>
+      </div>
+    `;
+    newsModal.classList.add('open');
+  }
+
+  newsModalClose?.addEventListener('click', () => {
+    newsModal.classList.remove('open');
+  });
+
+  newsModal?.addEventListener('click', (e) => {
+    if (e.target === newsModal) {
+      newsModal.classList.remove('open');
+    }
+  });
+
   // Prevent Google Translate from changing body top position
   const bodyStyleObserver = new MutationObserver(() => {
     if (document.body.style.top && document.body.style.top !== '0px' && document.body.style.top !== '0') {

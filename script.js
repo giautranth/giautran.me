@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       coopForm.reset();
 
       setTimeout(() => {
-        submitFormBtn.innerHTML = `Liên hệ với chúng tôi`;
+        submitFormBtn.innerHTML = `Gửi`;
         submitFormBtn.style.background = '';
         submitFormBtn.style.boxShadow = '';
         submitFormBtn.disabled = false;

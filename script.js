@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const statNumbers = document.querySelectorAll('.stat-num, .m-num, .sb-num');
   
   function runCounter(el) {
-    const target = parseFloat(el.getAttribute('data-target'));
+    const target = parseFloat(el.getAttribute('data-target').replace(/,/g, ''));
     const prefix = el.getAttribute('data-prefix') || '';
     const suffix = el.getAttribute('data-suffix') || '';
     const duration = 2000; // ms
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const ease = 1 - Math.pow(1 - progress, 3);
       const currentVal = target * ease;
       
-      el.textContent = prefix + (isDecimal ? currentVal.toFixed(1) : Math.floor(currentVal)) + suffix;
+      el.textContent = prefix + (isDecimal ? currentVal.toFixed(1) : Math.floor(currentVal).toLocaleString('en-US')) + suffix;
 
       if (progress < 1) {
         requestAnimationFrame(update);
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       coopForm.reset();
 
       setTimeout(() => {
-        submitFormBtn.innerHTML = `Gửi Yêu Cầu Hợp Tác`;
+        submitFormBtn.innerHTML = `Liên hệ với chúng tôi`;
         submitFormBtn.style.background = '';
         submitFormBtn.style.boxShadow = '';
         submitFormBtn.disabled = false;

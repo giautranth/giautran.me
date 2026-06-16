@@ -2687,9 +2687,11 @@ button, select, input, textarea {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 48px;
-  margin-bottom: 48px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer-copyright {
+  font-size: 0.8rem;
+  color: var(--slate-500);
+  margin-top: 12px;
 }
 .footer-logo-img {
   height: 48px;

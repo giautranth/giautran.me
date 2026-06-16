@@ -283,7 +283,7 @@ button, select, input, textarea {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 90px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3137,7 +3137,7 @@ button, select, input, textarea {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    height: 90px !important;
+    height: 70px !important;
   }
 
   .nav-logo {

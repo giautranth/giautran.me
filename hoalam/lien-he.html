@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../style.css?v=1.41" />
+  <link rel="stylesheet" href="../style.css?v=1.43" />
   <style>
     /* Contact Page Specific Premium Styling */
     .contact-hero {
@@ -24,7 +24,7 @@
       align-items: center;
       text-align: center;
       color: var(--white);
-      background: linear-gradient(rgba(10, 25, 49, 0.82), rgba(13, 86, 141, 0.88)), url('../assets/building.png') no-repeat center center / cover;
+      background: linear-gradient(rgba(10, 25, 49, 0.82), rgba(13, 86, 141, 0.88)), url('../assets/cih.jpg') no-repeat center center / cover;
       background-attachment: scroll;
       margin-bottom: 40px;
       border-bottom: 4px solid var(--gold);
@@ -127,6 +127,14 @@
         grid-template-columns: 1fr;
       }
     }
+    .contact-detail-card-wide {
+      grid-column: span 2;
+    }
+    @media (max-width: 576px) {
+      .contact-detail-card-wide {
+        grid-column: span 1;
+      }
+    }
     .contact-detail-card {
       background: var(--white);
       border: 1px solid var(--slate-200);
@@ -178,15 +186,7 @@
       color: var(--primary-red);
     }
     
-    /* Map Styling */
-    .map-container {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--slate-200);
-      box-shadow: var(--shadow-sm);
-      height: 280px;
-      background: var(--white);
-    }
+
     
     /* Right Column - Premium Form Card */
     .premium-form-card {
@@ -289,12 +289,12 @@
             <li><a href="nguoi-sang-lap" id="link-founder">VỀ NGƯỜI SÁNG LẬP</a></li>
             <li><a href="hoalam-shangrila" id="link-about-shangrila">VỀ HOA LÂM - SHANGRILA</a></li>
             <li><a href="thanh-tuu" id="link-awards">THÀNH TỰU & GIẢI THƯỞNG</a></li>
+            <li><a href="doi-tac" id="link-partners">DÀNH CHO ĐỐI TÁC</a></li>
+            <li><a href="tuyen-dung" id="link-careers">TUYỂN DỤNG</a></li>
           </ul>
         </li>
         <li><a href="tour-3d" class="nav-link" id="link-tour">TOUR THAM QUAN 3D</a></li>
-        <li><a href="doi-tac" class="nav-link" id="link-partners">DÀNH CHO ĐỐI TÁC</a></li>
         <li><a href="tin-nong" class="nav-link" id="link-news">TIN TỨC</a></li>
-        <li><a href="tuyen-dung" class="nav-link" id="link-careers">TUYỂN DỤNG</a></li>
         <li><a href="lien-he" class="nav-link" id="link-contact">LIÊN HỆ</a></li>
       </ul>
 
@@ -335,24 +335,20 @@
           
           <!-- Building Visual Image -->
           <div class="building-card">
-            <img src="../assets/building.png" alt="Khu Y Tế Kỹ Thuật Cao Hoa Lâm Shangri-La" />
-            <div class="building-card-overlay">
-              <h4>Khu Y Tế Kỹ Thuật Cao Hoa Lâm - Shangrila</h4>
-              <p>📍 Số 3 Đường 17A, Phường An Lạc, Bình Tân, TP. HCM</p>
-            </div>
+            <img src="../assets/cih.jpg" alt="Khu Y Tế Kỹ Thuật Cao Hoa Lâm Shangri-La" />
           </div>
           
           <!-- Contact details cards -->
           <div class="contact-cards-grid">
             
             <!-- Address Card -->
-            <div class="contact-detail-card">
+            <div class="contact-detail-card contact-detail-card-wide">
               <div class="contact-card-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div class="contact-card-info">
                 <strong>Trụ Sở Chính</strong>
-                <p>Số 3 Đường 17A, Phường An Lạc, Bình Tân, TP. HCM</p>
+                <p>Số 3 Đường 17A, Phường An Lạc, TP. HCM</p>
               </div>
             </div>
             
@@ -378,31 +374,15 @@
               </div>
             </div>
             
-            <!-- Working Hours Card -->
-            <div class="contact-detail-card">
-              <div class="contact-card-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div class="contact-card-info">
-                <strong>Giờ làm việc</strong>
-                <p>Thứ Hai - Thứ Sáu<br>8:00 - 17:00</p>
-              </div>
-            </div>
-            
           </div>
-          
-          <!-- Interactive Map -->
-          <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3920.0818296317786!2d106.61171827581561!3d10.728180459998188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dd12404e76d%3A0xc3ec5bfb206cd2a!2sKhu%20Y%20T%E1%BA%BF%20K%E1%BB%B9%20Thu%E1%BA%ADt%20Cao%20Hoa%20L%C3%A2m%20Shangri-La!5e0!3m2!1svi!2s!4v1718260000000!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+
           
         </div>
         
         <!-- Cột phải: Form liên hệ -->
         <div class="contact-form-col reveal">
           <div class="premium-form-card">
-            <h2>Gửi tin nhắn</h2>
-            <p class="form-subtitle">Chúng tôi rất mong nhận được ý kiến đóng góp hoặc đề xuất hợp tác từ bạn. Vui lòng để lại thông tin bên dưới.</p>
+            <h2>Liên hệ</h2>
             
             <form id="coopForm">
               <div class="form-row">
@@ -426,7 +406,7 @@
                 <textarea id="messageInput" rows="5" placeholder="Nhập nội dung tin nhắn hoặc đề xuất hợp tác..." required></textarea>
               </div>
 
-              <button type="submit" class="btn-submit" id="submitFormBtn">Gửi Yêu Cầu Liên Hệ</button>
+              <button type="submit" class="btn-submit" id="submitFormBtn">Gửi</button>
             </form>
           </div>
         </div>
@@ -530,7 +510,7 @@
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <script src="../script.js?v=1.41"></script>
+  <script src="../script.js?v=1.43"></script>
 
 </body>
 </html>

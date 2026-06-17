@@ -405,6 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navTour: 'Tour 3D',
       navPartners: 'Đối Tác',
       navNews: 'Tin Tức',
+      navCareers: 'Tuyển Dụng',
       navContact: 'Liên Hệ'
     },
     en: {
@@ -415,6 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navTour: '3D Tour',
       navPartners: 'Partners',
       navNews: 'News',
+      navCareers: 'Careers',
       navContact: 'Contact'
     },
     ja: {
@@ -425,6 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navTour: '3Dツアー',
       navPartners: 'パートナー',
       navNews: 'ニュース',
+      navCareers: '採用情報',
       navContact: '連絡先'
     },
     zh: {
@@ -435,6 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navTour: '3D导览',
       navPartners: '合作伙伴',
       navNews: '新闻中心',
+      navCareers: '人才招聘',
       navContact: '联系我们'
     }
   };
@@ -509,6 +513,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const linkTour = document.getElementById('link-tour');
     const linkPartners = document.getElementById('link-partners');
     const linkNews = document.getElementById('link-news');
+    const linkCareers = document.getElementById('link-careers');
     const linkContact = document.getElementById('link-contact');
 
     if (linkHome) linkHome.textContent = dict.navHome;
@@ -517,6 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (linkTour) linkTour.textContent = dict.navTour;
     if (linkPartners) linkPartners.textContent = dict.navPartners;
     if (linkNews) linkNews.textContent = dict.navNews;
+    if (linkCareers) linkCareers.textContent = dict.navCareers;
     if (linkContact) linkContact.textContent = dict.navContact;
   }
 

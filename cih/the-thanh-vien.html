@@ -1953,17 +1953,6 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
     // Toggle active state
     const isExpanded = card.classList.contains('member-card--expanded');
     
-    // Collapse all other cards
-    document.querySelectorAll('.member-card').forEach(c => {
-      if (c !== card) {
-        c.classList.remove('member-card--expanded');
-        const detailsBlock = c.querySelector('.member-card__details');
-        if (detailsBlock) detailsBlock.style.maxHeight = null;
-        const link = c.querySelector('.member-card__toggle-link');
-        if (link) link.innerHTML = 'Xem chi tiết ▾';
-      }
-    });
-
     const details = card.querySelector('.member-card__details');
     const link = card.querySelector('.member-card__toggle-link');
     

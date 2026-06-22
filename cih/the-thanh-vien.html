@@ -16,14 +16,14 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
       margin-bottom: 3.5rem;
-      align-items: start;
+      align-items: stretch;
     }
     
     .member-card {
       background: var(--c-white);
       border: 1px solid var(--c-border);
       border-radius: var(--r-md);
-      padding: 1.5rem;
+      padding: 1.5rem 1rem;
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
@@ -34,6 +34,7 @@
       overflow: hidden;
       cursor: pointer;
       user-select: none;
+      height: 100%;
     }
     
     .member-card:hover {
@@ -98,6 +99,9 @@
       overflow: hidden;
       transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s var(--ease), margin-top 0.3s;
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
     
     .member-card--expanded .member-card__details {
@@ -113,21 +117,23 @@
     }
     
     .member-card__benefit-item {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--c-text2);
       margin-bottom: 0.5rem;
-      display: flex;
-      gap: 0.5rem;
-      align-items: flex-start;
+      position: relative;
+      padding-left: 1.25rem;
       line-height: 1.4;
       font-weight: 400;
+      text-align: justify;
     }
     
     .member-card__benefit-item::before {
       content: '✓';
       color: var(--c-primary);
       font-weight: 700;
-      flex-shrink: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     
     .member-card__btn {
@@ -141,6 +147,7 @@
       transition: all 0.2s;
       border: none;
       display: inline-block;
+      margin-top: auto;
     }
     
     .member-card__btn--silver { background: #edf2f7; color: #4a5568; }
@@ -1056,11 +1063,11 @@
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
         <div class="member-card__details">
           <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa tối đa 1 lần/tháng với chuyên gia PGS/ TS/ BS. CKII.</div>
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa tối đa 1 lần/tháng với PGS/TS/BS.CKII.</div>
             <div class="member-card__benefit-item">Giảm 5% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong 10km.</div>
-            <div class="member-card__benefit-item">Ưu tiên lịch khám, phẫu thuật.</div>
-            <div class="member-card__benefit-item">Tích điểm 2%.</div>
+            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
+            <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
+            <div class="member-card__benefit-item">Tích lũy điểm 2%.</div>
             <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
           </div>
           <a href="#dang-ky" class="member-card__btn member-card__btn--silver">Đăng ký tư vấn</a>
@@ -1075,11 +1082,11 @@
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
         <div class="member-card__details">
           <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn với PGS/TS/BS.CKII.</div>
             <div class="member-card__benefit-item">Giảm 10% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong 10km.</div>
-            <div class="member-card__benefit-item">Ưu tiên lịch khám, phẫu thuật.</div>
-            <div class="member-card__benefit-item">Tích điểm 3%.</div>
+            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
+            <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
+            <div class="member-card__benefit-item">Tích lũy điểm 3%.</div>
             <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
           </div>
           <a href="#dang-ky" class="member-card__btn member-card__btn--gold">Đăng ký tư vấn</a>
@@ -1094,11 +1101,11 @@
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
         <div class="member-card__details">
           <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn với chuyên gia PGS/ TS/ BS.CKII.</div>
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn với PGS/TS/BS.CKII.</div>
             <div class="member-card__benefit-item">Giảm 15% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong 10km.</div>
-            <div class="member-card__benefit-item">Ưu tiên lịch khám, phẫu thuật.</div>
-            <div class="member-card__benefit-item">Tích điểm 3%.</div>
+            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
+            <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
+            <div class="member-card__benefit-item">Tích lũy điểm 4%.</div>
             <div class="member-card__benefit-item">Áp dụng thêm 1 thành viên gia đình.</div>
           </div>
           <a href="#dang-ky" class="member-card__btn member-card__btn--platinum">Đăng ký tư vấn</a>
@@ -1113,11 +1120,11 @@
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
         <div class="member-card__details">
           <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn với Chuyên gia PGS/ TS/ BS. CKII.</div>
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn với PGS/TS/BS.CKII.</div>
             <div class="member-card__benefit-item">Giảm 20% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Đưa đón 2 chiều khám bệnh, cấp cứu.</div>
-            <div class="member-card__benefit-item">Chăm sóc 1:1, Bác sĩ tư vấn riêng.</div>
-            <div class="member-card__benefit-item">Tích điểm 5%.</div>
+            <div class="member-card__benefit-item">Đưa đón 2 chiều khi khám bệnh, cấp cứu.</div>
+            <div class="member-card__benefit-item">Chăm sóc 1:1, bác sĩ tư vấn riêng.</div>
+            <div class="member-card__benefit-item">Tích lũy điểm 5%.</div>
             <div class="member-card__benefit-item">Áp dụng cả gia đình (+3 thành viên).</div>
           </div>
           <a href="#dang-ky" class="member-card__btn member-card__btn--diamond">Đăng ký tư vấn</a>

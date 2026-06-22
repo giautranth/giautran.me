@@ -1757,9 +1757,7 @@
     <!-- Đăng ký hội viên form -->
     <div id="dang-ky" class="member-register-card">
       <h2 class="member-register-title">ĐĂNG KÝ TƯ VẤN</h2>
-      <form onsubmit="event.preventDefault(); alert('✅ Đăng ký thành công!
-
-Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên cho bạn trong thời gian sớm nhất.');">
+      <form onsubmit="event.preventDefault(); alert('✅ ĐĂNG KÝ THÀNH CÔNG\n\nĐội ngũ tư vấn sẽ liên hệ lại Quý khách trong thời gian sớm nhất.');">
         <div class="form-grid-2">
           <div class="form-group-custom">
             <label class="form-group-label" for="reg-name">Họ tên *</label>
@@ -1767,7 +1765,7 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
           </div>
           <div class="form-group-custom">
             <label class="form-group-label" for="reg-phone">Số điện thoại *</label>
-            <input type="tel" id="reg-phone" class="form-input-custom" required />
+            <input type="tel" id="reg-phone" class="form-input-custom" required pattern="[0-9+\(\)\s\-\.]+" title="Vui lòng nhập số điện thoại hợp lệ (chỉ bao gồm chữ số, khoảng trắng, các ký tự +, (, ), - hoặc .)" />
           </div>
         </div>
         

@@ -928,9 +928,20 @@
       .header__logo {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
         margin: 0;
         z-index: 5;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .header__logo-img {
+        height: 44px !important;
+        width: auto !important;
+        object-fit: contain;
       }
       
       .hamburger {
@@ -1497,7 +1508,7 @@
         </button>
         <div class="faq-content">
           <div class="faq-inner-text">
-            <ul style="margin: 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc;">
+            <ul style="margin: 0; padding-left: 1.5rem; line-height: 1.8; list-style-type: disc; text-align: justify;">
               <li>Ưu đãi chỉ áp dụng trên chi phí bệnh nhân tự chi trả — không bao gồm phần bảo hiểm, chi phí bác sĩ phẫu thuật, bác sĩ điều trị, thuốc, vật tư tiêu hao, và dịch vụ thuộc đơn vị hợp tác.</li>
               <li>Mỗi dịch vụ chỉ được hưởng một ưu đãi cao nhất — không được gộp nhiều ưu đãi cùng lúc (ví dụ: đã giảm giá gói CT thì không giảm thêm giá dịch vụ riêng lẻ).</li>
               <li>Không áp dụng cho gói sinh, gói IVF, gói vắc xin, phòng VIP, và dịch vụ gửi xét nghiệm ra ngoài bệnh viện.</li>

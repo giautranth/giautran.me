@@ -335,6 +335,14 @@
       z-index: 3;
     }
     
+    .compare-table tr.group-header td span {
+      position: -webkit-sticky;
+      position: sticky;
+      left: 1.5rem;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    
     /* Value Cell spacing and text sizes */
     .compare-table td.cell-value {
       text-align: center;
@@ -1137,6 +1145,10 @@
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.08);
       }
       
+      .compare-table tr.group-header td span {
+        left: 0.75rem !important;
+      }
+      
       /* Form grid stacked on mobile */
       .form-grid-2 {
         grid-template-columns: 1fr !important;
@@ -1473,7 +1485,7 @@
         <tbody>
           <!-- Group 1: Khám chuyên khoa -->
           <tr class="group-header">
-            <td colspan="5">Khám chuyên khoa</td>
+            <td colspan="5"><span>Khám chuyên khoa</span></td>
           </tr>
           <tr>
             <td style="padding-left: 1.5rem;">
@@ -1487,7 +1499,7 @@
           
           <!-- Group 2: Giảm giá dịch vụ -->
           <tr class="group-header">
-            <td colspan="5">Giảm giá dịch vụ</td>
+            <td colspan="5"><span>Giảm giá dịch vụ</span></td>
           </tr>
           <tr>
             <td style="padding-left: 1.5rem;">
@@ -1519,7 +1531,7 @@
           
           <!-- Group 3: Tiện ích & vận chuyển -->
           <tr class="group-header">
-            <td colspan="5">Tiện ích & vận chuyển</td>
+            <td colspan="5"><span>Tiện ích & vận chuyển</span></td>
           </tr>
           <tr>
             <td style="padding-left: 1.5rem;">
@@ -1570,7 +1582,7 @@
           
           <!-- Group 4: Tích điểm & gia đình -->
           <tr class="group-header">
-            <td colspan="5">Tích điểm & gia đình</td>
+            <td colspan="5"><span>Tích điểm & gia đình</span></td>
           </tr>
           <tr>
             <td style="padding-left: 1.5rem;">

@@ -1087,6 +1087,29 @@
       .compare-table td.cell-value {
         font-size: 0.8rem !important;
       }
+
+      /* Stack rules tables on mobile */
+      .rules-table {
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+      
+      .rules-table tbody,
+      .rules-table tr,
+      .rules-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box;
+      }
+      
+      .rules-table td {
+        border: none !important;
+        padding: 1.25rem 1rem !important;
+      }
+      
+      .rules-table tr td:first-child {
+        border-bottom: 1px solid #e2e8f0 !important;
+      }
     }
     
     @media (max-width: 600px) {

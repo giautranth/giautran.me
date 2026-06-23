@@ -15,6 +15,45 @@
       display: none;
     }
 
+    .member-slider-wrapper {
+      position: relative;
+      width: 100%;
+    }
+    
+    .member-slider-arrow {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--c-white);
+      border: 1px solid var(--c-border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      color: var(--c-primary);
+      font-size: 1.25rem;
+      transition: all 0.2s;
+    }
+    
+    .member-slider-arrow:hover {
+      background: var(--c-primary-l);
+      border-color: var(--c-primary);
+      transform: translateY(-50%) scale(1.05);
+    }
+    
+    .member-slider-arrow--prev {
+      left: -10px;
+    }
+    
+    .member-slider-arrow--next {
+      right: -10px;
+    }
+
     .member-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -922,6 +961,46 @@
         display: inline !important;
       }
       
+      /* Show slider arrows on mobile */
+      .member-slider-arrow {
+        display: flex !important;
+      }
+      
+      .member-slider-wrapper {
+        padding: 0 2.25rem;
+      }
+      
+      .member-slider-arrow--prev {
+        left: 5px;
+      }
+      
+      .member-slider-arrow--next {
+        right: 5px;
+      }
+      
+      .member-grid {
+        display: flex !important;
+        grid-template-columns: none !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1.25rem;
+        padding: 1rem 0.5rem;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      
+      .member-grid::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .member-card {
+        flex: 0 0 280px !important;
+        scroll-snap-align: center;
+        max-width: 280px !important;
+        margin: 0 auto;
+      }
+      
       /* Hide top-bar entirely on mobile */
       .top-bar {
         display: none !important;
@@ -1168,82 +1247,88 @@
     <h2 class="section__title" style="text-align: center; margin-bottom: 2rem; font-size: 1.6rem; color: #004870; text-transform: uppercase;">CÁC HẠNG THẺ</h2>
     
     <!-- 4 TIER CARDS -->
-    <div class="member-grid" id="dat-mua">
-      <!-- Silver -->
-      <div class="member-card member-card--silver" onclick="toggleMemberCard(this, event)">
-        <img src="images/bac.jpg" alt="Thẻ Bạc CIH" class="member-card__img" />
-        <h2 class="member-card__title">Thẻ Bạc</h2>
-        <div class="member-card__price">1.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
-        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
-        <div class="member-card__details">
-          <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa tối đa 1 lần/tháng với PGS/TS/BS.CKII.</div>
-            <div class="member-card__benefit-item">Giảm 5% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
-            <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
-            <div class="member-card__benefit-item">Tích lũy điểm 2%.</div>
-            <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
+    <div class="member-slider-wrapper">
+      <button class="member-slider-arrow member-slider-arrow--prev" id="member-prev-btn" aria-label="Thẻ trước">❮</button>
+      
+      <div class="member-grid" id="dat-mua">
+        <!-- Silver -->
+        <div class="member-card member-card--silver" onclick="toggleMemberCard(this, event)">
+          <img src="images/bac.jpg" alt="Thẻ Bạc CIH" class="member-card__img" />
+          <h2 class="member-card__title">Thẻ Bạc</h2>
+          <div class="member-card__price">1.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+          <div class="member-card__toggle-link">Xem thêm ▾</div>
+          <div class="member-card__details">
+            <div class="member-card__benefits">
+              <div class="member-card__benefit-item">Miễn phí khám chuyên khoa tối đa 1 lần/tháng với PGS/TS/BS.CKII.</div>
+              <div class="member-card__benefit-item">Giảm 5% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+              <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
+              <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
+              <div class="member-card__benefit-item">Tích lũy điểm 2%.</div>
+              <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
+            </div>
+            <a href="#dang-ky" class="member-card__btn member-card__btn--silver">Đăng ký tư vấn</a>
           </div>
-          <a href="#dang-ky" class="member-card__btn member-card__btn--silver">Đăng ký tư vấn</a>
         </div>
-      </div>
 
-      <!-- Gold -->
-      <div class="member-card member-card--gold" onclick="toggleMemberCard(this, event)">
-        <img src="images/vang.jpg" alt="Thẻ Vàng CIH" class="member-card__img" />
-        <h2 class="member-card__title">Thẻ Vàng</h2>
-        <div class="member-card__price">3.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
-        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
-        <div class="member-card__details">
-          <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
-            <div class="member-card__benefit-item">Giảm 10% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
-            <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
-            <div class="member-card__benefit-item">Tích lũy điểm 3%.</div>
-            <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
+        <!-- Gold -->
+        <div class="member-card member-card--gold" onclick="toggleMemberCard(this, event)">
+          <img src="images/vang.jpg" alt="Thẻ Vàng CIH" class="member-card__img" />
+          <h2 class="member-card__title">Thẻ Vàng</h2>
+          <div class="member-card__price">3.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+          <div class="member-card__toggle-link">Xem thêm ▾</div>
+          <div class="member-card__details">
+            <div class="member-card__benefits">
+              <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
+              <div class="member-card__benefit-item">Giảm 10% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+              <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
+              <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
+              <div class="member-card__benefit-item">Tích lũy điểm 3%.</div>
+              <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
+            </div>
+            <a href="#dang-ky" class="member-card__btn member-card__btn--gold">Đăng ký tư vấn</a>
           </div>
-          <a href="#dang-ky" class="member-card__btn member-card__btn--gold">Đăng ký tư vấn</a>
         </div>
-      </div>
 
-      <!-- Platinum -->
-      <div class="member-card member-card--platinum" onclick="toggleMemberCard(this, event)">
-        <img src="images/bach_kim.jpg" alt="Thẻ Bạch Kim CIH" class="member-card__img" />
-        <h2 class="member-card__title">Thẻ Bạch Kim</h2>
-        <div class="member-card__price">5.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
-        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
-        <div class="member-card__details">
-          <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
-            <div class="member-card__benefit-item">Giảm 15% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
-            <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
-            <div class="member-card__benefit-item">Tích lũy điểm 4%.</div>
-            <div class="member-card__benefit-item">Áp dụng thêm 1 thành viên gia đình.</div>
+        <!-- Platinum -->
+        <div class="member-card member-card--platinum" onclick="toggleMemberCard(this, event)">
+          <img src="images/bach_kim.jpg" alt="Thẻ Bạch Kim CIH" class="member-card__img" />
+          <h2 class="member-card__title">Thẻ Bạch Kim</h2>
+          <div class="member-card__price">5.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+          <div class="member-card__toggle-link">Xem thêm ▾</div>
+          <div class="member-card__details">
+            <div class="member-card__benefits">
+              <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
+              <div class="member-card__benefit-item">Giảm 15% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+              <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong phạm vi 10km.</div>
+              <div class="member-card__benefit-item">Ưu tiên xếp lịch khám, phẫu thuật.</div>
+              <div class="member-card__benefit-item">Tích lũy điểm 4%.</div>
+              <div class="member-card__benefit-item">Áp dụng thêm 1 thành viên gia đình.</div>
+            </div>
+            <a href="#dang-ky" class="member-card__btn member-card__btn--platinum">Đăng ký tư vấn</a>
           </div>
-          <a href="#dang-ky" class="member-card__btn member-card__btn--platinum">Đăng ký tư vấn</a>
         </div>
-      </div>
 
-      <!-- Diamond -->
-      <div class="member-card member-card--diamond" onclick="toggleMemberCard(this, event)">
-        <img src="images/kim_cuong.jpg" alt="Thẻ Kim Cương CIH" class="member-card__img" />
-        <h2 class="member-card__title">Thẻ Kim Cương</h2>
-        <div class="member-card__price">20.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
-        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
-        <div class="member-card__details">
-          <div class="member-card__benefits">
-            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
-            <div class="member-card__benefit-item">Giảm 20% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
-            <div class="member-card__benefit-item">Đưa đón 2 chiều khi khám bệnh, cấp cứu.</div>
-            <div class="member-card__benefit-item">Chăm sóc 1:1, bác sĩ tư vấn riêng.</div>
-            <div class="member-card__benefit-item">Tích lũy điểm 5%.</div>
-            <div class="member-card__benefit-item">Áp dụng cả gia đình (+3 thành viên).</div>
+        <!-- Diamond -->
+        <div class="member-card member-card--diamond" onclick="toggleMemberCard(this, event)">
+          <img src="images/kim_cuong.jpg" alt="Thẻ Kim Cương CIH" class="member-card__img" />
+          <h2 class="member-card__title">Thẻ Kim Cương</h2>
+          <div class="member-card__price">20.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+          <div class="member-card__toggle-link">Xem thêm ▾</div>
+          <div class="member-card__details">
+            <div class="member-card__benefits">
+              <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
+              <div class="member-card__benefit-item">Giảm 20% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+              <div class="member-card__benefit-item">Đưa đón 2 chiều khi khám bệnh, cấp cứu.</div>
+              <div class="member-card__benefit-item">Chăm sóc 1:1, bác sĩ tư vấn riêng.</div>
+              <div class="member-card__benefit-item">Tích lũy điểm 5%.</div>
+              <div class="member-card__benefit-item">Áp dụng cả gia đình (+3 thành viên).</div>
+            </div>
+            <a href="#dang-ky" class="member-card__btn member-card__btn--diamond">Đăng ký tư vấn</a>
           </div>
-          <a href="#dang-ky" class="member-card__btn member-card__btn--diamond">Đăng ký tư vấn</a>
         </div>
       </div>
+      
+      <button class="member-slider-arrow member-slider-arrow--next" id="member-next-btn" aria-label="Thẻ tiếp theo">❯</button>
     </div>
 
     <!-- COMPARISON TABLE -->
@@ -2078,7 +2163,7 @@
     if (isExpanded) {
       card.classList.remove('member-card--expanded');
       if (details) details.style.maxHeight = null;
-      if (link) link.innerHTML = 'Xem chi tiết ▾';
+      if (link) link.innerHTML = 'Xem thêm ▾';
     } else {
       card.classList.add('member-card--expanded');
       if (details) details.style.maxHeight = details.scrollHeight + "px";
@@ -2143,6 +2228,27 @@
   // Call initSlider on load
   document.addEventListener('DOMContentLoaded', () => {
     initSlider();
+    
+    // Mobile membership slider navigation
+    const prevBtn = document.getElementById('member-prev-btn');
+    const nextBtn = document.getElementById('member-next-btn');
+    const gridContainer = document.getElementById('dat-mua');
+    
+    if (prevBtn && nextBtn && gridContainer) {
+      prevBtn.addEventListener('click', () => {
+        const card = gridContainer.querySelector('.member-card');
+        if (card) {
+          gridContainer.scrollBy({ left: -(card.offsetWidth + 20), behavior: 'smooth' });
+        }
+      });
+      
+      nextBtn.addEventListener('click', () => {
+        const card = gridContainer.querySelector('.member-card');
+        if (card) {
+          gridContainer.scrollBy({ left: card.offsetWidth + 20, behavior: 'smooth' });
+        }
+      });
+    }
   });
 </script>
 </body>

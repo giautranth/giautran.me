@@ -1446,7 +1446,7 @@ ul{list-style:none}
 
 
 
-.footer{background:#005f80;color:rgba(255,255,255,.7)}
+.footer{background:#005f80;color:#fff}
 
 
 
@@ -1474,15 +1474,15 @@ ul{list-style:none}
 
 
 
-.footer-sub{font-size:.7rem;color:rgba(255,255,255,.5)}
+.footer-sub{font-size:.7rem;color:#fff}
 
 
 
-.footer__company-info{margin-bottom:.75rem;font-size:.775rem;line-height:1.6;color:rgba(255,255,255,.55)}
+.footer__company-info{margin-bottom:.75rem;font-size:.775rem;line-height:1.6;color:#fff}
 
 
 
-.footer__corp{font-weight:700;color:var(--c-teal);margin-bottom:.2rem}
+.footer__corp{font-weight:700;color:#fff;margin-bottom:.2rem}
 
 
 
@@ -1498,7 +1498,7 @@ ul{list-style:none}
 
 
 
-.footer__soc-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);font-weight:700;font-size:.85rem;transition:all .2s}
+.footer__soc-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;transition:all .2s}
 
 
 
@@ -1514,7 +1514,7 @@ ul{list-style:none}
 
 
 
-.footer__heading{font-weight:700;color:#fff;font-size:.95rem;margin-bottom:1.25rem}
+.footer__heading{font-weight:700;color:#facc15;font-size:.95rem;margin-bottom:1.25rem}
 
 
 
@@ -1522,7 +1522,7 @@ ul{list-style:none}
 
 
 
-.footer__links a{font-size:.85rem;color:rgba(255,255,255,.55);transition:color .15s,padding-left .15s}
+.footer__links a{font-size:.85rem;color:#fff;transition:color .15s,padding-left .15s}
 
 
 
@@ -1538,7 +1538,7 @@ ul{list-style:none}
 
 
 
-.footer__contact a{color:rgba(255,255,255,.7);transition:color .15s}
+.footer__contact a{color:#fff;transition:color .15s}
 
 
 
@@ -1554,7 +1554,7 @@ ul{list-style:none}
 
 
 
-.footer__bottom-inner{display:flex;align-items:center;justify-content:space-between;font-size:.8rem;color:rgba(255,255,255,.4)}
+.footer__bottom-inner{display:flex;align-items:center;justify-content:space-between;font-size:.8rem;color:#fff}
 
 
 
@@ -1562,7 +1562,7 @@ ul{list-style:none}
 
 
 
-.footer__bottom-links a{color:rgba(255,255,255,.4);transition:color .15s}
+.footer__bottom-links a{color:#fff;transition:color .15s}
 
 
 

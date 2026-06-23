@@ -967,15 +967,18 @@
       }
       
       .member-slider-wrapper {
-        padding: 0 2.25rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        padding: 0 2.5rem;
+        width: calc(100% + 3rem);
       }
       
       .member-slider-arrow--prev {
-        left: 5px;
+        left: 8px;
       }
       
       .member-slider-arrow--next {
-        right: 5px;
+        right: 8px;
       }
       
       .member-grid {
@@ -984,7 +987,7 @@
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         gap: 1.25rem;
-        padding: 1rem 0.5rem;
+        padding: 1rem calc(50vw - 180px);
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;

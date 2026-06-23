@@ -1104,6 +1104,23 @@
       .rules-table tr td:first-child {
         border-bottom: 1px solid #e2e8f0 !important;
       }
+      
+      /* Freeze Quyen Loi column on mobile */
+      .compare-table th.col-title-header,
+      .compare-table td:first-child:not([colspan]) {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        z-index: 5;
+        background-color: #ffffff !important;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.08);
+      }
+      
+      /* Form grid stacked on mobile */
+      .form-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+      }
     }
     
     @media (max-width: 600px) {

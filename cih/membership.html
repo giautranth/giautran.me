@@ -384,31 +384,15 @@
       letter-spacing: 0.02em;
       transition: all 0.25s ease;
       white-space: nowrap;
+      background: #d4af37;
+      color: #fff;
     }
     .btn-register:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    .btn-register--silver {
-      background: #cbd5e0;
-      color: #2d3748;
-    }
-    .btn-register--silver:hover { background: #a0aec0; }
-    .btn-register--gold {
-      background: #d4af37;
+      background: #b58f22;
       color: #fff;
     }
-    .btn-register--gold:hover { background: #b58f22; }
-    .btn-register--platinum {
-      background: #004b78;
-      color: #fff;
-    }
-    .btn-register--platinum:hover { background: #003057; }
-    .btn-register--diamond {
-      background: #1a1a2e;
-      color: #e2c97e;
-    }
-    .btn-register--diamond:hover { background: #0f0f1e; }
 
 
     /* Custom Checked and Unchecked Checkboxes */
@@ -437,7 +421,7 @@
     }
     
     .custom-checkbox.checked {
-      background: var(--c-primary);
+      background: #d4af37;
     }
     .custom-checkbox.checked::after {
       content: '';
@@ -449,29 +433,6 @@
       border: solid #ffffff;
       border-width: 0 2px 2px 0;
       transform: rotate(45deg);
-    }
-    
-    /* Tier-specific checked boxes */
-    .silver-cell .custom-checkbox.checked {
-      background: #718096;
-    }
-    .gold-cell .custom-checkbox.checked {
-      background: #d4af37;
-    }
-    .platinum-cell .custom-checkbox.checked {
-      background: #3182ce;
-    }
-    
-    /* Diamond column checkbox overrides */
-    .diamond-cell .custom-checkbox.checked {
-      background: #1a202c;
-      border-color: #1a202c;
-    }
-    .diamond-cell .custom-checkbox.checked::after {
-      border-color: #ffffff;
-    }
-    .diamond-cell .custom-checkbox.unchecked::after {
-      color: #cbd5e0;
     }
     
     /* Hover Row Highlight */

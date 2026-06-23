@@ -103,7 +103,7 @@
     }
     
     .member-card--silver { border-top: 5px solid #cbd5e0; }
-    .member-card--gold { border-top: 5px solid #d69e2e; }
+    .member-card--gold { border-top: 5px solid #d4af37; }
     .member-card--platinum { border-top: 5px solid #a0aec0; }
     .member-card--diamond { border-top: 5px solid #3182ce; }
     
@@ -219,6 +219,12 @@
     .member-card__btn--diamond { background: #0a426e; color: #fff; }
     .member-card__btn--diamond:hover { background: #062f50; }
     
+    /* Tier-specific benefit tick overrides */
+    .member-card--silver .member-card__benefit-item::before { color: #718096; }
+    .member-card--gold .member-card__benefit-item::before { color: #d4af37; }
+    .member-card--platinum .member-card__benefit-item::before { color: #3182ce; }
+    .member-card--diamond .member-card__benefit-item::before { color: #1a202c; }
+    
     /* Premium Comparison Table Styling */
     .compare-container {
       overflow-x: auto;
@@ -287,7 +293,7 @@
       height: 4px;
     }
     .compare-table th.silver-cell::after { background: #cbd5e0; }
-    .compare-table th.gold-cell::after { background: #d69e2e; }
+    .compare-table th.gold-cell::after { background: #d4af37; }
     .compare-table th.platinum-cell::after { background: #3182ce; }
     .compare-table th.diamond-cell::after { background: #1a202c; }
 
@@ -389,10 +395,10 @@
     }
     .btn-register--silver:hover { background: #a0aec0; }
     .btn-register--gold {
-      background: #d69e2e;
+      background: #d4af37;
       color: #fff;
     }
-    .btn-register--gold:hover { background: #b7791f; }
+    .btn-register--gold:hover { background: #b58f22; }
     .btn-register--platinum {
       background: #004b78;
       color: #fff;
@@ -450,7 +456,7 @@
       background: #718096;
     }
     .gold-cell .custom-checkbox.checked {
-      background: #d69e2e;
+      background: #d4af37;
     }
     .platinum-cell .custom-checkbox.checked {
       background: #3182ce;
@@ -1446,7 +1452,7 @@
                     <linearGradient id="goldGrad" x1="12" y1="14" x2="28" y2="30" gradientUnits="userSpaceOnUse">
                       <stop stop-color="#FFFDF5"/>
                       <stop offset="0.5" stop-color="#F6E05E"/>
-                      <stop offset="1" stop-color="#D69E2E"/>
+                      <stop offset="1" stop-color="#d4af37"/>
                     </linearGradient>
                   </defs>
                 </svg>

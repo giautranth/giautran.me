@@ -1988,16 +1988,40 @@
     
     if (prevBtn && nextBtn && gridContainer) {
       prevBtn.addEventListener('click', () => {
-        const card = gridContainer.querySelector('.member-card');
-        if (card) {
-          gridContainer.scrollBy({ left: -(card.offsetWidth + 20), behavior: 'smooth' });
+        const cards = gridContainer.querySelectorAll('.member-card');
+        if (cards.length > 0) {
+          const cardWidth = cards[0].offsetWidth;
+          const step = cardWidth + 20; // card width + gap (gap: 1.25rem = 20px)
+          const currentIndex = Math.round(gridContainer.scrollLeft / step);
+          
+          let targetIndex = currentIndex - 1;
+          if (targetIndex < 0) {
+            targetIndex = cards.length - 1; // loop to last card (Diamond)
+          }
+          
+          gridContainer.scrollTo({
+            left: targetIndex * step,
+            behavior: 'smooth'
+          });
         }
       });
       
       nextBtn.addEventListener('click', () => {
-        const card = gridContainer.querySelector('.member-card');
-        if (card) {
-          gridContainer.scrollBy({ left: card.offsetWidth + 20, behavior: 'smooth' });
+        const cards = gridContainer.querySelectorAll('.member-card');
+        if (cards.length > 0) {
+          const cardWidth = cards[0].offsetWidth;
+          const step = cardWidth + 20; // card width + gap
+          const currentIndex = Math.round(gridContainer.scrollLeft / step);
+          
+          let targetIndex = currentIndex + 1;
+          if (targetIndex >= cards.length) {
+            targetIndex = 0; // loop to first card (Silver)
+          }
+          
+          gridContainer.scrollTo({
+            left: targetIndex * step,
+            behavior: 'smooth'
+          });
         }
       });
     }

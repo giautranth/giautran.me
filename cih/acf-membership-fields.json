@@ -1,0 +1,276 @@
+[
+  {
+    "key": "group_cih_membership",
+    "title": "CIH Membership Page Fields",
+    "fields": [
+      {
+        "key": "field_banner_slider",
+        "label": "Banner Slider",
+        "name": "banner_slider",
+        "type": "repeater",
+        "instructions": "Thêm hình ảnh banner hiển thị ở trên cùng trang.",
+        "required": 0,
+        "collapsed": "field_banner_image",
+        "min": 0,
+        "max": 0,
+        "layout": "table",
+        "button_label": "Thêm Slide",
+        "sub_fields": [
+          {
+            "key": "field_banner_image",
+            "label": "Hình ảnh banner",
+            "name": "banner_image",
+            "type": "image",
+            "required": 1,
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all"
+          }
+        ]
+      },
+      {
+        "key": "field_membership_tiers",
+        "label": "Danh sách các hạng thẻ",
+        "name": "membership_tiers",
+        "type": "repeater",
+        "instructions": "Quản lý 4 hạng thẻ hiển thị dạng thẻ card trượt (Bạc, Vàng, Bạch Kim, Kim Cương).",
+        "required": 0,
+        "collapsed": "field_tier_name",
+        "min": 0,
+        "max": 0,
+        "layout": "row",
+        "button_label": "Thêm hạng thẻ",
+        "sub_fields": [
+          {
+            "key": "field_tier_name",
+            "label": "Tên thẻ",
+            "name": "tier_name",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_tier_slug",
+            "label": "Định danh CSS (Ví dụ: silver, gold, platinum, diamond)",
+            "name": "tier_slug",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_tier_image",
+            "label": "Ảnh thẻ",
+            "name": "tier_image",
+            "type": "image",
+            "required": 1,
+            "return_format": "url",
+            "preview_size": "thumbnail"
+          },
+          {
+            "key": "field_tier_price",
+            "label": "Giá tiền",
+            "name": "tier_price",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_tier_price_sub",
+            "label": "Đơn vị (Ví dụ: / năm)",
+            "name": "tier_price_sub",
+            "type": "text",
+            "required": 1,
+            "default_value": "/ năm"
+          },
+          {
+            "key": "field_tier_benefits",
+            "label": "Quyền lợi nổi bật (Mỗi dòng một quyền lợi)",
+            "name": "tier_benefits",
+            "type": "textarea",
+            "required": 1,
+            "instructions": "Nhập danh sách quyền lợi ngắn gọn của hạng thẻ này. Xuống dòng cho mỗi quyền lợi mới."
+          },
+          {
+            "key": "field_tier_button_text",
+            "label": "Chữ trên nút",
+            "name": "tier_button_text",
+            "type": "text",
+            "required": 0,
+            "default_value": "Đăng ký tư vấn"
+          },
+          {
+            "key": "field_tier_button_link",
+            "label": "Link của nút",
+            "name": "tier_button_link",
+            "type": "text",
+            "required": 0,
+            "default_value": "#dang-ky"
+          }
+        ]
+      },
+      {
+        "key": "field_comparison_rows",
+        "label": "Bảng so sánh chi tiết các hạng thẻ",
+        "name": "comparison_rows",
+        "type": "repeater",
+        "instructions": "Quản lý các dòng trong bảng so sánh. Có thể thêm dòng tiêu đề nhóm hoặc dòng tính năng chi tiết. Nhập 'checked' hoặc 'unchecked' nếu muốn hiển thị dấu tích hoặc dấu X.",
+        "required": 0,
+        "collapsed": "field_feature_name",
+        "min": 0,
+        "max": 0,
+        "layout": "row",
+        "button_label": "Thêm dòng so sánh",
+        "sub_fields": [
+          {
+            "key": "field_row_type",
+            "label": "Loại dòng",
+            "name": "row_type",
+            "type": "select",
+            "required": 1,
+            "choices": {
+              "group_header": "Tiêu đề nhóm (Group Header)",
+              "feature_row": "Quyền lợi chi tiết (Feature Row)"
+            },
+            "default_value": "feature_row",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0
+          },
+          {
+            "key": "field_group_title",
+            "label": "Tên nhóm",
+            "name": "group_title",
+            "type": "text",
+            "required": 0,
+            "instructions": "Chỉ nhập nếu Loại dòng là Tiêu đề nhóm (Ví dụ: 'Khám chuyên khoa', 'Giảm giá dịch vụ')."
+          },
+          {
+            "key": "field_feature_name",
+            "label": "Tên quyền lợi / Tính năng",
+            "name": "feature_name",
+            "type": "text",
+            "required": 0,
+            "instructions": "Chỉ nhập nếu Loại dòng là Quyền lợi chi tiết (Ví dụ: 'Xét nghiệm, CT/MRI, siêu âm')."
+          },
+          {
+            "key": "field_silver_val",
+            "label": "Giá trị Thẻ Bạc",
+            "name": "silver_val",
+            "type": "text",
+            "required": 0,
+            "instructions": "Nhập văn bản (ví dụ: 'Giảm 5%') hoặc 'checked' / 'unchecked' để hiện dấu tích / dấu X."
+          },
+          {
+            "key": "field_gold_val",
+            "label": "Giá trị Thẻ Vàng",
+            "name": "gold_val",
+            "type": "text",
+            "required": 0
+          },
+          {
+            "key": "field_platinum_val",
+            "label": "Giá trị Thẻ Bạch Kim",
+            "name": "platinum_val",
+            "type": "text",
+            "required": 0
+          },
+          {
+            "key": "field_diamond_val",
+            "label": "Giá trị Thẻ Kim Cương",
+            "name": "diamond_val",
+            "type": "text",
+            "required": 0
+          }
+        ]
+      },
+      {
+        "key": "field_rules_left",
+        "label": "Quy tắc tích điểm - Cột trái",
+        "name": "rules_left",
+        "type": "wysiwyg",
+        "instructions": "Nhập Tiêu đề và nội dung quy tắc quy đổi dạng danh sách (bullet list) hiển thị ở cột bên trái.",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 0
+      },
+      {
+        "key": "field_rules_right",
+        "label": "Quy tắc tích điểm - Cột phải",
+        "name": "rules_right",
+        "type": "wysiwyg",
+        "instructions": "Nhập Tiêu đề và nội dung hiệu lực tích điểm hiển thị ở cột bên phải.",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 0
+      },
+      {
+        "key": "field_membership_terms",
+        "label": "Điều khoản chương trình",
+        "name": "membership_terms",
+        "type": "wysiwyg",
+        "instructions": "Nhập nội dung các điều khoản chương trình (dạng bullet list).",
+        "required": 0,
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 0
+      },
+      {
+        "key": "field_faq_list",
+        "label": "Câu hỏi thường gặp (FAQs)",
+        "name": "faq_list",
+        "type": "repeater",
+        "instructions": "Quản lý danh sách các câu hỏi thường gặp ở cuối trang.",
+        "required": 0,
+        "collapsed": "field_faq_question",
+        "min": 0,
+        "max": 0,
+        "layout": "row",
+        "button_label": "Thêm câu hỏi",
+        "sub_fields": [
+          {
+            "key": "field_faq_question",
+            "label": "Câu hỏi",
+            "name": "faq_question",
+            "type": "text",
+            "required": 1
+          },
+          {
+            "key": "field_faq_answer",
+            "label": "Câu trả lời",
+            "name": "faq_answer",
+            "type": "wysiwyg",
+            "required": 1,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0
+          }
+        ]
+      },
+      {
+        "key": "field_shortcode_form",
+        "label": "Shortcode Form Đăng ký",
+        "name": "shortcode_form",
+        "type": "text",
+        "instructions": "Mã shortcode của form liên hệ (ví dụ: [forminator_form id=\"45718\"]).",
+        "required": 0,
+        "default_value": "[forminator_form id=\"45718\"]"
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "page-membership.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Custom Fields dành riêng cho Landing Page Thẻ Thành Viên CIH."
+  }
+]

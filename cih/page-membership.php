@@ -13,7 +13,7 @@ function cih_membership_assets() {
             'cih-membership-style',
             $uri . '/membership.css',
             [],
-            '3.1'
+            '3.2'
         );
         wp_enqueue_style(
             'be-vietnam-pro',
@@ -25,7 +25,7 @@ function cih_membership_assets() {
             'cih-membership-script',
             $uri . '/membership.js',
             [],
-            '3.1',
+            '3.2',
             true
         );
     }
@@ -44,6 +44,223 @@ function cih_render_cell_val($val) {
 }
 
 get_header(); // Header thật của Flatsome
+
+// TỰ ĐỘNG KHỞI TẠO DỮ LIỆU ACF VÀO DATABASE KHI TẢI TRANG LẦN ĐẦU TIÊN
+$theme_uri = get_stylesheet_directory_uri() . '/cih';
+if ( function_exists('update_field') ) {
+    $post_id = get_the_ID();
+    $initialized = get_post_meta($post_id, '_cih_membership_initialized', true);
+    if ( !$initialized && $post_id ) {
+        // 1. Banner slider mặc định
+        $default_banners = [
+            ['field_banner_image' => $theme_uri . '/images/membership_banner1.png'],
+            ['field_banner_image' => $theme_uri . '/images/membership_banner2.png'],
+            ['field_banner_image' => $theme_uri . '/images/membership_banner3.png']
+        ];
+        
+        // 2. Hạng thẻ mặc định
+        $default_tiers = [
+            [
+                'field_tier_name' => 'Thẻ Bạc',
+                'field_tier_slug' => 'silver',
+                'field_tier_image' => $theme_uri . '/images/bac.jpg',
+                'field_tier_price' => '1.000.000 VND',
+                'field_tier_price_sub' => '/ năm',
+                'field_tier_benefits' => "Miễn phí khám chuyên khoa tối đa 1 lần/tháng với PGS/TS/BS.CKII.\nGiảm 5% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.\nMiễn phí xe cấp cứu trong phạm vi 10km.\nƯu tiên xếp lịch khám, phẫu thuật.\nTích lũy điểm 2%.\nGiảm 25% phí nâng hạng.",
+                'field_tier_button_text' => 'Đăng ký tư vấn',
+                'field_tier_button_link' => '#dang-ky'
+            ],
+            [
+                'field_tier_name' => 'Thẻ Vàng',
+                'field_tier_slug' => 'gold',
+                'field_tier_image' => $theme_uri . '/images/vang.jpg',
+                'field_tier_price' => '3.000.000 VND',
+                'field_tier_price_sub' => '/ năm',
+                'field_tier_benefits' => "Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/TS/BS.CKII.\nGiảm 10% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.\nMiễn phí xe cấp cứu trong phạm vi 10km.\nƯu tiên xếp lịch khám, phẫu thuật.\nTích lũy điểm 3%.\nGiảm 25% phí nâng hạng.",
+                'field_tier_button_text' => 'Đăng ký tư vấn',
+                'field_tier_button_link' => '#dang-ky'
+            ],
+            [
+                'field_tier_name' => 'Thẻ Bạch Kim',
+                'field_tier_slug' => 'platinum',
+                'field_tier_image' => $theme_uri . '/images/bach_kim.jpg',
+                'field_tier_price' => '5.000.000 VND',
+                'field_tier_price_sub' => '/ năm',
+                'field_tier_benefits' => "Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/TS/BS.CKII.\nGiảm 15% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.\nMiễn phí xe cấp cứu trong phạm vi 10km.\nƯu tiên xếp lịch khám, phẫu thuật.\nTích lũy điểm 4%.\nÁp dụng thêm 1 thành viên gia đình.",
+                'field_tier_button_text' => 'Đăng ký tư vấn',
+                'field_tier_button_link' => '#dang-ky'
+            ],
+            [
+                'field_tier_name' => 'Thẻ Kim Cương',
+                'field_tier_slug' => 'diamond',
+                'field_tier_image' => $theme_uri . '/images/kim_cuong.jpg',
+                'field_tier_price' => '20.000.000 VND',
+                'field_tier_price_sub' => '/ năm',
+                'field_tier_benefits' => "Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/TS/BS.CKII.\nGiảm 20% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.\nĐưa đón 2 chiều khi khám bệnh, cấp cứu.\nChăm sóc 1:1, bác sĩ tư vấn riêng.\nTích lũy điểm 5%.\nÁp dụng cả gia đình (+3 thành viên).",
+                'field_tier_button_text' => 'Đăng ký tư vấn',
+                'field_tier_button_link' => '#dang-ky'
+            ]
+        ];
+        
+        // 3. Bảng so sánh mặc định
+        $default_comp_rows = [
+            ['field_row_type' => 'group_header', 'field_group_title' => 'Khám chuyên khoa'],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Miễn phí khám với chuyên gia PGS/TS/BS.CKII',
+                'field_silver_val' => 'Tối đa 1 lần/tháng',
+                'field_gold_val' => 'Không giới hạn',
+                'field_platinum_val' => 'Không giới hạn',
+                'field_diamond_val' => 'Không giới hạn'
+            ],
+            ['field_row_type' => 'group_header', 'field_group_title' => 'Giảm giá dịch vụ'],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Xét nghiệm, CT/MRI, siêu âm',
+                'field_silver_val' => 'Giảm 5%',
+                'field_gold_val' => 'Giảm 10%',
+                'field_platinum_val' => 'Giảm 15%',
+                'field_diamond_val' => 'Giảm 20%'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Điều trị, thủ thuật, phẫu thuật, nội trú',
+                'field_silver_val' => 'Giảm 5%',
+                'field_gold_val' => 'Giảm 10%',
+                'field_platinum_val' => 'Giảm 15%',
+                'field_diamond_val' => 'Giảm 20%'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Gói khám sức khỏe, tầm soát ung thư',
+                'field_silver_val' => 'Giảm 5%',
+                'field_gold_val' => 'Giảm 10%',
+                'field_platinum_val' => 'Giảm 15%',
+                'field_diamond_val' => 'Giảm 20%'
+            ],
+            ['field_row_type' => 'group_header', 'field_group_title' => 'Tiện ích & vận chuyển'],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Miễn phí xe cấp cứu (trong 10km)',
+                'field_silver_val' => '1 chiều',
+                'field_gold_val' => '1 chiều',
+                'field_platinum_val' => '1 chiều',
+                'field_diamond_val' => '2 chiều'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Đưa đón khám, chữa bệnh 2 chiều (trong 10km)',
+                'field_silver_val' => 'unchecked',
+                'field_gold_val' => 'unchecked',
+                'field_platinum_val' => 'unchecked',
+                'field_diamond_val' => 'checked'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Ưu tiên lịch khám, thủ thuật, phẫu thuật',
+                'field_silver_val' => 'checked',
+                'field_gold_val' => 'checked',
+                'field_platinum_val' => 'checked',
+                'field_diamond_val' => 'checked'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Nhắc lịch tái khám chủ động',
+                'field_silver_val' => 'checked',
+                'field_gold_val' => 'checked',
+                'field_platinum_val' => 'checked',
+                'field_diamond_val' => 'checked'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Chăm sóc 1:1 & bác sĩ tư vấn riêng',
+                'field_silver_val' => 'unchecked',
+                'field_gold_val' => 'unchecked',
+                'field_platinum_val' => 'unchecked',
+                'field_diamond_val' => 'checked'
+            ],
+            ['field_row_type' => 'group_header', 'field_group_title' => 'Tích điểm & gia đình'],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Tích điểm trên tổng viện phí',
+                'field_silver_val' => '2%',
+                'field_gold_val' => '3%',
+                'field_platinum_val' => '4%',
+                'field_diamond_val' => '5%'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Giảm 25% phí nâng hạng thẻ',
+                'field_silver_val' => 'checked',
+                'field_gold_val' => 'checked',
+                'field_platinum_val' => 'unchecked',
+                'field_diamond_val' => 'unchecked'
+            ],
+            [
+                'field_row_type' => 'feature_row', 
+                'field_feature_name' => 'Áp dụng cho thành viên gia đình',
+                'field_silver_val' => '',
+                'field_gold_val' => '',
+                'field_platinum_val' => '+1 thành viên',
+                'field_diamond_val' => '+3 thành viên'
+            ]
+        ];
+        
+        // 4. Quy tắc tích điểm mặc định
+        $default_rules_left = '
+            <div class="rules-section-title">Quy tắc quy đổi</div>
+            <ul class="rules-item-list">
+              <li>100 điểm = 1.000 đồng.</li>
+              <li>Dùng thanh toán lần sử dụng dịch vụ tiếp theo.</li>
+              <li>Mỗi lần chỉ được dùng tối đa 30% giá trị hóa đơn.</li>
+            </ul>
+        ';
+        $default_rules_right = '
+            <div class="rules-section-title">Hiệu lực điểm</div>
+            <ul class="rules-item-list">
+              <li>12 tháng kể từ ngày tích.</li>
+              <li>Hết hiệu lực sau 30 ngày khi thẻ hết hạn.</li>
+              <li>Không chuyển nhượng.</li>
+            </ul>
+        ';
+        
+        // 5. Điều khoản mặc định
+        $default_terms = '
+            <ul style="margin:0;padding-left:1.5rem;line-height:1.8;list-style-type:disc;text-align:justify">
+              <li>Ưu đãi chỉ áp dụng trên chi phí bệnh nhân tự chi trả - không bao gồm phần bảo hiểm, chi phí bác sĩ phẫu thuật, bác sĩ điều trị, thuốc, vật tư tiêu hao, và dịch vụ thuộc đơn vị hợp tác.</li>
+              <li>Mỗi dịch vụ chỉ được hưởng một ưu đãi cao nhất - không được gộp nhiều ưu đãi cùng lúc.</li>
+              <li>Không áp dụng cho gói sinh, gói IVF, gói vắc xin, phòng VIP, và dịch vụ gửi xét nghiệm ra ngoài bệnh viện.</li>
+              <li>Thẻ định danh cố định cho chủ thẻ và người được thêm vào - không thay đổi định danh trong suốt thời gian thẻ còn hiệu lực.</li>
+              <li>Điểm tích lũy có hiệu lực 12 tháng và hết hiệu lực sau 30 ngày kể từ khi thẻ hết hạn. Điểm chỉ dùng tối đa 30% hóa đơn mỗi lần.</li>
+            </ul>
+        ';
+        
+        // 6. FAQs mặc định
+        $default_faqs = [
+            ['field_faq_question' => '1. Làm thế nào để đăng ký thẻ hội viên City Membership?', 'field_faq_answer' => 'Quý khách có thể đăng ký trên Website http://cih.com.vn hoặc tại quầy thông tin Bệnh viện Quốc tế City.'],
+            ['field_faq_question' => '2. Thẻ hội viên City Membership mang đến những quyền lợi gì?', 'field_faq_answer' => 'Hội viên Bệnh viện Quốc tế City được hưởng các đặc quyền như ưu đãi chi phí khám và điều trị, tích lũy điểm thưởng, ưu tiên đặt lịch khám, hỗ trợ cấp cứu và nhiều quyền lợi chăm sóc sức khỏe dành riêng cho tung hạng thẻ.'],
+            ['field_faq_question' => '3. Thẻ có hiệu lực trong bao lâu?', 'field_faq_answer' => 'Thẻ có hiệu lực 12 tháng kể từ ngày kích hoạt. Trước khi hết hạn, Bệnh viện Quốc tế City sẽ chủ động gửi thông báo để Quy khách dễ dàng gia hạn.'],
+            ['field_faq_question' => '4. Tôi có thể đăng ký thẻ cho người thân không?', 'field_faq_answer' => 'Có. Đối với hạng Platinum và Diamond, Quy khách có thể đăng ký thêm thành viên gia đình theo quy định của chương trình.'],
+            ['field_faq_question' => '5. Dịch vụ vận chuyển cấp cứu dành cho hội viên được áp dụng ra sao?', 'field_faq_answer' => 'Tất cả hội viên đều được hỗ trợ vận chuyển cấp cứu đến Bệnh viện Quốc tế City trong phạm vi áp dụng. Tùy theo hạng thẻ, Quy khách sẽ được hưởng thêm các quyền lợi hỗ trợ nâng cao.'],
+            ['field_faq_question' => '6. Tôi có thể sử dụng đồng thời ưu đãi thẻ và các chương trình khuyến mại khác không?', 'field_faq_answer' => 'Mỗi dịch vụ sẽ áp dụng một mức ưu đãi tối ưu nhất tại thời điểm sử dụng. Hệ thống sẽ tự động lựa chọn quyền lợi có giá trị cao nhất.']
+        ];
+        
+        $default_shortcode = '[forminator_form id="45718"]';
+        
+        // Lưu dữ liệu vào Database
+        update_field('field_banner_slider', $default_banners, $post_id);
+        update_field('field_membership_tiers', $default_tiers, $post_id);
+        update_field('field_comparison_rows', $default_comp_rows, $post_id);
+        update_field('field_rules_left', $default_rules_left, $post_id);
+        update_field('field_rules_right', $default_rules_right, $post_id);
+        update_field('field_membership_terms', $default_terms, $post_id);
+        update_field('field_faq_list', $default_faqs, $post_id);
+        update_field('field_shortcode_form', $default_shortcode, $post_id);
+        
+        // Đánh dấu đã khởi tạo thành công để không chạy lại
+        update_post_meta($post_id, '_cih_membership_initialized', '1');
+    }
+}
 ?>
 
 <link rel="canonical" href="<?php echo esc_url( get_permalink() ); ?>" />
@@ -60,8 +277,7 @@ get_header(); // Header thật của Flatsome
 </div>
 
 <?php
-// 1. BANNER SLIDER: lấy từ ACF Repeater (banner_slider > banner_image)
-$theme_uri = get_stylesheet_directory_uri() . '/cih';
+// 1. BANNER SLIDER: lấy từ ACF
 $banners = [];
 if ( function_exists('have_rows') && have_rows('banner_slider') ) {
     while ( have_rows('banner_slider') ) {
@@ -146,7 +362,7 @@ if ( empty($banners) ) {
     }
     
     if ( empty($tiers) ) {
-        // Fallback mặc định
+        // Fallback mặc định (nếu không chạy được update_field)
         $tiers = [
             [
                 'name' => 'Thẻ Bạc',
@@ -259,7 +475,7 @@ if ( empty($banners) ) {
     if ( function_exists('have_rows') && have_rows('comparison_rows') ) {
         while ( have_rows('comparison_rows') ) {
             the_row();
-            $row_type = get_sub_field('row_type'); // 'Group Header' hoặc 'Feature Row'
+            $row_type = get_sub_field('row_type');
             $group_title = get_sub_field('group_title');
             $feat_name = get_sub_field('feature_name');
             $silver_val = get_sub_field('silver_val');
@@ -588,7 +804,7 @@ if ( empty($banners) ) {
             ['q'=>'3. Thẻ có hiệu lực trong bao lâu?', 'a'=>'Thẻ có hiệu lực 12 tháng kể từ ngày kích hoạt. Trước khi hết hạn, Bệnh viện Quốc tế City sẽ chủ động gửi thông báo để Quý khách dễ dàng gia hạn.'],
             ['q'=>'4. Tôi có thể đăng ký thẻ cho người thân không?', 'a'=>'Có. Đối với hạng Platinum và Diamond, Quý khách có thể đăng ký thêm thành viên gia đình theo quy định của chương trình.'],
             ['q'=>'5. Dịch vụ vận chuyển cấp cứu dành cho hội viên được áp dụng ra sao?', 'a'=>'Tất cả hội viên đều được hỗ trợ vận chuyển cấp cứu đến Bệnh viện Quốc tế City trong phạm vi áp dụng. Tùy theo hạng thẻ, Quý khách sẽ được hưởng thêm các quyền lợi hỗ trợ nâng cao.'],
-            ['q'=>'6. Tôi có thể sử dụng đồng thời ưu đãi thẻ và các chương trình khuyến mại khác không?', 'a'=>'Mỗi dịch vụ sẽ áp dụng một mức ưu đãi tối ưu nhất tại thời điểm sử dụng. Hệ thống sẽ tự động lựa chọn quyền lợi có giá trị cao nhất.'],
+            ['q'=>'6. Tôi có thể sử dụng đồng thời ưu đãi thẻ và các chương trình khuyến mại khác không?', 'a'=>'Mỗi dịch vụ sẽ áp dụng một mức ưu đãi tối ưu nhất tại thời điểm sử dụng. Hệ thống sẽ tự động lựa chọn quyền lợi có giá trị cao nhất.']
         ];
     }
     ?>

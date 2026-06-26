@@ -5,42 +5,48 @@
  *              ACF để quản trị banner slider, các hạng thẻ, bảng so sánh, điều khoản, FAQs, và Forminator cho form đăng ký.
  */
 
-// Load stylesheet và script của landing page - chỉ load khi vào đúng trang này
-function cih_membership_assets() {
-    if ( is_page_template( 'page-membership.php' ) ) {
-        $uri = get_stylesheet_directory_uri() . '/cih';
-        wp_enqueue_style(
-            'cih-membership-style',
-            $uri . '/membership.css',
-            [],
-            '3.2'
-        );
-        wp_enqueue_style(
-            'be-vietnam-pro',
-            'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap',
-            [],
-            null
-        );
-        wp_enqueue_script(
-            'cih-membership-script',
-            $uri . '/membership.js',
-            [],
-            '3.2',
-            true
-        );
+// Load stylesheet và script - chỉ load khi vào đúng trang này
+// (Nếu cih-shortcodes.php đã đăng ký rồi thì bỏ qua để tránh duplicate)
+if ( ! function_exists( 'cih_membership_assets' ) ) {
+    function cih_membership_assets() {
+        if ( is_page_template( 'page-membership.php' ) ) {
+            $uri = get_stylesheet_directory_uri() . '/cih';
+            wp_enqueue_style(
+                'cih-membership-style',
+                $uri . '/membership.css',
+                [],
+                '3.3'
+            );
+            wp_enqueue_style(
+                'be-vietnam-pro',
+                'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap',
+                [],
+                null
+            );
+            wp_enqueue_script(
+                'cih-membership-script',
+                $uri . '/membership.js',
+                [],
+                '3.3',
+                true
+            );
+        }
     }
+    add_action( 'wp_enqueue_scripts', 'cih_membership_assets' );
 }
-add_action( 'wp_enqueue_scripts', 'cih_membership_assets' );
 
-// Helper render giá trị trong bảng so sánh (Hỗ trợ checkbox hoặc text)
-function cih_render_cell_val($val) {
-    $val = trim($val);
-    if ($val === 'checked') {
-        return '<span class="custom-checkbox checked"></span>';
-    } elseif ($val === 'unchecked') {
-        return '<span class="custom-checkbox unchecked"></span>';
+// Helper render giá trị trong bảng so sánh
+// Đã chuyển sang cih-shortcodes.php — giữ wrapper để tránh lỗi nếu file đó chưa load
+if ( ! function_exists( 'cih_render_cell_val' ) ) {
+    function cih_render_cell_val( $val ) {
+        $val = trim( (string) $val );
+        if ( $val === 'checked' ) {
+            return '<span class="custom-checkbox checked"></span>';
+        } elseif ( $val === 'unchecked' ) {
+            return '<span class="custom-checkbox unchecked"></span>';
+        }
+        return esc_html( $val );
     }
-    return esc_html($val);
 }
 
 get_header(); // Header thật của Flatsome

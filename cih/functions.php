@@ -9,20 +9,25 @@
 
 /*************** ADD CUSTOM CSS HERE. ***************/
 
-// -------------------------------------------------------
-// 1. Auto-load TẤT CẢ shortcode cũ từ thư mục shortcodes/
-//    (khôi phục bac_si_search_filter, form_lich_hen_complete v.v.)
-// -------------------------------------------------------
-$cih_shortcodes_dir = get_stylesheet_directory() . '/shortcodes/';
-if ( is_dir( $cih_shortcodes_dir ) ) {
-    foreach ( glob( $cih_shortcodes_dir . '*.php' ) as $shortcode_file ) {
-        require_once $shortcode_file;
+// Load từng shortcode file cũ theo tên cụ thể
+$sc_dir = get_stylesheet_directory() . '/shortcodes/';
+
+$sc_files = [
+    'bac_si.php',
+    'bac_si_search_filter_form.php',
+    'chuyen_khoa.php',
+    'danhsach_bacsi_taxonomy.php',
+    'form_lich_hen_complete.php',
+];
+
+foreach ( $sc_files as $file ) {
+    $path = $sc_dir . $file;
+    if ( file_exists( $path ) ) {
+        require_once $path;
     }
 }
 
-// -------------------------------------------------------
-// 2. Load shortcodes Thẻ Thành Viên (membership)
-// -------------------------------------------------------
+// Load shortcodes Thẻ Thành Viên
 $cih_membership_sc = get_stylesheet_directory() . '/cih/cih-shortcodes.php';
 if ( file_exists( $cih_membership_sc ) ) {
     require_once $cih_membership_sc;

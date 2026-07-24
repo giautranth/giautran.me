@@ -186,8 +186,8 @@ ul{list-style:none}
    QUICK ACTIONS (FV INSPIRED)
 ═══════════════════════════ */
 .quick-actions{padding:2.5rem 0;position:relative;z-index:10}
-.container--compact{max-width:1060px;margin:0 auto;padding:0 1.25rem}
-.quick-actions__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.container--compact{max-width:940px;margin:0 auto;padding:0 1.25rem}
+.quick-actions__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 .qa-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.75rem 1rem;border-radius:20px;text-decoration:none;transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s ease,filter .28s ease;position:relative;overflow:hidden;box-shadow:0 8px 20px -4px rgba(0,0,0,.06)}
 .qa-card:hover{transform:translateY(-8px);box-shadow:0 16px 32px -6px rgba(0,0,0,.14)}
 

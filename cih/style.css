@@ -412,13 +412,58 @@ ul{list-style:none}
 .footer__bottom-links a:hover{color:#fff}
 
 /* ═══════════════════════════
-   FLOAT CHAT BUTTONS (FV STYLE)
+   FLOAT CHAT & CALL BUTTONS (GIA AN 115 INSPIRED)
 ═══════════════════════════ */
-.float-actions{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;gap:.85rem;z-index:9999}
-.float-btn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.18);transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s ease;background:#fff;text-decoration:none;position:relative}
-.float-btn:hover{transform:scale(1.14) translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,0.25)}
-.float-btn--messenger{background:#fff;border:1px solid rgba(0,114,255,0.15)}
-.float-btn--zalo{background:#0068FF;border:1px solid rgba(0,104,255,0.2)}
+.float-actions{position:fixed;bottom:1.5rem;right:1.5rem;display:flex;flex-direction:column;align-items:flex-end;gap:1rem;z-index:9999}
+
+/* Call Pill Button */
+.float-btn--call-pill{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#ef4444 0%,#dc2626 100%);color:#fff;padding:.4rem 1.2rem .4rem .4rem;border-radius:50px;box-shadow:0 6px 20px rgba(239,68,68,.4);text-decoration:none;font-weight:800;font-size:.95rem;transition:transform .28s ease,box-shadow .28s ease;position:relative}
+.float-btn--call-pill:hover{transform:scale(1.06) translateY(-2px);box-shadow:0 10px 28px rgba(239,68,68,.5);color:#fff}
+
+.float-btn--call-pill .float-btn__icon{width:42px;height:42px;background:#fff;color:#dc2626;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
+
+/* General Floating Button */
+.float-btn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:transform .28s cubic-bezier(.34,1.56,.64,1),box-shadow .28s ease;background:#fff;text-decoration:none;position:relative}
+.float-btn:hover{transform:scale(1.14) translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.float-btn--messenger{background:#fff;border:1px solid rgba(0,114,255,.15)}
+.float-btn--zalo{background:#0068FF;border:1px solid rgba(0,104,255,.2)}
+
+/* Gia An 115 Pulsing Ring Wave Animation */
+.float-btn__icon-ring{position:relative}
+.float-btn__icon-ring::before,
+.float-btn__icon-ring::after{content:'';position:absolute;top:-6px;left:-6px;right:-6px;bottom:-6px;border-radius:50%;border:2px solid currentColor;animation:ring-pulse-wave 2s infinite ease-out;pointer-events:none;opacity:0}
+.float-btn__icon-ring::after{animation-delay:1s}
+
+.float-btn--call-pill .float-btn__icon-ring::before,
+.float-btn--call-pill .float-btn__icon-ring::after{border-color:#ef4444}
+
+.float-btn--zalo::before,
+.float-btn--zalo::after,
+.float-btn--zalo .float-btn__icon-ring::before,
+.float-btn--zalo .float-btn__icon-ring::after{border-color:#0068FF}
+
+.float-btn--messenger::before,
+.float-btn--messenger::after,
+.float-btn--messenger .float-btn__icon-ring::before,
+.float-btn--messenger .float-btn__icon-ring::after{border-color:#0084FF}
+
+@keyframes ring-pulse-wave{
+  0%{transform:scale(.9);opacity:.85}
+  60%{transform:scale(1.45);opacity:.3}
+  100%{transform:scale(1.9);opacity:0}
+}
+
+@keyframes icon-shake{
+  0%,100%{transform:rotate(0deg)}
+  10%{transform:rotate(-14deg)}
+  20%{transform:rotate(14deg)}
+  30%{transform:rotate(-10deg)}
+  40%{transform:rotate(10deg)}
+  50%{transform:rotate(0deg)}
+}
+
+.float-btn--call-pill svg,
+.float-btn svg{animation:icon-shake 3.2s infinite ease-in-out}
 
 /* ═══════════════════════════
    RESPONSIVE

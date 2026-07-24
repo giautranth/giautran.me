@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gói Dịch Vụ Sức Khỏe | Bệnh viện Quốc tế City – City International Hospital</title>
+  <meta name="description" content="Khám phá các gói dịch vụ sức khỏe tổng quát City Care Standard, Gold, Diamond từ cơ bản đến nâng cao tại Bệnh viện Quốc tế City." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 1rem;
+      border: 1px solid var(--c-border);
+    }
+    .comparison-table th {
+      background: var(--c-primary);
+      color: var(--c-white);
+      font-weight: 700;
+    }
+    .comparison-table tr:nth-child(even) {
+      background: var(--c-bg);
+    }
+    .check-yes {
+      color: var(--c-green-d);
+      font-weight: bold;
+    }
+    .check-no {
+      color: var(--c-text3);
+    }
+    
+    /* Booking form styles */
+    .booking-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,247,251,0.9));
+      backdrop-filter: blur(10px);
+      border: 2px solid var(--c-primary-l);
+      border-radius: var(--r-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--c-text2);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-control {
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--c-border);
+      border-radius: var(--r-md);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-control:focus {
+      border-color: var(--c-primary);
+    }
+    @media (max-width: 768px) {
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+      .comparison-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar" id="top-bar">
+  <div class="container top-bar__inner">
+    <div class="top-bar__left"></div>
+    <div class="top-bar__right">
+      <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+        Tổng đài: <strong>1900 8146</strong>
+      </a>
+      <span class="top-bar__sep">|</span>
+      <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
+        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+      </a>
+      <span class="top-bar__sep">|</span>
+      <a href="danh-cho-khach-hang" class="top-bar__portal">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        Dành cho khách hàng
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <button class="hamburger" id="hamburger-btn" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
+      <img src="images/logo_cih_acci.png"
+           alt="" class="header__logo-img"
+           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+      <div id="logo-fallback" class="logo-fallback" style="display:none">
+        <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
+      </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav" aria-label="Menu chính">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
+        <li class="nav__item nav__item--has-dropdown">
+          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
+          <div class="nav__dropdown">
+            <div class="dropdown__grid">
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Nội Khoa</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
+                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
+                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
+                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
+                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
+                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
+              </div>
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Ngoại Khoa</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
+                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
+                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
+                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
+                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
+              </div>
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
+                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
+                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
+                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
+                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
+                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
+              </div>
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Chẩn Đoán</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
+                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
+                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
+                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
+                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
+        <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
+        <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
+        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
+        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__cta">
+      <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
+      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- DEDICATED HERO BANNER FOR PAGE -->
+<section class="hero" style="position: relative; overflow: hidden; background: #001a26;">
+  <div style="position: relative; width: 100%; aspect-ratio: 1536 / 536; height: auto; max-height: 480px; overflow: hidden;">
+    <img src="images/banner/BANNER-WEB-8.webp" alt="Hero Banner" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.85);" />
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 30, 50, 0.3) 0%, rgba(0, 30, 50, 0.75) 100%); pointer-events: none;"></div>
+    
+    <div class="container" style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; z-index: 5; color: #fff;">
+      <div style="max-width: 750px;">
+        <span style="display: inline-block; background: rgba(255,255,255,0.2); backdrop-filter: blur(8px); padding: 0.35rem 1rem; border-radius: 99px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem; border: 1px solid rgba(255,255,255,0.3);">
+          CHĂM SÓC SỨC KHỎE TOÀN DIỆN
+        </span>
+        <h1 style="font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 900; color: #ffffff; text-transform: uppercase; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+          GÓI DỊCH VỤ & TẦM SOÁT SỨC KHỎE
+        </h1>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          <a href="lien-he.html#dat-lich" class="btn btn--primary btn--lg">📅 Đặt Lịch Khám Ưu Tiên</a>
+          <a href="tel:19008146" class="btn btn--white btn--lg">📞 Tổng Đài: 1900 8146</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBPAGE BREADCRUMBS HERO BAR -->
+<section class="subpage-hero" style="background: #f4f8fb; padding: 1.25rem 0; border-bottom: 1px solid #e2e8f0;">
+  <div class="container subpage-hero__inner">
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.35rem;">
+      <a href="./" style="color: #005f80; font-weight: 700; text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span style="color: #0f3775; font-weight: 700;">Gói Dịch Vụ</span>
+    </div>
+    <h1 class="subpage-hero__title" style="font-size: 1.25rem; font-weight: 800; color: #0f3775; text-transform: uppercase; margin: 0; letter-spacing: 0.3px;">Gói Dịch Vụ & Tầm Soát</h1>
+  </div>
+</section>
+
+<!-- SUBPAGE CONTENT -->
+<main class="subpage-content">
+  <div class="container">
+    
+    
+    <!-- Danh Sách Các Gói Sinh & Gói Tầm Soát Thực Tế CIH -->
+    <div class="subpage-card animate-fade-up" style="margin-top: 2rem;">
+      <h2 class="subpage-heading">Các Gói Sinh & Tầm Soát Chuyên Sâu</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 1rem;">
+        
+        <div class="pkg-card">
+          <div style="height: 160px; overflow: hidden; border-radius: var(--r-md) var(--r-md) 0 0;">
+            <img src="images/HÌNH ẢNH/Phụ sản/1784087172430_1272607247884588763_1272607247884588763_d4c1dd0dfdd4352c2200ff3526154528.jpg" alt="Gói sinh Yêu Thương" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'" />
+          </div>
+          <div class="pkg-card__header pkg-card__header--teal" style="border-radius: 0;">
+            <h3>Gói Sinh Yêu Thương</h3>
+            <div class="pkg-card__price"><span>Chuẩn Khách Sạn 5 Star</span></div>
+          </div>
+          <ul class="pkg-card__list" style="padding: 1rem;">
+            <li>✅ Khám thai định kỳ & theo dõi tim thai</li>
+            <li>✅ Phòng nghỉ dưỡng cao cấp 24/7</li>
+            <li>✅ Đội ngũ nữ hộ sinh tận tâm</li>
+          </ul>
+          <div style="padding: 0 1rem 1rem 1rem;">
+            <a href="lien-he.html#dat-lich" class="btn btn--primary btn--block">Đăng Ký Khám</a>
+          </div>
+        </div>
+
+        <div class="pkg-card">
+          <div style="height: 160px; overflow: hidden; border-radius: var(--r-md) var(--r-md) 0 0;">
+            <img src="images/HÌNH ẢNH/Phụ sản/1784087174156_1272607247884588763_1272607247884588763_7baec1c47c014b9c5ba2475225c0490e.jpg" alt="Gói sinh Như Ý" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'" />
+          </div>
+          <div class="pkg-card__header pkg-card__header--primary" style="border-radius: 0;">
+            <h3>Gói Sinh Như Ý</h3>
+            <div class="pkg-card__price"><span>Trọn Gói Mẹ & Bé</span></div>
+          </div>
+          <ul class="pkg-card__list" style="padding: 1rem;">
+            <li>✅ Tất cả dịch vụ Gói Yêu Thương</li>
+            <li>✅ Giảm đau trong sinh (Gây tê ngoài màng cứng)</li>
+            <li>✅ Tầm soát sơ sinh trọn gói</li>
+          </ul>
+          <div style="padding: 0 1rem 1rem 1rem;">
+            <a href="lien-he.html#dat-lich" class="btn btn--primary btn--block">Đăng Ký Khám</a>
+          </div>
+        </div>
+
+        <div class="pkg-card">
+          <div style="height: 160px; overflow: hidden; border-radius: var(--r-md) var(--r-md) 0 0;">
+            <img src="images/HÌNH ẢNH/Phụ sản/1784087168303_1272607247884588763_1272607247884588763_bb81c268bd748520eee1d2b2fc2b9040.jpg" alt="Gói sinh Cát Tường" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'" />
+          </div>
+          <div class="pkg-card__header pkg-card__header--green" style="border-radius: 0;">
+            <h3>Gói Sinh Cát Tường</h3>
+            <div class="pkg-card__price"><span>VIP Cao Cấp</span></div>
+          </div>
+          <ul class="pkg-card__list" style="padding: 1rem;">
+            <li>✅ Phòng VIP nghỉ dưỡng riêng biệt</li>
+            <li>✅ Chọn Bác sĩ trưởng khoa đỡ sinh</li>
+            <li>✅ Dịch vụ chăm sóc mẹ & bé tại nhà</li>
+          </ul>
+          <div style="padding: 0 1rem 1rem 1rem;">
+            <a href="lien-he.html#dat-lich" class="btn btn--primary btn--block">Đăng Ký Khám</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Giới thiệu tầm quan trọng -->
+    <div class="subpage-card animate-fade-up">
+      <h2 class="subpage-heading">Chủ Động Bảo Vệ Sức Khỏe Định Kỳ</h2>
+      <p style="font-size: 1.05rem; line-height: 1.8;">
+        Khám sức khỏe tổng quát định kỳ ít nhất 1 lần/năm là khuyến cáo hàng đầu của WHO nhằm phát hiện sớm các nguy cơ bệnh lý âm thầm như cao huyết áp, tiểu đường, mỡ máu cao, xơ gan và đặc biệt là tầm soát phát hiện sớm ung thư ở giai đoạn đầu – thời điểm vàng mang lại 90% cơ hội chữa khỏi hoàn toàn. Các gói dịch vụ **City Care** được thiết kế khoa học bởi Hội đồng Y khoa CIH giúp tối ưu hóa chi phí và danh mục thăm khám.
+      </p>
+    </div>
+
+    <!-- Bảng so sánh chi tiết -->
+    <div class="subpage-card animate-fade-up" style="animation-delay: 0.1s;">
+      <h2 class="subpage-heading">Bảng So Sánh Chi Tiết Danh Mục Khám</h2>
+      
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Danh mục thăm khám</th>
+            <th style="width: 20%; text-align: center;">City Care Standard</th>
+            <th style="width: 20%; text-align: center;">City Care Gold</th>
+            <th style="width: 20%; text-align: center;">City Care Diamond</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Khám Lâm Sàng:</strong> Khám tổng quát hệ hô hấp, tuần hoàn, tiêu hóa...</td>
+            <td class="check-yes" style="text-align: center;">✅ Khám cơ bản</td>
+            <td class="check-yes" style="text-align: center;">✅ Khám nâng cao</td>
+            <td class="check-yes" style="text-align: center;">✅ Tư vấn VIP</td>
+          </tr>
+          <tr>
+            <td><strong>Khám Chuyên Khoa:</strong> Mắt, Tai Mũi Họng, Răng Hàm Mặt, Sản phụ khoa</td>
+            <td class="check-no" style="text-align: center;">❌ Không bao gồm</td>
+            <td class="check-yes" style="text-align: center;">✅ Đầy đủ khoa</td>
+            <td class="check-yes" style="text-align: center;">✅ Tư vấn chuyên sâu</td>
+          </tr>
+          <tr>
+            <td><strong>Xét Nghiệm Máu:</strong> Công thức máu, Đường huyết, Mỡ máu, Men gan</td>
+            <td class="check-yes" style="text-align: center;">✅ Cơ bản</td>
+            <td class="check-yes" style="text-align: center;">✅ Đầy đủ chỉ số</td>
+            <td class="check-yes" style="text-align: center;">✅ Tầm soát dấu ấn ung thư</td>
+          </tr>
+          <tr>
+            <td><strong>Xét Nghiệm Nước Tiểu:</strong> Phân tích nước tiểu 10 thông số</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+          </tr>
+          <tr>
+            <td><strong>Chẩn Đoán Hình Ảnh:</strong> X-Quang ngực thẳng kỹ thuật số</td>
+            <td class="check-no" style="text-align: center;">❌ Không bao gồm</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+          </tr>
+          <tr>
+            <td><strong>Siêu Âm:</strong> Siêu âm ổ bụng tổng quát (gan, thận, lách, tụy)</td>
+            <td class="check-no" style="text-align: center;">❌ Không bao gồm</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+          </tr>
+          <tr>
+            <td><strong>Thăm Dò Chức Năng:</strong> Điện tâm đồ (ECG) tim mạch</td>
+            <td class="check-no" style="text-align: center;">❌ Không bao gồm</td>
+            <td class="check-yes" style="text-align: center;">✅ Có</td>
+            <td class="check-yes" style="text-align: center;">✅ Có (thêm Siêu âm tim)</td>
+          </tr>
+          <tr>
+            <td><strong>Chẩn Đoán VIP:</strong> Chụp cộng hưởng từ MRI sọ não hoặc CT-Scanner</td>
+            <td class="check-no" style="text-align: center;">❌ Không</td>
+            <td class="check-no" style="text-align: center;">❌ Không</td>
+            <td class="check-yes" style="text-align: center;">✅ Tự chọn 1 dịch vụ</td>
+          </tr>
+          <tr>
+            <td><strong>Nội Soi Tiêu Hóa:</strong> Nội soi dạ dày và đại tràng không đau</td>
+            <td class="check-no" style="text-align: center;">❌ Không</td>
+            <td class="check-no" style="text-align: center;">❌ Không</td>
+            <td class="check-yes" style="text-align: center;">✅ Có (gây mê an toàn)</td>
+          </tr>
+          <tr style="font-weight: 700; background: var(--c-primary-l);">
+            <td>CHI PHÍ GÓI DỊCH VỤ</td>
+            <td style="text-align: center; color: var(--c-primary);">1.650.000 ₫</td>
+            <td style="text-align: center; color: var(--c-primary);">4.300.000 ₫</td>
+            <td style="text-align: center; color: var(--c-primary);">14.500.000 ₫</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Hướng dẫn chuẩn bị -->
+    <div class="subpage-card animate-fade-up" style="animation-delay: 0.2s;">
+      <h2 class="subpage-heading">Hướng Dẫn Chuẩn Bị Trước Khi Đi Khám</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <div>
+          <h3 style="color: var(--c-primary); font-weight: 700; margin-bottom: 0.75rem;">🍽️ Về chế độ ăn uống</h3>
+          <ul style="font-size: 0.9rem; line-height: 1.7; display: grid; gap: 0.5rem;">
+            <li>• <strong>Nhịn ăn ít nhất 8 - 10 tiếng</strong> trước khi lấy mẫu máu xét nghiệm (chỉ uống nước lọc tinh khiết).</li>
+            <li>• Không sử dụng rượu, bia, cà phê, nước ngọt, thuốc lá hoặc các chất kích thích trước ngày khám 24 giờ.</li>
+            <li>• Nếu thực hiện nội soi đại tràng, cần làm sạch ruột theo hướng dẫn của bác sĩ từ hôm trước.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--c-green-d); font-weight: 700; margin-bottom: 0.75rem;">💊 Về thuốc và tình trạng sức khỏe</h3>
+          <ul style="font-size: 0.9rem; line-height: 1.7; display: grid; gap: 0.5rem;">
+            <li>• Vẫn duy trì uống thuốc huyết áp, tim mạch bình thường vào sáng ngày khám (uống ít nước lọc).</li>
+            <li>• Tạm ngưng uống thuốc tiểu đường vào sáng ngày khám để tránh hạ đường huyết khi chưa ăn.</li>
+            <li>• Phụ nữ nên tránh khám sức khỏe tổng quát hoặc khám phụ khoa trong kỳ kinh nguyệt (nên sau sạch kinh 3-5 ngày).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form đặt lịch online -->
+    <div class="subpage-card animate-fade-up" id="dat-goi" style="animation-delay: 0.3s;">
+      <h2 class="subpage-heading">Đăng Ký Đặt Gói Dịch Vụ Online (Giảm 20%)</h2>
+      <div class="booking-card">
+        <form id="goi-kham-form" onsubmit="event.preventDefault(); alert('✅ Đăng ký gói dịch vụ thành công!\n\nChúng tôi đã áp dụng ưu đãi giảm 20% cho bạn. Nhân viên y tế sẽ gọi xác nhận lịch khám trong vòng 15 phút.');">
+          <div class="booking-grid">
+            <div class="form-group">
+              <label for="bk-name">Họ và tên người khám *</label>
+              <input type="text" id="bk-name" class="form-control" placeholder="Nguyễn Văn An" required />
+            </div>
+            <div class="form-group">
+              <label for="bk-phone">Số điện thoại liên hệ *</label>
+              <input type="tel" id="bk-phone" class="form-control" placeholder="0901234567" required />
+            </div>
+            <div class="form-group">
+              <label for="bk-email">Địa chỉ Email *</label>
+              <input type="email" id="bk-email" class="form-control" placeholder="an.nguyen@gmail.com" required />
+            </div>
+            <div class="form-group">
+              <label for="bk-package">Lựa chọn gói dịch vụ *</label>
+              <select id="bk-package" class="form-control" required onchange="const p=this.value; const el=document.getElementById('price-calc'); if(p==='standard')el.innerHTML='1.320.000₫ <del style=font-size:0.8em;color:gray;>1.650.000₫</del>'; else if(p==='gold')el.innerHTML='3.440.000₫ <del style=font-size:0.8em;color:gray;>4.300.000₫</del>'; else if(p==='diamond')el.innerHTML='11.600.000₫ <del style=font-size:0.8em;color:gray;>14.500.000₫</del>'; else el.innerHTML='0đ';">
+                <option value="">Chọn gói dịch vụ của bạn...</option>
+                <option value="standard">City Care Standard (1.650.000₫)</option>
+                <option value="gold">City Care Gold (4.300.000₫)</option>
+                <option value="diamond">City Care Diamond (14.500.000₫)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bk-date">Dự kiến ngày khám</label>
+              <input type="date" id="bk-date" class="form-control" required />
+            </div>
+            <div class="form-group" style="justify-content: center;">
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--c-text3); text-transform: uppercase;">💵 TẠM TÍNH (ĐÃ GIẢM 20%):</span>
+              <strong id="price-calc" style="font-size: 1.6rem; color: var(--c-primary); margin-top: 0.25rem;">0đ</strong>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block">🚀 Xác Nhận Đăng Ký Khám</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="lien-he">
+  <div class="footer__main">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo_cih_acci.png"
+               alt="" class="footer__logo-img"
+               onerror="this.style.display='none'" />
+        </div>
+        <div class="footer__company-info">
+          <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
+          <p class="footer__license">Số đăng ký kinh doanh: 0310898993 cấp bởi Sở Kế hoạch và Đầu tư TP. HCM, đăng ký lần đầu ngày 03/06/2011.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/benhvienquoctecity" class="footer__soc-btn" id="footer-fb" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V1h-4c-3 0-5 2-5 5v2z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@bvqtcity" class="footer__soc-btn" id="footer-yt" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1.1-1.2-2-2.3-2.3C19.2 3.5 12 3.5 12 3.5s-7.2 0-9.2.4c-1.1.3-2 1.2-2.3 2.3C.1 8.2.1 12 .1 12s0 3.8.4 5.8c.3 1.1 1.2 2 2.3 2.3 2 .4 9.2.4 9.2.4s7.2 0 9.2-.4c1.1-.3 2-1.2 2.3-2.3.4-2 .4-5.8.4-5.8s0-3.8-.4-5.8zM9.5 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@benhvienquoctecity" class="footer__soc-btn" id="footer-tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 3v11.7c0 2-1.7 3.8-3.8 3.8a3.8 3.8 0 0 1-3.8-3.8c0-2 1.7-3.8 3.8-3.8.3 0 .7.1 1 .2V7.1a7.8 7.8 0 0 0-4.8 1c-1.8 1.1-3 3-3 5.3a7.8 7.8 0 0 0 7.8 7.8 7.8 7.8 0 0 0 7.8-7.8V8.2c1.3.9 3 1.5 4.8 1.5V6a4.8 4.8 0 0 1-4-2.2V3h-3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">TRUY CẬP NHANH</h4>
+        <ul class="footer__links">
+          <li><a href="ve-chung-toi">Giới thiệu</a></li>
+          <li><a href="chuyen-khoa">Chuyên khoa</a></li>
+          <li><a href="bac-si">Bác sĩ</a></li>
+          <li><a href="goi-kham">Gói dịch vụ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
+        <ul class="footer__links">
+          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
+          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">LIÊN HỆ</h4>
+        <ul class="footer__contact">
+          <li>
+            <span class="footer__contact-icon" style="margin-top: 2px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <span>Email: &nbsp;<a href="mailto:truyenthong@cih.com.vn">truyenthong@cih.com.vn</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="float-actions" id="float-actions">
+  <a href="tel:19008146" class="float-btn float-btn--call" id="float-call" title="Tổng đài">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+  </a>
+  <a href="lien-he.html#dat-lich" class="float-btn float-btn--book" id="float-book" title="Đặt lịch">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+<script src="booking_modal.js"></script>
+</body>
+</html>

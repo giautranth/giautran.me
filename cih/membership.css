@@ -94,7 +94,6 @@
       transition: all 0.3s var(--ease);
       position: relative;
       overflow: hidden;
-      cursor: pointer;
       user-select: none;
       height: 100%;
     }
@@ -106,8 +105,8 @@
     
     .member-card--silver { border-top: 5px solid #cbd5e0; }
     .member-card--gold { border-top: 5px solid #d4af37; }
-    .member-card--platinum { border-top: 5px solid #a0aec0; }
-    .member-card--diamond { border-top: 5px solid #3182ce; }
+    .member-card--platinum { border-top: 5px solid #3182ce; }
+    .member-card--diamond { border-top: 5px solid #1a202c; }
     
     .member-card__img {
       width: 100%;
@@ -212,14 +211,14 @@
       margin-top: auto;
     }
     
-    .member-card__btn--silver { background: #edf2f7; color: #4a5568; }
-    .member-card__btn--silver:hover { background: #cbd5e0; }
+    .member-card__btn--silver { background: #fef3c7; color: #92400e; }
+    .member-card__btn--silver:hover { background: #fde68a; }
     .member-card__btn--gold { background: #fef3c7; color: #92400e; }
     .member-card__btn--gold:hover { background: #fde68a; }
-    .member-card__btn--platinum { background: #e2e8f0; color: #2d3748; }
-    .member-card__btn--platinum:hover { background: #cbd5e0; }
-    .member-card__btn--diamond { background: #0a426e; color: #fff; }
-    .member-card__btn--diamond:hover { background: #062f50; }
+    .member-card__btn--platinum { background: #fef3c7; color: #92400e; }
+    .member-card__btn--platinum:hover { background: #fde68a; }
+    .member-card__btn--diamond { background: #fef3c7; color: #92400e; }
+    .member-card__btn--diamond:hover { background: #fde68a; }
     
     /* Tier-specific benefit tick overrides */
     .member-card--silver .member-card__benefit-item::before { color: #718096; }
@@ -696,6 +695,7 @@
       justify-content: space-between;
       align-items: center;
       transition: background 0.2s;
+      text-transform: none !important;
     }
     
     .faq-trigger:hover {
@@ -998,39 +998,54 @@
         display: none !important;
       }
       
-      /* Mobile header layout: Hamburger left, Logo center, Search right */
+      /* Mobile header: [≡ hamburger] [logo center] [🔍 search]
+         Dùng flex thuần — KHÔNG dùng position:absolute để tránh overlap */
       .header__inner {
-        position: relative;
-        justify-content: space-between;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 64px !important;
+        padding: 0 0.75rem !important;
+        gap: 0 !important;
+        position: static !important;
       }
       
+      /* Hamburger — flex item bên trái */
+      .hamburger {
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 0;
+        z-index: 10;
+        margin: 0 !important;
+      }
+      
+      /* Logo — canh giữa bằng flex-grow */
       .header__logo {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        z-index: 5;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex: 1 !important;
+        position: static !important;
+        transform: none !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+        height: 100% !important;
       }
       
       .header__logo-img {
         height: 44px !important;
         width: auto !important;
         object-fit: contain;
+        display: block !important;
       }
       
-      .hamburger {
-        display: flex !important;
-        margin-right: 0;
-        z-index: 10;
-      }
-      
+      /* CTA — flex item bên phải (chỉ hiện search) */
       .header__cta {
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 0;
         z-index: 10;
+        gap: 0 !important;
       }
       
       #header-booking-btn {
@@ -1039,15 +1054,25 @@
       
       .header-search-btn {
         display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 8px !important;
       }
       
-      /* Make sticky header on mobile cleaner */
+      /* Nav ẩn trên mobile */
+      .custom-nav {
+        display: none !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+      
+      /* Header sticky */
       .header {
         position: sticky;
         top: 0;
-        z-index: 1000;
+        z-index: 1000 !important;
         background: var(--c-white);
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.07);
       }
       
       /* Comparison table mobile improvements (prevent wrapping) */
@@ -1241,6 +1266,8 @@
 
 /* ---- NÚT SUBMIT ---- */
 .member-register-card .forminator-btn-submit,
+.member-register-card .forminator-button-submit,
+.member-register-card .forminator-button,
 .member-register-card button[type="submit"],
 .member-register-card input[type="submit"] {
   display: flex !important;
@@ -1264,6 +1291,8 @@
 }
 
 .member-register-card .forminator-btn-submit:hover,
+.member-register-card .forminator-button-submit:hover,
+.member-register-card .forminator-button:hover,
 .member-register-card button[type="submit"]:hover,
 .member-register-card input[type="submit"]:hover {
   background: #062f50 !important;
@@ -1273,7 +1302,9 @@
 }
 
 /* Nút submit khi loading */
-.member-register-card .forminator-btn-submit.forminator-loading {
+.member-register-card .forminator-btn-submit.forminator-loading,
+.member-register-card .forminator-button-submit.forminator-loading,
+.member-register-card .forminator-button.forminator-loading {
   opacity: 0.8 !important;
   transform: none !important;
 }
@@ -1304,6 +1335,8 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
   font-family: 'Be Vietnam Pro', sans-serif !important;
   font-size: 0.95rem !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 .select2-results__option {
@@ -1332,3 +1365,444 @@
     font-size: 1.25rem !important;
   }
 }
+
+/* ============================================================
+   COMPREHENSIVE MOBILE RESPONSIVE — match giautran.me design
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* Container full-width on mobile */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* ── HEADER ── */
+  #cih-top-bar {
+    display: none !important;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000 !important;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  }
+
+  .header__inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 64px !important;
+    padding: 0 0.75rem !important;
+    gap: 0 !important;
+    position: static !important;
+  }
+
+  /* Logo — canh giữa bằng flex-grow, không dùng position:absolute */
+  .header__logo {
+    flex: 1 !important;
+    position: static !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    height: 100% !important;
+  }
+
+  .header__logo-img {
+    height: 44px !important;
+    width: auto !important;
+    object-fit: contain;
+    display: block !important;
+  }
+
+  .hamburger {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0;
+    z-index: 10;
+    margin: 0 !important;
+  }
+
+  .header__cta {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0;
+    z-index: 10;
+    gap: 0 !important;
+  }
+
+  .custom-nav {
+    display: none !important;
+  }
+
+  /* ── BREADCRUMB ── */
+  .page-breadcrumb,
+  nav.breadcrumb,
+  .breadcrumb {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* ── BANNER SLIDER ── */
+  .member-banner-slider {
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .slide img,
+  .member-banner-image {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .prev-arrow { left: 10px !important; }
+  .next-arrow { right: 10px !important; }
+
+  .slider-arrow {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+  }
+
+  /* ── SECTION PADDINGS ── */
+  .page-section,
+  [class*="section"],
+  [class*="-section"] {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* Section heading */
+  h2[class*="heading"],
+  h2[class*="title"],
+  .section-heading,
+  .section-title {
+    font-size: 1.5rem !important;
+  }
+
+  /* ── CÁC HẠNG THẺ SECTION ── */
+  .member-slider-wrapper {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    padding: 0 2.5rem !important;
+    width: calc(100% + 2rem) !important;
+  }
+
+  .member-slider-arrow {
+    display: flex !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .member-slider-arrow--prev { left: 2px !important; }
+  .member-slider-arrow--next { right: 2px !important; }
+
+  .member-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 1rem !important;
+    padding: 0.5rem 0 1rem !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .member-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .member-card {
+    flex: 0 0 calc(100% - 0px) !important;
+    scroll-snap-align: center !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+  }
+
+  .member-card__img {
+    max-width: 200px !important;
+  }
+
+  /* ── BẢNG SO SÁNH ── */
+  .compare-container {
+    margin: 0 -1rem 2rem !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  .compare-table {
+    min-width: 700px !important;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 0.5rem 0.4rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Freeze cột đầu tiên */
+  .compare-table th.col-title-header,
+  .compare-table td:first-child:not([colspan]) {
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 5 !important;
+    background: #fff !important;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.08) !important;
+    min-width: 120px !important;
+  }
+
+  /* ── ĐIỀU KHOẢN ── */
+  .rules-table {
+    display: block !important;
+    overflow-x: auto !important;
+  }
+
+  /* ── FAQ ── */
+  .faq-item {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .faq-trigger {
+    font-size: 0.875rem !important;
+    padding: 1rem !important;
+  }
+
+  .faq-body {
+    font-size: 0.875rem !important;
+    padding: 0 1rem 1rem !important;
+  }
+
+  /* ── FORM ĐĂNG KÝ ── */
+  .member-register-card {
+    padding: 1.5rem 1rem !important;
+    border-radius: 16px !important;
+    margin: 0 !important;
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* ── FOOTER ── */
+  .footer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .footer__heading {
+    white-space: normal !important;
+  }
+
+  .footer-float-actions,
+  .float-actions {
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+
+  /* ── MISC RESPONSIVE ── */
+  .page-content {
+    padding: 0 !important;
+  }
+
+}
+
+/* Extra small screens (≤480px) */
+@media (max-width: 480px) {
+  .header__inner {
+    padding: 0 0.5rem !important;
+  }
+
+  .header__logo-img {
+    height: 38px !important;
+  }
+
+  .member-card__img {
+    max-width: 170px !important;
+  }
+
+  .member-card {
+    padding: 1.25rem 0.75rem !important;
+  }
+
+  .member-card__name {
+    font-size: 1.1rem !important;
+  }
+
+  .member-card__price {
+    font-size: 1.1rem !important;
+  }
+
+  .slider-dots {
+    bottom: 8px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   SINGLE TIER LANDING PAGE STYLING
+   ═══════════════════════════════════════════════ */
+.single-tier-panel {
+  padding: 2.5rem !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
+}
+
+.single-tier-hero__grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.tier-card-wrapper {
+  text-align: center;
+  position: relative;
+}
+
+.tier-card-img {
+  max-width: 220px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: inline-block;
+}
+
+.tier-card-img:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+.tier-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 99px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.tier-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #004870;
+  margin-bottom: 1rem;
+  line-height: 1.4; /* Line height matching ĐIỀU KHOẢN */
+}
+
+.tier-title-main,
+.tier-title-sub {
+  display: inline;
+}
+
+.tier-title-sep {
+  display: inline;
+}
+
+.tier-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tier-benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 1.05rem;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.tier-benefits-list li .benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  color: #fff;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: #d4af37;
+}
+
+/* Tier specific color palettes */
+/* Silver (Bạc) */
+.tier-silver .tier-badge { background: #edf2f7; color: #4a5568; }
+
+/* Gold (Vàng) */
+.tier-gold .tier-badge { background: #fef3c7; color: #b7791f; }
+
+/* Platinum (Bạch Kim) */
+.tier-platinum .tier-badge { background: #ebf8ff; color: #2b6cb0; }
+
+/* Diamond (Kim Cương) */
+.tier-diamond .tier-badge { background: #faf5ff; color: #6b46c1; }
+
+/* ── Điều khoản chương trình: Căn đều 2 bên ── */
+.rules-item-list,
+.rules-table-container ul,
+.rules-table-container ol,
+.rules-table-container li {
+  text-align: justify !important;
+}
+
+@media (max-width: 991px) {
+  .single-tier-panel {
+    padding: 1.5rem !important;
+  }
+  .single-tier-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .tier-title-main,
+  .tier-title-sub {
+    display: block !important;
+  }
+  .tier-title-sep {
+    display: none !important;
+  }
+  .tier-benefits-list {
+    align-items: flex-start !important;
+    max-width: 100% !important;
+    margin: 1rem 0 0 0 !important;
+    text-align: left !important;
+  }
+  .tier-card-img {
+    max-width: 170px; /* Small like mobile card size */
+  }
+  .rules-table-container {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+    padding: 5px 1.25rem 1rem 1.25rem !important;
+  }
+  .rules-section-title {
+    margin-bottom: 0.35rem !important;
+  }
+  .rules-table-container ul,
+  .rules-item-list {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .rules-item-list li {
+    margin-bottom: 0.5rem !important;
+    line-height: 1.4 !important;
+  }
+}
+

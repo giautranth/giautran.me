@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thẻ Hội Viên CIH | Bệnh viện Quốc tế City</title>
+  <meta name="description" content="Chương trình Thẻ Hội Viên Bệnh viện Quốc tế City (CIH). Sở hữu các đặc quyền chăm sóc sức khỏe, khám miễn phí chuyên gia và ưu đãi dịch vụ tối ưu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Membership landing page specific styles */
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+      align-items: start;
+    }
+    
+    .member-card {
+      background: var(--c-white);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.3s var(--ease);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .member-card--silver { border-top: 5px solid #cbd5e0; }
+    .member-card--gold { border-top: 5px solid #d69e2e; }
+    .member-card--platinum { border-top: 5px solid #a0aec0; }
+    .member-card--diamond { border-top: 5px solid #3182ce; }
+    
+    .member-card__img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 1.25rem;
+    }
+    
+    .member-card__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--c-text);
+      margin-bottom: 0.5rem;
+    }
+    
+    .member-card__price {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--c-primary-d);
+      margin-bottom: 1.25rem;
+    }
+    .member-card__price-sub {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--c-text3);
+    }
+    
+    .member-card__toggle-link {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--c-primary);
+      margin-top: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: #f0f4f8;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--r-full);
+      transition: all 0.2s;
+    }
+    .member-card:hover .member-card__toggle-link {
+      background: #e1e8f0;
+      color: var(--c-primary-d);
+    }
+    
+    .member-card__details {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s var(--ease), margin-top 0.3s;
+      width: 100%;
+    }
+    
+    .member-card--expanded .member-card__details {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 1.25rem;
+    }
+    
+    .member-card__benefits {
+      text-align: left;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    
+    .member-card__benefit-item {
+      font-size: 0.85rem;
+      color: var(--c-text2);
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      line-height: 1.4;
+      font-weight: 400;
+    }
+    
+    .member-card__benefit-item::before {
+      content: '✓';
+      color: var(--c-primary);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    
+    .member-card__btn {
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-radius: var(--r-full);
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      display: inline-block;
+    }
+    
+    .member-card__btn--silver { background: #edf2f7; color: #4a5568; }
+    .member-card__btn--silver:hover { background: #cbd5e0; }
+    .member-card__btn--gold { background: #fef3c7; color: #92400e; }
+    .member-card__btn--gold:hover { background: #fde68a; }
+    .member-card__btn--platinum { background: #e2e8f0; color: #2d3748; }
+    .member-card__btn--platinum:hover { background: #cbd5e0; }
+    .member-card__btn--diamond { background: #0a426e; color: #fff; }
+    .member-card__btn--diamond:hover { background: #062f50; }
+    
+    /* Premium Comparison Table Styling */
+    .compare-container {
+      overflow-x: auto;
+      margin-bottom: 3.5rem;
+      background: var(--c-white);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid #e2e8f0;
+    }
+    
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+      min-width: 950px;
+    }
+    
+    .compare-table th, .compare-table td {
+      padding: 0;
+      border: 1px solid #e2e8f0;
+      vertical-align: middle;
+      transition: background-color 0.2s ease;
+    }
+    
+    .compare-table td {
+      height: 56px;
+      box-sizing: border-box;
+      padding: 0 1rem;
+    }
+    
+    .compare-table th {
+      padding: 1.25rem 1rem;
+      font-weight: 700;
+      color: #2d3748;
+      text-align: center;
+      background: #f8fafc;
+    }
+    
+    /* Top-left column title cell */
+    .compare-table th.col-title-header {
+      background: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--c-primary-d);
+      text-transform: none;
+      padding-left: 1.5rem;
+      text-align: left;
+      border-bottom: 2px solid #cbd5e0;
+    }
+    
+    .compare-table th.col-header {
+      width: 18%;
+      padding: 1.5rem 1rem;
+      border-bottom: 2px solid #cbd5e0;
+      position: relative;
+    }
+    
+    /* Header card styled border effects */
+    .compare-table th.col-header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+    .compare-table th.silver-cell::after { background: #cbd5e0; }
+    .compare-table th.gold-cell::after { background: #d69e2e; }
+    .compare-table th.platinum-cell::after { background: #3182ce; }
+    .compare-table th.diamond-cell::after { background: #1a202c; }
+
+    .col-header__icon {
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
+    }
+    
+    .col-header__name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+    }
+    
+    /* Column Color Themes */
+    .silver-cell {
+      background: #ffffff;
+      color: #2d3748;
+    }
+    
+    .gold-cell {
+      background: #fffdf5;
+      color: #2d3748;
+    }
+    
+    .platinum-cell {
+      background: #f7fafc;
+      color: #2d3748;
+    }
+    
+    .diamond-cell {
+      background: #edf5fc !important;
+      color: #2d3748 !important;
+      border-color: #cbd5e0 !important;
+    }
+    
+    /* Group Header row */
+    .compare-table tr.group-header td {
+      background: #f0f4f8;
+      font-weight: 800;
+      color: var(--c-primary-d);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.9rem 1.5rem;
+      border: 1px solid #e2e8f0 !important;
+    }
+    
+    /* Value Cell spacing and text sizes */
+    .compare-table td.cell-value {
+      text-align: center;
+      font-weight: 400;
+      font-size: 0.95rem;
+      height: 56px;
+      padding: 0 1rem;
+    }
+    
+    .row-title {
+      font-weight: 400;
+      color: #1a202c;
+      display: block;
+      margin-bottom: 0.15rem;
+      font-size: 0.925rem;
+    }
+    
+    .row-sub {
+      font-size: 0.775rem;
+      color: #718096;
+      font-weight: 400;
+      display: block;
+    }
+
+    /* Đăng ký ngay button in comparison table */
+    .btn-register {
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    .btn-register:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .btn-register--silver {
+      background: #cbd5e0;
+      color: #2d3748;
+    }
+    .btn-register--silver:hover { background: #a0aec0; }
+    .btn-register--gold {
+      background: #d69e2e;
+      color: #fff;
+    }
+    .btn-register--gold:hover { background: #b7791f; }
+    .btn-register--platinum {
+      background: #004b78;
+      color: #fff;
+    }
+    .btn-register--platinum:hover { background: #003057; }
+    .btn-register--diamond {
+      background: #1a1a2e;
+      color: #e2c97e;
+    }
+    .btn-register--diamond:hover { background: #0f0f1e; }
+
+
+    /* Custom Checked and Unchecked Checkboxes */
+    .custom-checkbox {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: none;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    
+    .custom-checkbox.unchecked {
+      background: transparent;
+      border: none;
+    }
+    .custom-checkbox.unchecked::after {
+      content: '—';
+      color: #cbd5e0;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    
+    .custom-checkbox.checked {
+      background: var(--c-primary);
+    }
+    .custom-checkbox.checked::after {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 5px;
+      width: 6px;
+      height: 10px;
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    
+    /* Tier-specific checked boxes */
+    .silver-cell .custom-checkbox.checked {
+      background: #718096;
+    }
+    .gold-cell .custom-checkbox.checked {
+      background: #d69e2e;
+    }
+    .platinum-cell .custom-checkbox.checked {
+      background: #3182ce;
+    }
+    
+    /* Diamond column checkbox overrides */
+    .diamond-cell .custom-checkbox.checked {
+      background: #1a202c;
+      border-color: #1a202c;
+    }
+    .diamond-cell .custom-checkbox.checked::after {
+      border-color: #ffffff;
+    }
+    .diamond-cell .custom-checkbox.unchecked::after {
+      color: #cbd5e0;
+    }
+    
+    /* Hover Row Highlight */
+    .compare-table tr:hover td:not(.diamond-cell):not(.gold-cell):not(.platinum-cell) {
+      background: #f8fafc;
+    }
+    .compare-table tr:hover td.gold-cell {
+      background: #fcf8ee;
+    }
+    .compare-table tr:hover td.platinum-cell {
+      background: #edf4f9;
+    }
+    .compare-table tr:hover td.diamond-cell {
+      background: #e2ecf7;
+    }
+    
+    /* New Rules Table styling */
+    .rules-table-container {
+      margin-top: 2rem;
+      margin-bottom: 3.5rem;
+      background: var(--c-white);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      overflow-x: auto;
+    }
+    
+    .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.925rem;
+      min-width: 768px;
+    }
+    
+    .rules-table th, .rules-table td {
+      border: 1px solid #e2e8f0;
+      padding: 1.25rem 1.5rem;
+      vertical-align: top;
+      color: #2d3748;
+      line-height: 1.6;
+    }
+
+    /* Top Row Tiers styling (Card Like) */
+    .rules-tier-header {
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #718096;
+      margin-bottom: 0.5rem;
+    }
+    
+    .rules-tier-percentage {
+      font-size: 2.2rem;
+      font-weight: 900;
+      margin-bottom: 0.25rem;
+      line-height: 1;
+      color: var(--c-primary);
+    }
+    
+    .rules-tier-sub {
+      font-size: 0.8rem;
+      color: #718096;
+      font-weight: 500;
+    }
+
+    /* Backgrounds and theme enhancements for Tiers */
+    .rules-tier-cell--silver {
+      background: #ffffff;
+      border-top: 4px solid #cbd5e0;
+    }
+    .rules-tier-cell--silver .rules-tier-percentage {
+      color: #4a5568;
+    }
+    .rules-tier-cell--gold {
+      background: #fffdf5;
+      border-top: 4px solid #d69e2e;
+    }
+    .rules-tier-cell--gold .rules-tier-header {
+      color: #b7791f;
+    }
+    .rules-tier-cell--gold .rules-tier-percentage {
+      color: #d69e2e;
+    }
+    .rules-tier-cell--platinum {
+      background: #f7fafc;
+      border-top: 4px solid #3182ce;
+    }
+    .rules-tier-cell--platinum .rules-tier-header {
+      color: #2b6cb0;
+    }
+    .rules-tier-cell--platinum .rules-tier-percentage {
+      color: #3182ce;
+    }
+    .rules-tier-cell--diamond {
+      background: #edf5fc !important;
+      color: #2d3748 !important;
+      border-top: 4px solid #1a202c;
+    }
+    .rules-tier-cell--diamond .rules-tier-header {
+      color: #718096;
+    }
+    .rules-tier-cell--diamond .rules-tier-percentage {
+      color: #1a202c;
+      text-shadow: none;
+    }
+    .rules-tier-cell--diamond .rules-tier-sub {
+      color: #718096 !important;
+    }
+
+    /* Column Headings inside cells */
+    .rules-section-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--c-primary-d);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .rules-item-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .rules-item-list li {
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    
+    .rules-item-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--c-primary);
+      font-weight: bold;
+    }
+
+    .rules-item-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Real example row styling - info callout style */
+    .rules-example-cell {
+      background: #f0f9ff !important;
+      font-style: italic;
+      color: #0369a1;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 1rem 1.5rem !important;
+      border-left: 4px solid var(--c-primary) !important;
+    }
+
+    /* Important terms row styling - alert card style */
+    .rules-important-cell {
+      background: #ffffff;
+      border-left: 4px solid #e53e3e !important;
+    }
+    
+    .rules-important-cell .rules-section-title {
+      color: #c53030;
+    }
+
+    .rules-bullet-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .rules-bullet-list li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+      font-size: 0.9rem;
+      color: #4a5568;
+      position: relative;
+      padding-left: 1.25rem;
+    }
+    
+    .rules-bullet-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #e53e3e;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+    
+    .rules-bullet-list li:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* FAQ Accordion Styling */
+    .faq-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .faq-tab-btn {
+      background: #edf2f7;
+      color: #4a5568;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--r-full);
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    
+    .faq-tab-btn--active, .faq-tab-btn:hover {
+      background: var(--c-primary);
+      color: #fff;
+    }
+    
+    .faq-container {
+      background: var(--c-white);
+      border-radius: var(--r-md);
+      border: 1px solid var(--c-border);
+      overflow: hidden;
+      margin-bottom: 3.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .faq-group-content {
+      display: none;
+    }
+    
+    .faq-group-content--active {
+      display: block;
+    }
+    
+    .faq-item {
+      border-bottom: 1px solid var(--c-border);
+    }
+    
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    
+    .faq-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--c-text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    
+    .faq-trigger:hover {
+      background: #f7fafc;
+    }
+    
+    .faq-chevron {
+      font-size: 0.8rem;
+      transition: transform 0.2s;
+      color: var(--c-text3);
+    }
+    
+    .faq-item--active .faq-chevron {
+      transform: rotate(180deg);
+    }
+    
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background: #fafbfe;
+    }
+    
+    .faq-inner-text {
+      padding: 1.25rem 1.5rem;
+      font-size: 0.9rem;
+      color: var(--c-text2);
+      line-height: 1.6;
+    }
+    
+    /* Registration Form Styling */
+    .member-register-card {
+      background: var(--c-white);
+      border: 1px solid #f0f4f8;
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 15px 40px rgba(0, 75, 120, 0.04);
+      max-width: 800px;
+      margin: 3.5rem auto 0 auto;
+    }
+    
+    .member-register-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #004870;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    .form-group-full {
+      margin-bottom: 1.25rem;
+    }
+    
+    .form-group-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--c-text);
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-input-custom {
+      width: 100%;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 0.85rem 1.2rem;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      color: var(--c-text);
+      transition: all 0.2s;
+    }
+    
+    .form-input-custom:focus {
+      outline: none;
+      border-color: var(--c-primary);
+      background: var(--c-white);
+      box-shadow: 0 0 0 3px rgba(0, 125, 165, 0.1);
+    }
+    
+    .btn-submit-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem 2rem;
+      background: #0a426e;
+      color: var(--c-white);
+      border: none;
+      border-radius: var(--r-full);
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(10, 66, 110, 0.2);
+      transition: all 0.25s var(--ease);
+      margin-top: 0.5rem;
+    }
+    
+    .btn-submit-pill:hover {
+      background: #062f50;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(10, 66, 110, 0.35);
+    }
+    
+    /* Membership Banner Slider Styling */
+    .member-banner-slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+    
+    .slider-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      height: auto;
+    }
+    
+    .slide {
+      display: none;
+      width: 100%;
+      flex-shrink: 0;
+    }
+    
+    .slide.active {
+      display: block;
+      animation: fadeEffect 0.6s ease-in-out;
+    }
+    
+    @keyframes fadeEffect {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+    
+    .member-banner-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+    
+    /* Navigation Arrows */
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 75, 120, 0.45);
+      color: #ffffff;
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease);
+      z-index: 10;
+      user-select: none;
+    }
+    
+    .slider-arrow:hover {
+      background: rgba(0, 75, 120, 0.85);
+      transform: translateY(-50%) scale(1.1);
+    }
+    
+    .prev-arrow {
+      left: 20px;
+    }
+    
+    .next-arrow {
+      right: 20px;
+    }
+    
+    /* Dot Indicators */
+    .slider-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+    
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: 1px solid rgba(0, 75, 120, 0.2);
+    }
+    
+    .dot:hover, .dot.active {
+      background: #004b78;
+      transform: scale(1.2);
+    }
+    
+    /* Responsive Arrow Adjustments */
+    @media (max-width: 768px) {
+      .slider-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+      .prev-arrow { left: 10px; }
+      .next-arrow { right: 10px; }
+      .slider-dots { bottom: 10px; }
+      .dot { width: 8px; height: 8px; }
+    }
+    
+    /* Responsive Breakpoints */
+    @media (max-width: 1100px) {
+      .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      /* rules-grid is replaced by rules-table */
+    }
+    
+    @media (max-width: 600px) {
+      .member-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .compare-table {
+        min-width: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar" id="top-bar">
+  <div class="container top-bar__inner">
+    <div class="top-bar__left"></div>
+    <div class="top-bar__right">
+      <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+        Tổng đài: <strong>1900 8146</strong>
+      </a>
+      <span class="top-bar__sep">|</span>
+      <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
+        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+      </a>
+      <span class="top-bar__sep">|</span>
+      <a href="danh-cho-khach-hang" class="top-bar__portal">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        Dành cho khách hàng
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <button class="hamburger" id="hamburger-btn" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
+      <img src="images/logo_cih_acci.png"
+           alt="" class="header__logo-img"
+           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+      <div id="logo-fallback" class="logo-fallback" style="display:none">
+        <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
+      </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav" aria-label="Menu chính">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
+        <li class="nav__item nav__item--has-dropdown">
+          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
+          <div class="nav__dropdown">
+            <div class="dropdown__grid">
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Nội Khoa</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
+                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
+                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
+                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
+                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
+                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
+              </div>
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Ngoại Khoa</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
+                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
+                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
+                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
+                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
+              </div>
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
+                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
+                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
+                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
+                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
+                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
+              </div>
+              <div class="dropdown__col">
+                <h4 class="dropdown__heading">Chẩn Đoán</h4>
+                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
+                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
+                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
+                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
+                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
+        <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
+        <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
+        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
+        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__cta">
+      <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
+      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- BREADCRUMBS -->
+<div class="breadcrumbs-bar" style="background: var(--c-bg); padding: 1rem 0 0.5rem 0;">
+  <div class="container">
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.8rem; color: var(--c-text3);">
+      <a href="./" style="color: var(--c-text2); text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span>Thẻ Thành Viên</span>
+    </div>
+  </div>
+</div>
+
+<!-- BANNER TRANG (SLIDER) -->
+<section class="member-banner-slider">
+  <div class="slider-container">
+    <div class="slide active">
+      <img src="images/membership_banner1.png" alt="Thẻ Hội Viên CIH Banner 1" class="member-banner-image" />
+    </div>
+    <div class="slide">
+      <img src="images/membership_banner2.png" alt="Thẻ Hội Viên CIH Banner 2" class="member-banner-image" />
+    </div>
+    <div class="slide">
+      <img src="images/membership_banner3.png" alt="Thẻ Hội Viên CIH Banner 3" class="member-banner-image" />
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <button class="slider-arrow prev-arrow" onclick="changeSlide(-1)" aria-label="Slide trước">❮</button>
+    <button class="slider-arrow next-arrow" onclick="changeSlide(1)" aria-label="Slide tiếp theo">❯</button>
+    
+    <!-- Dot Indicators -->
+    <div class="slider-dots">
+      <span class="dot active" onclick="setSlide(0)"></span>
+      <span class="dot" onclick="setSlide(1)"></span>
+      <span class="dot" onclick="setSlide(2)"></span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="subpage-content" style="background: var(--c-bg); padding: 2rem 0 3rem 0;">
+  <div class="container">
+    
+    <h2 class="section__title" style="text-align: center; margin-bottom: 2rem; font-size: 1.6rem; color: #004870; text-transform: uppercase;">CÁC HẠNG THẺ</h2>
+    
+    <!-- 4 TIER CARDS -->
+    <div class="member-grid" id="dat-mua">
+      <!-- Silver -->
+      <div class="member-card member-card--silver" onclick="toggleMemberCard(this, event)">
+        <img src="images/Bac.png" alt="Thẻ Bạc CIH" class="member-card__img" />
+        <h2 class="member-card__title">Thẻ Bạc</h2>
+        <div class="member-card__price">1.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
+        <div class="member-card__details">
+          <div class="member-card__benefits">
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa tối đa 1 lần/tháng với chuyên gia PGS/ TS/ BS. CKII.</div>
+            <div class="member-card__benefit-item">Giảm 5% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong 10km.</div>
+            <div class="member-card__benefit-item">Ưu tiên lịch khám, phẫu thuật.</div>
+            <div class="member-card__benefit-item">Tích điểm 2%.</div>
+            <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
+          </div>
+          <a href="#dang-ky" class="member-card__btn member-card__btn--silver">Đăng ký tư vấn</a>
+        </div>
+      </div>
+
+      <!-- Gold -->
+      <div class="member-card member-card--gold" onclick="toggleMemberCard(this, event)">
+        <img src="images/Vang.png" alt="Thẻ Vàng CIH" class="member-card__img" />
+        <h2 class="member-card__title">Thẻ Vàng</h2>
+        <div class="member-card__price">3.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
+        <div class="member-card__details">
+          <div class="member-card__benefits">
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn số lần với chuyên gia PGS/ TS/ BS. CKII.</div>
+            <div class="member-card__benefit-item">Giảm 10% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong 10km.</div>
+            <div class="member-card__benefit-item">Ưu tiên lịch khám, phẫu thuật.</div>
+            <div class="member-card__benefit-item">Tích điểm 3%.</div>
+            <div class="member-card__benefit-item">Giảm 25% phí nâng hạng.</div>
+          </div>
+          <a href="#dang-ky" class="member-card__btn member-card__btn--gold">Đăng ký tư vấn</a>
+        </div>
+      </div>
+
+      <!-- Platinum -->
+      <div class="member-card member-card--platinum" onclick="toggleMemberCard(this, event)">
+        <img src="images/Bach_Kim.png" alt="Thẻ Bạch Kim CIH" class="member-card__img" />
+        <h2 class="member-card__title">Thẻ Bạch Kim</h2>
+        <div class="member-card__price">5.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
+        <div class="member-card__details">
+          <div class="member-card__benefits">
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn với chuyên gia PGS/ TS/ BS.CKII.</div>
+            <div class="member-card__benefit-item">Giảm 15% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+            <div class="member-card__benefit-item">Miễn phí xe cấp cứu trong 10km.</div>
+            <div class="member-card__benefit-item">Ưu tiên lịch khám, phẫu thuật.</div>
+            <div class="member-card__benefit-item">Tích điểm 3%.</div>
+            <div class="member-card__benefit-item">Áp dụng thêm 1 thành viên gia đình.</div>
+          </div>
+          <a href="#dang-ky" class="member-card__btn member-card__btn--platinum">Đăng ký tư vấn</a>
+        </div>
+      </div>
+
+      <!-- Diamond -->
+      <div class="member-card member-card--diamond" onclick="toggleMemberCard(this, event)">
+        <img src="images/Kim_Cuong.png" alt="Thẻ Kim Cương CIH" class="member-card__img" />
+        <h2 class="member-card__title">Thẻ Kim Cương</h2>
+        <div class="member-card__price">20.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
+        <div class="member-card__toggle-link">Xem chi tiết ▾</div>
+        <div class="member-card__details">
+          <div class="member-card__benefits">
+            <div class="member-card__benefit-item">Miễn phí khám chuyên khoa không giới hạn với Chuyên gia PGS/ TS/ BS. CKII.</div>
+            <div class="member-card__benefit-item">Giảm 20% xét nghiệm, chẩn đoán hình ảnh, điều trị, gói khám.</div>
+            <div class="member-card__benefit-item">Đưa đón 2 chiều khám bệnh, cấp cứu.</div>
+            <div class="member-card__benefit-item">Chăm sóc 1:1, Bác sĩ tư vấn riêng.</div>
+            <div class="member-card__benefit-item">Tích điểm 5%.</div>
+            <div class="member-card__benefit-item">Áp dụng cả gia đình (+3 thành viên).</div>
+          </div>
+          <a href="#dang-ky" class="member-card__btn member-card__btn--diamond">Đăng ký tư vấn</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <h2 class="section__title" style="text-align: center; margin-bottom: 1.5rem; font-size: 1.6rem; color: #004870; text-transform: uppercase;">BẢNG SO SÁNH CÁC HẠNG THẺ</h2>
+    <div class="compare-container">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="col-title-header">Quyền lợi</th>
+            
+            <!-- Silver Header -->
+            <th class="col-header silver-cell">
+              <div class="col-header__icon">
+                <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto 0.2rem;">
+                  <!-- Ribbon -->
+                  <path d="M14 10L10 22L20 18L30 22L26 10" fill="#7B8FE4"/>
+                  <path d="M18 10L16 20L20 18L24 20L22 10" fill="#5066D6"/>
+                  <!-- Medal Circle -->
+                  <circle cx="20" cy="22" r="10" fill="url(#silverGrad)" stroke="#B0BAC9" stroke-width="1.5"/>
+                  <circle cx="20" cy="12" r="2" fill="#B0BAC9"/>
+                  <!-- Medal Text -->
+                  <text x="20" y="26" font-family="'Be Vietnam Pro', sans-serif" font-size="11" font-weight="900" fill="#4A5568" text-anchor="middle">2</text>
+                  <defs>
+                    <linearGradient id="silverGrad" x1="12" y1="14" x2="28" y2="30" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FFFFFF"/>
+                      <stop offset="0.5" stop-color="#E2E8F0"/>
+                      <stop offset="1" stop-color="#CBD5E0"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="col-header__name">Silver</div>
+            </th>
+            
+            <!-- Gold Header -->
+            <th class="col-header gold-cell">
+              <div class="col-header__icon">
+                <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto 0.2rem;">
+                  <!-- Ribbon -->
+                  <path d="M14 10L10 22L20 18L30 22L26 10" fill="#F6AD55"/>
+                  <path d="M18 10L16 20L20 18L24 20L22 10" fill="#DD6B20"/>
+                  <!-- Medal Circle -->
+                  <circle cx="20" cy="22" r="10" fill="url(#goldGrad)" stroke="#ECC94B" stroke-width="1.5"/>
+                  <circle cx="20" cy="12" r="2" fill="#ECC94B"/>
+                  <!-- Medal Text -->
+                  <text x="20" y="26" font-family="'Be Vietnam Pro', sans-serif" font-size="11" font-weight="900" fill="#975A16" text-anchor="middle">1</text>
+                  <defs>
+                    <linearGradient id="goldGrad" x1="12" y1="14" x2="28" y2="30" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FFFDF5"/>
+                      <stop offset="0.5" stop-color="#F6E05E"/>
+                      <stop offset="1" stop-color="#D69E2E"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="col-header__name">Gold</div>
+            </th>
+            
+            <!-- Platinum Header -->
+            <th class="col-header platinum-cell">
+              <div class="col-header__icon">
+                <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 0 auto 0.2rem;">
+                  <path d="M20 6L32 15L20 34L8 15L20 6Z" fill="url(#platGrad)"/>
+                  <path d="M20 6L26 15H14L20 6Z" fill="#63B3ED"/>
+                  <path d="M8 15H14L20 34L8 15Z" fill="#3182CE"/>
+                  <path d="M32 15H26L20 34L32 15Z" fill="#2B6CB0"/>
+                  <path d="M14 15L20 34L26 15H14Z" fill="#4299E1"/>
+                  <defs>
+                    <linearGradient id="platGrad" x1="8" y1="6" x2="32" y2="34" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#EBF8FF"/>
+                      <stop offset="0.5" stop-color="#90CDF4"/>
+                      <stop offset="1" stop-color="#3182CE"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="col-header__name">Platinum</div>
+            </th>
+            
+            <!-- Diamond Header -->
+            <th class="col-header diamond-cell">
+              <div class="col-header__icon" style="font-size: 1.4rem; line-height: 1; margin-bottom: 0.2rem;">👑</div>
+              <div class="col-header__name">Diamond</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Group 1: Khám chuyên khoa -->
+          <tr class="group-header">
+            <td colspan="5">Khám chuyên khoa</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Miễn phí khám với chuyên gia PGS/ TS/ BS.CKII</span>
+            </td>
+            <td class="cell-value silver-cell">Tối đa 1 lần/tháng</td>
+            <td class="cell-value gold-cell">Không giới hạn</td>
+            <td class="cell-value platinum-cell">Không giới hạn</td>
+            <td class="cell-value diamond-cell">Không giới hạn</td>
+          </tr>
+          
+          <!-- Group 2: Giảm giá dịch vụ -->
+          <tr class="group-header">
+            <td colspan="5">Giảm giá dịch vụ</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Xét nghiệm, CT/MRI, siêu âm</span>
+            </td>
+            <td class="cell-value silver-cell">Giảm 5%</td>
+            <td class="cell-value gold-cell">Giảm 10%</td>
+            <td class="cell-value platinum-cell">Giảm 15%</td>
+            <td class="cell-value diamond-cell">Giảm 20%</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Điều trị, thủ thuật, phẫu thuật, nội trú</span>
+            </td>
+            <td class="cell-value silver-cell">Giảm 5%</td>
+            <td class="cell-value gold-cell">Giảm 10%</td>
+            <td class="cell-value platinum-cell">Giảm 15%</td>
+            <td class="cell-value diamond-cell">Giảm 20%</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Gói khám sức khỏe, tầm soát ung thư</span>
+            </td>
+            <td class="cell-value silver-cell">Giảm 5%</td>
+            <td class="cell-value gold-cell">Giảm 10%</td>
+            <td class="cell-value platinum-cell">Giảm 15%</td>
+            <td class="cell-value diamond-cell">Giảm 20%</td>
+          </tr>
+          
+          <!-- Group 3: Tiện ích & vận chuyển -->
+          <tr class="group-header">
+            <td colspan="5">Tiện ích & vận chuyển</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Miễn phí xe cấp cứu (trong 10km)</span>
+            </td>
+            <td class="cell-value silver-cell">1 chiều</td>
+            <td class="cell-value gold-cell">1 chiều</td>
+            <td class="cell-value platinum-cell">1 chiều</td>
+            <td class="cell-value diamond-cell">2 chiều</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Đưa đón khám, chữa bệnh 2 chiều</span>
+              <span class="row-sub">(trong 10km)</span>
+            </td>
+            <td class="cell-value silver-cell"><span class="custom-checkbox unchecked"></span></td>
+            <td class="cell-value gold-cell"><span class="custom-checkbox unchecked"></span></td>
+            <td class="cell-value platinum-cell"><span class="custom-checkbox unchecked"></span></td>
+            <td class="cell-value diamond-cell"><span class="custom-checkbox checked"></span></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Ưu tiên lịch khám, thủ thuật, phẫu thuật</span>
+            </td>
+            <td class="cell-value silver-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value gold-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value platinum-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value diamond-cell"><span class="custom-checkbox checked"></span></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Nhắc lịch tái khám chủ động</span>
+            </td>
+            <td class="cell-value silver-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value gold-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value platinum-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value diamond-cell"><span class="custom-checkbox checked"></span></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Chăm sóc 1:1 & bác sĩ tư vấn riêng</span>
+            </td>
+            <td class="cell-value silver-cell"><span class="custom-checkbox unchecked"></span></td>
+            <td class="cell-value gold-cell"><span class="custom-checkbox unchecked"></span></td>
+            <td class="cell-value platinum-cell"><span class="custom-checkbox unchecked"></span></td>
+            <td class="cell-value diamond-cell"><span class="custom-checkbox checked"></span></td>
+          </tr>
+          
+          <!-- Group 4: Tích điểm & gia đình -->
+          <tr class="group-header">
+            <td colspan="5">Tích điểm & gia đình</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Tích điểm trên tổng viện phí</span>
+            </td>
+            <td class="cell-value silver-cell">2%</td>
+            <td class="cell-value gold-cell">3%</td>
+            <td class="cell-value platinum-cell">4%</td>
+            <td class="cell-value diamond-cell">5%</td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Giảm 25% phí nâng hạng thẻ</span>
+            </td>
+            <td class="cell-value silver-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value gold-cell"><span class="custom-checkbox checked"></span></td>
+            <td class="cell-value platinum-cell"><span class="custom-checkbox unchecked"></span></td>
+            <td class="cell-value diamond-cell"><span class="custom-checkbox unchecked"></span></td>
+          </tr>
+          <tr>
+            <td style="padding-left: 1.5rem;">
+              <span class="row-title">Áp dụng cho thành viên gia đình</span>
+            </td>
+            <td class="cell-value silver-cell"></td>
+            <td class="cell-value gold-cell"></td>
+            <td class="cell-value platinum-cell">+1 thành viên</td>
+            <td class="cell-value diamond-cell">+3 thành viên</td>
+          </tr>
+          <!-- Row: Đăng ký ngay -->
+          <tr>
+            <td style="padding-left: 1.5rem;"></td>
+            <td class="cell-value silver-cell" style="padding: 1rem 0.5rem;">
+              <a href="#dang-ky" class="btn-register btn-register--silver">Đăng ký ngay</a>
+            </td>
+            <td class="cell-value gold-cell" style="padding: 1rem 0.5rem;">
+              <a href="#dang-ky" class="btn-register btn-register--gold">Đăng ký ngay</a>
+            </td>
+            <td class="cell-value platinum-cell" style="padding: 1rem 0.5rem;">
+              <a href="#dang-ky" class="btn-register btn-register--platinum">Đăng ký ngay</a>
+            </td>
+            <td class="cell-value diamond-cell" style="padding: 1rem 0.5rem;">
+              <a href="#dang-ky" class="btn-register btn-register--diamond">Đăng ký ngay</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- POINTS & RULES -->
+    <div class="rules-table-container">
+      <table class="rules-table">
+        <tbody>
+          <!-- Row 1: Two Columns of Rules -->
+          <tr>
+            <td colspan="2" style="width: 50%;">
+              <div class="rules-section-title">Quy tắc quy đổi</div>
+              <ul class="rules-item-list">
+                <li>100 điểm = 1.000 đồng.</li>
+                <li>Dùng thanh toán lần sử dụng dịch vụ tiếp theo.</li>
+                <li>Mỗi lần chỉ được dùng tối đa 30% giá trị hóa đơn.</li>
+              </ul>
+            </td>
+            <td colspan="2" style="width: 50%;">
+              <div class="rules-section-title">Hiệu lực điểm</div>
+              <ul class="rules-item-list">
+                <li>12 tháng kể từ ngày tích.</li>
+                <li>Hết hiệu lực sau 30 ngày khi thẻ hết hạn.</li>
+                <li>Không chuyển nhượng.</li>
+              </ul>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Điều khoản accordion (outside table) -->
+    <div class="faq-container" style="margin-top: 0.75rem;">
+      <div class="faq-item">
+        <button class="faq-trigger" onclick="toggleFaq(this)" style="background: #f0f4f8; border-radius: 8px;">
+          <span style="font-weight: 600; color: #004870;">Điều khoản</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-content">
+          <div class="faq-inner-text">
+            <ul style="margin: 0; padding-left: 1.25rem; line-height: 1.8;">
+              <li>Ưu đãi chỉ áp dụng trên chi phí bệnh nhân tự chi trả — không bao gồm phần bảo hiểm, chi phí bác sĩ phẫu thuật, bác sĩ điều trị, thuốc, vật tư tiêu hao, và dịch vụ thuộc đơn vị hợp tác,...</li>
+              <li>Mỗi dịch vụ chỉ được hưởng một ưu đãi cao nhất — không được gộp nhiều ưu đãi cùng lúc (ví dụ: đã giảm giá gói CT thì không giảm thêm giá dịch vụ riêng lẻ)</li>
+              <li>Không áp dụng cho gói sinh, gói IVF, gói vắc xin, phòng VIP, và dịch vụ gửi xét nghiệm ra ngoài bệnh viện</li>
+              <li>Thẻ định danh cố định cho chủ thẻ và người được thêm vào — không thay đổi định danh trong suốt thời gian thẻ còn hiệu lực</li>
+              <li>Điểm tích lũy có hiệu lực 12 tháng và hết hiệu lực sau 30 ngày kể từ khi thẻ hết hạn. Điểm chỉ dùng tối đa 30% hóa đơn mỗi lần</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <h2 class="section__title" style="text-align: center; margin-bottom: 1.5rem; font-size: 1.6rem; color: #004870;">CÂU HỎI THƯỜNG GẶP</h2>
+    
+    <!-- FAQ Tab Buttons -->
+    <div class="faq-tabs">
+      <button class="faq-tab-btn faq-tab-btn--active" onclick="switchFaqTab('faq-reg')">Điều kiện & Đăng ký</button>
+      <button class="faq-tab-btn" onclick="switchFaqTab('faq-promo')">Quyền lợi & Ưu đãi</button>
+      <button class="faq-tab-btn" onclick="switchFaqTab('faq-points')">Tích điểm & Quy đổi</button>
+      <button class="faq-tab-btn" onclick="switchFaqTab('faq-family')">Gia đình & Nâng hạng</button>
+      <button class="faq-tab-btn" onclick="switchFaqTab('faq-treat')">Điều trị & Ngoại lệ</button>
+      <button class="faq-tab-btn" onclick="switchFaqTab('faq-other')">Khác</button>
+    </div>
+
+    <!-- FAQ Accordion Container -->
+    <div class="faq-container">
+      
+      <!-- Group 1: Đăng ký & Điều kiện -->
+      <div id="faq-reg" class="faq-group-content faq-group-content--active">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>1. Ai có thể đăng ký thẻ hội viên CIH?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Tất cả bệnh nhân đã từng sử dụng dịch vụ tại Bệnh viện Quốc tế City đều có thể đăng ký thẻ hội viên. Chương trình không giới hạn độ tuổi hay quốc tịch. Bạn có thể đăng ký trực tiếp tại các quầy lễ tân bệnh viện hoặc điền form đăng ký online trên website.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>2. Đăng ký thẻ cần những giấy tờ gì?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Bạn chỉ cần xuất trình CCCD/CMND hoặc Hộ chiếu còn hiệu lực của chủ thẻ khi đăng ký tại quầy. Đối với thẻ Platinum và Diamond (có bảo trợ thêm thành viên gia đình), bạn cần cung cấp thêm các giấy tờ chứng minh quan hệ gia đình (sổ hộ khẩu, giấy khai sinh hoặc giấy đăng ký kết hôn).
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>3. Thẻ có hiệu lực ngay sau khi đăng ký không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Có. Thẻ hội viên của bạn sẽ được kích hoạt và có hiệu lực sử dụng ngay lập tức sau khi hoàn tất thủ tục thanh toán phí thẻ hàng năm. Bạn có thể áp dụng các ưu đãi giảm giá và tích điểm ngay trong hóa đơn khám chữa bệnh tiếp theo.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>4. Thẻ có hiệu lực bao lâu? Gia hạn như thế nào?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Thẻ hội viên có thời hạn hiệu lực là 12 tháng kể từ ngày đăng ký/kích hoạt thành công. Trước khi thẻ hết hạn, bộ phận chăm sóc khách hàng của bệnh viện sẽ chủ động liên hệ nhắc lịch gia hạn qua điện thoại, Zalo OA hoặc SMS. Khi thực hiện gia hạn, hội viên các hạng Silver và Gold sẽ được giảm 25% phí nâng hạng thẻ nếu có nhu cầu chuyển lên hạng cao hơn.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>5. Có thể đăng ký thẻ cho người thân thay mình dùng không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Không. Thẻ hội viên CIH là thẻ định danh cá nhân cố định theo thông tin đăng ký của chủ thẻ. Bạn không thể cho người khác mượn hoặc dùng chung thẻ của mình. Nếu muốn chăm sóc sức khỏe cho người thân trong gia đình, bạn nên lựa chọn hạng thẻ Platinum (được đăng ký thêm 1 người thân hưởng quyền lợi tương đương) hoặc hạng thẻ Diamond (áp dụng cho toàn bộ gia đình bao gồm cha mẹ, vợ/chồng, con cái).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Quyền lợi & Ưu đãi -->
+      <div id="faq-promo" class="faq-group-content">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>1. Miễn phí khám chuyên gia áp dụng cho bác sĩ nào?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Quyền lợi miễn phí khám áp dụng cho tất cả dịch vụ khám bệnh với các bác sĩ là Chuyên gia có học hàm, học vị PGS, TS, BS.CKII đang công tác tại Bệnh viện Quốc tế City. Lưu ý: quyền lợi này không áp dụng cho dịch vụ thanh toán ABR (dịch vụ yêu cầu chỉ định bác sĩ phẫu thuật hoặc bác sĩ điều trị riêng). Đối với hạng thẻ Silver, ưu đãi giới hạn tối đa 1 lần/tháng; đối với hạng thẻ Gold, Platinum, và Diamond thì không giới hạn số lần khám chuyên gia trong suốt hiệu lực thẻ.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>2. Ưu đãi giảm giá tính trên chi phí nào? Có tính phần bảo hiểm không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Mức giảm giá dịch vụ của thẻ hội viên (5% - 20% tùy hạng thẻ) chỉ được áp dụng trên phần chi phí thực tế mà bệnh nhân tự chi trả (sau khi đã khấu trừ hết các khoản được chi trả từ Bảo hiểm Y tế nhà nước hoặc bảo hiểm sức khỏe tư nhân). Ưu đãi này không áp dụng cho chi phí bác sĩ phẫu thuật/điều trị trực tiếp, tiền thuốc, hóa chất, vật tư tiêu hao y tế và các dịch vụ do đơn vị ngoài liên kết thực hiện.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>3. Có thể gộp nhiều ưu đãi cùng một lúc không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Không. Mỗi dịch vụ chỉ được áp dụng một mức ưu đãi cao nhất tại thời điểm thanh toán. Ví dụ, nếu bạn đăng ký gói tầm soát sức khỏe đang trong chương trình khuyến mãi giảm giá chung 15%, hệ thống sẽ áp dụng mức giảm 15% đó, và không giảm thêm phần trăm theo hạng thẻ hội viên của bạn nữa.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>4. Miễn phí cấp cứu áp dụng thế nào? Có giới hạn số lần không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Tất cả các hạng thẻ hội viên đều được miễn phí dịch vụ vận chuyển cấp cứu bằng xe chuyên dụng của CIH trong phạm vi bán kính 10km xung quanh bệnh viện và không giới hạn số lần sử dụng. Hạng thẻ Silver, Gold, và Platinum được miễn phí 1 chiều (từ nhà đến bệnh viện). Riêng hạng thẻ cao cấp Diamond được miễn phí xe đưa đón 2 chiều cả cấp cứu và đi khám bệnh thường quy. Dịch vụ cấp cứu hoạt động liên tục 24/7.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>5. Ưu tiên lịch khám có nghĩa là gì? Có được xếp trước người khác không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Quyền ưu tiên xếp lịch khám có nghĩa là hệ thống đặt hẹn sẽ ưu ái dành riêng các khung giờ khám trống đẹp nhất cho hội viên khi đăng ký đặt lịch trước. Khi đến bệnh viện, quy trình check-in và phân phòng khám cũng sẽ được ưu tiên xử lý nhanh chóng hơn. Đồng thời, bộ phận CSKH sẽ chủ động gọi điện hoặc gửi tin nhắn nhắc lịch tái khám theo chỉ định điều trị của bác sĩ để đảm bảo tiến trình chăm sóc sức khỏe của bạn diễn ra liên tục.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Tích điểm & Quy đổi -->
+      <div id="faq-points" class="faq-group-content">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>1. Điểm được tích tự động hay phải yêu cầu thủ công?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Điểm tích lũy được hệ thống quản lý bệnh viện tự động cộng trực tiếp vào tài khoản của bạn ngay sau khi hoàn tất hóa đơn thanh toán tại quầy thu ngân (với điều kiện bạn xuất trình thẻ hội viên vật lý hoặc thông tin định danh thẻ trên điện thoại). Điểm số sẽ được cập nhật chính thức vào tài khoản hội viên của bạn trong vòng tối đa 24 giờ.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>2. Tỉ lệ tích điểm theo từng hạng thẻ là bao nhiêu?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Tỉ lệ tích lũy điểm tính trên tổng số tiền thực tế bệnh nhân tự chi trả như sau:<br>
+              - Thẻ Bạc (Silver): tích 2%<br>
+              - Thẻ Vàng (Gold): tích 3%<br>
+              - Thẻ Bạch Kim (Platinum): tích 4%<br>
+              - Thẻ Kim Cương (Diamond): tích 5%<br>
+              Ví dụ: Hội viên Thẻ Vàng thanh toán hóa đơn tự trả là 10.000.000 VNĐ sẽ được tích lũy 300.000 điểm (tương đương 300.000 VNĐ) để thanh toán cho lần khám sau.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>3. 100 điểm đổi được bao nhiêu tiền? Dùng như thế nào?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Tỷ lệ quy đổi điểm là 100 điểm = 1.000 VNĐ. Điểm tích lũy của bạn được dùng làm phương thức thanh toán trực tiếp để khấu trừ chi phí khám chữa bệnh trên hóa đơn của những lần sử dụng dịch vụ tiếp theo tại bệnh viện. Lưu ý rằng số điểm áp dụng thanh toán không được vượt quá 30% tổng giá trị hóa đơn thực tế của lần khám đó. Điểm số tích lũy không có giá trị quy đổi thành tiền mặt và không được chuyển nhượng sang cho tài khoản hội viên khác.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>4. Điểm có hết hạn không? Nếu không gia hạn thẻ thì điểm còn lại mất không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Có. Điểm tích lũy có thời hạn sử dụng là 12 tháng kể từ ngày giao dịch thanh toán phát sinh điểm đó. Trường hợp thẻ hội viên của bạn hết hạn 12 tháng mà bạn không tiến hành gia hạn, toàn bộ số điểm tích lũy còn lại trong tài khoản sẽ tự động hết hiệu lực sau 30 ngày kể từ ngày thẻ hết hạn. Hãy lưu ý sử dụng điểm hoặc thực hiện gia hạn thẻ đúng hạn để bảo toàn điểm tích lũy.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>5. Tôi có thể kiểm tra số điểm hiện tại ở đâu?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Bạn có thể dễ dàng kiểm tra số dư điểm tích lũy hiện tại của mình bằng cách đăng nhập vào ứng dụng di động CIH, tra cứu trên cổng thông tin website bệnh viện, hoặc trực tiếp yêu cầu nhân viên thu ngân/lễ tân hỗ trợ tra cứu tại quầy khi đến thăm khám. Ngoài ra, hệ thống cũng sẽ tự động gửi tin nhắn Zalo OA hoặc SMS thông báo biến động điểm sau mỗi hóa đơn thanh toán của bạn.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 4: Gia đình & Nâng hạng -->
+      <div id="faq-family" class="faq-group-content">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>1. Thẻ Platinum cho thêm 1 người — đó là ai? Có giới hạn không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Thẻ Bạch Kim (Platinum) cho phép bạn đăng ký kèm thêm 1 thành viên ruột thịt trong gia đình để cùng sử dụng chung các đặc quyền ưu đãi của hạng thẻ (chỉ áp dụng đối với cha mẹ ruột, cha mẹ vợ/chồng, vợ/chồng hợp pháp hoặc con ruột). Tên của thành viên đăng ký kèm sẽ được cố định trên hệ thống đồng bộ với thẻ và không được thay đổi thông tin định danh này trong suốt thời gian hiệu lực 12 tháng của thẻ.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>2. Thẻ Diamond "cả gia đình" bao gồm những ai?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Thẻ Kim Cương (Diamond) là hạng thẻ cao cấp nhất dành cho gia đình. Thẻ áp dụng quyền lợi chăm sóc sức khỏe Diamond đồng thời cho chủ thẻ chính và tất cả các thành viên trực hệ bao gồm: cha mẹ ruột, cha mẹ vợ/chồng, vợ hoặc chồng hợp pháp, cùng toàn bộ các con ruột của chủ thẻ. Tất cả thành viên đăng ký trong danh sách gia đình đều được hưởng 100% đặc quyền như khám chuyên gia không giới hạn, giảm 20% dịch vụ và xe đưa đón 2 chiều.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>3. Tôi đang dùng thẻ Silver, muốn nâng lên Gold thì làm thế nào?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Bạn hoàn toàn có thể thực hiện nâng hạng thẻ từ Silver lên Gold bất cứ lúc nào trong năm bằng cách đến quầy dịch vụ khách hàng tại bệnh viện để làm thủ tục đóng phí bổ sung. Bệnh viện hỗ trợ giảm 25% phí nâng hạng thẻ cho hội viên Silver và Gold. Hiệu lực 12 tháng mới của thẻ sẽ được tính lại từ ngày bạn nâng hạng thẻ thành công.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>4. Điểm tích lũy có được giữ lại khi nâng hạng không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Có. Toàn bộ số điểm tích lũy hiện có từ hạng thẻ cũ sẽ được bảo toàn nguyên vẹn và tự động chuyển sang hạng thẻ mới sau khi nâng hạng thành công. Kể từ thời điểm kích hoạt hạng thẻ mới, tỷ lệ phần trăm tích điểm mới (cao hơn) sẽ được áp dụng cho toàn bộ các hóa đơn thanh toán phát sinh sau đó.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 5: Điều trị & Ngoại lệ -->
+      <div id="faq-treat" class="faq-group-content">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>1. Những dịch vụ nào KHÔNG được áp dụng ưu đãi thẻ hội viên?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Các dịch vụ y tế và sản phẩm ngoại lệ KHÔNG được áp dụng giảm giá thẻ hội viên gồm có: gói sinh trọn gói, gói điều trị IVF (thụ tinh trong ống nghiệm), gói tiêm vắc xin trọn gói, phí nâng cấp phòng bệnh VIP, tiền thuốc tây tại nhà thuốc, hóa chất xét nghiệm đặc biệt, vật tư tiêu hao y tế chuyên sâu, chi phí mời bác sĩ ngoài phẫu thuật/điều trị (phần phí ABR), dịch vụ gửi mẫu xét nghiệm ra các trung tâm bên ngoài bệnh viện, và mua sắm tại nhà thuốc Hoa Lâm.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>2. Nếu tôi có bảo hiểm y tế + thẻ hội viên, áp dụng thứ tự như thế nào?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Hóa đơn sẽ ưu tiên thanh toán Bảo hiểm Y tế trước (bao gồm cả BHYT nhà nước và bảo hiểm sức khỏe tư nhân bảo lãnh trực tiếp). Sau khi đã khấu trừ phần tiền được bảo hiểm chi trả, số tiền chênh lệch còn lại mà bệnh nhân phải tự thanh toán (đồng chi trả) mới được áp dụng giảm giá trực tiếp từ 5% đến 20% theo quyền lợi hạng thẻ hội viên của bạn.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>3. Ưu đãi có áp dụng khi phẫu thuật hoặc nằm viện dài ngày không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Có. Ưu đãi giảm giá thẻ hội viên áp dụng cho toàn bộ chi phí điều trị thủ thuật phẫu thuật và chi phí lưu viện điều trị nội trú, ngoại trừ tiền thuốc điều trị, hóa chất xét nghiệm, vật tư y tế tiêu hao, và phí thuê bác sĩ phẫu thuật riêng. Mức giảm giá cũng chỉ áp dụng trên phần viện phí thực tế bệnh nhân tự chi trả sau bảo hiểm.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>4. Thẻ có được dùng ở tất cả các khoa của CIH không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Thẻ hội viên CIH được chấp nhận áp dụng tại tất cả các chuyên khoa lâm sàng và cận lâm sàng trực thuộc Bệnh viện Quốc tế City. Bạn không cần đăng ký trước chuyên khoa sử dụng — chỉ cần mang theo thẻ hội viên (hoặc mã thẻ điện tử) xuất trình cho thu ngân tại bất kỳ quầy thanh toán nào của bệnh viện để được hưởng ưu đãi.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 6: Khác -->
+      <div id="faq-other" class="faq-group-content">
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>1. Thẻ bị mất hoặc hỏng thì làm thế nào?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Khi bị mất hoặc làm hỏng thẻ hội viên vật lý, bạn hãy vui lòng liên hệ ngay với quầy dịch vụ khách hàng hoặc gọi hotline chăm sóc hội viên để được hỗ trợ cấp lại thẻ mới. Toàn bộ thông tin cá nhân, quyền lợi thẻ, điểm tích lũy hiện có và thời hạn hiệu lực còn lại của thẻ cũ sẽ được bệnh viện bảo toàn và đồng bộ hoàn toàn sang thẻ mới của bạn.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>2. Tôi không hài lòng — có được hoàn tiền phí thẻ không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Phí mua thẻ hội viên thường niên sẽ không được hoàn lại dưới bất kỳ hình thức nào sau khi thẻ đã được kích hoạt sử dụng trên hệ thống. Tuy nhiên, nếu bạn gặp bất kỳ sự cố nào liên quan đến quyền lợi hội viên không được đáp ứng đúng theo cam kết, xin hãy phản ánh trực tiếp với bộ phận chăm sóc khách hàng của bệnh viện để được xử lý và hỗ trợ thỏa đáng nhất.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>3. CIH có phải bệnh viện đạt chuẩn quốc tế không?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Có. Bệnh viện Quốc tế City (CIH) tự hào là bệnh viện đa khoa đầu tiên tại Việt Nam đạt chứng nhận chất lượng y tế quốc tế danh giá AACI (American Accreditation Commission International) của Hoa Kỳ. Đây là bộ tiêu chuẩn kiểm định nghiêm ngặt về mức độ an toàn của người bệnh và chất lượng quản lý điều trị lâm sàng theo chuẩn y tế Mỹ.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            <span>4. Liên hệ để được tư vấn thêm về thẻ hội viên ở đâu?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-content">
+            <div class="faq-inner-text">
+              Bạn có thể liên hệ tư vấn chi tiết về thẻ hội viên qua:<br>
+              - Quầy dịch vụ khách hàng/Lễ tân tại sảnh chính bệnh viện<br>
+              - Hotline chăm sóc hội viên (giờ hành chính)<br>
+              - Kênh Zalo OA / Fanpage Facebook chính thức của Bệnh viện Quốc tế City<br>
+              - Gửi tin nhắn đăng ký trực tuyến tại trang liên hệ của bệnh viện.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Đăng ký hội viên form -->
+    <div id="dang-ky" class="member-register-card">
+      <h2 class="member-register-title">ĐĂNG KÝ TƯ VẤN</h2>
+      <form onsubmit="event.preventDefault(); alert('✅ Đăng ký thành công!
+
+Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên cho bạn trong thời gian sớm nhất.');">
+        <div class="form-grid-2">
+          <div class="form-group-custom">
+            <label class="form-group-label" for="reg-name">Họ tên *</label>
+            <input type="text" id="reg-name" class="form-input-custom" required />
+          </div>
+          <div class="form-group-custom">
+            <label class="form-group-label" for="reg-phone">Số điện thoại *</label>
+            <input type="tel" id="reg-phone" class="form-input-custom" required />
+          </div>
+        </div>
+        
+        <div class="form-group-full">
+          <label class="form-group-label" for="reg-card">Hạng thẻ quan tâm *</label>
+          <select id="reg-card" class="form-input-custom" required style="background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4.5 8.5l5.5 5.5 5.5-5.5' fill='none' stroke='%234a5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1rem; -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 2.5rem;">
+            <option value="">-- Chọn hạng thẻ --</option>
+            <option value="silver">Thẻ Bạc</option>
+            <option value="gold">Thẻ Vàng</option>
+            <option value="platinum">Thẻ Bạch Kim</option>
+            <option value="diamond">Thẻ Kim Cương</option>
+          </select>
+        </div>
+        
+        <div class="form-group-full" style="margin-bottom: 1.5rem;">
+          <label class="form-group-label" for="reg-note">Ghi chú</label>
+          <textarea id="reg-note" class="form-input-custom" rows="4" style="resize: vertical; min-height: 100px;"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-submit-pill">Đăng Ký Ngay</button>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="lien-he">
+  <div class="footer__main">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="images/logo_cih_acci.png"
+               alt="" class="footer__logo-img"
+               onerror="this.style.display='none'" />
+        </div>
+        <div class="footer__company-info">
+          <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
+          <p class="footer__license">Số đăng ký kinh doanh: 0310898993 cấp bởi Sở Kế hoạch và Đầu tư TP. HCM, đăng ký lần đầu ngày 03/06/2011.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/benhvienquoctecity" class="footer__soc-btn" id="footer-fb" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V1h-4c-3 0-5 2-5 5v2z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@bvqtcity" class="footer__soc-btn" id="footer-yt" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1.1-1.2-2-2.3-2.3C19.2 3.5 12 3.5 12 3.5s-7.2 0-9.2.4c-1.1.3-2 1.2-2.3 2.3C.1 8.2.1 12 .1 12s0 3.8.4 5.8c.3 1.1 1.2 2 2.3 2.3 2 .4 9.2.4 9.2.4s7.2 0 9.2-.4c1.1-.3 2-1.2 2.3-2.3.4-2 .4-5.8.4-5.8s0-3.8-.4-5.8zM9.5 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@benhvienquoctecity" class="footer__soc-btn" id="footer-tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 3v11.7c0 2-1.7 3.8-3.8 3.8a3.8 3.8 0 0 1-3.8-3.8c0-2 1.7-3.8 3.8-3.8.3 0 .7.1 1 .2V7.1a7.8 7.8 0 0 0-4.8 1c-1.8 1.1-3 3-3 5.3a7.8 7.8 0 0 0 7.8 7.8 7.8 7.8 0 0 0 7.8-7.8V8.2c1.3.9 3 1.5 4.8 1.5V6a4.8 4.8 0 0 1-4-2.2V3h-3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">TRUY CẬP NHANH</h4>
+        <ul class="footer__links">
+          <li><a href="ve-chung-toi">Giới thiệu</a></li>
+          <li><a href="chuyen-khoa">Chuyên khoa</a></li>
+          <li><a href="bac-si">Bác sĩ</a></li>
+          <li><a href="goi-kham">Gói dịch vụ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
+        <ul class="footer__links">
+          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
+          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">LIÊN HỆ</h4>
+        <ul class="footer__contact">
+          <li>
+            <span class="footer__contact-icon" style="margin-top: 2px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <span>Email: &nbsp;<a href="mailto:truyenthong@cih.com.vn">truyenthong@cih.com.vn</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="float-actions" id="float-actions">
+  <a href="tel:19008146" class="float-btn float-btn--call" id="float-call" title="Tổng đài">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+  </a>
+  <a href="lien-he.html#dat-lich" class="float-btn float-btn--book" id="float-book" title="Đặt lịch">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // FAQ Tab switching logic
+  function switchFaqTab(groupId) {
+    // Deactivate all tabs
+    document.querySelectorAll('.faq-tab-btn').forEach(btn => {
+      btn.classList.remove('faq-tab-btn--active');
+    });
+    // Deactivate all group contents
+    document.querySelectorAll('.faq-group-content').forEach(group => {
+      group.classList.remove('faq-group-content--active');
+    });
+    
+    // Activate target tab button
+    event.currentTarget.classList.add('faq-tab-btn--active');
+    // Activate target group content
+    document.getElementById(groupId).classList.add('faq-group-content--active');
+  }
+
+  // FAQ Accordion expansion logic
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const content = btn.nextElementSibling;
+    const isActive = item.classList.contains('faq-item--active');
+    
+    // Close other active items in the current active group
+    const activeGroup = item.closest('.faq-group-content');
+    if (activeGroup) {
+      activeGroup.querySelectorAll('.faq-item').forEach(i => {
+        if (i !== item) {
+          i.classList.remove('faq-item--active');
+          i.querySelector('.faq-content').style.maxHeight = null;
+        }
+      });
+    } else {
+      const container = item.closest('.faq-container');
+      if (container) {
+        container.querySelectorAll('.faq-item').forEach(i => {
+          if (i !== item) {
+            i.classList.remove('faq-item--active');
+            i.querySelector('.faq-content').style.maxHeight = null;
+          }
+        });
+      }
+    }
+
+    if (isActive) {
+      item.classList.remove('faq-item--active');
+      content.style.maxHeight = null;
+    } else {
+      item.classList.add('faq-item--active');
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  }
+
+  // Member card expand/collapse logic
+  function toggleMemberCard(card, event) {
+    // If clicked on registration button, just follow the link, don't collapse/expand
+    if (event.target.closest('.member-card__btn')) {
+      return;
+    }
+    
+    // Toggle active state
+    const isExpanded = card.classList.contains('member-card--expanded');
+    
+    // Collapse all other cards
+    document.querySelectorAll('.member-card').forEach(c => {
+      if (c !== card) {
+        c.classList.remove('member-card--expanded');
+        const detailsBlock = c.querySelector('.member-card__details');
+        if (detailsBlock) detailsBlock.style.maxHeight = null;
+        const link = c.querySelector('.member-card__toggle-link');
+        if (link) link.innerHTML = 'Xem chi tiết ▾';
+      }
+    });
+
+    const details = card.querySelector('.member-card__details');
+    const link = card.querySelector('.member-card__toggle-link');
+    
+    if (isExpanded) {
+      card.classList.remove('member-card--expanded');
+      if (details) details.style.maxHeight = null;
+      if (link) link.innerHTML = 'Xem chi tiết ▾';
+    } else {
+      card.classList.add('member-card--expanded');
+      if (details) details.style.maxHeight = details.scrollHeight + "px";
+      if (link) link.innerHTML = 'Thu gọn ▴';
+    }
+  }
+
+  // Banner Slider Logic
+  let currentSlideIndex = 0;
+  let slideTimer = null;
+  
+  function initSlider() {
+    showSlides(currentSlideIndex);
+    startSlideTimer();
+  }
+  
+  function showSlides(n) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (slides.length === 0) return;
+    
+    if (n >= slides.length) { currentSlideIndex = 0; }
+    if (n < 0) { currentSlideIndex = slides.length - 1; }
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentSlideIndex].classList.add('active');
+    if (dots[currentSlideIndex]) {
+      dots[currentSlideIndex].classList.add('active');
+    }
+  }
+  
+  function changeSlide(n) {
+    stopSlideTimer();
+    currentSlideIndex += n;
+    showSlides(currentSlideIndex);
+    startSlideTimer();
+  }
+  
+  function setSlide(n) {
+    stopSlideTimer();
+    currentSlideIndex = n;
+    showSlides(currentSlideIndex);
+    startSlideTimer();
+  }
+  
+  function startSlideTimer() {
+    slideTimer = setInterval(() => {
+      currentSlideIndex++;
+      showSlides(currentSlideIndex);
+    }, 5000); // auto slide every 5 seconds
+  }
+  
+  function stopSlideTimer() {
+    if (slideTimer) {
+      clearInterval(slideTimer);
+    }
+  }
+  
+  // Call initSlider on load
+  document.addEventListener('DOMContentLoaded', () => {
+    initSlider();
+  });
+</script>
+<script src="booking_modal.js"></script>
+</body>
+</html>

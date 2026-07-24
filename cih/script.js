@@ -205,3 +205,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log('%cCIH Demo v3.0 loaded ✅', 'color:#007da5;font-weight:bold;font-size:14px');
 });
+
+
+/* ── BANNER SLIDER FUNCTIONS ── */
+let currentMemberSlide = 0;
+window.changeSlide = function(direction) {
+  const slides = document.querySelectorAll('.member-banner-slider .slide');
+  const dots = document.querySelectorAll('.member-banner-slider .dot');
+  if (!slides.length) return;
+  slides[currentMemberSlide]?.classList.remove('active');
+  dots[currentMemberSlide]?.classList.remove('active');
+  currentMemberSlide = (currentMemberSlide + direction + slides.length) % slides.length;
+  slides[currentMemberSlide]?.classList.add('active');
+  dots[currentMemberSlide]?.classList.add('active');
+};
+
+window.setSlide = function(index) {
+  const slides = document.querySelectorAll('.member-banner-slider .slide');
+  const dots = document.querySelectorAll('.member-banner-slider .dot');
+  if (!slides.length) return;
+  slides[currentMemberSlide]?.classList.remove('active');
+  dots[currentMemberSlide]?.classList.remove('active');
+  currentMemberSlide = (index + slides.length) % slides.length;
+  slides[currentMemberSlide]?.classList.add('active');
+  dots[currentMemberSlide]?.classList.add('active');
+};
+
+setInterval(() => {
+  if (document.querySelector('.member-banner-slider')) {
+    window.changeSlide(1);
+  }
+}, 5000);

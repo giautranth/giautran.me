@@ -1,25 +1,25 @@
 /* CSS variables required for membership page */
 :root {
-  --c-primary: #007da5;
-  --c-primary-d: #004e6e;
-  --c-primary-l: #eef7fa;
+  --c-primary: #0082a6;
+  --c-primary-d: #004b68;
+  --c-primary-l: #eaf5f9;
   --c-teal: #0096a6;
   --c-teal-d: #006e7b;
   --c-teal-l: #e0f7fa;
-  --c-green: #76bc21;
-  --c-green-d: #588e14;
+  --c-green: #78be20;
+  --c-green-d: #5a9414;
   --c-navy: #003b5c;
-  --c-gold: #c59b27;
-  --c-gold-l: #fff8e7;
+  --c-gold: #c8961d;
+  --c-gold-l: #fdf9ea;
   --c-orange: #f59e0b;
   --c-pink: #ec4899;
   --c-purple: #8b5cf6;
   --c-white: #fff;
   --c-bg: #f8fafc;
   --c-bg2: #f0f7fb;
-  --c-text: #0f172a;
-  --c-text2: #334155;
-  --c-text3: #64748b;
+  --c-text: #081f2c;
+  --c-text2: #2c404e;
+  --c-text3: #5d7280;
   --c-border: #e2e8f0;
   --r-sm: 8px;
   --r-md: 16px;

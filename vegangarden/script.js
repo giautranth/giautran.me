@@ -157,12 +157,23 @@ document.addEventListener('DOMContentLoaded', () => {
         langBox.classList.remove('open');
         langCurrent.setAttribute('aria-expanded', 'false');
 
+        // Update Article "Read more" links & filter tab labels based on active language
+        const moreTxts = document.querySelectorAll('.more-txt');
+        const newsTabsList = document.querySelectorAll('.news-tab');
+        const allArticlesBtn = document.getElementById('allArticlesBtn');
+
         if (code === 'EN') {
-          alert('Switched to English. (Demo translation mode active)');
+          moreTxts.forEach(el => el.textContent = 'Read article');
+          newsTabsList.forEach(tab => { if (tab.dataset.en) tab.textContent = tab.dataset.en; });
+          if (allArticlesBtn) allArticlesBtn.textContent = 'VIEW ALL ARTICLES';
         } else if (code === 'VI') {
-          alert('Đã chuyển sang tiếng Việt. (Chế độ xem Demo)');
+          moreTxts.forEach(el => el.textContent = 'Xem thêm');
+          newsTabsList.forEach(tab => { if (tab.dataset.vi) tab.textContent = tab.dataset.vi; });
+          if (allArticlesBtn) allArticlesBtn.textContent = 'XEM TẤT CẢ BÀI VIẾT';
         } else {
-          alert('Auf Deutsch umgeschaltet.');
+          moreTxts.forEach(el => el.textContent = 'Artikel lesen');
+          newsTabsList.forEach(tab => { if (tab.dataset.de) tab.textContent = tab.dataset.de; });
+          if (allArticlesBtn) allArticlesBtn.textContent = 'ALLE ARTIKEL ANSEHEN';
         }
       });
     });
@@ -190,4 +201,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Slider Controls Helper (Matching CIH Side Arrows)
+  function initSlider(gridId, prevBtnId, nextBtnId) {
+    const grid = document.getElementById(gridId);
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+
+    if (!grid || !prevBtn || !nextBtn) return;
+
+    prevBtn.addEventListener('click', () => {
+      grid.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      grid.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  }
+
+  initSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext');
+  initSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext');
 });

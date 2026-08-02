@@ -117,57 +117,65 @@
         <h2 class="section-title">UNSERE HIGHLIGHTS</h2>
       </div>
 
-      <div class="food-grid">
-        <!-- Dish 1 -->
-        <div class="food-card">
-          <div class="food-img-wrap">
-            <img src="images/summer_bowl.png" alt="Summer Bowl (Bún Trộn)">
+      <div class="slider-container-wrap">
+        <button class="side-arrow side-arrow--prev" id="highlightsPrev" aria-label="Vorheriges Gericht">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="food-grid-slider" id="highlightsGrid">
+          <!-- Dish 1 -->
+          <div class="food-card">
+            <div class="food-img-wrap">
+              <img src="images/summer_bowl.png" alt="Summer Bowl (Bún Trộn)">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">SUMMER BOWL</h3>
+              <p class="food-desc">Frische Bowl mit Bio-Tofu, Mango, Avocado, frischen Kräutern und hausgemachtem Erdnuss-Dressing.</p>
+              <div class="food-price">13,90 €</div>
+            </div>
           </div>
-          <div class="food-info">
-            <h3 class="food-name">SUMMER BOWL</h3>
-            <p class="food-desc">Frische Bowl mit Bio-Tofu, Mango, Avocado, frischen Kräutern und hausgemachtem Erdnuss-Dressing.</p>
-            <div class="food-price">13,90 €</div>
-          </div>
-        </div>
 
-        <!-- Dish 2 -->
-        <div class="food-card">
-          <div class="food-img-wrap">
-            <img src="images/pho_bo_chay.png" alt="Phở Chay">
+          <!-- Dish 2 -->
+          <div class="food-card">
+            <div class="food-img-wrap">
+              <img src="images/pho_bo_chay.png" alt="Phở Chay">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">PHỞ CHAY</h3>
+              <p class="food-desc">Aromatische vietnamesische Reisnudelsuppe mit über Stunden geköchelter Kräuterbrühe, Tofu und Pilzen.</p>
+              <div class="food-price">12,90 €</div>
+            </div>
           </div>
-          <div class="food-info">
-            <h3 class="food-name">PHỞ CHAY</h3>
-            <p class="food-desc">Aromatische vietnamesische Reisnudelsuppe mit über Stunden geköchelter Kräuterbrühe, Tofu und Pilzen.</p>
-            <div class="food-price">12,90 €</div>
-          </div>
-        </div>
 
-        <!-- Dish 3 -->
-        <div class="food-card">
-          <div class="food-img-wrap">
-            <img src="images/spring_rolls.png" alt="Gỏi Cuốn (Sommerrollen)">
+          <!-- Dish 3 -->
+          <div class="food-card">
+            <div class="food-img-wrap">
+              <img src="images/spring_rolls.png" alt="Gỏi Cuốn (Sommerrollen)">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">GỞI CUỐN</h3>
+              <p class="food-desc">Frische Reispapierrollen gefüllt mit Tofu, Mango, Reisnudeln, Kräutern und Erdnuss-Dip.</p>
+              <div class="food-price">6,50 €</div>
+            </div>
           </div>
-          <div class="food-info">
-            <h3 class="food-name">GỞI CUỐN</h3>
-            <p class="food-desc">Frische Reispapierrollen gefüllt mit Tofu, Mango, Reisnudeln, Kräutern und Erdnuss-Dip.</p>
-            <div class="food-price">6,50 €</div>
-          </div>
-        </div>
 
-        <!-- Dish 4 -->
-        <div class="food-card">
-          <div class="food-img-wrap">
-            <img src="images/red_curry.png" alt="Red Curry Garden">
-          </div>
-          <div class="food-info">
-            <h3 class="food-name">RED CURRY GARDEN</h3>
-            <p class="food-desc">Cremiges rotes Kokos-Curry mit Süßkartoffeln, Kürbis, Bio-Tofu und duftendem Jasminreis.</p>
-            <div class="food-price">14,50 €</div>
+          <!-- Dish 4 -->
+          <div class="food-card">
+            <div class="food-img-wrap">
+              <img src="images/red_curry.png" alt="Red Curry Garden">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">RED CURRY GARDEN</h3>
+              <p class="food-desc">Cremiges rotes Kokos-Curry mit Süßkartoffeln, Kürbis, Bio-Tofu und duftendem Jasminreis.</p>
+              <div class="food-price">14,50 €</div>
+            </div>
           </div>
         </div>
+        <button class="side-arrow side-arrow--next" id="highlightsNext" aria-label="Nächstes Gericht">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
 
-      <button class="btn btn-primary js-open-menu">GESAMTE SPEISEKARTE ANSEHEN</button>
+      <button class="btn btn-primary js-open-menu" style="margin-top: 32px;">GESAMTE SPEISEKARTE ANSEHEN</button>
     </div>
   </section>
 
@@ -291,75 +299,83 @@
         <button class="news-tab" data-filter="gesundheit" data-vi="Sức khỏe" data-de="Gesundheit" data-en="Health">Gesundheit</button>
       </div>
 
-      <!-- Articles Grid (CIH Style) -->
-      <div class="news-card-grid" id="newsGrid" style="margin-bottom: 36px; text-align: left;">
-        <!-- Article 1 -->
-        <article class="news-card" data-category="speisekarte">
-          <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="news-card__img-wrap">
-            <img src="images/article_speisekarte.jpg" alt="Die Speisekarte 2026 im Überblick" class="news-card__img">
-            <span class="news-card__cat">SPEISEKARTE</span>
-          </a>
-          <div class="news-card__body">
-            <h3 class="news-card__title">
-              <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank">Die Speisekarte 2026 im Überblick – Gerichte, Preise & Vielfalt</a>
-            </h3>
-            <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="news-card__more">
-              <span class="more-txt">Artikel lesen</span>
-              <i class="fa-solid fa-arrow-right"></i>
+      <!-- Articles Grid (CIH Style Slider) -->
+      <div class="slider-container-wrap" style="margin-bottom: 36px;">
+        <button class="side-arrow side-arrow--prev" id="ratgeberPrev" aria-label="Vorheriger Artikel">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="news-card-grid" id="newsGrid" style="text-align: left;">
+          <!-- Article 1 -->
+          <article class="news-card" data-category="speisekarte">
+            <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="news-card__img-wrap">
+              <img src="images/article_speisekarte.jpg" alt="Die Speisekarte 2026 im Überblick" class="news-card__img">
+              <span class="news-card__cat">SPEISEKARTE</span>
             </a>
-          </div>
-        </article>
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank">Die Speisekarte 2026 im Überblick – Gerichte, Preise & Vielfalt</a>
+              </h3>
+              <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="news-card__more">
+                <span class="more-txt">Artikel lesen</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
 
-        <!-- Article 2 -->
-        <article class="news-card" data-category="kultur">
-          <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="news-card__img-wrap">
-            <img src="images/article_bestes_restaurant.jpg" alt="Bestes veganes Restaurant 2026" class="news-card__img">
-            <span class="news-card__cat">KULTUR & TIPPS</span>
-          </a>
-          <div class="news-card__body">
-            <h3 class="news-card__title">
-              <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank">Bestes veganes Restaurant 2026: Warum Vegan Garden Berlin begeistert</a>
-            </h3>
-            <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="news-card__more">
-              <span class="more-txt">Artikel lesen</span>
-              <i class="fa-solid fa-arrow-right"></i>
+          <!-- Article 2 -->
+          <article class="news-card" data-category="kultur">
+            <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="news-card__img-wrap">
+              <img src="images/article_bestes_restaurant.jpg" alt="Bestes veganes Restaurant 2026" class="news-card__img">
+              <span class="news-card__cat">KULTUR & TIPPS</span>
             </a>
-          </div>
-        </article>
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank">Bestes veganes Restaurant 2026: Warum Vegan Garden Berlin begeistert</a>
+              </h3>
+              <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="news-card__more">
+                <span class="more-txt">Artikel lesen</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
 
-        <!-- Article 3 -->
-        <article class="news-card" data-category="rezepte">
-          <a href="articles/vegane-pho-berlin.html" target="_blank" class="news-card__img-wrap">
-            <img src="images/article_pho.jpg" alt="Vegane Pho Suppe in Berlin" class="news-card__img">
-            <span class="news-card__cat">REZEPTE</span>
-          </a>
-          <div class="news-card__body">
-            <h3 class="news-card__title">
-              <a href="articles/vegane-pho-berlin.html" target="_blank">Vegane Pho Suppe in Berlin – Das Geheimnis der duftenden Kräuterbrühe</a>
-            </h3>
-            <a href="articles/vegane-pho-berlin.html" target="_blank" class="news-card__more">
-              <span class="more-txt">Artikel lesen</span>
-              <i class="fa-solid fa-arrow-right"></i>
+          <!-- Article 3 -->
+          <article class="news-card" data-category="rezepte">
+            <a href="articles/vegane-pho-berlin.html" target="_blank" class="news-card__img-wrap">
+              <img src="images/article_pho.jpg" alt="Vegane Pho Suppe in Berlin" class="news-card__img">
+              <span class="news-card__cat">REZEPTE</span>
             </a>
-          </div>
-        </article>
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                <a href="articles/vegane-pho-berlin.html" target="_blank">Vegane Pho Suppe in Berlin – Das Geheimnis der duftenden Kräuterbrühe</a>
+              </h3>
+              <a href="articles/vegane-pho-berlin.html" target="_blank" class="news-card__more">
+                <span class="more-txt">Artikel lesen</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
 
-        <!-- Article 4 -->
-        <article class="news-card" data-category="gesundheit">
-          <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="news-card__img-wrap">
-            <img src="images/article_sommerrollen.jpg" alt="Vegane Sommerrollen (Gỏi Cuốn)" class="news-card__img">
-            <span class="news-card__cat">GESUNDHEIT</span>
-          </a>
-          <div class="news-card__body">
-            <h3 class="news-card__title">
-              <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank">Vegane Sommerrollen (Gỏi Cuốn) – Frische Vitalität & Erdnuss-Dip</a>
-            </h3>
-            <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="news-card__more">
-              <span class="more-txt">Artikel lesen</span>
-              <i class="fa-solid fa-arrow-right"></i>
+          <!-- Article 4 -->
+          <article class="news-card" data-category="gesundheit">
+            <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="news-card__img-wrap">
+              <img src="images/article_sommerrollen.jpg" alt="Vegane Sommerrollen (Gỏi Cuốn)" class="news-card__img">
+              <span class="news-card__cat">GESUNDHEIT</span>
             </a>
-          </div>
-        </article>
+            <div class="news-card__body">
+              <h3 class="news-card__title">
+                <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank">Vegane Sommerrollen (Gỏi Cuốn) – Frische Vitalität & Erdnuss-Dip</a>
+              </h3>
+              <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="news-card__more">
+                <span class="more-txt">Artikel lesen</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+        <button class="side-arrow side-arrow--next" id="ratgeberNext" aria-label="Nächster Artikel">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
 
       <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="btn btn-primary" id="allArticlesBtn">ALLE ARTIKEL ANSEHEN</a>

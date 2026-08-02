@@ -61,11 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const gardenVideo = document.getElementById('gardenVideo');
+
   function openModal(modal) {
     if (!modal) return;
     closeAllModals();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    if (modal === videoModal && gardenVideo) {
+      gardenVideo.play().catch(() => {});
+    }
   }
 
   function closeAllModals() {
@@ -73,6 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.remove('active');
     });
     document.body.style.overflow = '';
+    if (gardenVideo) {
+      gardenVideo.pause();
+    }
   }
 
   // Menu Modal Tab Switcher

@@ -24,6 +24,7 @@
           <li><a href="#speisekarte" class="nav-link">SPEISEKARTE</a></li>
           <li><a href="#garten" class="nav-link">GARTEN</a></li>
           <li><a href="#events" class="nav-link">EVENTS</a></li>
+          <li><a href="#ratgeber" class="nav-link">RATGEBER</a></li>
           <li><a href="#kontakt" class="nav-link">KONTAKT</a></li>
         </ul>
       </nav>
@@ -116,7 +117,7 @@
         <!-- Dish 2 -->
         <div class="food-card">
           <div class="food-img-wrap">
-            <img src="images/pho_bo_chay.jpg" alt="Pho Bo Chay">
+            <img src="images/pho_bo_chay.png" alt="Pho Bo Chay">
           </div>
           <div class="food-info">
             <h3 class="food-name">PHO BO CHAY</h3>
@@ -128,7 +129,7 @@
         <!-- Dish 3 -->
         <div class="food-card">
           <div class="food-img-wrap">
-            <img src="images/spring_rolls.jpg" alt="Frühlingsrollen">
+            <img src="images/spring_rolls.png" alt="Frühlingsrollen">
           </div>
           <div class="food-info">
             <h3 class="food-name">FRÜHLINGSROLLEN</h3>
@@ -265,6 +266,42 @@
     </div>
   </section>
 
+  <!-- RATGEBER / ARTICLES SECTION -->
+  <section class="section-highlights" id="ratgeber" style="background-color: var(--bg-cream);">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">RATGEBER & BLOG</h2>
+        <p style="color: var(--text-muted); margin-top: 8px;">Entdecken Sie 52+ Artikel über vegane vietnamesische Küche, Rezepte & Kultur in Berlin.</p>
+      </div>
+
+      <div class="food-grid" style="margin-bottom: 32px;">
+        <div class="food-card" style="text-align: left; padding: 24px;">
+          <h3 class="serif-font" style="font-size: 1.15rem; color: var(--primary-green-dark); margin-bottom: 12px;">Die Speisekarte 2026 im Überblick</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Detaillierter Einblick in die Gerichte, Preise und pflanzliche Vielfalt im Vegan Garden Berlin.</p>
+          <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem;">ARTIKEL LESEN →</a>
+        </div>
+
+        <div class="food-card" style="text-align: left; padding: 24px;">
+          <h3 class="serif-font" style="font-size: 1.15rem; color: var(--primary-green-dark); margin-bottom: 12px;">Bestes veganes Restaurant 2026</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Warum Vegan Garden Berlin die Top-Adresse für pflanzliche vietnamesische Spezialitäten ist.</p>
+          <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem;">ARTIKEL LESEN →</a>
+        </div>
+
+        <div class="food-card" style="text-align: left; padding: 24px;">
+          <h3 class="serif-font" style="font-size: 1.15rem; color: var(--primary-green-dark); margin-bottom: 12px;">Vegane Pho Suppe in Berlin</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Die Kunst der stundenlang geköchelten Gemüse-Brühe mit duftenden Gewürzen und frischem Tofu.</p>
+          <a href="articles/vegane-pho-berlin.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem;">ARTIKEL LESEN →</a>
+        </div>
+
+        <div class="food-card" style="text-align: left; padding: 24px;">
+          <h3 class="serif-font" style="font-size: 1.15rem; color: var(--primary-green-dark); margin-bottom: 12px;">Vegane Sommerrollen (Gỏi Cuốn)</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Frisches Reispapier, knackige Kräuter und hausgemachter Erdnussdip – der perfekte Sommer-Genuss.</p>
+          <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem;">ARTIKEL LESEN →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer" id="kontakt">
     <div class="container">
@@ -392,7 +429,12 @@
     <div class="modal-content" style="max-width: 800px;">
       <button class="modal-close">&times;</button>
       <h2 class="serif-font" style="color: var(--primary-green-dark); margin-bottom: 8px;">Speisekarte</h2>
-      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">100 % vegane vietnamesische Spezialitäten.</p>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">100 % vegane vietnamesische Spezialitäten.</p>
+
+      <a href="menu/Menu.pdf" target="_blank" class="btn btn-primary" style="margin-bottom: 24px; padding: 10px 20px; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-file-pdf" style="font-size: 1.1rem;"></i>
+        <span>SPEISEKARTE PDF HERUNTERLADEN (23 SEITEN)</span>
+      </a>
 
       <div class="menu-tabs">
         <button class="menu-tab active" data-category="highlights">Highlights</button>
@@ -508,12 +550,10 @@
     <div class="modal-content" style="max-width: 900px; padding: 12px; background: #000000; border-radius: 16px;">
       <button class="modal-close" style="color: #ffffff; top: -40px; right: 0;">&times;</button>
       <div style="aspect-ratio: 16/9; width: 100%; border-radius: 12px; overflow: hidden; position: relative;">
-        <img src="images/garden_preview.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Garden Tour">
-        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); color: #fff; text-align: center;">
-          <i class="fa-solid fa-circle-play" style="font-size: 4rem; color: var(--accent-gold); margin-bottom: 12px;"></i>
-          <h3 class="serif-font" style="font-size: 1.5rem;">Willkommen im Vegan Garden</h3>
-          <p style="font-size: 0.95rem; opacity: 0.9;">Garten-Atmosphäre in Friedrichshain, Berlin</p>
-        </div>
+        <video id="gardenVideo" controls style="width: 100%; height: 100%; object-fit: cover;">
+          <source src="video/garden_tour.mp4" type="video/mp4">
+          Ihr Browser unterstützt kein HTML5 Video.
+        </video>
       </div>
     </div>
   </div>

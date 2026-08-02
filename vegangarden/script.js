@@ -120,18 +120,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Language Switcher Mock
-  const langSelect = document.getElementById('langSelect');
-  if (langSelect) {
-    langSelect.addEventListener('change', (e) => {
-      const lang = e.target.value;
-      if (lang === 'EN') {
-        alert('Switched to English. (Demo translation mode active)');
-      } else if (lang === 'VI') {
-        alert('Đã chuyển sang tiếng Việt. (Chế độ xem Demo)');
-      } else {
-        alert('Auf Deutsch umgeschaltet.');
+  // Custom Flag Language Box (Matching Hoalam style)
+  const langBox = document.getElementById('langBox');
+  const langCurrent = document.getElementById('langCurrent');
+  const langOpts = document.querySelectorAll('.lang-opt');
+
+  if (langBox && langCurrent) {
+    langCurrent.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langBox.classList.toggle('open');
+      const isExpanded = langBox.classList.contains('open');
+      langCurrent.setAttribute('aria-expanded', isExpanded);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!langBox.contains(e.target)) {
+        langBox.classList.remove('open');
+        langCurrent.setAttribute('aria-expanded', 'false');
       }
+    });
+
+    langOpts.forEach(opt => {
+      opt.addEventListener('click', () => {
+        langOpts.forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
+
+        const flag = opt.dataset.flag;
+        const code = opt.dataset.code;
+
+        const flagImg = langCurrent.querySelector('.lang-flag img');
+        if (flagImg) {
+          flagImg.src = `https://flagcdn.com/w20/${flag}.png`;
+          flagImg.alt = flag;
+        }
+
+        langBox.classList.remove('open');
+        langCurrent.setAttribute('aria-expanded', 'false');
+
+        if (code === 'EN') {
+          alert('Switched to English. (Demo translation mode active)');
+        } else if (code === 'VI') {
+          alert('Đã chuyển sang tiếng Việt. (Chế độ xem Demo)');
+        } else {
+          alert('Auf Deutsch umgeschaltet.');
+        }
+      });
     });
   }
 });

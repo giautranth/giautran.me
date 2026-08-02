@@ -219,15 +219,88 @@ img {
   background-color: rgba(59, 78, 60, 0.04);
 }
 
-.lang-select {
-  background: transparent;
+/* Flag Language Box (Matching Hoalam style) */
+.lang-box {
+  position: relative;
+  border-left: 1px solid var(--border-subtle);
+  padding-left: 14px;
+  margin-left: 6px;
+}
+.lang-current {
+  background: var(--bg-card);
   border: 1px solid var(--border-subtle);
+  border-radius: 8px;
   padding: 8px 12px;
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--text-dark);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.lang-current:hover {
+  background: #ffffff;
+  border-color: var(--primary-green);
+}
+.lang-flag {
+  display: flex;
+  align-items: center;
+}
+.lang-chevron {
+  transition: transform 0.3s ease;
+  stroke: var(--text-dark);
+}
+.lang-box.open .lang-chevron {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #1c271e;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  list-style: none;
+  z-index: 1050;
+}
+.lang-box.open .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lang-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.lang-opt:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.lang-opt.active {
+  background: rgba(255, 255, 255, 0.22);
+}
+.lang-opt .flag {
+  display: flex;
+  align-items: center;
+}
+.lang-opt .lng {
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 /* HERO SECTION */

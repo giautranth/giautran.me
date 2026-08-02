@@ -314,11 +314,11 @@ img {
 
 .video-card {
   position: relative;
-  border-radius: var(--radius-md);
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   cursor: pointer;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
 }
 
 .video-card img {
@@ -335,7 +335,7 @@ img {
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 60%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,19 +344,37 @@ img {
 }
 
 .play-btn {
-  width: 68px;
-  height: 68px;
+  width: 74px;
+  height: 74px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(4px);
+  background: rgba(240, 242, 240, 0.88);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-green);
-  font-size: 1.4rem;
-  margin-bottom: 16px;
+  color: #263829;
+  font-size: 1.5rem;
+  padding-left: 5px;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.video-card:hover .play-btn {
+  transform: scale(1.12);
+  background: #ffffff;
+  color: var(--primary-green-dark);
+}
+
+.video-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .video-card:hover .play-btn {

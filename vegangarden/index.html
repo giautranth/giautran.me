@@ -275,62 +275,98 @@
     </div>
   </section>
 
-  <!-- RATGEBER / ARTICLES SECTION -->
-  <section class="section-highlights" id="ratgeber" style="background-color: var(--bg-cream);">
+  <!-- RATGEBER / ARTICLES SECTION (CIH STYLE) -->
+  <section class="section-highlights" id="ratgeber" style="background-color: var(--bg-cream); padding: 80px 0;">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">RATGEBER & BLOG</h2>
-        <p style="color: var(--text-muted); margin-top: 8px;">Entdecken Sie 52+ Artikel über vegane vietnamesische Küche, Rezepte & Kultur in Berlin.</p>
+      <div class="news-header">
+        <div>
+          <h2 class="section-title" style="margin-bottom: 4px;">RATGEBER & BLOG</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Entdecken Sie 52+ Artikel über vegane vietnamesische Küche, Rezepte & Kultur in Berlin.</p>
+        </div>
+        <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="news-header-btn">
+          <span>ALLE ARTIKEL ANSEHEN</span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
       </div>
 
-      <div class="food-grid" style="margin-bottom: 32px;">
+      <!-- Category Filter Tabs (CIH Style) -->
+      <div class="news-filter-tabs">
+        <button class="news-tab active" data-filter="all">Tất cả</button>
+        <button class="news-tab" data-filter="speisekarte">Speisekarte & Gerichte</button>
+        <button class="news-tab" data-filter="kultur">Kultur & Tipps</button>
+        <button class="news-tab" data-filter="rezepte">Rezepte</button>
+        <button class="news-tab" data-filter="gesundheit">Gesundheit</button>
+      </div>
+
+      <!-- Articles Grid (CIH Style) -->
+      <div class="news-card-grid" id="newsGrid">
         <!-- Article 1 -->
-        <div class="food-card" style="text-align: left;">
-          <div class="food-img-wrap">
-            <img src="images/article_speisekarte.jpg" alt="Die Speisekarte 2026 im Überblick">
+        <article class="news-card" data-category="speisekarte">
+          <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="news-card__img-wrap">
+            <img src="images/article_speisekarte.jpg" alt="Die Speisekarte 2026 im Überblick" class="news-card__img">
+            <span class="news-card__cat">SPEISEKARTE</span>
+          </a>
+          <div class="news-card__body">
+            <h3 class="news-card__title">
+              <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank">Die Speisekarte 2026 im Überblick – Gerichte, Preise & Vielfalt</a>
+            </h3>
+            <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="news-card__more">
+              <span>Xem thêm</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <div class="food-info" style="text-align: left; padding: 20px;">
-            <h3 class="serif-font" style="font-size: 1.1rem; color: var(--primary-green-dark); margin-bottom: 8px;">Die Speisekarte 2026 im Überblick</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Detaillierter Einblick in die Gerichte, Preise und pflanzliche Vielfalt im Vegan Garden Berlin.</p>
-            <a href="articles/vegan-garden-berlin-speisekarte.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center;">ARTIKEL LESEN →</a>
-          </div>
-        </div>
+        </article>
 
         <!-- Article 2 -->
-        <div class="food-card" style="text-align: left;">
-          <div class="food-img-wrap">
-            <img src="images/article_bestes_restaurant.jpg" alt="Bestes veganes Restaurant 2026">
+        <article class="news-card" data-category="kultur">
+          <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="news-card__img-wrap">
+            <img src="images/article_bestes_restaurant.jpg" alt="Bestes veganes Restaurant 2026" class="news-card__img">
+            <span class="news-card__cat">KULTUR & TIPPS</span>
+          </a>
+          <div class="news-card__body">
+            <h3 class="news-card__title">
+              <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank">Bestes veganes Restaurant 2026: Warum Vegan Garden Berlin begeistert</a>
+            </h3>
+            <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="news-card__more">
+              <span>Xem thêm</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <div class="food-info" style="text-align: left; padding: 20px;">
-            <h3 class="serif-font" style="font-size: 1.1rem; color: var(--primary-green-dark); margin-bottom: 8px;">Bestes veganes Restaurant 2026</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Warum Vegan Garden Berlin die Top-Adresse für pflanzliche vietnamesische Spezialitäten ist.</p>
-            <a href="articles/bestes-veganes-restaurant-berlin-2026.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center;">ARTIKEL LESEN →</a>
-          </div>
-        </div>
+        </article>
 
         <!-- Article 3 -->
-        <div class="food-card" style="text-align: left;">
-          <div class="food-img-wrap">
-            <img src="images/article_pho.jpg" alt="Vegane Pho Suppe in Berlin">
+        <article class="news-card" data-category="rezepte">
+          <a href="articles/vegane-pho-berlin.html" target="_blank" class="news-card__img-wrap">
+            <img src="images/article_pho.jpg" alt="Vegane Pho Suppe in Berlin" class="news-card__img">
+            <span class="news-card__cat">REZEPTE</span>
+          </a>
+          <div class="news-card__body">
+            <h3 class="news-card__title">
+              <a href="articles/vegane-pho-berlin.html" target="_blank">Vegane Pho Suppe in Berlin – Das Geheimnis der duftenden Kräuterbrühe</a>
+            </h3>
+            <a href="articles/vegane-pho-berlin.html" target="_blank" class="news-card__more">
+              <span>Xem thêm</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <div class="food-info" style="text-align: left; padding: 20px;">
-            <h3 class="serif-font" style="font-size: 1.1rem; color: var(--primary-green-dark); margin-bottom: 8px;">Vegane Pho Suppe in Berlin</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Die Kunst der stundenlang geköchelten Gemüse-Brühe mit duftenden Gewürzen und Tofu.</p>
-            <a href="articles/vegane-pho-berlin.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center;">ARTIKEL LESEN →</a>
-          </div>
-        </div>
+        </article>
 
         <!-- Article 4 -->
-        <div class="food-card" style="text-align: left;">
-          <div class="food-img-wrap">
-            <img src="images/article_sommerrollen.jpg" alt="Vegane Sommerrollen (Gỏi Cuốn)">
+        <article class="news-card" data-category="gesundheit">
+          <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="news-card__img-wrap">
+            <img src="images/article_sommerrollen.jpg" alt="Vegane Sommerrollen (Gỏi Cuốn)" class="news-card__img">
+            <span class="news-card__cat">GESUNDHEIT</span>
+          </a>
+          <div class="news-card__body">
+            <h3 class="news-card__title">
+              <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank">Vegane Sommerrollen (Gỏi Cuốn) – Frische Vitalität & Erdnuss-Dip</a>
+            </h3>
+            <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="news-card__more">
+              <span>Xem thêm</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <div class="food-info" style="text-align: left; padding: 20px;">
-            <h3 class="serif-font" style="font-size: 1.1rem; color: var(--primary-green-dark); margin-bottom: 8px;">Vegane Sommerrollen (Gỏi Cuốn)</h3>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Frisches Reispapier, knackige Kräuter und hausgemachter Erdnussdip – der perfekte Sommer-Genuss.</p>
-            <a href="articles/goi-cuon-vegan-rezept-berlin.html" target="_blank" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem; width: 100%; text-align: center;">ARTIKEL LESEN →</a>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>

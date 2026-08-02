@@ -167,4 +167,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // News / Ratgeber Category Filter Tabs (CIH Style)
+  const newsTabs = document.querySelectorAll('.news-tab');
+  const newsCards = document.querySelectorAll('.news-card');
+
+  if (newsTabs.length > 0 && newsCards.length > 0) {
+    newsTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        newsTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+
+        newsCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
 });

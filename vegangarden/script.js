@@ -202,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Slider Controls Helper (Matching CIH Side Arrows)
   function initSlider(gridId, prevBtnId, nextBtnId) {
     const grid = document.getElementById(gridId);
     const prevBtn = document.getElementById(prevBtnId);
@@ -219,7 +218,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Auto-slide helper with hover pause
+  function initAutoSlider(gridId, prevBtnId, nextBtnId, intervalMs = 3500) {
+    const grid = document.getElementById(gridId);
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
+
+    if (!grid) return;
+
+    let timer = null;
+
+    function stepNext() {
+      const maxScroll = grid.scrollWidth - grid.clientWidth;
+      if (grid.scrollLeft >= maxScroll - 10) {
+        grid.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        grid.scrollBy({ left: 320, behavior: 'smooth' });
+      }
+    }
+
+    function startTimer() {
+      if (!timer) {
+        timer = setInterval(stepNext, intervalMs);
+      }
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    startTimer();
+
+    grid.addEventListener('mouseenter', stopTimer);
+    grid.addEventListener('mouseleave', startTimer);
+    grid.addEventListener('touchstart', stopTimer, { passive: true });
+    grid.addEventListener('touchend', startTimer, { passive: true });
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        stopTimer();
+        grid.scrollBy({ left: -320, behavior: 'smooth' });
+        startTimer();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        stopTimer();
+        stepNext();
+        startTimer();
+      });
+    }
+  }
+
   initSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext');
   initSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext');
-  initSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext');
+  initAutoSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext', 3500);
 });

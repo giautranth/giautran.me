@@ -1163,23 +1163,34 @@ img {
   .navbar {
     padding: 0 !important;
     height: 58px !important;
+    min-height: 58px !important;
     display: flex !important;
     align-items: center !important;
     position: sticky !important;
     top: 0 !important;
     z-index: 1000 !important;
     background: #ffffff !important;
+    width: 100% !important;
   }
   .navbar-inner {
+    position: relative !important;
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    position: relative !important;
     padding: 0 14px !important;
     width: 100% !important;
-    height: 100% !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    max-width: 100% !important;
+  }
+  .navbar-inner > nav {
+    display: none !important;
   }
   .mobile-toggle {
+    position: absolute !important;
+    left: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -1189,15 +1200,13 @@ img {
     border: 1px solid #e0e6e0 !important;
     border-radius: 8px !important;
     cursor: pointer !important;
-    order: 1 !important;
     width: 38px !important;
     height: 38px !important;
     padding: 0 !important;
-    z-index: 10 !important;
-    flex-shrink: 0 !important;
+    margin: 0 !important;
+    z-index: 20 !important;
   }
   .brand-logo {
-    order: 2 !important;
     position: absolute !important;
     left: 50% !important;
     top: 50% !important;
@@ -1207,13 +1216,13 @@ img {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    z-index: 5 !important;
+    z-index: 10 !important;
   }
   .brand-logo img {
-    height: 32px !important;
-    max-height: 32px !important;
+    height: 30px !important;
+    max-height: 30px !important;
     width: auto !important;
-    max-width: 135px !important;
+    max-width: 125px !important;
     margin: 0 !important;
     object-fit: contain !important;
     display: block !important;
@@ -1222,12 +1231,15 @@ img {
     display: none !important;
   }
   .nav-actions {
-    order: 3 !important;
+    position: absolute !important;
+    right: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     display: flex !important;
     align-items: center !important;
     gap: 4px !important;
-    z-index: 10 !important;
-    flex-shrink: 0 !important;
+    z-index: 20 !important;
+    margin: 0 !important;
   }
   .lang-box {
     padding-left: 0 !important;

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt & Tisch Reservieren | Vegan Garden Berlin</title>
+  <meta name="description" content="Kontaktieren Sie Vegan Garden Berlin in Friedrichshain. Tisch online reservieren, Öffnungszeiten, Anfahrt und Telefonnummer.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .contact-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .contact-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .contact-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .contact-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .contact-hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .contact-hero-desc {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-section {
+      padding: 60px 0 90px;
+      background: #fcfdfc;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Left Column Info Cards */
+    .contact-info-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-banner-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .contact-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .contact-info-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .contact-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: #eaf2eb;
+      color: var(--primary-green-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-card-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--primary-green-dark);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .contact-card-text {
+      font-size: 0.9rem;
+      color: #333333;
+      line-height: 1.45;
+    }
+    .contact-card-text a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .contact-card-text a:hover {
+      color: var(--primary-green);
+    }
+
+    .contact-map-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      height: 220px;
+    }
+    .contact-map-card iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Right Column Form Card */
+    .contact-form-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+    .form-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 1.6rem;
+      color: var(--primary-green-dark);
+      margin-bottom: 8px;
+    }
+    .form-subheading {
+      font-size: 0.9rem;
+      color: #666666;
+      margin-bottom: 24px;
+    }
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-field-full {
+      margin-bottom: 16px;
+    }
+    .form-label-custom {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2c352d;
+      margin-bottom: 6px;
+    }
+    .form-control-custom {
+      width: 100%;
+      background: #fcfdfc;
+      border: 1px solid #dce5dd;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #1c241d;
+      transition: all 0.2s ease;
+    }
+    .form-control-custom:focus {
+      outline: none;
+      border-color: var(--primary-green);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(74, 99, 75, 0.12);
+    }
+    .form-control-custom::placeholder {
+      color: #999999;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="index.html" class="brand-logo">
+        <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 38px; width: auto; max-width: 175px; object-fit: contain;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="kontakt.html" class="nav-link active">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary desktop-reserve-btn js-open-reserve">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </button>
+
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="contact-breadcrumbs">
+        <a href="index.html">Startseite</a> &nbsp;›&nbsp; <span>Kontakt & Anfahrt</span>
+      </div>
+      <h1 class="contact-hero-title">KONTAKT & ANFAHRT</h1>
+      <p class="contact-hero-desc">Wir freuen uns auf Ihren Besuch im Herzen von Berlin-Friedrichshain!</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left Info Column -->
+        <div class="contact-info-col">
+          <img src="photos/A7402927.jpg" alt="Vegan Garden Berlin Restaurant" class="contact-banner-img">
+
+          <div class="contact-cards-grid">
+            <!-- Adresse -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="contact-card-title">ADRESSE</div>
+                <div class="contact-card-text">Frankfurter Allee 21<br>10247 Berlin-Friedrichshain</div>
+              </div>
+            </div>
+
+            <!-- Öffnungszeiten -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-regular fa-clock"></i></div>
+              <div>
+                <div class="contact-card-title">ÖFFNUNGSZEITEN</div>
+                <div class="contact-card-text">Di – So: 12:00 – 22:00 Uhr<br><small style="color: #666;">Montag Ruhetag</small></div>
+              </div>
+            </div>
+
+            <!-- Telefon -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div class="contact-card-title">TELEFON</div>
+                <div class="contact-card-text">
+                  <a href="tel:03021237260">030 2123 7260</a><br>
+                  <a href="tel:01624649999">0162 464 9999</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- E-Mail -->
+            <div class="contact-info-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <div class="contact-card-title">E-MAIL</div>
+                <div class="contact-card-text"><a href="mailto:info@vegan-garden.berlin">info@vegan-garden.berlin</a></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Google Map Embed -->
+          <div class="contact-map-card">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Right Form Column -->
+        <div class="contact-form-card">
+          <h2 class="form-heading">TISCH RESERVIEREN</h2>
+          <p class="form-subheading">Sichern Sie sich Ihren Lieblingsplatz im Restaurant oder im sommerlichen Garten.</p>
+
+          <form id="contactPageForm" onsubmit="event.preventDefault(); alert('Vielen Dank! Ihre Reservierungsanfrage wurde erfolgreich gesendet.'); this.reset();">
+            <div class="form-row-2">
+              <div>
+                <label class="form-label-custom">Name *</label>
+                <input type="text" required class="form-control-custom" placeholder="Ihr Name">
+              </div>
+              <div>
+                <label class="form-label-custom">Telefonnummer *</label>
+                <input type="tel" required class="form-control-custom" placeholder="0162 1234567">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div>
+                <label class="form-label-custom">E-Mail-Adresse *</label>
+                <input type="email" required class="form-control-custom" placeholder="name@beispiel.de">
+              </div>
+              <div>
+                <label class="form-label-custom">Anzahl der Personen *</label>
+                <select required class="form-control-custom">
+                  <option value="2">2 Personen</option>
+                  <option value="1">1 Person</option>
+                  <option value="3">3 Personen</option>
+                  <option value="4">4 Personen</option>
+                  <option value="5">5 Personen</option>
+                  <option value="6">6+ Personen (Gruppe)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div>
+                <label class="form-label-custom">Datum *</label>
+                <input type="date" required class="form-control-custom">
+              </div>
+              <div>
+                <label class="form-label-custom">Uhrzeit *</label>
+                <input type="time" required class="form-control-custom" value="18:00">
+              </div>
+            </div>
+
+            <div class="form-field-full">
+              <label class="form-label-custom">Besondere Wünsche / Nachricht</label>
+              <textarea class="form-control-custom" rows="4" placeholder="z. B. Wunschplatz im Garten, Allergien..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px; border-radius: 50px; font-size: 0.95rem;">
+              <i class="fa-regular fa-calendar-check"></i> JETZT VERBINDLICH RESERVIEREN
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px; display: block; line-height: 1;">
+            <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 52px; width: auto; max-width: 250px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING RESERVATION FAB BUTTON -->
+  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch jetzt reservieren" title="Tisch jetzt reservieren">
+    <div class="floating-reserve-pulse"></div>
+    <i class="fa-regular fa-calendar-check"></i>
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'de',
+        includedLanguages: 'de,en,vi',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

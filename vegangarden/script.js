@@ -221,4 +221,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext');
   initSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext');
+  initSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext');
 });

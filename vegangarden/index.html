@@ -220,42 +220,120 @@
     </div>
   </section>
 
-  <!-- GOOGLE REVIEWS BAR -->
-  <section class="section-reviews">
+  <!-- GOOGLE REVIEWS SECTION (INTERACTIVE SLIDER) -->
+  <section class="section-reviews" id="bewertungen" style="background: #f7f5ee; padding: 60px 0;">
     <div class="container">
-      <div class="reviews-bar">
-        <div class="reviews-google">
-          <div class="google-logo">
-            <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+      <div class="reviews-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 20px;">
+        <div class="reviews-google-badge" style="display: flex; align-items: center; gap: 16px;">
+          <div class="google-logo" style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: -0.5px;">
+            <span style="color: #4285F4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC05;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span>
           </div>
           <div>
-            <div class="rating-stars">
+            <div class="rating-stars" style="color: #f4b400; font-size: 1.1rem; display: flex; gap: 2px;">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-solid fa-star"></i>
             </div>
-            <div class="rating-score">4,8 von 5 | 520+ Bewertungen</div>
+            <div class="rating-score" style="font-weight: 700; color: #1c241d; font-size: 0.95rem; margin-top: 2px;">4,8 von 5 | 520+ Bewertungen</div>
           </div>
         </div>
 
-        <div class="reviews-quotes">
-          <div class="quote-item">
-            "Wunderschöner Ort, tolles Ambiente und das Essen ist einfach fantastisch!"
-            <span class="quote-author">– Anna L.</span>
+        <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" class="btn btn-outline" style="border-radius: 50px;">ALLE BEWERTUNGEN ANSEHEN</a>
+      </div>
+
+      <!-- Slider Container with Side Arrows -->
+      <div class="slider-container-wrap">
+        <button class="side-arrow side-arrow--prev" id="reviewsPrev" aria-label="Vorherige Bewertung">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="reviews-card-slider" id="reviewsSlider">
+          <!-- Card 1 (René Fleischmann) -->
+          <div class="review-box">
+            <div class="review-box-header">
+              <div class="review-avatar" style="background: #e65100;">R</div>
+              <div>
+                <div class="review-author-name">René Fleischmann</div>
+                <div class="review-meta">Vor 4 Tagen <span class="badge-new">NEW</span></div>
+              </div>
+              <i class="fa-brands fa-google review-g-icon"></i>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Authentisch, lecker, vegan, alles frisch zubereitet, selbst die Soßen. Die hausgemachten Drinks sind der Hammer."</p>
           </div>
-          <div class="quote-item">
-            "Beste vegane vietnamesische Küche in Berlin! Frisch, kreativ und mit viel Liebe gemacht."
-            <span class="quote-author">– Markus S.</span>
+
+          <!-- Card 2 (Jana Flohr) -->
+          <div class="review-box">
+            <div class="review-box-header">
+              <div class="review-avatar" style="background: #7b1fa2;">J</div>
+              <div>
+                <div class="review-author-name">Jana Flohr</div>
+                <div class="review-meta">Local Guide • 40 reviews • Vor 3 Wochen <span class="badge-new">NEW</span></div>
+              </div>
+              <i class="fa-brands fa-google review-g-icon"></i>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"We had delicious, incredibly fresh, and beautifully presented food... highly recommended! And then there was the wonderful Karl Marx Avenue... We'll be back!"</p>
           </div>
-          <div class="quote-item">
-            "Perfekt für einen besonderen Abend. Der Garten ist ein Traum!"
-            <span class="quote-author">– Julia & Thomas</span>
+
+          <!-- Card 3 (frodo aus_dem_auenland) -->
+          <div class="review-box">
+            <div class="review-box-header">
+              <div class="review-avatar" style="background: #2e7d32;">F</div>
+              <div>
+                <div class="review-author-name">frodo aus_dem_auenland</div>
+                <div class="review-meta">Local Guide • 24 reviews • Vor 1 Monat</div>
+              </div>
+              <i class="fa-brands fa-google review-g-icon"></i>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Sehr schönes Restaurant mit leckeren ansprechenden Gerichten in Bio-Qualität. Geschmackvolle Einrichtung, das Essen und der Tee werden mit Liebe zubereitet. Hebt sich wirklich ab!"</p>
+          </div>
+
+          <!-- Card 4 (Papadopoulos Pipotimus) -->
+          <div class="review-box">
+            <div class="review-box-header">
+              <div class="review-avatar" style="background: #1565c0;">P</div>
+              <div>
+                <div class="review-author-name">Papadopoulos Pipotimus</div>
+                <div class="review-meta">8 reviews • 1 photo • Vor 1 Monat</div>
+              </div>
+              <i class="fa-brands fa-google review-g-icon"></i>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Love it. Der Raum ist groß und trotz der Nähe zur Frankfurter Allee sehr ruhig, durch die Abendsonne beleuchten. Das Hauptgericht war eine große Suppe mit frischem Tofu. Alles in allem, geht hin!"</p>
+          </div>
+
+          <!-- Card 5 (Anna L.) -->
+          <div class="review-box">
+            <div class="review-box-header">
+              <div class="review-avatar" style="background: #00838f;">A</div>
+              <div>
+                <div class="review-author-name">Anna L.</div>
+                <div class="review-meta">Local Guide • Vor 2 Monaten</div>
+              </div>
+              <i class="fa-brands fa-google review-g-icon"></i>
+            </div>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Wunderschöner Ort, tolles Ambiente und das Essen ist einfach fantastisch! Die veganen Sommerrollen sind ein absolutes Highlight."</p>
           </div>
         </div>
 
-        <button class="btn btn-outline js-open-reviews">ALLE BEWERTUNGEN ANSEHEN</button>
+        <button class="side-arrow side-arrow--next" id="reviewsNext" aria-label="Nächste Bewertung">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </section>

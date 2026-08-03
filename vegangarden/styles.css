@@ -1685,6 +1685,8 @@ img {
   line-height: 1.6;
   color: #3c4043;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 @media (max-width: 1024px) {

@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratgeber & Blog | Vegan Garden Berlin</title>
+  <meta name="description" content="Entdecken Sie Rezepte, Ernährungstipps und Hintergrundwissen rund um 100% vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .hub-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .hub-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .hub-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .hub-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .hub-hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .hub-hero-desc {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .hub-main {
+      padding: 50px 0 90px;
+      background: #fcfdfc;
+    }
+
+    /* CIH Style Category Filter Tabs */
+    .hub-cat-tabs {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 16px;
+    }
+    .hub-cat-btn {
+      background: #f4f6f4;
+      border: 1px solid #dce5dd;
+      color: #4a574b;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 8px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .hub-cat-btn:hover {
+      background: #eaf2eb;
+      color: var(--primary-green-dark);
+      border-color: var(--primary-green);
+    }
+    .hub-cat-btn.active {
+      background: var(--primary-green-dark);
+      color: #ffffff;
+      border-color: var(--primary-green-dark);
+      box-shadow: 0 4px 12px rgba(46, 61, 47, 0.2);
+    }
+
+    /* Featured Main Post */
+    .hub-featured-post {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      margin-bottom: 50px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hub-featured-post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+    }
+    .hub-featured-img-link {
+      position: relative;
+      display: block;
+      height: 100%;
+      min-height: 320px;
+    }
+    .hub-featured-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hub-featured-body {
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hub-featured-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--primary-green);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hub-featured-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      color: var(--primary-green-dark);
+    }
+    .hub-featured-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .hub-featured-title a:hover {
+      color: var(--primary-green);
+    }
+    .hub-featured-desc {
+      font-size: 0.98rem;
+      color: #555555;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* Articles Grid (CIH 3-column layout) */
+    .hub-news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .hub-news-card {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+    }
+    .hub-news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    .hub-news-img-link {
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+    .hub-news-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .hub-news-card:hover .hub-news-img {
+      transform: scale(1.06);
+    }
+    .hub-news-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(46, 61, 47, 0.9);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+    .hub-news-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .hub-news-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.4;
+      margin-bottom: 12px;
+      min-height: 2.8em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .hub-news-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .hub-news-title a:hover {
+      color: var(--primary-green);
+    }
+    .hub-news-excerpt {
+      font-size: 0.88rem;
+      color: #666666;
+      line-height: 1.55;
+      margin-bottom: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .hub-news-more {
+      color: var(--primary-green);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      margin-top: auto;
+      align-self: flex-end;
+      transition: all 0.2s ease;
+    }
+    .hub-news-more:hover {
+      color: #d4af37;
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 992px) {
+      .hub-featured-post {
+        grid-template-columns: 1fr;
+      }
+      .hub-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hub-news-grid {
+        grid-template-columns: 1fr;
+      }
+      .hub-featured-body {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="index.html" class="brand-logo">
+        <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 38px; width: auto; max-width: 175px; object-fit: contain;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="ratgeber.html" class="nav-link active">RATGEBER</a></li>
+          <li><a href="kontakt.html" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary desktop-reserve-btn js-open-reserve">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </button>
+
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hub-hero">
+    <div class="container">
+      <div class="hub-breadcrumbs">
+        <a href="index.html">Startseite</a> &nbsp;›&nbsp; <span>Ratgeber & Blog</span>
+      </div>
+      <h1 class="hub-hero-title">RATGEBER & BLOG</h1>
+      <p class="hub-hero-desc">Erfahren Sie mehr über gesundes veganes Essen, vietnamesische Heilkräuter und exklusive Rezepte.</p>
+    </div>
+  </section>
+
+  <!-- MAIN NEWS HUB SECTION -->
+  <section class="hub-main">
+    <div class="container">
+
+      <!-- Category Tabs Bar (CIH Style) -->
+      <div class="hub-cat-tabs">
+        <button class="hub-cat-btn active" data-filter="all">Alle Artikel (52)</button>
+        <button class="hub-cat-btn" data-filter="speisekarte">Speisekarte & Gerichte</button>
+        <button class="hub-cat-btn" data-filter="rezepte">Rezepte & Kulinarik</button>
+        <button class="hub-cat-btn" data-filter="gesundheit">Gesundheit & Sustainability</button>
+        <button class="hub-cat-btn" data-filter="kultur">Kultur & Tipps</button>
+      </div>
+
+      <!-- Featured Main Post -->
+      <div class="hub-featured-post">
+        <a href="articles/bestes-veganes-restaurant-berlin-2026.html" class="hub-featured-img-link">
+          <img src="images/article_bestes_restaurant.jpg" alt="Bestes veganes Restaurant 2026" class="hub-featured-img">
+        </a>
+        <div class="hub-featured-body">
+          <span class="hub-featured-badge">KULTUR & TIPPS</span>
+          <h2 class="hub-featured-title">
+            <a href="articles/bestes-veganes-restaurant-berlin-2026.html">Bestes veganes Restaurant 2026: Warum Vegan Garden Berlin begeistert</a>
+          </h2>
+          <p class="hub-featured-desc">
+            Berlin gilt weltweit als Hauptstadt des pflanzlichen Genusses. Wir beleuchten, warum die Symbiose aus vietnamesischen Heilkräutern und bewusster Nachhaltigkeit im Vegan Garden Berlin das Esserlebnis neu definiert.
+          </p>
+          <a href="articles/bestes-veganes-restaurant-berlin-2026.html" class="btn btn-primary" style="align-self: flex-start; border-radius: 50px;">
+            <span>ARTIKEL JETZT LESEN</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3-Column Articles Grid -->
+      <div class="hub-news-grid" id="hubNewsGrid">
+        
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/bestes-veganes-restaurant-berlin-2026.html" class="hub-news-img-link">
+            <img src="images/article_bestes_restaurant.jpg" alt="Bestes veganes Restaurant Berlin 2026" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/bestes-veganes-restaurant-berlin-2026.html">Bestes veganes Restaurant Berlin 2026</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/bestes-veganes-restaurant-berlin-2026.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/banh-mi-vegan-berlin.html" class="hub-news-img-link">
+            <img src="images/garden_preview.jpg" alt="Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/banh-mi-vegan-berlin.html">Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/banh-mi-vegan-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/bun-bo-hue-vegan-berlin.html" class="hub-news-img-link">
+            <img src="images/article_bestes_restaurant.jpg" alt="Bun Bo Hue vegan Berlin: Feurige Suppe" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/bun-bo-hue-vegan-berlin.html">Bun Bo Hue vegan Berlin: Feurige Suppe</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/bun-bo-hue-vegan-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/che-vietnamesisches-dessert-vegan-berlin.html" class="hub-news-img-link">
+            <img src="images/summer_bowl.png" alt="Chè – Vietnamesische Desserts vegan in Berlin" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/che-vietnamesisches-dessert-vegan-berlin.html">Chè – Vietnamesische Desserts vegan in Berlin</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/che-vietnamesisches-dessert-vegan-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/com-chay-vietnamesischer-veganer-reis-berlin.html" class="hub-news-img-link">
+            <img src="images/article_bestes_restaurant.jpg" alt="Cơm Chay – Vietnamesischer Veganer Reis in Berlin" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/com-chay-vietnamesischer-veganer-reis-berlin.html">Cơm Chay – Vietnamesischer Veganer Reis in Berlin</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/com-chay-vietnamesischer-veganer-reis-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/goi-cuon-vegan-rezept-berlin.html" class="hub-news-img-link">
+            <img src="images/article_sommerrollen.jpg" alt="Goi Cuon Vegan Berlin – Frische Rollen" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/goi-cuon-vegan-rezept-berlin.html">Goi Cuon Vegan Berlin – Frische Rollen</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/goi-cuon-vegan-rezept-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/nachhaltiges-restaurant-berlin.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Nachhaltiges Restaurant Berlin – Warum Vegan Garden vorne liegt" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/nachhaltiges-restaurant-berlin.html">Nachhaltiges Restaurant Berlin – Warum Vegan Garden vorne liegt</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/nachhaltiges-restaurant-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="gesundheit">
+          <a href="articles/plastikfrei-essen-berlin-restaurants.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Die Dringlichkeit der Plastikvermeidung in der Gastronomie" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">GESUNDHEIT & SUSTAINABILITY</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/plastikfrei-essen-berlin-restaurants.html">Die Dringlichkeit der Plastikvermeidung in der Gastronomie</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/plastikfrei-essen-berlin-restaurants.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-essen-gehen-berlin-guenstig.html" class="hub-news-img-link">
+            <img src="images/garden_preview.jpg" alt="Vegan essen gehen Berlin günstig – Top-Tipps" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-essen-gehen-berlin-guenstig.html">Vegan essen gehen Berlin günstig – Top-Tipps</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-essen-gehen-berlin-guenstig.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-garden-berlin-bewertungen-erfahrungen.html" class="hub-news-img-link">
+            <img src="images/article_bestes_restaurant.jpg" alt="Vegan Garden Berlin Bewertungen: Gast-Feedback" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-bewertungen-erfahrungen.html">Vegan Garden Berlin Bewertungen: Gast-Feedback</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-bewertungen-erfahrungen.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-garden-berlin-gruppenreservierung.html" class="hub-news-img-link">
+            <img src="images/article_pho.jpg" alt="Vegan Garden Berlin Gruppenreservierung: Feiern" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-gruppenreservierung.html">Vegan Garden Berlin Gruppenreservierung: Feiern</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-gruppenreservierung.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-garden-berlin-hochzeit-feier.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Vegan Garden Berlin Hochzeit &amp; Feiern" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-hochzeit-feier.html">Vegan Garden Berlin Hochzeit &amp; Feiern</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-hochzeit-feier.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="speisekarte">
+          <a href="articles/vegan-garden-berlin-lieferung.html" class="hub-news-img-link">
+            <img src="images/article_sommerrollen.jpg" alt="Vegan Garden Berlin Lieferung – Veganes Essen nach Hause" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">SPEISEKARTE & GERICHTE</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-lieferung.html">Vegan Garden Berlin Lieferung – Veganes Essen nach Hause</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-lieferung.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-garden-berlin-parken-anfahrt.html" class="hub-news-img-link">
+            <img src="images/summer_bowl.png" alt="Vegan Garden Berlin Parken &#038; Anfahrt – Alle Optionen" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-parken-anfahrt.html">Vegan Garden Berlin Parken &#038; Anfahrt – Alle Optionen</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-parken-anfahrt.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="speisekarte">
+          <a href="articles/vegan-garden-berlin-preise.html" class="hub-news-img-link">
+            <img src="images/article_speisekarte.jpg" alt="Vegan Garden Berlin Preise: Lohnt es sich?" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">SPEISEKARTE & GERICHTE</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-preise.html">Vegan Garden Berlin Preise: Lohnt es sich?</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-preise.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="speisekarte">
+          <a href="articles/vegan-garden-berlin-speisekarte.html" class="hub-news-img-link">
+            <img src="images/article_speisekarte.jpg" alt="Die kulinarische Vielfalt Vietnams: Die Vegan Garden Berlin Speisekarte 2026" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">SPEISEKARTE & GERICHTE</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-speisekarte.html">Die kulinarische Vielfalt Vietnams: Die Vegan Garden Berlin Speisekarte 2026</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-speisekarte.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="speisekarte">
+          <a href="articles/vegan-garden-berlin-takeaway-abholung.html" class="hub-news-img-link">
+            <img src="photos/store.jpg" alt="vegan garden berlin takeaway: So funktioniert&#8217;s" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">SPEISEKARTE & GERICHTE</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-garden-berlin-takeaway-abholung.html">vegan garden berlin takeaway: So funktioniert&#8217;s</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-garden-berlin-takeaway-abholung.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-guide-berlin-2026.html" class="hub-news-img-link">
+            <img src="images/article_bestes_restaurant.jpg" alt="Vegan Guide Berlin 2026: Alle Highlights" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-guide-berlin-2026.html">Vegan Guide Berlin 2026: Alle Highlights</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-guide-berlin-2026.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-leben-berlin-tipps-einsteiger.html" class="hub-news-img-link">
+            <img src="images/summer_bowl.png" alt="Vegan leben Berlin Tipps: 10 Tipps für Einsteiger" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-leben-berlin-tipps-einsteiger.html">Vegan leben Berlin Tipps: 10 Tipps für Einsteiger</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-leben-berlin-tipps-einsteiger.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegan-reisen-berlin-tipps.html" class="hub-news-img-link">
+            <img src="images/garden_preview.jpg" alt="Vegan Reisen Berlin – Tipps für den veganen Städtetrip" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegan-reisen-berlin-tipps.html">Vegan Reisen Berlin – Tipps für den veganen Städtetrip</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegan-reisen-berlin-tipps.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-bowls-berlin-restaurant.html" class="hub-news-img-link">
+            <img src="images/summer_bowl.png" alt="Vegane Bowls Berlin – Power Food vom Feinsten" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-bowls-berlin-restaurant.html">Vegane Bowls Berlin – Power Food vom Feinsten</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-bowls-berlin-restaurant.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-currys-berlin-restaurant.html" class="hub-news-img-link">
+            <img src="images/red_curry.png" alt="Warum vegane Currys Berlin im Sturm erobern" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-currys-berlin-restaurant.html">Warum vegane Currys Berlin im Sturm erobern</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-currys-berlin-restaurant.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="gesundheit">
+          <a href="articles/vegane-ernaehrung-gesund-ausgewogen.html" class="hub-news-img-link">
+            <img src="images/spring_rolls.png" alt="Vegane Ernährung gesund &amp; ausgewogen im Alltag" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">GESUNDHEIT & SUSTAINABILITY</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-ernaehrung-gesund-ausgewogen.html">Vegane Ernährung gesund &amp; ausgewogen im Alltag</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-ernaehrung-gesund-ausgewogen.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="gesundheit">
+          <a href="articles/vegane-ernaehrung-umwelt-nachhaltigkeit.html" class="hub-news-img-link">
+            <img src="images/summer_bowl.png" alt="Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">GESUNDHEIT & SUSTAINABILITY</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-ernaehrung-umwelt-nachhaltigkeit.html">Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-ernaehrung-umwelt-nachhaltigkeit.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-nudelgerichte-vietnam-erklaert.html" class="hub-news-img-link">
+            <img src="images/article_pho.jpg" alt="Vegane Nudelgerichte aus Vietnam – Pho, Bún &#038; mehr" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-nudelgerichte-vietnam-erklaert.html">Vegane Nudelgerichte aus Vietnam – Pho, Bún &#038; mehr</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-nudelgerichte-vietnam-erklaert.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-nudelsuppe-berlin.html" class="hub-news-img-link">
+            <img src="images/article_pho.jpg" alt="Vegane Nudelsuppe Berlin – Heiß, würzig &amp; wohltuend" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-nudelsuppe-berlin.html">Vegane Nudelsuppe Berlin – Heiß, würzig &amp; wohltuend</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-nudelsuppe-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/vegane-pho-berlin.html" class="hub-news-img-link">
+            <img src="images/article_pho.jpg" alt="Die Seele Vietnams in einer Schüssel: Auf der Suche nach der besten veganen Pho in Berlin" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-pho-berlin.html">Die Seele Vietnams in einer Schüssel: Auf der Suche nach der besten veganen Pho in Berlin</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-pho-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/vegane-pho-rezept-zuhause.html" class="hub-news-img-link">
+            <img src="images/article_pho.jpg" alt="Die Magie der vietnamesischen Nudelsuppe: Was macht eine traditionelle Pho aus?" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-pho-rezept-zuhause.html">Die Magie der vietnamesischen Nudelsuppe: Was macht eine traditionelle Pho aus?</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-pho-rezept-zuhause.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-reisnudeln-zubereiten-tipps.html" class="hub-news-img-link">
+            <img src="images/article_sommerrollen.jpg" alt="Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-reisnudeln-zubereiten-tipps.html">Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-reisnudeln-zubereiten-tipps.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-charlottenburg.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Warum Charlottenburg zum neuen veganen Hotspot im Berliner Westen wird" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-charlottenburg.html">Warum Charlottenburg zum neuen veganen Hotspot im Berliner Westen wird</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-charlottenburg.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-kreuzberg.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="vegane restaurants berlin kreuzberg &#8211; Top Spots" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-kreuzberg.html">vegane restaurants berlin kreuzberg &#8211; Top Spots</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-kreuzberg.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-mitte.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Die kulinarische Revolution in Berlins Mitte" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-mitte.html">Die kulinarische Revolution in Berlins Mitte</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-mitte.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-neukoelln.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Vegane Restaurants Berlin Neukölln – Entdecke die Szene" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-neukoelln.html">Vegane Restaurants Berlin Neukölln – Entdecke die Szene</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-neukoelln.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-pankow.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="vegane restaurants berlin pankow &#8211; Tipps &#038; Adressen" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-pankow.html">vegane restaurants berlin pankow &#8211; Tipps &#038; Adressen</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-pankow.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-prenzlauer-berg.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="vegane restaurants berlin prenzlauer berg" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-prenzlauer-berg.html">vegane restaurants berlin prenzlauer berg</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-prenzlauer-berg.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-schoeneberg.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Die grüne Oase im Westen: Einführung in die vegane Szene in Berlin-Schöneberg" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-schoeneberg.html">Die grüne Oase im Westen: Einführung in die vegane Szene in Berlin-Schöneberg</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-schoeneberg.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-restaurants-berlin-vergleich-2026.html" class="hub-news-img-link">
+            <img src="images/article_bestes_restaurant.jpg" alt="1. Die Kriterien für unseren kulinarischen Vergleich" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-restaurants-berlin-vergleich-2026.html">1. Die Kriterien für unseren kulinarischen Vergleich</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-restaurants-berlin-vergleich-2026.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-sommerrollen-berlin.html" class="hub-news-img-link">
+            <img src="images/article_sommerrollen.jpg" alt="1. Einführung in die Welt der Sommerrollen (Gỏi Cuốn)" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-sommerrollen-berlin.html">1. Einführung in die Welt der Sommerrollen (Gỏi Cuốn)</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-sommerrollen-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/vegane-tofu-gerichte-berlin.html" class="hub-news-img-link">
+            <img src="images/spring_rolls.png" alt="Die Bedeutung von Tofu in der veganen vietnamesischen Küche" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-tofu-gerichte-berlin.html">Die Bedeutung von Tofu in der veganen vietnamesischen Küche</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-tofu-gerichte-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/vegane-vietnamesische-kueche-tradition.html" class="hub-news-img-link">
+            <img src="images/article_pho.jpg" alt="Was macht die vegane vietnamesische Küche so besonders?" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-vietnamesische-kueche-tradition.html">Was macht die vegane vietnamesische Küche so besonders?</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-vietnamesische-kueche-tradition.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/vegane-vietnamesische-restaurants-berlin.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Der Trend der pflanzlichen Küche: Warum vegane vietnamesische Restaurants Berlin erobern" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vegane-vietnamesische-restaurants-berlin.html">Der Trend der pflanzlichen Küche: Warum vegane vietnamesische Restaurants Berlin erobern</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vegane-vietnamesische-restaurants-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganer-brunch-berlin-friedrichshain.html" class="hub-news-img-link">
+            <img src="images/article_speisekarte.jpg" alt="Veganer Brunch Berlin Friedrichshain – Top Brunch-Spots 2026" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganer-brunch-berlin-friedrichshain.html">Veganer Brunch Berlin Friedrichshain – Top Brunch-Spots 2026</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganer-brunch-berlin-friedrichshain.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganes-abendessen-berlin-guenstig.html" class="hub-news-img-link">
+            <img src="images/article_speisekarte.jpg" alt="Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganes-abendessen-berlin-guenstig.html">Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganes-abendessen-berlin-guenstig.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganes-dinner-berlin-romantisch.html" class="hub-news-img-link">
+            <img src="images/article_speisekarte.jpg" alt="Romantik und Kulinarik: Warum eine pflanzliche Küche Herzen verbindet" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganes-dinner-berlin-romantisch.html">Romantik und Kulinarik: Warum eine pflanzliche Küche Herzen verbindet</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganes-dinner-berlin-romantisch.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganes-firmenessen-berlin-teamEvent.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Veganes Firmenessen Berlin – Teamevents &amp; Business Lunch" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganes-firmenessen-berlin-teamEvent.html">Veganes Firmenessen Berlin – Teamevents &amp; Business Lunch</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganes-firmenessen-berlin-teamEvent.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganes-fruehstueck-berlin-friedrichshain.html" class="hub-news-img-link">
+            <img src="images/article_sommerrollen.jpg" alt="Veganes Frühstück Berlin Friedrichshain – Top Cafés &#038; Restaurants" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganes-fruehstueck-berlin-friedrichshain.html">Veganes Frühstück Berlin Friedrichshain – Top Cafés &#038; Restaurants</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganes-fruehstueck-berlin-friedrichshain.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganes-geburtstagsessen-berlin-restaurant.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Veganes Geburtstagsessen Berlin – Feiern im" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganes-geburtstagsessen-berlin-restaurant.html">Veganes Geburtstagsessen Berlin – Feiern im</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganes-geburtstagsessen-berlin-restaurant.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganes-mittagessen-berlin-friedrichshain.html" class="hub-news-img-link">
+            <img src="photos/store.jpg" alt="1. Warum Friedrichshain der perfekte Ort für ein veganes Mittagessen ist" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganes-mittagessen-berlin-friedrichshain.html">1. Warum Friedrichshain der perfekte Ort für ein veganes Mittagessen ist</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganes-mittagessen-berlin-friedrichshain.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="kultur">
+          <a href="articles/veganes-silvester-berlin-restaurant.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Veganes Silvester Restaurant Berlin – Jetzt Tisch reservieren" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">KULTUR & TIPPS</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganes-silvester-berlin-restaurant.html">Veganes Silvester Restaurant Berlin – Jetzt Tisch reservieren</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganes-silvester-berlin-restaurant.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/veganfreundliche-restaurants-berlin-friedrichshain.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Warum Berlin-Friedrichshain ein Paradies für vegane Gastronomie ist" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/veganfreundliche-restaurants-berlin-friedrichshain.html">Warum Berlin-Friedrichshain ein Paradies für vegane Gastronomie ist</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/veganfreundliche-restaurants-berlin-friedrichshain.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="rezepte">
+          <a href="articles/vietnamesische-vegane-gerichte-berlin.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Die Philosophie der vietnamesischen Heilküche: Yin und Yang auf dem Teller" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">REZEPTE & KULINARIK</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/vietnamesische-vegane-gerichte-berlin.html">Die Philosophie der vietnamesischen Heilküche: Yin und Yang auf dem Teller</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/vietnamesische-vegane-gerichte-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="hub-news-card" data-category="gesundheit">
+          <a href="articles/zero-waste-restaurant-berlin.html" class="hub-news-img-link">
+            <img src="photos/A7402927.jpg" alt="Zero Waste Restaurant Berlin – Vegan Garden im Fokus" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">GESUNDHEIT & SUSTAINABILITY</span>
+          </a>
+          <div class="hub-news-body">
+            <h3 class="hub-news-title"><a href="articles/zero-waste-restaurant-berlin.html">Zero Waste Restaurant Berlin – Vegan Garden im Fokus</a></h3>
+            <p class="hub-news-excerpt">Deutsch
+            
+            
+              
+              English
+            
+            
+              
+              Tiếng Việt
+   ...</p>
+            <a href="articles/zero-waste-restaurant-berlin.html" class="hub-news-more">
+              <span>Artikel lesen</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 14px; display: block; line-height: 1;">
+            <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 52px; width: auto; max-width: 250px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING RESERVATION FAB BUTTON -->
+  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch jetzt reservieren" title="Tisch jetzt reservieren">
+    <div class="floating-reserve-pulse"></div>
+    <i class="fa-regular fa-calendar-check"></i>
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'de',
+        includedLanguages: 'de,en,vi',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="script.js"></script>
+  <script>
+    // Category Filter JS for Hub Page
+    document.querySelectorAll('.hub-cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.hub-cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.hub-news-card').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

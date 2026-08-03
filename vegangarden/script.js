@@ -140,6 +140,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Trigger Google Translate engine
+    function triggerTranslate(targetLang) {
+      const googCombo = document.querySelector('.goog-te-combo');
+      if (googCombo) {
+        googCombo.value = targetLang;
+        googCombo.dispatchEvent(new Event('change'));
+      } else {
+        setTimeout(() => {
+          const retryCombo = document.querySelector('.goog-te-combo');
+          if (retryCombo) {
+            retryCombo.value = targetLang;
+            retryCombo.dispatchEvent(new Event('change'));
+          }
+        }, 600);
+      }
+    }
+
     langOpts.forEach(opt => {
       opt.addEventListener('click', () => {
         langOpts.forEach(o => o.classList.remove('active'));
@@ -147,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const flag = opt.dataset.flag;
         const code = opt.dataset.code;
+        const lang = opt.dataset.lang || (code === 'EN' ? 'en' : code === 'VI' ? 'vi' : 'de');
 
         const flagImg = langCurrent.querySelector('.lang-flag img');
         if (flagImg) {
@@ -175,6 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
           newsTabsList.forEach(tab => { if (tab.dataset.de) tab.textContent = tab.dataset.de; });
           if (allArticlesBtn) allArticlesBtn.textContent = 'ALLE ARTIKEL ANSEHEN';
         }
+
+        // Trigger automatic full-page translation
+        triggerTranslate(lang);
       });
     });
   }

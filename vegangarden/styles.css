@@ -1560,3 +1560,31 @@ img {
   }
 }
 
+/* HIDE GOOGLE TRANSLATE UI FRAMES & TOOLTIPS */
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#google_translate_element,
+.skiptranslate {
+  display: none !important;
+}
+

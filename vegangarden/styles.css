@@ -119,14 +119,14 @@ img {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 22px;
   list-style: none;
 }
 
 .nav-link {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--text-dark);
   text-transform: uppercase;
   position: relative;
@@ -152,7 +152,16 @@ img {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+}
+
+.nav-actions .btn-primary {
+  padding: 8px 18px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  white-space: nowrap;
 }
 
 /* BUTTONS */

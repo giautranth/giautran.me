@@ -1,24 +1,276 @@
-<p><meta-title>Veganes Frühstück Berlin Friedrichshain – Top Cafés &#038; Restaurants</meta-title><br />
-<meta-description>Auf der Suche nach dem besten veganen Frühstück in Berlin Friedrichshain? Entdecke erstklassige Cafés, gesunde Bowls &#038; asiatische Brunch-Highlights!</meta-description><br />
-<html-content></p>
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veganes Frühstück Berlin Friedrichshain – Top Cafés &#038; Restaurants | Vegan Garden Berlin</title>
+  <meta name="description" content="Auf der Suche nach dem besten veganen Frühstück in Berlin Friedrichshain? Entdecke erstklassige Cafés, gesunde Bowls &#038; asiatische Brunch-Highlights!">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Veganes Frühstück Berlin Friedrichshain – Top Cafés &#038; Restaurants</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/article_sommerrollen.jpg" alt="Veganes Frühstück Berlin Friedrichshain – Top Cafés &#038; Restaurants" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        <p><br />
+<br />
+</p>
+
 <p style="text-align:justify; line-height:1.6; color:#333;"><em>Wer morgens durch die lebendigen, baumbestandenen Straßen von Berlin-Friedrichshain schlendert, spürt sofort die kreative und tolerante Energie dieses einzigartigen Stadtteils. Für Food-Liebhaber und Ernährungsbewusste gibt es hier ein echtes kulinarisches Highlight: Ein gesundes, vitalstoffreiches und vor allem leckeres <strong>veganes frühstück berlin friedrichshain</strong> ist der ideale Weg, um mit voller Kraft in den Tag zu starten. Ob du Lust auf ein warmes, traditionelles Porridge hast, sündhaft cremige rein pflanzliche Donuts mit Kaffeespezialitäten probieren möchtest oder nach einem ausgiebigen, wärmenden asiatischen Spätfrühstück und Brunch aus der gesunden vietnamesischen Heilküche suchst – Friedrichshain bietet eine faszinierende Dichte an erstklassigen Cafés und Restaurants, die keine Wünsche offenlassen. In diesem umfassenden Kiez-Guide zeigen wir dir die besten Spots für dein perfektes Frühstückserlebnis und erklären die gesundheitlichen Vorteile eines rein pflanzlichen Starts in den Tag.</em></p>
 <h2 id="friedrichshain-das-paradies-fuer-veganes-fruehstueck-in-berlin" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Friedrichshain: Das Paradies für ein veganes Frühstück in Berlin</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Der Berliner Bezirk Friedrichshain hat sich in den letzten zwei Jahrzehnten zu einem der weltweit führenden Zentren für die pflanzliche Lebensweise entwickelt. Während vegetarische Optionen früher eine Randerscheinung waren, ist das rein pflanzliche Angebot heute ein fester und kreativer Bestandteil der täglichen Gastronomie. Besonders in den frühen Morgenstunden und zur Brunchzeit pulsiert der Kiez: Von hippen Third-Wave-Coffee-Shops bis hin zu gemütlichen asiatischen Oasen findet man hier Speisen, die Genuss und Tierwohl perfekt miteinander verbinden.</p>
 <h3 id="die-kreative-vielfalt-im-boxhagener-kiez" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die kreative Vielfalt im Boxhagener Kiez</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Das Epizentrum des Friedrichshainer Frühstücksgeschehens liegt zweifellos rund um den Boxhagener Platz und die angrenzende Simon-Dach-Straße. Hier reihen sich individuelle Cafés aneinander, die sich gegenseitig mit innovativen Kreationen übertreffen. Ob hausgemachter Cashew-Käse auf Sauerteigbrot, glutenfreie Buchweizen-Pancakes mit Beerenkompott oder herzhafte Tofu-Scramble-Platten – die kulinarische Kreativität kennt keine Grenzen. Wenn du dich auf die Suche nach neuen Geschmackswelten begibst, hilft dir <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">unser Vegan Guide für Berlin</a> dabei, die versteckten Perlen des Kiezes abseits der ausgetretenen Touristenpfade zu entdecken.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Das Epizentrum des Friedrichshainer Frühstücksgeschehens liegt zweifellos rund um den Boxhagener Platz und die angrenzende Simon-Dach-Straße. Hier reihen sich individuelle Cafés aneinander, die sich gegenseitig mit innovativen Kreationen übertreffen. Ob hausgemachter Cashew-Käse auf Sauerteigbrot, glutenfreie Buchweizen-Pancakes mit Beerenkompott oder herzhafte Tofu-Scramble-Platten – die kulinarische Kreativität kennt keine Grenzen. Wenn du dich auf die Suche nach neuen Geschmackswelten begibst, hilft dir <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a> dabei, die versteckten Perlen des Kiezes abseits der ausgetretenen Touristenpfade zu entdecken.</p>
 <h3 id="warum-immer-mehr-berliner-auf-ein-pflanzliches-fruehstueck-setzen" style="color:#43a047; font-size:1.25em; margin-top:20px;">Warum immer mehr Berliner auf ein pflanzliches Frühstück setzen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Entscheidung für ein veganes Frühstück ist für viele Berliner längst kein vorübergehender Trend mehr, sondern Ausdruck eines bewussten Lebensstils. Es geht um den bewussten Umgang mit den Ressourcen unseres Planeten und das Wohlbefinden des eigenen Körpers. Ein pflanzlicher Start in den Morgen belastet das Verdauungssystem deutlich weniger als ein schweres Frühstück mit Wurst und Eiern. Die Menschen schätzen das Gefühl von Leichtigkeit und Vitalität, das ein ausgewogenes Frühstück aus pflanzlichen Zutaten schenkt – und das ganz ohne Kompromisse beim Geschmack.</p>
 <h2 id="die-gesundheitlichen-vorteile-eines-veganen-fruehstuecks" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Die gesundheitlichen Vorteile eines rein pflanzlichen Frühstücks</h2>
@@ -27,13 +279,12 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein häufiger Fehler beim Frühstück ist der Verzehr von einfachen Kohlenhydraten, wie sie in zuckerhaltigen Müslis oder weißem Gebäck vorkommen. Diese lassen den Blutzuckerspiegel rasch ansteigen, gefolgt von einem tiefen Sturz, der zu Heißhungerattacken und dem berüchtigten Vormittagstief führt. Komplexe Kohlenhydrate, wie sie in Haferflocken, Vollkorngetreide oder Hülsenfrüchten enthalten sind, werden vom Körper nur langsam abgebaut. Die Deutsche Gesellschaft für Ernährung (DGE) empfiehlt eine ballaststoffreiche, pflanzenbetonte Kost ausdrücklich, um den Blutzuckerspiegel stabil zu halten und das Risiko für chronische Stoffwechselerkrankungen langfristig zu senken (<a href="https://www.dge.de/" target="_blank" rel="nofollow noopener">[1]</a>).</p>
 <h3 id="vitamine-und-sekundaere-pflanzenstoffe-fuer-den-perfekten-start" style="color:#43a047; font-size:1.25em; margin-top:20px;">Vitamine und sekundäre Pflanzenstoffe für den perfekten Start</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein pflanzliches Frühstück, das reich an frischem Obst, Beeren, Nüssen und Samen ist, liefert eine Fülle an essenziellen Vitaminen, Antioxidantien und sekundären Pflanzenstoffen. Diese Verbindungen wirken im Körper als natürliche Schutzschilde gegen oxidativen Stress und unterstützen das Immunsystem. Nach den offiziellen Richtlinien der Weltgesundheitsorganisation (WHO) ist der reichliche Verzehr von Obst, Gemüse und pflanzlichen Proteinquellen eine der wichtigsten Präventionsmaßnahmen zum Schutz vor Zivilisationskrankheiten und zur Stärkung der allgemeinen Vitalität (<a href="https://www.who.int/" target="_blank" rel="nofollow noopener">[2]</a>).</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-veganes-fruehstueck-berlin-friedrichshain-inline-1-1.jpg" alt="Gemütlicher Brunch mit vietnamesischen Köstlichkeiten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Gemütlicher Brunch mit vietnamesischen Köstlichkeiten</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Gemütlicher Brunch mit vietnamesischen Köstlichkeiten"><figcaption>Gemütlicher Brunch mit vietnamesischen Köstlichkeiten</figcaption></figure><figcaption>Gemütlicher Brunch mit vietnamesischen Köstlichkeiten</figcaption></figure>
 <h2 id="top-spots-fuer-veganes-fruehstueck-berlin-friedrichshain" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Top-Spots für veganes Frühstück Berlin Friedrichshain: Unsere Favoriten</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Auswahl im Stadtteil Friedrichshain ist riesig, doch wir haben für dich die absolut besten Adressen herausgesucht, die durch Qualität, Geschmack und eine herzliche Atmosphäre überzeugen. Hier sind unsere Favoriten für das perfekte <strong>veganes frühstück berlin friedrichshain</strong>:</p>
 <h3 id="vegan-garden-berlin-der-perfekte-vietnamesische-spaetfruehstuecks-und-brunch-spot" style="color:#43a047; font-size:1.25em; margin-top:20px;">Vegan Garden Berlin – Der perfekte vietnamesische Spätfrühstücks- &amp; Brunch-Spot</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Auch wenn wir vom Vegan Garden Berlin erst ab 12:00 Uhr mittags unsere Türen öffnen, sind wir der ideale Anlaufpunkt für alle, die das Spätfrühstück, einen ausgiebigen Kiez-Brunch oder ein stärkendes, wärmendes Mittagsgericht lieben. In <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a> bringen wir das Beste aus der traditionellen vietnamesischen Esskultur in einer rein pflanzlichen Version auf deinen Teller. Wer sagt denn, dass man morgens nur Brot essen darf? In Vietnam ist eine dampfende Nudelsuppe wie die vegane Pho das klassische Frühstück schlechthin, da sie den Körper sanft aufweckt und mit wohliger Wärme füllt.</p>
-<p style="text-align:justify; line-height:1.6; color:#333;">Ein Blick auf <a href="https://vegangarden-berlin.de/speisekarte/">unsere Speisekarte</a> oder direkt in unser digitales Menü unter <a href="https://vegangarden-berlin.de/3d-flip-book/270/">unserer Speisekarte</a> offenbart eine Fülle an nährstoffreichen Optionen: von knackigen Sommerrollen mit Bio-Tofu über exotische Mango-Salate bis hin zu wärmenden Suppen, die mit entzündungshemmenden Gewürzen wie frischem Ingwer, Zitronengras und Sternanis zubereitet werden. Es ist die perfekte Kombination aus asiatischer Heilküche und moderner, pflanzlicher Lebensart.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Auch wenn wir vom Vegan Garden Berlin erst ab 12:00 Uhr mittags unsere Türen öffnen, sind wir der ideale Anlaufpunkt für alle, die das Spätfrühstück, einen ausgiebigen Kiez-Brunch oder ein stärkendes, wärmendes Mittagsgericht lieben. In <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a> bringen wir das Beste aus der traditionellen vietnamesischen Esskultur in einer rein pflanzlichen Version auf deinen Teller. Wer sagt denn, dass man morgens nur Brot essen darf? In Vietnam ist eine dampfende Nudelsuppe wie die vegane Pho das klassische Frühstück schlechthin, da sie den Körper sanft aufweckt und mit wohliger Wärme füllt.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Ein Blick auf <a href="../index.html#speisekarte">unsere Speisekarte</a> oder direkt in unser digitales Menü unter <a href="../index.html#speisekarte">unserer Speisekarte</a> offenbart eine Fülle an nährstoffreichen Optionen: von knackigen Sommerrollen mit Bio-Tofu über exotische Mango-Salate bis hin zu wärmenden Suppen, die mit entzündungshemmenden Gewürzen wie frischem Ingwer, Zitronengras und Sternanis zubereitet werden. Es ist die perfekte Kombination aus asiatischer Heilküche und moderner, pflanzlicher Lebensart.</p>
 <h3 id="silo-coffee-spezialitaetenkaffee-und-herzhafte-vegane-stullen" style="color:#43a047; font-size:1.25em; margin-top:20px;">Silo Coffee – Spezialitätenkaffee und herzhafte vegane Stullen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Wer die klassische australische Frühstückskultur schätzt, kommt an Silo Coffee in der Gabriel-Max-Straße nicht vorbei. Dieses minimalistisch gestaltete Café ist berühmt für seinen exzellenten Third-Wave-Kaffee, der von lokalen Röstern bezogen wird. Veganer freuen sich über fantastische Frühstückskreationen wie gegrillte Sauerteigstullen mit cremiger Avocado, hausgemachtem Hummus, marinierten Wildpilzen und knackigem Saisongemüse. Die entspannte Kiez-Atmosphäre lädt dazu ein, den Morgen mit einem Buch oder bei guten Gesprächen zu verbringen.</p>
 <h3 id="brammibals-donuts-suesser-morgen-im-kiez" style="color:#43a047; font-size:1.25em; margin-top:20px;">Brammibal&#8217;s Donuts – Süßer Morgen im Kiez</h3>
@@ -50,9 +301,8 @@
 <h3 id="warum-warme-suppen-am-morgen-die-verdauung-schonen" style="color:#43a047; font-size:1.25em; margin-top:20px;">Warum warme Suppen am Morgen die Verdauung schonen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Nach den Lehren der traditionellen fernöstlichen Medizin ist die Verdauung wie ein kleines Feuer, das Nahrung transformiert. Kalte oder schwer verdauliche Lebensmittel am Morgen können dieses Verdauungsfeuer schwächen und zu Trägheit oder Blähungen führen. Eine warme, leicht verdauliche Nudelsuppe spendet dem Körper sofort Feuchtigkeit, regt die Durchblutung an und liefert sanfte Energie. Wissenschaftliche Studien der Harvard Health Publishing bestätigen, dass warme, flüssigkeitsbasierte Mahlzeiten die Magenentleerung erleichtern und den Magen-Darm-Trakt besonders schonend aktivieren (<a href="https://www.health.harvard.edu/" target="_blank" rel="nofollow noopener">[3]</a>).</p>
 <h3 id="die-rolle-von-ingwer-und-kraeutern-in-der-vietnamesischen-heilkunst" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Rolle von Ingwer und Kräutern in der vietnamesischen Heilkunst</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Das Geheimnis der vietnamesischen Küche liegt in der gezielten Verwendung von Gewürzen und frischen Wildkräutern, die eine stark therapeutische Wirkung haben. Ingwer und Zitronengras wirken entzündungshemmend und wärmend von innen heraus. Wenn du bei uns speist, verwenden wir ausschließlich <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a> wie thailändischen Koriander (Rau Răm), Perillablätter (Tía Tô) und Minze. Diese Kräuter enthalten ätherische Öle, die die Magensaftproduktion anregen, Blähungen vorbeugen und die Nährstoffaufnahme optimieren (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[4]</a>). Wer diese aromatischen Geschmackswelten selbst in der eigenen Küche ausprobieren möchte, findet unter <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a> viele Anregungen, um traditionelle pflanzliche Gerichte ganz einfach zu Hause zuzubereiten.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-veganes-fruehstueck-berlin-friedrichshain-inline-2-1.jpg" alt="Frischer Eistee und Frühstücksgetränke" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Frischer Eistee und Frühstücksgetränke</figcaption></figure>
+<p style="text-align:justify; line-height:1.6; color:#333;">Das Geheimnis der vietnamesischen Küche liegt in der gezielten Verwendung von Gewürzen und frischen Wildkräutern, die eine stark therapeutische Wirkung haben. Ingwer und Zitronengras wirken entzündungshemmend und wärmend von innen heraus. Wenn du bei uns speist, verwenden wir ausschließlich <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a> wie thailändischen Koriander (Rau Răm), Perillablätter (Tía Tô) und Minze. Diese Kräuter enthalten ätherische Öle, die die Magensaftproduktion anregen, Blähungen vorbeugen und die Nährstoffaufnahme optimieren (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[4]</a>). Wer diese aromatischen Geschmackswelten selbst in der eigenen Küche ausprobieren möchte, findet unter <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a> viele Anregungen, um traditionelle pflanzliche Gerichte ganz einfach zu Hause zuzubereiten.</p>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Frischer Eistee und Frühstücksgetränke"><figcaption>Frischer Eistee und Frühstücksgetränke</figcaption></figure><figcaption>Frischer Eistee und Frühstücksgetränke</figcaption></figure>
 <h2 id="tipps-fuer-deinen-perfekten-veganen-brunch-in-friedrichshain" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Tipps für deinen perfekten veganen Brunch in Friedrichshain</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Damit dein Frühstücks- oder Brunchausflug in Friedrichshain zu einem rundum entspannten Erlebnis wird, lohnt es sich, ein paar Tipps zu beherzigen. Die Beliebtheit des Stadtteils führt dazu, dass die besten Spots am Wochenende schnell voll werden. Mit der richtigen Planung verhinderst du lange Wartezeiten und kannst deinen freien Tag in vollen Zügen genießen.</p>
 <h3 id="reservierung-und-timing-am-wochenende" style="color:#43a047; font-size:1.25em; margin-top:20px;">Reservierung und Timing am Wochenende</h3>
@@ -62,7 +312,7 @@
 <h2 id="nachhaltigkeit-auf-dem-fruehstuecksteller" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Nachhaltigkeit auf dem Frühstücksteller</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Nachhaltigkeit ist für uns kein Modewort, sondern eine Lebenseinstellung. Die Berliner Gastronomie hat eine Vorreiterrolle eingenommen, wenn es darum geht, Umweltschutz und Genuss im Alltag zu vereinen. Ein veganes Frühstück leistet bereits einen enormen Beitrag zur Verringerung des ökologischen Fußabdrucks, da die Produktion pflanzlicher Lebensmittel weitaus weniger Ressourcen beansprucht als die Tierhaltung.</p>
 <h3 id="regionale-bio-zutaten-und-ihre-oekologische-bilanz" style="color:#43a047; font-size:1.25em; margin-top:20px;">Regionale Bio-Zutaten und ihre ökologische Bilanz</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Der Fokus auf regionale und saisonale Bio-Produkte ist entscheidend für den Schutz unseres Klimas. Kurze Transportwege aus dem Umland von Brandenburg sorgen dafür, dass Obst und Gemüse reif geerntet werden und ihren vollen Nährstoffgehalt behalten. In unserer eigenen Küche legen wir großen Wert auf diesen Kreislauf. Unter <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a> kannst du im Detail nachlesen, wie wir durch faire Partnerschaften mit ökologischen Erzeugern und den Verzicht auf künstliche Zusatzstoffe ein gesundes, zukunftsfähiges Gastro-Konzept realisieren.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Der Fokus auf regionale und saisonale Bio-Produkte ist entscheidend für den Schutz unseres Klimas. Kurze Transportwege aus dem Umland von Brandenburg sorgen dafür, dass Obst und Gemüse reif geerntet werden und ihren vollen Nährstoffgehalt behalten. In unserer eigenen Küche legen wir großen Wert auf diesen Kreislauf. Unter <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a> kannst du im Detail nachlesen, wie wir durch faire Partnerschaften mit ökologischen Erzeugern und den Verzicht auf künstliche Zusatzstoffe ein gesundes, zukunftsfähiges Gastro-Konzept realisieren.</p>
 <h3 id="plastikvermeidung-und-zero-waste-ansaetze-in-berliner-cafes" style="color:#43a047; font-size:1.25em; margin-top:20px;">Plastikvermeidung und Zero-Waste-Ansätze in Berliner Cafés</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Neben den Zutaten spielt auch die Vermeidung von Müll eine zentrale Rolle. Viele Cafés in Friedrichshain setzen auf Mehrwegsysteme für den Kaffee-to-go, verzichten komplett auf Plastikstrohhalme und verwerten Lebensmittelreste konsequent weiter. Einige Pioniere arbeiten sogar nach dem Zero-Waste-Prinzip, bei dem im gesamten Produktionsprozess so gut wie kein Abfall entsteht. Als Gast kannst du diese Bewegung unterstützen, indem du deinen eigenen Becher mitbringst oder vor Ort im gemütlichen Ambiente der Cafés speist.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
@@ -95,9 +345,89 @@
 <div style="margin-top: 24px; padding: 15px; border-top: 1px dashed #ccc;">
   <strong style="color: #2e7d32;">📚 Weitere lesenswerte Artikel:</strong></p>
 <ul style="margin: 8px 0 0 0; padding-left: 20px; line-height: 1.6;">
-<li><a href="https://vegangarden-berlin.de/speisekarte/" style="color: #0066cc;">Die kulinarische Vielfalt Vietnams: Die Vegan Garden Berlin Speisekarte</a></li>
+<li><a href="../index.html#speisekarte" style="color: #0066cc;">Die kulinarische Vielfalt Vietnams: Die Vegan Garden Berlin Speisekarte</a></li>
 <li><a href="https://vegangarden-berlin.de/vegane-pho-berlin/" style="color: #0066cc;">Die Seele Vietnams in einer Schüssel: Auf der Suche nach der besten veganen Pho in Berlin</a></li>
 <li><a href="https://vegangarden-berlin.de/veganes-mittagessen-berlin-friedrichshain/" style="color: #0066cc;">Veganes Mittagessen Berlin Friedrichshain: Top Spots</a></li>
 </ul>
 </div>
-<p></html-content></p>
+<p></p>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

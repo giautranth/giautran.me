@@ -1,36 +1,287 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veganes Silvester Restaurant Berlin – Jetzt Tisch reservieren | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
-<h1 style="color: #2e7d32; font-family: sans-serif; font-size: 2.2em; margin-bottom: 20px;">Veganes Silvester Restaurant Berlin – Jetzt Tisch reservieren</h1>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Veganes Silvester Restaurant Berlin – Jetzt Tisch reservieren</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../photos/A7402927.jpg" alt="Veganes Silvester Restaurant Berlin – Jetzt Tisch reservieren" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+
 <p style="text-align: justify; line-height: 1.6; color: #333;"><em>Wer den Jahreswechsel in der deutschen Hauptstadt stilvoll, gesund und ohne kulinarische Kompromisse einläuten möchte, steht oft vor einer Herausforderung. Wenn Sie für diesen besonderen Abend ein erstklassiges <strong>veganes silvester berlin restaurant</strong> suchen, das pflanzliche Genüsse mit asiatischer Raffinesse verbindet, ist das Vegan Garden in Friedrichshain Ihre perfekte Adresse. Gründerin Huong Nguyen kreiert ein exklusives Silvester-Menü, das die gesunde, traditionelle vietnamesische Küche mit modernen Einflüssen harmonisch vereint. Inmitten einer festlichen Atmosphäre erleben Sie bei uns kulinarische Höhepunkte, die nicht nur den Gaumen verwöhnen, sondern auch Geist und Körper vitalisieren. Sichern Sie sich rechtzeitig Ihren Tisch für ein unvergessliches Neujahrsfest!</em></p>
 <h2 id="silvester-in-berlin-warum-vegan-die-beste-wahl-ist">Silvester in Berlin: Warum eine vegane Feier die beste Wahl ist</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Der Jahreswechsel ist ein Moment der Reflexion, des Neubeginns und des Feierns. In einer pulsierenden Metropole wie Berlin gibt es unzählige Möglichkeiten, diesen Abend zu verbringen. Doch immer mehr Menschen entscheiden sich bewusst dafür, das alte Jahr gesund und umweltfreundlich ausklingen zu lassen. Eine vegane Feier zum Jahreswechsel bietet die perfekte Gelegenheit, den Körper zu schonen und gleichzeitig ein kulinarisches Festmahl auf höchstem Niveau zu genießen. Im Gegensatz zu den oft schweren, fettreichen Speisen, die traditionell an Silvester serviert werden, sorgt eine pflanzliche Mahlzeit dafür, dass Sie sich auch nach Mitternacht noch fit und energiegeladen fühlen. Es ist der ideale Weg, um mit guten Vorsätzen und einem Gefühl der Leichtigkeit in das neue Jahr zu starten.</p>
 <h3 id="gesundheit-und-vitalitaet-zum-jahreswechsel">Gesundheit und Vitalität zum Jahreswechsel</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Traditionelle Silvestergerichte wie Käsefondue, Raclette oder Fleischplatten sind zwar beliebt, belasten jedoch das Verdauungssystem erheblich. Die Folge sind oft Trägheit, Völlegefühl und Müdigkeit noch vor dem großen Countdown. Eine rein pflanzliche Ernährung hingegen ist reich an Ballaststoffen, Vitaminen und essenziellen Nährstoffen, die den Körper vitalisieren, ohne ihn zu beschweren. Laut der Deutschen Gesellschaft für Ernährung (DGE) trägt eine ausgewogene, pflanzenbetonte Ernährung nachweislich zur Optimierung des Stoffwechsels und zur Steigerung des allgemeinen Wohlbefindens bei (<a href="https://www.dge.de/" target="_blank" rel="nofollow noopener">[1]</a>). Wenn Sie sich für unser pflanzliches Menü entscheiden, tanken Sie wertvolle Antioxidantien und pflanzliche Proteine, die Ihnen die nötige Energie geben, um die Berliner Silvesternacht in vollen Zügen zu genießen – ganz ohne den gefürchteten Kater am Neujahrsmorgen.</p>
 <h3 id="nachhaltigkeit-als-neujahrsvorsatz">Nachhaltigkeit als Vorsatz für das neue Jahr</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Der Schutz unserer Umwelt und der bewusste Umgang mit Ressourcen werden für viele Menschen zu immer wichtigeren Lebensprinzipien. Warum also nicht schon am letzten Tag des Jahres ein Zeichen setzen? Ein pflanzliches Festmahl spart im Vergleich zu fleischbasierten Menüs erhebliche Mengen an CO2 und Wasser ein. Berlin gilt weltweit als Vorreiter für grüne Bewegung und nachhaltigen Lebensstil. Mit einem Besuch im Vegan Garden unterstützen Sie aktiv eine umweltfreundliche Gastronomie. Erfahren Sie mehr über unsere Werte und wie wir versuchen, die Gastrowelt nachhaltig zu verändern, unter <a href="https://vegangarden-berlin.de/nachhaltigkeit/" target="_blank">Nachhaltigkeit und unsere Philosophie</a>. So starten Sie mit dem guten Gefühl ins neue Jahr, einen aktiven Beitrag zum Umweltschutz geleistet zu haben.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Der Schutz unserer Umwelt und der bewusste Umgang mit Ressourcen werden für viele Menschen zu immer wichtigeren Lebensprinzipien. Warum also nicht schon am letzten Tag des Jahres ein Zeichen setzen? Ein pflanzliches Festmahl spart im Vergleich zu fleischbasierten Menüs erhebliche Mengen an CO2 und Wasser ein. Berlin gilt weltweit als Vorreiter für grüne Bewegung und nachhaltigen Lebensstil. Mit einem Besuch im Vegan Garden unterstützen Sie aktiv eine umweltfreundliche Gastronomie. Erfahren Sie mehr über unsere Werte und wie wir versuchen, die Gastrowelt nachhaltig zu verändern, unter <a href="../index.html#restaurant" target="_blank">Nachhaltigkeit und unsere Philosophie</a>. So starten Sie mit dem guten Gefühl ins neue Jahr, einen aktiven Beitrag zum Umweltschutz geleistet zu haben.</p>
 <h2 id="unser-vietnamesisches-silvestermenue-ein-fest-der-sinne">Unser vietnamesisches Silvestermenü: Ein Fest für die Sinne</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die vietnamesische Küche ist weltbekannt für ihre Frische, ihre feine Balance der Aromen und ihre gesundheitsfördernden Eigenschaften. Für den Silvesterabend haben wir ein exklusives Menü zusammengestellt, das diese Traditionen aufgreift und in eine moderne, rein pflanzliche Form gießt. Jedes Gericht ist ein Kunstwerk aus Farben, Texturen und Geschmäckern, das mit viel Liebe zum Detail zubereitet wird. Von wärmenden Suppen bis hin zu knusprigen Spezialitäten bietet unser Menü eine kulinarische Reise durch die Garküchen Hanois, direkt im Herzen von Berlin.</p>
 <h3 id="traditionelle-heilkraeuter-fuer-den-perfekten-start">Traditionelle Heilkräuter für den perfekten Start</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Das Geheimnis der vietnamesischen Küche liegt in der Verwendung frischer Kräuter. Chefköchin Huong Nguyen wählt jedes Kraut sorgfältig aus, um nicht nur den Geschmack, sondern auch die gesundheitliche Wirkung der Speisen zu optimieren. Kräuter wie Koriander, vietnamesische Melisse (Kinh Giới), Perilla (Tía Tô) und thailändischer Basilikum sind feste Bestandteile unserer Küche. Wissenschaftliche Untersuchungen zeigen, dass traditionelle asiatische Kräuter reich an sekundären Pflanzenstoffen sind und entzündungshemmende sowie verdauungsfördernde Eigenschaften besitzen (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[2]</a>). Diese Kräuter unterstützen die Verdauung und stärken das Immunsystem, sodass Sie sich rundum wohlfühlen. Mehr Details zu unseren Kräutern finden Sie unter <a href="https://vegangarden-berlin.de/zutaten/" target="_blank">frische vietnamesische Kräuter und Zutaten</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Das Geheimnis der vietnamesischen Küche liegt in der Verwendung frischer Kräuter. Chefköchin Huong Nguyen wählt jedes Kraut sorgfältig aus, um nicht nur den Geschmack, sondern auch die gesundheitliche Wirkung der Speisen zu optimieren. Kräuter wie Koriander, vietnamesische Melisse (Kinh Giới), Perilla (Tía Tô) und thailändischer Basilikum sind feste Bestandteile unserer Küche. Wissenschaftliche Untersuchungen zeigen, dass traditionelle asiatische Kräuter reich an sekundären Pflanzenstoffen sind und entzündungshemmende sowie verdauungsfördernde Eigenschaften besitzen (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[2]</a>). Diese Kräuter unterstützen die Verdauung und stärken das Immunsystem, sodass Sie sich rundum wohlfühlen. Mehr Details zu unseren Kräutern finden Sie unter <a href="../index.html#speisekarte" target="_blank">frische vietnamesische Kräuter und Zutaten</a>.</p>
 <h3 id="exotische-aromen-und-hausgemachte-spezialitaeten">Exotische Aromen und hausgemachte Spezialitäten</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Unser Silvestermenü beginnt mit einer Auswahl an feinen Vorspeisen, darunter knusprige Frühlingsrollen mit Gemüsefüllung und frische Sommerrollen, die mit cremigem Avocado-Mousse und Wildkräutern gefüllt sind. Zum Hauptgang servieren wir unter anderem eine festliche Version unserer traditionellen Pho-Suppe, deren aromatische Brühe über zwölf Stunden hinweg mit Sternanis, Zimt und Nelken gekocht wird, um eine unvergleichliche Geschmackstiefe zu erreichen. Alternativ bieten wir brutzelnde Claypot-Gerichte mit karamellisiertem Tofu, frischem Zitronengras und knackigem Marktgemüse an. Abgerundet wird der Abend durch ein himmlisches Dessert aus gedämpftem Klebreis mit reifer Mango und hausgemachter Kokossauce. Um einen genaueren Einblick in unsere festlichen Kreationen zu erhalten, werfen Sie gerne einen Blick in <a href="https://vegangarden-berlin.de/3d-flip-book/270/" target="_blank">unsere Speisekarte</a>.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-veganes-silvester-berlin-restaurant-inline-1-1.jpg" alt="Gemütliche Sitzecke im Vegan Garden Berlin" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure>
+<p style="text-align:justify; line-height:1.6; color:#333;">Unser Silvestermenü beginnt mit einer Auswahl an feinen Vorspeisen, darunter knusprige Frühlingsrollen mit Gemüsefüllung und frische Sommerrollen, die mit cremigem Avocado-Mousse und Wildkräutern gefüllt sind. Zum Hauptgang servieren wir unter anderem eine festliche Version unserer traditionellen Pho-Suppe, deren aromatische Brühe über zwölf Stunden hinweg mit Sternanis, Zimt und Nelken gekocht wird, um eine unvergleichliche Geschmackstiefe zu erreichen. Alternativ bieten wir brutzelnde Claypot-Gerichte mit karamellisiertem Tofu, frischem Zitronengras und knackigem Marktgemüse an. Abgerundet wird der Abend durch ein himmlisches Dessert aus gedämpftem Klebreis mit reifer Mango und hausgemachter Kokossauce. Um einen genaueren Einblick in unsere festlichen Kreationen zu erhalten, werfen Sie gerne einen Blick in <a href="../index.html#speisekarte" target="_blank">unsere Speisekarte</a>.</p>
+<figure><figure><img src="../images/article_pho.jpg" alt="Gemütliche Sitzecke im Vegan Garden Berlin"><figcaption>Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure><figcaption>Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure>
 <h2 id="warum-unser-veganes-silvester-berlin-restaurant-die-perfekte-wahl-ist">Warum unser veganes Silvester Berlin Restaurant die perfekte Wahl ist</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Wenn Sie nach dem idealen Ort für den Silvesterabend suchen, geht es um weit mehr als nur um das Essen. Es geht um das Gesamterlebnis: die Atmosphäre, das Gefühl von Gemeinschaft und den Service. Als führendes <strong>veganes silvester berlin restaurant</strong> bieten wir Ihnen die perfekte Kombination aus stilvollem Ambiente, herzlicher Gastfreundschaft und exzellenter Kulinarik. Wir schaffen einen Raum, in dem Sie den Alltagsstress hinter sich lassen und sich vollkommen auf den Genuss und die Freude des Moments konzentrieren können.</p>
 <h3 id="gemuetliches-ambiente-in-friedrichshain">Gemütliches Ambiente in Friedrichshain</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Unser Restaurant befindet sich in Friedrichshain, einem der lebendigsten und kreativsten Bezirke Berlins. Im Inneren von Vegan Garden erwartet Sie jedoch eine Oase der Ruhe. Mit viel Liebe zum Detail haben wir ein warmes, naturnahes Ambiente geschaffen, das durch zahlreiche Grünpflanzen, sanfte Beleuchtung und stilvolle Holzmöbel besticht. Hier können Sie in gemütlicher und zugleich festlicher Atmosphäre mit Ihren Liebsten anstoßen, während draußen das bunte Treiben der Stadt stattfindet. Unser Standort ist der ideale Ausgangspunkt, um nach dem Essen das Berliner Feuerwerk zu beobachten. Besuchen Sie <a href="https://vegangarden-berlin.de/restaurant/" target="_blank">unser Restaurant in Berlin-Friedrichshain</a> und überzeugen Sie sich selbst von der einzigartigen Atmosphäre.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Unser Restaurant befindet sich in Friedrichshain, einem der lebendigsten und kreativsten Bezirke Berlins. Im Inneren von Vegan Garden erwartet Sie jedoch eine Oase der Ruhe. Mit viel Liebe zum Detail haben wir ein warmes, naturnahes Ambiente geschaffen, das durch zahlreiche Grünpflanzen, sanfte Beleuchtung und stilvolle Holzmöbel besticht. Hier können Sie in gemütlicher und zugleich festlicher Atmosphäre mit Ihren Liebsten anstoßen, während draußen das bunte Treiben der Stadt stattfindet. Unser Standort ist der ideale Ausgangspunkt, um nach dem Essen das Berliner Feuerwerk zu beobachten. Besuchen Sie <a href="../index.html#restaurant" target="_blank">unser Restaurant in Berlin-Friedrichshain</a> und überzeugen Sie sich selbst von der einzigartigen Atmosphäre.</p>
 <h3 id="erstklassiger-service-und-gastfreundschaft">Erstklassiger Service und authentische Gastfreundschaft</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Bei Vegan Garden Berlin steht der Gast im Mittelpunkt. Unser Team sorgt mit aufmerksamem, herzlichem und professionellem Service dafür, dass Ihr Silvesterabend absolut reibungslos und besonders verläuft. Wir nehmen uns Zeit für Ihre individuellen Wünsche und beraten Sie gerne bei der Auswahl der passenden Getränke – von feinen Bio-Weinen bis hin zu exklusiven, alkoholfreien Cocktails auf Kräuterbasis. Bei uns erleben Sie die traditionelle vietnamesische Gastfreundschaft, bei der sich jeder Gast wie ein geschätztes Familienmitglied fühlt. Wir setzen alles daran, Ihnen einen unvergesslichen Rutsch ins neue Jahr zu bereiten.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
@@ -44,14 +295,13 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Gewürze wie Ingwer, Galgant, Zitronengras und roter Chili sind feste Säulen unserer Küche und bekannt für ihre heilsame Wirkung auf den Verdauungstrakt. Sie regen die Produktion von Verdauungssäften an und wirken krampflösend. Wissenschaftler der Harvard T.H. Chan School of Public Health betonen regelmäßig, dass Gewürze wie Ingwer und Kurkuma die Magen-Darm-Tätigkeit regulieren und Entzündungen hemmen können (<a href="https://www.hsph.harvard.edu/" target="_blank" rel="nofollow noopener">[3]</a>). Das bedeutet für Sie: ein festliches Menü, das fantastisch schmeckt, aber absolut leicht im Magen liegt. So fühlen Sie sich fit, beweglich und bereit für die Tanzfläche, anstatt müde auf dem Stuhl zu verharren.</p>
 <h3 id="antioxidative-zutaten-und-ihre-wirkung">Antioxidative Zutaten und ihre Wirkung</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die kalte Jahreszeit fordert unser Immunsystem heraus. Unsere Gerichte sind vollgepackt mit natürlichen Immun-Boostern. Frischer Limettensaft, Koriander und knackiges Gemüse liefern reichlich Vitamin C und Antioxidantien, die freie Radikale im Körper bekämpfen. Tofu und Seitan bieten hochwertige, leicht verdauliche Proteine, die den Muskelaufbau und die Regeneration unterstützen. Mit dieser nährstoffreichen Kombination tun Sie Ihrem Körper am letzten Tag des Jahres etwas Gutes und starten gestärkt und voller Vitalität in das neue Jahr.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-veganes-silvester-berlin-restaurant-inline-2-1.jpg" alt="Bunt gedeckter Tisch mit vietnamesischen Spezialitäten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Bunt gedeckter Tisch mit vietnamesischen Spezialitäten"><figcaption>Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure><figcaption>Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure>
 <h2 id="planen-sie-ihr-silvester-in-berlin-friedrichshain">Planen Sie Ihr Silvester in Berlin-Friedrichshain</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Friedrichshain ist der perfekte Ort, um den Silvesterabend zu verbringen. Der Bezirk bietet eine einzigartige Mischung aus urbanem Flair, historischen Sehenswürdigkeiten und einer lebendigen Kulturszene. Damit Ihr Abend reibungslos verläuft, ist eine gute Planung im Vorfeld unerlässlich. Wir haben für Sie die besten Tipps zusammengestellt, damit Ihr Silvesterfest in Berlin zu einem vollen Erfolg wird.</p>
 <h3 id="tipps-fuer-den-perfekten-abend-in-der-hauptstadt">Tipps für den perfekten Abend in der Hauptstadt</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Die Berliner Innenstadt kann an Silvester sehr voll sein, weshalb wir die Anreise mit den öffentlichen Verkehrsmitteln (U-Bahn-Station Samariterstraße oder Frankfurter Tor direkt in der Nähe) wärmstens empfehlen. Planen Sie ausreichend Zeit ein und reservieren Sie Ihren Tisch frühzeitig. Nach einem köstlichen Abendessen in unserem Restaurant können Sie die berühmte Karl-Marx-Allee entlangschlendern oder das Feuerwerk von der nahegelegenen Modersohnbrücke aus bestaunen, die einen der schönsten Panoramablicke über die Stadt bietet. Wenn Sie sich auch zu Hause kulinarisch verwöhnen und auf gesundes Kochen setzen möchten, finden Sie auf unserem Blog inspirierende <a href="https://vegangarden-berlin.de/rezepte/" target="_blank">vegane vietnamesische Rezepte</a> zum Nachkochen.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Die Berliner Innenstadt kann an Silvester sehr voll sein, weshalb wir die Anreise mit den öffentlichen Verkehrsmitteln (U-Bahn-Station Samariterstraße oder Frankfurter Tor direkt in der Nähe) wärmstens empfehlen. Planen Sie ausreichend Zeit ein und reservieren Sie Ihren Tisch frühzeitig. Nach einem köstlichen Abendessen in unserem Restaurant können Sie die berühmte Karl-Marx-Allee entlangschlendern oder das Feuerwerk von der nahegelegenen Modersohnbrücke aus bestaunen, die einen der schönsten Panoramablicke über die Stadt bietet. Wenn Sie sich auch zu Hause kulinarisch verwöhnen und auf gesundes Kochen setzen möchten, finden Sie auf unserem Blog inspirierende <a href="../index.html#ratgeber" target="_blank">vegane vietnamesische Rezepte</a> zum Nachkochen.</p>
 <h3 id="weitere-vegane-highlights-in-berlin">Weitere vegane Highlights in Berlin</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Berlin gilt unbestritten als die vegane Hauptstadt Europas. Neben exzellenten Restaurants gibt es zahlreiche rein vegane Cafés, Bäckereien, Boutiquen und sogar Supermärkte. Wenn Sie das gesamte Wochenende um Silvester in der Stadt verbringen, gibt es unendlich viel zu entdecken. Um Ihnen die Orientierung zu erleichtern und die besten Ecken der Stadt zu zeigen, empfehlen wir Ihnen <a href="https://vegangarden-berlin.de/vegan-guide-berlin/" target="_blank">unser Vegan Guide für Berlin</a>. Hier haben wir unsere persönlichen Favoriten und echten Insider-Tipps für einen rundum gelungenen, pflanzlichen Aufenthalt in Berlin für Sie zusammengestellt.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Berlin gilt unbestritten als die vegane Hauptstadt Europas. Neben exzellenten Restaurants gibt es zahlreiche rein vegane Cafés, Bäckereien, Boutiquen und sogar Supermärkte. Wenn Sie das gesamte Wochenende um Silvester in der Stadt verbringen, gibt es unendlich viel zu entdecken. Um Ihnen die Orientierung zu erleichtern und die besten Ecken der Stadt zu zeigen, empfehlen wir Ihnen <a href="../index.html#ratgeber" target="_blank">unser Vegan Guide für Berlin</a>. Hier haben wir unsere persönlichen Favoriten und echten Insider-Tipps für einen rundum gelungenen, pflanzlichen Aufenthalt in Berlin für Sie zusammengestellt.</p>
 <h2 id="frische-zutaten-und-unsere-philosophie">Frische Zutaten und unsere Philosophie für das neue Jahr</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Unsere Philosophie basiert auf Respekt – Respekt vor der Natur, vor den Tieren und vor der Gesundheit unserer Gäste. Für uns ist vegane Ernährung kein Trend, sondern eine Lebenseinstellung, die wir mit Leidenschaft in jedem einzelnen Gericht zum Ausdruck bringen. Dieses Qualitätsversprechen spüren und schmecken Sie bei jedem Bissen.</p>
 <h3 id="qualitaet-die-man-schmeckt">Qualität, die man schmeckt</h3>
@@ -85,3 +335,83 @@
 <li>[3] Harvard T.H. Chan School of Public Health. (2022). <em>The health benefits of herbs and spices in a plant-based diet</em>. https://www.hsph.harvard.edu/</li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,17 +1,269 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warum Charlottenburg zum neuen veganen Hotspot im Berliner Westen wird | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
-<p style="text-align:justify; line-height:1.6; color:#333;"><em>Die kulinarische Landschaft im Berliner Westen erlebt eine grüne Revolution, bei der eine bewusste Lebensweise und exquisiter Genuss Hand in Hand gehen. Wer heutzutage nach rein pflanzlicher Vielfalt sucht, wird feststellen, dass <strong><a href="https://vegangarden-berlin.de/vegan-guide-berlin/"><em>vegane restaurants berlin charlottenburg</em></a></strong> in ein kulinarisches Mekka verwandelt haben, das weit über die Grenzen des Bezirks hinaus strahlt. Von traditionell inspirierten, asiatischen Spezialitäten über feine Fusionsküche bis hin zu vollwertigen Rohkost-Kreationen bietet Charlottenburg anspruchsvollen Feinschmeckern ein unvergleichliches Erlebnis. Entdecken Sie in diesem Guide die besten kulinarischen Adressen im Westen Berlins und erfahren Sie, wie die gesunde pflanzliche Ernährung Ihren Alltag bereichert.</em></p>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Warum Charlottenburg zum neuen veganen Hotspot im Berliner Westen wird</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../photos/A7402927.jpg" alt="Warum Charlottenburg zum neuen veganen Hotspot im Berliner Westen wird" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+<p style="text-align:justify; line-height:1.6; color:#333;"><em>Die kulinarische Landschaft im Berliner Westen erlebt eine grüne Revolution, bei der eine bewusste Lebensweise und exquisiter Genuss Hand in Hand gehen. Wer heutzutage nach rein pflanzlicher Vielfalt sucht, wird feststellen, dass <strong><a href="../index.html#ratgeber"><em>vegane restaurants berlin charlottenburg</em></a></strong> in ein kulinarisches Mekka verwandelt haben, das weit über die Grenzen des Bezirks hinaus strahlt. Von traditionell inspirierten, asiatischen Spezialitäten über feine Fusionsküche bis hin zu vollwertigen Rohkost-Kreationen bietet Charlottenburg anspruchsvollen Feinschmeckern ein unvergleichliches Erlebnis. Entdecken Sie in diesem Guide die besten kulinarischen Adressen im Westen Berlins und erfahren Sie, wie die gesunde pflanzliche Ernährung Ihren Alltag bereichert.</em></p>
 <h2 id="warum-charlottenburg-veganer-hotspot-wird">Warum Charlottenburg zum neuen veganen Hotspot im Berliner Westen wird</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">In den letzten Jahren hat sich der Berliner Westen, insbesondere der traditionsreiche Bezirk Charlottenburg, von einem bürgerlichen und eher konservativen Pflaster zu einem innovativen Zentrum für bewusste Ernährung entwickelt. Während früher vor allem das östliche Berlin mit Friedrichshain und Prenzlauer Berg als Trendsetter für alternative Lebensentwürfe galt, hat Charlottenburg aufgeholt und eine ganz eigene, stilvolle Interpretation des veganen Lifestyles etabliert. Hier verschmelzen gehobene Gastronomie, biologische Vielfalt und ein stetig wachsendes Bewusstsein für ganzheitliche Gesundheit zu einer harmonischen Einheit.</p>
 <h3 id="tradition-trifft-moderne-pflanzenkueche">Tradition trifft moderne Pflanzenküche</h3>
@@ -21,17 +273,16 @@
 <h2 id="die-top-adressen-fuer-vegane-restaurants-berlin-charlottenburg">Die Top-Adressen für vegane restaurants berlin charlottenburg</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Wer gezielt nach erstklassigen kulinarischen Erlebnissen sucht, findet in Charlottenburg eine beeindruckende Dichte an hervorragenden gastronomischen Betrieben. Egal ob Sie ein romantisches Dinner, einen schnellen, aber gesunden Lunch oder ein gemütliches Frühstück am Wochenende planen – der Bezirk hat für jeden Anlass das passende Angebot. Die Vielfalt reicht von asiatischen Spezialitäten über europäische Klassiker bis hin zu innovativen Raw-Food-Konzepten, die alle auf rein pflanzlicher Basis zubereitet werden.</p>
 <h3 id="vietnamesische-vielfalt-und-traditionelle-heilkraeuter">Vietnamesische Vielfalt und traditionelle Heilkräuter</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Ein absolutes Highlight im Westen Berlins sind die veganen vietnamesischen Restaurants. Die vietnamesische Küche eignet sich von Natur aus hervorragend für eine pflanzliche Ernährung, da sie traditionell stark auf frischem Gemüse, Hülsenfrüchten und Reis basiert. In Charlottenburg wird diese Tradition auf ein neues Level gehoben. Anstelle von künstlichen Fleischersatzprodukten stehen hier frische Pilze, Tofu und eine unglaubliche Auswahl an Kräutern im Mittelpunkt. Wenn Sie die Authentizität und Tiefe dieser Küche selbst erleben möchten, lohnt sich ein Blick in <a href="https://vegangarden-berlin.de/3d-flip-book/270/">unsere Speisekarte</a>, die zeigt, wie harmonisch sich traditionelle Rezepturen und moderne, rein pflanzliche Ernährung verbinden lassen.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Ein absolutes Highlight im Westen Berlins sind die veganen vietnamesischen Restaurants. Die vietnamesische Küche eignet sich von Natur aus hervorragend für eine pflanzliche Ernährung, da sie traditionell stark auf frischem Gemüse, Hülsenfrüchten und Reis basiert. In Charlottenburg wird diese Tradition auf ein neues Level gehoben. Anstelle von künstlichen Fleischersatzprodukten stehen hier frische Pilze, Tofu und eine unglaubliche Auswahl an Kräutern im Mittelpunkt. Wenn Sie die Authentizität und Tiefe dieser Küche selbst erleben möchten, lohnt sich ein Blick in <a href="../index.html#speisekarte">unsere Speisekarte</a>, die zeigt, wie harmonisch sich traditionelle Rezepturen und moderne, rein pflanzliche Ernährung verbinden lassen.</p>
 <h3 id="internationale-koestlichkeiten-von-sushi-bis-mediterran">Internationale Köstlichkeiten: Von Sushi bis hin zu mediterranen Spezialitäten</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Neben der asiatischen Küche bietet Charlottenburg auch eine reiche Auswahl an internationalen pflanzlichen Spezialitäten. Hier finden Sie beispielsweise rein vegane Sushi-Bars, die statt Fisch kreative Füllungen wie marinierte Rote Bete, Avocado, Mango und flambierten Tofu verwenden. Auch die mediterrane Küche ist stark vertreten: Vegane Pizzerien, die mit hausgemachtem Cashew-Käse arbeiten, und Tapas-Bars, die klassische spanische Häppchen rein pflanzlich interpretieren, erfreuen sich großer Beliebtheit. Diese Vielfalt zeigt, dass die vegane Küche keine Grenzen kennt und kulinarische Einflüsse aus der ganzen Welt in Charlottenburg zusammenfließen.</p>
 <h3 id="gesunde-cafes-und-vollwertige-bowls">Gesunde Cafés und vollwertige Bowls für den Alltag</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Für den schnellen Hunger zwischendurch oder einen entspannten Nachmittag bieten zahlreiche Cafés in Charlottenburg gesunde Alternativen. Von zuckerfreien, glutenfreien Kuchen über frische Säfte bis hin zu reichhaltigen Bowls mit Quinoa, Edamame, Avocado und hausgemachten Dressings ist alles dabei. Diese Angebote sind ideal für all jene, die auch im stressigen Arbeitsalltag Wert auf eine nährstoffreiche und gesunde Ernährung legen. Viele dieser Cafés arbeiten eng mit regionalen Bio-Bauern zusammen, um die Frische und Qualität ihrer Zutaten zu garantieren.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-restaurants-berlin-charlottenburg-inline-1-1.jpg" alt="Gemütliche Sitzecke im Vegan Garden Berlin" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Gemütliche Sitzecke im Vegan Garden Berlin"><figcaption>Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure><figcaption>Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure>
 <h2 id="gesundheitlicher-mehrwert-der-veganen-vietnamesischen-kueche">Der gesundheitliche Mehrwert der veganen vietnamesischen Küche</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die vegane vietnamesische Küche ist weit mehr als nur ein geschmackliches Erlebnis – sie ist eine Wohltat für den gesamten Organismus. Basierend auf den Prinzipien von Yin und Yang und der Fünf-Elemente-Lehre ist jedes Gericht so konzipiert, dass es Körper und Geist in Einklang bringt. Die Kombination aus frischen Zutaten, schonenden Garverfahren und dem gezielten Einsatz von Heilkräutern macht diese Küche zu einer der gesündesten der Welt.</p>
 <h3 id="heilkraft-vietnamesischer-kraeuter">Die Heilkraft frischer vietnamesischer Kräuter und Gewürze</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Ein zentrales Element der vietnamesischen Küche ist die großzügige Verwendung von frischen Kräutern wie Koriander, thailändischem Basilikum, Perilla (Shiso) und vietnamesischer Melisse. Diese Pflanzen sind nicht nur Geschmacksträger, sondern besitzen auch eine starke medizinische Wirkung. Wissenschaftliche Studien zeigen, dass viele der in der vietnamesischen Küche verwendeten Kräuter und Gewürze reich an Antioxidantien sind und starke entzündungshemmende sowie verdauungsfördernde Eigenschaften besitzen (<a href="https://pubmed.ncbi.nlm.nih.gov/30651162/" target="_blank" rel="nofollow noopener">[2]</a>). Ingwer und Galgant wärmen den Magen, während Zitronengras antibakteriell wirkt und das Immunsystem stärkt. Wer bei der Zubereitung zu Hause auf die richtige Balance achten möchte, findet inspirierende Ideen über <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Ein zentrales Element der vietnamesischen Küche ist die großzügige Verwendung von frischen Kräutern wie Koriander, thailändischem Basilikum, Perilla (Shiso) und vietnamesischer Melisse. Diese Pflanzen sind nicht nur Geschmacksträger, sondern besitzen auch eine starke medizinische Wirkung. Wissenschaftliche Studien zeigen, dass viele der in der vietnamesischen Küche verwendeten Kräuter und Gewürze reich an Antioxidantien sind und starke entzündungshemmende sowie verdauungsfördernde Eigenschaften besitzen (<a href="https://pubmed.ncbi.nlm.nih.gov/30651162/" target="_blank" rel="nofollow noopener">[2]</a>). Ingwer und Galgant wärmen den Magen, während Zitronengras antibakteriell wirkt und das Immunsystem stärkt. Wer bei der Zubereitung zu Hause auf die richtige Balance achten möchte, findet inspirierende Ideen über <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a>.</p>
 <h3 id="leichtigkeit-durch-daempfen-und-kurzes-anbraten">Leichtigkeit und Vitalität: Dämpfen statt Frittieren</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Im Gegensatz zu vielen westlichen oder stark verarbeiteten Speisen zeichnet sich die vietnamesische Küche durch ihre Leichtigkeit aus. Viele Gerichte werden gedämpft oder nur sehr kurz im Wok angebraten. Dadurch bleiben die wasserlöslichen Vitamine und hitzeempfindlichen Enzyme im Gemüse weitestgehend erhalten. Diese schonende Zubereitung entlastet das Verdauungssystem und sorgt dafür, dass die Nährstoffe optimal vom Körper aufgenommen werden können. Nach dem Essen fühlt man sich energiegeladen und vital, statt von einem schweren „Food-Koma“ ermüdet zu werden.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
@@ -42,23 +293,22 @@
 <h2 id="qualitaetsmerkmale-guter-veganer-gastronomie">Woran man herausragende vegane Restaurants erkennt</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Nicht jedes Restaurant, das vegane Gerichte auf der Karte anbietet, erfüllt auch die hohen Ansprüche an eine gesunde und nachhaltige Gastronomie. Für gesundheitsbewusste Genießer ist es wichtig, die Spreu vom Weizen zu trennen. Erstklassige vegane Restaurants zeichnen sich durch Transparenz, handwerkliches Können und eine tiefe Wertschätzung für die verwendeten Naturprodukte aus.</p>
 <h3 id="frische-zutaten-und-lokaler-bezug">Frische der Zutaten und lokaler Bezug</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Ein herausragendes pflanzliches Restaurant kocht saisonal und bezieht seine Produkte nach Möglichkeit von regionalen Erzeugern. Je kürzer die Transportwege, desto frischer das Gemüse und desto höher der Vitamin- und Mineralstoffgehalt. Bei der Auswahl unserer Gerichte achten wir penibel darauf, dass ausschließlich <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a> verwendet werden. Hochwertige Speiselokale meiden zudem weitestgehend hochgradig verarbeitete industrielle Ersatzprodukte, die oft reich an gesättigten Fetten, Natrium und künstlichen Bindemitteln sind, und setzen stattdessen auf vollwertige Lebensmittel.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Ein herausragendes pflanzliches Restaurant kocht saisonal und bezieht seine Produkte nach Möglichkeit von regionalen Erzeugern. Je kürzer die Transportwege, desto frischer das Gemüse und desto höher der Vitamin- und Mineralstoffgehalt. Bei der Auswahl unserer Gerichte achten wir penibel darauf, dass ausschließlich <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a> verwendet werden. Hochwertige Speiselokale meiden zudem weitestgehend hochgradig verarbeitete industrielle Ersatzprodukte, die oft reich an gesättigten Fetten, Natrium und künstlichen Bindemitteln sind, und setzen stattdessen auf vollwertige Lebensmittel.</p>
 <h3 id="verzicht-auf-chemische-zusatzstoffe">Verzicht auf künstliche Aromen und chemische Zusatzstoffe</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">In der asiatischen und vietnamesischen Küche wird leider häufig noch Glutamat (Mononatriumglutamat) als Geschmacksverstärker eingesetzt. Ein echtes Premium-Restaurant verzichtet vollständig auf solche chemischen Zusätze und erzeugt die geschmackliche Tiefe (Umami) auf natürliche Weise – zum Beispiel durch das stundenlange Auskochen von Gemüse, Pilzen und traditionellen Gewürzen wie Sternanis, Zimt und Nelken. Die Weltgesundheitsorganisation (WHO) betont regelmäßig die Wichtigkeit einer nährstoffreichen Ernährung, die frei von unnötigen chemischen Zusätzen und reich an naturbelassenen Lebensmitteln ist, um das allgemeine Wohlbefinden zu sichern (<a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="nofollow noopener">[3]</a>).</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-restaurants-berlin-charlottenburg-inline-2-1.jpg" alt="Bunt gedeckter Tisch mit vietnamesischen Spezialitäten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Bunt gedeckter Tisch mit vietnamesischen Spezialitäten"><figcaption>Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure><figcaption>Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure>
 <h2 id="kulinarischer-vergleich-charlottenburg-und-friedrichshain">Der kulinarische Vergleich: Charlottenburg und Friedrichshain</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Berlin ist eine Stadt der Kontraste, und das spiegelt sich auch in der veganen Gastronomie wider. Während Charlottenburg im Westen und Friedrichshain im Osten beide als Vorreiter für pflanzliche Ernährung gelten, unterscheiden sie sich stark in ihrer Atmosphäre, ihrem kulinarischen Fokus und dem Gesamterlebnis.</p>
 <h3 id="charlottenburg-die-oase-des-ruhigen-genusses">Charlottenburg: Die Oase des ruhigen Genusses</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">In Charlottenburg geht es beim Restaurantbesuch oft etwas ruhiger, eleganter und gesetzter zu. Die Restaurants bieten ein stilvolles Ambiente, in dem man entspannt verweilen und das Essen in privater Atmosphäre genießen kann. Der Fokus liegt stark auf hoher Servicequalität, ästhetisch ansprechend angerichteten Tellern und einer harmonischen Weinkarte (oft auch Bio-Weine). Es ist der perfekte Ort für Geschäftsessen, festliche Anlässe mit der Familie oder ein stilvolles Abendessen in ruhiger Runde.</p>
 <h3 id="friedrichshain-das-lebendige-zentrum-des-veganen-lifestyles">Friedrichshain: Das lebendige Zentrum des veganen Lifestyles</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Friedrichshain hingegen pulsiert vor Energie, Kreativität und studentischem Charme. Hier ist die vegane Szene bunt, unkonventionell und extrem dynamisch. Ein perfektes Beispiel dafür ist <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a>. Inmitten des lebendigen Kiezes verbinden wir die lebhafte, herzliche Atmosphäre Vietnams mit modernem, urbanem Design. Hier treffen sich Gleichgesinnte, um in ungezwungener Umgebung gesunde, pflanzliche Köstlichkeiten zu teilen. Beide Bezirke haben ihren ganz eigenen Reiz und ergänzen sich perfekt zu einem ganzheitlichen Bild der Berliner Food-Szene.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Friedrichshain hingegen pulsiert vor Energie, Kreativität und studentischem Charme. Hier ist die vegane Szene bunt, unkonventionell und extrem dynamisch. Ein perfektes Beispiel dafür ist <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a>. Inmitten des lebendigen Kiezes verbinden wir die lebhafte, herzliche Atmosphäre Vietnams mit modernem, urbanem Design. Hier treffen sich Gleichgesinnte, um in ungezwungener Umgebung gesunde, pflanzliche Köstlichkeiten zu teilen. Beide Bezirke haben ihren ganz eigenen Reiz und ergänzen sich perfekt zu einem ganzheitlichen Bild der Berliner Food-Szene.</p>
 <h2 id="praktische-tipps-fuer-ihren-veganen-restaurantbesuch">Praktische Tipps für Ihren veganen Restaurantbesuch in Charlottenburg</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Damit Ihr kulinarischer Ausflug im Westen Berlins zu einem vollen Erfolg wird, gibt es einige praktische Aspekte zu beachten. Charlottenburg ist ein beliebter Bezirk, und die besten Tische sind oft heiß begehrt. Mit ein wenig Vorbereitung steht einem entspannten Genussmoment jedoch nichts im Wege.</p>
 <h3 id="reservierung-und-stosszeiten">Rechtzeitige Reservierung und beste Besuchszeiten</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Besonders an den Wochenenden und an Feiertagen sind die beliebtesten veganen Adressen in Charlottenburg schnell ausgebucht. Wir empfehlen daher dringend, Ihren Tisch im Voraus zu sichern. Viele moderne Restaurants bieten unkomplizierte Online-Reservierungssysteme an. Wer es etwas ruhiger mag, kann auch auf die späten Mittagsstunden unter der Woche ausweichen. Dann lässt sich die entspannte Atmosphäre des Bezirks besonders intensiv genießen, und man entgeht dem typischen Abendtrubel.</p>
 <h3 id="vegan-mit-nicht-veganern-erfolgreiche-kompromisse">Vegan speisen mit Nicht-Veganern: So gelingt das gemeinsame Dinner</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Ein großer Vorteil der modernen vietnamesischen und asiatischen Pflanzenküche ist ihre breite Akzeptanz. Selbst überzeugte Fleischesser vermissen bei den aromatischen, würzigen und komplexen Geschmacksprofilen vietnamesischer Suppen und Currys absolut nichts. Wenn Sie mit Freunden oder Familie essen gehen, die sich nicht rein pflanzlich ernähren, sind asiatische Fusion-Restaurants der ideale Kompromiss. Die Gerichte sind so reich an natürlichem Umami, dass der Fokus ganz auf dem gemeinsamen Genuss liegt und ideologische Diskussionen gar nicht erst entstehen. Erfahren Sie mehr über <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a>, die zeigt, wie Essen Menschen verbindet und Brücken baut.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Ein großer Vorteil der modernen vietnamesischen und asiatischen Pflanzenküche ist ihre breite Akzeptanz. Selbst überzeugte Fleischesser vermissen bei den aromatischen, würzigen und komplexen Geschmacksprofilen vietnamesischer Suppen und Currys absolut nichts. Wenn Sie mit Freunden oder Familie essen gehen, die sich nicht rein pflanzlich ernähren, sind asiatische Fusion-Restaurants der ideale Kompromiss. Die Gerichte sind so reich an natürlichem Umami, dass der Fokus ganz auf dem gemeinsamen Genuss liegt und ideologische Diskussionen gar nicht erst entstehen. Erfahren Sie mehr über <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a>, die zeigt, wie Essen Menschen verbindet und Brücken baut.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
 <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 1.15em;">Lust auf frische, gesunde vietnamesische Küche?</h4>
 <p style="margin: 0 0 16px 0; font-size: 0.95em; color: #555;">Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
@@ -71,7 +321,7 @@
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Reservierung:</strong> <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="color: #4CAF50; text-decoration: underline; font-weight: 600;">Online Tisch reservieren</a> oder per Telefon.</p>
 </div>
 <h2 id="fazit">Fazit</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Berlin-Charlottenburg hat sich in den letzten Jahren eindrucksvoll zu einer der Top-Adressen für anspruchsvolle, pflanzliche Gastronomie entwickelt. Die Zeiten, in denen man für erstklassiges veganes Essen zwingend in den Osten Berlins fahren musste, sind längst vorbei. Charlottenburg beweist, dass gehobener Genuss, gesundheitlicher Mehrwert und ökologische Nachhaltigkeit eine perfekte Symbiose eingehen können. Ob traditionelle vietnamesische Heilkräuterküche oder internationale Fusionsgerichte – der Bezirk bereichert den kulinarischen Horizont auf ganzer Linie. Für jeden, der die Vielfalt der Hauptstadt erkunden möchte, sind die exquisiten Angebote für <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">vegane restaurants berlin charlottenburg</a> eine absolute Empfehlung. Besuchen Sie uns bei Ihrer nächsten Entdeckungstour und lassen Sie sich von der aromatischen Fülle unserer rein pflanzlichen Küche verzaubern.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Berlin-Charlottenburg hat sich in den letzten Jahren eindrucksvoll zu einer der Top-Adressen für anspruchsvolle, pflanzliche Gastronomie entwickelt. Die Zeiten, in denen man für erstklassiges veganes Essen zwingend in den Osten Berlins fahren musste, sind längst vorbei. Charlottenburg beweist, dass gehobener Genuss, gesundheitlicher Mehrwert und ökologische Nachhaltigkeit eine perfekte Symbiose eingehen können. Ob traditionelle vietnamesische Heilkräuterküche oder internationale Fusionsgerichte – der Bezirk bereichert den kulinarischen Horizont auf ganzer Linie. Für jeden, der die Vielfalt der Hauptstadt erkunden möchte, sind die exquisiten Angebote für <a href="../index.html#ratgeber">vegane restaurants berlin charlottenburg</a> eine absolute Empfehlung. Besuchen Sie uns bei Ihrer nächsten Entdeckungstour und lassen Sie sich von der aromatischen Fülle unserer rein pflanzlichen Küche verzaubern.</p>
 <div style="background:#fafafa; border-top: 1px solid #eee; padding-top: 15px; margin-top: 25px; font-size: 0.85em; color: #666;">
   <strong>Wissenschaftliche Quellen:</strong></p>
 <ul style="padding-left: 20px; margin-top: 5px;">
@@ -80,3 +330,83 @@
 <li>[3] World Health Organization (WHO). (2020). <em>Healthy diet</em>. https://www.who.int/news-room/fact-sheets/detail/healthy-diet</li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

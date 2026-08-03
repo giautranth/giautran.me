@@ -1,69 +1,319 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="https://vegangarden-berlin.de/restaurant/#reservierung?utm_source=vegangarden-berlin.de&amp;utm_medium=author_box&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/speisekarte/?utm_source=vegangarden-berlin.de&amp;utm_medium=author_box&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/article_speisekarte.jpg" alt="Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
 <p style="text-align: justify; line-height: 1.6; color: #333;"><em>Wer nach einem langen, ereignisreichen Tag in der Hauptstadt auf der Suche nach einer gesunden, nahrhaften und gleichzeitig preiswerten Mahlzeit ist, stellt schnell fest: Ein hervorragendes <span style="font-style: normal; font-weight: bold;">veganes abendessen berlin günstig</span> zu finden, ist in vielen Stadtteilen gar nicht so einfach. Berlin gilt zwar weltweit als das unbestrittene Mekka für die vegane Lebensweise, doch die Preise in gehobenen Trend-Restaurants steigen kontinuierlich. In diesem umfassenden Ratgeber zeigen wir Ihnen, wie Sie ohne Kompromisse bei der Qualität und dem Geschmack für unter 15 Euro pro Person schlemmen können. Erfahren Sie, warum die traditionelle vietnamesische Küche die ideale Wahl für ein leichtes Abendessen ist, wie frische Heilkräuter Ihre Gesundheit fördern und wo Sie in Friedrichshain ein echtes kulinarisches Paradies entdecken können, das sowohl Ihren Körper als auch Ihren Geldbeutel schont.</em></p>
 <h2 id="die-suche-nach-guenstigem-veganem-essen-in-berlin">Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Berlin zieht Menschen aus aller Welt an, die eine bewusste, umweltfreundliche und rein pflanzliche Lebensweise schätzen. In fast keinem anderen europäischen Ballungszentrum ist die Dichte an rein veganen Cafés, Imbissen und Spezialitätenrestaurants so hoch wie hier. Dennoch stellt die Inflation viele Genießer vor logistische Herausforderungen. Vor allem am Abend, wenn man gemütlich mit Freunden oder der Familie zusammensitzen möchte, explodieren die Rechnungen in vielen Szenevierteln wie Mitte oder Prenzlauer Berg oft schnell.</p>
-<p style="text-align:justify; line-height:1.6; color:#333;">Für Studierende, Familien oder preisbewusste Genießer stellt sich deshalb die Frage: Muss gesunde, hochwertige vegane Ernährung zwingend teuer sein? Die erfreuliche Antwort lautet: Nein. Mit umfassenden Hilfestellungen wie <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">unser Vegan Guide für Berlin</a> zeigen wir, dass eine exzellente Nährstoffversorgung und ein kleines Budget sich hervorragend ergänzen. Besonders die asiatische Kulinarik bietet hier geniale Ansätze, da sie traditionell auf günstigen, aber extrem nährstoffreichen Grundnahrungsmitteln wie Reis, Nudeln, Tofu und einer unglaublichen Vielfalt an frischem Gemüse basiert. So lässt sich ein veganes Abendessen in Berlin günstig und zugleich auf Spitzenniveau gestalten.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Für Studierende, Familien oder preisbewusste Genießer stellt sich deshalb die Frage: Muss gesunde, hochwertige vegane Ernährung zwingend teuer sein? Die erfreuliche Antwort lautet: Nein. Mit umfassenden Hilfestellungen wie <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a> zeigen wir, dass eine exzellente Nährstoffversorgung und ein kleines Budget sich hervorragend ergänzen. Besonders die asiatische Kulinarik bietet hier geniale Ansätze, da sie traditionell auf günstigen, aber extrem nährstoffreichen Grundnahrungsmitteln wie Reis, Nudeln, Tofu und einer unglaublichen Vielfalt an frischem Gemüse basiert. So lässt sich ein veganes Abendessen in Berlin günstig und zugleich auf Spitzenniveau gestalten.</p>
 <h2 id="die-top-vorteile-einer-pflanzlichen-ernaehrung-am-abend">Die gesundheitlichen Vorteile eines leichten, pflanzlichen Abendessens</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Wahl unserer Mahlzeiten am Abend hat einen direkten Einfluss auf unsere Schlafqualität, die nächtliche Regeneration der Zellen und unser allgemeines Energielevel am darauffolgenden Morgen. Während schwere, fleischhaltige oder stark fettige Gerichte den Magen-Darm-Trakt über Stunden hinweg belasten und die wichtigen Tiefschlafphasen empfindlich stören, wirkt ein leichtes, pflanzliches Abendessen wie ein wahrer Erholungs-Booster für den gesamten Organismus.</p>
 <h3 id="bessere-verdauung-und-schlafqualitaet">Leichte Verdauung und verbesserte Schlafqualität</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein abendliches Gericht, das reich an Ballaststoffen und arm an gesättigten Fettsäuren ist, verkürzt die Verweildauer der Nahrung im Magen-Darm-Trakt erheblich. Im Gegensatz zu tierischen Produkten wie Fleisch, Eiern oder schwerem Käse, die oft stundenlang schwer im Magen liegen, kann der menschliche Körper pflanzliche Proteine und schonend gegartes Gemüse wesentlich effizienter aufspalten. Wissenschaftliche Untersuchungen zeigen, dass eine ballaststoffreiche, pflanzliche Ernährung nicht nur die gesunde Darmtätigkeit fördert, sondern auch direkt zu tieferen und erholsameren Schlafzyklen beiträgt (<a href="https://www.health.harvard.edu/" target="_blank" rel="nofollow noopener">[2]</a>). Durch den bewussten Verzicht auf gesättigte Fette am Abend sinkt das Risiko für nächtliches Sodbrennen und unruhigen Schlaf drastisch.</p>
 <h3 id="optimale-naehrstoffversorgung-ohne-schwere">Maximale Nährstoffdichte ohne Völlegefühl</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein intelligent zusammengestelltes veganes Abendessen kombiniert komplexe Kohlenhydrate, leicht verdauliche Proteine (wie marinierter Tofu oder Seitan) und ein breites Spektrum an Vitaminen und Mineralstoffen aus frischem Saisongemüse. Die Deutsche Gesellschaft für Ernährung (DGE) hebt in ihren offiziellen Empfehlungen hervor, dass eine ausgewogene Zufuhr von pflanzlichen Mikronährstoffen und Antioxidantien das Immunsystem nachhaltig stärkt und chronischen Zivilisationskrankheiten vorbeugen kann (<a href="https://www.dge.de/" target="_blank" rel="nofollow noopener">[1]</a>). Wenn Sie sich am Abend für frische Kräuter, rohe Sprossen und gedünstetes Gemüse entscheiden, tanken Sie wertvolle Vitalstoffe, ohne Ihren Körper mit unnötigen Kalorien oder Cholesterin zu belasten.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-veganes-abendessen-berlin-guenstig-inline-1-1.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten"><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
 <h2 id="veganes-abendessen-berlin-guenstig-unter-15-euro-bei-vegan-garden">Veganes Abendessen Berlin günstig: Unsere kulinarischen Highlights unter 15€</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Sollten Sie nach der idealen Kombination aus Gesundheit, Geschmack und Budgetfreundlichkeit suchen, laden wir Sie herzlich in <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a> ein. Unsere Küche hat es sich zur Aufgabe gemacht, die traditionelle vietnamesische Kochkunst komplett pflanzlich zu interpretieren. Dabei setzen wir konsequent auf frische Zutaten und faire Preise: Nahezu jedes unserer sättigenden Hauptgerichte liegt deutlich unter der 15-Euro-Grenze.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Sollten Sie nach der idealen Kombination aus Gesundheit, Geschmack und Budgetfreundlichkeit suchen, laden wir Sie herzlich in <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a> ein. Unsere Küche hat es sich zur Aufgabe gemacht, die traditionelle vietnamesische Kochkunst komplett pflanzlich zu interpretieren. Dabei setzen wir konsequent auf frische Zutaten und faire Preise: Nahezu jedes unserer sättigenden Hauptgerichte liegt deutlich unter der 15-Euro-Grenze.</p>
 <h3 id="unsere-vietnamesischen-bowls-und-hauptgerichte">Nahrhafte Bowls und traditionelle Suppen unter 15€</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Der absolute König unter den wärmenden Abendmahlzeiten ist unsere vegane Pho. Die traditionelle vietnamesische Nudelsuppe basiert auf einer kräftigen Gemüsebrühe, die über viele Stunden hinweg mit Zimt, Nelken, Sternanis und gegrilltem Ingwer köchelt. Serviert mit zarten Reisnudeln, Tofu, Seitan und einer Wagenladung frischer Kräuter ist sie ein vollwertiges Abendessen für weit unter 15 Euro. Für Liebhaber von knackiger Frische bieten wir zudem vielfältige Reisnudel-Bowls an, garniert mit frischem Salat, Gurken, eingelegten Karotten, gerösteten Erdnüssen und Röstzwiebeln. Werfen Sie einfach einen Blick in <a href="https://vegangarden-berlin.de/speisekarte/">unsere Speisekarte</a>, um sich von der Vielfalt inspirieren zu lassen.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Der absolute König unter den wärmenden Abendmahlzeiten ist unsere vegane Pho. Die traditionelle vietnamesische Nudelsuppe basiert auf einer kräftigen Gemüsebrühe, die über viele Stunden hinweg mit Zimt, Nelken, Sternanis und gegrilltem Ingwer köchelt. Serviert mit zarten Reisnudeln, Tofu, Seitan und einer Wagenladung frischer Kräuter ist sie ein vollwertiges Abendessen für weit unter 15 Euro. Für Liebhaber von knackiger Frische bieten wir zudem vielfältige Reisnudel-Bowls an, garniert mit frischem Salat, Gurken, eingelegten Karotten, gerösteten Erdnüssen und Röstzwiebeln. Werfen Sie einfach einen Blick in <a href="../index.html#speisekarte">unsere Speisekarte</a>, um sich von der Vielfalt inspirieren zu lassen.</p>
 <h3 id="sharing-is-caring-tapas-kombinationen">Kreative vietnamesische Tapas zum Teilen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Das Teilen von Speisen gehört in Vietnam fest zur sozialen Kultur. Unsere pflanzlichen Tapas bieten die perfekte Gelegenheit, gemeinsam mit Freunden eine kulinarische Entdeckungsreise zu erleben. Von knusprigen Frühlingsrollen über frisch gerollte Sommerrollen mit cremiger Erdnusssauce bis hin zu gedämpften Dumplings und in Betelblätter gewickeltem Tofu – bei Preisen zwischen 4,50 und 7,00 Euro pro Portion können Sie problemlos zwei bis drei verschiedene Tapas-Spezialitäten wählen und bleiben inklusive eines erfrischenden Getränks locker unter 15 Euro. So genießen Sie die Vielfalt Hanois in einer geselligen, ungezwungenen Atmosphäre.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
 <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 1.15em;">Lust auf frische, gesunde vietnamesische Küche?</h4>
 <p style="margin: 0 0 16px 0; font-size: 0.95em; color: #555;">Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
-<p>  <a href="https://vegangarden-berlin.de/restaurant/#reservierung?utm_source=vegangarden-berlin.de&amp;utm_medium=banner_content&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Tisch jetzt reservieren</a>
+<p>  <a href="../index.html#restaurant#reservierung?utm_source=vegangarden-berlin.de&amp;utm_medium=banner_content&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Tisch jetzt reservieren</a>
 </div>
 <h2 id="traditionelle-heilkraeuter-in-der-vietnamesischen-kueche">Die Kraft vietnamesischer Heilkräuter: Geschmack trifft Gesundheit</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Was die vegane Küche Vietnams so unvergleichlich gesund und aromatisch macht, ist der großzügige Einsatz von frischen Wild- und Heilkräutern. In der vietnamesischen Kultur sind diese Kräuter weit mehr als eine hübsche Dekoration am Tellerrand. Sie sind ein integraler Bestandteil der traditionellen Volksmedizin und werden gezielt eingesetzt, um die Verdauung zu harmonisieren, Entzündungen zu hemmen und das Wohlbefinden zu steigern.</p>
 <h3 id="koriander-und-minze-fuer-den-darm">Koriander und Minze: Wohltat für den Magen-Darm-Trakt</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Koriander (Rau Mùi) und Minze (Rau Húng Lủi) bilden das aromatische Fundament vieler unserer Kreationen. Koriander ist reich an ätherischen Ölen, die nachweislich die Produktion von körpereigenen Verdauungssäften stimulieren, Magenkrämpfe lindern und die Fettverdauung beschleunigen. Die vietnamesische Minze wirkt dank ihres hohen Mentholgehalts krampflösend auf die glatte Muskulatur des Magen-Darm-Trakts. Wissenschaftliche Fachpublikationen bestätigen die stark antibakteriellen, antioxidativen und beruhigenden Eigenschaften dieser Wildkräuter auf das sensible Mikrobiom des Menschen (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[3]</a>). Eine detaillierte Übersicht unserer grünen Superfoods finden Sie unter <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Koriander (Rau Mùi) und Minze (Rau Húng Lủi) bilden das aromatische Fundament vieler unserer Kreationen. Koriander ist reich an ätherischen Ölen, die nachweislich die Produktion von körpereigenen Verdauungssäften stimulieren, Magenkrämpfe lindern und die Fettverdauung beschleunigen. Die vietnamesische Minze wirkt dank ihres hohen Mentholgehalts krampflösend auf die glatte Muskulatur des Magen-Darm-Trakts. Wissenschaftliche Fachpublikationen bestätigen die stark antibakteriellen, antioxidativen und beruhigenden Eigenschaften dieser Wildkräuter auf das sensible Mikrobiom des Menschen (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[3]</a>). Eine detaillierte Übersicht unserer grünen Superfoods finden Sie unter <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a>.</p>
 <h3 id="perilla-und-thaibasilikum">Perilla-Blätter und Thaibasilikum: Entzündungshemmende Aromen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein absoluter Geheimtipp der asiatischen Heilkräuterkunde ist das Perillablatt (Tía Tô). Mit seiner charakteristischen, purpurgrünen Färbung und dem herbsüßen, leicht minzigen Aroma ist es eine echte Geheimwaffe für das Immunsystem. Perilla enthält erstaunliche Mengen an Rosmarinsäure, die stark antiallergisch und entzündungshemmend wirkt. In Vietnam wird das Blatt traditionell bei Erkältungssymptomen und Bronchialbeschwerden gereicht. Thaibasilikum (Húng Quế) wiederum verströmt eine zarte Anisnote und wirkt durch die enthaltenen Flavonoide als natürlicher Zellschutz. Die Kombination dieser Kräuter macht Ihr günstiges Abendessen zu einer echten Frischzellenkur für den Organismus.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-veganes-abendessen-berlin-guenstig-inline-2-1.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen"><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
 <h2 id="spartipps-fuer-veganer-in-berlin">Clevere Spartipps für ein gesundes und günstiges veganes Abendessen</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Um in einer aufregenden Metropole wie Berlin gesund, abwechslungsreich und gleichzeitig extrem kostengünstig vegan zu leben, braucht es kein riesiges Einkommen, sondern lediglich ein paar clevere Gewohnheiten. Mit den richtigen Strategien lässt sich das pulsierende Berliner Gastro-Leben auch mit einem schmalen Budget voll auskosten.</p>
 <h3 id="auswahl-der-richtigen-viertel">Berlin-Friedrichshain als veganer Hotspot</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Wahl des Stadtteils entscheidet massiv über das Preisniveau auf der Speisekarte. Während in touristisch überlaufenen Gegenden wie Mitte oder Charlottenburg horrende Mieten auf die Speisen umgelegt werden müssen, bietet Berlin-Friedrichshain eine fantastische Dichte an alternativen, studentischen und extrem fairen Lokalen. Durch den gesunden Wettbewerb der veganen Szene rund um die Frankfurter Allee bleibt das Niveau der Küche extrem hoch, während die Preise erfreulich bodenständig kalkuliert werden. Ein abendlicher Spaziergang durch den Kiez lohnt sich also immer, um neue, preiswerte Perlen zu entdecken.</p>
 <h3 id="saisonale-und-regionale-zutaten-bevorzugen">Saisonale und regionale Frische bevorzugen</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Sollten Sie an manchen Abenden lieber den Kochlöffel in den eigenen vier Wänden schwingen wollen, lautet das wichtigste Sparkonzept: Kaufen Sie saisonal und regional ein. Heimische Gemüsesorten wie Karotten, Pastinaken, Kohl, Kürbis oder frischer Spinat sind um ein Vielfaches günstiger als importierte Exoten wie Avocados oder Spargel im tiefsten Winter. Tolle, preiswerte Inspirationen für die heimische Küche finden Sie auf unserer Plattform unter <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a>. Kombinieren Sie einfache, nährstoffreiche Grundzutaten wie Naturreis, Reisnudeln oder rote Linsen mit knackigem Gemüse und Tofu – so zaubern Sie im Handumdrehen ein gesundes Abendessen, das pro Portion oft weniger als 3 Euro kostet.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Sollten Sie an manchen Abenden lieber den Kochlöffel in den eigenen vier Wänden schwingen wollen, lautet das wichtigste Sparkonzept: Kaufen Sie saisonal und regional ein. Heimische Gemüsesorten wie Karotten, Pastinaken, Kohl, Kürbis oder frischer Spinat sind um ein Vielfaches günstiger als importierte Exoten wie Avocados oder Spargel im tiefsten Winter. Tolle, preiswerte Inspirationen für die heimische Küche finden Sie auf unserer Plattform unter <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a>. Kombinieren Sie einfache, nährstoffreiche Grundzutaten wie Naturreis, Reisnudeln oder rote Linsen mit knackigem Gemüse und Tofu – so zaubern Sie im Handumdrehen ein gesundes Abendessen, das pro Portion oft weniger als 3 Euro kostet.</p>
 <h2 id="warum-gesundes-essen-nicht-teuer-sein-muss">Warum nachhaltiges und biologisches Essen nicht unerschwinglich sein muss</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">In der breiten Öffentlichkeit hält sich noch immer das hartnäckige Gerücht, eine gesunde und biologisch wertvolle vegane Ernährung sei ein Luxusgut, das nur Besserverdienern vorbehalten ist. Viele Menschen verbinden mit &#8222;vegan&#8220; teure, hochverarbeitete Fleischersatzprodukte aus dem Reformhaus oder exotische Superfoods, die um die halbe Welt geflogen wurden. Die traditionelle, naturnahe Pflanzenkost beweist jedoch das genaue Gegenteil: Sie ist die kostengünstigste und zugleich gesündeste Ernährungsform der Welt.</p>
 <h3 id="unser-engagement-fuer-bezahlbare-qualitaet">Unser Engagement für bezahlbare Qualität bei Vegan Garden</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Bei Vegan Garden Berlin leben wir die tiefe Überzeugung, dass gesundes, ethisch einwandfreies Essen für absolut jeden Menschen zugänglich sein muss. Unsere Leitlinien zu <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a> basieren auf dem respektvollen Umgang mit Ressourcen, der Vermeidung von Lebensmittelabfällen und dem Direktbezug unserer frischen Zutaten. Weil wir bewusst auf extrem teure, industriell hochverarbeitete Fleischimitate verzichten und stattdessen die natürliche Vielfalt aus Tofu, Seitan, frischem Gemüse und aromatischen Wildkräutern zelebrieren, können wir die Preise für unsere Gäste so gestalten, dass ein fantastisches Abendessen für alle bezahlbar bleibt.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Bei Vegan Garden Berlin leben wir die tiefe Überzeugung, dass gesundes, ethisch einwandfreies Essen für absolut jeden Menschen zugänglich sein muss. Unsere Leitlinien zu <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a> basieren auf dem respektvollen Umgang mit Ressourcen, der Vermeidung von Lebensmittelabfällen und dem Direktbezug unserer frischen Zutaten. Weil wir bewusst auf extrem teure, industriell hochverarbeitete Fleischimitate verzichten und stattdessen die natürliche Vielfalt aus Tofu, Seitan, frischem Gemüse und aromatischen Wildkräutern zelebrieren, können wir die Preise für unsere Gäste so gestalten, dass ein fantastisches Abendessen für alle bezahlbar bleibt.</p>
 <h3 id="globale-studien-zu-pflanzlichen-ernaehrungskosten">Wissenschaftliche Studien zu den Kosten pflanzlicher Ernährung</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Diese Philosophie deckt sich vollkommen mit aktuellen wissenschaftlichen Daten. Eine bahnbrechende Studie der Universität Oxford aus dem Jahr 2021 wies zweifelsfrei nach, dass eine ausgewogene vegane oder vegetarische Ernährung in Ländern mit hohem Einkommen die persönlichen Lebensmittelkosten um bis zu ein Drittel (ca. 30 %) senken kann, verglichen mit einer klassischen, fleischlastigen Mischkost (<a href="https://www.health.harvard.edu/" target="_blank" rel="nofollow noopener">[2]</a>). Wer auf teures Fleisch und verarbeitete Fertigprodukte verzichtet und stattdessen auf unverarbeitete, pflanzliche Grundnahrungsmittel setzt, schont somit nicht nur das Klima und die eigene Gesundheit, sondern auch das Sparkonto.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
 <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 1.15em;">Lust auf frische, gesunde vietnamesische Küche?</h4>
 <p style="margin: 0 0 16px 0; font-size: 0.95em; color: #555;">Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
-<p>  <a href="https://vegangarden-berlin.de/restaurant/#reservierung?utm_source=vegangarden-berlin.de&amp;utm_medium=banner_content&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Tisch jetzt reservieren</a>
+<p>  <a href="../index.html#restaurant#reservierung?utm_source=vegangarden-berlin.de&amp;utm_medium=banner_content&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Tisch jetzt reservieren</a>
 </div>
 <div style="background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 20px; margin: 35px 0;">
 <h4 style="margin: 0 0 12px 0; color: #2e7d32; font-size: 1.15em; border-bottom: 2px solid #e8f7e8; padding-bottom: 6px;">📍 Besuche Vegan Garden Berlin</h4>
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Adresse:</strong> Frankfurter Allee 21, 10247 Berlin (Friedrichshain)</p>
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Öffnungszeiten:</strong> Dienstag bis Sonntag: 12:00 – 22:00 Uhr (Montag Ruhetag)</p>
-<p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Reservierung:</strong> <a href="https://vegangarden-berlin.de/restaurant/#reservierung?utm_source=vegangarden-berlin.de&amp;utm_medium=location_block&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="color: #4CAF50; text-decoration: underline; font-weight: 600;">Online Tisch reservieren</a> oder telefonisch.</p>
+<p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Reservierung:</strong> <a href="../index.html#restaurant#reservierung?utm_source=vegangarden-berlin.de&amp;utm_medium=location_block&amp;utm_campaign=blog_seo&amp;utm_term=desktop&amp;utm_content=veganes-abendessen-berlin-guenstig" style="color: #4CAF50; text-decoration: underline; font-weight: 600;">Online Tisch reservieren</a> oder telefonisch.</p>
 </div>
 <h2 id="fazit">Fazit</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein nahrhaftes, frisches und zugleich <strong>veganes abendessen berlin günstig</strong> zu genießen, ist dank der traditionellen vietnamesischen Küche ein Kinderspiel. Die kluge Kombination aus ballaststoffreichen Kohlenhydraten, leicht bekömmlichen pflanzlichen Proteinen wie Tofu und einer schier unendlichen Vielfalt an vitaminschonend gegartem Gemüse sorgt für maximale Vitalität, eine hervorragende Schlafqualität und schont gleichzeitig den Geldbeutel. Durch die bewusste Verwendung von traditionellen Heilkräutern wie Minze, Koriander und entzündungshemmendem Perillablatt tun Sie Ihrem Körper aktiv etwas Gutes und erleben die faszinierende Geschmackswelt Südostasiens. Besuchen Sie uns im Vegan Garden Berlin-Friedrichshain und lassen Sie sich zeigen, wie lecker, nachhaltig und preiswert die pflanzliche Spitzenküche sein kann. Wir freuen uns auf Ihren Besuch!</p>
@@ -75,3 +325,83 @@
 <li>[3] PubMed / National Center for Biotechnology Information (NCBI). (2020). <em>The digestive benefits and anti-inflammatory properties of dietary herbs and spices</em>. National Library of Medicine. https://pubmed.ncbi.nlm.nih.gov/</li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

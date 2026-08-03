@@ -1,18 +1,270 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegane Nudelsuppe Berlin – Heiß, würzig &amp; wohltuend | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
-<h1 style="color: #2e7d32; font-family: sans-serif; font-size: 2.2em; margin-top: 20px; margin-bottom: 20px;">Vegane Nudelsuppe Berlin – Heiß, würzig &amp; wohltuend</h1>
-<p style="text-align:justify; line-height:1.6; color:#333;"><em>Wenn die nasskalte Berliner Luft durch die Straßen zieht oder der Alltagsstress nach einem wahren Seelentröster verlangt, gibt es kaum etwas Wohltuenderes als eine dampfende, tiefgründige Mahlzeit. Wer nach einem unvergleichlichen kulinarischen Erlebnis sucht, für den ist eine meisterhaft zubereitete <a href="https://vegangarden-berlin.de/3d-flip-book/270/">vegane nudelsuppe berlin</a> die ultimative kulinarische Entdeckung im Herzen der Stadt. Dieses traditionelle Gericht vereint jahrhundertealtes Heilkräuterwissen aus Fernost mit moderner, rein pflanzlicher Raffinesse. Erfahre in diesem Guide, warum diese heiße Suppe so gesund ist, wie wir tiefes Umami ganz ohne tierische Produkte erzeugen und warum unser pflanzliches Meisterwerk im Vegan Garden Berlin ein absolutes Muss für alle Foodies ist.</em></p>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Vegane Nudelsuppe Berlin – Heiß, würzig &amp; wohltuend</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/article_pho.jpg" alt="Vegane Nudelsuppe Berlin – Heiß, würzig &amp; wohltuend" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+
+<p style="text-align:justify; line-height:1.6; color:#333;"><em>Wenn die nasskalte Berliner Luft durch die Straßen zieht oder der Alltagsstress nach einem wahren Seelentröster verlangt, gibt es kaum etwas Wohltuenderes als eine dampfende, tiefgründige Mahlzeit. Wer nach einem unvergleichlichen kulinarischen Erlebnis sucht, für den ist eine meisterhaft zubereitete <a href="../index.html#speisekarte">vegane nudelsuppe berlin</a> die ultimative kulinarische Entdeckung im Herzen der Stadt. Dieses traditionelle Gericht vereint jahrhundertealtes Heilkräuterwissen aus Fernost mit moderner, rein pflanzlicher Raffinesse. Erfahre in diesem Guide, warum diese heiße Suppe so gesund ist, wie wir tiefes Umami ganz ohne tierische Produkte erzeugen und warum unser pflanzliches Meisterwerk im Vegan Garden Berlin ein absolutes Muss für alle Foodies ist.</em></p>
 <h2 id="die-tradition-der-vietnamesischen-nudelsuppe-heilung-in-jeder-schuessel" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Die Tradition der vietnamesischen Nudelsuppe: Heilung in jeder Schüssel</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">In der vietnamesischen Esskultur sind Nudelsuppen wie Phở oder Bún weit mehr als nur eine wärmende Mahlzeit für den Alltag. Sie repräsentieren ein jahrhundertealtes System der Gesundheitsvorsorge und des kulinarischen Wohlbefindens. Nach der traditionellen fernöstlichen Philosophie ist Essen die erste und wichtigste Form der Medizin. Eine sorgfältig zubereitete Brühe gilt als Stärkungsmittel für die Lebensenergie (Qi), das den Körper nährt, den Geist beruhigt und die Selbstheilungskräfte aktiviert. In den geschäftigen Garküchen von Hanoi und Saigon beginnt das Leben jeden Morgen mit einer dampfenden Schüssel Suppe, die den Organismus sanft aufweckt und auf den Tag vorbereitet. Mit unserer Küche bringen wir dieses ganzheitliche Lebensgefühl direkt in die deutsche Hauptstadt.</p>
 <h3 id="die-philosophie-des-ausgleichs-von-yin-und-yang" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Philosophie des Ausgleichs von Yin und Yang</h3>
@@ -25,14 +277,13 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Geschmack lässt sich nicht abkürzen. Unsere vegane Brühe wird täglich frisch über einen Zeitraum von mindestens acht Stunden schonend geköchelt. Während dieses langen Prozesses extrahieren wir die wertvollen Nährstoffe und Aromen der sorgfältig ausgewählten Gemüsesorten. Das langsame Garen sorgt dafür, dass sich die Aromen der wärmenden Gewürze wie Sternanis, Zimtrinde und schwarzer Kardamom harmonisch mit dem Gemüse verbinden und eine samtige, goldklare Brühe mit einer unglaublichen Geschmackstiefe entsteht.</p>
 <h3 id="natuerliche-umami-quellen-shiitake-pilze-gemuese-und-fermentierter-tofu" style="color:#43a047; font-size:1.25em; margin-top:20px;">Natürliche Umami-Quellen: Shiitake-Pilze, Gemüse und fermentierter Tofu</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Um das reichhaltige Umami-Aroma ohne tierische Produkte zu erzeugen, nutzen wir die geheimen Schätze der pflanzlichen Natur. Das Fundament bilden süße Wurzelgemüse wie weiße Rettiche, Karotten, Lauch und Zwiebeln. Für die erdige Tiefe und herzhafte Umami-Note sorgen getrocknete Shiitake-Pilze, die wir in großen Mengen mitkochen. Den entscheidenden geschmacklichen Feinschliff erzielen wir durch den Einsatz von fermentiertem Tofu (Chao) und traditionell gebrauter Sojasauce. Diese fermentierten Zutaten bringen die komplexe Salzigkeit und Fülle in die Brühe, die für das authentische Geschmackserlebnis vietnamesischer Tempelküche charakteristisch ist.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-nudelsuppe-berlin-inline-1-1.jpg" alt="Köstliche vietnamesische vegane Nudelgerichte" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Köstliche vietnamesische vegane Nudelgerichte"><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure>
 <h2 id="die-anatomie-einer-erstklassigen-nudelsuppe" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Die Anatomie einer erstklassigen Nudelsuppe</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Eine hervorragende vietnamesische Nudelsuppe ist kein einfacher Eintopf, sondern ein komplexes, harmonisches Zusammenspiel verschiedener Texturen und Temperaturen. Jeder Löffel soll ein neues Abenteuer für die Geschmacksknospen sein. Jede einzelne Komponente wird von uns mit äußerster Sorgfalt zubereitet und in der perfekten Reihenfolge in der Schüssel angerichtet.</p>
 <h3 id="reisnudeln-die-perfekte-textur-und-leichtigkeit" style="color:#43a047; font-size:1.25em; margin-top:20px;">Reisnudeln: Die perfekte Textur und Leichtigkeit</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Nudeln bilden die sättigende Basis unserer Suppen. Je nach Suppenart verwenden wir flache Reisbandnudeln (Bánh Phở) oder dickere, runde Reisnudeln (Bún). Beide Nudelsorten bestehen zu 100 % aus fermentiertem Reismehl und reinem Wasser. Dadurch sind sie von Natur aus glutenfrei, extrem leicht verdaulich und belasten den Magen nicht. Wir blanchieren die Nudeln direkt vor dem Servieren punktgenau in heißem Wasser, um die perfekte elastische Konsistenz (Al Dente) zu bewahren. So nehmen sie die heiße, aromatische Brühe ideal auf, ohne ihre Struktur zu verlieren.</p>
 <h3 id="hochwertige-pflanzliche-proteine-tofu-seitan-und-frische-pilze" style="color:#43a047; font-size:1.25em; margin-top:20px;">Hochwertige pflanzliche Proteine: Tofu, Seitan und frische Pilze</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Für den nahrhaften Biss und eine vollwertige Eiweißversorgung kombinieren wir verschiedene pflanzliche Proteine. Unser Bio-Tofu wird vorab scharf angebraten, sodass er eine feine Kruste entwickelt und im Inneren zart bleibt. Er saugt die aromatische Brühe auf wie ein Schwamm. Ergänzt wird der Tofu durch unseren hausgemachten Seitan, den wir nach einem traditionellen Familienrezept mit frischem Zitronengras dämpfen. Er verleiht der Suppe eine wunderbar feste, faserige Textur. Knackige Austernpilze und Shiitake-Pilze runden das Gericht ab und bringen eine natürliche Saftigkeit und wertvolle Aminosäuren in die Schüssel. Wirf einen Blick auf <a href="https://vegangarden-berlin.de/3d-flip-book/270/">unsere Speisekarte</a>, um die genaue Zusammensetzung unserer Proteineinlagen zu entdecken.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Für den nahrhaften Biss und eine vollwertige Eiweißversorgung kombinieren wir verschiedene pflanzliche Proteine. Unser Bio-Tofu wird vorab scharf angebraten, sodass er eine feine Kruste entwickelt und im Inneren zart bleibt. Er saugt die aromatische Brühe auf wie ein Schwamm. Ergänzt wird der Tofu durch unseren hausgemachten Seitan, den wir nach einem traditionellen Familienrezept mit frischem Zitronengras dämpfen. Er verleiht der Suppe eine wunderbar feste, faserige Textur. Knackige Austernpilze und Shiitake-Pilze runden das Gericht ab und bringen eine natürliche Saftigkeit und wertvolle Aminosäuren in die Schüssel. Wirf einen Blick auf <a href="../index.html#speisekarte">unsere Speisekarte</a>, um die genaue Zusammensetzung unserer Proteineinlagen zu entdecken.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
 <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 1.15em;">Lust auf frische, gesunde vietnamesische Küche?</h4>
 <p style="margin: 0 0 16px 0; font-size: 0.95em; color: #555;">Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
@@ -46,10 +297,9 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Der separat servierte Kräuterteller ist eine wahre Apotheke der Natur. Die darauf angerichteten Kräuter wie Koriander, vietnamesische Perilla (Shiso) und thailändischer Basilikum sind reich an sekundären Pflanzenstoffen und ätherischen Ölen. Die Weltgesundheitsorganisation (WHO) weist regelmäßig darauf hin, dass eine gemüsereiche Ernährung mit einem hohen Anteil an frischen Kräutern das Risiko für Entzündungen und chronische Erkrankungen drastisch reduzieren kann (<a href="https://www.who.int/" target="_blank" rel="nofollow noopener">[1]</a>). Wissenschaftliche Untersuchungen, die in den PubMed-Datenbanken der National Institutes of Health veröffentlicht wurden, zeigen, dass Perilla-Blätter starke entzündungshemmende, antiallergische und immunmodulierende Eigenschaften besitzen (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[3]</a>). Mit jeder Schüssel stärkst du deine Abwehrkräfte auf natürliche Weise.</p>
 <h3 id="stoffwechsel-booster-durch-waermende-gewuerze" style="color:#43a047; font-size:1.25em; margin-top:20px;">Stoffwechsel-Booster durch wärmende Gewürze</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Gewürze in unserer Suppe dienen nicht nur dem Geschmack, sondern sind hochwirksame Stoffwechsel-Booster. Ingwer regt die Produktion von Magensäure an und fördert die Verdauung, während Sternanis und Kardamom entblähend und krampflösend auf den Magen-Darm-Trakt wirken. Die feine Schärfe aus frischen Chilischoten verdanken wir dem Wirkstoff Capsaicin. Harvard Health Publishing betont in seinen kardiologischen und ernährungsphysiologischen Berichten, dass Capsaicin die Thermogenese anregt, den Energieumsatz ankurbelt und eine schützende Wirkung auf das Herz-Kreislauf-System ausübt (<a href="https://www.health.harvard.edu/" target="_blank" rel="nofollow noopener">[4]</a>). Ein wahrer Segen für deine Gesundheit!</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-nudelsuppe-berlin-inline-2-1.jpg" alt="Hausgemachte vegane Pho Suppe mit frischen Kräutern" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Hausgemachte vegane Pho Suppe mit frischen Kräutern"><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure>
 <h2 id="unsere-spezialitaeten-bei-vegan-garden-berlin" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Unsere Spezialitäten bei Vegan Garden Berlin</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">In unserem gemütlichen <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a> erwecken wir die kulinarische Seele Vietnams täglich neu zum Leben. Jedes Gericht wird mit größter Liebe zum Detail und nach überlieferten Familienrezepten zubereitet. Wenn du nach der besten veganen Nudelsuppe sucht, bieten wir dir zwei herausragende Spezialitäten, die dich begeistern werden.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">In unserem gemütlichen <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a> erwecken wir die kulinarische Seele Vietnams täglich neu zum Leben. Jedes Gericht wird mit größter Liebe zum Detail und nach überlieferten Familienrezepten zubereitet. Wenn du nach der besten veganen Nudelsuppe sucht, bieten wir dir zwei herausragende Spezialitäten, die dich begeistern werden.</p>
 <h3 id="unsere-klassische-vegane-pho-chay-die-seele-vietnams" style="color:#43a047; font-size:1.25em; margin-top:20px;">Unsere klassische vegane Phở Chay: Die Seele Vietnams</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Unsere Phở Chay ist eine meisterhafte, rein pflanzliche Interpretation des vietnamesischen Nationalgerichts. Die goldklare Brühe besticht durch die feinen, süßlichen Aromen von geröstetem Sternanis, Zimtrinde, Gewürznelken und Koriandersamen. Serviert mit flachen Reisbandnudeln, saftigem Tofu, unserem berühmten hausgemachten Seitan und abgerundet mit frisch gehacktem Koriander und Lauchzwiebeln ist diese Suppe ein wärmender Genuss für die Seele. Sie vereint Eleganz, Leichtigkeit und eine unvergleichliche Geschmackstiefe.</p>
 <h3 id="feurig-und-kraeftig-die-koenigliche-bun-bo-hue-vegan-berlin" style="color:#43a047; font-size:1.25em; margin-top:20px;">Feurig und kräftig: Die königliche Bun Bo Hue vegan in Berlin</h3>
@@ -57,7 +307,7 @@
 <h2 id="wie-du-deine-vegane-nudelsuppe-berlin-zuhause-nachkochen-kannst" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Wie du deine vegane Nudelsuppe Berlin zuhause nachkochen kannst</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Obwohl das Genießen im Restaurant die bequemste und authentischste Option ist, macht das Nachkochen zuhause großen Spaß. Es ist eine wunderbare Möglichkeit, die traditionelle vietnamesische Gewürzkunde kennenzulernen und die eigene Küche mit exotischen Düften zu erfüllen. Hier teilen wir einige Geheimnisse unserer Chefköchin Huong Nguyen mit dir, damit dir deine eigene Suppe perfekt gelingt.</p>
 <h3 id="essentielle-zutaten-fuer-eine-authentische-bruehe" style="color:#43a047; font-size:1.25em; margin-top:20px;">Essentielle Zutaten für eine authentische Brühe</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Das wichtigste Geheimnis für eine gelungene vietnamesische Suppe ist das Rösten der Gewürze. Bevor du die Gewürze in das Wasser gibst, solltest du Sternanis, Zimtrinde, Nelken und Koriandersamen in einer Pfanne ohne Fett sanft anrösten, bis sie anfangen, intensiv zu duften. Auch frischer Ingwer und Schalotten sollten direkt über einer offenen Gasflamme oder im Ofen angeröstet werden, bis ihre Schale leicht verkohlt ist. Das verleiht der Brühe die unverzichtbare, leicht rauchige Süße und Tiefe. Auf unserer Website findest du viele weitere, praxiserprobte <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a> zum Nachkochen und Ausprobieren.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Das wichtigste Geheimnis für eine gelungene vietnamesische Suppe ist das Rösten der Gewürze. Bevor du die Gewürze in das Wasser gibst, solltest du Sternanis, Zimtrinde, Nelken und Koriandersamen in einer Pfanne ohne Fett sanft anrösten, bis sie anfangen, intensiv zu duften. Auch frischer Ingwer und Schalotten sollten direkt über einer offenen Gasflamme oder im Ofen angeröstet werden, bis ihre Schale leicht verkohlt ist. Das verleiht der Brühe die unverzichtbare, leicht rauchige Süße und Tiefe. Auf unserer Website findest du viele weitere, praxiserprobte <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a> zum Nachkochen und Ausprobieren.</p>
 <h3 id="schritt-fuer-schritt-anleitung-fuer-deine-eigene-suppe" style="color:#43a047; font-size:1.25em; margin-top:20px;">Schritt-für-Schritt-Anleitung für deine eigene Suppe</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Um eine schmackhafte Suppe zu Hause zuzubereiten, folge diesen einfachen Schritten:</p>
 <p><strong>1. Die Brühe ansetzen:</strong> Gib reichlich Karotten, weißen Rettich, Zwiebeln und Lauch zusammen mit den gerösteten Gewürzen, dem Ingwer und getrockneten Shiitake-Pilzen in einen großen Topf mit kaltem Wasser. Bring alles zum Kochen und lass es für mindestens zwei bis drei Stunden bei schwacher Hitze sanft köcheln.</p>
@@ -72,9 +322,9 @@
 <h2 id="nachhaltigkeit-und-unsere-philosophie-in-jeder-schuessel" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Nachhaltigkeit und unsere Philosophie in jeder Schüssel</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Im Vegan Garden Berlin verstehen wir Essen nicht als reine Konsumtätigkeit, sondern als eine tiefe Form der Verbindung zu unserem Körper, unserer Gemeinschaft und unserem Planeten. Wir sind überzeugt, dass gesunder, exzellenter Geschmack und ein verantwortungsvoller Umgang mit der Natur untrennbar zusammengehören. Jede Schüssel unserer Suppe spiegelt diese Lebenseinstellung wider.</p>
 <h3 id="nachhaltigkeit-und-unsere-philosophie-bei-der-zutatenauswahl" style="color:#43a047; font-size:1.25em; margin-top:20px;">Nachhaltigkeit und unsere Philosophie bei der Zutatenauswahl</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Um den ökologischen Fußabdruck so gering wie möglich zu halten, steht das Thema <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a> bei jedem Einkauf an oberster Stelle. Wir beziehen unser knackiges Gemüse und die frischen Pilze vorwiegend von regionalen Landwirten aus der Berliner Region und Brandenburg. Das sichert kurze Lieferwege, schützt das Klima und garantiert maximale Nährstoffdichte. Bei den originalen asiatischen Heilkräutern und Gewürzen kooperieren wir direkt mit ausgewählten Bio-Bauern in Vietnam, die nach strengen ökologischen und fairen Prinzipien arbeiten. Diese harmonische Synthese aus brandenburgischer Frische und vietnamesischer Originalität schmeckt man in jedem einzelnen Löffel.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Um den ökologischen Fußabdruck so gering wie möglich zu halten, steht das Thema <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a> bei jedem Einkauf an oberster Stelle. Wir beziehen unser knackiges Gemüse und die frischen Pilze vorwiegend von regionalen Landwirten aus der Berliner Region und Brandenburg. Das sichert kurze Lieferwege, schützt das Klima und garantiert maximale Nährstoffdichte. Bei den originalen asiatischen Heilkräutern und Gewürzen kooperieren wir direkt mit ausgewählten Bio-Bauern in Vietnam, die nach strengen ökologischen und fairen Prinzipien arbeiten. Diese harmonische Synthese aus brandenburgischer Frische und vietnamesischer Originalität schmeckt man in jedem einzelnen Löffel.</p>
 <h3 id="zero-waste-ansatz-in-der-traditionellen-vietnamesischen-kueche" style="color:#43a047; font-size:1.25em; margin-top:20px;">Zero-Waste-Ansatz in der traditionellen vietnamesischen Küche</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Die traditionelle vietnamesische Küche ist von Natur aus ressourcenschonend und abfallvermeidend. In unserer Küche werfen wir nichts Wertvolles weg. Die Abschnitte von Rettichen, Zwiebeln und Karotten fließen direkt in das stundenlange Auskochen unserer aromatischen Brühen. Die zäheren Stängel unserer Heilkräuter und der aromatische Ingwer geben beim Kochen ihre ätherischen Öle an die Suppen ab, bevor sie fachgerecht kompostiert werden. Wir verwenden ausschließlich <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a>, die wir vollständig verwerten, um Lebensmittelverschwendung aktiv zu vermeiden. Das ist unser Beitrag für eine lebenswerte Zukunft.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Die traditionelle vietnamesische Küche ist von Natur aus ressourcenschonend und abfallvermeidend. In unserer Küche werfen wir nichts Wertvolles weg. Die Abschnitte von Rettichen, Zwiebeln und Karotten fließen direkt in das stundenlange Auskochen unserer aromatischen Brühen. Die zäheren Stängel unserer Heilkräuter und der aromatische Ingwer geben beim Kochen ihre ätherischen Öle an die Suppen ab, bevor sie fachgerecht kompostiert werden. Wir verwenden ausschließlich <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a>, die wir vollständig verwerten, um Lebensmittelverschwendung aktiv zu vermeiden. Das ist unser Beitrag für eine lebenswerte Zukunft.</p>
 <div style="background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 20px; margin: 35px 0;">
 <h4 style="margin: 0 0 12px 0; color: #2e7d32; font-size: 1.15em; border-bottom: 2px solid #e8f7e8; padding-bottom: 6px;">📍 Besuche Vegan Garden Berlin</h4>
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Adresse:</strong> Frankfurter Allee 21, 10247 Berlin (Friedrichshain)</p>
@@ -82,7 +332,7 @@
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Reservierung:</strong> <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="color: #4CAF50; text-decoration: underline; font-weight: 600;">Online Tisch reservieren</a> oder telefonisch.</p>
 </div>
 <h2 id="fazit" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Fazit</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Eine dampfende Schüssel vegane Nudelsuppe ist weit mehr als eine köstliche Mahlzeit – sie ist eine Quelle der Gesundheit, ein Fest für die Sinne und ein wärmender Seelentröster an kühlen Tagen. Mit unserer rein pflanzlichen Interpretation im Vegan Garden Berlin zeigen wir, dass traditioneller Geschmack, tiefes Umami und ernährungsphysiologischer Wert eine perfekte Einheit bilden können. Ob du dich für die milde Eleganz der klassischen Phở Chay oder für die feurige Schärfe der kaiserlichen Bun Bo Hue entscheidest: Unsere frischen regionalen Zutaten, stundenlang geköchelten Brühen und heilenden asiatischen Wildkräuter laden dich ein, neue kulinarische Pfade zu beschreiten. Wir laden dich herzlich ein, uns in Berlin-Friedrichshain zu besuchen und dein persönliches Nährstoff-Elixier in einer gemütlichen, grünen Wohlfühloase zu genießen. Wenn du dich vorab inspirieren lassen oder deine kulinarische Entdeckungsreise planen möchtest, empfehlen wir dir unbedingt einen Blick in <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">unser Vegan Guide für Berlin</a> zu werfen. Tritt ein, atme den Duft von geröstetem Sternanis und lass dich von der Magie gesunder, pflanzlicher vietnamesischer Kulinarik verzaubern!</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Eine dampfende Schüssel vegane Nudelsuppe ist weit mehr als eine köstliche Mahlzeit – sie ist eine Quelle der Gesundheit, ein Fest für die Sinne und ein wärmender Seelentröster an kühlen Tagen. Mit unserer rein pflanzlichen Interpretation im Vegan Garden Berlin zeigen wir, dass traditioneller Geschmack, tiefes Umami und ernährungsphysiologischer Wert eine perfekte Einheit bilden können. Ob du dich für die milde Eleganz der klassischen Phở Chay oder für die feurige Schärfe der kaiserlichen Bun Bo Hue entscheidest: Unsere frischen regionalen Zutaten, stundenlang geköchelten Brühen und heilenden asiatischen Wildkräuter laden dich ein, neue kulinarische Pfade zu beschreiten. Wir laden dich herzlich ein, uns in Berlin-Friedrichshain zu besuchen und dein persönliches Nährstoff-Elixier in einer gemütlichen, grünen Wohlfühloase zu genießen. Wenn du dich vorab inspirieren lassen oder deine kulinarische Entdeckungsreise planen möchtest, empfehlen wir dir unbedingt einen Blick in <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a> zu werfen. Tritt ein, atme den Duft von geröstetem Sternanis und lass dich von der Magie gesunder, pflanzlicher vietnamesischer Kulinarik verzaubern!</p>
 <div style="background:#fafafa; border-top: 1px solid #eee; padding-top: 15px; margin-top: 25px; font-size: 0.85em; color: #666;">
   <strong>Wissenschaftliche Quellen:</strong></p>
 <ul style="padding-left: 20px; margin-top: 5px;">
@@ -92,3 +342,83 @@
 <li>[4] Harvard T.H. Chan School of Public Health. (2023). <em>The Nutrition Source: The health benefits of warming spices and capsaicin in human metabolism</em>. Harvard Medical School. Abgerufen von <a href="https://www.health.harvard.edu/" target="_blank" rel="nofollow noopener">https://www.health.harvard.edu/</a></li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

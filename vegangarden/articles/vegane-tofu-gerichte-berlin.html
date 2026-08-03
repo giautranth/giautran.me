@@ -1,30 +1,281 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die Bedeutung von Tofu in der veganen vietnamesischen Küche | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Die Bedeutung von Tofu in der veganen vietnamesischen Küche</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/spring_rolls.png" alt="Die Bedeutung von Tofu in der veganen vietnamesischen Küche" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
 <p style="text-align:justify; line-height:1.6; color:#333;"><em>Suchen Sie nach einer gesunden, pflanzlichen Proteinquelle, die sowohl cremig-zart als auch unwiderstehlich knusprig zubereitet werden kann? Die asiatische Küche, insbesondere die vietnamesische Tradition, zeigt eindrucksvoll, wie vielseitig und geschmacksintensiv Tofu sein kann. Wenn Sie erstklassige, nährstoffreiche und authentisch zubereitete <strong>vegane Tofu Gerichte Berlin</strong>-weit entdecken möchten, sind Sie bei Vegan Garden Berlin genau richtig. In unserem einladenden Restaurant im Herzen von Friedrichshain verwandeln wir hochwertigen Bio-Tofu mit traditionellen Heilkräutern, frischen Gewürzen und viel Liebe in wahre Gaumenfreuden. Tauchen Sie ein in eine Welt voller Aromen, die Ihren Körper nährt und Ihre Sinne verzaubert!</em></p>
 <h2 id="die-bedeutung-von-tofu-in-der-vietnamesischen-kueche">Die Bedeutung von Tofu in der veganen vietnamesischen Küche</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Tofu, auf Vietnamesisch „Đậu phụ“ genannt, ist in der vietnamesischen Esskultur tief verwurzelt und weitaus mehr als ein bloßer Fleischersatz. Seit Jahrhunderten bildet er das Herzstück der buddhistisch geprägten Tempelküche (Ăn chay). In Vietnam wird Tofu für seine erstaunliche Fähigkeit geschätzt, Gewürze und Aromen wie ein Schwamm aufzusaugen, während er gleichzeitig durch verschiedene Texturen begeistert – von seidig-weich in wärmenden Suppen bis hin zu goldgelb und kross gebacken in der Pfanne. Für uns bei Vegan Garden Berlin ist Tofu ein Symbol für Reinheit, Balance und Respekt gegenüber der Natur. Er verbindet Generationen von Kochwissen und repräsentiert die Kunst, aus einfachen Zutaten der Erde ein kulinarisches Meisterwerk zu kreieren, das sowohl Körper als auch Geist guttut.</p>
 <h2 id="warum-tofu-proteinreich-und-gesund-ist">Warum Tofu so proteinreich und gesund ist</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Aus ernährungswissenschaftlicher Sicht ist Tofu ein echtes Kraftpaket. Er wird aus Sojabohnen hergestellt und gilt als eine der wertvollsten pflanzlichen Proteinquellen überhaupt. Tofu liefert alle neun essenziellen Aminosäuren, die der menschliche Körper nicht selbst herstellen kann, was ihn zu einem vollständigen Protein macht. Laut der Deutschen Gesellschaft für Ernährung (DGE) stellen Sojaprodukte einen wichtigen Bestandteil einer ausgewogenen, pflanzenbetonten Ernährung dar, da sie reich an Proteinen, Eisen, Calcium und ungesättigten Fettsäuren sind und gleichzeitig kein Cholesterin enthalten (<a href="https://www.dge.de/" target="_blank" rel="nofollow noopener">[1]</a>).</p>
 <p style="text-align:justify; line-height:1.6; color:#333;">Darüber hinaus deuten zahlreiche wissenschaftliche Untersuchungen der Harvard T.H. Chan School of Public Health darauf hin, dass der regelmäßige Konsum von minimal verarbeiteten Sojaprodukten wie Tofu die Herzgesundheit unterstützen und das Risiko für Herz-Kreislauf-Erkrankungen senken kann (<a href="https://www.hsph.harvard.edu/nutritionsource/soy/" target="_blank" rel="nofollow noopener">[2]</a>). Bei Vegan Garden Berlin verwenden wir ausschließlich hochwertigen Bio-Tofu, um sicherzustellen, dass Sie alle diese wertvollen Nährstoffe in ihrer reinsten Form zu sich nehmen. So ist jede Mahlzeit bei uns nicht nur ein Geschmackserlebnis, sondern auch ein echter Segen für Ihr Wohlbefinden.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-tofu-gerichte-berlin-inline-1-1.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten"><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
 <h2 id="unsere-spezialitaeten-vegane-tofu-gerichte-berlin">Unsere Spezialitäten: Knusprige und proteinreiche vegane Tofu-Gerichte in Berlin</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Wenn Sie auf der Suche nach einzigartigen Geschmackserlebnissen sind, bietet unsere Speisekarte eine feine Auswahl an Tofu-Spezialitäten, die mit viel Liebe zum Detail kreiert wurden. Jedes Gericht kombiniert traditionelle Familienrezepte mit modernen Akzenten, um das Beste aus der Sojabohne herauszuholen.</p>
 <h3 id="knuspriger-tofu-mit-zitronengras">1. Knuspriger Tofu mit Zitronengras und Chili (Đậu Hũ Chiên Sả Ớt)</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Dieses traditionelle Gericht ist ein absoluter Favorit für alle, die es aromatisch und leicht pikant mögen. Wir schneiden frischen Bio-Tofu in mundgerechte Stücke, marinieren ihn in einer feinen Gewürzmischung und braten ihn so an, dass er außen extrem knusprig wird, während das Innere wunderbar zart bleibt. Das Geheimnis liegt in der großzügigen Garnitur aus frisch gehacktem Zitronengras und milder roter Chili, die in der Pfanne angeröstet werden und ihr ätherisches Aroma entfalten. Es ist ein perfektes Zusammenspiel aus Texturen und Aromen, das hervorragend zu duftendem Jasminreis passt.</p>
 <h3 id="tofu-in-vietnamesischer-erdnusssauce">2. Tofu in cremiger Erdnusssauce (Đậu Sốt Lạc)</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Für Liebhaber von reichhaltigen, wohligen Geschmackskompositionen ist unser Tofu in cremiger Erdnusssauce die ideale Wahl. Goldgelb gebackener Tofu trifft hierbei auf eine samtige Sauce aus frisch gemahlenen Erdnüssen, Kokosmilch und vietnamesischen Gewürzen. Begleitet von knackigem Saisongemüse wie Brokkoli, Karotten und Zuckerschoten liefert dieses Gericht eine hervorragende Kombination aus pflanzlichem Eiweiß und gesunden Fetten. Es ist die perfekte Wohlfühlmahlzeit nach einem langen Tag in der Stadt. Entdecken Sie dieses Highlight auf <a href="https://vegangarden-berlin.de/3d-flip-book/270/">unsere Speisekarte</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Für Liebhaber von reichhaltigen, wohligen Geschmackskompositionen ist unser Tofu in cremiger Erdnusssauce die ideale Wahl. Goldgelb gebackener Tofu trifft hierbei auf eine samtige Sauce aus frisch gemahlenen Erdnüssen, Kokosmilch und vietnamesischen Gewürzen. Begleitet von knackigem Saisongemüse wie Brokkoli, Karotten und Zuckerschoten liefert dieses Gericht eine hervorragende Kombination aus pflanzlichem Eiweiß und gesunden Fetten. Es ist die perfekte Wohlfühlmahlzeit nach einem langen Tag in der Stadt. Entdecken Sie dieses Highlight auf <a href="../index.html#speisekarte">unsere Speisekarte</a>.</p>
 <h3 id="tofu-sot-ca-chua-tomatensauce">3. Tofu Sốt Cà Chua – Der traditionelle vietnamesische Klassiker</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Tofu Sốt Cà Chua ist ein echtes Soulfood-Gericht, mit dem fast jedes Kind in Vietnam aufwächst. Weicher, leicht angebratener Tofu wird in einer fruchtigen, hausgemachten Sauce aus sonnengereiften Tomaten und Schalotten sanft geschmort. Abgerundet mit frischem Koriander, Frühlingszwiebeln und einer Prise weißem Pfeffer entsteht ein wunderbar harmonischer, leicht süß-säuerlicher Geschmack. Dieses Gericht zeigt auf einfachste Weise, wie fantastisch Tofu den Eigengeschmack einer aromatischen Sauce aufnehmen kann.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
@@ -37,17 +288,16 @@
 <h3 id="die-richtige-vorbereitung-pressen-und-trocknen">Die richtige Vorbereitung: Pressen und Entwässern</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Der häufigste Fehler bei der Tofu-Zubereitung ist das Vernachlässigen des Entwässerns. Frischer Tofu enthält sehr viel Wasser. Wird dieses nicht entfernt, kann er Gewürze nicht gut aufnehmen und wird beim Braten matschig statt knusprig. Wir pressen unseren Bio-Tofu vor der Weiterverarbeitung schonend aus, um die überschüssige Feuchtigkeit zu entziehen. Erst dadurch öffnet sich die Struktur des Tofus, sodass er unsere aromatischen Marinaden perfekt aufsaugen kann.</p>
 <h3 id="die-perfekte-marinade-mit-frischen-kraeutern">Die perfekte Marinade: Ein Zusammenspiel asiatischer Aromen</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Nach dem Entwässern wird der Tofu mariniert. Hierbei verwenden wir eine traditionelle Rezeptur, die auf Knoblauch, Schalotten, Fünf-Gewürze-Pulver und erstklassiger, glutenfreier Sojasauce basiert. Durch das Zusammenspiel dieser Zutaten erhält der Tofu ein tiefes, herzhaftes Umami-Aroma. Kombiniert mit <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a> entfaltet sich am Ende ein harmonisches Gesamtbild auf dem Teller.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Nach dem Entwässern wird der Tofu mariniert. Hierbei verwenden wir eine traditionelle Rezeptur, die auf Knoblauch, Schalotten, Fünf-Gewürze-Pulver und erstklassiger, glutenfreier Sojasauce basiert. Durch das Zusammenspiel dieser Zutaten erhält der Tofu ein tiefes, herzhaftes Umami-Aroma. Kombiniert mit <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a> entfaltet sich am Ende ein harmonisches Gesamtbild auf dem Teller.</p>
 <h3 id="die-vietnamesischen-heilkraeuter">Die gesundheitliche Wirkung traditioneller Heilkräuter</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">In der vietnamesischen Küche ist Essen immer auch Medizin. Gewürze und Kräuter wie Ingwer, Zitronengras, Koriander und Perilla (vietnamesische Shisoblätter oder Tía Tô) werden gezielt eingesetzt, um das Wohlbefinden zu steigern. Wissenschaftliche Studien im Journal of Ethnopharmacology zeigen, dass die in der vietnamesischen Küche verwendeten Kräuter reiche Mengen an antioxidativen und entzündungshemmenden Verbindungen enthalten, welche die Verdauung anregen und das Immunsystem unterstützen (<a href="https://pubmed.ncbi.nlm.nih.gov/30373184/" target="_blank" rel="nofollow noopener">[3]</a>). Bei Vegan Garden Berlin nutzen wir dieses jahrhundertealte Heilwissen, um jedes Gericht nicht nur schmackhaft, sondern auch besonders bekömmlich zu machen.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-tofu-gerichte-berlin-inline-2-1.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen"><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
 <h2 id="nachhaltigkeit-gesundheit-und-genuss-vereint">Nachhaltigkeit, Gesundheit und Genuss vereint</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Für uns bei Vegan Garden Berlin ist eine pflanzliche Ernährung untrennbar mit dem Schutz unserer Erde verbunden. Die Entscheidung für vegane Tofu-Gerichte anstelle von Fleischgerichten hat einen enorm positiven Einfluss auf den ökologischen Fußabdruck. Die Produktion von Sojaprotein benötigt im Vergleich zur Rindfleischproduktion nur einen Bruchteil der landwirtschaftlichen Fläche und verursacht deutlich weniger Treibhausgase.</p>
-<p style="text-align:justify; line-height:1.6; color:#333;">Die World Health Organization (WHO) betont in ihren Leitlinien für gesunde und nachhaltige Ernährungssysteme, dass der Wandel hin zu einer überwiegend pflanzlichen Kost eine der wirksamsten Maßnahmen ist, um chronischen Zivilisationskrankheiten vorzubeugen und gleichzeitig die planetaren Ressourcen zu schonen (<a href="https://www.who.int/publications/i/item/9789240012172" target="_blank" rel="nofollow noopener">[4]</a>). Dies entspricht genau unserer Philosophie. Mehr über unseren umweltbewussten Ansatz erfahren Sie unter <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a>. Bei uns genießen Sie mit gutem Gewissen, da wir auf regionale Lieferanten, Bio-Qualität und Müllvermeidung achten.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Die World Health Organization (WHO) betont in ihren Leitlinien für gesunde und nachhaltige Ernährungssysteme, dass der Wandel hin zu einer überwiegend pflanzlichen Kost eine der wirksamsten Maßnahmen ist, um chronischen Zivilisationskrankheiten vorzubeugen und gleichzeitig die planetaren Ressourcen zu schonen (<a href="https://www.who.int/publications/i/item/9789240012172" target="_blank" rel="nofollow noopener">[4]</a>). Dies entspricht genau unserer Philosophie. Mehr über unseren umweltbewussten Ansatz erfahren Sie unter <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a>. Bei uns genießen Sie mit gutem Gewissen, da wir auf regionale Lieferanten, Bio-Qualität und Müllvermeidung achten.</p>
 <h2 id="tofu-spezialitaeten-in-berlin-friedrichshain-geniessen">Vegane Tofu-Spezialitäten in Berlin-Friedrichshain genießen</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Berlin-Friedrichshain ist weltweit bekannt für seine lebendige, kreative und vor allem vegan-freundliche Szene. Hier treffen Weltoffenheit, Genuss und ein bewusstes Leben aufeinander. Mitten in diesem bunten Kiez liegt <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a>. Vegan Garden Berlin versteht sich als eine Oase der Ruhe und des Genusses. Mit vielen echten Pflanzen, warmem Licht und einer gemütlichen Atmosphäre schaffen wir den perfekten Rahmen, um dem Alltagsstress der Großstadt zu entfliehen und sich mit gesunden, nahrhaften Speisen zu verwöhnen.</p>
-<p style="text-align:justify; line-height:1.6; color:#333;">Ob für eine kurze Mittagspause, ein entspanntes Abendessen mit Freunden oder als kulinarische Station auf Ihrer Entdeckungstour durch den Kiez – unsere Tofu-Kreationen werden Sie begeistern. Wenn Sie noch mehr vegane Highlights in der Hauptstadt entdecken möchten, werfen Sie auch einen Blick in <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">unser Vegan Guide für Berlin</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Berlin-Friedrichshain ist weltweit bekannt für seine lebendige, kreative und vor allem vegan-freundliche Szene. Hier treffen Weltoffenheit, Genuss und ein bewusstes Leben aufeinander. Mitten in diesem bunten Kiez liegt <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a>. Vegan Garden Berlin versteht sich als eine Oase der Ruhe und des Genusses. Mit vielen echten Pflanzen, warmem Licht und einer gemütlichen Atmosphäre schaffen wir den perfekten Rahmen, um dem Alltagsstress der Großstadt zu entfliehen und sich mit gesunden, nahrhaften Speisen zu verwöhnen.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Ob für eine kurze Mittagspause, ein entspanntes Abendessen mit Freunden oder als kulinarische Station auf Ihrer Entdeckungstour durch den Kiez – unsere Tofu-Kreationen werden Sie begeistern. Wenn Sie noch mehr vegane Highlights in der Hauptstadt entdecken möchten, werfen Sie auch einen Blick in <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a>.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
 <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 1.15em;">Lust auf frische, gesunde vietnamesische Küche?</h4>
 <p style="margin: 0 0 16px 0; font-size: 0.95em; color: #555;">Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
@@ -60,7 +310,7 @@
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Reservierung:</strong> <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="color: #4CAF50; text-decoration: underline; font-weight: 600;">Online Tisch reservieren</a> oder telefonisch.</p>
 </div>
 <h2 id="fazit">Fazit</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Tofu ist weitaus mehr als eine geschmacklose Fleischalternative – er ist ein echter Alleskönner der pflanzlichen Küche, der durch die richtige Zubereitung und die passenden Gewürze zu einem kulinarischen Highlight wird. Unsere proteinreichen, knusprigen veganen Tofu-Spezialitäten bei Vegan Garden Berlin zeigen Ihnen die geschmackliche Tiefe der traditionellen vietnamesischen Küche auf rein pflanzlicher Basis. Wenn Sie die asiatische Küche lieben und sich zu Hause ausprobieren möchten, finden Sie auf unserer Website auch inspirierende <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a>. Doch für das vollendete Geschmackserlebnis mit perfekt knuspriger Textur laden wir Sie herzlich zu uns nach Friedrichshain ein. Kommen Sie vorbei und überzeugen Sie sich selbst!</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Tofu ist weitaus mehr als eine geschmacklose Fleischalternative – er ist ein echter Alleskönner der pflanzlichen Küche, der durch die richtige Zubereitung und die passenden Gewürze zu einem kulinarischen Highlight wird. Unsere proteinreichen, knusprigen veganen Tofu-Spezialitäten bei Vegan Garden Berlin zeigen Ihnen die geschmackliche Tiefe der traditionellen vietnamesischen Küche auf rein pflanzlicher Basis. Wenn Sie die asiatische Küche lieben und sich zu Hause ausprobieren möchten, finden Sie auf unserer Website auch inspirierende <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a>. Doch für das vollendete Geschmackserlebnis mit perfekt knuspriger Textur laden wir Sie herzlich zu uns nach Friedrichshain ein. Kommen Sie vorbei und überzeugen Sie sich selbst!</p>
 <div style="background:#fafafa; border-top: 1px solid #eee; padding-top: 15px; margin-top: 25px; font-size: 0.85em; color: #666;">
   <strong>Wissenschaftliche Quellen:</strong></p>
 <ul style="padding-left: 20px; margin-top: 5px;">
@@ -70,3 +320,83 @@
 <li>[4] World Health Organization (WHO). (2020). <em>Sustainable healthy diets: Guiding principles</em>. https://www.who.int/publications/i/item/9789240012172</li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

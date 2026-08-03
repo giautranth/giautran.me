@@ -1,17 +1,269 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
-<h1 style="color: #2e7d32; font-family: sans-serif; font-size: 2.2em; margin-bottom: 20px;">Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</h1>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>GESUNDHEIT & SUSTAINABILITY</span>
+      </div>
+      <span class="article-cat-badge">GESUNDHEIT & SUSTAINABILITY</span>
+      <h1 class="article-main-title">Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/summer_bowl.png" alt="Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+
 <p style="text-align:justify; line-height:1.6; color:#333;"><em>In Zeiten des fortschreitenden Klimawandels und schwindender globaler Ressourcen rückt die Frage, wie wir uns ernähren, immer stärker in den Mittelpunkt der gesellschaftlichen Debatte. Dass eine <strong>vegane Ernährung Umwelt</strong> und Klima maßgeblich schont und entlastet, is längst keine bloße Vermutung mehr, sondern wissenschaftlich fundiert belegt. Jeder Einkauf und jede Mahlzeit sind kraftvolle Hebel, mit denen wir aktiv zur Reduzierung von Treibhausgasen, zur Schonung kostbarer Wasserreserven und zum Schutz bedrohter Wälder beitragen können. In diesem umfassenden Artikel beleuchten wir die ökologischen Zusammenhänge unseres Ernährungssystems und zeigen auf, warum der Verzicht auf tierische Produkte die wirksamste Einzelmaßnahme zum Schutz unseres Planeten ist – und wie genussvoll dieser Wandel sein kann.</em></p>
 <h2 id="einfuehrung-vegane-ernaehrung-umwelt" style="color: #2e7d32; font-family: sans-serif; margin-top: 30px;">Der globale Fußabdruck unserer Nahrung: Warum vegane Ernährung Umwelt und Klima schützt</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Debatte über den Klimawandel konzentriert sich häufig auf die Bereiche Energie und Verkehr. Doch ein ebenso entscheidender Faktor liegt tagtäglich auf unseren Tellern: unsere Ernährung. Das globale Lebensmittelsystem ist für rund ein Drittel aller menschengemachten Treibhausgasemissionen verantwortlich. Hierbei zeigt sich ein massives Ungleichgewicht: Tierische Produkte beanspruchen den Großteil der landwirtschaftlichen Flächen und verursachen enorme Emissionen, während sie nur einen kleinen Teil der weltweiten Kalorienversorgung abdecken. Eine Umstellung auf eine pflanzliche Ernährungsweise bietet daher das größte Potenzial, um den ökologischen Kollaps aufzuhalten.</p>
@@ -25,8 +277,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Wasser ist Leben – und dennoch verschwenden wir es in astronomischen Mengen für die Produktion tierischer Lebensmittel. Das Konzept des „virtuellen Wassers“ verdeutlicht, wie viel Liter Wasser in der gesamten Produktionskette eines Lebensmittels stecken. Während für die Erzeugung von einem Kilogramm Gemüse durchschnittlich etwa 300 bis 900 Liter Wasser benötigt werden, schlägt ein einziges Kilogramm Rindfleisch mit sage und schreibe 15.000 Litern Wasser zu Buche. Der Großteil dieses Wassers wird für den Anbau der Futtermittel verbraucht. Durch den direkten Konsum pflanzlicher Proteine anstelle des Umwegs über das Tier lässt sich der persönliche Wasserfußabdruck drastisch senken und der weltweiten Wasserknappheit entgegenwirken.</p>
 <h3 id="flaechenverbrauch-und-entwaldung" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Flächenfraß und Entwaldung des Regenwaldes</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Nachfrage nach Fleisch und Milchprodukten ist der Hauptgrund für die Zerstörung der wertvollsten Ökosysteme unserer Erde. Jedes Jahr werden riesige Flächen des tropischen Regenwaldes im Amazonasgebiet brandgerodet. Dies geschieht jedoch selten direkt für Weideland, sondern vor allem für den Anbau von Soja, das als billiges Proteinfutter für die Massentierhaltung in Europa und Asien exportiert wird. Diese Entwaldung vernichtet nicht nur einzigartige Lebensräume, sondern setzt auch gigantische Mengen des im Waldboden und in den Bäumen gespeicherten CO₂ frei. Eine Umstellung auf eine pflanzliche Lebensweise stoppt diesen Teufelskreis und schützt die „grünen Lungen“ unseres Planeten vor der endgültigen Zerstörung.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-ernaehrung-umwelt-nachhaltigkeit-inline-1-1.jpg" alt="Gesunde, nährstoffreiche und nachhaltige vegane Küche" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Gesunde, nährstoffreiche und nachhaltige vegane Küche"><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure>
 <h2 id="treibhausgase-co2-methan-lachgas" style="color: #2e7d32; font-family: sans-serif; margin-top: 30px;">Treibhausgase minimieren: CO₂-Äquivalente, Methan und Lachgas</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Bei der Diskussion über den Treibhauseffekt denken die meisten Menschen sofort an Kohlendioxid (CO₂) aus Autos und Fabriken. Die Landwirtschaft emittiert jedoch eine Vielzahl hochgradig potenter Gase, die den Planeten weitaus schneller erwärmen als CO₂ allein. Zu nennen sind hier vor allem Methan und Lachgas. Eine Reduzierung dieser Gase ist der schnellste Weg, um die Erderwärmung kurzfristig zu verlangsamen. Auch hier bietet eine pflanzlich betonte Ernährungsweise, wie sie auch von der Deutschen Gesellschaft für Ernährung (DGE) empfohlen wird (<a href="https://www.dge.de/wissenschaft/weitere-publikationen/fachliche-berichte/vegane-ernaehrung/" target="_blank" rel="nofollow noopener">[2]</a>), immense Einsparpotenziale.</p>
 <h3 id="methan-das-unterschaetzte-klimagas" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Methan: Die unsichtbare Gefahr aus der Tierhaltung</h3>
@@ -44,20 +295,19 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Um den unersättlichen Appetit auf Fleisch zu stillen, werden weltweit gigantische Monokulturen aus Soja, Mais und Weizen angebaut. Diese riesigen Äcker sind biologische Wüsten. Der massive Einsatz von Pestiziden, Herbiziden und Kunstdünger vernichtet Insekten, Wildkräuter und Vögel und entzieht ihnen die Lebensgrundlage. Durch eine pflanzliche Ernährungsweise wird der Bedarf an Futtermitteln drastisch reduziert. Die dadurch frei werdenden Flächen könnten renaturiert werden, was der heimischen Flora und Fauna wertvollen Lebensraum zurückgeben würde.</p>
 <h3 id="ueberduengung-und-tote-zonen" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Überdüngung der Meere und tote Zonen in den Gewässern</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die enormen Gülle- und Mistmengen aus der intensiven Tierhaltung sickern in den Boden und gelangen über Flüsse schließlich in unsere Meere. Der hohe Gehalt an Stickstoff und Phosphor führt zu einer massiven Überdüngung (Eutrophierung) der Gewässer. Dies löst ein extremes Algenwachstum aus. Wenn diese Algen sterben und zersetzt werden, wird dem Wasser der Sauerstoff entzogen. Die Folge sind riesige „tote Zonen“ in den Ozeanen, in denen kein Fisch und kein anderes Lebewesen mehr existieren kann. Der Verzicht auf tierische Produkte schont somit nicht nur das Land, sondern rettet auch die marinen Ökosysteme.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-ernaehrung-umwelt-nachhaltigkeit-inline-2.jpg" alt="Bunte Auswahl an erfrischenden hausgemachten Drinks" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Bunte Auswahl an erfrischenden hausgemachten Drinks"><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure>
 <h2 id="gesundheit-und-klimaschutz" style="color: #2e7d32; font-family: sans-serif; margin-top: 30px;">Gesundheit für Mensch und Erde: Die Planetary Health Diet</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Gesundheit ist keine Einbahnstraße. Die Gesundheit des Menschen ist untrennbar mit der Gesundheit unseres Planeten verbunden. Wissenschaftler haben untersucht, wie eine Ernährungsweise aussehen müsste, die sowohl den Nährstoffbedarf aller Menschen deckt als auch die planetaren Grenzen einhält. Das Ergebnis ist ein zukunftsweisendes Konzept, das zeigt, dass eine pflanzenbasierte Ernährung der Schlüssel für ein langes, gesundes Leben im Einklang mit der Natur ist.</p>
 <h3 id="was-ist-die-planetary-health-diet" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Das Konzept der Planetary Health Diet</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die „Planetary Health Diet“ ist ein wissenschaftlich fundierter Ernährungsplan, der von einer internationalen Kommission aus 37 führenden Wissenschaftlern (EAT-Lancet-Kommission) entwickelt wurde (<a href="https://www.hsph.harvard.edu/nutritionsource/sustainability/" target="_blank" rel="nofollow noopener">[4]</a>). Ziel dieses Konzepts ist es, bis zum Jahr 2050 über 10 Milliarden Menschen gesund zu ernähren, ohne die Erde irreparabel zu schädigen. Der Speiseplan basiert zum allergrößten Teil auf Gemüse, Vollkorngetreide, Hülsenfrüchten, Nüssen und hochwertigen Pflanzenölen. Fleisch und Milchprodukte spielen nur noch eine minimale Nebenrolle oder werden komplett weggelassen. Diese Ernährung schont nicht nur die Erde, sondern senkt auch das Risiko für chronische Krankheiten wie Typ-2-Diabetes, Herz-Kreislauf-Erkrankungen und bestimmte Krebsarten erheblich.</p>
 <h3 id="vietnamesische-kraeuter-gesundheit" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Die Kraft der vietnamesischen Heilkräuter für Körper und Geist</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Eine pflanzliche Ernährung gewinnt durch die gezielte Verwendung von traditionellen Heilkräutern enorm an gesundheitlichem Wert. In der vietnamesischen Kulinarik spielen Kräuter wie Koriander, Perilla (Shiso), vietnamesischer Koriander (Rau Răm) und thailändisches Basilikum eine zentrale Rolle. Diese Kräuter sind reich an Antioxidantien, ätherischen Ölen und entzündungshemmenden Verbindungen, die das Immunsystem stärken und die Verdauung auf natürliche Weise fördern. In unserer Küche legen wir größten Wert darauf, <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a> in jedem Gericht harmonisch zu kombinieren, um nicht nur ein unvergleichliches Geschmackserlebnis zu kreieren, sondern auch das ganzheitliche Wohlbefinden zu steigern.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Eine pflanzliche Ernährung gewinnt durch die gezielte Verwendung von traditionellen Heilkräutern enorm an gesundheitlichem Wert. In der vietnamesischen Kulinarik spielen Kräuter wie Koriander, Perilla (Shiso), vietnamesischer Koriander (Rau Răm) und thailändisches Basilikum eine zentrale Rolle. Diese Kräuter sind reich an Antioxidantien, ätherischen Ölen und entzündungshemmenden Verbindungen, die das Immunsystem stärken und die Verdauung auf natürliche Weise fördern. In unserer Küche legen wir größten Wert darauf, <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a> in jedem Gericht harmonisch zu kombinieren, um nicht nur ein unvergleichliches Geschmackserlebnis zu kreieren, sondern auch das ganzheitliche Wohlbefinden zu steigern.</p>
 <h2 id="vietnamesische-kueche-und-nachhaltigkeit" style="color: #2e7d32; font-family: sans-serif; margin-top: 30px;">Traditionelle vietnamesische Küche als Pionier der Nachhaltigkeit</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die traditionelle vietnamesische Küche ist von Natur aus eng mit den Prinzipien der Nachhaltigkeit und dem Respekt vor der Natur verbunden. Historisch gesehen war Fleisch in Vietnam ein Luxusgut, weshalb sich eine Kochkultur entwickelt hat, die das Beste aus pflanzlichen Zutaten herausholt. Knackiges Gemüse, nahrhafter Tofu, aromatische Pilze und eine unendliche Vielfalt an Kräutern bilden das Herzstück dieser traditionsreichen und zugleich hochmodernen Küche.</p>
 <h3 id="pflanzliche-zutaten-vietnam" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Die Vielfalt an Gemüse, Tofu und Pilzen in Vietnam</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">In Vietnam hat die pflanzliche Küche eine lange Tradition, die eng mit dem Buddhismus (Ăn Chay) verknüpft ist. Anstatt Fleisch eins zu eins zu ersetzen, konzentriert sich die vietnamesische Küche darauf, die natürlichen Aromen der Zutaten hervorzuheben. Verschiedene Pilzsorten wie Austernpilze, Shiitake und Kräuterseitlinge dienen als wunderbare Textur- und Geschmacksträger. Tofu wird in unzähligen Variationen zubereitet – ob cremig-weich, knusprig frittiert oder würzig geschmort. Wer diese köstliche Vielfalt selbst zu Hause ausprobieren möchte, findet auf unserer Website zahlreiche traditionelle, <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a> voller Inspiration und Geschmack.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">In Vietnam hat die pflanzliche Küche eine lange Tradition, die eng mit dem Buddhismus (Ăn Chay) verknüpft ist. Anstatt Fleisch eins zu eins zu ersetzen, konzentriert sich die vietnamesische Küche darauf, die natürlichen Aromen der Zutaten hervorzuheben. Verschiedene Pilzsorten wie Austernpilze, Shiitake und Kräuterseitlinge dienen als wunderbare Textur- und Geschmacksträger. Tofu wird in unzähligen Variationen zubereitet – ob cremig-weich, knusprig frittiert oder würzig geschmort. Wer diese köstliche Vielfalt selbst zu Hause ausprobieren möchte, findet auf unserer Website zahlreiche traditionelle, <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a> voller Inspiration und Geschmack.</p>
 <h3 id="vegan-garden-berlin-philosophie" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Vegane vietnamesische Kulinarik im Vegan Garden Berlin</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Wir bei Vegan Garden Berlin haben es uns zur Aufgabe gemacht, diese traditionelle, nachhaltige Esskultur nach Berlin zu bringen. In unserem gemütlichen Ambiente verbinden wir traditionelle vietnamesische Familienrezepte mit modernen, rein pflanzlichen Akzenten. Wir zeigen täglich, dass eine klimafreundliche Ernährung auf keinerlei Genuss verzichten muss. Besuche <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a> und überzeuge dich selbst von der Faszination der veganen Kulinarik. Dabei stehen <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a> einer ethischen, umweltschonenden Lebensweise bei jedem Schritt im Vordergrund – vom Einkauf regionaler Bio-Zutaten bis hin zur Vermeidung von Plastikmüll.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Wir bei Vegan Garden Berlin haben es uns zur Aufgabe gemacht, diese traditionelle, nachhaltige Esskultur nach Berlin zu bringen. In unserem gemütlichen Ambiente verbinden wir traditionelle vietnamesische Familienrezepte mit modernen, rein pflanzlichen Akzenten. Wir zeigen täglich, dass eine klimafreundliche Ernährung auf keinerlei Genuss verzichten muss. Besuche <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a> und überzeuge dich selbst von der Faszination der veganen Kulinarik. Dabei stehen <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a> einer ethischen, umweltschonenden Lebensweise bei jedem Schritt im Vordergrund – vom Einkauf regionaler Bio-Zutaten bis hin zur Vermeidung von Plastikmüll.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
 <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 1.15em;">Lust auf frische, gesunde vietnamesische Küche?</h4>
 <p style="margin: 0 0 16px 0; font-size: 0.95em; color: #555;">Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
@@ -72,9 +322,9 @@
 <h2 id="nachhaltig-vegan-essen-in-berlin" style="color: #2e7d32; font-family: sans-serif; margin-top: 30px;">Pflanzlich schlemmen in der Hauptstadt</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Berlin gilt weltweit als eine der absolut führenden Metropolen für eine pflanzliche und nachhaltige Lebensweise. Die Vielfalt an veganen Cafés, Restaurants und Zero-Waste-Shops sucht ihresgleichen. Hier ist es so einfach wie nirgendwo sonst, Genuss und Klimaschutz perfekt miteinander zu verbinden und sich im Alltag inspirieren zu lassen.</p>
 <h3 id="veganer-guide-berlin-tipps" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Dein Guide für ein grünes Berlin</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Egal ob du alteingesessener Berliner bist oder die Stadt als Tourist besuchst: Es gibt unzählige grüne Oasen und innovative Konzepte zu entdecken. Um dir die Orientierung im Dschungel der veganen Angebote zu erleichtern, haben wir einen umfassenden Leitfaden zusammengestellt. In unserem <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">Vegan Guide für Berlin</a> findest du die besten Adressen für nachhaltigen Konsum, vegane Mode, umweltfreundliche Aktivitäten und natürlich die leckersten kulinarischen Highlights der Stadt.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Egal ob du alteingesessener Berliner bist oder die Stadt als Tourist besuchst: Es gibt unzählige grüne Oasen und innovative Konzepte zu entdecken. Um dir die Orientierung im Dschungel der veganen Angebote zu erleichtern, haben wir einen umfassenden Leitfaden zusammengestellt. In unserem <a href="../index.html#ratgeber">Vegan Guide für Berlin</a> findest du die besten Adressen für nachhaltigen Konsum, vegane Mode, umweltfreundliche Aktivitäten und natürlich die leckersten kulinarischen Highlights der Stadt.</p>
 <h3 id="rezepte-und-inspirationen" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Inspirationen für Zuhause und Restaurantbesuche</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Nachhaltigkeit bedeutet nicht Verzicht, sondern das Entdecken neuer, aufregender Geschmackswelten. Wenn du neugierig geworden bist und die unglaubliche Vielfalt der veganen vietnamesischen Küche kennenlernen möchtest, werfe einen Blick auf <a href="https://vegangarden-berlin.de/speisekarte/">unsere Speisekarte</a>. Von wärmenden, traditionellen Pho-Suppen mit reichhaltiger Gemüsebrühe über frische Sommerrollen mit Wildkräutern bis hin zu knusprigen Tofu-Spezialitäten bieten wir dir die ganze Bandbreite der gesunden, pflanzlichen Küche Vietnams. Lass dich inspirieren und erlebe, wie einfach und lecker aktiver Umweltschutz sein kann.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Nachhaltigkeit bedeutet nicht Verzicht, sondern das Entdecken neuer, aufregender Geschmackswelten. Wenn du neugierig geworden bist und die unglaubliche Vielfalt der veganen vietnamesischen Küche kennenlernen möchtest, werfe einen Blick auf <a href="../index.html#speisekarte">unsere Speisekarte</a>. Von wärmenden, traditionellen Pho-Suppen mit reichhaltiger Gemüsebrühe über frische Sommerrollen mit Wildkräutern bis hin zu knusprigen Tofu-Spezialitäten bieten wir dir die ganze Bandbreite der gesunden, pflanzlichen Küche Vietnams. Lass dich inspirieren und erlebe, wie einfach und lecker aktiver Umweltschutz sein kann.</p>
 <div style="background: #fafafa; border: 1px solid #eee; border-radius: 10px; padding: 20px; margin: 35px 0;">
 <h4 style="margin: 0 0 12px 0; color: #2e7d32; font-size: 1.15em; border-bottom: 2px solid #e8f7e8; padding-bottom: 6px;">📍 Besuche Vegan Garden Berlin</h4>
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Adresse:</strong> Frankfurter Allee 21, 10247 Berlin (Friedrichshain)</p>
@@ -92,3 +342,83 @@
 <li>[4] Willett, W. et al. (2019). Food in the Anthropocene: the EAT–Lancet Commission on healthy diets from sustainable food systems. <em>The Lancet</em>, 393(10170), 447-492. Harvard T.H. Chan School of Public Health. <a href="https://www.hsph.harvard.edu/nutritionsource/sustainability/" target="_blank" rel="nofollow noopener">https://www.hsph.harvard.edu/nutritionsource/sustainability/</a></li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,16 +1,268 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1. Die Kriterien für unseren kulinarischen Vergleich | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">1. Die Kriterien für unseren kulinarischen Vergleich</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/article_bestes_restaurant.jpg" alt="1. Die Kriterien für unseren kulinarischen Vergleich" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
 <p style="text-align:justify; line-height:1.6; color:#333;"><em>Berlin gilt weltweit als das unumstrittene Mekka der pflanzlichen Küche. Von deftigem Street Food bis hin zu exklusiver Haute Cuisine bietet die Spree-Metropole eine kulinarische Vielfalt, die ihresgleichen sucht. Doch wo wird wirklich frisch gekocht, welches Konzept überzeugt ganzheitlich und wo verschmelzen Geschmack und Gesundheit perfekt miteinander? In unserem umfassenden <strong>vegane restaurants berlin vergleich</strong> haben wir 10 herausragende Adressen für Sie unter die Lupe genommen und bewertet. Ob traditionelle vietnamesische Heilkräuter in Friedrichshain oder anspruchsvolles Zero-Waste-Dining in Mitte – erfahren Sie, wo Sie die besten pflanzlichen Kreationen der Stadt genießen können und warum eine bewusste Ernährung ein Fest für alle Sinne sein kann.</em></p>
 <h2 id="die-kriterien-fuer-unseren-vergleich">1. Die Kriterien für unseren kulinarischen Vergleich</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Um eine faire, transparente und vor allem nachvollziehbare Bewertung der verschiedenen gastronomischen Konzepte in Berlin zu gewährleisten, haben wir im Vorfeld feste Kriterien definiert. In einer Zeit, in der fast wöchentlich neue vegane Angebote auf den Markt drängen, reicht es längst nicht mehr aus, dass ein Gericht lediglich frei von tierischen Inhaltsstoffen ist. Eine zukunftsweisende pflanzliche Gastronomie zeichnet sich durch ein harmonisches Zusammenspiel aus Geschmack, Nährwertqualität und ökologischer Verantwortung aus. Daher basiert unser Vergleich auf drei Hauptsäulen, die für moderne, gesundheitsbewusste Genießer von zentraler Bedeutung sind.</p>
@@ -19,11 +271,11 @@
 <h3 id="kriterium-2-naehrwert-und-gesundheit">Kriterium 2: Nährwert und ganzheitliche Gesundheit</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Eine pflanzliche Ernährung entfaltet ihr volles Potenzial erst dann, wenn sie den Körper optimal mit Vitalstoffen versorgt und die Gesundheit ganzheitlich fördert. Wir prüfen daher kritisch, ob ein Restaurant vorwiegend auf stark verarbeitete Fertigprodukte und künstliche Zusatzstoffe setzt oder stattdessen auf das Konzept des „Clean Eating“ vertraut. Eine gesunde, pflanzenbetonte Ernährung nach den aktuellen wissenschaftlichen Empfehlungen der Deutschen Gesellschaft für Ernährung (DGE) <a href="https://www.dge.de/gesunde-ernaehrung/alternative-ernaehrungsformen/vegane-ernaehrung/" target="_blank" rel="nofollow noopener">[1]</a> sollte reich an frischem Gemüse, Hülsenfrüchten, Nüssen und darmfreundlichen Ballaststoffen sein. Auch die Bekömmlichkeit der Speisen spielt hier eine entscheidende Rolle.</p>
 <h3 id="kriterium-3-nachhaltigkeit-und-konzept">Kriterium 3: Nachhaltigkeit und Umweltbewusstsein</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Der Schutz unseres Planeten und der Respekt vor allen Lebewesen sind das Fundament der veganen Lebensphilosophie. Daher bewerten wir in diesem Kriterium, wie konsequent die Restaurants Umweltschutz im Alltag leben. Das Spektrum reicht von der Müllvermeidung (Zero-Waste-Ansatz) über die Herkunft der Lebensmittel (Bio-Zertifizierung, Regionalität, Saisonalität) bis hin zu fairen Arbeitsbedingungen. Denn wahre Genussmomente entstehen erst dann, wenn wir wissen, dass die Speisen im Einklang mit der Natur zubereitet wurden. Mehr dazu erfahren Sie auch unter <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Der Schutz unseres Planeten und der Respekt vor allen Lebewesen sind das Fundament der veganen Lebensphilosophie. Daher bewerten wir in diesem Kriterium, wie konsequent die Restaurants Umweltschutz im Alltag leben. Das Spektrum reicht von der Müllvermeidung (Zero-Waste-Ansatz) über die Herkunft der Lebensmittel (Bio-Zertifizierung, Regionalität, Saisonalität) bis hin zu fairen Arbeitsbedingungen. Denn wahre Genussmomente entstehen erst dann, wenn wir wissen, dass die Speisen im Einklang mit der Natur zubereitet wurden. Mehr dazu erfahren Sie auch unter <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a>.</p>
 <h2 id="der-grosse-vegane-restaurants-berlin-vergleich">2. Der große vegane Restaurants Berlin Vergleich: Die ersten 5 Favoriten</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Berlin bietet eine schier unendliche Auswahl an pflanzlichen Restaurants. In unserem großen Vergleichstest haben wir die Spreu vom Weizen getrennt. Wir starten mit unseren ersten fünf Top-Adressen, die jeweils ein ganz eigenes kulinarisches Konzept verkörpern – von traditionell-heilsam bis hin zu modernem Fine Dining.</p>
 <h3 id="vegan-garden-berlin">Vegan Garden Berlin – Die Oase für ganzheitliche vietnamesische Heilkräuterküche</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Wer nach einer perfekten Symbiose aus traditionellem Genuss, absoluter Frische und gesundheitlichem Mehrwert sucht, kommt am <strong>Vegan Garden Berlin</strong> nicht vorbei. Das liebevoll gestaltete Restaurant in Berlin-Friedrichshain setzt völlig neue Maßstäbe in der pflanzlichen Gastronomie. Hier werden vietnamesische Klassiker wie wärmende Pho-Suppen und bunte Bowls nicht nur rein pflanzlich, sondern nach den Prinzipien der traditionellen Heilkräuterkunde zubereitet. Die Gerichte sind frei von künstlichen Zusatzstoffen und industriellem Zucker, dafür reich an Antioxidantien und Vitaminen. Jedes Gericht ist ein Beweis dafür, wie gut gesundes Essen schmecken kann. Planen Sie Ihren nächsten Besuch und buchen Sie am besten gleich über unsere Reservierungsfunktion einen Tisch. Werfen Sie vorab unbedingt einen Blick in <a href="https://vegangarden-berlin.de/3d-flip-book/270/">unsere Speisekarte</a> (oder nutzen Sie die digitale Version auf unserer Website unter <a href="https://vegangarden-berlin.de/speisekarte/">unsere Speisekarte</a>), um sich inspirieren zu lassen. Für uns ist dies die unangefochtene Nummer eins im Bereich der gesunden, naturbelassenen Küche.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Wer nach einer perfekten Symbiose aus traditionellem Genuss, absoluter Frische und gesundheitlichem Mehrwert sucht, kommt am <strong>Vegan Garden Berlin</strong> nicht vorbei. Das liebevoll gestaltete Restaurant in Berlin-Friedrichshain setzt völlig neue Maßstäbe in der pflanzlichen Gastronomie. Hier werden vietnamesische Klassiker wie wärmende Pho-Suppen und bunte Bowls nicht nur rein pflanzlich, sondern nach den Prinzipien der traditionellen Heilkräuterkunde zubereitet. Die Gerichte sind frei von künstlichen Zusatzstoffen und industriellem Zucker, dafür reich an Antioxidantien und Vitaminen. Jedes Gericht ist ein Beweis dafür, wie gut gesundes Essen schmecken kann. Planen Sie Ihren nächsten Besuch und buchen Sie am besten gleich über unsere Reservierungsfunktion einen Tisch. Werfen Sie vorab unbedingt einen Blick in <a href="../index.html#speisekarte">unsere Speisekarte</a> (oder nutzen Sie die digitale Version auf unserer Website unter <a href="../index.html#speisekarte">unsere Speisekarte</a>), um sich inspirieren zu lassen. Für uns ist dies die unangefochtene Nummer eins im Bereich der gesunden, naturbelassenen Küche.</p>
 <h3 id="1990-vegan-living">1990 Vegan Living – Der gesellige Tapas-Klassiker</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Das 1990 Vegan Living am Boxhagener Platz gehört zu den absoluten Pionieren der veganen vietnamesischen Gastronomie in Berlin. Das weltbekannte Konzept basiert auf kleinen Tapas-Schalen, die perfekt zum Teilen in geselliger Runde geeignet sind. Die Atmosphäre ist lebendig und rustikal, der Service extrem schnell und freundlich. Kulinarisch überzeugt das Restaurant durch eine breite Palette an Aromen, auch wenn hier im Vergleich zum Vegan Garden Berlin etwas häufiger auf frittierte Komponenten und klassische Ersatzprodukte zurückgegriffen wird. Dennoch ist es ein absoluter Hotspot für alle, die eine ungezwungene Atmosphäre und eine große Auswahl an unterschiedlichen Geschmacksprofilen schätzen.</p>
 <h3 id="frea">FREA – Kulinarische Perfektion ohne Müll</h3>
@@ -32,8 +284,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Wer nach einem Ort für einen ganz besonderen Anlass sucht, ist im Lucky Leek im Prenzlauer Berg an der richtigen Adresse. Das vom Guide Michelin ausgezeichnete Restaurant bietet pflanzliche Haute Cuisine, die durch außergewöhnliche Texturen und komplexe Geschmackskombinationen besticht. Die Menüs wechseln regelmäßig und zeigen, wie facettenreich Gemüse sein kann, wenn es von Meisterhand zubereitet wird. Die Portionen sind gehoben-klein, die Aromen dafür umso intensiver. Ein Muss für alle Feinschmecker, die vegane Küche auf absolutem Premium-Niveau erleben möchten.</p>
 <h3 id="brammibals-donuts">Brammibal’s Donuts – Die süße Ikone Berlins</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Brammibal’s Donuts hat die Berliner Café-Szene im Sturm erobert. Mit mittlerweile zahlreichen Filialen in der ganzen Stadt ist diese Kette der Anlaufpunkt für alle Naschkatzen. Die handgemachten, fluffigen Hefe-Donuts sind zu 100 % vegan und in unzähligen kreativen Sorten erhältlich – von klassischem Boston Cream bis hin zu monatlich wechselnden Specials. Obwohl es sich hierbei natürlich um Comfort Food und nicht um gesundheitsfördernde Rohkost handelt, leistet Brammibal’s einen großartigen Beitrag dazu, vegane Alternativen im Mainstream zu etablieren. Perfekt für den süßen Hunger zwischendurch!</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-restaurants-berlin-vergleich-2026-inline-1-1.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten"><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
 <h2 id="weitere-top-adressen-im-bewertungstest">3. Weitere Top-Adressen im großen Bewertungstest</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Unsere kulinarische Reise durch Berlin ist noch lange nicht zu Ende. In diesem Abschnitt betrachten wir fünf weitere Restaurants, die mit innovativen Konzepten und einzigartigen Nischen überzeugen. Von traditioneller deutscher Hausmannskost im veganen Gewand bis hin zu nährstoffreicher koreanischer Tempelküche ist für jeden Geschmack etwas dabei.</p>
 <h3 id="kopps">Kopps – Gehobene Abendküche mit regionalem Fokus</h3>
@@ -52,21 +303,20 @@
 <p>  <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Tisch jetzt reservieren</a>
 </div>
 <h2 id="die-bedeutung-von-heilkraeutern-in-der-veganen-kueche">4. Die Bedeutung von Heilkräutern in der veganen Küche</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">In der Hektik des modernen Alltags gerät ein Aspekt der Ernährung oft in den Hintergrund: die energetische und heilende Wirkung unserer Nahrung. In asiatischen Kulturen, insbesondere in der vietnamesischen Tradition, wird Essen seit Jahrtausenden als Medizin betrachtet. Im Vegan Garden Berlin, <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a>, erwecken wir diese Philosophie zum Leben. Durch den gezielten Einsatz von frischen Wildkräutern und Gewürzen kreieren wir Speisen, die den Körper von innen heraus reinigen, stärken und vitalisieren.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">In der Hektik des modernen Alltags gerät ein Aspekt der Ernährung oft in den Hintergrund: die energetische und heilende Wirkung unserer Nahrung. In asiatischen Kulturen, insbesondere in der vietnamesischen Tradition, wird Essen seit Jahrtausenden als Medizin betrachtet. Im Vegan Garden Berlin, <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a>, erwecken wir diese Philosophie zum Leben. Durch den gezielten Einsatz von frischen Wildkräutern und Gewürzen kreieren wir Speisen, die den Körper von innen heraus reinigen, stärken und vitalisieren.</p>
 <h3 id="frische-vietnamesische-kraeuter-als-gesundheitsbooster">Frische vietnamesische Kräuter als echte Gesundheitsbooster</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">In der vietnamesischen Küche spielen <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a> eine zentrale Rolle. Kräuter wie Koriander (Rau Mùi), vietnamesischer Koriander (Rau Răm), thailändisches Basilikum (Húng Quế) und Perilla (Tía Tô) sind weit mehr als nur Dekoration. Sie sind reich an ätherischen Ölen, sekundären Pflanzenstoffen und kraftvollen Antioxidantien. Tía Tô (Perilla) beispielsweise wird in der traditionellen Medizin zur Linderung von Erkältungssymptomen und Entzündungen eingesetzt. Diese natürlichen Inhaltsstoffe schützen die Zellen vor oxidativem Stress und unterstützen das Immunsystem im Kampf gegen freie Radikale.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">In der vietnamesischen Küche spielen <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a> eine zentrale Rolle. Kräuter wie Koriander (Rau Mùi), vietnamesischer Koriander (Rau Răm), thailändisches Basilikum (Húng Quế) und Perilla (Tía Tô) sind weit mehr als nur Dekoration. Sie sind reich an ätherischen Ölen, sekundären Pflanzenstoffen und kraftvollen Antioxidantien. Tía Tô (Perilla) beispielsweise wird in der traditionellen Medizin zur Linderung von Erkältungssymptomen und Entzündungen eingesetzt. Diese natürlichen Inhaltsstoffe schützen die Zellen vor oxidativem Stress und unterstützen das Immunsystem im Kampf gegen freie Radikale.</p>
 <h3 id="darmgesundheit-und-bekoemmlichkeit">Darmgesundheit und verbesserte Bekömmlichkeit</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein starker Darm ist das Fundament der Gesundheit. Viele Menschen leiden bei der Umstellung auf eine ballaststoffreiche vegane Ernährung an anfänglichen Verdauungsproblemen. Hier setzen Heilkräuter und Gewürze wie Ingwer, Galgant, Zitronengras und Sternanis an. Sie wirken entkrampfend auf den Magen-Darm-Trakt, regen die Produktion von Verdauungssäften an und fördern eine gesunde Darmflora. Wissenschaftliche Untersuchungen bestätigen die verdauungsfördernden und entzündungshemmenden Eigenschaften von Gewürzen wie Ingwer und Kurkuma (<a href="https://pubmed.ncbi.nlm.nih.gov/24811150/" target="_blank" rel="nofollow noopener">[2]</a>). Im Vegan Garden Berlin achten wir penibel darauf, diese gesundheitlichen Vorteile in jedem Gericht zu verankern.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-restaurants-berlin-vergleich-2026-inline-2-1.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen"><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
 <h2 id="naehrwertvergleich-fast-food-vs-ganzheitliche-ernaehrung">5. Nährwertvergleich: Veganes Fast Food vs. ganzheitliche Ernährung</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die wachsende Beliebtheit der veganen Lebensweise hat zu einer wahren Flut an veganen Fertigprodukten und Fast-Food-Optionen geführt. Doch vegan bedeutet keineswegs automatisch gesund. In diesem Abschnitt vergleichen wir die physiologischen Auswirkungen von verarbeitetem Comfort Food mit einer naturbelassenen, vollwertigen Pflanzenküche.</p>
 <h3 id="die-versteckten-fallen-hochverarbeiteter-ersatzprodukte">Die versteckten Fallen hochverarbeiteter Ersatzprodukte</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Vegane Burger-Patties, Fleischersatz aus Sojakonzentrat oder veganer Schmelzkäse schmecken oft verblüffend echt, enthalten jedoch häufig große Mengen an gesättigten Fettsäuren, Natrium, künstlichen Aromen und Bindemitteln. Ein übermäßiger Konsum solcher hochverarbeiteten Lebensmittel kann Entzündungsprozesse im Körper begünstigen und das Risiko für Herz-Kreislauf-Erkrankungen erhöhen, wie die World Health Organization (WHO) in ihren Leitlinien für eine gesunde Ernährung betont (<a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="nofollow noopener">[3]</a>). Sie liefern zwar schnelle Energie, aber kaum lebenswichtige Mikronährstoffe.</p>
 <h3 id="clean-eating-und-vollwertige-pflanzliche-lebensmittel">Clean Eating und die Kraft vollwertiger pflanzlicher Lebensmittel</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Im Gegensatz dazu basiert das „Clean Eating“-Prinzip auf frischen, unverarbeiteten Lebensmitteln. Hülsenfrüchte, Nüsse, Samen, Vollkorngetreide sowie frisches Obst und Gemüse liefern eine Fülle an Vitaminen, Mineralstoffen, Ballaststoffen und pflanzlichen Proteinen. Diese Nährstoffdichte hält den Blutzuckerspiegel stabil, sorgt für langanhaltende Sättigung und vitalisiert den gesamten Organismus. Wenn Sie zu Hause gesunde, pflanzliche Gerichte zubereiten möchten, finden Sie auf unserer Plattform fantastische <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a>, die einfach nachzukochen sind und Ihren Körper optimal nähren.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Im Gegensatz dazu basiert das „Clean Eating“-Prinzip auf frischen, unverarbeiteten Lebensmitteln. Hülsenfrüchte, Nüsse, Samen, Vollkorngetreide sowie frisches Obst und Gemüse liefern eine Fülle an Vitaminen, Mineralstoffen, Ballaststoffen und pflanzlichen Proteinen. Diese Nährstoffdichte hält den Blutzuckerspiegel stabil, sorgt für langanhaltende Sättigung und vitalisiert den gesamten Organismus. Wenn Sie zu Hause gesunde, pflanzliche Gerichte zubereiten möchten, finden Sie auf unserer Plattform fantastische <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a>, die einfach nachzukochen sind und Ihren Körper optimal nähren.</p>
 <h2 id="tipps-fuer-ihren-veganen-kulinarik-trip-durch-berlin">6. Insider-Tipps für Ihren veganen Kulinarik-Trip durch Berlin</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Damit Ihre kulinarische Entdeckungsreise durch Berlin zu einem vollen Erfolg wird, haben wir einige wertvolle Tipps für Sie zusammengestellt. Als erfahrene Insider der Berliner Gastro-Szene wissen wir genau, worauf es ankommt, um lange Warteschlangen zu vermeiden und die absoluten Highlights zu entdecken. Lesen Sie auch <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">unser Vegan Guide für Berlin</a>, um noch tiefere Einblicke in die pflanzliche Szene der Hauptstadt zu erhalten.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Damit Ihre kulinarische Entdeckungsreise durch Berlin zu einem vollen Erfolg wird, haben wir einige wertvolle Tipps für Sie zusammengestellt. Als erfahrene Insider der Berliner Gastro-Szene wissen wir genau, worauf es ankommt, um lange Warteschlangen zu vermeiden und die absoluten Highlights zu entdecken. Lesen Sie auch <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a>, um noch tiefere Einblicke in die pflanzliche Szene der Hauptstadt zu erhalten.</p>
 <h3 id="die-besten-stadtteile-fuer-veganer">Die besten Stadtteile für vegane Foodies</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Obwohl man in ganz Berlin hervorragend vegan essen kann, stechen einige Bezirke besonders hervor. Friedrichshain (rund um den Boxhagener Platz und die Frankfurter Allee) ist ein wahres Paradies für pflanzliche Kulinarik. Hier finden Sie eine extrem hohe Dichte an veganen Cafés, asiatischen Restaurants und kreativen Bistros. Auch der Prenzlauer Berg und Berlin-Mitte bieten eine exquisite Auswahl, die von gehobenem Fine Dining bis zu modernen Frühstücks-Spots reicht. Kreuzberg wiederum glänzt mit alternativen Projekten und internationalem Street Food.</p>
 <h3 id="reservierungen-und-planung">Warum Reservierungen und Vorausplanung entscheidend sind</h3>
@@ -92,3 +342,83 @@
 <li>[3] World Health Organization (WHO). (2020). <em>Healthy diet</em>. https://www.who.int/news-room/fact-sheets/detail/healthy-diet</li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

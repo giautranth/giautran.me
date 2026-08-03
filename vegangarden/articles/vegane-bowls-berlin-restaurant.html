@@ -1,22 +1,274 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegane Bowls Berlin – Power Food vom Feinsten | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
-<h1 style="color: #2e7d32; font-family: sans-serif; font-size: 2.2em; margin-top: 20px; margin-bottom: 20px;">Vegane Bowls Berlin – Power Food vom Feinsten</h1>
-<p style="text-align:justify; line-height:1.6; color:#333;"><em>Wer nach einer nährstoffreichen, energetisierenden und zugleich absolut köstlichen Mahlzeit sucht, kommt an dem modernen Trend-Food schlechthin nicht vorbei: Eine meisterhaft zusammengestellte <a href="https://vegangarden-berlin.de/3d-flip-book/270/">vegane bowls berlin</a> vereint frischeste Zutaten und fernöstliche Aromen auf einzigartige Weise. In den geschäftigen Straßen der Hauptstadt hat sich die Schüssel voller Vitamine und Proteine vom bloßen Hype zum festen Bestandteil eines bewussten Lifestyles entwickelt. Erfahre in diesem umfassenden Guide, warum diese farbenfrohen Kreationen ein wahres Kraftfutter für Körper und Geist sind, wie das asiatische Erbe unsere Rezepte beeinflusst und warum ein Besuch in unserem Berliner Restaurant dein Verständnis von gesundem Genuss revolutionieren wird.</em></p>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Vegane Bowls Berlin – Power Food vom Feinsten</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/summer_bowl.png" alt="Vegane Bowls Berlin – Power Food vom Feinsten" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+
+<p style="text-align:justify; line-height:1.6; color:#333;"><em>Wer nach einer nährstoffreichen, energetisierenden und zugleich absolut köstlichen Mahlzeit sucht, kommt an dem modernen Trend-Food schlechthin nicht vorbei: Eine meisterhaft zusammengestellte <a href="../index.html#speisekarte">vegane bowls berlin</a> vereint frischeste Zutaten und fernöstliche Aromen auf einzigartige Weise. In den geschäftigen Straßen der Hauptstadt hat sich die Schüssel voller Vitamine und Proteine vom bloßen Hype zum festen Bestandteil eines bewussten Lifestyles entwickelt. Erfahre in diesem umfassenden Guide, warum diese farbenfrohen Kreationen ein wahres Kraftfutter für Körper und Geist sind, wie das asiatische Erbe unsere Rezepte beeinflusst und warum ein Besuch in unserem Berliner Restaurant dein Verständnis von gesundem Genuss revolutionieren wird.</em></p>
 <h2 id="der-hype-um-vegane-bowls-in-berlin" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Der Hype um vegane Bowls in Berlin: Warum das Power Food die Hauptstadt erobert</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Berlin gilt weltweit als die unangefochtene Hauptstadt des veganen Lifestyles. Nirgendwo sonst ist das Angebot an rein pflanzlichen Alternativen so vielfältig, kreativ und zukunftsweisend wie hier. Inmitten dieser pulsierenden Food-Szene haben sich vegane Bowls als absoluter Favorit für gesundheitsbewusste Genießer etabliert. Sie sind weit mehr als nur ein ästhetischer Social-Media-Trend; sie stehen für eine moderne Lebenseinstellung, die schnellen, unkomplizierten Genuss mit maximaler Nährstoffdichte verbindet. Eine gut konzipierte Schüssel liefert alles, was der Körper im urbanen Alltag benötigt, ohne schwer im Magen zu liegen.</p>
 <h3 id="vegane-bowls-berlin-im-trend" style="color:#43a047; font-size:1.25em; margin-top:20px;">Vegane Bowls Berlin – Warum der Trend mehr als nur ein Hype ist</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Der anhaltende Erfolg von <a href="https://vegangarden-berlin.de/3d-flip-book/270/">vegane bowls berlin</a> lässt sich leicht erklären: Sie brechen mit dem alten Vorurteil, dass gesunde Ernährung kompliziert oder fade sein muss. Bowls vereinen das Beste aus verschiedenen Lebensmittelgruppen in einer einzigen Mahlzeit. Der Gast muss sich nicht mehr zwischen einem leichten Salat und einer sättigenden Hauptspeise entscheiden – er bekommt beides, kunstvoll angerichtet und perfekt aufeinander abgestimmt. Dieser Trend spiegelt den Wunsch moderner Großstädter wider, sich im stressigen Alltag unkompliziert, aber dennoch hochwertig und ohne tierische Produkte zu ernähren.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Der anhaltende Erfolg von <a href="../index.html#speisekarte">vegane bowls berlin</a> lässt sich leicht erklären: Sie brechen mit dem alten Vorurteil, dass gesunde Ernährung kompliziert oder fade sein muss. Bowls vereinen das Beste aus verschiedenen Lebensmittelgruppen in einer einzigen Mahlzeit. Der Gast muss sich nicht mehr zwischen einem leichten Salat und einer sättigenden Hauptspeise entscheiden – er bekommt beides, kunstvoll angerichtet und perfekt aufeinander abgestimmt. Dieser Trend spiegelt den Wunsch moderner Großstädter wider, sich im stressigen Alltag unkompliziert, aber dennoch hochwertig und ohne tierische Produkte zu ernähren.</p>
 <h3 id="die-evolution-der-schuesselgerichte-vom-trend-zum-festen-lifestyle" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Evolution der Schüsselgerichte: Vom Trend zum festen Lifestyle</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Geschichte der Bowls reicht weit zurück und hat tiefe Wurzeln in der asiatischen Kultur. Ursprünglich inspiriert von den „Buddha Bowls“ – einfachen Schalen, die von buddhistischen Mönchen auf ihren Wegen getragen und von der Gemeinschaft mit vegetarischen Spenden gefüllt wurden – hat sich das Konzept im Westen zu einer High-End-Kulinarik entwickelt. Heute steht das Schüsselgericht für Clean Eating und eine ganzheitliche Lebensweise. Es kombiniert traditionelle asiatische Philosophie mit den neuesten wissenschaftlichen Erkenntnissen über vitalstoffreiche Ernährung, um Körper und Geist im Gleichgewicht zu halten.</p>
 <h3 id="warum-bowls-die-ideale-mahlzeit-fuer-den-modernen-urbanen-alltag-sind" style="color:#43a047; font-size:1.25em; margin-top:20px;">Warum Bowls die ideale Mahlzeit für den modernen urbanen Alltag sind</h3>
@@ -24,15 +276,14 @@
 <h2 id="die-anatomie-einer-perfekten-vietnamesischen-bowl-fuenf-elemente-fuer-hoechste-balance" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Die Anatomie einer perfekten vietnamesischen Bowl: Fünf Elemente für höchste Balance</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Im Vegan Garden Berlin werfen wir die Zutaten nicht einfach wahllos in eine Schüssel. Die Kreation einer erstklassigen vietnamesischen Bowl ist eine Kunstform, die auf den traditionellen Lehren der fünf Elemente (Holz, Feuer, Erde, Metall und Wasser) basiert. Jedes Element steht für eine bestimmte Geschmacksrichtung (sauer, bitter, süß, scharf, salzig), eine Farbe und eine organische Funktion im Körper. Erst wenn all diese Komponenten harmonisch aufeinander abgestimmt sind, entsteht ein Gericht, das den Magen nährt und die Seele wärmt. Diese Ganzheitlichkeit spürst du mit jedem einzelnen Bissen.</p>
 <h3 id="die-basis-komplexe-kohlenhydrate-und-glutenfreie-leichtigkeit" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Basis: Komplexe Kohlenhydrate und glutenfreie Leichtigkeit</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Das Fundament unserer Bowls bildet eine sorgfältig gewählte Basis aus komplexen Kohlenhydraten. Wir verwenden bevorzugt traditionelle vietnamesische Reisnudeln (Bún) aus reinem Reismehl oder nährstoffreichen Vollkorn-Naturreis. Diese Kohlenhydrate sind von Natur aus komplett glutenfrei und extrem leicht verdaulich. Sie versorgen deine Muskeln und dein Gehirn langanhaltend mit Glukose, ohne die Verdauungsorgane unnötig zu belasten. Ein Blick auf <a href="https://vegangarden-berlin.de/3d-flip-book/270/">unsere Speisekarte</a> offenbart die Vielfalt an glutenfreien Optionen, die wir für dich bereithalten.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Das Fundament unserer Bowls bildet eine sorgfältig gewählte Basis aus komplexen Kohlenhydraten. Wir verwenden bevorzugt traditionelle vietnamesische Reisnudeln (Bún) aus reinem Reismehl oder nährstoffreichen Vollkorn-Naturreis. Diese Kohlenhydrate sind von Natur aus komplett glutenfrei und extrem leicht verdaulich. Sie versorgen deine Muskeln und dein Gehirn langanhaltend mit Glukose, ohne die Verdauungsorgane unnötig zu belasten. Ein Blick auf <a href="../index.html#speisekarte">unsere Speisekarte</a> offenbart die Vielfalt an glutenfreien Optionen, die wir für dich bereithalten.</p>
 <h3 id="das-protein-fundament-pflanzliche-kraftpakete-fuer-lang-anhaltende-energie" style="color:#43a047; font-size:1.25em; margin-top:20px;">Das Protein-Fundament: Pflanzliche Kraftpakete für lang anhaltende Energie</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Um deinen Muskeln wertvolle Bausteine zu liefern, integrieren wir hochwertige pflanzliche Proteine in unsere Bowls. Unser Bio-Tofu wird nach traditioneller Art gepresst, in feinen Gewürzen mariniert und außen kross angebraten, während er innen saftig weich bleibt. Ergänzt wird dies durch unseren hausgemachten Seitan, der mit frischem Zitronengras gedämpft wird und eine faszinierend fleischähnliche Textur aufweist. Wissenschaftliche Untersuchungen der Harvard T.H. Chan School of Public Health zeigen, dass der Austausch von tierischen Proteinen durch pflanzliche Quellen wie Tofu und Hülsenfrüchte die Herz-Kreislauf-Gesundheit maßgeblich unterstützen und Entzündungsmarker im Körper senken kann (<a href="https://www.health.harvard.edu/" target="_blank" rel="nofollow noopener">[1]</a>).</p>
 <h3 id="knackiges-gemuese-und-vitamine-die-bunten-farben-der-vitalitaet" style="color:#43a047; font-size:1.25em; margin-top:20px;">Knackiges Gemüse und Vitamine: Die bunten Farben der Vitalität</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein wahrer Augenschmaus und der Hauptlieferant für Mikronährstoffe ist die bunte Palette an rohem und gedämpftem Gemüse. Knackige Gurkenscheiben, geraspelte Bio-Karotten, violetter Rotkohl und zarte Mungobohnensprossen bringen nicht nur Frische, sondern auch lebenswichtige Antioxidantien und Vitamine in die Bowl. Jede Farbe steht für andere sekundäre Pflanzenstoffe, die freie Radikale im Körper abwehren und dein Immunsystem auf natürliche Weise stärken. Ergänzt wird dieses Ensemble durch cremige Avocado-Spalten und fruchtige Mangowürfel, die gesunde Fettsäuren und Enzyme liefern.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-bowls-berlin-restaurant-inline-1-1.jpg" alt="Gemütliche Sitzecke im Vegan Garden Berlin" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure>
+<figure><figure><img src="../images/pho_bo_chay.png" alt="Gemütliche Sitzecke im Vegan Garden Berlin"><figcaption>Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure><figcaption>Gemütliche Sitzecke im Vegan Garden Berlin</figcaption></figure>
 <h2 id="heilkraeuter-und-superfoods-was-vietnamesische-bowls-so-einzigartig-gesund-macht" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Heilkräuter und Superfoods: Was vietnamesische Bowls so einzigartig gesund macht</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Was unterscheidet eine vietnamesische Bowl von einem gewöhnlichen Salat aus dem Supermarkt? Es ist die bewusste Integration von Heilkräutern, die in der vietnamesischen Esskultur seit Jahrtausenden als Medizin geschätzt werden. In Vietnam ist die Küche die erste Apotheke des Hauses. Kräuter werden nicht bloß zur Dekoration genutzt, sondern sind essenzielle Wirkstoffträger, die die Magen-Darm-Tätigkeit harmonisieren und die Nährstoffaufnahme optimieren. Wir verwenden in unserer Küche ausschließlich <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a>, um dieses authentische und gesundheitsfördernde Geschmackserlebnis zu garantieren.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Was unterscheidet eine vietnamesische Bowl von einem gewöhnlichen Salat aus dem Supermarkt? Es ist die bewusste Integration von Heilkräutern, die in der vietnamesischen Esskultur seit Jahrtausenden als Medizin geschätzt werden. In Vietnam ist die Küche die erste Apotheke des Hauses. Kräuter werden nicht bloß zur Dekoration genutzt, sondern sind essenzielle Wirkstoffträger, die die Magen-Darm-Tätigkeit harmonisieren und die Nährstoffaufnahme optimieren. Wir verwenden in unserer Küche ausschließlich <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a>, um dieses authentische und gesundheitsfördernde Geschmackserlebnis zu garantieren.</p>
 <h3 id="die-gruene-apotheke-vietnams-welche-kraeuter-den-unterschied-machen" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die grüne Apotheke Vietnams: Welche Kräuter den Unterschied machen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Auf unseren Bowls findest du eine einzigartige Auswahl an Wildkräutern, die direkt aus Bio-Anbau importiert oder frisch von regionalen Partnern bezogen werden. Dazu gehört die vietnamesische Perilla (Tía Tô) mit ihren zweifarbigen, violett-grünen Blättern, der vietnamesische Koriander (Rau Răm), der eine leicht scharfe, zitronige Note besitzt, und das thailändische Basilikum (Húng Quế) mit seinem feinen Anisaroma. Diese Kräuter verleihen der Bowl nicht nur eine unverwechselbare Geschmackstiefe, sondern wirken auch stark antibakteriell und entzündungshemmend.</p>
 <h3 id="die-gesundheitlichen-vorteile-von-koriander-perilla-und-zitronengras" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die gesundheitlichen Vorteile von Koriander, Perilla und Zitronengras</h3>
@@ -47,9 +298,8 @@
 <h3 id="die-klassische-buen-bowl-das-vietnamesische-original" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die klassische Bún-Bowl: Das vietnamesische Original</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die traditionelle Bún-Bowl besteht aus einer großzügigen Portion feiner Reisnudeln, die zimmertemperiert serviert werden. Darüber legen sich verschiedene Schichten aus warmen Proteinen, knackigen Sprossen, Gurken, Karotten und einem wahren Berg an frischen Kräutern. Das absolute Highlight ist das Dressing: Während im klassischen Vietnam oft eine Fischsauce (Nước Chấm) gereicht wird, haben wir eine meisterhafte, rein pflanzliche Alternative auf Basis von fermentierter Sojasauce, Limettensaft und Rohrzucker kreiert. Abgerundet mit gerösteten Erdnüssen und Röstzwiebeln entsteht eine unvergleichliche Geschmacksexplosion aus süßen, sauren, salzigen und erdigen Noten.</p>
 <h3 id="die-symbiose-aus-tempelkueche-und-modernem-clean-eating" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Symbiose aus Tempelküche und modernem Clean Eating</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Unsere Bowls sind stark von der vietnamesischen Tempelküche (Ẩm thực chay) geprägt, die seit Jahrhunderten vollkommen ohne Fleisch und künstliche Zusatzstoffe auskommt. Buddhistische Mönche entwickelten Gerichte, die den Körper reinigen und den Geist klären sollten. Wir verbinden diese alte Weisheit mit den Grundsätzen des modernen Clean Eating. Das bedeutet: Keine hochverarbeiteten Ersatzprodukte, keine künstlichen Geschmacksverstärker (wie Glutamat) und minimale Erhitzung, um die wertvollen Enzyme der Rohkost zu bewahren. Besuche <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a> und erlebe, wie fantastisch diese Symbiose schmeckt.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-bowls-berlin-restaurant-inline-2-1.jpg" alt="Bunt gedeckter Tisch mit vietnamesischen Spezialitäten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure>
+<p style="text-align:justify; line-height:1.6; color:#333;">Unsere Bowls sind stark von der vietnamesischen Tempelküche (Ẩm thực chay) geprägt, die seit Jahrhunderten vollkommen ohne Fleisch und künstliche Zusatzstoffe auskommt. Buddhistische Mönche entwickelten Gerichte, die den Körper reinigen und den Geist klären sollten. Wir verbinden diese alte Weisheit mit den Grundsätzen des modernen Clean Eating. Das bedeutet: Keine hochverarbeiteten Ersatzprodukte, keine künstlichen Geschmacksverstärker (wie Glutamat) und minimale Erhitzung, um die wertvollen Enzyme der Rohkost zu bewahren. Besuche <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a> und erlebe, wie fantastisch diese Symbiose schmeckt.</p>
+<figure><figure><img src="../images/spring_rolls.png" alt="Bunt gedeckter Tisch mit vietnamesischen Spezialitäten"><figcaption>Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure><figcaption>Bunt gedeckter Tisch mit vietnamesischen Spezialitäten</figcaption></figure>
 <h2 id="unsere-hauseigenen-bowl-spezialitaeten-im-vegan-garden-berlin" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Unsere hauseigenen Bowl-Spezialitäten im Vegan Garden Berlin</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Unsere Speisekarte im Vegan Garden Berlin bietet dir eine exquisite Auswahl an Bowls, die von unserer Chefköchin Huong Nguyen mit viel Liebe und Präzision kreiert wurden. Jede Schüssel erzählt ihre eigene Geschichte und setzt unterschiedliche ernährungsphysiologische Schwerpunkte. Ob du einen echten Detox-Booster suchst oder nach dem Sport deine Proteinspeicher auffüllen möchtest – bei uns wirst du fündig.</p>
 <h3 id="die-gruene-kraft-bowl-vitalitaet-und-frische-in-einer-schuessel" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Grüne Kraft-Bowl: Vitalität und Frische in einer Schüssel</h3>
@@ -58,8 +308,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Für den großen Hunger und sportlich Aktive ist unsere herzhafte Tofu-Seitan-Bowl die erste Wahl. Auf einer sättigenden Basis aus glutenfreien Reisnudeln arrangieren wir kross angebratenen Bio-Tofu, würzigen Zitronengras-Seitan, marinierten Rotkohl, geraspelte Karotten und Mungobohnensprossen. Ein reichhaltiges Erdnuss-Sesam-Dressing sowie ein Topping aus gerösteten Erdnüssen sorgen für ein tiefes, herzhaftes Aroma (Umami). Diese Bowl liefert ein vollständiges Aminosäurenprofil und ist die perfekte Mahlzeit zur Muskelregeneration nach dem Training.</p>
 <h3 id="die-exotische-mango-avocado-bowl-cremiger-genuss-mit-fruchtiger-note" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Exotische Mango-Avocado-Bowl: Cremiger Genuss mit fruchtiger Note</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Wenn du die Kombination aus herzhaften und fruchtigen Komponenten liebst, wird dich unsere exotische Mango-Avocado-Bowl begeistern. Süße, sonnengereifte Mangowürfel treffen hier auf cremige Avocado, fruchtige Kirschtomaten, knackigen Salat und feine Reisnudeln. Ein hausgemachtes Ingwer-Orangen-Dressing verbindet die Zutaten zu einem harmonischen Gesamtkunstwerk. Das in der Mango enthaltene Vitamin C verbessert die Eisenaufnahme aus dem Gemüse, während die gesunden Fette der Avocado dafür sorgen, dass fettlösliche Vitamine optimal vom Körper aufgenommen werden.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/vegangarden-2-1.jpg" alt="Bunte vegane vietnamesische Bowls mit Avocado und Tofu" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Frische, farbenfrohe vegane Bowls im Vegan Garden Berlin</figcaption></figure>
+<figure><figure><img src="../images/summer_bowl.png" alt="Bunte vegane vietnamesische Bowls mit Avocado und Tofu"><figcaption>Bunte vegane vietnamesische Bowls mit Avocado und Tofu</figcaption></figure><figcaption>Bunte vegane vietnamesische Bowls mit Avocado und Tofu</figcaption></figure>
 <h2 id="die-wissenschaft-hinter-der-perfekten-bowl-wissenschaftliche-erkenntnisse-zur-vitalstoffreichen-ernaehrung" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Die Wissenschaft hinter der perfekten Bowl: Wissenschaftliche Erkenntnisse zur vitalstoffreichen Ernährung</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Zusammenstellung unserer Bowls ist kein Zufall, sondern basiert auf fundierten ernährungswissenschaftlichen Prinzipien. Um dem Körper alle lebensnotwendigen Nährstoffe in der perfekten Bioverfügbarkeit zur Verfügung zu stellen, achten wir präzise auf das Verhältnis der Makro- und Mikronährstoffe. Eine vollwertige pflanzliche Mahlzeit sollte so aufgebaut sein, dass sie den Blutzuckerspiegel stabilisiert, Entzündungsprozesse im Körper hemmt und die Darmflora optimal nährt. So fühlst du dich nach dem Essen fit, energiegeladen und rundum wohl.</p>
 <h3 id="das-perfekte-naehrstoffverhaeltnis-fuer-langanhaltende-energie" style="color:#43a047; font-size:1.25em; margin-top:20px;">Das perfekte Nährstoffverhältnis für langanhaltende Energie</h3>
@@ -72,15 +321,14 @@
 <p>  <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9em; display: inline-block; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">Tisch jetzt reservieren</a>
 </div>
 <h2 id="tipps-von-chefkoechin-huong-nguyen-so-gelingt-dir-die-perfekte-vegane-bowl-zu-hause" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Tipps von Chefköchin Huong Nguyen: So gelingt dir die perfekte vegane Bowl zu Hause</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Wir im Vegan Garden Berlin lieben es, unsere Leidenschaft für gesundes, pflanzliches Essen mit dir zu teilen. Das Genießen im Restaurant ist zwar ein unvergleichliches Erlebnis, doch das Kreieren eigener Bowls zu Hause macht unglaublich viel Spaß und bereichert deinen kulinarischen Alltag. Mit ein paar einfachen Tricks unserer Gründerin und Chefköchin Huong Nguyen kannst auch du in deiner eigenen Küche kleine Meisterwerke zaubern. Lass dich von unseren praxiserprobten Empfehlungen inspirieren und entdecke tolle <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a> auf unserer Website.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Wir im Vegan Garden Berlin lieben es, unsere Leidenschaft für gesundes, pflanzliches Essen mit dir zu teilen. Das Genießen im Restaurant ist zwar ein unvergleichliches Erlebnis, doch das Kreieren eigener Bowls zu Hause macht unglaublich viel Spaß und bereichert deinen kulinarischen Alltag. Mit ein paar einfachen Tricks unserer Gründerin und Chefköchin Huong Nguyen kannst auch du in deiner eigenen Küche kleine Meisterwerke zaubern. Lass dich von unseren praxiserprobten Empfehlungen inspirieren und entdecke tolle <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a> auf unserer Website.</p>
 <h3 id="das-geheimnis-der-saucen-die-perfekte-balance-aus-suess-sauer-und-salzig" style="color:#43a047; font-size:1.25em; margin-top:20px;">Das Geheimnis der Saucen: Die perfekte Balance aus süß, sauer und salzig</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Eine gute Bowl steht und fällt mit ihrem Dressing. Es verbindet die unterschiedlichen Texturen und Aromen der einzelnen Zutaten zu einer harmonischen Einheit. In der vietnamesischen Küche streben wir stets nach der perfekten Balance der Geschmacksrichtungen. Für ein einfaches, aber umwerfendes asiatisches Dressing zu Hause mischst du frisch gepressten Limettensaft (sauer) mit etwas Ahornsirup oder Kokosblütenzucker (süß), hochwertiger glutenfreier Sojasauce (salzig), etwas geriebenem Ingwer und einer Prise fein gehacktem Chili (scharf). Gib einen Teelöffel geröstetes Sesamöl hinzu – dieses fungiert als Geschmacksträger und verleiht der Sauce eine wunderbare nussige Tiefe.</p>
 <h3 id="meal-prep-leicht-gemacht-bowls-fuer-die-ganze-woche-vorbereiten" style="color:#43a047; font-size:1.25em; margin-top:20px;">Meal Prep leicht gemacht: Bowls für die ganze Woche vorbereiten</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Bowls sind die absoluten Stars des Meal Preppings. Anstatt jeden Tag neu zu kochen, kannst du am Sonntag verschiedene Komponenten für die gesamte Arbeitswoche vorbereiten. Bereite eine größere Portion Reisnudeln oder Naturreis zu und bewahre sie luftdicht verpackt im Kühlschrank auf. Wasche und schneide dein Lieblingsgemüse (wie Karotten, Rotkohl und Gurken) und fülle es in separate Glasbehälter. Brate eine Portion Tofu kross an und bereite dein Lieblingsdressing in einem Schraubglas vor. So musst du morgens vor der Arbeit oder abends nach einem langen Tag nur noch die gewünschten Zutaten in einer Schüssel anrichten, das Dressing darübergeben und genießen – frischer und gesunder geht es kaum!</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/frisches-gemuse-und-krauter.jpg" alt="Frische vietnamesische Wildkräuter und Gemüse Zutaten für Bowls" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Frische Heilkräuter und Bio-Gemüse bilden das Herzstück unserer Küche</figcaption></figure>
+<figure><figure><img src="../images/red_curry.png" alt="Frische vietnamesische Wildkräuter und Gemüse Zutaten für Bowls"><figcaption>Frische vietnamesische Wildkräuter und Gemüse Zutaten für Bowls</figcaption></figure><figcaption>Frische vietnamesische Wildkräuter und Gemüse Zutaten für Bowls</figcaption></figure>
 <h2 id="nachhaltigkeit-und-unsere-philosophie-warum-genuss-und-verantwortung-hand-in-hand-gehen" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Nachhaltigkeit und unsere Philosophie: Warum Genuss und Verantwortung hand in hand gehen</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Im Vegan Garden Berlin verstehen wir Essen als eine tiefe Form der Verbindung – zu unserem eigenen Körper, zu unseren Mitmenschen und zu unserem wunderschönen Planeten. Wir sind fest davon überzeugt, dass exzellenter Geschmack und ökologische Verantwortung untrennbar zusammengehören. Jede Schüssel, die unsere Küche verlässt, spiegelt diese Lebenseinstellung wider. Unser Ziel ist es, dir ein rundum ehrliches, gesundes und nachhaltiges Kulinarikerlebnis zu bieten. Erfahre mehr über unsere tief verankerten Werte unter <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Im Vegan Garden Berlin verstehen wir Essen als eine tiefe Form der Verbindung – zu unserem eigenen Körper, zu unseren Mitmenschen und zu unserem wunderschönen Planeten. Wir sind fest davon überzeugt, dass exzellenter Geschmack und ökologische Verantwortung untrennbar zusammengehören. Jede Schüssel, die unsere Küche verlässt, spiegelt diese Lebenseinstellung wider. Unser Ziel ist es, dir ein rundum ehrliches, gesundes und nachhaltiges Kulinarikerlebnis zu bieten. Erfahre mehr über unsere tief verankerten Werte unter <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a>.</p>
 <h3 id="regionale-frische-aus-berlin-und-brandenburg" style="color:#43a047; font-size:1.25em; margin-top:20px;">Regionale Frische aus Berlin und Brandenburg</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Um den ökologischen Fußabdruck unserer Gerichte so gering wie möglich zu halten, beziehen wir unsere frischen Zutaten vorwiegend von regionalen Erzeugern aus der Metropolregion Berlin und Brandenburg. Unser knackiges Gemüse, die saftigen Pilze und die frischen Sprossen müssen keine weiten Transportwege zurücklegen. Das schont nicht nur das Klima durch reduzierte CO2-Emissionen, sondern garantiert auch, dass die Lebensmittel absolut erntefrisch und voller wertvoller Vitamine bei uns eintreffen. Diese brandenburgische Frische bildet die perfekte Symbiose mit unseren originalen vietnamesischen Gewürzen und Heilkräutern.</p>
 <h3 id="faire-arbeitsbedingungen-und-bewusster-konsum" style="color:#43a047; font-size:1.25em; margin-top:20px;">Faire Arbeitsbedingungen und bewusster Konsum</h3>
@@ -92,7 +340,7 @@
 <p style="margin: 0 0 10px 0; font-size: 0.95em; color: #333;"><strong>Reservierung:</strong> <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="color: #4CAF50; text-decoration: underline; font-weight: 600;">Online Tisch reservieren</a> oder telefonisch.</p>
 </div>
 <h2 id="fazit" style="color:#2e7d32; font-size:1.6em; border-left:4px solid #4CAF50; padding-left:10px; margin-top:30px;">Fazit</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Eine perfekt ausbalancierte vegane Bowl ist weit mehr als nur ein kulinarischer Trend – sie ist das ultimative Power Food für ein gesundes, vitales und glückliches Leben im urbanen Alltag. Durch die einzigartige Kombination aus komplexen, glutenfreien Kohlenhydraten, hochwertigen pflanzlichen Proteinen, knackiger Rohkost und den heilenden Wildkräutern der vietnamesischen Naturmedizin schenkst du deinem Körper mit jedem Bissen pure Lebensenergie. Im Vegan Garden Berlin erwecken wir diese fernöstliche Philosophie täglich neu zum Leben und beweisen, dass gesundes Essen ein Fest für die Sinne sein kann. Ob du dich für die erfrischende Grüne Kraft-Bowl, die proteinreiche Tofu-Seitan-Bowl oder die fruchtig-cremige Mango-Avocado-Bowl entscheidest: Bei uns genießt du mit gutem Gewissen und im Einklang mit der Natur. Wir laden dich herzlich ein, uns in Berlin-Friedrichshain zu besuchen und deine persönliche Wohlfühloase mitten in der Großstadt zu entdecken. Wenn du dich vorab inspirieren lassen oder weitere kulinarische Highlights der Hauptstadt erkunden möchtest, empfehlen wir dir unbedingt einen Blick in <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">unser Vegan Guide für Berlin</a> zu werfen. Nimm Platz, atme den Duft frischer Kräuter und lass dich von der Magie unserer rein pflanzlichen Küche verzaubern – wir freuen uns auf dich!</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Eine perfekt ausbalancierte vegane Bowl ist weit mehr als nur ein kulinarischer Trend – sie ist das ultimative Power Food für ein gesundes, vitales und glückliches Leben im urbanen Alltag. Durch die einzigartige Kombination aus komplexen, glutenfreien Kohlenhydraten, hochwertigen pflanzlichen Proteinen, knackiger Rohkost und den heilenden Wildkräutern der vietnamesischen Naturmedizin schenkst du deinem Körper mit jedem Bissen pure Lebensenergie. Im Vegan Garden Berlin erwecken wir diese fernöstliche Philosophie täglich neu zum Leben und beweisen, dass gesundes Essen ein Fest für die Sinne sein kann. Ob du dich für die erfrischende Grüne Kraft-Bowl, die proteinreiche Tofu-Seitan-Bowl oder die fruchtig-cremige Mango-Avocado-Bowl entscheidest: Bei uns genießt du mit gutem Gewissen und im Einklang mit der Natur. Wir laden dich herzlich ein, uns in Berlin-Friedrichshain zu besuchen und deine persönliche Wohlfühloase mitten in der Großstadt zu entdecken. Wenn du dich vorab inspirieren lassen oder weitere kulinarische Highlights der Hauptstadt erkunden möchtest, empfehlen wir dir unbedingt einen Blick in <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a> zu werfen. Nimm Platz, atme den Duft frischer Kräuter und lass dich von der Magie unserer rein pflanzlichen Küche verzaubern – wir freuen uns auf dich!</p>
 <div style="background:#fafafa; border-top: 1px solid #eee; padding-top: 15px; margin-top: 25px; font-size: 0.85em; color: #666;">
   <strong>Wissenschaftliche Quellen:</strong></p>
 <ul style="padding-left: 20px; margin-top: 5px;">
@@ -102,3 +350,83 @@
 <li>[4] World Health Organization (WHO). (2023). <em>Healthy diet guidelines for disease prevention and nutritional balance</em>. Abgerufen von <a href="https://www.who.int/" target="_blank" rel="nofollow noopener">https://www.who.int/</a></li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

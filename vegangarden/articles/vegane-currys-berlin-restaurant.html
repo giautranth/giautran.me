@@ -1,21 +1,273 @@
-<div style="background:#f9fff9; border: 1px solid #e2f0d9; border-radius: 12px; padding: 20px; margin-bottom: 24px; font-family: sans-serif;">
-<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-<div style="flex: 1; min-width: 200px;">
-      <span style="font-size: 0.85em; color: #4CAF50; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Fachlich geprüft von:</span></p>
-<h4 style="margin: 4px 0; color: #2e7d32; font-size: 1.2em;">Founder &amp; Chefköchin Huong Nguyen</h4>
-<p style="margin: 0; font-size: 0.9em; color: #555; line-height: 1.5;">Gründerin und Chefköchin von <strong>Vegan Garden Berlin</strong> – Expertin für gesunde vietnamesische Heilkräuter und authentische, rein pflanzliche Kulinarik mit über 15 Jahren Erfahrung in Hanoi und Berlin.</p>
-</p></div>
-<div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <a href="#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjUxOSIsInRvZ2dsZSI6ZmFsc2V9" style="background: #4CAF50; color: white; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📅 Tisch buchen</a><br />
-      <a href="https://vegangarden-berlin.de/3d-flip-book/270/" style="background: #ffffff; color: #4CAF50; border: 1px solid #4CAF50; padding: 8px 14px; text-decoration: none; border-radius: 6px; font-size: 0.85em; font-weight: 600; display: inline-block;">📋 Speisekarte</a>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warum vegane Currys Berlin im Sturm erobern | Vegan Garden Berlin</title>
+  <meta name="description" content="Erfahren Sie mehr über die vegane vietnamesische Küche im Vegan Garden Berlin.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .article-page {
+      background: #fcfdfc;
+      color: #2c352d;
+      padding-bottom: 80px;
+    }
+    .article-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+      color: #ffffff;
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+    .article-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .article-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .article-breadcrumbs a:hover {
+      color: #d4af37;
+    }
+    .article-cat-badge {
+      display: inline-block;
+      background: #4a634b;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+    .article-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.25;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #ffffff;
+    }
+    .article-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      flex-wrap: wrap;
+    }
+    .article-author-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin: -24px auto 36px;
+      max-width: 840px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid #e0e5e1;
+    }
+    .article-author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #3b4e3c;
+    }
+    .article-container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .article-cover-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .article-body-content {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333333;
+    }
+    .article-body-content h1 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 2rem;
+      margin-top: 36px;
+      margin-bottom: 20px;
+    }
+    .article-body-content h2 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.75rem;
+      margin-top: 44px;
+      margin-bottom: 18px;
+      border-bottom: 2px solid #e2ece3;
+      padding-bottom: 8px;
+    }
+    .article-body-content h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #3b4e3c;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 14px;
+    }
+    .article-body-content p {
+      margin-bottom: 20px;
+    }
+    .article-body-content ul, .article-body-content ol {
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-body-content li {
+      margin-bottom: 8px;
+    }
+    .article-body-content figure {
+      margin: 36px 0;
+      text-align: center;
+    }
+    .article-body-content figure img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .article-body-content figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
+    .article-cta-box {
+      background: linear-gradient(135deg, #eaf2eb 0%, #d8e6da 100%);
+      border: 1px solid #b8d1bb;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .article-cta-box h4 {
+      font-family: 'Cinzel', serif;
+      color: #1c241d;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .article-cta-box p {
+      color: #4a574b;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="../index.html" class="brand-logo">
+        <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; margin: -12px 0;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
+          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
+          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </a>
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</p></div>
-</div>
+  </header>
+
+  <!-- ARTICLE HERO HEADER -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-breadcrumbs">
+        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
+      </div>
+      <span class="article-cat-badge">KULTUR & TIPPS</span>
+      <h1 class="article-main-title">Warum vegane Currys Berlin im Sturm erobern</h1>
+      <div class="article-meta-bar">
+        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
+        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
+        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTAINER -->
+  <main class="article-page">
+    <div class="article-container">
+      <!-- Author Profile Badge -->
+      <div class="article-author-card">
+        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
+        <div>
+          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
+          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
+          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
+        </div>
+      </div>
+
+      <!-- Featured Cover Photo -->
+      <img src="../images/red_curry.png" alt="Warum vegane Currys Berlin im Sturm erobern" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
 <p><em style="display:block; text-align:justify; line-height:1.6; color:#333; margin-bottom: 24px; font-size:1.1em;">Wenn die kalte Berliner Luft durch die Straßen zieht oder man sich nach einem anstrengenden Tag nach purer Gemütlichkeit sehnt, gibt es kaum etwas Besseres als eine heiße, dampfende Schale voller aromatischer Gewürze. Wer auf der Suche nach kulinarischen Höhepunkten ist, wird schnell feststellen, dass <strong>vegane currys berlin</strong> zu einer echten Oase für bewusste Genießer gemacht haben. Die Kombination aus cremiger Kokosmilch, frischem Gemüse und der perfekten Balance aus Schärfe und Süße wärmt nicht nur den Körper, sondern auch die Seele. In diesem Artikel nehmen wir Sie mit auf eine geschmackliche Reise durch die vietnamesische Küche und zeigen Ihnen, warum pflanzliche Currys die ultimative Kraftnahrung für Geist und Körper sind.</em></p>
 <h2 id="warum-vegane-currys-berlin-erobern">Warum vegane Currys Berlin im Sturm erobern</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die deutsche Hauptstadt gilt weltweit als eine der lebendigsten Metropolen für pflanzliche Ernährung. Hier treffen traditionelle Kochkünste aus aller Welt auf ein modernes Bewusstsein für Nachhaltigkeit und Gesundheit. Inmitten dieser kulinarischen Evolution haben sich insbesondere vegane Currys zu einem absoluten Liebling entwickelt. Sie vereinen auf harmonische Weise wohlige Wärme mit einer Fülle an essenziellen Nährstoffen, die gerade in der Hektik des Großstadtalltags oft zu kurz kommen. Currys sind nicht nur extrem vielseitig, sondern lassen sich perfekt auf eine vegane Lebensweise abstimmen, ohne dass man Kompromisse beim Geschmack eingehen muss.</p>
 <h3 id="die-bedeutung-der-vietnamesischen-curry-kultur">Die Bedeutung der vietnamesischen Curry-Kultur</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Im Gegensatz zu den indischen oder thailändischen Varianten zeichnet sich das vietnamesische Curry (in Vietnam bekannt als „Cà Ri“) durch eine leichtere, aromatischere Note aus. Anstatt den Gaumen mit extremer Schärfe zu überfordern, liegt der Fokus in der vietnamesischen Küche auf einer feinen Balance aus süßen, salzigen, sauren und würzigen Nuancen. Historisch beeinflusst von der indischen Gewürzkunde und verfeinert durch französische Kochtechniken, hat sich in Vietnam eine ganz eigene Curry-Kultur entwickelt. Frische Kräuter, Zitronengras und eine milde Kokosmilchbasis bilden das Fundament, auf dem unsere Kreationen aufbauen. Wenn Sie diese Harmonie selbst erleben möchten, besuchen Sie am besten <a href="https://vegangarden-berlin.de/restaurant/">unser Restaurant in Berlin-Friedrichshain</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Im Gegensatz zu den indischen oder thailändischen Varianten zeichnet sich das vietnamesische Curry (in Vietnam bekannt als „Cà Ri“) durch eine leichtere, aromatischere Note aus. Anstatt den Gaumen mit extremer Schärfe zu überfordern, liegt der Fokus in der vietnamesischen Küche auf einer feinen Balance aus süßen, salzigen, sauren und würzigen Nuancen. Historisch beeinflusst von der indischen Gewürzkunde und verfeinert durch französische Kochtechniken, hat sich in Vietnam eine ganz eigene Curry-Kultur entwickelt. Frische Kräuter, Zitronengras und eine milde Kokosmilchbasis bilden das Fundament, auf dem unsere Kreationen aufbauen. Wenn Sie diese Harmonie selbst erleben möchten, besuchen Sie am besten <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a>.</p>
 <h3 id="gesundheitliche-vorteile-pflanzlicher-currys">Gesundheitliche Vorteile pflanzlicher Currys</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein gut zubereitetes pflanzliches Curry ist eine wahre Nährstoffbombe. Die Deutsche Gesellschaft für Ernährung (DGE) betont in ihren aktuellen Richtlinien immer wieder die Vorteile einer pflanzenbetonten Ernährung für das Herz-Kreislauf-System und das allgemeine Wohlbefinden (<a href="https://www.dge.de/gesunde-ernaehrung/gut-essen-und-trinken/dge-empfehlungen/" target="_blank" rel="nofollow noopener">[2]</a>). Die Kombination aus frischem Saisongemüse, Hülsenfrüchten und hochwertigen Gewürzen versorgt den Körper mit Antioxidantien, Ballaststoffen und Vitaminen. Da keine schweren tierischen Fette verwendet werden, ist das Gericht leicht verdaulich und liefert dennoch langanhaltende Energie für den Tag.</p>
 <h2 id="die-anatomie-eines-perfekten-vietnamesischen-currys">Die Anatomie eines perfekten vietnamesischen Currys</h2>
@@ -24,10 +276,9 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Basis unseres Currys besteht aus hochwertiger Kokosmilch. Sie sorgt nicht nur für die unverwechselbare Cremigkeit, sondern fungiert auch als Geschmacksträger für die darin gelösten Gewürze. Entgegen veralteter Mythen zeigen wissenschaftliche Untersuchungen, dass die in der Kokosmilch enthaltenen mittelkettigen Fettsäuren (MCTs) vom Körper schnell in Energie umgewandelt werden können und den Stoffwechsel unterstützen (<a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="nofollow noopener">[1]</a>). Die natürliche Süße der Kokosmilch bildet zudem den perfekten Gegenpol zu den würzigen Aromen.</p>
 <h3 id="die-rolle-von-zitronengras-und-ingwer">Die Rolle von Zitronengras und Ingwer</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Zitronengras (Sả) und Ingwer bzw. Galgant sind die heimlichen Helden der vietnamesischen Küche. Sie verleihen dem Curry seine charakteristische Zitrusnote und eine angenehme, unterschwellige Frische. Zitronengras wirkt zudem antiseptisch und verdauungsfördernd. Zusammen mit frischem Ingwer, der für seine wärmende Wirkung bekannt ist, stärkt diese Kombination das Immunsystem und regt die Durchblutung an – ein idealer Schutz für wechselhafte Tage in Berlin.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-currys-berlin-restaurant-inline-1-1.jpg" alt="Duftender Jasminreis serviert mit köstlichen Wok-Gerichten" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Duftender Jasminreis serviert mit köstlichen Wok-Gerichten</figcaption></figure>
+<figure><figure><img src="../images/article_pho.jpg" alt="Duftender Jasminreis serviert mit köstlichen Wok-Gerichten"><figcaption>Duftender Jasminreis serviert mit köstlichen Wok-Gerichten</figcaption></figure><figcaption>Duftender Jasminreis serviert mit köstlichen Wok-Gerichten</figcaption></figure>
 <h2 id="unser-highlight-auf-der-speisekarte-rote-und-gelbe-vietnamesische-currys">Unser Highlight auf der Speisekarte: Rote und gelbe vietnamesische Currys</h2>
-<p style="text-align:justify; line-height:1.6; color:#333;">Unsere Küche zeichnet sich durch Authentizität und Leidenschaft aus. Um den unterschiedlichen Vorlieben unserer Gäste gerecht zu werden, haben wir verschiedene Variationen kreiert, die jeweils ihren ganz eigenen Charakter besitzen. Werfen Sie doch einen Blick auf <a href="https://vegangarden-berlin.de/3d-flip-book/270/">unsere Speisekarte</a>, um die Vielfalt unserer Gerichte zu entdecken.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Unsere Küche zeichnet sich durch Authentizität und Leidenschaft aus. Um den unterschiedlichen Vorlieben unserer Gäste gerecht zu werden, haben wir verschiedene Variationen kreiert, die jeweils ihren ganz eigenen Charakter besitzen. Werfen Sie doch einen Blick auf <a href="../index.html#speisekarte">unsere Speisekarte</a>, um die Vielfalt unserer Gerichte zu entdecken.</p>
 <h3 id="das-feurige-rote-curry">Das feurige rote Curry für Schärfe-Liebhaber</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Unser rotes Curry basiert auf einer hausgemachten Paste aus roten Chilis, Zitronengras, Knoblauch und Schalotten. Es ist perfekt für all diejenigen, die eine angenehme Schärfe schätzen, die den Stoffwechsel anregt. Die Schärfe wird durch die Kokosmilch sanft abgemildert, sodass die feinen Gewürzaromen von Koriander und Kreuzkümmel weiterhin optimal zur Geltung kommen.</p>
 <h3 id="das-milde-gelbe-curry">Das milde gelbe Curry für sanften Genuss</h3>
@@ -42,21 +293,20 @@
 <h3 id="kurkuma-das-goldene-gewuerz">Kurkuma – Das goldene Gewürz der Entzündungshemmung</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die gelbe Wurzel is weit mehr als nur ein Färbemittel. Der enthaltene Wirkstoff Curcumin ist Gegenstand zahlreicher wissenschaftlicher Studien. Forschungen zeigen, dass Curcumin starke antioxidative und entzündungshemmende Eigenschaften besitzt, die das Immunsystem unterstützen und chronischen Erkrankungen vorbeugen können (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5664031/" target="_blank" rel="nofollow noopener">[4]</a>). Durch die Kombination mit einer Prise schwarzem Pfeffer und gesunden Fetten aus der Kokosmilch wird die Bioverfügbarkeit des Curcumins im Körper um ein Vielfaches erhöht.</p>
 <h3 id="vietnamesische-kraeuter">Vietnamesische Kräuter als Frische-Kick</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Kein vietnamesisches Gericht ist komplett ohne eine großzügige Handvoll frischer Kräuter. Wir garnieren unsere Currys mit thailändischem Basilikum, Koriander und Frühlingszwiebeln. Diese liefern nicht nur eine Geschmacksexplosion, sondern sind auch reich an ätherischen Ölen und Vitaminen. Nach Angaben von Harvard Health sind frische Kräuter und Gewürze eine hervorragende Möglichkeit, den Natriumkonsum zu senken und gleichzeitig die antioxidative Kapazität einer Mahlzeit signant zu steigern (<a href="https://www.hsph.harvard.edu/nutritionsource/herbs-spices/" target="_blank" rel="nofollow noopener">[3]</a>). Erfahren Sie mehr über unsere Philosophie und wie wir <a href="https://vegangarden-berlin.de/zutaten/">frische vietnamesische Kräuter und Zutaten</a> einsetzen.</p>
-<figure style="margin: 35px 0; text-align: center;">
-  <img decoding="async" src="https://vegangarden-berlin.de/wp-content/uploads/2026/05/watermarked-vegane-currys-berlin-restaurant-inline-2-1.jpg" alt="Geselliges veganes Mittagessen im Herzen von Friedrichshain" style="width: 100%; max-width: 800px; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: block; margin: 0 auto;" /><figcaption style="font-size: 0.9em; color: #666; margin-top: 10px; font-style: italic; font-family: sans-serif;">Geselliges veganes Mittagessen im Herzen von Friedrichshain</figcaption></figure>
+<p style="text-align:justify; line-height:1.6; color:#333;">Kein vietnamesisches Gericht ist komplett ohne eine großzügige Handvoll frischer Kräuter. Wir garnieren unsere Currys mit thailändischem Basilikum, Koriander und Frühlingszwiebeln. Diese liefern nicht nur eine Geschmacksexplosion, sondern sind auch reich an ätherischen Ölen und Vitaminen. Nach Angaben von Harvard Health sind frische Kräuter und Gewürze eine hervorragende Möglichkeit, den Natriumkonsum zu senken und gleichzeitig die antioxidative Kapazität einer Mahlzeit signant zu steigern (<a href="https://www.hsph.harvard.edu/nutritionsource/herbs-spices/" target="_blank" rel="nofollow noopener">[3]</a>). Erfahren Sie mehr über unsere Philosophie und wie wir <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a> einsetzen.</p>
+<figure><figure><img src="../images/article_sommerrollen.jpg" alt="Geselliges veganes Mittagessen im Herzen von Friedrichshain"><figcaption>Geselliges veganes Mittagessen im Herzen von Friedrichshain</figcaption></figure><figcaption>Geselliges veganes Mittagessen im Herzen von Friedrichshain</figcaption></figure>
 <h2 id="proteinquellen-in-unseren-veganen-currys">Proteinquellen in unseren veganen Currys</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Eine der häufigsten Fragen bei einer pflanzlichen Ernährung betrifft die ausreichende Versorgung mit Eiweiß. Unsere veganen Currys beweisen, dass eine proteinreiche Mahlzeit unglaublich lecker und abwechslungsreich sein kann. Wir kombinieren verschiedene pflanzliche Proteinquellen, um ein optimales Aminosäureprofil zu gewährleisten.</p>
 <h3 id="tofu-der-vielseitige-eiweisslieferant">Tofu – Der vielseitige Eiweißlieferant</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Tofu ist ein fester Bestandteil der traditionellen vietnamesischen Küche. Er nimmt die Aromen des Currys wunderbar auf und sorgt für eine angenehme Textur. Tofu liefert alle neun essenziellen Aminosäuren und ist zudem reich an Kalzium und Eisen. Bei Vegan Garden Berlin bereiten wir den Tofu so zu, dass er außen leicht knusprig und innen saftig bleibt – ein wahrer Genuss in Kombination mit der cremigen Sauce.</p>
 <h3 id="gemuese-und-huelsenfruechte">Nährstoffreiches Gemüse und Hülsenfrüchte</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Ergänzt wird das Curry durch knackiges Saisongemüse wie Brokkoli, Karotten, Zuckerschoten und Paprika sowie Hülsenfrüchte wie Edamame oder Kichererbsen. Diese Kombination sorgt nicht nur für einen tollen Biss, sondern liefert wertvolle pflanzliche Proteine, komplexe Kohlenhydrate und Ballaststoffe, die für eine langanhaltende Sättigung und eine gesunde Darmflora sorgen. Wenn Sie Berlin kulinarisch erkunden möchten, ist <a href="https://vegangarden-berlin.de/vegan-guide-berlin/">unser Vegan Guide für Berlin</a> der perfekte Begleiter.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Ergänzt wird das Curry durch knackiges Saisongemüse wie Brokkoli, Karotten, Zuckerschoten und Paprika sowie Hülsenfrüchte wie Edamame oder Kichererbsen. Diese Kombination sorgt nicht nur für einen tollen Biss, sondern liefert wertvolle pflanzliche Proteine, komplexe Kohlenhydrate und Ballaststoffe, die für eine langanhaltende Sättigung und eine gesunde Darmflora sorgen. Wenn Sie Berlin kulinarisch erkunden möchten, ist <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a> der perfekte Begleiter.</p>
 <h2 id="wie-man-vegane-currys-zu-hause-selber-macht">Wie man vegane Currys zu Hause zubereitet</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Obwohl wir uns natürlich freuen, Sie in unserem Restaurant begrüßen zu dürfen, möchten wir unsere Leidenschaft für gesundes Essen mit Ihnen teilen. Ein veganes Curry lässt sich mit den richtigen Kniffen auch wunderbar in der eigenen Küche zaubern. Es ist das ideale Gericht für Meal Prep, da es aufgewärmt oft noch besser schmeckt.</p>
 <h3 id="die-richtige-paste-auswaehlen">Die richtige Paste und Gewürze auswählen</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Das Geheimnis eines guten Currys liegt in der Gewürzpaste. Achten Sie beim Kauf im Asialaden darauf, dass die Paste keine Garnelenpaste oder andere tierische Zusätze enthält. Alternativ können Sie Ihre Paste aus frischen Chilis, Zitronengras, Knoblauch, Ingwer und Korianderwurzeln im Mixer selbst herstellen. Wer tiefer in die kulinarischen Geheimnisse eintauchen möchte, findet auf unserem Blog kreative und einfache <a href="https://vegangarden-berlin.de/rezepte/">vegane vietnamesische Rezepte</a> zum Nachkochen.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Das Geheimnis eines guten Currys liegt in der Gewürzpaste. Achten Sie beim Kauf im Asialaden darauf, dass die Paste keine Garnelenpaste oder andere tierische Zusätze enthält. Alternativ können Sie Ihre Paste aus frischen Chilis, Zitronengras, Knoblauch, Ingwer und Korianderwurzeln im Mixer selbst herstellen. Wer tiefer in die kulinarischen Geheimnisse eintauchen möchte, findet auf unserem Blog kreative und einfache <a href="../index.html#ratgeber">vegane vietnamesische Rezepte</a> zum Nachkochen.</p>
 <h3 id="tipps-fuer-die-perfekte-konsistenz">Tipps für die perfekte Konsistenz</h3>
-<p style="text-align:justify; line-height:1.6; color:#333;">Um die perfekte Sämigkeit zu erreichen, dünsten Sie die Gewürzpaste zunächst in etwas Öl an, bis sie ihr volles Aroma entfaltet. Löschen Sie das Ganze dann mit Kokosmilch und Gemüsebrühe ab. Lassen Sie das Gemüse je nach Garzeit nacheinander in die Sauce gleiten – so bleibt beispielsweise Brokkoli schön knackig und behält seine leuchtend grüne Farbe. Dieser schonende Umgang mit Lebensmitteln ist auch ein Kernaspekt von <a href="https://vegangarden-berlin.de/nachhaltigkeit/">Nachhaltigkeit und unsere Philosophie</a>.</p>
+<p style="text-align:justify; line-height:1.6; color:#333;">Um die perfekte Sämigkeit zu erreichen, dünsten Sie die Gewürzpaste zunächst in etwas Öl an, bis sie ihr volles Aroma entfaltet. Löschen Sie das Ganze dann mit Kokosmilch und Gemüsebrühe ab. Lassen Sie das Gemüse je nach Garzeit nacheinander in die Sauce gleiten – so bleibt beispielsweise Brokkoli schön knackig und behält seine leuchtend grüne Farbe. Dieser schonende Umgang mit Lebensmitteln ist auch ein Kernaspekt von <a href="../index.html#restaurant">Nachhaltigkeit und unsere Philosophie</a>.</p>
 <div style="background: linear-gradient(135deg, #f3fcf3 0%, #e8f7e8 100%); border: 1px dashed #4CAF50; border-radius: 8px; padding: 20px; margin: 30px 0; text-align: center;">
 <h4 style="margin: 0 0 10px 0; color: #2e7d32; font-size: 1.15em;">Lust auf frische, gesunde vietnamesische Küche?</h4>
 <p style="margin: 0 0 16px 0; font-size: 0.95em; color: #555;">Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
@@ -79,3 +329,83 @@
 <li>[4] PubMed Central. (2021). <em>Health benefits of turmeric and curcumin</em>. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5664031/</li>
 </ul>
 </div>
+
+      </article>
+
+      <!-- Reservation Box CTA -->
+      <div class="article-cta-box">
+        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
+        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
+        <a href="../index.html#kontakt" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
+            <img src="../logo/logo_16x9.png" alt="Vegan Garden Berlin Logo" style="height: 96px; width: auto; max-width: 380px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -164,6 +164,29 @@ img {
   white-space: nowrap;
 }
 
+.mobile-reserve-btn {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary-green-dark);
+  color: #ffffff;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mobile-reserve-btn:hover,
+.mobile-reserve-btn:active {
+  background: var(--primary-green);
+  transform: scale(1.05);
+}
+
 /* BUTTONS */
 .btn {
   display: inline-flex;
@@ -1053,26 +1076,22 @@ img {
     z-index: 5;
   }
   .brand-logo img {
-    height: 32px !important;
-    max-width: 115px !important;
+    height: 34px !important;
+    max-width: 125px !important;
     margin: 0 !important;
+  }
+  .desktop-reserve-btn {
+    display: none !important;
+  }
+  .mobile-reserve-btn {
+    display: flex !important;
   }
   .nav-actions {
     order: 3;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     z-index: 10;
-  }
-  .nav-actions .btn-primary {
-    padding: 5px 8px !important;
-    font-size: 0.65rem !important;
-    letter-spacing: 0;
-    white-space: nowrap;
-    border-radius: 6px !important;
-  }
-  .nav-actions .btn-primary i {
-    display: none;
   }
   .lang-box {
     padding-left: 2px !important;

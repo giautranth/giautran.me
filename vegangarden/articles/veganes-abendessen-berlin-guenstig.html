@@ -65,27 +65,6 @@
       color: rgba(255,255,255,0.8);
       flex-wrap: wrap;
     }
-    .article-author-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 20px 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin: -24px auto 36px;
-      max-width: 840px;
-      position: relative;
-      z-index: 10;
-      border: 1px solid #e0e5e1;
-    }
-    .article-author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #3b4e3c;
-    }
     .article-container {
       max-width: 840px;
       margin: 0 auto;
@@ -237,7 +216,6 @@
       <span class="article-cat-badge">KULTUR & TIPPS</span>
       <h1 class="article-main-title">Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</h1>
       <div class="article-meta-bar">
-        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
         <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
         <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
       </div>
@@ -245,20 +223,34 @@
   </section>
 
   <!-- ARTICLE CONTAINER -->
+  <main class="article-page" style="padding-top: 40px;">
+    <div class="article-container">
+      <!-- Featured Cover Photo -->
+      <img src="../images/article_speisekarte.jpg" alt="Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+        
+        
+<html lang="de">
+
+
+  <!-- HEADER & NAVIGATION -->
+  
+
+  <!-- ARTICLE HERO HEADER -->
+  
+
+  <!-- ARTICLE CONTAINER -->
   <main class="article-page">
     <div class="article-container">
       <!-- Author Profile Badge -->
-      <div class="article-author-card">
-        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
-        <div>
-          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
-          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
-          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
-        </div>
+      
       </div>
 
       <!-- Featured Cover Photo -->
-      <img src="../images/article_speisekarte.jpg" alt="Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist" class="article-cover-img">
+      <figure><img src="../images/article_bestes_restaurant.jpg" alt="Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist"><figcaption>Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</figcaption></figure>
 
       <!-- Article Body -->
       <article class="article-body-content">
@@ -267,87 +259,20 @@
 
 
   <!-- HEADER & NAVIGATION -->
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <a href="../index.html" class="brand-logo">
-        <figure><img src="../images/article_pho.jpg" alt="Vegan Garden Berlin Logo"><figcaption>Vegan Garden Berlin Logo</figcaption></figure>
-      </a>
-
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
-          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
-          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
-          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
-          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
-          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="../index.html#kontakt" class="btn btn-primary">
-          <i class="fa-regular fa-calendar-check"></i>
-          <span>TISCH RESERVIEREN</span>
-        </a>
-        <div class="lang-box" id="langBox">
-          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
-            <span class="lang-flag"><figure><img src="../images/article_sommerrollen.jpg" alt="de"><figcaption>de</figcaption></figure></span>
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <ul class="lang-dropdown" id="langDropdown" role="listbox">
-            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
-              <span class="flag"><figure><img src="../images/pho_bo_chay.png" alt="de"><figcaption>de</figcaption></figure></span>
-              <span class="lng">Deutsch</span>
-            </li>
-            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
-              <span class="flag"><figure><img src="../images/spring_rolls.png" alt="us"><figcaption>us</figcaption></figure></span>
-              <span class="lng">English</span>
-            </li>
-            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
-              <span class="flag"><figure><img src="../images/summer_bowl.png" alt="vn"><figcaption>vn</figcaption></figure></span>
-              <span class="lng">Tiếng Việt</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  
 
   <!-- ARTICLE HERO HEADER -->
-  <section class="article-hero">
-    <div class="container">
-      <div class="article-breadcrumbs">
-        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
-      </div>
-      <span class="article-cat-badge">KULTUR & TIPPS</span>
-      
-      <div class="article-meta-bar">
-        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
-        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
-        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ARTICLE CONTAINER -->
   <main class="article-page">
     <div class="article-container">
       <!-- Author Profile Badge -->
-      <div class="article-author-card">
-        <figure><img src="../images/red_curry.png" alt="Chefköchin Huong Nguyen"><figcaption>Chefköchin Huong Nguyen</figcaption></figure>
-        <div>
-          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
-          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
-          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
-        </div>
+      
       </div>
 
       <!-- Featured Cover Photo -->
-      <figure><img src="../images/garden_preview.jpg" alt="Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist"><figcaption>Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</figcaption></figure>
+      <figure><img src="../images/article_speisekarte.jpg" alt="Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist"><figcaption>Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</figcaption></figure><figcaption>Die Suche nach bezahlbarem Genuss: Warum Berlin die Hauptstadt des veganen Budgets ist</figcaption></figure>
 
       <!-- Article Body -->
       <article class="article-body-content">
@@ -362,7 +287,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein abendliches Gericht, das reich an Ballaststoffen und arm an gesättigten Fettsäuren ist, verkürzt die Verweildauer der Nahrung im Magen-Darm-Trakt erheblich. Im Gegensatz zu tierischen Produkten wie Fleisch, Eiern oder schwerem Käse, die oft stundenlang schwer im Magen liegen, kann der menschliche Körper pflanzliche Proteine und schonend gegartes Gemüse wesentlich effizienter aufspalten. Wissenschaftliche Untersuchungen zeigen, dass eine ballaststoffreiche, pflanzliche Ernährung nicht nur die gesunde Darmtätigkeit fördert, sondern auch direkt zu tieferen und erholsameren Schlafzyklen beiträgt (<a href="https://www.health.harvard.edu/" target="_blank" rel="nofollow noopener">[2]</a>). Durch den bewussten Verzicht auf gesättigte Fette am Abend sinkt das Risiko für nächtliches Sodbrennen und unruhigen Schlaf drastisch.</p>
 <h3 id="optimale-naehrstoffversorgung-ohne-schwere">Maximale Nährstoffdichte ohne Völlegefühl</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein intelligent zusammengestelltes veganes Abendessen kombiniert komplexe Kohlenhydrate, leicht verdauliche Proteine (wie marinierter Tofu oder Seitan) und ein breites Spektrum an Vitaminen und Mineralstoffen aus frischem Saisongemüse. Die Deutsche Gesellschaft für Ernährung (DGE) hebt in ihren offiziellen Empfehlungen hervor, dass eine ausgewogene Zufuhr von pflanzlichen Mikronährstoffen und Antioxidantien das Immunsystem nachhaltig stärkt und chronischen Zivilisationskrankheiten vorbeugen kann (<a href="https://www.dge.de/" target="_blank" rel="nofollow noopener">[1]</a>). Wenn Sie sich am Abend für frische Kräuter, rohe Sprossen und gedünstetes Gemüse entscheiden, tanken Sie wertvolle Vitalstoffe, ohne Ihren Körper mit unnötigen Kalorien oder Cholesterin zu belasten.</p>
-<figure><figure><img src="../photos/store.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten"><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
+<figure><img src="../images/article_pho.jpg" alt="Traditionelle vietnamesische vegane Spezialitäten"><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure><figcaption>Traditionelle vietnamesische vegane Spezialitäten</figcaption></figure>
 <h2 id="veganes-abendessen-berlin-guenstig-unter-15-euro-bei-vegan-garden">Veganes Abendessen Berlin günstig: Unsere kulinarischen Highlights unter 15€</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Sollten Sie nach der idealen Kombination aus Gesundheit, Geschmack und Budgetfreundlichkeit suchen, laden wir Sie herzlich in <a href="../index.html#restaurant">unser Restaurant in Berlin-Friedrichshain</a> ein. Unsere Küche hat es sich zur Aufgabe gemacht, die traditionelle vietnamesische Kochkunst komplett pflanzlich zu interpretieren. Dabei setzen wir konsequent auf frische Zutaten und faire Preise: Nahezu jedes unserer sättigenden Hauptgerichte liegt deutlich unter der 15-Euro-Grenze.</p>
 <h3 id="unsere-vietnamesischen-bowls-und-hauptgerichte">Nahrhafte Bowls und traditionelle Suppen unter 15€</h3>
@@ -380,7 +305,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Koriander (Rau Mùi) und Minze (Rau Húng Lủi) bilden das aromatische Fundament vieler unserer Kreationen. Koriander ist reich an ätherischen Ölen, die nachweislich die Produktion von körpereigenen Verdauungssäften stimulieren, Magenkrämpfe lindern und die Fettverdauung beschleunigen. Die vietnamesische Minze wirkt dank ihres hohen Mentholgehalts krampflösend auf die glatte Muskulatur des Magen-Darm-Trakts. Wissenschaftliche Fachpublikationen bestätigen die stark antibakteriellen, antioxidativen und beruhigenden Eigenschaften dieser Wildkräuter auf das sensible Mikrobiom des Menschen (<a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="nofollow noopener">[3]</a>). Eine detaillierte Übersicht unserer grünen Superfoods finden Sie unter <a href="../index.html#speisekarte">frische vietnamesische Kräuter und Zutaten</a>.</p>
 <h3 id="perilla-und-thaibasilikum">Perilla-Blätter und Thaibasilikum: Entzündungshemmende Aromen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein absoluter Geheimtipp der asiatischen Heilkräuterkunde ist das Perillablatt (Tía Tô). Mit seiner charakteristischen, purpurgrünen Färbung und dem herbsüßen, leicht minzigen Aroma ist es eine echte Geheimwaffe für das Immunsystem. Perilla enthält erstaunliche Mengen an Rosmarinsäure, die stark antiallergisch und entzündungshemmend wirkt. In Vietnam wird das Blatt traditionell bei Erkältungssymptomen und Bronchialbeschwerden gereicht. Thaibasilikum (Húng Quế) wiederum verströmt eine zarte Anisnote und wirkt durch die enthaltenen Flavonoide als natürlicher Zellschutz. Die Kombination dieser Kräuter macht Ihr günstiges Abendessen zu einer echten Frischzellenkur für den Organismus.</p>
-<figure><figure><img src="../photos/A7402927.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen"><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
+<figure><img src="../images/article_sommerrollen.jpg" alt="Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen"><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure><figcaption>Traditioneller veganer Feuertopf (Lẩu Chay) zum Teilen</figcaption></figure>
 <h2 id="spartipps-fuer-veganer-in-berlin">Clevere Spartipps für ein gesundes und günstiges veganes Abendessen</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Um in einer aufregenden Metropole wie Berlin gesund, abwechslungsreich und gleichzeitig extrem kostengünstig vegan zu leben, braucht es kein riesiges Einkommen, sondern lediglich ein paar clevere Gewohnheiten. Mit den richtigen Strategien lässt sich das pulsierende Berliner Gastro-Leben auch mit einem schmalen Budget voll auskosten.</p>
 <h3 id="auswahl-der-richtigen-viertel">Berlin-Friedrichshain als veganer Hotspot</h3>
@@ -415,85 +340,8 @@
 </ul>
 </div>
 
-      </article>
-
-      <!-- Reservation Box CTA -->
-      <div class="article-cta-box">
-        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
-        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
-        <a href="../index.html#kontakt" class="btn btn-primary">
-          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="kontakt">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
-            <figure><img src="../images/article_bestes_restaurant.jpg" alt="Vegan Garden Berlin Logo"><figcaption>Vegan Garden Berlin Logo</figcaption></figure>
-          </a>
-          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-hours">
-          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
-          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
-          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
-          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
-        </div>
-
-        <div class="footer-contact">
-          <h3 class="footer-col-title">KONTAKT</h3>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
-            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>
-              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
-              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
-            </span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
-          </div>
-        </div>
-
-        <div class="footer-map">
-          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
-          <div class="map-card" style="padding: 0; border: none; background: transparent;">
-            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
-        <div class="footer-links">
-          <a href="#">IMPRESSUM</a>
-          <a href="#">DATENSCHUTZ</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../script.js"></script>
-
-
+      
+      
       </article>
 
       <!-- Reservation Box CTA -->

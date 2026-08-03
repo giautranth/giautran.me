@@ -65,27 +65,6 @@
       color: rgba(255,255,255,0.8);
       flex-wrap: wrap;
     }
-    .article-author-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 20px 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin: -24px auto 36px;
-      max-width: 840px;
-      position: relative;
-      z-index: 10;
-      border: 1px solid #e0e5e1;
-    }
-    .article-author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #3b4e3c;
-    }
     .article-container {
       max-width: 840px;
       margin: 0 auto;
@@ -237,7 +216,6 @@
       <span class="article-cat-badge">KULTUR & TIPPS</span>
       <h1 class="article-main-title">Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage</h1>
       <div class="article-meta-bar">
-        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
         <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
         <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
       </div>
@@ -245,20 +223,34 @@
   </section>
 
   <!-- ARTICLE CONTAINER -->
+  <main class="article-page" style="padding-top: 40px;">
+    <div class="article-container">
+      <!-- Featured Cover Photo -->
+      <img src="../images/article_sommerrollen.jpg" alt="Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+        
+        
+<html lang="de">
+
+
+  <!-- HEADER & NAVIGATION -->
+  
+
+  <!-- ARTICLE HERO HEADER -->
+  
+
+  <!-- ARTICLE CONTAINER -->
   <main class="article-page">
     <div class="article-container">
       <!-- Author Profile Badge -->
-      <div class="article-author-card">
-        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
-        <div>
-          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
-          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
-          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
-        </div>
+      
       </div>
 
       <!-- Featured Cover Photo -->
-      <img src="../images/article_sommerrollen.jpg" alt="Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage" class="article-cover-img">
+      <figure><img src="../images/article_bestes_restaurant.jpg" alt="Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage"><figcaption>Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage</figcaption></figure>
 
       <!-- Article Body -->
       <article class="article-body-content">
@@ -267,87 +259,20 @@
 
 
   <!-- HEADER & NAVIGATION -->
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <a href="../index.html" class="brand-logo">
-        <figure><img src="../images/article_pho.jpg" alt="Vegan Garden Berlin Logo"><figcaption>Vegan Garden Berlin Logo</figcaption></figure>
-      </a>
-
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
-          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
-          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
-          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
-          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
-          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="../index.html#kontakt" class="btn btn-primary">
-          <i class="fa-regular fa-calendar-check"></i>
-          <span>TISCH RESERVIEREN</span>
-        </a>
-        <div class="lang-box" id="langBox">
-          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
-            <span class="lang-flag"><figure><img src="../images/article_sommerrollen.jpg" alt="de"><figcaption>de</figcaption></figure></span>
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <ul class="lang-dropdown" id="langDropdown" role="listbox">
-            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
-              <span class="flag"><figure><img src="../images/pho_bo_chay.png" alt="de"><figcaption>de</figcaption></figure></span>
-              <span class="lng">Deutsch</span>
-            </li>
-            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
-              <span class="flag"><figure><img src="../images/spring_rolls.png" alt="us"><figcaption>us</figcaption></figure></span>
-              <span class="lng">English</span>
-            </li>
-            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
-              <span class="flag"><figure><img src="../images/summer_bowl.png" alt="vn"><figcaption>vn</figcaption></figure></span>
-              <span class="lng">Tiếng Việt</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  
 
   <!-- ARTICLE HERO HEADER -->
-  <section class="article-hero">
-    <div class="container">
-      <div class="article-breadcrumbs">
-        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>KULTUR & TIPPS</span>
-      </div>
-      <span class="article-cat-badge">KULTUR & TIPPS</span>
-      
-      <div class="article-meta-bar">
-        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
-        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
-        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ARTICLE CONTAINER -->
   <main class="article-page">
     <div class="article-container">
       <!-- Author Profile Badge -->
-      <div class="article-author-card">
-        <figure><img src="../images/red_curry.png" alt="Chefköchin Huong Nguyen"><figcaption>Chefköchin Huong Nguyen</figcaption></figure>
-        <div>
-          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
-          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
-          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
-        </div>
+      
       </div>
 
       <!-- Featured Cover Photo -->
-      <figure><img src="../images/garden_preview.jpg" alt="Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage"><figcaption>Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage</figcaption></figure>
+      <figure><img src="../images/article_speisekarte.jpg" alt="Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage"><figcaption>Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage</figcaption></figure><figcaption>Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage</figcaption></figure>
 
       <!-- Article Body -->
       <article class="article-body-content">
@@ -365,7 +290,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Bánh Phở sind die legendären, flachen Reisbandnudeln, die für das vietnamesische Nationalgericht Phở verwendet werden. Es gibt sie in unterschiedlichen Breiten – von sehr schmalen Bändern für Suppen bis hin zu breiteren Varianten, die sich ideal zum Braten im Wok (wie bei Phở Xào) eignen. Eine perfekt gegarte Phở-Nudel muss im Kern noch einen leichten, elastischen Biss haben, während sie außen seidig-weich über die Zunge gleitet. Getrocknete Bánh Phở benötigen vor dem Kochen zwingend eine Einweichzeit, um ihre charakteristische Elastizität zu entfalten.</p>
 <h3 id="banh-hoi-nudeln">Bánh Hỏi – Die hauchdünnen Nudelmatten für festliche Gerichte</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Bánh Hỏi ist eine exquisite Spezialität aus Zentralvietnam, die im Westen noch als Geheimtipp gilt. Hierbei handelt es sich um hauchdünne, gitterartig gewebte Nudelmatten aus feinsten Reisnudelfäden. Sie sind unglaublich zart und schmelzen förmlich im Mund. In Vietnam werden sie traditionell mit aromatischem Lauchzwiebel-Öl (in unserer veganen Variante natürlich rein pflanzlich) bestrichen und zusammen mit knusprigem Tofu, frischen Kräutern und Reispapier zum Selberrollen serviert. Sie sind das Highlight jedes festlichen Anlasses und bringen eine unvergleichliche Texturvielfalt auf den Teller.</p>
-<figure><figure><img src="../photos/store.jpg" alt="Köstliche vietnamesische vegane Nudelgerichte"><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure>
+<figure><img src="../images/article_pho.jpg" alt="Köstliche vietnamesische vegane Nudelgerichte"><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure><figcaption>Köstliche vietnamesische vegane Nudelgerichte</figcaption></figure>
 <h2 id="vegane-reisnudeln-zubereiten-anleitung">Vegane Reisnudeln zubereiten – Schritt-für-Schritt-Anleitung für die perfekte Konsistenz</h2>
 <h3 id="schritt-1-einweichen">Schritt 1: Das Einweichen – Der Schlüssel zur Elastizität</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Der größte Fehler beim <strong style="color:#2e7d32;">vegane reisnudeln zubereiten</strong> ist der direkte Wurf der trockenen Nudeln in kochendes Wasser. Um eine gleichmäßige Textur zu garantieren, müssen getrocknete Reisnudeln (insbesondere die flachen Bánh Phở) vorab eingeweicht werden. Lege die Nudeln dafür in eine große Schüssel und bedecke sie vollständig mit lauwarmem oder kaltem Wasser. Je nach Dicke der Nudeln sollten sie 20 bis 40 Minuten einweichen, bis sie biegsam, aber noch nicht weich sind und eine milchig-weiße Farbe angenommen haben. Dieser Prozess rehydriert die Stärkestruktur schonend und verhindert, dass die Nudeln beim anschließenden Kochen außen matschig werden, während der Kern noch hart bleibt.</p>
@@ -385,7 +310,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Viele Hobbyköche sind es von italienischer Pasta gewohnt, die Nudeln nach dem Abgießen nicht abzuspülen, um die Stärke für die Saucenbindung zu erhalten. Bei Reisnudeln ist dies fatal. Die freigesetzte Reisstärke wirkt wie ein natürlicher Kleber. Ohne gründliches Abspülen mit eiskaltem Wasser verkleben die Nudeln innerhalb weniger Minuten unlösbar miteinander. Das Abspülen unter fließendem Wasser wäscht diese Stärke ab und sorgt dafür, dass jede Nudel einzeln und elastisch bleibt.</p>
 <h3 id="fehler-kleiner-topf">Fehler 3: Ungleichmäßiges Garen durch zu kleinen Topf</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Reisnudeln benötigen beim Kochen Platz, um sich frei bewegen zu können. Kochst du eine größere Menge Nudeln in einem zu kleinen Topf mit zu wenig Wasser, kühlt das Wasser beim Hinzufügen der Nudeln zu stark ab. Der Kochprozess verzögert sich, die Nudeln liegen dicht gedrängt aufeinander und garen ungleichmäßig. Einige Stellen bleiben hart, andere werden matschig. Verwende daher immer einen großzügigen Topf mit reichlich Wasser.</p>
-<figure><figure><img src="../photos/A7402927.jpg" alt="Hausgemachte vegane Pho Suppe mit frischen Kräutern"><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure>
+<figure><img src="../images/article_sommerrollen.jpg" alt="Hausgemachte vegane Pho Suppe mit frischen Kräutern"><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure><figcaption>Hausgemachte vegane Pho Suppe mit frischen Kräutern</figcaption></figure>
 <h2 id="aromatisierung-und-kombinationen">Aromatisierung und kulinarische Kombinationen in der veganen Küche</h2>
 <h3 id="vegane-saucen-umami">Die Rolle von Umami: Vegane Saucen und Dressings</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Da Reisnudeln selbst einen sehr dezenten Eigengeschmack haben, leben die Gerichte von den begleitenden Saucen und Dressings. In der traditionellen Küche Vietnams dominiert die Fischsauce. Um diesen tiefen Umami-Geschmack rein pflanzlich zu erzeugen, nutzen wir bei Vegan Garden Berlin spezielle Reduktionen aus Shiitake-Pilzen, fermentierten Sojabohnen und Ananas. Ein klassisches veganes Dressing (Nước Chấm Chay) kombinierst du aus Limettensaft, etwas Rohrzucker, veganer Fischsauce, feingehacktem Knoblauch und Chili. Dieses süß-sauer-scharf-salzige Zusammenspiel erweckt die Reisnudeln zum Leben. Entdecke diese Geschmacksharmonie auf <a href="../index.html#speisekarte">unsere Speisekarte</a>, wo wir klassische Saucen kunstvoll vegan interpretieren.</p>
@@ -425,85 +350,8 @@
 </ul>
 </div>
 
-      </article>
-
-      <!-- Reservation Box CTA -->
-      <div class="article-cta-box">
-        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
-        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
-        <a href="../index.html#kontakt" class="btn btn-primary">
-          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="kontakt">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
-            <figure><img src="../images/article_bestes_restaurant.jpg" alt="Vegan Garden Berlin Logo"><figcaption>Vegan Garden Berlin Logo</figcaption></figure>
-          </a>
-          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-hours">
-          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
-          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
-          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
-          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
-        </div>
-
-        <div class="footer-contact">
-          <h3 class="footer-col-title">KONTAKT</h3>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
-            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>
-              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
-              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
-            </span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
-          </div>
-        </div>
-
-        <div class="footer-map">
-          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
-          <div class="map-card" style="padding: 0; border: none; background: transparent;">
-            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
-        <div class="footer-links">
-          <a href="#">IMPRESSUM</a>
-          <a href="#">DATENSCHUTZ</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../script.js"></script>
-
-
+      
+      
       </article>
 
       <!-- Reservation Box CTA -->

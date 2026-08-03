@@ -65,27 +65,6 @@
       color: rgba(255,255,255,0.8);
       flex-wrap: wrap;
     }
-    .article-author-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 20px 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin: -24px auto 36px;
-      max-width: 840px;
-      position: relative;
-      z-index: 10;
-      border: 1px solid #e0e5e1;
-    }
-    .article-author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #3b4e3c;
-    }
     .article-container {
       max-width: 840px;
       margin: 0 auto;
@@ -237,7 +216,6 @@
       <span class="article-cat-badge">GESUNDHEIT & SUSTAINABILITY</span>
       <h1 class="article-main-title">Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</h1>
       <div class="article-meta-bar">
-        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
         <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
         <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
       </div>
@@ -245,20 +223,34 @@
   </section>
 
   <!-- ARTICLE CONTAINER -->
+  <main class="article-page" style="padding-top: 40px;">
+    <div class="article-container">
+      <!-- Featured Cover Photo -->
+      <img src="../images/summer_bowl.png" alt="Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt" class="article-cover-img">
+
+      <!-- Article Body -->
+      <article class="article-body-content">
+        
+        
+        
+<html lang="de">
+
+
+  <!-- HEADER & NAVIGATION -->
+  
+
+  <!-- ARTICLE HERO HEADER -->
+  
+
+  <!-- ARTICLE CONTAINER -->
   <main class="article-page">
     <div class="article-container">
       <!-- Author Profile Badge -->
-      <div class="article-author-card">
-        <img src="../photos/store.jpg" alt="Chefköchin Huong Nguyen" class="article-author-avatar">
-        <div>
-          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
-          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
-          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
-        </div>
+      
       </div>
 
       <!-- Featured Cover Photo -->
-      <img src="../images/summer_bowl.png" alt="Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt" class="article-cover-img">
+      <figure><img src="../images/article_bestes_restaurant.jpg" alt="Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt"><figcaption>Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</figcaption></figure>
 
       <!-- Article Body -->
       <article class="article-body-content">
@@ -267,87 +259,20 @@
 
 
   <!-- HEADER & NAVIGATION -->
-  <header class="navbar">
-    <div class="container navbar-inner">
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <a href="../index.html" class="brand-logo">
-        <figure><img src="../images/article_pho.jpg" alt="Vegan Garden Berlin Logo"><figcaption>Vegan Garden Berlin Logo</figcaption></figure>
-      </a>
-
-      <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="../index.html#restaurant" class="nav-link">RESTAURANT</a></li>
-          <li><a href="../index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
-          <li><a href="../index.html#garten" class="nav-link">GARTEN</a></li>
-          <li><a href="../index.html#events" class="nav-link">EVENTS</a></li>
-          <li><a href="../index.html#ratgeber" class="nav-link">RATGEBER</a></li>
-          <li><a href="../index.html#kontakt" class="nav-link">KONTAKT</a></li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="../index.html#kontakt" class="btn btn-primary">
-          <i class="fa-regular fa-calendar-check"></i>
-          <span>TISCH RESERVIEREN</span>
-        </a>
-        <div class="lang-box" id="langBox">
-          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
-            <span class="lang-flag"><figure><img src="../images/article_sommerrollen.jpg" alt="de"><figcaption>de</figcaption></figure></span>
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <ul class="lang-dropdown" id="langDropdown" role="listbox">
-            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
-              <span class="flag"><figure><img src="../images/pho_bo_chay.png" alt="de"><figcaption>de</figcaption></figure></span>
-              <span class="lng">Deutsch</span>
-            </li>
-            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
-              <span class="flag"><figure><img src="../images/spring_rolls.png" alt="us"><figcaption>us</figcaption></figure></span>
-              <span class="lng">English</span>
-            </li>
-            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
-              <span class="flag"><figure><img src="../images/summer_bowl.png" alt="vn"><figcaption>vn</figcaption></figure></span>
-              <span class="lng">Tiếng Việt</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+  
 
   <!-- ARTICLE HERO HEADER -->
-  <section class="article-hero">
-    <div class="container">
-      <div class="article-breadcrumbs">
-        <a href="../index.html">Startseite</a> &nbsp;›&nbsp; <a href="../index.html#ratgeber">Ratgeber & Blog</a> &nbsp;›&nbsp; <span>GESUNDHEIT & SUSTAINABILITY</span>
-      </div>
-      <span class="article-cat-badge">GESUNDHEIT & SUSTAINABILITY</span>
-      
-      <div class="article-meta-bar">
-        <span><i class="fa-regular fa-user"></i> Huong Nguyen</span>
-        <span><i class="fa-regular fa-calendar"></i> Mai 2026</span>
-        <span><i class="fa-regular fa-clock"></i> 5 Min. Lesezeit</span>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- ARTICLE CONTAINER -->
   <main class="article-page">
     <div class="article-container">
       <!-- Author Profile Badge -->
-      <div class="article-author-card">
-        <figure><img src="../images/red_curry.png" alt="Chefköchin Huong Nguyen"><figcaption>Chefköchin Huong Nguyen</figcaption></figure>
-        <div>
-          <div style="font-size: 0.78rem; color: #4a634b; font-weight: 700; text-transform: uppercase;">Fachlich geprüft von:</div>
-          <div style="font-weight: 700; color: #1c241d; font-size: 1.05rem;">Founder & Chefköchin Huong Nguyen</div>
-          <div style="font-size: 0.85rem; color: #666; line-height: 1.4;">Gründerin von Vegan Garden Berlin – Expertin für vietnamesische Heilkräuter und 100 % vegane Kulinarik.</div>
-        </div>
+      
       </div>
 
       <!-- Featured Cover Photo -->
-      <figure><img src="../images/garden_preview.jpg" alt="Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt"><figcaption>Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</figcaption></figure>
+      <figure><img src="../images/article_speisekarte.jpg" alt="Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt"><figcaption>Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</figcaption></figure><figcaption>Vegane Ernährung &amp; Umwelt – Warum jede Mahlzeit zählt</figcaption></figure>
 
       <!-- Article Body -->
       <article class="article-body-content">
@@ -366,7 +291,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Wasser ist Leben – und dennoch verschwenden wir es in astronomischen Mengen für die Produktion tierischer Lebensmittel. Das Konzept des „virtuellen Wassers“ verdeutlicht, wie viel Liter Wasser in der gesamten Produktionskette eines Lebensmittels stecken. Während für die Erzeugung von einem Kilogramm Gemüse durchschnittlich etwa 300 bis 900 Liter Wasser benötigt werden, schlägt ein einziges Kilogramm Rindfleisch mit sage und schreibe 15.000 Litern Wasser zu Buche. Der Großteil dieses Wassers wird für den Anbau der Futtermittel verbraucht. Durch den direkten Konsum pflanzlicher Proteine anstelle des Umwegs über das Tier lässt sich der persönliche Wasserfußabdruck drastisch senken und der weltweiten Wasserknappheit entgegenwirken.</p>
 <h3 id="flaechenverbrauch-und-entwaldung" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Flächenfraß und Entwaldung des Regenwaldes</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Nachfrage nach Fleisch und Milchprodukten ist der Hauptgrund für die Zerstörung der wertvollsten Ökosysteme unserer Erde. Jedes Jahr werden riesige Flächen des tropischen Regenwaldes im Amazonasgebiet brandgerodet. Dies geschieht jedoch selten direkt für Weideland, sondern vor allem für den Anbau von Soja, das als billiges Proteinfutter für die Massentierhaltung in Europa und Asien exportiert wird. Diese Entwaldung vernichtet nicht nur einzigartige Lebensräume, sondern setzt auch gigantische Mengen des im Waldboden und in den Bäumen gespeicherten CO₂ frei. Eine Umstellung auf eine pflanzliche Lebensweise stoppt diesen Teufelskreis und schützt die „grünen Lungen“ unseres Planeten vor der endgültigen Zerstörung.</p>
-<figure><figure><img src="../photos/store.jpg" alt="Gesunde, nährstoffreiche und nachhaltige vegane Küche"><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure>
+<figure><img src="../images/article_pho.jpg" alt="Gesunde, nährstoffreiche und nachhaltige vegane Küche"><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure><figcaption>Gesunde, nährstoffreiche und nachhaltige vegane Küche</figcaption></figure>
 <h2 id="treibhausgase-co2-methan-lachgas" style="color: #2e7d32; font-family: sans-serif; margin-top: 30px;">Treibhausgase minimieren: CO₂-Äquivalente, Methan und Lachgas</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Bei der Diskussion über den Treibhauseffekt denken die meisten Menschen sofort an Kohlendioxid (CO₂) aus Autos und Fabriken. Die Landwirtschaft emittiert jedoch eine Vielzahl hochgradig potenter Gase, die den Planeten weitaus schneller erwärmen als CO₂ allein. Zu nennen sind hier vor allem Methan und Lachgas. Eine Reduzierung dieser Gase ist der schnellste Weg, um die Erderwärmung kurzfristig zu verlangsamen. Auch hier bietet eine pflanzlich betonte Ernährungsweise, wie sie auch von der Deutschen Gesellschaft für Ernährung (DGE) empfohlen wird (<a href="https://www.dge.de/wissenschaft/weitere-publikationen/fachliche-berichte/vegane-ernaehrung/" target="_blank" rel="nofollow noopener">[2]</a>), immense Einsparpotenziale.</p>
 <h3 id="methan-das-unterschaetzte-klimagas" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Methan: Die unsichtbare Gefahr aus der Tierhaltung</h3>
@@ -384,7 +309,7 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Um den unersättlichen Appetit auf Fleisch zu stillen, werden weltweit gigantische Monokulturen aus Soja, Mais und Weizen angebaut. Diese riesigen Äcker sind biologische Wüsten. Der massive Einsatz von Pestiziden, Herbiziden und Kunstdünger vernichtet Insekten, Wildkräuter und Vögel und entzieht ihnen die Lebensgrundlage. Durch eine pflanzliche Ernährungsweise wird der Bedarf an Futtermitteln drastisch reduziert. Die dadurch frei werdenden Flächen könnten renaturiert werden, was der heimischen Flora und Fauna wertvollen Lebensraum zurückgeben würde.</p>
 <h3 id="ueberduengung-und-tote-zonen" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Überdüngung der Meere und tote Zonen in den Gewässern</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die enormen Gülle- und Mistmengen aus der intensiven Tierhaltung sickern in den Boden und gelangen über Flüsse schließlich in unsere Meere. Der hohe Gehalt an Stickstoff und Phosphor führt zu einer massiven Überdüngung (Eutrophierung) der Gewässer. Dies löst ein extremes Algenwachstum aus. Wenn diese Algen sterben und zersetzt werden, wird dem Wasser der Sauerstoff entzogen. Die Folge sind riesige „tote Zonen“ in den Ozeanen, in denen kein Fisch und kein anderes Lebewesen mehr existieren kann. Der Verzicht auf tierische Produkte schont somit nicht nur das Land, sondern rettet auch die marinen Ökosysteme.</p>
-<figure><figure><img src="../photos/A7402927.jpg" alt="Bunte Auswahl an erfrischenden hausgemachten Drinks"><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure>
+<figure><img src="../images/article_sommerrollen.jpg" alt="Bunte Auswahl an erfrischenden hausgemachten Drinks"><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure><figcaption>Bunte Auswahl an erfrischenden hausgemachten Drinks</figcaption></figure>
 <h2 id="gesundheit-und-klimaschutz" style="color: #2e7d32; font-family: sans-serif; margin-top: 30px;">Gesundheit für Mensch und Erde: Die Planetary Health Diet</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Gesundheit ist keine Einbahnstraße. Die Gesundheit des Menschen ist untrennbar mit der Gesundheit unseres Planeten verbunden. Wissenschaftler haben untersucht, wie eine Ernährungsweise aussehen müsste, die sowohl den Nährstoffbedarf aller Menschen deckt als auch die planetaren Grenzen einhält. Das Ergebnis ist ein zukunftsweisendes Konzept, das zeigt, dass eine pflanzenbasierte Ernährung der Schlüssel für ein langes, gesundes Leben im Einklang mit der Natur ist.</p>
 <h3 id="was-ist-die-planetary-health-diet" style="color: #2e7d32; font-family: sans-serif; margin-top: 20px;">Das Konzept der Planetary Health Diet</h3>
@@ -432,85 +357,8 @@
 </ul>
 </div>
 
-      </article>
-
-      <!-- Reservation Box CTA -->
-      <div class="article-cta-box">
-        <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
-        <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
-        <a href="../index.html#kontakt" class="btn btn-primary">
-          <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="kontakt">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="brand-logo" style="margin-bottom: 12px; display: block; line-height: 1;">
-            <figure><img src="../images/article_bestes_restaurant.jpg" alt="Vegan Garden Berlin Logo"><figcaption>Vegan Garden Berlin Logo</figcaption></figure>
-          </a>
-          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          </div>
-        </div>
-
-        <div class="footer-hours">
-          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
-          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
-          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
-          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
-        </div>
-
-        <div class="footer-contact">
-          <h3 class="footer-col-title">KONTAKT</h3>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
-            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>
-              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
-              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
-            </span>
-          </div>
-          <div class="footer-contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
-          </div>
-        </div>
-
-        <div class="footer-map">
-          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
-          <div class="map-card" style="padding: 0; border: none; background: transparent;">
-            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
-        <div class="footer-links">
-          <a href="#">IMPRESSUM</a>
-          <a href="#">DATENSCHUTZ</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../script.js"></script>
-
-
+      
+      
       </article>
 
       <!-- Reservation Box CTA -->

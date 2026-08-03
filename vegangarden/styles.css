@@ -1770,6 +1770,16 @@ body {
   display: none !important;
 }
 
+/* AUTO-HIDE MISSING / BROKEN IMAGE CONTAINERS */
+img[src=""], img:not([src]) {
+  display: none !important;
+}
+
+.hub-news-img-link:has(> img[style*="display: none"]),
+.news-card__img-wrap:has(> img[style*="display: none"]) {
+  display: none !important;
+}
+
 .goog-text-highlight {
   background-color: transparent !important;
   border: none !important;

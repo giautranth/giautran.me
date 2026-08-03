@@ -1275,7 +1275,8 @@ img {
   padding: 22px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .news-card__title {
@@ -1285,6 +1286,11 @@ img {
   margin-bottom: 20px;
   line-height: 1.4;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 4.2em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .news-card__title a {

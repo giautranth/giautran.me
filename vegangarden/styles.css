@@ -1083,14 +1083,11 @@ img {
   .desktop-reserve-btn {
     display: none !important;
   }
-  .mobile-reserve-btn {
-    display: flex !important;
-  }
   .nav-actions {
     order: 3;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     z-index: 10;
   }
   .lang-box {
@@ -1506,6 +1503,60 @@ img {
 @media (max-width: 600px) {
   .review-box {
     flex: 0 0 88%;
+  }
+}
+
+/* FLOATING RESERVATION FAB BUTTON (MOBILE & TABLET WITH PULSE EFFECT) */
+.floating-reserve-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1c241d 0%, #2e3d2f 100%);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-reserve-btn:hover,
+.floating-reserve-btn:active {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.floating-reserve-pulse {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  border: 2px solid #4a634b;
+  animation: reservePulse 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes reservePulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.95;
+  }
+  70% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
   }
 }
 

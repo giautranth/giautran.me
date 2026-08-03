@@ -40,10 +40,6 @@
           <span>TISCH RESERVIEREN</span>
         </button>
 
-        <!-- Mobile Reservation Icon Button (Hoalam style) -->
-        <button class="mobile-reserve-btn js-open-reserve" aria-label="Tisch reservieren" title="Tisch reservieren">
-          <i class="fa-regular fa-calendar-check"></i>
-        </button>
         <!-- Flag Language Box (Matching Hoalam style) -->
         <div class="lang-box" id="langBox">
           <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
@@ -743,6 +739,12 @@
       </div>
     </div>
   </div>
+
+  <!-- FLOATING RESERVATION FAB BUTTON (MOBILE & TABLET WITH PULSE EFFECT) -->
+  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch jetzt reservieren" title="Tisch jetzt reservieren">
+    <div class="floating-reserve-pulse"></div>
+    <i class="fa-regular fa-calendar-check"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

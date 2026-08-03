@@ -268,7 +268,7 @@
       <div class="contact-grid">
         <!-- Left Info Column -->
         <div class="contact-info-col">
-          <img src="photos/A7402927.jpg" alt="Vegan Garden Berlin Restaurant" class="contact-banner-img">
+          <img src="images/store.jpg" alt="Vegan Garden Berlin Restaurant Store" class="contact-banner-img">
 
           <div class="contact-cards-grid">
             <!-- Adresse -->
@@ -317,59 +317,35 @@
           </div>
         </div>
 
-        <!-- Right Form Column -->
+        <!-- Right Form Column (Clean 4-field form matching screenshot) -->
         <div class="contact-form-card">
-          <h2 class="form-heading">TISCH RESERVIEREN</h2>
-          <p class="form-subheading">Sichern Sie sich Ihren Lieblingsplatz im Restaurant oder im sommerlichen Garten.</p>
+          <h2 class="form-heading">KONTAKT</h2>
+          <p class="form-subheading" style="margin-bottom: 28px;">Haben Sie Fragen oder Wünsche? Schreiben Sie uns direkt eine Nachricht.</p>
 
-          <form id="contactPageForm" onsubmit="event.preventDefault(); alert('Vielen Dank! Ihre Reservierungsanfrage wurde erfolgreich gesendet.'); this.reset();">
+          <form id="contactPageForm" onsubmit="event.preventDefault(); alert('Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.'); this.reset();">
             <div class="form-row-2">
               <div>
-                <label class="form-label-custom">Name *</label>
-                <input type="text" required class="form-control-custom" placeholder="Ihr Name">
+                <label class="form-label-custom">Name / Họ tên *</label>
+                <input type="text" required class="form-control-custom" placeholder="Ihr Name / Họ tên">
               </div>
               <div>
-                <label class="form-label-custom">Telefonnummer *</label>
+                <label class="form-label-custom">Telefonnummer / Số điện thoại *</label>
                 <input type="tel" required class="form-control-custom" placeholder="0162 1234567">
               </div>
             </div>
 
-            <div class="form-row-2">
-              <div>
-                <label class="form-label-custom">E-Mail-Adresse *</label>
-                <input type="email" required class="form-control-custom" placeholder="name@beispiel.de">
-              </div>
-              <div>
-                <label class="form-label-custom">Anzahl der Personen *</label>
-                <select required class="form-control-custom">
-                  <option value="2">2 Personen</option>
-                  <option value="1">1 Person</option>
-                  <option value="3">3 Personen</option>
-                  <option value="4">4 Personen</option>
-                  <option value="5">5 Personen</option>
-                  <option value="6">6+ Personen (Gruppe)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row-2">
-              <div>
-                <label class="form-label-custom">Datum *</label>
-                <input type="date" required class="form-control-custom">
-              </div>
-              <div>
-                <label class="form-label-custom">Uhrzeit *</label>
-                <input type="time" required class="form-control-custom" value="18:00">
-              </div>
-            </div>
-
             <div class="form-field-full">
-              <label class="form-label-custom">Besondere Wünsche / Nachricht</label>
-              <textarea class="form-control-custom" rows="4" placeholder="z. B. Wunschplatz im Garten, Allergien..."></textarea>
+              <label class="form-label-custom">E-Mail-Adresse / Email *</label>
+              <input type="email" required class="form-control-custom" placeholder="name@beispiel.de">
+            </div>
+
+            <div class="form-field-full" style="margin-bottom: 24px;">
+              <label class="form-label-custom">Nachricht / Nội dung *</label>
+              <textarea required class="form-control-custom" rows="5" placeholder="Ihre Nachricht / Nhập nội dung tin nhắn..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px; border-radius: 50px; font-size: 0.95rem;">
-              <i class="fa-regular fa-calendar-check"></i> JETZT VERBINDLICH RESERVIEREN
+              <i class="fa-regular fa-paper-plane"></i> NACHRICHT SENDEN / GỬI
             </button>
           </form>
         </div>

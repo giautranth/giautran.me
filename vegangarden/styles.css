@@ -564,7 +564,8 @@ img {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1;
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -574,6 +575,10 @@ img {
   color: var(--primary-green-dark);
   margin-bottom: 8px;
   font-family: 'Cinzel', serif;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .food-desc {
@@ -581,13 +586,18 @@ img {
   color: var(--text-muted);
   margin-bottom: 16px;
   line-height: 1.5;
-  flex-grow: 1;
+  min-height: 4.5em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .food-price {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary-green-dark);
+  margin-top: auto;
 }
 
 /* GARTEN & EVENTS SECTION */

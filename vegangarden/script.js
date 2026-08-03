@@ -298,4 +298,91 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext');
   initSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext');
   initAutoSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext', 3500);
+
+  // Hero Banner Fade Slider logic (5 seconds auto slide)
+  function initHeroSlider(intervalMs = 5000) {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    const prevBtn = document.getElementById('heroPrevBtn');
+    const nextBtn = document.getElementById('heroNextBtn');
+    const heroSection = document.getElementById('home');
+
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let timer = null;
+
+    function showSlide(index) {
+      if (index >= slides.length) currentIndex = 0;
+      else if (index < 0) currentIndex = slides.length - 1;
+      else currentIndex = index;
+
+      slides.forEach((slide, i) => {
+        if (i === currentIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    function startAutoSlide() {
+      if (!timer) {
+        timer = setInterval(() => {
+          showSlide(currentIndex + 1);
+        }, intervalMs);
+      }
+    }
+
+    function stopAutoSlide() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        showSlide(currentIndex - 1);
+        startAutoSlide();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        showSlide(currentIndex + 1);
+        startAutoSlide();
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.dataset.slide, 10);
+        stopAutoSlide();
+        showSlide(idx);
+        startAutoSlide();
+      });
+    });
+
+    if (heroSection) {
+      heroSection.addEventListener('mouseenter', stopAutoSlide);
+      heroSection.addEventListener('mouseleave', startAutoSlide);
+      heroSection.addEventListener('touchstart', stopAutoSlide, { passive: true });
+      heroSection.addEventListener('touchend', startAutoSlide, { passive: true });
+    }
+
+    startAutoSlide();
+  }
+
+  initHeroSlider(5000);
 });

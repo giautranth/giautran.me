@@ -335,7 +335,7 @@ img {
   font-weight: 600;
 }
 
-/* HERO SECTION (MATCHING CIH BANNER DIMENSIONS) */
+/* HERO BANNER SLIDER (MATCHING CIH BANNER DIMENSIONS) */
 .hero {
   position: relative;
   width: 100%;
@@ -343,9 +343,118 @@ img {
   min-height: 480px;
   display: flex;
   align-items: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55)), url('images/hero.jpg') center/cover no-repeat;
+  overflow: hidden;
   color: #ffffff;
+  background-color: #1a221b;
   padding: 60px 0;
+}
+
+.hero-slider-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.9s ease-in-out, visibility 0.9s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.55));
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+/* HERO SLIDER NAVIGATION ARROWS */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--primary-green-dark, #2e3d2f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease;
+}
+
+.hero-arrow:hover {
+  background: #ffffff;
+  color: var(--primary-green, #4a634b);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.hero-arrow-left {
+  left: 24px;
+}
+
+.hero-arrow-right {
+  right: 24px;
+}
+
+/* HERO SLIDER DOTS */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .hero-content {

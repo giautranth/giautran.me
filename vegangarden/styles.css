@@ -486,7 +486,7 @@ img {
 
 /* ABOUT / WELCOME SECTION */
 .section-welcome {
-  padding: 100px 0;
+  padding: 45px 0;
   position: relative;
   background-color: var(--bg-cream);
 }
@@ -612,14 +612,14 @@ img {
 
 /* HIGHLIGHTS SECTION */
 .section-highlights {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: #f3f1ec;
   text-align: center;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .section-title {
@@ -711,7 +711,7 @@ img {
 
 /* GARTEN & EVENTS SECTION */
 .section-events {
-  padding: 90px 0;
+  padding: 40px 0;
   background-color: var(--bg-cream);
   text-align: center;
 }
@@ -771,7 +771,7 @@ img {
 
 /* REVIEWS BAR */
 .section-reviews {
-  padding: 40px 0;
+  padding: 36px 0;
   background-color: #eeebe3;
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
@@ -837,7 +837,7 @@ img {
 
 /* INSTAGRAM SECTION */
 .section-instagram {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: var(--bg-cream);
   text-align: center;
 }

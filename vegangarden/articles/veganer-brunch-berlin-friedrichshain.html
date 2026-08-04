@@ -233,6 +233,7 @@
         
         
         
+        
         <p><br />
 <br />
 </p>
@@ -244,6 +245,8 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Die tolerante, kreative und weltoffene Atmosphäre in Friedrichshain bildet den perfekten Nährboden für gastronomische Innovationen. Im Boxhagener Kiez, rund um die Simon-Dach-Straße und die Wühlischstraße, haben sich zahlreiche Gastronomen niedergelassen, die traditionelle Rezepte neu denken. Vegane Alternativen sind hier keine bloße Notlösung auf der Speisekarte, sondern stehen als stolze Hauptdarsteller im Mittelpunkt. Die Köche experimentieren mit hochwertigen Nüssen, Hülsenfrüchten, fermentierten Spezialitäten und frischen Kräutern, um geschmackliche Meisterwerke zu kreieren. Wenn du den vielseitigen Kiez kulinarisch genauer erkunden willst, bietet dir <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a> eine Fülle von handverlesenen Empfehlungen abseits der typischen Touristenpfade.</p>
 <h3 id="der-trend-zum-ausgiebigen-spaetbrunch-am-wochenende" style="color:#43a047; font-size:1.25em; margin-top:20px;">Der Trend zum ausgiebigen Spätbrunch am Wochenende</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">In einer Metropole wie Berlin, in der das Leben niemals stillsteht, ist das Wochenende der heilige Raum zur Entschleunigung. Der klassische Frühstücksbegriff hat sich dadurch stark verschoben: Statt hektisch am frühen Morgen ein Brot zu essen, zelebrieren die Menschen den Spätbrunch. Man nimmt sich bewusst Zeit, schläft aus und trifft sich ab dem späten Vormittag bis in den Nachmittag hinein mit Freunden oder der Familie. Ein guter Spätbrunch zeichnet sich durch den fließenden Übergang von süßen zu herzhaften und von kalten zu warmen Gerichten aus. Er ist ein geselliges Ritual, das Körper und Geist nach einer anstrengenden Arbeitswoche wieder in Einklang bringt.</p>
+
+
 
 
 
@@ -330,6 +333,7 @@ Erfrischende Getränke und biologische FrühstückskomponentenErfrischende Getr�
 </div>
 <p></p>
 
+      
       
       
       
@@ -443,33 +447,28 @@ Erfrischende Getränke und biologische FrühstückskomponentenErfrischende Getr�
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Anzahl Personen</label>
-            <select id="resGuests" class="form-select" required>
-              <option value="1">1 Person</option>
-              <option value="2" selected>2 Personen</option>
-              <option value="3">3 Personen</option>
-              <option value="4">4 Personen</option>
-              <option value="5">5+ Personen (Gruppe)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Sitzbereich</label>
-            <select id="resArea" class="form-select">
-              <option value="Garten">Sommergarten</option>
-              <option value="Indoor">Indoor Restaurant</option>
-              <option value="Egal">Egal / Beliebig</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Anzahl Personen</label>
+          <select id="resGuests" class="form-select" required>
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5+ Personen (Gruppe)</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">E-Mail oder Telefonnummer</label>
+          <label class="form-label">E-Mail & Telefonnummer</label>
           <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">RESERVIERUNG BESTÄTIGEN</button>
+        <div class="form-group">
+          <label class="form-label">Anmerkungen / Wünsche (Ghi chú)</label>
+          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Besondere Wünsche, Allergien oder Anmerkungen..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
       </form>
     </div>
   </div>

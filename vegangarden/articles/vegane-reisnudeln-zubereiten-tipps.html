@@ -234,12 +234,15 @@
         
         
         
+        
 <p style="text-align:justify; line-height:1.6; color:#333;"><em>Wenn du schon einmal versucht hast, authentische vietnamesische Gerichte zu Hause nachzukochen, standest du sicherlich vor der Frage, wie man die perfekte Konsistenz der dünnen Nudeln erreicht. Wer <strong style="color:#2e7d32;">vegane reisnudeln zubereiten</strong> möchte, stellt schnell fest, dass der schmale Grat zwischen perfekt elastisch und matschig-klebrig eine echte Kunst ist. Reisnudeln bilden das Herzstück zahlloser kulinarischer Meisterwerke Südostasiens – von wärmenden Suppen bis hin zu erfrischenden Nudelsalaten. In diesem umfassenden Ratgeber teilen wir die traditionellen Geheimnisse Hanois, damit dir die Zubereitung ab sofort fehlerfrei gelingt und du den authentischen Geschmack direkt in deine eigene Küche zaubern kannst.</em></p>
 <h2 id="faszination-vietnamesischer-reisnudeln">Die Faszination vietnamesischer Reisnudeln: Mehr als nur eine Beilage</h2>
 <h3 id="herkunft-traditionelle-bedeutung">Herkunft und traditionelle Bedeutung in Vietnam</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">In der vietnamesischen Kultur ist Reis weit mehr als ein einfaches Grundnahrungsmittel. Seit Jahrtausenden bildet die Nassreis-Kultivierung in den fruchtbaren Deltas des Roten Flusses und des Mekongs das wirtschaftliche und spirituelle Fundament des Landes. Reisnudeln sind das direkte kulinarische Erbe dieser tief verwurzelten landwirtschaftlichen Tradition. Im Gegensatz zu europäischen Weizennudeln werden asiatische Reisnudeln traditionell aus fermentiertem Reismehl und Wasser hergestellt, was ihnen ihre unverkennbar zarte Textur und ihr leicht florales Aroma verleiht. Ob als schnelles Frühstück an einem Straßenstand in Hanoi oder als kunstvoll arrangiertes Festessen – Reisnudeln verbinden Generationen und symbolisieren Zusammenkunft, Gemeinschaft und Verbundenheit mit der Natur.</p>
 <h3 id="reisnudeln-glutenfreie-basis">Warum Reisnudeln die perfekte glutenfreie Basis sind</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">In der modernen Ernährung gewinnen Reisnudeln auch im Westen rasant an Bedeutung. Da sie von Natur aus vollkommen glutenfrei sind, stellen sie eine hervorragende Alternative für Menschen mit Zöliakie oder Glutensensitivität dar. Laut der Deutschen Gesellschaft für Ernährung (DGE) trägt eine bewusste, pflanzenbetonte Ernährung, die leicht verdauliche und allergenarme Kohlenhydrate integriert, maßgeblich zur Entlastung des Magen-Darm-Trakts und zur Förderung des allgemeinen Wohlbefindens bei <a href="https://www.dge.de/" target="_blank" rel="nofollow noopener">[1]</a>. Im Vergleich zu Weizenprodukten belasten Reisnudeln die Verdauung kaum und liefern schnell verfügbare Energie, ohne ein schweres Völlegefühl zu hinterlassen. Das macht sie zur perfekten Grundlage für eine vitale, moderne und gesunde Küche, die auf Natürlichkeit und Leichtigkeit setzt.</p>
+
+
 
 
 
@@ -311,6 +314,7 @@ Hausgemachte vegane Pho Suppe mit frischen KräuternHausgemachte vegane Pho Supp
 </ul>
 </div>
 
+      
       
       
       
@@ -424,33 +428,28 @@ Hausgemachte vegane Pho Suppe mit frischen KräuternHausgemachte vegane Pho Supp
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Anzahl Personen</label>
-            <select id="resGuests" class="form-select" required>
-              <option value="1">1 Person</option>
-              <option value="2" selected>2 Personen</option>
-              <option value="3">3 Personen</option>
-              <option value="4">4 Personen</option>
-              <option value="5">5+ Personen (Gruppe)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Sitzbereich</label>
-            <select id="resArea" class="form-select">
-              <option value="Garten">Sommergarten</option>
-              <option value="Indoor">Indoor Restaurant</option>
-              <option value="Egal">Egal / Beliebig</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Anzahl Personen</label>
+          <select id="resGuests" class="form-select" required>
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5+ Personen (Gruppe)</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">E-Mail oder Telefonnummer</label>
+          <label class="form-label">E-Mail & Telefonnummer</label>
           <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">RESERVIERUNG BESTÄTIGEN</button>
+        <div class="form-group">
+          <label class="form-label">Anmerkungen / Wünsche (Ghi chú)</label>
+          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Besondere Wünsche, Allergien oder Anmerkungen..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
       </form>
     </div>
   </div>

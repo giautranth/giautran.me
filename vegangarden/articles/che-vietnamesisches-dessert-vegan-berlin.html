@@ -233,6 +233,7 @@
         
         
         
+        
 
 
 
@@ -246,6 +247,8 @@
 
 <h3 id="vielfalt-der-zutaten" style="color: #4CAF50; margin-top: 25px; font-family: sans-serif;">Die Vielfalt der Zutaten: Von Hülsenfrüchten bis Kokosmilch</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die Zutatenliste für Chè unterscheidet sich grundlegend von westlichen Nachspeisen. Statt schwerer Sahne, Butter und raffiniertem Industriezucker dominieren natürliche, nährstoffreiche Zutaten aus der Natur. Zu den Klassikern gehören verschiedene Hülsenfrüchte wie gelbe Mungbohnen, rote Kidneybohnen und Augenbohnen. Dazu gesellen sich stärkehaltige Komponenten wie Klebreis, Taro, Maniok und Tapiokaperlen, die für die unverkennbare, leicht zäh-cremige Textur sorgen. Abgerundet wird das Ganze durch aromatische Pandanblätter, erfrischendes Zitronengras und eine großzügige Portion cremiger Kokosmilch, die den Desserts ihre feine, samtige Note verleiht.</p>
+
+
 
 
 
@@ -333,6 +336,7 @@
   </ul>
 </div>
 
+      
       
       
       
@@ -446,33 +450,28 @@
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Anzahl Personen</label>
-            <select id="resGuests" class="form-select" required>
-              <option value="1">1 Person</option>
-              <option value="2" selected>2 Personen</option>
-              <option value="3">3 Personen</option>
-              <option value="4">4 Personen</option>
-              <option value="5">5+ Personen (Gruppe)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Sitzbereich</label>
-            <select id="resArea" class="form-select">
-              <option value="Garten">Sommergarten</option>
-              <option value="Indoor">Indoor Restaurant</option>
-              <option value="Egal">Egal / Beliebig</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Anzahl Personen</label>
+          <select id="resGuests" class="form-select" required>
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5+ Personen (Gruppe)</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">E-Mail oder Telefonnummer</label>
+          <label class="form-label">E-Mail & Telefonnummer</label>
           <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">RESERVIERUNG BESTÄTIGEN</button>
+        <div class="form-group">
+          <label class="form-label">Anmerkungen / Wünsche (Ghi chú)</label>
+          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Besondere Wünsche, Allergien oder Anmerkungen..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
       </form>
     </div>
   </div>

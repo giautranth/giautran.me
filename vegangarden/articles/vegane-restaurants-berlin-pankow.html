@@ -233,6 +233,7 @@
         
         
         
+        
         <p><br />
 <br />
 </p>
@@ -244,6 +245,8 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Der Reiz von Pankow liegt in der harmonischen Verbindung von traditioneller Wohnkultur und progressivem Zeitgeist. In den charmanten Altbaustraßen rund um den Florakiez und das Rathaus Pankow etablieren sich zunehmend inhabergeführte Läden und gemütliche Bistros, die sich leidenschaftlich der pflanzlichen Küche widmen. Veganismus wird hier nicht als modischer Verzicht verstanden, sondern als genussvolle Bereicherung für den Alltag. Die Kombination aus frischen Naturprodukten, gemütlichem Kiez-Charme und handwerklicher Präzision schafft ein einzigartiges kulinarisches Profil, das immer mehr Gourmets und gesundheitsbewusste Gäste anzieht.</p>
 <h3 id="die-bezirksgrenzen-und-das-zusammenwachsen-mit-prenzlauer-berg" style="color:#43a047; font-size:1.25em; margin-top:20px;">Die Bezirksgrenzen und das Zusammenwachsen mit dem Prenzlauer Berg</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Ein wesentlicher Faktor für die dynamische Entwicklung der lokalen Gastronomie ist die geographische und administrative Struktur des Bezirks. Pankow umfasst auch den bekannten Ortsteil Prenzlauer Berg, der seit jeher als das globale Epizentrum der veganen Food-Bewegung gilt. Die fließenden Grenzen sorgen für einen stetigen kreativen Austausch und eine gegenseitige Inspiration der Gastronomen. Wenn du tiefer in die faszinierende vegane Landkarte der Hauptstadt eintauchen möchtest, lohnt sich ein Blick in <a href="../index.html#ratgeber">unser Vegan Guide für Berlin</a>, der dir die absolut besten Adressen und versteckten Perlen aller Berliner Kieze zeigt.</p>
+
+
 
 
 
@@ -322,6 +325,7 @@ Traditioneller veganer Feuertopf (Lẩu Chay) zum TeilenTraditioneller veganer F
 </div>
 <p></p>
 
+      
       
       
       
@@ -435,33 +439,28 @@ Traditioneller veganer Feuertopf (Lẩu Chay) zum TeilenTraditioneller veganer F
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Anzahl Personen</label>
-            <select id="resGuests" class="form-select" required>
-              <option value="1">1 Person</option>
-              <option value="2" selected>2 Personen</option>
-              <option value="3">3 Personen</option>
-              <option value="4">4 Personen</option>
-              <option value="5">5+ Personen (Gruppe)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Sitzbereich</label>
-            <select id="resArea" class="form-select">
-              <option value="Garten">Sommergarten</option>
-              <option value="Indoor">Indoor Restaurant</option>
-              <option value="Egal">Egal / Beliebig</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Anzahl Personen</label>
+          <select id="resGuests" class="form-select" required>
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5+ Personen (Gruppe)</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">E-Mail oder Telefonnummer</label>
+          <label class="form-label">E-Mail & Telefonnummer</label>
           <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">RESERVIERUNG BESTÄTIGEN</button>
+        <div class="form-group">
+          <label class="form-label">Anmerkungen / Wünsche (Ghi chú)</label>
+          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Besondere Wünsche, Allergien oder Anmerkungen..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
       </form>
     </div>
   </div>

@@ -234,6 +234,7 @@
         
         
         
+        
 <p style="text-align:justify; line-height:1.6; color:#333;"><em>Die lebendige Berliner Food-Szene steht für kulinarische Vielfalt und stetige Innovation – doch hinter den Kulissen der Gastronomie verbirgt sich oft ein riesiges Müllproblem. Wer umweltbewusst lebt, steht vor der Herausforderung, auswärts ohne schlechtes Gewissen zu genießen. Wie lässt sich <strong>plastikfrei essen berlin</strong>, ohne dabei auf exzellente Aromen und gesunde Zutaten verzichten zu müssen? Nachhaltig ausgerichtete Gastronomiebetriebe zeigen heute eindrucksvoll, dass Genuss und ökologische Verantwortung keine Widersprüche sind. In diesem Beitrag beleuchten wir die besten Ansätze für plastikfreien Genuss, die Bedeutung einer pflanzlichen Lebensweise und wie zukunftsweisende Restaurants in der Hauptstadt aktiv Plastikmüll reduzieren.</em></p>
 <h2 id="die-dringlichkeit-der-plastikvermeidung-in-der-gastronomie">Die Dringlichkeit der Plastikvermeidung in der Gastronomie</h2>
 <p style="text-align:justify; line-height:1.6; color:#333;">Die globale Plastikkrise ist eines der drängendsten Umweltprobleme unserer Zeit. Jedes Jahr werden weltweit Hunderte Millionen Tonnen Plastik produziert, wovon ein erheblicher Teil auf Einwegverpackungen im Food-Sektor entfällt. In Deutschland entsteht durch den Außer-Haus-Verzehr täglich eine gigantische Menge an Abfall, die Entsorgungsbetriebe und Ökosysteme gleichermaßen belastet. Vor allem im urbanen Raum wie Berlin ist der Verpackungsmüll durch Lieferdienste und Take-away-Angebote in den letzten Jahren rasant angestiegen. Plastikvermeidung in der Gastronomie ist daher kein optionaler Trend mehr, sondern eine ökologische Notwendigkeit, um Ressourcen zu schonen und die Natur vor unumkehrbaren Schäden zu bewahren.</p>
@@ -241,6 +242,8 @@
 <p style="text-align:justify; line-height:1.6; color:#333;">Einwegverpackungen aus Kunststoffen, Styropor und beschichtetem Karton haben eine extrem kurze Nutzungsdauer, oft von nur wenigen Minuten. Nach dem Verzehr der Speisen verbleiben sie jedoch für Jahrhunderte in der Umwelt. Sie zerfallen nur sehr langsam und setzen dabei toxische Stoffe frei. Kommunale Entsorgungsdienste stehen vor enormen Herausforderungen bei der Sortierung und dem Recycling dieser oft stark verschmutzten Materialien. Für Gastronomiebetriebe bedeutet der Umstieg auf müllfreie Alternativen einen aktiven Beitrag zum Klimaschutz, da die Herstellung von Einwegplastik enorme Mengen an fossilen Rohstoffen und Energie verbraucht.</p>
 <h3 id="gesundheitliche-aspekte-mikroplastik-im-essen">Gesundheitliche Aspekte: Mikroplastik im Essen</h3>
 <p style="text-align:justify; line-height:1.6; color:#333;">Neben den ökologischen Folgen gewinnt auch die gesundheitliche Dimension von Plastikverpackungen zunehmend an Bedeutung. Heiße, fettige oder säurehaltige Speisen, die in Plastikbehältern transportiert oder serviert werden, können chemische Verbindungen wie Weichmacher (Phthalate) und Bisphenol A (BPA) aus dem Material lösen. Nach Angaben der Weltgesundheitsorganisation (WHO) sind Mikroplastikpartikel mittlerweile in fast allen Umweltbereichen und in der Nahrungskette nachweisbar, was langfristige gesundheitliche Risiken birgt (<a href="https://www.who.int/news/item/22-08-2019-who-calls-for-more-research-into-microplastics-and-a-crackdown-on-plastic-pollution" target="_blank" rel="nofollow noopener">[1]</a>). Die Minimierung von Plastikkontakt bei Lebensmitteln ist daher auch eine Maßnahme des aktiven Gesundheitsschutzes.</p>
+
+
 
 
 
@@ -304,6 +307,7 @@ Traditioneller veganer Feuertopf (Lẩu Chay) zum TeilenTraditioneller veganer F
 </ul>
 </div>
 
+      
       
       
       
@@ -417,33 +421,28 @@ Traditioneller veganer Feuertopf (Lẩu Chay) zum TeilenTraditioneller veganer F
           </div>
         </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Anzahl Personen</label>
-            <select id="resGuests" class="form-select" required>
-              <option value="1">1 Person</option>
-              <option value="2" selected>2 Personen</option>
-              <option value="3">3 Personen</option>
-              <option value="4">4 Personen</option>
-              <option value="5">5+ Personen (Gruppe)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Sitzbereich</label>
-            <select id="resArea" class="form-select">
-              <option value="Garten">Sommergarten</option>
-              <option value="Indoor">Indoor Restaurant</option>
-              <option value="Egal">Egal / Beliebig</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label class="form-label">Anzahl Personen</label>
+          <select id="resGuests" class="form-select" required>
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5+ Personen (Gruppe)</option>
+          </select>
         </div>
 
         <div class="form-group">
-          <label class="form-label">E-Mail oder Telefonnummer</label>
+          <label class="form-label">E-Mail & Telefonnummer</label>
           <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">RESERVIERUNG BESTÄTIGEN</button>
+        <div class="form-group">
+          <label class="form-label">Anmerkungen / Wünsche (Ghi chú)</label>
+          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Besondere Wünsche, Allergien oder Anmerkungen..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
       </form>
     </div>
   </div>

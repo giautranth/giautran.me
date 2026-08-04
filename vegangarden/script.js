@@ -18,20 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const reviewsModal = document.getElementById('reviewsModal');
 
   // Trigger buttons
-  document.querySelectorAll('.js-open-reserve').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.js-open-reserve, a[href*="elementor-action"]');
+    if (btn) {
       const resModal = document.getElementById('reservationModal');
       if (resModal) {
         e.preventDefault();
         openModal(resModal);
       } else {
         const href = btn.getAttribute('href');
-        if (!href || href === '#') {
+        if (!href || href === '#' || href.includes('elementor-action')) {
           e.preventDefault();
           window.location.href = '../kontakt';
         }
       }
-    });
+    }
   });
 
   document.querySelectorAll('.js-open-menu').forEach(btn => {

@@ -239,6 +239,7 @@
         
         
         
+        
 <html lang="de">
 
 
@@ -383,13 +384,14 @@
       
       
       
+      
       </article>
 
       <!-- Reservation Box CTA -->
       <div class="article-cta-box">
         <h4>Lust auf frische, gesunde vietnamesische Küche?</h4>
         <p>Besuche uns im Herzen von Berlin-Friedrichshain und genieße authentische vegane Spezialitäten!</p>
-        <a href="../index.html#kontakt" class="btn btn-primary">
+        <a href="../kontakt" class="btn btn-primary js-open-reserve">
           <i class="fa-regular fa-calendar-check"></i> TISCH JETZT RESERVIEREN
         </a>
       </div>
@@ -458,6 +460,61 @@
       </div>
     </div>
   </footer>
+
+  <!-- MODAL: TABLE RESERVATION -->
+  <div class="modal-overlay" id="reservationModal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h2 class="serif-font" style="color: var(--primary-green-dark); margin-bottom: 8px;">Tisch reservieren</h2>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">Wir freuen uns darauf, Sie im Vegan Garden Berlin begrüßen zu dürfen.</p>
+      
+      <form id="reserveForm">
+        <div class="form-group">
+          <label class="form-label">Vollständiger Name</label>
+          <input type="text" id="resName" class="form-input" placeholder="z.B. Anna Schmidt" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Datum</label>
+            <input type="date" id="resDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Uhrzeit</label>
+            <input type="time" id="resTime" class="form-input" value="18:30" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Anzahl Personen</label>
+            <select id="resGuests" class="form-select" required>
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Personen</option>
+              <option value="3">3 Personen</option>
+              <option value="4">4 Personen</option>
+              <option value="5">5+ Personen (Gruppe)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Sitzbereich</label>
+            <select id="resArea" class="form-select">
+              <option value="Garten">Sommergarten</option>
+              <option value="Indoor">Indoor Restaurant</option>
+              <option value="Egal">Egal / Beliebig</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">E-Mail oder Telefonnummer</label>
+          <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">RESERVIERUNG BESTÄTIGEN</button>
+      </form>
+    </div>
+  </div>
 
   <script src="../script.js"></script>
 </body>

@@ -20,8 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Trigger buttons
   document.querySelectorAll('.js-open-reserve').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(reservationModal);
+      const resModal = document.getElementById('reservationModal');
+      if (resModal) {
+        e.preventDefault();
+        openModal(resModal);
+      } else {
+        const href = btn.getAttribute('href');
+        if (!href || href === '#') {
+          e.preventDefault();
+          window.location.href = '../kontakt';
+        }
+      }
     });
   });
 

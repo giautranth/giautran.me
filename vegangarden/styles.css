@@ -34,7 +34,7 @@ html {
   scroll-behavior: smooth;
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: var(--text-dark);
-  background-color: var(--bg-cream);
+  background-color: #1c241d !important;
   line-height: 1.6;
 }
 
@@ -1756,8 +1756,15 @@ img {
 /* HIDE GOOGLE TRANSLATE UI FRAMES & TOOLTIPS */
 .goog-te-banner-frame,
 iframe.goog-te-banner-frame,
-.goog-te-balloon-frame {
+.goog-te-balloon-frame,
+body > iframe,
+iframe.skiptranslate {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  pointer-events: none !important;
 }
 
 body {

@@ -1198,7 +1198,7 @@ img {
     max-width: 100% !important;
   }
   .navbar-inner > nav {
-    display: none !important;
+    display: block !important;
   }
   .mobile-toggle {
     position: absolute !important;

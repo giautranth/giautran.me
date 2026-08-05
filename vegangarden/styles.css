@@ -1833,3 +1833,17 @@ img[src=""], img:not([src]) {
   display: none !important;
 }
 
+/* HIDE BREADCRUMBS ACROSS ALL PAGES */
+.about-breadcrumbs,
+.contact-breadcrumbs,
+.hub-breadcrumbs,
+.article-breadcrumbs,
+.hero-breadcrumbs,
+.breadcrumbs {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+

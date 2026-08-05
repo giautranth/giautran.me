@@ -921,18 +921,6 @@ img {
   margin-top: auto !important;
 }
 
-.footer::after {
-  content: "" !important;
-  position: absolute !important;
-  left: -500px !important;
-  right: -500px !important;
-  top: 100% !important;
-  height: 3000px !important;
-  background-color: #1c241d !important;
-  z-index: 10 !important;
-  pointer-events: none !important;
-}
-
 .footer-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;

@@ -655,7 +655,7 @@ img {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100% !important;
 }
 
 .food-card:hover {
@@ -690,23 +690,30 @@ img {
 }
 
 .food-name {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--primary-green-dark);
   margin-bottom: 8px;
   font-family: 'Cinzel', serif;
-  min-height: 2.4em;
+  height: 2.7em !important;
+  min-height: 2.7em !important;
+  max-height: 2.7em !important;
+  line-height: 1.25 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  overflow: hidden;
 }
 
 .food-desc {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--text-muted);
   margin-bottom: 16px;
-  line-height: 1.5;
-  min-height: 4.5em;
+  line-height: 1.45;
+  height: 4.35em !important;
+  min-height: 4.35em !important;
+  max-height: 4.35em !important;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

@@ -1861,6 +1861,12 @@ img[src=""], img:not([src]) {
 
 
 
+/* ABOUT PAGE OUTER WHITE BACKGROUND (EXCLUDING FEATURE CARDS) */
+body.about-page,
+.about-page .about-section {
+  background-color: #ffffff !important;
+}
+
 /* FEATURE HIGHLIGHT PILLS - COMPACT SINGLE ROW */
 .feature-highlights {
   display: flex !important;

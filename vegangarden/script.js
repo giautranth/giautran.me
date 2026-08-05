@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-slide helper with hover pause and exact item snapping
+  // Auto-slide helper with hover pause and seamless infinite card loop
   function initAutoSlider(gridId, prevBtnId, nextBtnId, intervalMs = 3500) {
     const grid = document.getElementById(gridId);
     const prevBtn = document.getElementById(prevBtnId);
@@ -276,6 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!grid) return;
 
     let timer = null;
+    let isTransitioning = false;
 
     function getStep() {
       const firstChild = grid.children[0];
@@ -285,22 +286,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function stepNext() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
       const step = getStep();
       const maxScroll = grid.scrollWidth - grid.clientWidth;
+
       if (grid.scrollLeft >= maxScroll - 15) {
-        grid.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        grid.scrollBy({ left: step, behavior: 'smooth' });
+        const first = grid.firstElementChild;
+        if (first) {
+          grid.appendChild(first);
+          grid.scrollLeft -= step;
+        }
       }
+
+      grid.scrollBy({ left: step, behavior: 'smooth' });
+
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 350);
     }
 
     function stepPrev() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
       const step = getStep();
+
       if (grid.scrollLeft <= 15) {
-        grid.scrollTo({ left: grid.scrollWidth, behavior: 'smooth' });
-      } else {
-        grid.scrollBy({ left: -step, behavior: 'smooth' });
+        const last = grid.lastElementChild;
+        if (last) {
+          grid.insertBefore(last, grid.firstElementChild);
+          grid.scrollLeft += step;
+        }
       }
+
+      grid.scrollBy({ left: -step, behavior: 'smooth' });
+
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 350);
     }
 
     function startTimer() {

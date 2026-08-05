@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Auto-slide helper with hover pause
+  // Auto-slide helper with hover pause and exact item snapping
   function initAutoSlider(gridId, prevBtnId, nextBtnId, intervalMs = 3500) {
     const grid = document.getElementById(gridId);
     const prevBtn = document.getElementById(prevBtnId);
@@ -259,12 +259,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let timer = null;
 
+    function getStep() {
+      const firstChild = grid.children[0];
+      if (!firstChild) return 280;
+      const computedGap = parseFloat(window.getComputedStyle(grid).gap) || 20;
+      return firstChild.offsetWidth + computedGap;
+    }
+
     function stepNext() {
+      const step = getStep();
       const maxScroll = grid.scrollWidth - grid.clientWidth;
-      if (grid.scrollLeft >= maxScroll - 10) {
+      if (grid.scrollLeft >= maxScroll - 15) {
         grid.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        grid.scrollBy({ left: 320, behavior: 'smooth' });
+        grid.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    }
+
+    function stepPrev() {
+      const step = getStep();
+      if (grid.scrollLeft <= 15) {
+        grid.scrollTo({ left: grid.scrollWidth, behavior: 'smooth' });
+      } else {
+        grid.scrollBy({ left: -step, behavior: 'smooth' });
       }
     }
 
@@ -291,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
         stopTimer();
-        grid.scrollBy({ left: -320, behavior: 'smooth' });
+        stepPrev();
         startTimer();
       });
     }

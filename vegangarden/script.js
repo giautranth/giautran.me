@@ -308,6 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext');
   initSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext');
   initAutoSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext', 3500);
+  initAutoSlider('galleryGrid', 'galleryPrev', 'galleryNext', 3000);
 
   // Hero Banner Fade Slider logic (5 seconds auto slide)
   function initHeroSlider(intervalMs = 5000) {

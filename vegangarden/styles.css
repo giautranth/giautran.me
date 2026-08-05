@@ -1512,18 +1512,20 @@ img {
 }
 
 .food-grid-slider,
-.news-card-grid {
+.news-card-grid,
+.gallery-grid-slider {
   display: flex !important;
   overflow-x: auto !important;
   scroll-behavior: smooth !important;
-  gap: 24px !important;
+  gap: 20px !important;
   padding: 10px 4px !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
 }
 
 .food-grid-slider::-webkit-scrollbar,
-.news-card-grid::-webkit-scrollbar {
+.news-card-grid::-webkit-scrollbar,
+.gallery-grid-slider::-webkit-scrollbar {
   display: none !important;
 }
 
@@ -1531,6 +1533,11 @@ img {
 .news-card-grid .news-card {
   flex: 0 0 calc(25% - 18px);
   min-width: 270px;
+}
+
+.gallery-grid-slider .insta-card {
+  flex: 0 0 calc(25% - 15px);
+  min-width: 250px;
 }
 
 .side-arrow {

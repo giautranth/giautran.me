@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über Uns | Vegan Garden Berlin - 100 % Vegane Vietnamesische Küche</title>
+  <meta name="description" content="Erfahren Sie mehr über Vegan Garden Berlin: 100 % vegane vietnamesische Küche, grüne Garten-Oase in Berlin-Friedrichshain, frische Heilkräuter und herzliche Gastfreundschaft.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .about-page {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+    }
+    .about-hero {
+      background: linear-gradient(135deg, #1c241d 0%, #29382b 100%);
+      color: #ffffff;
+      padding: 60px 0 45px;
+      text-align: center;
+    }
+    .about-hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      color: #ffffff;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+    .about-hero-subtitle {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .about-breadcrumbs {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+    }
+    .about-breadcrumbs a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+    }
+    .about-section {
+      padding: 50px 0;
+    }
+
+    /* FEATURE ROW (SPLIT LAYOUT WITH IMAGES) */
+    .feature-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--border-subtle);
+    }
+    .feature-row.reverse {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 992px) {
+      .feature-row, .feature-row.reverse {
+        grid-template-columns: 1fr;
+      }
+    }
+    .feature-img-wrap {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .feature-row:hover .feature-img-wrap img {
+      transform: scale(1.04);
+    }
+    .feature-content {
+      padding: 40px;
+    }
+    .feature-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .feature-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: var(--primary-green-dark);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .feature-desc {
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .feature-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .highlight-pill {
+      background: rgba(78, 103, 80, 0.08);
+      color: var(--primary-green-dark);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* GALLERY MINI GRID FOR DISHES */
+    .dish-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .dish-gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      height: 110px;
+      position: relative;
+    }
+    .dish-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .dish-gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    /* VIDEO SECTION */
+    .about-video-wrap {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.16);
+      background: #1c241d;
+      margin: 40px 0 60px;
+    }
+    .about-video {
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* STATS BAR */
+    .about-stats-bar {
+      background: #1c241d;
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 768px) {
+      .about-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .stat-item h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 6px;
+    }
+    .stat-item p {
+      font-size: 0.85rem;
+      color: #d1d5d1;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body class="about-page">
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="index.html" class="brand-logo">
+        <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 38px; width: auto; max-width: 175px; object-fit: contain;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="about" class="nav-link active">ABOUT</a></li>
+          <li><a href="index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="index.html#garten" class="nav-link">GARTEN</a></li>
+          <li><a href="index.html#events" class="nav-link">EVENTS</a></li>
+          <li><a href="ratgeber" class="nav-link">NEWS</a></li>
+          <li><a href="kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary desktop-reserve-btn js-open-reserve">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </button>
+
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wählen">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-breadcrumbs">
+        <a href="index.html">Startseite</a> &nbsp;›&nbsp; <span>Über Uns</span>
+      </div>
+      <h1 class="about-hero-title">ÜBER UNS</h1>
+      <p class="about-hero-subtitle">Authentische 100 % vegane vietnamesische Oase im Herzen von Berlin-Friedrichshain</p>
+    </div>
+  </section>
+
+  <!-- MAIN ABOUT CONTENT SECTION -->
+  <section class="about-section">
+    <div class="container">
+
+      <!-- FEATURE ROW 1: PHILOSOPHIE -->
+      <div class="feature-row">
+        <div class="feature-img-wrap">
+          <img src="images/article_bestes_restaurant.jpg" alt="Vegan Garden Berlin Ambiente">
+        </div>
+        <div class="feature-content">
+          <div class="feature-badge">
+            <i class="fa-solid fa-seedling"></i>
+            <span>PHILOSOPHIE & NATUR</span>
+          </div>
+          <h2 class="feature-title">Reine Pflanzliche Küche</h2>
+          <p class="feature-desc">
+            Tất cả món ăn tại Vegan Garden Berlin được chế biến hoàn toàn 100 % thuần chay – không trứng, không sữa, không sản phẩm động vật. Chúng tôi giữ trọn vị tự nhiên, thanh khiết mà đất mẹ ban tặng.
+          </p>
+          <div class="feature-highlights">
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> 100 % Pflanzlich</div>
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Ohne Ei & Milch</div>
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: var(--accent-gold);"></i> Natürliche Zutaten</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE ROW 2: KULINARIK & DISHES -->
+      <div class="feature-row reverse">
+        <div class="feature-content">
+          <div class="feature-badge">
+            <i class="fa-solid fa-utensils"></i>
+            <span>VIELFÄLTIGE KULINARIK</span>
+          </div>
+          <h2 class="feature-title">Không Gian Gần Gũi & Thực Đơn Phong Phú</h2>
+          <p class="feature-desc">
+            Lấy cảm hứng từ những khu vườn Việt Nam tinh tế, thực đơn đa dạng với Phở chay thơm lừng, Gỏi cuốn tươi mát, Cà ri đỏ, Lẩu nấm & Lẩu Thái chua cay. Kết hợp thảo mộc tươi (húng quế, bạc hà, rau mùi) cùng Bio-Tofu & Seitan.
+          </p>
+          <div class="dish-gallery-grid">
+            <div class="dish-gallery-item">
+              <img src="images/article_pho.jpg" alt="Phở Chay">
+            </div>
+            <div class="dish-gallery-item">
+              <img src="images/article_goi_cuon_vegan.jpg" alt="Gỏi Cuốn">
+            </div>
+            <div class="dish-gallery-item">
+              <img src="images/article_currys.jpg" alt="Red Curry">
+            </div>
+          </div>
+        </div>
+        <div class="feature-img-wrap">
+          <img src="images/article_sommerrollen.jpg" alt="Vegan Garden Vietnamesische Gerichte">
+        </div>
+      </div>
+
+      <!-- FEATURE ROW 3: GASTFREUNDSCHAFT & HOURS -->
+      <div class="feature-row">
+        <div class="feature-img-wrap">
+          <img src="images/article_gruppen.jpg" alt="Vegan Garden Berlin Gastfreundschaft">
+        </div>
+        <div class="feature-content">
+          <div class="feature-badge">
+            <i class="fa-solid fa-star"></i>
+            <span>BEWERTUNGEN & GASTRONOMIE</span>
+          </div>
+          <h2 class="feature-title">Đánh Giá Cao & Phục Vụ Thân Thiện</h2>
+          <p class="feature-desc">
+            Nhà hàng được đánh giá yêu thích hàng đầu trên HappyCow và Quandoo nhờ món Phở chay & Curry đặc sắc cùng phong cách phục vụ nồng hậu, chu đáo. Mở cửa từ Thứ 3 – Chủ Nhật (12:00 – 22:00), không gian rộng rãi lý tưởng cho các nhóm bạn & gia đình.
+          </p>
+          <div class="feature-highlights">
+            <div class="highlight-pill"><i class="fa-solid fa-heart" style="color: #e74c3c;"></i> HappyCow Top Rated</div>
+            <div class="highlight-pill"><i class="fa-solid fa-award" style="color: var(--accent-gold);"></i> Quandoo 4.9 ★</div>
+            <div class="highlight-pill"><i class="fa-solid fa-clock" style="color: var(--primary-green-dark);"></i> Di - So 12:00 - 22:00</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO SHOWCASE CONTAINER -->
+      <div class="about-video-wrap">
+        <video class="about-video" controls preload="metadata" poster="images/garden_preview.jpg">
+          <source src="videos/about_video.mp4" type="video/mp4">
+          Ihr Browser unterstützt leider kein HTML5 Video.
+        </video>
+      </div>
+
+      <!-- STATS BAR -->
+      <div class="about-stats-bar">
+        <div class="stat-item">
+          <h3>100 %</h3>
+          <p>Pflanzlich & Frisch</p>
+        </div>
+        <div class="stat-item">
+          <h3>Di – So</h3>
+          <p>12:00 – 22:00 Uhr</p>
+        </div>
+        <div class="stat-item">
+          <h3>100+</h3>
+          <p>Garten Sitzplätze</p>
+        </div>
+        <div class="stat-item">
+          <h3>★ 4.9</h3>
+          <p>HappyCow & Quandoo</p>
+        </div>
+      </div>
+
+      <!-- CTA BOX -->
+      <div style="background: linear-gradient(135deg, #29382b 0%, #1c241d 100%); border-radius: 20px; padding: 48px 32px; text-align: center; color: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.12);">
+        <h2 class="serif-font" style="font-size: 2.2rem; color: #ffffff; margin-bottom: 12px;">Besuchen Sie uns im Vegan Garden Berlin</h2>
+        <p style="font-size: 1.05rem; color: #d1d5d1; max-width: 600px; margin: 0 auto 28px; line-height: 1.6;">
+          Erleben Sie unvergessliche kulinarische Momente in unserer grünen Oase in Berlin-Friedrichshain.
+        </p>
+        <button class="btn btn-primary js-open-reserve" style="padding: 14px 36px; font-size: 1rem;">
+          <i class="fa-regular fa-calendar-check" style="margin-right: 8px;"></i>
+          TISCH JETZT RESERVIEREN
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 38px; width: auto; max-width: 175px; object-fit: contain; margin-bottom: 16px;">
+          <p>100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangardenberlin" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vegan_garden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">KONTAKT</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot" style="margin-top: 4px;"></i>
+            <span>Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+              <a href="tel:03021237260" style="color: inherit; text-decoration: none;">030 2123 7260</a> / 
+              <a href="tel:01624649999" style="color: inherit; text-decoration: none;">0162 464 9999</a>
+            </span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@vegan-garden.berlin" style="color: inherit; text-decoration: none;">info@vegan-garden.berlin</a>
+          </div>
+        </div>
+
+        <div class="footer-map">
+          <h3 class="footer-col-title">FINDEN SIE UNS</h3>
+          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
+        <div class="footer-links">
+          <a href="#">IMPRESSUM</a>
+          <a href="#">DATENSCHUTZ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING RESERVATION FAB BUTTON -->
+  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch jetzt reservieren" title="Tisch jetzt reservieren">
+    <div class="floating-reserve-pulse"></div>
+    <i class="fa-regular fa-calendar-check"></i>
+  </button>
+
+  <!-- Hidden Google Translate Element -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'de',
+        includedLanguages: 'de,en,vi',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- MODAL: TABLE RESERVATION -->
+  <div class="modal-overlay" id="reservationModal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h2 class="serif-font" style="color: var(--primary-green-dark); margin-bottom: 8px;">Tisch reservieren</h2>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">Wir freuen uns darauf, Sie im Vegan Garden Berlin begrüßen zu dürfen.</p>
+      
+      <form id="reserveForm">
+        <div class="form-group">
+          <label class="form-label">Vollständiger Name</label>
+          <input type="text" id="resName" class="form-input" placeholder="z.B. Anna Schmidt" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Datum</label>
+            <input type="date" id="resDate" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Uhrzeit</label>
+            <input type="time" id="resTime" class="form-input" value="18:30" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Anzahl Personen</label>
+          <select id="resGuests" class="form-select" required>
+            <option value="1">1 Person</option>
+            <option value="2" selected>2 Personen</option>
+            <option value="3">3 Personen</option>
+            <option value="4">4 Personen</option>
+            <option value="5">5+ Personen (Gruppe)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">E-Mail & Telefonnummer</label>
+          <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Anmerkungen / Wünsche</label>
+          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Besondere Wünsche, Allergien oder Anmerkungen..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

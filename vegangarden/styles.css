@@ -1857,3 +1857,27 @@ img[src=""], img:not([src]) {
   text-justify: inter-word !important;
 }
 
+/* FEATURE HIGHLIGHT PILLS - COMPACT SINGLE ROW */
+.feature-highlights {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px 8px !important;
+  margin-top: 16px !important;
+  align-items: center !important;
+}
+
+.highlight-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #f4f6f4 !important;
+  color: var(--primary-green-dark) !important;
+  padding: 5px 11px !important;
+  border-radius: 20px !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(59, 78, 60, 0.12) !important;
+  white-space: nowrap !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+

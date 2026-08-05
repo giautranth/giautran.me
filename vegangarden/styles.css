@@ -40,6 +40,10 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: #1c241d !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, .serif-font {
@@ -1764,23 +1768,29 @@ img {
   }
 }
 
-/* HIDE GOOGLE TRANSLATE UI FRAMES & TOOLTIPS */
+/* HIDE GOOGLE TRANSLATE UI FRAMES & TOOLTIPS & PREVENT BOTTOM WHITE STRIP */
 .goog-te-banner-frame,
 iframe.goog-te-banner-frame,
 .goog-te-balloon-frame,
 body > iframe,
-iframe.skiptranslate {
+iframe.skiptranslate,
+#goog-gt-tt,
+.goog-te-spinner-pos {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
   height: 0 !important;
   width: 0 !important;
   pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
 }
 
 body {
   top: 0px !important;
   position: static !important;
+  background-color: #1c241d !important;
 }
 
 .goog-tooltip,

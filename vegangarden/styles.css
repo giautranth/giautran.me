@@ -711,6 +711,8 @@ img {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: justify !important;
+  text-justify: inter-word !important;
 }
 
 .food-price {
@@ -1895,6 +1897,14 @@ body.about-page {
 .news-card h3,
 .news-card h3 a {
   font-weight: 500 !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+
+/* MENU DISH CARD DESCRIPTION: JUSTIFIED TEXT ALIGNMENT */
+.food-desc,
+.food-info p,
+.food-card p {
   text-align: justify !important;
   text-justify: inter-word !important;
 }

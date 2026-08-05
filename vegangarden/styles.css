@@ -1847,6 +1847,20 @@ img[src=""], img:not([src]) {
   text-justify: inter-word !important;
 }
 
+/* ABOUT PAGE BRIGHT WHITE BACKGROUND */
+body.about-page {
+  background-color: #ffffff !important;
+}
+
+.about-page .about-hero {
+  background: #f9f8f4 !important;
+  color: var(--primary-green-dark) !important;
+}
+
+.about-page .about-section {
+  background: #ffffff !important;
+}
+
 /* FEATURE HIGHLIGHT PILLS - COMPACT SINGLE ROW */
 .feature-highlights {
   display: flex !important;

@@ -912,12 +912,25 @@ img {
 
 /* FOOTER */
 .footer {
+  position: relative !important;
   background-color: #1c241d !important;
   color: #d1d5d1;
   padding-top: 48px;
   padding-bottom: 28px;
   font-size: 0.9rem;
   margin-top: auto !important;
+}
+
+.footer::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -500px !important;
+  right: -500px !important;
+  top: 100% !important;
+  height: 3000px !important;
+  background-color: #1c241d !important;
+  z-index: 10 !important;
+  pointer-events: none !important;
 }
 
 .footer-grid {

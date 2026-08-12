@@ -621,7 +621,6 @@
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
         <li class="nav__item"><a href="#dich-vu" class="nav__link">Dịch Vụ</a></li>
-        <li class="nav__item"><a href="#vi-sao-chon-cih" class="nav__link">Vì Sao Chọn CIH</a></li>
         <li class="nav__item"><a href="#ca-benh-thanh-cong" class="nav__link">Ca Bệnh Điều Trị Thành Công</a></li>
         <li class="nav__item"><a href="#chia-se-khach-hang" class="nav__link">Chia Sẻ Khách Hàng</a></li>
         <li class="nav__item"><a href="#dang-ky-tuan" class="nav__link">Liên Hệ</a></li>
@@ -681,35 +680,26 @@
         <div class="lead-form-card">
           <div class="lead-form-header">
             <div class="lead-form-title">ĐĂNG KÝ NHẬN TƯ VẤN MIỄN PHÍ</div>
-            <div class="lead-form-subtitle">Bác sĩ chuyên khoa sẽ liên hệ hỗ trợ bạn trong 15 phút</div>
           </div>
 
           <form id="tmhLeadForm" onsubmit="handleLeadFormSubmit(event)">
             <div class="form-group">
-              <label for="fullName">Họ và tên *</label>
-              <input type="text" id="fullName" class="form-input" placeholder="Ví dụ: Nguyễn Văn A" required />
+              <label for="fullName">Họ tên *</label>
+              <input type="text" id="fullName" class="form-input" required />
             </div>
 
             <div class="form-group">
               <label for="phoneNumber">Số điện thoại *</label>
-              <input type="tel" id="phoneNumber" class="form-input" placeholder="Ví dụ: 0901234567" required pattern="[0-9]{10,11}" />
+              <input type="tel" id="phoneNumber" class="form-input" required pattern="[0-9]{10,11}" />
             </div>
 
             <div class="form-group">
-              <label for="serviceSelect">Dịch vụ cần thăm khám *</label>
-              <select id="serviceSelect" class="form-select" required>
-                <option value="">-- Chọn tình trạng / dịch vụ --</option>
-                <option value="Viêm mũi, viêm xoang, khàn tiếng">Viêm mũi, viêm xoang, nghẹt mũi, khàn tiếng</option>
-                <option value="Rối loạn giọng nói">Rối loạn giọng nói / Khan tiếng dai dẳng</option>
-                <option value="Rối loạn thính lực - Điếc đột ngột">Rối loạn thính lực / Ú tai / Điếc đột ngột</option>
-                <option value="Tầm soát Ung thư Tai Mũi Họng & Đầu cổ">Tầm soát Ung thư Tai Mũi Họng & Phẫu thuật Đầu cổ</option>
-                <option value="Tham khảo ý kiến chuyên gia phẫu thuật">Tham khảo ý kiến chuyên gia phẫu thuật 1:1</option>
-                <option value="Khám tổng quát Tai Mũi Họng">Khám tổng quát Tai Mũi Họng</option>
-              </select>
+              <label for="serviceInput">Dịch vụ cần thăm khám *</label>
+              <input type="text" id="serviceInput" class="form-input" required />
             </div>
 
             <button type="submit" class="btn-submit-lead">
-              <span>📩 GỬI THÔNG TIN ĐẶT LỊCH</span>
+              <span>ĐĂNG KÝ NGAY</span>
             </button>
           </form>
           <div id="formSuccessMessage" style="display:none; text-align:center; color:#16a34a; font-weight:800; margin-top:1rem; padding:10px; background:#f0fdf4; border-radius:10px;">

@@ -350,18 +350,24 @@
     .why-card {
       background: #ffffff;
       border-radius: 20px;
-      padding: 1.75rem 2rem;
+      padding: 1.75rem;
       border: 1.5px solid #fde68a;
       box-shadow: 0 8px 20px rgba(245, 158, 11, 0.08);
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       gap: 1.25rem;
-      align-items: flex-start;
       transition: all 0.3s ease;
     }
     .why-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 15px 30px rgba(245, 158, 11, 0.18);
       border-color: #f59e0b;
+    }
+    .why-card-header {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
     }
     .why-icon-box {
       width: 50px;
@@ -387,6 +393,41 @@
       font-size: 0.92rem;
       color: #475569;
       margin: 0;
+    }
+    .why-card-img-single {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+    }
+    .why-card-img-single img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .why-card:hover .why-card-img-single img {
+      transform: scale(1.05);
+    }
+    .why-card-img-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      width: 100%;
+      height: 180px;
+    }
+    .why-card-img-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #f1f5f9;
+      transition: transform 0.3s ease;
+    }
+    .why-card:hover .why-card-img-grid img {
+      transform: scale(1.03);
     }
 
     /* SECTION 4: CASE STUDIES */
@@ -881,51 +922,88 @@
 
     <div class="why-grid">
 
+      <!-- Card 1 -->
       <div class="why-card">
-        <div class="why-icon-box">🏆</div>
-        <div class="why-content">
-          <h4>Chuẩn An Toàn Y Tế AACI (Hoa Kỳ)</h4>
-          <p>Bệnh viện đa khoa đầu tiên tại Việt Nam đạt chuẩn kiểm định độc lập uy tín Hoa Kỳ AACI V6.0, đảm bảo an toàn tuyệt đối cho người bệnh.</p>
+        <div class="why-card-header">
+          <div class="why-icon-box">🏆</div>
+          <div class="why-content">
+            <h4>Chuẩn An Toàn Y Tế AACI (Hoa Kỳ)</h4>
+            <p>Bệnh viện đa khoa đầu tiên tại Việt Nam đạt chuẩn kiểm định độc lập uy tín Hoa Kỳ AACI V6.0, đảm bảo an toàn tuyệt đối cho người bệnh.</p>
+          </div>
+        </div>
+        <div class="why-card-img-single">
+          <img src="../images/tmh/2.png" alt="Chuẩn An Toàn Y Tế AACI" />
         </div>
       </div>
 
+      <!-- Card 2 -->
       <div class="why-card">
-        <div class="why-icon-box">👨‍⚕️</div>
-        <div class="why-content">
-          <h4>Đội Ngũ Bác Sĩ Chuyên Khoa Giàu Kinh Nghiệm</h4>
-          <p>Quy tụ các chuyên gia, bác sĩ hàng đầu trong lĩnh vực Tai Mũi Họng & Phẫu thuật Đầu cổ, làm việc tận tâm và chuyên nghiệp.</p>
+        <div class="why-card-header">
+          <div class="why-icon-box">👨‍⚕️</div>
+          <div class="why-content">
+            <h4>Đội Ngũ Bác Sĩ Chuyên Khoa Giàu Kinh Nghiệm</h4>
+            <p>Quy tụ các chuyên gia, bác sĩ hàng đầu trong lĩnh vực Tai Mũi Họng & Phẫu thuật Đầu cổ, làm việc tận tâm và chuyên nghiệp.</p>
+          </div>
+        </div>
+        <div class="why-card-img-single">
+          <img src="../images/tmh/7.png" alt="Đội ngũ bác sĩ chuyên khoa" />
         </div>
       </div>
 
+      <!-- Card 3 -->
       <div class="why-card">
-        <div class="why-icon-box">🩺</div>
-        <div class="why-content">
-          <h4>Thăm Khám 1:1 Riêng Tư & Kỹ Lưỡng</h4>
-          <p>Mỗi bệnh nhân được thăm khám chu đáo trong không gian riêng tư, giải thích rõ ràng từng chỉ số và hướng điều trị tối ưu.</p>
+        <div class="why-card-header">
+          <div class="why-icon-box">🩺</div>
+          <div class="why-content">
+            <h4>Thăm Khám 1:1 Riêng Tư & Kỹ Lưỡng</h4>
+            <p>Mỗi bệnh nhân được thăm khám chu đáo trong không gian riêng tư, giải thích rõ ràng từng chỉ số và hướng điều trị tối ưu.</p>
+          </div>
+        </div>
+        <div class="why-card-img-single">
+          <img src="../images/tmh/4.png" alt="Thăm khám 1:1 riêng tư" />
         </div>
       </div>
 
+      <!-- Card 4 -->
       <div class="why-card">
-        <div class="why-icon-box">🤖</div>
-        <div class="why-content">
-          <h4>Ứng Dụng Trí Tuệ Nhân Tạo (AI) Phân Tích</h4>
-          <p>Áp dụng công nghệ AI tiên tiến hỗ trợ chẩn đoán chính xác và xây dựng phác đồ điều trị kịp thời cho các ca bệnh phức tạp.</p>
+        <div class="why-card-header">
+          <div class="why-icon-box">🤖</div>
+          <div class="why-content">
+            <h4>Ứng Dụng Trí Tuệ Nhân Tạo (AI) Phân Tích</h4>
+            <p>Áp dụng công nghệ AI tiên tiến hỗ trợ chẩn đoán chính xác và xây dựng phác đồ điều trị kịp thời cho các ca bệnh phức tạp.</p>
+          </div>
+        </div>
+        <div class="why-card-img-single">
+          <img src="../images/tmh/15.png" alt="Ứng dụng AI phân tích" />
         </div>
       </div>
 
+      <!-- Card 5 -->
       <div class="why-card">
-        <div class="why-icon-box">🏥</div>
-        <div class="why-content">
-          <h4>Cơ Sở Vật Chất & Máy Nội Soi Hiện Đại</h4>
-          <p>Hệ thống phòng khám, phòng mổ và máy soi ống mềm thế hệ mới không đau, không lây nhiễm chéo.</p>
+        <div class="why-card-header">
+          <div class="why-icon-box">🏥</div>
+          <div class="why-content">
+            <h4>Cơ Sở Vật Chất & Máy Nội Soi Hiện Đại</h4>
+            <p>Hệ thống phòng khám, phòng mổ và máy soi ống mềm thế hệ mới không đau, không lây nhiễm chéo.</p>
+          </div>
+        </div>
+        <div class="why-card-img-grid">
+          <img src="../images/tmh/10.png" alt="Sảnh bệnh viện" />
+          <img src="../images/tmh/11.png" alt="Phòng khám nội soi" />
         </div>
       </div>
 
+      <!-- Card 6 -->
       <div class="why-card">
-        <div class="why-icon-box">⚡</div>
-        <div class="why-content">
-          <h4>Năng Lực Phẫu Thuật Đầu Cổ Phức Tạp</h4>
-          <p>Đủ năng lực thực hiện các kỹ thuật phẫu thuật nội soi xoang, mổ vi phẫu thanh quản và can thiệp khối u vùng đầu cổ.</p>
+        <div class="why-card-header">
+          <div class="why-icon-box">⚡</div>
+          <div class="why-content">
+            <h4>Năng Lực Phẫu Thuật Đầu Cổ Phức Tạp</h4>
+            <p>Đủ năng lực thực hiện các kỹ thuật phẫu thuật nội soi xoang, mổ vi phẫu thanh quản và can thiệp khối u vùng đầu cổ.</p>
+          </div>
+        </div>
+        <div class="why-card-img-single">
+          <img src="../images/tmh/16.png" alt="Năng lực phẫu thuật đầu cổ" />
         </div>
       </div>
 

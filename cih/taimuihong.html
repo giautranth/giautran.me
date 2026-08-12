@@ -461,18 +461,59 @@
       background: #f8fafc;
       padding: 4.5rem 0;
       overflow: hidden;
+      position: relative;
     }
     .review-slider-wrapper {
       width: 100%;
       overflow: hidden;
       position: relative;
-      padding: 1rem 0;
+      padding: 1.25rem 0;
+    }
+    .slider-arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1.5px solid #cbd5e1;
+      background: rgba(255, 255, 255, 0.95);
+      color: #007DA5;
+      font-size: 1.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(4px);
+      transition: all 0.25s ease;
+      line-height: 1;
+    }
+    .slider-arrow-btn:hover {
+      background: #007DA5;
+      color: #ffffff;
+      border-color: #007DA5;
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 12px 28px rgba(0, 125, 165, 0.4);
+    }
+    .review-arrow-prev {
+      left: 20px;
+    }
+    .review-arrow-next {
+      right: 20px;
+    }
+    @media (max-width: 768px) {
+      .review-arrow-prev { left: 8px; width: 38px; height: 38px; font-size: 1.4rem; }
+      .review-arrow-next { right: 8px; width: 38px; height: 38px; font-size: 1.4rem; }
     }
     .review-slider-track {
       display: flex;
       gap: 1.75rem;
       width: max-content;
-      animation: marqueeScroll 32s linear infinite;
+      animation: marqueeScroll 35s linear infinite;
+      transition: transform 0.5s ease-out;
     }
     .review-slider-wrapper:hover .review-slider-track {
       animation-play-state: paused;
@@ -975,8 +1016,11 @@
     </div>
 
   <!-- Horizontal Infinite Marquee Slider -->
-  <div class="review-slider-wrapper">
-    <div class="review-slider-track">
+  <div class="review-slider-wrapper" id="reviewSliderWrapper">
+    <button class="slider-arrow-btn review-arrow-prev" id="review-prev" aria-label="Trước">‹</button>
+    <button class="slider-arrow-btn review-arrow-next" id="review-next" aria-label="Tiếp">›</button>
+
+    <div class="review-slider-track" id="review-track">
 
       <!-- Review 1 -->
       <div class="review-card">
@@ -1268,6 +1312,34 @@
         closeImageLightbox();
       }
     });
+
+    // Review Slider Side Arrows Logic
+    const reviewTrack = document.getElementById('review-track');
+    const reviewPrevBtn = document.getElementById('review-prev');
+    const reviewNextBtn = document.getElementById('review-next');
+    let currentTranslate = 0;
+    const cardStep = 448; // card width + gap
+
+    if (reviewTrack && reviewPrevBtn && reviewNextBtn) {
+      reviewNextBtn.addEventListener('click', () => {
+        reviewTrack.style.animation = 'none';
+        currentTranslate -= cardStep;
+        const maxScroll = -(reviewTrack.scrollWidth / 2);
+        if (currentTranslate < maxScroll) {
+          currentTranslate = 0;
+        }
+        reviewTrack.style.transform = `translateX(${currentTranslate}px)`;
+      });
+
+      reviewPrevBtn.addEventListener('click', () => {
+        reviewTrack.style.animation = 'none';
+        currentTranslate += cardStep;
+        if (currentTranslate > 0) {
+          currentTranslate = -(reviewTrack.scrollWidth / 2) + cardStep;
+        }
+        reviewTrack.style.transform = `translateX(${currentTranslate}px)`;
+      });
+    }
   });
 </script>
 </body>

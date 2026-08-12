@@ -456,9 +456,9 @@
       margin-bottom: 0.5rem;
     }
 
-    /* SECTION 5: REVIEWS / TESTIMONIALS SLIDER */
+    /* SECTION 5: REVIEWS / TESTIMONIALS SLIDER - REDESIGNED FROM SCREENSHOT */
     .testimonial-section {
-      background: #f8fafc;
+      background: #faf8f5;
       padding: 4.5rem 0;
       overflow: hidden;
       position: relative;
@@ -477,16 +477,16 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      border: 1.5px solid #cbd5e1;
-      background: rgba(255, 255, 255, 0.95);
-      color: #007DA5;
+      border: 1.5px solid #e2e8f0;
+      background: rgba(255, 255, 255, 0.96);
+      color: #0f172a;
       font-size: 1.8rem;
       font-weight: 700;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
       backdrop-filter: blur(4px);
       transition: all 0.25s ease;
       line-height: 1;
@@ -496,7 +496,7 @@
       color: #ffffff;
       border-color: #007DA5;
       transform: translateY(-50%) scale(1.08);
-      box-shadow: 0 12px 28px rgba(0, 125, 165, 0.4);
+      box-shadow: 0 12px 28px rgba(0, 125, 165, 0.35);
     }
     .review-arrow-prev {
       left: 20px;
@@ -527,43 +527,77 @@
       }
     }
     .review-card {
-      width: 420px;
-      min-width: 320px;
+      width: 400px;
+      min-width: 310px;
       flex-shrink: 0;
       background: #ffffff;
       border-radius: 20px;
-      padding: 2rem;
-      border: 1.5px solid #e2e8f0;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+      padding: 2.25rem 1.75rem;
+      border: 1px solid #f1ece4;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
+      text-align: center;
       transition: all 0.3s ease;
     }
     .review-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 35px rgba(0, 125, 165, 0.12);
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
       border-color: #007DA5;
     }
-    .review-stars {
-      color: #f59e0b;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
-    }
-    .review-text {
-      font-size: 0.96rem;
-      color: #334155;
-      line-height: 1.7;
-      font-style: italic;
-      margin-bottom: 1.25rem;
-    }
-    .review-author {
+    .review-author-top {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
-      border-top: 1px solid #f1f5f9;
-      padding-top: 1rem;
+      margin-bottom: 1.2rem;
+      width: 100%;
+    }
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+    .author-avatar--green { background: #15803d; }
+    .author-avatar--blue { background: #1d4ed8; }
+    .author-avatar--teal { background: #0f766e; }
+    .author-avatar--amber { background: #d97706; }
+
+    .author-info-top h5 {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+      line-height: 1.3;
+      text-align: left;
+    }
+    .author-info-top .author-tag {
+      font-size: 0.78rem;
+      color: #64748b;
+      display: block;
+      text-align: left;
+    }
+    .review-stars-center {
+      color: #f59e0b;
+      font-size: 1.2rem;
+      letter-spacing: 4px;
+      margin-bottom: 1.1rem;
+      text-align: center;
+    }
+    .review-text-center {
+      font-size: 0.92rem;
+      color: #334155;
+      line-height: 1.65;
+      margin: 0;
+      text-align: center;
     }
     .author-avatar {
       width: 46px;
@@ -1008,139 +1042,123 @@
 
       <!-- Review 1 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Chúng tôi xin gửi lời cảm ơn chân thành đến toàn thể đội ngũ Bệnh viện Quốc tế City. Các bác sĩ, điều dưỡng đều rất chuyên nghiệp; dịch vụ lưu viện chu đáo, tiện nghi. Đặc biệt phiên dịch viên luôn hỗ trợ nhanh chóng và tận tâm. Chúng tôi thật sự trân trọng và tin tưởng giới thiệu người thân đến thăm khám."
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">SL</div>
-          <div class="author-info">
-            <h5>Khách hàng Sreng Ly (36 tuổi)</h5>
-            <span>Chia sẻ sau điều trị ung thư lưỡi</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--green">SL</div>
+          <div class="author-info-top">
+            <h5>Khách hàng Sreng Ly (36t)</h5>
+            <span class="author-tag">Chia sẻ sau điều trị ung thư lưỡi</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Chúng tôi xin gửi lời cảm ơn chân thành đến toàn thể đội ngũ Bệnh viện Quốc tế City. Các bác sĩ, điều dưỡng đều rất chuyên nghiệp; dịch vụ lưu viện chu đáo, tiện nghi. Đặc biệt phiên dịch viên luôn hỗ trợ nhanh chóng và tận tâm."
+        </p>
       </div>
 
       <!-- Review 2 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Tôi bị ù tai, nghe kém đột ngột nên đến Bệnh viện Quốc tế City khám. Bác sĩ tư vấn rất kỹ, giải thích rõ tình trạng và hướng điều trị. Sau quá trình điều trị tích cực, khả năng nghe của tôi đã cải thiện đáng kể. Rất cám ơn đội ngũ bác sĩ!"
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">KN</div>
-          <div class="author-info">
-            <h5>Khách hàng K.N (45 tuổi)</h5>
-            <span>Chia sẻ sau điều trị điếc đột ngột</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--blue">KN</div>
+          <div class="author-info-top">
+            <h5>Khách hàng K.N (45t)</h5>
+            <span class="author-tag">Chia sẻ sau điều trị điếc đột ngột</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Tôi bị ù tai, nghe kém đột ngột nên đến Bệnh viện Quốc tế City khám. Bác sĩ tư vấn rất kỹ, giải thích rõ tình trạng và hướng điều trị. Sau quá trình điều trị tích cực, khả năng nghe của tôi đã cải thiện đáng kể!"
+        </p>
       </div>
 
       <!-- Review 3 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Gia đình rất lo lắng khi phát hiện bệnh ung thư lưỡi vì lưỡi sưng rát liên tục dai dẳng. May mắn được các bác sĩ tại Bệnh viện Quốc tế City thăm khám tận tình, tư vấn rõ từng bước điều trị. Điều dưỡng chu đáo giúp gia đình tôi an tâm vượt qua giai đoạn này."
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">VA</div>
-          <div class="author-info">
-            <h5>Khách hàng V.A (40 tuổi)</h5>
-            <span>Chia sẻ sau phẫu thuật ung thư lưỡi</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--teal">VA</div>
+          <div class="author-info-top">
+            <h5>Khách hàng V.A (40t)</h5>
+            <span class="author-tag">Chia sẻ sau phẫu thuật ung thư lưỡi</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Gia đình rất lo lắng khi phát hiện bệnh ung thư lưỡi vì lưỡi sưng rát liên tục. May mắn được các bác sĩ tại CIH thăm khám tận tình, tư vấn rõ từng bước điều trị. Điều dưỡng chu đáo giúp gia đình tôi hoàn toàn an tâm."
+        </p>
       </div>
 
       <!-- Review 4 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Mình bị viêm xoang nhiều năm nay, thường xuyên nghẹt mũi và nặng đầu. Quyết định đến CIH mổ xoang, qua ngày sau mình có thể sinh hoạt bình thường, thoải mái, không thấy đau. Rất hài lòng, quyết định đúng đắn khi chọn CIH."
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">MK</div>
-          <div class="author-info">
-            <h5>Khách hàng M.K (30 tuổi)</h5>
-            <span>Chia sẻ sau phẫu thuật mổ xoang</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--amber">MK</div>
+          <div class="author-info-top">
+            <h5>Khách hàng M.K (30t)</h5>
+            <span class="author-tag">Chia sẻ sau phẫu thuật mổ xoang</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Mình bị viêm xoang nhiều năm nay, thường xuyên nghẹt mũi và nặng đầu. Quyết định đến CIH mổ xoang, qua ngày sau mình có thể sinh hoạt bình thường, thoải mái, không thấy đau. Rất hài lòng khi chọn CIH."
+        </p>
       </div>
 
-      <!-- DUPLICATED SET FOR SEAMLESS MARQUEE -->
+      <!-- DUPLICATED SET FOR SEAMLESS MARQUEE LOOP -->
       <!-- Review 1 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Chúng tôi xin gửi lời cảm ơn chân thành đến toàn thể đội ngũ Bệnh viện Quốc tế City. Các bác sĩ, điều dưỡng đều rất chuyên nghiệp; dịch vụ lưu viện chu đáo, tiện nghi. Đặc biệt phiên dịch viên luôn hỗ trợ nhanh chóng và tận tâm. Chúng tôi thật sự trân trọng và tin tưởng giới thiệu người thân đến thăm khám."
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">SL</div>
-          <div class="author-info">
-            <h5>Khách hàng Sreng Ly (36 tuổi)</h5>
-            <span>Chia sẻ sau điều trị ung thư lưỡi</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--green">SL</div>
+          <div class="author-info-top">
+            <h5>Khách hàng Sreng Ly (36t)</h5>
+            <span class="author-tag">Chia sẻ sau điều trị ung thư lưỡi</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Chúng tôi xin gửi lời cảm ơn chân thành đến toàn thể đội ngũ Bệnh viện Quốc tế City. Các bác sĩ, điều dưỡng đều rất chuyên nghiệp; dịch vụ lưu viện chu đáo, tiện nghi. Đặc biệt phiên dịch viên luôn hỗ trợ nhanh chóng và tận tâm."
+        </p>
       </div>
 
       <!-- Review 2 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Tôi bị ù tai, nghe kém đột ngột nên đến Bệnh viện Quốc tế City khám. Bác sĩ tư vấn rất kỹ, giải thích rõ tình trạng và hướng điều trị. Sau quá trình điều trị tích cực, khả năng nghe của tôi đã cải thiện đáng kể. Rất cám ơn đội ngũ bác sĩ!"
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">KN</div>
-          <div class="author-info">
-            <h5>Khách hàng K.N (45 tuổi)</h5>
-            <span>Chia sẻ sau điều trị điếc đột ngột</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--blue">KN</div>
+          <div class="author-info-top">
+            <h5>Khách hàng K.N (45t)</h5>
+            <span class="author-tag">Chia sẻ sau điều trị điếc đột ngột</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Tôi bị ù tai, nghe kém đột ngột nên đến Bệnh viện Quốc tế City khám. Bác sĩ tư vấn rất kỹ, giải thích rõ tình trạng và hướng điều trị. Sau quá trình điều trị tích cực, khả năng nghe của tôi đã cải thiện đáng kể!"
+        </p>
       </div>
 
       <!-- Review 3 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Gia đình rất lo lắng khi phát hiện bệnh ung thư lưỡi vì lưỡi sưng rát liên tục dai dẳng. May mắn được các bác sĩ tại Bệnh viện Quốc tế City thăm khám tận tình, tư vấn rõ từng bước điều trị. Điều dưỡng chu đáo giúp gia đình tôi an tâm vượt qua giai đoạn này."
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">VA</div>
-          <div class="author-info">
-            <h5>Khách hàng V.A (40 tuổi)</h5>
-            <span>Chia sẻ sau phẫu thuật ung thư lưỡi</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--teal">VA</div>
+          <div class="author-info-top">
+            <h5>Khách hàng V.A (40t)</h5>
+            <span class="author-tag">Chia sẻ sau phẫu thuật ung thư lưỡi</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Gia đình rất lo lắng khi phát hiện bệnh ung thư lưỡi vì lưỡi sưng rát liên tục. May mắn được các bác sĩ tại CIH thăm khám tận tình, tư vấn rõ từng bước điều trị. Điều dưỡng chu đáo giúp gia đình tôi hoàn toàn an tâm."
+        </p>
       </div>
 
       <!-- Review 4 -->
       <div class="review-card">
-        <div>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">
-            "Mình bị viêm xoang nhiều năm nay, thường xuyên nghẹt mũi và nặng đầu. Quyết định đến CIH mổ xoang, qua ngày sau mình có thể sinh hoạt bình thường, thoải mái, không thấy đau. Rất hài lòng, quyết định đúng đắn khi chọn CIH."
-          </p>
-        </div>
-        <div class="review-author">
-          <div class="author-avatar">MK</div>
-          <div class="author-info">
-            <h5>Khách hàng M.K (30 tuổi)</h5>
-            <span>Chia sẻ sau phẫu thuật mổ xoang</span>
+        <div class="review-author-top">
+          <div class="author-avatar author-avatar--amber">MK</div>
+          <div class="author-info-top">
+            <h5>Khách hàng M.K (30t)</h5>
+            <span class="author-tag">Chia sẻ sau phẫu thuật mổ xoang</span>
           </div>
         </div>
+        <div class="review-stars-center">★★★★★</div>
+        <p class="review-text-center">
+          "Mình bị viêm xoang nhiều năm nay, thường xuyên nghẹt mũi và nặng đầu. Quyết định đến CIH mổ xoang, qua ngày sau mình có thể sinh hoạt bình thường, thoải mái, không thấy đau. Rất hài lòng khi chọn CIH."
+        </p>
       </div>
 
     </div>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên Hệ - Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam</title>
+  <meta name="description" content="Liên hệ văn phòng thường trực Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam. Hotline, địa chỉ, email và biểu mẫu liên hệ trực tuyến." />
+  
+  <link rel="icon" type="image/png" href="../photo/logo/chihoi.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <style>
+    /* CIH Contact Page Layout Standard */
+    .contact-layout-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+    
+    .contact-left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .contact-banner-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.9 / 1;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 4px 16px rgba(44, 54, 145, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+    
+    .contact-card-white {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 1.15rem 1.25rem;
+      box-shadow: 0 2px 10px rgba(44, 54, 145, 0.04);
+      display: flex;
+      gap: 1.15rem;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card-white:hover {
+      border-color: #27AAE1;
+      box-shadow: 0 6px 20px rgba(39, 170, 225, 0.15);
+      transform: translateY(-2px);
+    }
+    
+    .contact-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(39, 170, 225, 0.1);
+      border: 1px solid rgba(39, 170, 225, 0.2);
+      color: #27AAE1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-card-white:hover .contact-icon-box {
+      background: #27AAE1;
+      color: #ffffff;
+      border-color: #27AAE1;
+    }
+    
+    .contact-card-body h3 {
+      font-size: 0.775rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+      color: #64748b;
+      text-transform: uppercase;
+    }
+    
+    .contact-card-body p, 
+    .contact-card-body a {
+      font-size: 0.95rem;
+      font-weight: 500 !important;
+      color: #1e293b !important;
+      line-height: 1.45;
+      text-decoration: none;
+      margin: 0;
+    }
+    
+    .contact-card-body a:hover {
+      color: #e22b27 !important;
+      text-decoration: underline;
+    }
+    
+    .contact-grid-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    
+    /* Right column form */
+    .contact-form-card {
+      background: #ffffff;
+      border: 1px solid #eaedf0;
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(44, 54, 145, 0.06);
+    }
+    
+    .contact-form-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #2C3691;
+      margin-top: 0;
+      margin-bottom: 1.75rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .contact-form-title::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 44px;
+      height: 3px;
+      background: linear-gradient(90deg, #e22b27 0%, #27AAE1 100%);
+      border-radius: 2px;
+    }
+    
+    .form-input-custom {
+      width: 100%;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    
+    .form-input-custom:focus {
+      outline: none;
+      border-color: #27AAE1;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(39, 170, 225, 0.12);
+    }
+    
+    .form-error-msg {
+      color: #e22b27;
+      font-size: 0.8rem;
+      margin-top: 0.35rem;
+      display: none;
+    }
+    
+    .btn-submit-contact {
+      width: 100%;
+      padding: 0.9rem 2rem;
+      background: #2C3691;
+      color: #ffffff;
+      border: none;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 1.05rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(44, 54, 145, 0.25);
+      transition: all 0.25s ease;
+    }
+    
+    .btn-submit-contact:hover {
+      background: #e22b27;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(226, 43, 39, 0.35);
+    }
+    
+    @media (max-width: 900px) {
+      .contact-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .contact-grid-bottom {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .contact-form-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== UNIFIED HEADER (AIH & FV STANDARD) ========== -->
+  <header class="aih-header" role="banner">
+    <div class="aih-header-container">
+      
+      <!-- Brand Logo -->
+      <div class="aih-brand-group">
+        <a href="../" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="../photo/logo/chihoi.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
+        </a>
+      </div>
+
+      <!-- Main Navigation Menu (Black Typography) -->
+      <nav class="aih-nav" aria-label="Menu chính">
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Mở menu">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+        <ul class="aih-menu-list" id="navMenuList">
+          <li class="aih-menu-item">
+            <a href="../" class="aih-menu-link">TRANG CHỦ</a>
+          </li>
+          <li class="aih-menu-item has-dropdown">
+            <a href="../gioi-thieu" class="aih-menu-link">GIỚI THIỆU <span class="arrow-icon">▼</span></a>
+            <ul class="dropdown-menu-list">
+              <li class="dropdown-item"><a href="../gioi-thieu">Về chi hội</a></li>
+              <li class="dropdown-item"><a href="../so-do-to-chuc">Sơ đồ tổ chức</a></li>
+            </ul>
+          </li>
+          <li class="aih-menu-item">
+            <a href="../hoi-vien" class="aih-menu-link">HỘI VIÊN CHI HỘI</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="../dao-tao" class="aih-menu-link">CHƯƠNG TRÌNH ĐÀO TẠO</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="../tin-tuc" class="aih-menu-link">TIN TỨC</a>
+          </li>
+          <li class="aih-menu-item active">
+            <a href="../lien-he" class="aih-menu-link active">LIÊN HỆ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Utilities Tools (Search & Flags Switcher) -->
+      <div class="aih-header-tools">
+        <button class="aih-search-btn" title="Tìm kiếm" onclick="alert('Tính năng tìm kiếm dữ liệu Chi hội y tế');">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+        <div class="aih-flags-group" title="Chuyển đổi ngôn ngữ / Switch language">
+          <button class="flag-btn active" id="langViBtn" title="Tiếng Việt" onclick="switchLang('vi')">
+            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,0.15);">
+              <rect width="22" height="15" fill="#DA251D"/>
+              <polygon points="11,3 12.6,7.8 17.6,7.8 13.5,10.7 15.1,15.5 11,12.5 6.9,15.5 8.5,10.7 4.4,7.8 9.4,7.8" fill="#FFFF00" transform="scale(0.8) translate(2.75, 1.8)"/>
+            </svg>
+          </button>
+          <button class="flag-btn" id="langEnBtn" title="English" onclick="switchLang('en')">
+            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,0.15);">
+              <rect width="22" height="15" fill="#012169"/>
+              <path d="M0,0 L22,15 M22,0 L0,15" stroke="#FFFFFF" stroke-width="2.5"/>
+              <path d="M0,0 L22,15 M22,0 L0,15" stroke="#C8102E" stroke-width="1.2"/>
+              <path d="M11,0 V15 M0,7.5 H22" stroke="#FFFFFF" stroke-width="4.5"/>
+              <path d="M11,0 V15 M0,7.5 H22" stroke="#C8102E" stroke-width="2.5"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT: LIÊN HỆ (LAYOUT CIH STANDARD) ========== -->
+  <main class="site-section" style="padding-top: 30px; padding-bottom: 60px;">
+    <div class="container">
+      
+      <div class="contact-layout-grid">
+        
+        <!-- Cột trái: Hình ảnh flycam & các thẻ thông tin -->
+        <div class="contact-left-col">
+          <!-- 1. Hình ảnh flycam bệnh viện Gia An 115 & Khu Y tế kỹ thuật cao -->
+          <img src="../photo/giaan/flycam.jpg" alt="Văn phòng Chi hội Bệnh viện Tư nhân Phía Nam" class="contact-banner-img" loading="lazy" />
+          
+          <!-- 2. Thẻ Địa chỉ -->
+          <div class="contact-card-white">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-card-body">
+              <h3>Địa chỉ</h3>
+              <p>Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. HCM</p>
+            </div>
+          </div>
+          
+          <!-- 3. Hai thẻ dưới (Điện thoại & Email) -->
+          <div class="contact-grid-bottom">
+            <!-- Thẻ Điện thoại -->
+            <div class="contact-card-white">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path>
+                </svg>
+              </div>
+              <div class="contact-card-body">
+                <h3>Điện thoại</h3>
+                <p style="font-size: 0.85rem; line-height: 1.5; margin: 0; white-space: nowrap;">
+                  Tổng đài: <a href="tel:19008146">1900 8146</a><br />
+                  <span style="white-space: nowrap;">Hotline Thư ký: <a href="tel:02862901155">(028) 6290 1155</a></span>
+                </p>
+              </div>
+            </div>
+            
+            <!-- Thẻ Email -->
+            <div class="contact-card-white">
+              <div class="contact-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-card-body">
+                <h3>Email</h3>
+                <p><a href="mailto:vanphong@chihoiyte.vn">vanphong@chihoiyte.vn</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Cột phải: Form liên hệ chuẩn thiết kế CIH -->
+        <div>
+          <div class="contact-form-card">
+            
+            <h2 class="contact-form-title">Liên hệ</h2>
+
+            <form id="contact-custom-form" novalidate onsubmit="handleContactSubmit(event)">
+              
+              <!-- Row 1: Họ tên & Số điện thoại -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1rem;">
+                <div>
+                  <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Họ tên <span style="color: #e22b27;">*</span></label>
+                  <input type="text" id="contact-name" class="form-input-custom" placeholder="" onfocus="clearFieldError('name')" />
+                  <div id="err-name" class="form-error-msg">Vui lòng nhập họ và tên của bạn.</div>
+                </div>
+                <div>
+                  <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Số điện thoại <span style="color: #e22b27;">*</span></label>
+                  <input type="tel" id="contact-phone" class="form-input-custom" placeholder="" oninput="formatPhoneInput(this)" onfocus="clearFieldError('phone')" />
+                  <div id="err-phone" class="form-error-msg">Vui lòng nhập số điện thoại hợp lệ.</div>
+                </div>
+              </div>
+
+              <!-- Row 2: Email -->
+              <div style="margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Email <span style="color: #e22b27;">*</span></label>
+                <input type="email" id="contact-email" class="form-input-custom" placeholder="" onfocus="clearFieldError('email')" />
+                <div id="err-email" class="form-error-msg">Vui lòng nhập địa chỉ email hợp lệ.</div>
+              </div>
+
+              <!-- Row 3: Nội dung -->
+              <div style="margin-bottom: 1.75rem;">
+                <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Nội dung <span style="color: #e22b27;">*</span></label>
+                <textarea id="contact-message" rows="4" class="form-input-custom" style="resize: vertical;" placeholder="" onfocus="clearFieldError('message')"></textarea>
+                <div id="err-message" class="form-error-msg">Vui lòng nhập nội dung liên hệ.</div>
+              </div>
+
+              <!-- Row 4: Button Gửi -->
+              <button type="submit" class="btn-submit-contact">Gửi</button>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div style="margin-top: 2.5rem; border-radius: 20px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(44, 54, 145, 0.06);">
+        <iframe 
+          title="Bản đồ vị trí Văn phòng Chi hội Bệnh viện Tư nhân" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.954005187063!2d106.60838347570275!3d10.738029959900996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dd57b561c29%3A0xc48c081e604ec226!2zMyDEkC4gMTdBLCBBbiBM4bqhYywgQsOsbmggVMOibiwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" 
+          width="100%" 
+          height="380" 
+          style="border:0;display:block;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">CHI HỘI BỆNH VIỆN TƯ NHÂN TP.HCM VÀ CÁC TỈNH PHÍA NAM</div>
+          <p class="footer-brand-desc">
+            Tổ chức đại diện cho khối cơ sở khám chữa bệnh tư nhân khu vực phía Nam. Cam kết nâng cao chất lượng phục vụ và an toàn sức khỏe cho người bệnh.
+          </p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" color="#27AAE1" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span><strong>Văn phòng:</strong> Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. Hồ Chí Minh</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Về Chi Hội</h4>
+          <ul class="footer-links-list">
+            <li><a href="../gioi-thieu">Về chúng tôi</a></li>
+            <li><a href="../so-do-to-chuc">Sơ đồ tổ chức</a></li>
+            <li><a href="../hoi-vien">Hội viên chi hội</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hoạt Động</h4>
+          <ul class="footer-links-list">
+            <li><a href="../dao-tao">Chương trình đào tạo CME</a></li>
+            <li><a href="../tin-tuc">Tin tức - Sự kiện</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Liên Hệ Nhanh</h4>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;">
+            Hotline: <strong>1900 8146</strong><br />
+            Email: <strong>vanphong@chihoiyte.vn</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-strip">
+      <div class="container">
+        <p style="margin:0;font-size:0.82rem;color:#94a3b8;">
+          © 2026 Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function formatPhoneInput(input) {
+      input.value = input.value.replace(/\s+/g, '').replace(/[^0-9+()]/g, '');
+      clearFieldError('phone');
+    }
+
+    function clearFieldError(field) {
+      const errEl = document.getElementById('err-' + field);
+      const inputEl = document.getElementById('contact-' + field);
+      if (errEl) errEl.style.display = 'none';
+      if (inputEl) inputEl.style.borderColor = '#e2e8f0';
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      let isValid = true;
+
+      const name = document.getElementById('contact-name');
+      const phone = document.getElementById('contact-phone');
+      const email = document.getElementById('contact-email');
+      const msg = document.getElementById('contact-message');
+
+      if (!name.value.trim()) {
+        document.getElementById('err-name').style.display = 'block';
+        name.style.borderColor = '#e22b27';
+        isValid = false;
+      }
+
+      if (!phone.value.trim() || phone.value.replace(/[^0-9]/g, '').length < 9) {
+        document.getElementById('err-phone').style.display = 'block';
+        phone.style.borderColor = '#e22b27';
+        isValid = false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+        document.getElementById('err-email').style.display = 'block';
+        email.style.borderColor = '#e22b27';
+        isValid = false;
+      }
+
+      if (!msg.value.trim()) {
+        document.getElementById('err-message').style.display = 'block';
+        msg.style.borderColor = '#e22b27';
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert('Cảm ơn Quý đơn vị / Anh Chị! Thông tin liên hệ đã được gửi thành công đến Ban Thư ký Chi hội. Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.');
+        document.getElementById('contact-custom-form').reset();
+      }
+    }
+  </script>
+</body>
+</html>

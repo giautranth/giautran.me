@@ -187,7 +187,7 @@ get_header(); ?>
             Các bệnh viện, viện nghiên cứu y khoa, phòng khám đa khoa - chuyên khoa tư nhân có giấy phép hoạt động hợp pháp đều có thể nộp hồ sơ gia nhập Chi hội.
           </p>
           <div style="display:flex;gap:12px;flex-wrap:wrap;">
-            <a href="lien-he.html" class="btn-primary-pill">Nộp Hồ Sơ Trực Tuyến</a>
+            <a href="lien-he" class="btn-primary-pill">Nộp Hồ Sơ Trực Tuyến</a>
             <a href="#" onclick="alert('Đã tải mẫu đơn đăng ký hội viên (.docx)!'); return false;" class="btn-primary-pill" style="background:#ffffff;color:#2C3691!important;border:1px solid #2C3691;">Tải Mẫu Đơn Đăng Ký</a>
           </div>
       </div>

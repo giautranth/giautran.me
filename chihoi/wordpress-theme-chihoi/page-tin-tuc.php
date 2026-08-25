@@ -42,7 +42,7 @@ get_header(); ?>
               </p>
             </div>
             <div class="news-card-footer">
-              <a href="so-do-to-chuc.html" class="link-read-more" style="color:#27AAE1;font-weight:700;">Xem toàn văn danh sách →</a>
+              <a href="so-do-to-chuc" class="link-read-more" style="color:#27AAE1;font-weight:700;">Xem toàn văn danh sách →</a>
             </div>
           </div>
         </div>

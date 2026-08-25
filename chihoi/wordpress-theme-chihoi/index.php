@@ -292,7 +292,7 @@
           <div style="font-size:0.86rem;color:#64748b;">
             Nhiệm kỳ 2026 – 2029 | Chủ tịch: <strong>Madam Trần Thị Lâm</strong>
           </div>
-          <a href="gioi-thieu.html" class="link-read-more" style="font-size:0.92rem;color:#27AAE1;font-weight:700;">
+          <a href="gioi-thieu" class="link-read-more" style="font-size:0.92rem;color:#27AAE1;font-weight:700;">
             Xem chi tiết 10 định hướng & 8 chương trình →
           </a>
         </div>
@@ -310,7 +310,7 @@
             Mạng lưới hơn 50 bệnh viện thành viên tiêu biểu và các tổ chức y tế, tập đoàn đồng hành
           </div>
         </div>
-        <a href="hoi-vien.html" class="btn-aih-navy">Xem danh bạ ❯</a>
+        <a href="hoi-vien" class="btn-aih-navy">Xem danh bạ ❯</a>
       </div>
       
       <div class="infinite-marquee-container">
@@ -320,93 +320,93 @@
           <div class="infinite-marquee-track" id="marqueeTrackLane1">
             
             <!-- Original Set 1 -->
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Gia An 115">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Phương Nam">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Phương Nam">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Vinmec Central Park">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Columbia Asia">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Columbia Asia">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Minh Anh">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Minh Anh">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
             </a>
 
             <!-- Duplicated Set 1 for Seamless Infinite Loop -->
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
             </a>
@@ -434,27 +434,27 @@
               <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
             </div>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Quốc tế City">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Gia An 115">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện FV">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Vinmec Central Park">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
             </a>
@@ -475,27 +475,27 @@
               <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
             </div>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện FV" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
             </a>
 
-            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
+            <a href="hoi-vien" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
               <span class="card-badge-type hospital">BỆNH VIỆN</span>
               <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
             </a>
@@ -530,7 +530,7 @@
     <div class="container">
       <div class="section-header-row">
         <div class="section-main-title">CHƯƠNG TRÌNH ĐÀO TẠO CME</div>
-        <a href="dao-tao.html" class="btn-aih-navy">Xem tất cả ❯</a>
+        <a href="dao-tao" class="btn-aih-navy">Xem tất cả ❯</a>
       </div>
       
       <!-- Filter Tabs -->
@@ -629,7 +629,7 @@
     <div class="container">
       <div class="section-header-row">
         <div class="section-main-title">TIN TỨC & HOẠT ĐỘNG</div>
-        <a href="tin-tuc.html" class="btn-aih-navy">Xem tất cả ❯</a>
+        <a href="tin-tuc" class="btn-aih-navy">Xem tất cả ❯</a>
       </div>
       
       <!-- Filter Tabs -->

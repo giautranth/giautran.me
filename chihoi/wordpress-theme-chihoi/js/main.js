@@ -525,7 +525,7 @@ function initLanguageSwitcher() {
 
       const flagEl = langCurrent.querySelector('.lang-flag');
       if (flagEl) {
-        flagEl.innerHTML = `<img src="https://flagcdn.com/w20/${flag}.png" alt="${flag}" width="20" style="vertical-align: middle; border-radius: 2px;" />`;
+        flagEl.innerHTML = `<img src="https://flagcdn.com/w40/${flag}.png" alt="${flag}" />`;
       }
 
       langBox.classList.remove('open');
@@ -575,4 +575,8 @@ function showToast(msg) {
 }
 
 // Call on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+} else {
+  initLanguageSwitcher();
+}

@@ -1359,9 +1359,26 @@ body {
 .news-card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   border-top: 1px solid var(--border-light);
   padding-top: 12px;
+  text-align: right;
+}
+
+.news-card-footer .link-read-more,
+.news-card-footer .btn-news-detail {
+  margin-left: auto;
+  text-align: right;
+  display: inline-flex;
+  align-items: center;
+}
+
+.news-card-footer .link-read-more,
+.news-card-footer .btn-news-detail {
+  margin-left: auto;
+  text-align: right;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ==========================================================================

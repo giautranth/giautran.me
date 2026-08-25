@@ -285,40 +285,107 @@ body {
   transform: translateY(-1px);
 }
 
-/* Flag Language Switcher */
-.aih-flags-group {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: #f1f5f9;
-  padding: 4px 6px;
-  border-radius: var(--radius-pill);
-  border: 1px solid #cbd5e1;
+/* Language Selector Box (Hoa Lam Standard) */
+.lang-box {
+  position: relative;
+  display: inline-block;
 }
 
-.flag-btn {
-  background: transparent;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 2px;
+.lang-current {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 6px 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  color: #1e293b;
+  cursor: pointer;
+  font-family: inherit;
   transition: all 0.2s ease;
-  opacity: 0.6;
+  height: 38px;
 }
 
-.flag-btn:hover {
-  opacity: 1;
-  transform: scale(1.08);
-}
-
-.flag-btn.active {
-  opacity: 1;
-  border-color: var(--brand-red);
+.lang-current:hover {
   background: #ffffff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  border-color: #27AAE1;
+  box-shadow: 0 2px 8px rgba(39, 170, 225, 0.15);
+}
+
+.lang-flag {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.lang-flag img {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.lang-chevron {
+  color: #64748b;
+  transition: transform 0.25s ease;
+}
+
+.lang-box.open .lang-chevron {
+  transform: rotate(180deg);
+  color: #e22b27;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #e22b27;
+  border-radius: 12px;
+  padding: 6px;
+  min-width: 170px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  z-index: 1050;
+  list-style: none;
+  margin: 0;
+}
+
+.lang-box.open .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.lang-opt:hover {
+  background: #f1f5f9;
+  color: #e22b27;
+}
+
+.lang-opt.active {
+  background: rgba(226, 43, 39, 0.08);
+  color: #e22b27;
+  font-weight: 700;
+}
+
+.lang-opt .flag img {
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 /* Mobile Toggle */

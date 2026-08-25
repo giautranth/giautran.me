@@ -473,13 +473,7 @@ function handleQuickRegister(e) {
   if (modalOverlay) modalOverlay.classList.remove('active');
 }
 
-function switchLang(lang) {
-  const viBtn = document.getElementById('langViBtn');
-  const enBtn = document.getElementById('langEnBtn');
-  if (lang === 'vi') {
-    if (viBtn) viBtn.classList.add('active');
-    if (enBtn) enBtn.classList.remove('active');
-  } else {
+ else {
     if (enBtn) enBtn.classList.add('active');
     if (viBtn) viBtn.classList.remove('active');
     alert('The English language interface is being updated. Switching back to Vietnamese.');
@@ -492,3 +486,93 @@ function switchLang(lang) {
 
 window.handleQuickRegister = handleQuickRegister;
 window.switchLang = switchLang;
+
+
+/* ── HOA LAM MULTI-LANGUAGE SELECTOR ── */
+function initLanguageSwitcher() {
+  const langBox = document.getElementById('langBox');
+  const langCurrent = document.getElementById('langCurrent');
+  if (!langBox || !langCurrent) return;
+
+  langCurrent.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langBox.classList.toggle('open');
+    langCurrent.setAttribute('aria-expanded', langBox.classList.contains('open'));
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!langBox.contains(e.target)) {
+      langBox.classList.remove('open');
+      langCurrent.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  const i18n = {
+    vi: { toast: '🇻🇳 Đã chuyển đổi sang Tiếng Việt' },
+    en: { toast: '🇺🇸 Switched to English' },
+    ja: { toast: '🇯🇵 日本語に切り替えました' },
+    zh: { toast: '🇨🇳 已切换至中文' }
+  };
+
+  document.querySelectorAll('.lang-opt').forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.querySelectorAll('.lang-opt').forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+
+      const lang = opt.getAttribute('data-lang');
+      const flag = opt.getAttribute('data-flag');
+
+      const flagEl = langCurrent.querySelector('.lang-flag');
+      if (flagEl) {
+        flagEl.innerHTML = `<img src="https://flagcdn.com/w20/${flag}.png" alt="${flag}" width="20" style="vertical-align: middle; border-radius: 2px;" />`;
+      }
+
+      langBox.classList.remove('open');
+      langCurrent.setAttribute('aria-expanded', 'false');
+
+      // Toast notification
+      const toastText = i18n[lang]?.toast || 'Language changed';
+      showToast(toastText);
+    });
+  });
+}
+
+function showToast(msg) {
+  let toast = document.getElementById('appLangToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'appLangToast';
+    Object.assign(toast.style, {
+      position: 'fixed',
+      bottom: '30px',
+      left: '50%',
+      transform: 'translateX(-50%) translateY(20px)',
+      background: 'rgba(15, 23, 42, 0.95)',
+      backdropFilter: 'blur(8px)',
+      border: '1px solid rgba(255, 255, 255, 0.15)',
+      color: '#ffffff',
+      padding: '10px 24px',
+      borderRadius: '50px',
+      fontSize: '0.88rem',
+      fontWeight: '700',
+      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.25)',
+      zIndex: '99999',
+      opacity: '0',
+      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+      pointerEvents: 'none'
+    });
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateX(-50%) translateY(0)';
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateX(-50%) translateY(20px)';
+  }, 2200);
+}
+
+// Call on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', initLanguageSwitcher);

@@ -1776,8 +1776,8 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1.1fr;
-  gap: 36px;
+  grid-template-columns: 1.55fr 1fr 1fr;
+  gap: 32px;
   padding-bottom: 36px;
 }
 
@@ -1880,8 +1880,8 @@ textarea.form-control {
   
   .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1.1fr;
-  gap: 36px;
+  grid-template-columns: 1.55fr 1fr 1fr;
+  gap: 32px;
   padding-bottom: 36px;
 }
   
@@ -1935,8 +1935,8 @@ textarea.form-control {
   
   .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1.1fr;
-  gap: 36px;
+  grid-template-columns: 1.55fr 1fr 1fr;
+  gap: 32px;
   padding-bottom: 36px;
 }
   
@@ -2042,8 +2042,8 @@ textarea.form-control {
   
   .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1.1fr;
-  gap: 36px;
+  grid-template-columns: 1.55fr 1fr 1fr;
+  gap: 32px;
   padding-bottom: 36px;
 }
 }
@@ -2378,13 +2378,29 @@ body {
 }
 
 /* Footer Copyright Inline under Email */
+/* Footer Copyright Inline under Email (Single Line) */
 .footer-copyright-inline {
   margin-top: 16px;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: #94a3b8;
   line-height: 1.5;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+  .footer-copyright-inline {
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-copyright-inline {
+    white-space: normal;
+    font-size: 0.8rem;
+  }
 }
 
 .footer-bottom-strip {

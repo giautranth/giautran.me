@@ -241,8 +241,7 @@
         <span class="aih-bottom-address">Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. Hồ Chí Minh</span>
       </div>
       <div class="aih-bottom-info-right">
-        <a href="http://giautran.me/chihoi" class="aih-bottom-web-link">giautran.me/chihoi</a>
-        <span class="aih-bottom-hotline">Hotline: 028 6290 1155 | 1900 8146</span>
+        <span class="aih-bottom-hotline">Hotline: 1900 8146</span>
       </div>
     </div>
 

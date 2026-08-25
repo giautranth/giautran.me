@@ -87,7 +87,7 @@
     </div>
   </section>
 
-  <!-- ========== 3. HỘI VIÊN CHI HỘI (Infinite Loop Carousel) ========== -->
+    <!-- ========== 3. HỘI VIÊN CHI HỘI (Infinite Loop Carousel) ========== -->
   <section class="site-section bg-subtle" style="overflow:hidden;">
     <div class="container">
       <div class="section-header-row" style="margin-bottom: 20px;">
@@ -95,14 +95,109 @@
       </div>
       
       <div class="infinite-marquee-container">
-        
         <!-- Lane 1: Bệnh Viện Hội Viên (Cuộn Vô Tận Trái -> Phải) -->
         <div class="infinite-marquee-wrapper">
           <div class="infinite-marquee-track" id="marqueeTrackLane1">
-            <!-- Set 1 (Continuous Seamless Stream - All 16 Member Hospitals) -->
+            <!-- Set 1: Tất cả 16 Logo Bệnh viện Hội viên -->
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City (CIH)" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV (Pháp Việt)" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Phương Nam">
+              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
+              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park">
+              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Columbia Asia">
+              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
+              <img src="photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Minh Anh">
+              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Hoàn Mỹ">
+              <img src="photo/logo/hoanmy.webp" alt="Bệnh viện Hoàn Mỹ" />
+            </div>
+            <div class="member-partner-card" title="Đại học Quốc tế Hồng Bàng">
+              <img src="photo/logo/hongbang.png" alt="Đại học Quốc tế Hồng Bàng" />
+            </div>
+            <div class="member-partner-card" title="Trung tâm Y khoa Medic - Hòa Hảo">
+              <img src="photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Sài Gòn ITO">
+              <img src="photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Đa khoa Tân Hưng">
+              <img src="photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Triều An">
+              <img src="photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Việt Mỹ">
+              <img src="photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
+            </div>
+
+            <!-- Set 2: Duplicate lặp vô tận (32 thẻ liên tục) -->
+            <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
+              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City (CIH)" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV (Pháp Việt)" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
+              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
+              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
+              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
+              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
+              <img src="photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
+              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Hoàn Mỹ" aria-hidden="true">
+              <img src="photo/logo/hoanmy.webp" alt="Bệnh viện Hoàn Mỹ" />
+            </div>
+            <div class="member-partner-card" title="Đại học Quốc tế Hồng Bàng" aria-hidden="true">
+              <img src="photo/logo/hongbang.png" alt="Đại học Quốc tế Hồng Bàng" />
+            </div>
+            <div class="member-partner-card" title="Trung tâm Y khoa Medic - Hòa Hảo" aria-hidden="true">
+              <img src="photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Sài Gòn ITO" aria-hidden="true">
+              <img src="photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Đa khoa Tân Hưng" aria-hidden="true">
+              <img src="photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Triều An" aria-hidden="true">
+              <img src="photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
+            </div>
+            <div class="member-partner-card" title="Bệnh viện Việt Mỹ" aria-hidden="true">
+              <img src="photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -693,3 +693,29 @@ function scrollSectionCards(gridId, direction) {
   });
 }
 window.scrollSectionCards = scrollSectionCards;
+
+/* ── MARQUEE MANUAL NAVIGATION ARROWS ── */
+function nudgeMarquee(trackId, direction) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  
+  const style = window.getComputedStyle(track);
+  const matrix = new DOMMatrixReadOnly(style.transform);
+  const currentX = matrix.m41;
+  const shift = direction * (window.innerWidth <= 768 ? 200 : 360);
+  let newX = currentX - shift;
+  
+  const halfWidth = (track.scrollWidth / 2) || 2000;
+  if (newX < -halfWidth) newX += halfWidth;
+  if (newX > 0) newX -= halfWidth;
+
+  track.style.animation = 'none';
+  track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+  track.style.transform = `translateX(${newX}px)`;
+
+  setTimeout(() => {
+    track.style.transition = 'none';
+    track.style.animation = '';
+  }, 450);
+}
+window.nudgeMarquee = nudgeMarquee;

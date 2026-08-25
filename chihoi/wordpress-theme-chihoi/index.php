@@ -64,13 +64,18 @@
   </section>
 
     <!-- ========== 3. HỘI VIÊN CHI HỘI (Infinite Loop Carousel) ========== -->
-  <section class="site-section bg-subtle" style="overflow:hidden;">
+  <section class="site-section bg-subtle">
     <div class="container">
       <div class="section-header-row" style="margin-bottom: 20px;">
         <div class="section-main-title">HỘI VIÊN CHI HỘI</div>
       </div>
       
       <div class="infinite-marquee-container">
+        <button type="button" class="section-slider-arrow prev" onclick="nudgeMarquee('marqueeTrackLane1', -1)" aria-label="Lùi logo hội viên">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
         <!-- Lane 1: Bệnh Viện Hội Viên (Cuộn Vô Tận Trái -> Phải) -->
         <div class="infinite-marquee-wrapper">
           <div class="infinite-marquee-track" id="marqueeTrackLane1">
@@ -175,6 +180,11 @@
             </div>
           </div>
         </div>
+        <button type="button" class="section-slider-arrow next" onclick="nudgeMarquee('marqueeTrackLane1', 1)" aria-label="Xem logo hội viên tiếp theo">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </section>
@@ -425,8 +435,13 @@
       </div>
       
       <div class="infinite-marquee-container">
+        <button type="button" class="section-slider-arrow prev" onclick="nudgeMarquee('marqueeTrackPartner', -1)" aria-label="Lùi logo đối tác">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
         <div class="infinite-marquee-wrapper">
-          <div class="infinite-marquee-track">
+          <div class="infinite-marquee-track" id="marqueeTrackPartner">
             <!-- Set 1 (Continuous Seamless Stream) -->
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm">
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
@@ -528,6 +543,11 @@
             </div>
           </div>
         </div>
+        <button type="button" class="section-slider-arrow next" onclick="nudgeMarquee('marqueeTrackPartner', 1)" aria-label="Xem logo đối tác tiếp theo">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </section>

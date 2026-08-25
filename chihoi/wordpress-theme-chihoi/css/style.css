@@ -1289,18 +1289,7 @@ body {
   transform: scale(1.04);
 }
 
-.news-category-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: var(--brand-navy);
-  color: #ffffff;
-  font-size: 0.7rem;
-  font-weight: 800;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
-  text-transform: uppercase;
-}
+.news-category-badge { display: none !important; }
 
 .news-category-badge.event { background: var(--brand-cyan); }
 .news-category-badge.offer { background: var(--brand-red); }

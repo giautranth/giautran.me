@@ -335,7 +335,6 @@
         <div class="news-article-card" data-category="su-kien">
           <div class="news-card-thumbnail-wrap">
             <img src="photo/news/event-photo-1.webp" alt="Ra mắt ban chấp hành chi hội" class="news-thumbnail-img" />
-            <span class="news-category-badge event">SỰ KIỆN</span>
           </div>
           <div class="news-card-body">
             <div>
@@ -357,7 +356,6 @@
         <div class="news-article-card" data-category="chi-hoi">
           <div class="news-card-thumbnail-wrap">
             <img src="photo/news/event-photo-49.jpg" alt="Bộ Y tế phát biểu" class="news-thumbnail-img" />
-            <span class="news-category-badge">TIN TỨC</span>
           </div>
           <div class="news-card-body">
             <div>
@@ -379,7 +377,6 @@
         <div class="news-article-card" data-category="chi-hoi">
           <div class="news-card-thumbnail-wrap">
             <img src="photo/news/event-photo-50.jpg" alt="GS.VS Nguyễn Văn Đệ phát biểu" class="news-thumbnail-img" />
-            <span class="news-category-badge medical">CHI HỘI</span>
           </div>
           <div class="news-card-body">
             <div>

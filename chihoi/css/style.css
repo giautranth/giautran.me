@@ -955,11 +955,7 @@ body {
   gap: 20px;
   width: max-content;
   will-change: transform;
-  animation: infiniteScroll 40s linear infinite;
-}
-
-.infinite-marquee-track.reverse {
-  animation: infiniteScrollReverse 55s linear infinite;
+  animation: infiniteScroll 50s linear infinite !important;
 }
 
 .infinite-marquee-wrapper:hover .infinite-marquee-track {
@@ -972,19 +968,6 @@ body {
   }
   100% {
     transform: translateX(-50%);
-  }
-}
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes infiniteScrollReverse {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
 

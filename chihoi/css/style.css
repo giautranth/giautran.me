@@ -1750,8 +1750,8 @@ textarea.form-control {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 32px;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
   padding-bottom: 36px;
 }
 
@@ -1848,8 +1848,11 @@ textarea.form-control {
   }
   
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  padding-bottom: 36px;
+}
   
   .member-logo-card,
   .partner-logo-card {
@@ -1887,8 +1890,11 @@ textarea.form-control {
   }
   
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  padding-bottom: 36px;
+}
   
   .member-logo-card,
   .partner-logo-card {
@@ -2000,8 +2006,11 @@ textarea.form-control {
   }
   
   .footer-grid {
-    grid-template-columns: 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  padding-bottom: 36px;
+}
 }
 
 .footer-logo-wrapper {

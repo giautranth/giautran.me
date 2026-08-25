@@ -18,9 +18,8 @@ get_header(); ?>
         <button class="tab-btn news-tab-btn active" data-filter="all">Tất cả</button>
         <button class="tab-btn news-tab-btn" data-filter="van-ban">Văn bản & Quyết định</button>
         <button class="tab-btn news-tab-btn" data-filter="chi-hoi">Tin tức chi hội</button>
-        <button class="tab-btn news-tab-btn" data-filter="su-kien">Sự kiện y tế</button>
-        <button class="tab-btn news-tab-btn" data-filter="y-hoc">Y học thường thức</button>
-      </div>
+        <button class="tab-btn news-tab-btn" data-filter="su-kien">Sự kiện</button>
+        </div>
 
       <!-- News Grid -->
       <div class="news-cards-grid">
@@ -146,7 +145,7 @@ get_header(); ?>
         </div>
 
         <!-- Card 6 -->
-        <div class="news-article-card" data-category="y-hoc">
+        <div class="news-article-card" data-category="chi-hoi">
           <div class="news-card-thumbnail-wrap">
             <img src="photo/news/event-photo-53.jpg" alt="Tầm soát bệnh lý tim mạch" class="news-thumbnail-img" />
             <span class="news-category-badge medical">Y KHOA</span>

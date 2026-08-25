@@ -10,7 +10,7 @@ get_header(); ?>
     <div class="container">
       
       <div class="section-header-row">
-        <div class="section-main-title">TIN TỨC & HOẠT ĐỘNG CHI HỘI</div>
+        <div class="section-main-title">TIN TỨC</div>
       </div>
 
       <!-- Filter Tabs -->

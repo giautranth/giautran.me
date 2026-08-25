@@ -222,64 +222,6 @@ get_header(); ?>
 
         </div>
 
-        <!-- Bảng chỉ tiêu 2027 -->
-        <h4 style="color:#2C3691;font-size:1.05rem;font-weight:800;margin-bottom:12px;text-transform:uppercase;">
-          BẢNG CHỈ TIÊU ĐỀ XUẤT ĐẾN NĂM 2027
-        </h4>
-        <div style="overflow-x:auto;">
-          <table class="member-data-table" style="width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:16px;">
-            <thead>
-              <tr style="background:#2C3691;color:#fff;">
-                <th style="padding:10px 14px;border:1px solid #cbd5e1;width:60px;text-align:center;">STT</th>
-                <th style="padding:10px 14px;border:1px solid #cbd5e1;width:240px;">CHƯƠNG TRÌNH</th>
-                <th style="padding:10px 14px;border:1px solid #cbd5e1;">CHỈ TIÊU ĐẶT RA ĐẾN NĂM 2027</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">01</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Mạng lưới hội viên</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 100 bệnh viện thành viên tích cực, hoàn thiện CSDL, kết nối theo cụm khu vực</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">02</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">CEO Forum</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 02 Diễn đàn CEO/Quản trị, 02 chương trình đào tạo chuyên môn sâu</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">03</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Mạng lưới chuyên môn</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">03 – 05 mạng lưới chuyên môn liên bệnh viện (tim mạch, đột quỵ, hồi sức cấp cứu)</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">04</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Chuyển đổi số & AI</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 01 Diễn đàn Chuyển đổi số & AI, 01 Workshop hỗ trợ triển khai thực tế</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">05</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Chất lượng bệnh viện</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 01 bộ chỉ số tiêu chuẩn theo từng phân khúc bệnh viện</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">06</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Lãnh đạo trẻ</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">Khởi động “Young Healthcare Leaders”, đào tạo và bồi dưỡng cán bộ tiềm năng</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">07</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Đối thoại chính sách</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 01 chương trình/năm, đề xuất 02 – 03 kiến nghị chính sách trọng điểm</td>
-              </tr>
-              <tr>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">08</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Thành lập Hiệp hội BV Tư nhân TPHCM</td>
-                <td style="padding:8px 14px;border:1px solid #e2e8f0;">Dự kiến tổ chức Đại hội vào tháng 10/2027</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
       </div>
 
       <!-- Slide Trình Chiếu Văn Kiện Hoạt Động -->

@@ -331,39 +331,17 @@
     </div>
   </section>
 
-    <!-- ========== VIDEO SECTION (Slider Arrows on Both Sides) ========== -->
+      <!-- ========== VIDEO SECTION (Single Featured Video) ========== -->
   <section class="site-section bg-subtle">
     <div class="container">
       <div class="section-header-row" style="margin-bottom: 20px;">
         <div class="section-main-title">VIDEO</div>
       </div>
 
-      <!-- Video Slider Container with Left & Right Navigation Arrows -->
-      <div class="section-slider-container">
-        <button type="button" class="section-slider-arrow prev" onclick="scrollSectionCards('video-slider-grid', -1)" aria-label="Xem video trước">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-
-        <div class="video-grid-2col" id="video-slider-grid">
-          <div class="video-card-item">
-            <div class="video-embed-wrap">
-              <iframe src="https://www.youtube.com/embed/_3A7urkzB6I" title="Video Chi Hội 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="video-card-item">
-            <div class="video-embed-wrap">
-              <iframe src="https://www.youtube.com/embed/Pk2GA9-9OCs" title="Video Chi Hội 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
+      <div class="single-video-container">
+        <div class="video-embed-wrap">
+          <iframe src="https://www.youtube.com/embed/_3A7urkzB6I" title="Lễ Ra Mắt Chi Hội Bệnh Viện Tư Nhân TP.HCM và các tỉnh thành phía Nam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-
-        <button type="button" class="section-slider-arrow next" onclick="scrollSectionCards('video-slider-grid', 1)" aria-label="Xem video tiếp theo">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
       </div>
     </div>
   </section>

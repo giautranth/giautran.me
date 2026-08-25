@@ -2432,3 +2432,10 @@ body {
 .footer-map-link-btn:hover {
   background: #f1f5f9;
 }
+
+/* Single Featured Video Container */
+.single-video-container {
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+}

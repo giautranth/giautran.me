@@ -28,21 +28,7 @@
         <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
           <img src="photo/logo/chihoi.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
         </a>
-        <div class="aih-gold-badge" title="Hiệp hội Bệnh viện Tư nhân Việt Nam & Tiêu chuẩn Y tế Quốc tế">
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <circle cx="18" cy="18" r="16" fill="url(#goldGrad)" stroke="#c69214" stroke-width="1.5"/>
-            <circle cx="18" cy="18" r="13" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>
-            <path d="M18 6.5l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6-4.3-4.2 6-.9z" fill="#ffffff" opacity="0.95"/>
-            <defs>
-              <linearGradient id="goldGrad" x1="0" y1="0" x2="36" y2="36">
-                <stop offset="0%" stop-color="#fce18b"/>
-                <stop offset="50%" stop-color="#d49b28"/>
-                <stop offset="100%" stop-color="#996a12"/>
-              </linearGradient>
-            </defs>
-          </svg>
         </div>
-      </div>
 
       <!-- Main Navigation Menu -->
       <nav class="aih-nav" aria-label="Menu chính">
@@ -77,20 +63,26 @@
 
       <!-- Utilities Tools (Search & Language Switcher) -->
       <div class="aih-header-tools">
-        <a href="tel:19008146" class="aih-header-hotline-btn" title="Tổng đài hỗ trợ Chi hội 24/7">
-          <span class="hotline-pulse-dot"></span>
-          <span>1900 8146</span>
-        </a>
+        
         <button class="aih-search-btn" title="Tìm kiếm" onclick="alert('Tính năng tìm kiếm dữ liệu Chi hội y tế');">
           <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
         </button>
-        <div class="aih-lang-picker">
-          <span class="aih-flag-icon">🇺🇸</span>
-          <select class="aih-lang-select" aria-label="Chọn Ngôn ngữ">
-            <option value="vi">Chọn Ngôn ngữ</option>
-            <option value="vi-full">Tiếng Việt</option>
-            <option value="en">English</option>
-          </select>
+        <div class="aih-flags-group" title="Chuyển đổi ngôn ngữ / Switch language">
+          <button class="flag-btn active" id="langViBtn" title="Tiếng Việt" onclick="switchLang('vi')">
+            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,0.15);">
+              <rect width="22" height="15" fill="#DA251D"/>
+              <polygon points="11,3 12.6,7.8 17.6,7.8 13.5,10.7 15.1,15.5 11,12.5 6.9,15.5 8.5,10.7 4.4,7.8 9.4,7.8" fill="#FFFF00" transform="scale(0.8) translate(2.75, 1.8)"/>
+            </svg>
+          </button>
+          <button class="flag-btn" id="langEnBtn" title="English" onclick="switchLang('en')">
+            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,0.15);">
+              <rect width="22" height="15" fill="#012169"/>
+              <path d="M0,0 L22,15 M22,0 L0,15" stroke="#FFFFFF" stroke-width="2.5"/>
+              <path d="M0,0 L22,15 M22,0 L0,15" stroke="#C8102E" stroke-width="1.2"/>
+              <path d="M11,0 V15 M0,7.5 H22" stroke="#FFFFFF" stroke-width="4.5"/>
+              <path d="M11,0 V15 M0,7.5 H22" stroke="#C8102E" stroke-width="2.5"/>
+            </svg>
+          </button>
         </div>
       </div>
 

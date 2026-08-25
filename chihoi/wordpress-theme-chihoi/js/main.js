@@ -473,4 +473,22 @@ function handleQuickRegister(e) {
   if (modalOverlay) modalOverlay.classList.remove('active');
 }
 
+function switchLang(lang) {
+  const viBtn = document.getElementById('langViBtn');
+  const enBtn = document.getElementById('langEnBtn');
+  if (lang === 'vi') {
+    if (viBtn) viBtn.classList.add('active');
+    if (enBtn) enBtn.classList.remove('active');
+  } else {
+    if (enBtn) enBtn.classList.add('active');
+    if (viBtn) viBtn.classList.remove('active');
+    alert('The English language interface is being updated. Switching back to Vietnamese.');
+    setTimeout(() => {
+      if (viBtn) viBtn.classList.add('active');
+      if (enBtn) enBtn.classList.remove('active');
+    }, 1500);
+  }
+}
+
 window.handleQuickRegister = handleQuickRegister;
+window.switchLang = switchLang;

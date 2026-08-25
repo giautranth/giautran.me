@@ -2472,3 +2472,54 @@ body {
   margin: 0 auto;
   width: 100%;
 }
+
+
+/* ==========================================================================
+   FOOTER (All White Text #ffffff)
+   ========================================================================== */
+.site-footer {
+  margin-top: auto;
+  background: linear-gradient(175deg, #1e266d 0%, #161d52 60%, #0e1338 100%);
+  color: #ffffff !important;
+  padding: 48px 0 36px;
+  border-top: 4px solid var(--brand-cyan);
+}
+
+.site-footer p,
+.site-footer span,
+.site-footer strong,
+.site-footer a:not(.btn-primary-pill):not(.footer-map-link-btn),
+.footer-contact-item,
+.footer-contact-item span,
+.footer-contact-item strong,
+.footer-brand-title,
+.footer-brand-desc,
+.footer-heading,
+.footer-links-list a,
+.footer-copyright-inline {
+  color: #ffffff !important;
+}
+
+.footer-copyright-inline {
+  margin-top: 16px;
+  font-size: 0.78rem;
+  color: #ffffff !important;
+  line-height: 1.5;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+  .footer-copyright-inline {
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer-copyright-inline {
+    white-space: normal;
+    font-size: 0.8rem;
+  }
+}

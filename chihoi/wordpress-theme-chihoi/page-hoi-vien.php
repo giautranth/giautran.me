@@ -297,9 +297,6 @@ get_header(); ?>
               <div class="member-partner-card" title="Bệnh viện Vinmec Central Park">
                 <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
               </div>
-              <div class="member-partner-card" title="Vietlott">
-                <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
-              </div>
               <div class="member-partner-card" title="Bệnh viện Columbia Asia">
                 <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
               </div>
@@ -334,9 +331,6 @@ get_header(); ?>
               </div>
               <div class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
                 <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
-              </div>
-              <div class="member-partner-card" title="Vietlott" aria-hidden="true">
-                <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
               </div>
               <div class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
                 <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />

@@ -627,10 +627,6 @@
               <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
 
-            <div class="member-partner-card" title="Vietlott">
-              <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
-            </div>
-
             <!-- Duplicated Set for Seamless Infinite Loop -->
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm" aria-hidden="true">
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
@@ -646,10 +642,6 @@
 
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
               <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
-            </div>
-
-            <div class="member-partner-card" title="Vietlott" aria-hidden="true">
-              <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
             </div>
 
           </div>

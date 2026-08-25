@@ -488,7 +488,63 @@ window.handleQuickRegister = handleQuickRegister;
 window.switchLang = switchLang;
 
 
-/* ── HOA LAM MULTI-LANGUAGE SELECTOR ── */
+/* ── MULTI-LANGUAGE TRANSLATOR & SELECTOR (BRAND THEME #2C3691 & #27AAE1) ── */
+function loadGoogleTranslateScript() {
+  if (window.google && window.google.translate) return;
+  if (!document.getElementById('google-translate-script')) {
+    const s = document.createElement('script');
+    s.id = 'google-translate-script';
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    s.async = true;
+    document.head.appendChild(s);
+  }
+}
+
+window.googleTranslateElementInit = function() {
+  if (!document.getElementById('google_translate_element')) {
+    const div = document.createElement('div');
+    div.id = 'google_translate_element';
+    div.style.display = 'none';
+    document.body.appendChild(div);
+  }
+  new window.google.translate.TranslateElement({
+    pageLanguage: 'vi',
+    includedLanguages: 'vi,en,ja,zh-CN',
+    autoDisplay: false
+  }, 'google_translate_element');
+};
+
+function triggerPageTranslation(lang) {
+  loadGoogleTranslateScript();
+  const langMap = {
+    vi: 'vi',
+    en: 'en',
+    ja: 'ja',
+    zh: 'zh-CN'
+  };
+  const targetLang = langMap[lang] || 'vi';
+
+  // Set Google Translate cookie
+  document.cookie = `googtrans=/vi/${targetLang}; path=/; domain=${window.location.hostname}`;
+  document.cookie = `googtrans=/vi/${targetLang}; path=/;`;
+
+  // Trigger combo box if element exists
+  const combo = document.querySelector('.goog-te-combo');
+  if (combo) {
+    combo.value = targetLang;
+    combo.dispatchEvent(new Event('change'));
+  } else {
+    // Reload or init
+    setTimeout(() => {
+      const cb = document.querySelector('.goog-te-combo');
+      if (cb) {
+        cb.value = targetLang;
+        cb.dispatchEvent(new Event('change'));
+      }
+    }, 600);
+  }
+}
+
 function initLanguageSwitcher() {
   const langBox = document.getElementById('langBox');
   const langCurrent = document.getElementById('langCurrent');
@@ -505,6 +561,44 @@ function initLanguageSwitcher() {
       langBox.classList.remove('open');
       langCurrent.setAttribute('aria-expanded', 'false');
     }
+  });
+
+  const i18n = {
+    vi: { toast: '🇻🇳 Đã chuyển sang Tiếng Việt' },
+    en: { toast: '🇺🇸 Switched to English' },
+    ja: { toast: '🇯🇵 日本語に切り替えました' },
+    zh: { toast: '🇨🇳 已切换至中文' }
+  };
+
+  document.querySelectorAll('.lang-opt').forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.querySelectorAll('.lang-opt').forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+
+      const lang = opt.getAttribute('data-lang');
+      const flag = opt.getAttribute('data-flag');
+
+      const flagEl = langCurrent.querySelector('.lang-flag');
+      if (flagEl) {
+        flagEl.innerHTML = `<img src="https://flagcdn.com/w40/${flag}.png" alt="${flag}" />`;
+      }
+
+      langBox.classList.remove('open');
+      langCurrent.setAttribute('aria-expanded', 'false');
+
+      // Trigger automatic translation
+      triggerPageTranslation(lang);
+
+      // Toast notification
+      const toastText = i18n[lang]?.toast || 'Language changed';
+      showToast(toastText);
+    });
+  });
+
+  // Pre-load translate library in background
+  setTimeout(loadGoogleTranslateScript, 1500);
+}
   });
 
   const i18n = {

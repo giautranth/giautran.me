@@ -3,30 +3,28 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tin Tức & Góc Sức Khỏe | Bệnh viện Quốc tế City – City International Hospital</title>
   <meta name="description" content="Cập nhật tin tức sự kiện y tế mới nhất, cẩm nang chăm sóc sức khỏe chủ động từ các bác sĩ Bệnh viện Quốc tế City." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026072309" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
   <style>
     .news-category-bar {
       display: flex;
       gap: 0.5rem;
       margin-bottom: 2.5rem;
-      border-bottom: 1px solid var(--c-border);
-      padding-bottom: 0px;
+      background: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
       overflow-x: auto;
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
-    }
-    /* Ẩn scrollbar xấu xí của chrome/safari */
-    .news-category-bar::-webkit-scrollbar {
-      display: none;
-    }
-    /* Ẩn scrollbar của firefox/IE */
-    .news-category-bar {
       scrollbar-width: none;
       -ms-overflow-style: none;
     }
@@ -64,6 +62,22 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 2.5rem 1.75rem;
       margin-bottom: 4rem;
+    }
+    /* Hide cards not on current page; JS pagination adds .is-visible to current 9 */
+    .news-grid-3 > .news-card,
+    .news-grid-3 > .news-card-v2 {
+      display: none;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .news-grid-3 > .news-card.is-visible,
+    .news-grid-3 > .news-card-v2.is-visible {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
 
     .news-card-v2 {
@@ -190,6 +204,27 @@
         gap: 1.75rem;
       }
     }
+  
+    /* Top align news card titles */
+    .news-card__body {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      padding: 1.25rem !important;
+      flex: 1 1 auto !important;
+    }
+    .news-card__meta {
+      margin-bottom: 0.6rem !important;
+    }
+    .news-card__title {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      text-align: left !important;
+    }
+
+    /* Hide excerpt and Xem them on news listing page */
+    .news-card__excerpt { display: none !important; }
+    .news-card__more { display: none !important; }
   </style>
 </head>
 <body>
@@ -201,20 +236,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -225,8 +289,8 @@
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
       <img src="images/logo_cih_acci.png"
-           alt="" class="header__logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+           alt="Bệnh viện Quốc tế City" class="header__logo-img"
+           onerror="this.onerror=null; this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
       <div id="logo-fallback" class="logo-fallback" style="display:none">
         <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
       </div>
@@ -235,705 +299,762 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
-        <li class="nav__item nav__item--has-dropdown">
-          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
-          <div class="nav__dropdown">
-            <div class="dropdown__grid">
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Nội Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
-                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Ngoại Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
-                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
-                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
-                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chẩn Đoán</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
-              </div>
-            </div>
-          </div>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
         </li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
 
 <!-- SUBPAGE BREADCRUMBS HERO BAR -->
-<section class="subpage-hero" style="background: #f4f8fb; padding: 1.25rem 0; border-bottom: 1px solid #e2e8f0;">
+<section class="subpage-hero" style="background: #f4f8fb; padding: 0.35rem 0; border-bottom: 1px solid #e2e8f0;">
   <div class="container subpage-hero__inner">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.35rem;">
-      <a href="./" style="color: #005f80; font-weight: 700; text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span style="color: #0f3775; font-weight: 700;">Tin Tức</span>
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000; margin-bottom: 0.35rem;">
+      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Tin tức</span>
     </div>
     
   </div>
 </section>
 
-<!-- DEDICATED HERO BANNER FOR PAGE -->
-<section class="hero" style="position: relative; overflow: hidden;">
-  <div style="position: relative; width: 100%; aspect-ratio: 1536 / 536; height: auto; max-height: 480px; overflow: hidden;">
-    <img src="images/banner/BANNER-WEB-1536x536.webp" alt="Hero Banner" style="width: 100%; height: 100%; object-fit: cover; object-position: center; " />
-  </div>
-</section>
-
 <!-- SUBPAGE CONTENT -->
-<main class="subpage-content">
+<main class="subpage-content" style="padding-top: 1.5rem;">
   <div class="container">
     
     <!-- Category select -->
     <div class="news-category-bar">
-      <button class="news-cat-btn active" data-cat="all">Tất Cả</button>
-      <button class="news-cat-btn" data-cat="giai-thuong">Giải Thưởng</button>
-      <button class="news-cat-btn" data-cat="kien-thuc-y-khoa">Kiến Thức Y Khoa</button>
-      <button class="news-cat-btn" data-cat="tin-tuc-hoat-dong">Tin Tức Hoạt Động</button>
-      <button class="news-cat-btn" data-cat="uu-dai">Ưu Đãi</button>
+      <button class="news-cat-btn active" data-cat="all">Tất cả</button>
+      <button class="news-cat-btn" data-cat="giai-thuong">Giải thưởng</button>
+      <button class="news-cat-btn" data-cat="kien-thuc-y-khoa">Kiến thức y khoa</button>
+      <button class="news-cat-btn" data-cat="tin-tuc-hoat-dong">Tin tức hoạt động</button>
+      <button class="news-cat-btn" data-cat="uu-dai">Ưu đãi</button>
     </div>
 
     <div class="news-detail-grid">
       
       <!-- Lưới 3 cột mới -->
       <div class="news-grid-3">
-
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=1" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Lan tỏa tri thức – Truyền cảm hứng sống khỏe, sống đẹp" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=46565" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/08/1-19-1-768x512.webp" alt="Ra mắt ban chấp hành chi hội bệnh viện tư nhân TP.HCM và các tỉnh, thành phía nam" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=1" style="color: #0f3775; text-decoration: none;">Lan tỏa tri thức – Truyền cảm hứng sống khỏe, sống đẹp</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=1" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">19/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46565">Ra mắt ban chấp hành chi hội bệnh viện tư nhân TP.HCM và các tỉnh, thành phía nam</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46565" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=2" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="uu-dai">
+          <a href="chi-tiet-tin-tuc?id=46556" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/08/My_Uu-dai-Khoa-Ngoai-tong-quat-1-768x432.webp" alt="Ưu đãi 20% phí gói phẫu thuật tại khoa ngoại tổng quát" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Ưu Đãi</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=2" style="color: #0f3775; text-decoration: none;">Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=2" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">19/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46556">Ưu đãi 20% phí gói phẫu thuật tại khoa ngoại tổng quát</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46556" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=3" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Sau đuối nước có cần nhập viện không? 3 biến chứng không nên chủ quan" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46532" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/08/34-768x432.webp" alt="Đau bụng dữ dội, phát hiện nhiều sỏi mật kích thước “khủng”" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=3" style="color: #0f3775; text-decoration: none;">Sau đuối nước có cần nhập viện không? 3 biến chứng không nên chủ quan</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=3" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">17/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46532">Đau bụng dữ dội, phát hiện nhiều sỏi mật kích thước “khủng”</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46532" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=4" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Phẫu thuật tuyến giáp và viêm túi mật mạn đồng thời thành công" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=46421" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/08/4-768x512.webp" alt="Bệnh viện Gia An 115 và Bệnh viện Quốc tế City tham dự hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=4" style="color: #0f3775; text-decoration: none;">Phẫu thuật tuyến giáp và viêm túi mật mạn đồng thời thành công</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=4" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">07/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46421">Bệnh viện Gia An 115 và Bệnh viện Quốc tế City tham dự hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46421" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=5" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Kết nối sức mạnh y tế tư nhân phía Nam: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46415" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/08/1-1-768x432.webp" alt="Nhồi máu thận: Tái thông khẩn cấp động mạch thận khẩn cấp từ một cơn đau hông lưng" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=5" style="color: #0f3775; text-decoration: none;">Kết nối sức mạnh y tế tư nhân phía Nam: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=5" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">07/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46415">Nhồi máu thận: Tái thông khẩn cấp động mạch thận khẩn cấp từ một cơn đau hông lưng</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46415" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=6" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46342" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1785381492383_1858338027095774142_8704828691385398713_46c59b609b69f10af14f5145afdfdd78-768x576.webp" alt="Phối hợp can thiệp hai hệ mạch não và tim trong cùng một đợt nằm viện" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=6" style="color: #0f3775; text-decoration: none;">10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=6" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">04/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46342">Phối hợp can thiệp hai hệ mạch não và tim trong cùng một đợt nằm viện</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46342" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=7" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Bệnh viện Quốc tế City đón bệnh cấp cứu 0 đồng trong phạm vi 15km" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46391" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/08/00000001-768x576.webp" alt="08 nguyên nhân khiến nhồi máu cơ tim ngày càng trẻ hóa, cảnh báo từ chuyên gia" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=7" style="color: #0f3775; text-decoration: none;">Bệnh viện Quốc tế City đón bệnh cấp cứu 0 đồng trong phạm vi 15km</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=7" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">03/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46391">08 nguyên nhân khiến nhồi máu cơ tim ngày càng trẻ hóa, cảnh báo từ chuyên gia</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46391" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=8" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/SEO-SAN-5.webp" alt="Điều trị rối loạn nhịp tim hiệu quả bằng kỹ thuật hiện đại" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=46378" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/08/kk04-768x458.webp" alt="Ký kết hợp tác chiến lược giữa Vietbank và Bệnh viện Gia An 115 – Bệnh viện Quốc tế City" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=8" style="color: #0f3775; text-decoration: none;">Điều trị rối loạn nhịp tim hiệu quả bằng kỹ thuật hiện đại</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=8" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">03/08/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46378">Ký kết hợp tác chiến lược giữa Vietbank và Bệnh viện Gia An 115 – Bệnh viện Quốc tế City</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46378" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=9" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1784637313294_7802592359529439111_7802592359529439111_3ff39bffa229aa52d9d3857daa11f902-1024x683.webp" alt="Chung tay xây dựng cộng đồng an toàn, không ma túy" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46321" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/Tim-mach-01-768x768.webp" alt="Nhồi máu cơ tim: 04 dấu hiệu nhận biết sớm và “thời gian vàng”" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=9" style="color: #0f3775; text-decoration: none;">Chung tay xây dựng cộng đồng an toàn, không ma túy</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=9" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">28/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46321">Nhồi máu cơ tim: 04 dấu hiệu nhận biết sớm và “thời gian vàng”</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46321" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=10" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/01bs.webp" alt="Buổi chia sẻ đặc biệt: Các phương pháp căng chỉ thẩm mỹ cùng GS.BS Kwon Han Jin" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46301" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/06-1-768x512.webp" alt="Tầm soát bệnh lý tim mạch và đột quỵ: Phát hiện sớm để điều trị kịp thời" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=10" style="color: #0f3775; text-decoration: none;">Buổi chia sẻ đặc biệt: Các phương pháp căng chỉ thẩm mỹ cùng GS.BS Kwon Han Jin</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=10" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">27/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46301">Tầm soát bệnh lý tim mạch và đột quỵ: Phát hiện sớm để điều trị kịp thời</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46301" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=11" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3.webp" alt="Khu Y tế Kỹ thuật cao TP.HCM chung tay lan tỏa giá trị chăm sóc sức khỏe cộng đồng" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46237" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/SEO-SAN-5-768x432.webp" alt="Kết hợp phẫu thuật u tuyến giáp và viêm túi mật mạn đồng bộ, giúp rút ngắn thời gian điều trị và hồi phục tốt" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=11" style="color: #0f3775; text-decoration: none;">Khu Y tế Kỹ thuật cao TP.HCM chung tay lan tỏa giá trị chăm sóc sức khỏe cộng đồng</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=11" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">23/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46237">Kết hợp phẫu thuật u tuyến giáp và viêm túi mật mạn đồng bộ, giúp rút ngắn thời gian điều trị và hồi phục tốt</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46237" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=12" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/47-1024x576.webp" alt="Hội thảo tầm soát tim mạch & đột quỵ 2026" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46203" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/16-768x432.webp" alt="Đa chấn thương do tai nạn giao thông: Hành trình giành lại sự sống nhờ điều trị đa chuyên khoa" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=12" style="color: #0f3775; text-decoration: none;">Hội thảo tầm soát tim mạch & đột quỵ 2026</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=12" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">22/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46203">Đa chấn thương do tai nạn giao thông: Hành trình giành lại sự sống nhờ điều trị đa chuyên khoa</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46203" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=13" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1thumb.webp" alt="Khu Y tế Kỹ thuật cao TP.HCM mở rộng hợp tác y tế quốc tế với New Zealand" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46161" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1784637313294_7802592359529439111_7802592359529439111_3ff39bffa229aa52d9d3857daa11f902-768x512.webp" alt="Kết nối sức mạnh y tế tư nhân phía nam: Madam Trần Thị Lâm giữ vai trò chủ tịch chi hội" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=13" style="color: #0f3775; text-decoration: none;">Khu Y tế Kỹ thuật cao TP.HCM mở rộng hợp tác y tế quốc tế với New Zealand</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=13" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">21/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46161">Kết nối sức mạnh y tế tư nhân phía nam: Madam Trần Thị Lâm giữ vai trò chủ tịch chi hội</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46161" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=14" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA-1.webp" alt="Dấu ấn hội thảo thẩm mỹ Nâng cấp phiên bản rạng rỡ sau sinh" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=46147" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/01bs-768x512.webp" alt="Lan tỏa tri thức – Truyền cảm hứng sống khỏe, sống đẹp" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=14" style="color: #0f3775; text-decoration: none;">Dấu ấn hội thảo thẩm mỹ Nâng cấp phiên bản rạng rỡ sau sinh</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=14" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">20/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46147">Lan tỏa tri thức – Truyền cảm hứng sống khỏe, sống đẹp</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46147" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=15" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/huynh-cong-tuan.webp" alt="Bệnh viện Quốc tế City khai mạc chương trình kiểm tra 83 tiêu chí chất lượng" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=46128" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3-768x515.webp" alt="Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=15" style="color: #0f3775; text-decoration: none;">Bệnh viện Quốc tế City khai mạc chương trình kiểm tra 83 tiêu chí chất lượng</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=15" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">20/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46128">Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46128" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=16" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/Ban-sao-cua-CTCH-Truoc-va-sau-PT-thay-khop-hang-2.webp" alt="Nhận biết sớm các biến chứng nguy hiểm của bệnh Zona thần kinh" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46093" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/47-768x432.webp" alt="Sau đuối nước có cần nhập viện không? 3 biến chứng không nên chủ quan" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=16" style="color: #0f3775; text-decoration: none;">Nhận biết sớm các biến chứng nguy hiểm của bệnh Zona thần kinh</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=16" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">18/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46093">Sau đuối nước có cần nhập viện không? 3 biến chứng không nên chủ quan</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46093" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=17" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/AVATAR_DS_NGUOI-THAM-GIA-KHOA-DTTH.webp" alt="Lớp học tiền sản quy mô lớn: Theo dõi thai kỳ khỏe mạnh & Nhận biết dấu hiệu chuyển dạ" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46075" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1thumb-768x474.webp" alt="10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=17" style="color: #0f3775; text-decoration: none;">Lớp học tiền sản quy mô lớn: Theo dõi thai kỳ khỏe mạnh & Nhận biết dấu hiệu chuyển dạ</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=17" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">17/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46075">10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46075" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=18" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA.webp" alt="Bệnh viện Quốc tế City đón tiếp đoàn BMS Japan đến thăm quan và làm việc" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="uu-dai">
+          <a href="chi-tiet-tin-tuc?id=46043" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA-1-768x432.webp" alt="Bệnh viện Quốc tế City đón bệnh cấp cứu 0 đồng trong phạm vi 15km" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Ưu Đãi</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=18" style="color: #0f3775; text-decoration: none;">Bệnh viện Quốc tế City đón tiếp đoàn BMS Japan đến thăm quan và làm việc</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=18" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">15/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46043">Bệnh viện Quốc tế City đón bệnh cấp cứu 0 đồng trong phạm vi 15km</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46043" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=19" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1-1024x683.webp" alt="Bệnh viện Quốc tế City vinh dự đạt Top 3 Thương hiệu tiêu biểu Châu Á - Thái Bình Dương 2026" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46009" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/huynh-cong-tuan-768x501.webp" alt="Ứng dụng công nghệ bản đồ tim 3D điều trị rối loạn nhịp tim" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=19" style="color: #0f3775; text-decoration: none;">Bệnh viện Quốc tế City vinh dự đạt Top 3 Thương hiệu tiêu biểu Châu Á - Thái Bình Dương 2026</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=19" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">13/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46009">Ứng dụng công nghệ bản đồ tim 3D điều trị rối loạn nhịp tim</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46009" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=20" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/COVER-FB-1024x664.webp" alt="Lễ ký kết biên bản ghi nhớ hợp tác MOU giữa Bệnh viện Quốc tế City và Swan Clinic" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=46005" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/Ban-sao-cua-CTCH-Truoc-va-sau-PT-thay-khop-hang-2-768x384.webp" alt="Chung tay xây dựng cộng đồng an toàn, không ma túy" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=20" style="color: #0f3775; text-decoration: none;">Lễ ký kết biên bản ghi nhớ hợp tác MOU giữa Bệnh viện Quốc tế City và Swan Clinic</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=20" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">10/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46005">Chung tay xây dựng cộng đồng an toàn, không ma túy</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46005" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=21" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/07/03cih.webp" alt="Đừng lơ là với các dấu hiệu nhận biết bệnh sốt xuất huyết" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=1" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/SEO-SAN-5.webp" alt="Kết hợp phẫu thuật u tuyến giáp và viêm túi mật mạn đồng bộ, giúp rút ngắn thời gian điều trị và hồi phục tốt" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=21" style="color: #0f3775; text-decoration: none;">Đừng lơ là với các dấu hiệu nhận biết bệnh sốt xuất huyết</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=21" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">23/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=1">Kết hợp phẫu thuật u tuyến giáp và viêm túi mật mạn đồng bộ, giúp rút ngắn thời gian điều trị và hồi phục tốt</a></h3>
+            <a href="chi-tiet-tin-tuc?id=1" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=22" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/23-1024x695.webp" alt="Dấu ấn lớp học tiền sản quy mô kỷ lục tại CIH thu hút hơn 300 mẹ bầu" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=6" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/16-1024x576.webp" alt="Đa chấn thương do tai nạn giao thông: Hành trình giành lại sự sống nhờ điều trị đa chuyên khoa" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=22" style="color: #0f3775; text-decoration: none;">Dấu ấn lớp học tiền sản quy mô kỷ lục tại CIH thu hút hơn 300 mẹ bầu</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=22" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">22/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=6">Đa chấn thương do tai nạn giao thông: Hành trình giành lại sự sống nhờ điều trị đa chuyên khoa</a></h3>
+            <a href="chi-tiet-tin-tuc?id=6" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=23" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/gen-h-z7970607012784_da8e51a562d54b49df86b2b3a4ce400a-1024x683.webp" alt="Hồi phục chức năng tim thận cho bệnh nhân suy tim, suy thận nặng" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=7" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1784637313294_7802592359529439111_7802592359529439111_3ff39bffa229aa52d9d3857daa11f902-1024x683.webp" alt="Kết nối sức mạnh y tế tư nhân phía nam: Madam Trần Thị Lâm giữ vai trò chủ tịch chi hội" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=23" style="color: #0f3775; text-decoration: none;">Hồi phục chức năng tim thận cho bệnh nhân suy tim, suy thận nặng</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=23" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">21/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=7">Kết nối sức mạnh y tế tư nhân phía nam: Madam Trần Thị Lâm giữ vai trò chủ tịch chi hội</a></h3>
+            <a href="chi-tiet-tin-tuc?id=7" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=24" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/AVATAR_DS_NGUOI-HOAN-THANH-KHOA-DTTH.webp" alt="Hội thảo IVF kỹ thuật hỗ trợ sinh sản tiên tiến tháng 5" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=8" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/01bs.webp" alt="Lan tỏa tri thức – Truyền cảm hứng sống khỏe, sống đẹp" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=24" style="color: #0f3775; text-decoration: none;">Hội thảo IVF kỹ thuật hỗ trợ sinh sản tiên tiến tháng 5</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=24" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">20/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=8">Lan tỏa tri thức – Truyền cảm hứng sống khỏe, sống đẹp</a></h3>
+            <a href="chi-tiet-tin-tuc?id=8" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=25" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/2560x1441_anh-bai-web-1024x576.webp" alt="Cắt đại tràng kịp thời cứu sống bệnh nhân ung thư đại tràng" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=9" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3.webp" alt="Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=25" style="color: #0f3775; text-decoration: none;">Cắt đại tràng kịp thời cứu sống bệnh nhân ung thư đại tràng</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=25" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">20/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=9">Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị</a></h3>
+            <a href="chi-tiet-tin-tuc?id=9" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=26" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/z7963775668108_95574c1879a6c5293a4004cbdef162ca-1024x683.webp" alt="Champions League 2026 – kết nối Tinh Thần, bứt phá Giới hạn" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=10" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/47-1024x576.webp" alt="Sau đuối nước có cần nhập viện không? 3 biến chứng không nên chủ quan" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=26" style="color: #0f3775; text-decoration: none;">Champions League 2026 – kết nối Tinh Thần, bứt phá Giới hạn</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=26" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">18/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=10">Sau đuối nước có cần nhập viện không? 3 biến chứng không nên chủ quan</a></h3>
+            <a href="chi-tiet-tin-tuc?id=10" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=27" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB-2-1.webp" alt="Lớp học Tiền sản quy mô lớn Tháng 07: Theo dõi Thai kỳ Phát Triển và Nhận Biết dấu Hiệu Chuyển dạ" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=11" class="news-card__img-link">
+            <img src="https://cih.com.vn/images/12.2023/Bo-him-lin-kt.jpg" alt="Thông tin bảo hiểm" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=27" style="color: #0f3775; text-decoration: none;">Lớp học Tiền sản quy mô lớn Tháng 07: Theo dõi Thai kỳ Phát Triển và Nhận Biết dấu Hiệu Chuyển dạ</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=27" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">01/11/2024</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=11">Thông tin bảo hiểm</a></h3>
+            <a href="chi-tiet-tin-tuc?id=11" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=28" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/AVATAR_DS_NGUOI-THAM-GIA-KHOA-DTTH.webp" alt="Danh Sách Người Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 08/06/2026)" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=12" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1thumb.webp" alt="10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=28" style="color: #0f3775; text-decoration: none;">Danh Sách Người Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 08/06/2026)</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=28" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">17/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=12">10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối</a></h3>
+            <a href="chi-tiet-tin-tuc?id=12" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=29" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB-3.webp" alt="Hội Thảo Thẩm mỹ Tháng 6: Nâng cấp Phiên bản Rạng rỡ sau Sinh" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="uu-dai">
+          <a href="chi-tiet-tin-tuc?id=13" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA-1.webp" alt="Bệnh viện Quốc tế City đón bệnh cấp cứu 0 đồng trong phạm vi 15km" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Ưu Đãi</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=29" style="color: #0f3775; text-decoration: none;">Hội Thảo Thẩm mỹ Tháng 6: Nâng cấp Phiên bản Rạng rỡ sau Sinh</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=29" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">15/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=13">Bệnh viện Quốc tế City đón bệnh cấp cứu 0 đồng trong phạm vi 15km</a></h3>
+            <a href="chi-tiet-tin-tuc?id=13" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=30" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/z7917494357002_7cf835b87626c9c1c39eb4c8fd757b84-1024x677.webp" alt="Bệnh Viện Quốc tế City đón Tiếp Đoàn bms Japan đến Tham Quan và làm Việc" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=15" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/huynh-cong-tuan.webp" alt="Ứng dụng công nghệ bản đồ tim 3D điều trị rối loạn nhịp tim" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=30" style="color: #0f3775; text-decoration: none;">Bệnh Viện Quốc tế City đón Tiếp Đoàn bms Japan đến Tham Quan và làm Việc</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=30" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">13/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=15">Ứng dụng công nghệ bản đồ tim 3D điều trị rối loạn nhịp tim</a></h3>
+            <a href="chi-tiet-tin-tuc?id=15" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=31" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/05/AVATAR_DS_NGUOI-HOAN-THANH-KHOA-DTTH.webp" alt="Cập Nhật Danh Sách Người Hoàn Thành Khóa Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 01/06/2026)" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=17" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/Ban-sao-cua-CTCH-Truoc-va-sau-PT-thay-khop-hang-2.webp" alt="Chung tay xây dựng cộng đồng an toàn, không ma túy" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=31" style="color: #0f3775; text-decoration: none;">Cập Nhật Danh Sách Người Hoàn Thành Khóa Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 01/06/2026)</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=31" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">10/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=17">Chung tay xây dựng cộng đồng an toàn, không ma túy</a></h3>
+            <a href="chi-tiet-tin-tuc?id=17" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=32" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/IMG_8701.webp" alt="Bệnh viện Quốc tế City “Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026”" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=18" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/AVATAR_DS_NGUOI-THAM-GIA-KHOA-DTTH.webp" alt="Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 06/07/2026)" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=32" style="color: #0f3775; text-decoration: none;">Bệnh viện Quốc tế City “Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026”</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=32" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">09/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=18">Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 06/07/2026)</a></h3>
+            <a href="chi-tiet-tin-tuc?id=18" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=33" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/AVATAR_DS_NGUOI-THAM-GIA-KHOA-DTTH.webp" alt="Danh Sách Người Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 26/05/2026)" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=20" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA.webp" alt="Buổi chia sẻ đặc biệt tháng 7: “các phương pháp căng chỉ thẩm mỹ” cùng gs. Bs. Kwon Han Jin" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=33" style="color: #0f3775; text-decoration: none;">Danh Sách Người Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 26/05/2026)</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=33" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">08/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=20">Buổi chia sẻ đặc biệt tháng 7: “các phương pháp căng chỉ thẩm mỹ” cùng gs. Bs. Kwon Han Jin</a></h3>
+            <a href="chi-tiet-tin-tuc?id=20" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=34" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/06/7-1024x683.webp" alt="Chúc Mừng lễ ký kết Biên bản ghi nhớ hợp tác (mou) Giữa Bệnh Viện Quốc tế City và Công ty Tnhh Swan Clinic Thành Công tốt đẹp" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=22" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/1-1024x683.webp" alt="Khu y tế kỹ thuật cao TP.HCM chung tay lan tỏa giá trị chăm sóc sức khỏe cộng đồng" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=34" style="color: #0f3775; text-decoration: none;">Chúc Mừng lễ ký kết Biên bản ghi nhớ hợp tác (mou) Giữa Bệnh Viện Quốc tế City và Công ty Tnhh Swan Clinic Thành Công tốt đẹp</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=34" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">04/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=22">Khu y tế kỹ thuật cao TP.HCM chung tay lan tỏa giá trị chăm sóc sức khỏe cộng đồng</a></h3>
+            <a href="chi-tiet-tin-tuc?id=22" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=35" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2024/09/dung-lo-la-voi-dau-hieu-nhan-biet-benh-sot-xuat-huyet_66f81c066fb61-jpeg.avif" alt="Đừng lơ là với dấu hiệu nhận biết bệnh sốt xuất huyết" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=24" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/COVER-FB-1024x664.webp" alt="Hội thảo Tim mạch – Đột quỵ 2026: Tầm soát sớm bệnh lý tim mạch và đột quỵ để bảo vệ sức khỏe toàn diện" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=35" style="color: #0f3775; text-decoration: none;">Đừng lơ là với dấu hiệu nhận biết bệnh sốt xuất huyết</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=35" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">03/07/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=24">Hội thảo Tim mạch – Đột quỵ 2026: Tầm soát sớm bệnh lý tim mạch và đột quỵ để bảo vệ sức khỏe toàn diện</a></h3>
+            <a href="chi-tiet-tin-tuc?id=24" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.05s;">
-          <a href="chi-tiet-tin-tuc?id=36" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/05/CIH05127-1024x683.webp" alt="Dấu ấn lớp học Tiền sản quy mô kỷ lục tại Bệnh Viện Quốc tế City thu hút gần 400 mẹ bầu" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=26" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/07/03cih.webp" alt="Khu Y tế kỹ thuật cao TP.HCM mở rộng hợp tác y tế quốc tế với New Zealand, thúc đẩy phát triển du lịch y tế" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=36" style="color: #0f3775; text-decoration: none;">Dấu ấn lớp học Tiền sản quy mô kỷ lục tại Bệnh Viện Quốc tế City thu hút gần 400 mẹ bầu</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=36" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">29/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=26">Khu Y tế kỹ thuật cao TP.HCM mở rộng hợp tác y tế quốc tế với New Zealand, thúc đẩy phát triển du lịch y tế</a></h3>
+            <a href="chi-tiet-tin-tuc?id=26" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.1s;">
-          <a href="chi-tiet-tin-tuc?id=37" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/05/Giam-doc-Y-khoa-va-kip-BS-dieu-tri-ca-benh-Huynh-Nhung-70T1.webp" alt="Hồi phục chức năng tim thận cho bệnh nhân suy tim – suy thận nặng" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=27" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/23-1024x695.webp" alt="Dấu ấn hội thảo thẩm mỹ &#8220;nâng cấp phiên bản rạng rỡ sau sinh&#8221;" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=37" style="color: #0f3775; text-decoration: none;">Hồi phục chức năng tim thận cho bệnh nhân suy tim – suy thận nặng</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=37" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">27/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=27">Dấu ấn hội thảo thẩm mỹ &#8220;nâng cấp phiên bản rạng rỡ sau sinh&#8221;</a></h3>
+            <a href="chi-tiet-tin-tuc?id=27" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.15000000000000002s;">
-          <a href="chi-tiet-tin-tuc?id=38" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/05/Hoi-thao-IVF-THANG-5-2026-4.webp" alt="Hội Thảo IVF Tháng 5: chế độ Dinh Dưỡng &#038; Kiểm Soát cân Nặng Trong quá Trình Điều trị IVF" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=28" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/gen-h-z7970607012784_da8e51a562d54b49df86b2b3a4ce400a-1024x683.webp" alt="Khai mạc chương trình kiểm tra 83 tiêu chí, tự kiểm tra đánh giá chất lượng tại Bệnh viện Quốc tế City và Bệnh viện Gia An 115" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=38" style="color: #0f3775; text-decoration: none;">Hội Thảo IVF Tháng 5: chế độ Dinh Dưỡng &#038; Kiểm Soát cân Nặng Trong quá Trình Điều trị IVF</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=38" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">24/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=28">Khai mạc chương trình kiểm tra 83 tiêu chí, tự kiểm tra đánh giá chất lượng tại Bệnh viện Quốc tế City và Bệnh viện Gia An 115</a></h3>
+            <a href="chi-tiet-tin-tuc?id=28" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="chi-tiet-tin-tuc?id=39" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/05/5-2.webp" alt="Cắt đại tràng kịp thời cho bệnh nhân ung thư đại tràng sigma có dấu hiệu bán tắc ruột" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=29" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/02-ctch01.webp" alt="Thay khớp háng thành công cho cụ bà 95 tuổi nhờ phối hợp đồng bộ đa chuyên khoa" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=39" style="color: #0f3775; text-decoration: none;">Cắt đại tràng kịp thời cho bệnh nhân ung thư đại tràng sigma có dấu hiệu bán tắc ruột</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=39" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">24/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=29">Thay khớp háng thành công cho cụ bà 95 tuổi nhờ phối hợp đồng bộ đa chuyên khoa</a></h3>
+            <a href="chi-tiet-tin-tuc?id=29" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
 
-        <article class="news-card-v2 animate-fade-up" style="animation-delay: 0.0s;">
-          <a href="chi-tiet-tin-tuc?id=40" class="news-card-v2__img-link">
-            <span class="news-card-v2__logo"><img src="images/logo_cih_acci.png" alt="CIH Logo"></span>
-            <img src="https://cih.com.vn/wp-content/uploads/2026/05/AVATAR_DS_NGUOI-HOAN-THANH-KHOA-DTTH.webp" alt="Cập Nhật Danh Sách Người Hoàn Thành Khóa Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 17/05/2026)" class="news-card-v2__img" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=30" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/AVATAR_DS_NGUOI-HOAN-THANH-KHOA-DTTH.webp" alt="Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 22/06/2026)" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
           </a>
-          <div class="news-card-v2__body" style="padding: 1.25rem;">
-            <h3 class="news-card-v2__title" style="text-transform: none; font-weight: 700; font-size: 1.05rem; line-height: 1.45; margin-bottom: 1rem;">
-              <a href="chi-tiet-tin-tuc?id=40" style="color: #0f3775; text-decoration: none;">Cập Nhật Danh Sách Người Hoàn Thành Khóa Thực Hành Khám Bệnh, Chữa Bệnh tại Bệnh Viện Quốc tế City năm 2026 (tính đến Ngày 17/05/2026)</a>
-            </h3>
-            <a href="chi-tiet-tin-tuc?id=40" class="news-card-v2__more" style="font-size: 0.875rem; font-weight: 700; color: var(--c-primary); display: inline-flex; align-items: center; gap: 4px; margin-top: auto;">
-              Xem thêm →
-            </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">24/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=30">Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 22/06/2026)</a></h3>
+            <a href="chi-tiet-tin-tuc?id=30" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=33" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/2560x1441_anh-bai-web-1024x576.webp" alt="Biến chứng zona: Nam du khách canada 23 tuổi nhập viện sau gần 48 giờ khởi phát" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">23/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=33">Biến chứng zona: Nam du khách canada 23 tuổi nhập viện sau gần 48 giờ khởi phát</a></h3>
+            <a href="chi-tiet-tin-tuc?id=33" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=34" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/z7963775668108_95574c1879a6c5293a4004cbdef162ca-1024x683.webp" alt="Champions league 2026 – Kết nối tinh thần, bứt phá giới hạn" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">22/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=34">Champions league 2026 – Kết nối tinh thần, bứt phá giới hạn</a></h3>
+            <a href="chi-tiet-tin-tuc?id=34" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=35" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB-2-1.webp" alt="Lớp học tiền sản quy mô lớn tháng 07: Theo dõi thai kỳ phát triển và nhận biết dấu hiệu chuyển dạ" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">22/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=35">Lớp học tiền sản quy mô lớn tháng 07: Theo dõi thai kỳ phát triển và nhận biết dấu hiệu chuyển dạ</a></h3>
+            <a href="chi-tiet-tin-tuc?id=35" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=36" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/AVATAR_DS_NGUOI-THAM-GIA-KHOA-DTTH.webp" alt="Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 08/06/2026)" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">11/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=36">Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 08/06/2026)</a></h3>
+            <a href="chi-tiet-tin-tuc?id=36" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=37" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB-3.webp" alt="Hội thảo thẩm mỹ tháng 6: Nâng cấp phiên bản rạng rỡ sau sinh" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">10/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=37">Hội thảo thẩm mỹ tháng 6: Nâng cấp phiên bản rạng rỡ sau sinh</a></h3>
+            <a href="chi-tiet-tin-tuc?id=37" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=38" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/z7917494357002_7cf835b87626c9c1c39eb4c8fd757b84-1024x677.webp" alt="Bệnh viện Quốc tế City đón tiếp đoàn bms japan đến tham quan và làm việc" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">10/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=38">Bệnh viện Quốc tế City đón tiếp đoàn bms japan đến tham quan và làm việc</a></h3>
+            <a href="chi-tiet-tin-tuc?id=38" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=39" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/05/AVATAR_DS_NGUOI-HOAN-THANH-KHOA-DTTH.webp" alt="Cập nhật danh sách người hoàn thành khóa thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 01/06/2026)" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">10/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=39">Cập nhật danh sách người hoàn thành khóa thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 01/06/2026)</a></h3>
+            <a href="chi-tiet-tin-tuc?id=39" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="uu-dai">
+          <a href="chi-tiet-tin-tuc?id=40" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/TONG-QUAN-CTRINH-1-1024x853.webp" alt="Giảm 50% phí khám chuyên khoa – Tri ân khách hàng thân thiết" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Ưu Đãi</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">06/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=40">Giảm 50% phí khám chuyên khoa – Tri ân khách hàng thân thiết</a></h3>
+            <a href="chi-tiet-tin-tuc?id=40" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="giai-thuong">
+          <a href="chi-tiet-tin-tuc?id=41" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/IMG_8701.webp" alt="Bệnh viện Quốc tế City “Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026”" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Giải Thưởng</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">04/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=41">Bệnh viện Quốc tế City “Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026”</a></h3>
+            <a href="chi-tiet-tin-tuc?id=41" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="uu-dai">
+          <a href="chi-tiet-tin-tuc?id=42" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB.webp" alt="Ưu đãi khách mới: Khám chuyên khoa miễn phí 100% – Tặng thêm 50% siêu âm hoặc chụp x-quang" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Ưu Đãi</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">03/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=42">Ưu đãi khách mới: Khám chuyên khoa miễn phí 100% – Tặng thêm 50% siêu âm hoặc chụp x-quang</a></h3>
+            <a href="chi-tiet-tin-tuc?id=42" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=44" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/AVATAR_DS_NGUOI-THAM-GIA-KHOA-DTTH.webp" alt="Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 26/05/2026)" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">02/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44">Danh sách người thực hành khám bệnh, chữa bệnh tại Bệnh viện Quốc tế City năm 2026 (tính đến ngày 26/05/2026)</a></h3>
+            <a href="chi-tiet-tin-tuc?id=44" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=45" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/06/7-1024x683.webp" alt="Chúc mừng lễ ký kết biên bản ghi nhớ hợp tác (mou) giữa Bệnh viện Quốc tế City và công ty tnhh swan clinic thành công tốt đẹp" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">02/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=45">Chúc mừng lễ ký kết biên bản ghi nhớ hợp tác (mou) giữa Bệnh viện Quốc tế City và công ty tnhh swan clinic thành công tốt đẹp</a></h3>
+            <a href="chi-tiet-tin-tuc?id=45" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=46" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2024/09/dung-lo-la-voi-dau-hieu-nhan-biet-benh-sot-xuat-huyet_66f81c066fb61-jpeg.avif" alt="Đừng lơ là với dấu hiệu nhận biết bệnh sốt xuất huyết" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">02/06/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46">Đừng lơ là với dấu hiệu nhận biết bệnh sốt xuất huyết</a></h3>
+            <a href="chi-tiet-tin-tuc?id=46" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=47" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/05/CIH05127-1024x683.webp" alt="Dấu ấn lớp học tiền sản quy mô kỷ lục tại Bệnh viện Quốc tế City thu hút gần 400 mẹ bầu" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">30/05/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=47">Dấu ấn lớp học tiền sản quy mô kỷ lục tại Bệnh viện Quốc tế City thu hút gần 400 mẹ bầu</a></h3>
+            <a href="chi-tiet-tin-tuc?id=47" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=48" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/05/Giam-doc-Y-khoa-va-kip-BS-dieu-tri-ca-benh-Huynh-Nhung-70T1.webp" alt="Hồi phục chức năng tim thận cho bệnh nhân suy tim – Suy thận nặng" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">28/05/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=48">Hồi phục chức năng tim thận cho bệnh nhân suy tim – Suy thận nặng</a></h3>
+            <a href="chi-tiet-tin-tuc?id=48" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="tin-tuc-hoat-dong">
+          <a href="chi-tiet-tin-tuc?id=49" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/05/Hoi-thao-IVF-THANG-5-2026-4.webp" alt="Hội thảo ivf tháng 5: Chế độ dinh dưỡng &#038; kiểm soát cân nặng trong quá trình điều trị ivf" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Tin Tức Hoạt Động</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">25/05/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=49">Hội thảo ivf tháng 5: Chế độ dinh dưỡng &#038; kiểm soát cân nặng trong quá trình điều trị ivf</a></h3>
+            <a href="chi-tiet-tin-tuc?id=49" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+          </div>
+        </article>
+
+        <article class="news-card news-card--standard" data-category="kien-thuc-y-khoa">
+          <a href="chi-tiet-tin-tuc?id=50" class="news-card__img-link">
+            <img src="https://cih.com.vn/wp-content/uploads/2026/05/5-2.webp" alt="Cắt đại tràng kịp thời cho bệnh nhân ung thư đại tràng sigma có dấu hiệu bán tắc ruột" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <span class="news-card__cat">Kiến Thức Y Khoa</span>
+          </a>
+          <div class="news-card__body">
+            <div class="news-card__meta">22/05/2026</div>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=50">Cắt đại tràng kịp thời cho bệnh nhân ung thư đại tràng sigma có dấu hiệu bán tắc ruột</a></h3>
+            <a href="chi-tiet-tin-tuc?id=50" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>
       </div>
     </div>
+
+    <!-- Pagination -->
+    <div class="doctor-pagination" id="news-pagination" style="margin: 3rem auto 1rem auto; display: flex; justify-content: center; align-items: center; gap: 0.6rem; flex-wrap: wrap;"></div>
 
   </div>
 </main>
@@ -946,7 +1067,7 @@
         <div class="footer__logo">
           <img src="images/logo_cih_acci.png"
                alt="" class="footer__logo-img"
-               onerror="this.style.display='none'" />
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
@@ -968,41 +1089,35 @@
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
-          <li><a href="chuyen-khoa">Chuyên khoa</a></li>
-          <li><a href="bac-si">Bác sĩ</a></li>
-          <li><a href="goi-kham">Gói dịch vụ</a></li>
+          <li><a href="ve-chung-toi">Về Chúng Tôi</a></li>
+          <li><a href="chuyen-khoa">Chuyên Khoa</a></li>
+          <li><a href="bac-si">Đội Ngũ Bác Sĩ</a></li>
+          <li><a href="goi-kham">Gói Dịch Vụ</a></li>
+          <li><a href="tin-tuc">Tin Tức &amp; Sự Kiện</a></li>
+          <li><a href="lien-he">Liên Hệ &amp; Đặt Lịch</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
-        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
-        <ul class="footer__links">
-          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
-          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4 class="footer__heading">LIÊN HỆ</h4>
-        <ul class="footer__contact">
+        <h4 class="footer__heading">THÔNG TIN LIÊN HỆ</h4>
+        <ul class="footer__contact-list">
           <li>
             <span class="footer__contact-icon" style="margin-top: 2px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -1012,11 +1127,19 @@
           </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -1024,11 +1147,7 @@
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -1045,87 +1164,111 @@
   </a>
 </div>
 
-<script src="script.js"></script>
+<script src="news_data.js"></script>
+<script src="script.js?v=1787643496"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const catButtons = document.querySelectorAll('.news-cat-btn');
-    const newsCards = document.querySelectorAll('.news-card-v2');
+  function initNewsPage() {
+    const tabs = document.querySelectorAll('.news-category-bar .news-cat-btn');
+    const newsCards = Array.from(document.querySelectorAll('.news-grid-3 > .news-card'));
+    const paginationContainer = document.getElementById('news-pagination');
+    const ITEMS_PER_PAGE = 9;
+    let currentPage = 1;
+    let currentFilter = 'all';
 
-    catButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Toggle active button
-        catButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const cat = btn.getAttribute('data-cat');
-
-        newsCards.forEach(card => {
-          const cardCat = card.getAttribute('data-category');
-          
-          if (cat === 'all' || cardCat === cat) {
-            // Hiển thị lại card
-            card.style.display = 'flex';
-            // Trigger animation nhẹ
-            setTimeout(() => {
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            }, 30);
-          } else {
-            // Ẩn card với hiệu ứng mờ dần
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(15px)';
-            setTimeout(() => {
-              card.style.display = 'none';
-            }, 300);
-          }
-        });
+    function getMatchingCards() {
+      return newsCards.filter(card => {
+        const cat = card.getAttribute('data-category');
+        return (currentFilter === 'all' || cat === currentFilter);
       });
-    });
+    }
 
-    // Hỗ trợ lọc trực tiếp không cần load lại trang nếu click menu ngay trên trang tin tức
-    const dropdownLinks = document.querySelectorAll('.nav__dropdown a[href^="tin-tuc.html?cat="]');
-    dropdownLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        const cat = href.split('cat=')[1];
-        if (cat) {
-          const targetBtn = document.querySelector(`.news-cat-btn[data-cat="${cat}"]`);
-          if (targetBtn) {
-            e.preventDefault();
-            // Cập nhật thanh địa chỉ mà không reload trang
-            window.history.pushState({}, '', href);
-            targetBtn.click();
-            
-            // Cuộn màn hình xuống khu vực tin tức
-            const categoryBar = document.querySelector('.news-category-bar');
-            if (categoryBar) {
-              categoryBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          }
+    function renderPaginationControls(totalPages) {
+      if (!paginationContainer) return;
+      if (totalPages <= 1) {
+        paginationContainer.innerHTML = '';
+        return;
+      }
+
+      let html = `<button type="button" class="page-btn ${currentPage === 1 ? 'disabled' : ''}" ${currentPage === 1 ? 'disabled' : ''} onclick="changeNewsPage(${currentPage - 1})">‹ Trước</button>`;
+
+      for (let p = 1; p <= totalPages; p++) {
+        html += `<button type="button" class="page-btn ${p === currentPage ? 'active' : ''}" onclick="changeNewsPage(${p})">${p}</button>`;
+      }
+
+      html += `<button type="button" class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" ${currentPage === totalPages ? 'disabled' : ''} onclick="changeNewsPage(${currentPage + 1})">Sau ›</button>`;
+
+      paginationContainer.innerHTML = html;
+    }
+
+    function updateNewsDisplay() {
+      const matchingCards = getMatchingCards();
+      const totalPages = Math.ceil(matchingCards.length / ITEMS_PER_PAGE) || 1;
+
+      if (currentPage > totalPages) currentPage = 1;
+      if (currentPage < 1) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
+
+      newsCards.forEach(card => {
+        card.classList.remove('is-visible');
+        card.style.setProperty('display', 'none', 'important');
+      });
+
+      matchingCards.forEach((card, index) => {
+        if (index >= startIndex && index < endIndex) {
+          card.classList.add('is-visible');
+          card.style.setProperty('display', 'flex', 'important');
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
         }
       });
+
+      renderPaginationControls(totalPages);
+    }
+
+    window.changeNewsPage = function(newPage) {
+      currentPage = newPage;
+      updateNewsDisplay();
+      const categoryBar = document.querySelector('.news-category-bar') || document.querySelector('.news-grid-3');
+      if (categoryBar) {
+        categoryBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentFilter = tab.getAttribute('data-cat') || 'all';
+        currentPage = 1;
+        updateNewsDisplay();
+      });
     });
 
-    // Kiểm tra URL parameters để tự động lọc khi chuyển trang từ menu con
+    // Check URL parameters for category (?cat=...)
     const urlParams = new URLSearchParams(window.location.search);
     const catParam = urlParams.get('cat');
     if (catParam) {
       const targetBtn = document.querySelector(`.news-cat-btn[data-cat="${catParam}"]`);
       if (targetBtn) {
-        // Trigger click lọc bài viết ngay lập tức
         targetBtn.click();
-        
-        // Cuộn màn hình nhẹ nhàng xuống khu vực danh sách tin tức sau khi trang tải xong
-        setTimeout(() => {
-          const categoryBar = document.querySelector('.news-category-bar');
-          if (categoryBar) {
-            categoryBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 400);
+        return;
       }
     }
-  });
+
+    updateNewsDisplay();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNewsPage);
+  } else {
+    initNewsPage();
+  }
 </script>
-<script src="booking_modal.js"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -3,13 +3,15 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thẻ Hội Viên CIH | Bệnh viện Quốc tế City</title>
   <meta name="description" content="Chương trình Thẻ Hội Viên Bệnh viện Quốc tế City (CIH). Sở hữu các đặc quyền chăm sóc sức khỏe, khám miễn phí chuyên gia và ưu đãi dịch vụ tối ưu." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
   <style>
     /* Membership landing page specific styles */
     .member-grid {
@@ -914,20 +916,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -938,8 +969,8 @@
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
       <img src="images/logo_cih_acci.png"
-           alt="" class="header__logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+           alt="Bệnh viện Quốc tế City" class="header__logo-img"
+           onerror="this.onerror=null; this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
       <div id="logo-fallback" class="logo-fallback" style="display:none">
         <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
       </div>
@@ -948,65 +979,43 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
-        <li class="nav__item nav__item--has-dropdown">
-          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
-          <div class="nav__dropdown">
-            <div class="dropdown__grid">
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Nội Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
-                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Ngoại Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
-                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
-                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
-                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chẩn Đoán</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
-              </div>
-            </div>
-          </div>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
         </li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
@@ -1014,8 +1023,8 @@
 <!-- BREADCRUMBS -->
 <div class="breadcrumbs-bar" style="background: var(--c-bg); padding: 1rem 0 0.5rem 0;">
   <div class="container">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.8rem; color: var(--c-text3);">
-      <a href="./" style="color: var(--c-text2); text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span>Thẻ Thành Viên</span>
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.8rem; color: #000000;">
+      <a href="./" style="color: var(--c-text2); text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span>Thẻ thành viên</span>
     </div>
   </div>
 </div>
@@ -1024,13 +1033,13 @@
 <section class="member-banner-slider">
   <div class="slider-container">
     <div class="slide active">
-      <img src="images/membership_banner1.png" alt="Thẻ Hội Viên CIH Banner 1" class="member-banner-image" />
+      <img src="images/membership_banner1.png" alt="Thẻ Hội Viên CIH Banner 1" class="member-banner-image" loading="lazy" />
     </div>
     <div class="slide">
-      <img src="images/membership_banner2.png" alt="Thẻ Hội Viên CIH Banner 2" class="member-banner-image" />
+      <img src="images/membership_banner2.png" alt="Thẻ Hội Viên CIH Banner 2" class="member-banner-image" loading="lazy" />
     </div>
     <div class="slide">
-      <img src="images/membership_banner3.png" alt="Thẻ Hội Viên CIH Banner 3" class="member-banner-image" />
+      <img src="images/membership_banner3.png" alt="Thẻ Hội Viên CIH Banner 3" class="member-banner-image" loading="lazy" />
     </div>
     
     <!-- Navigation Arrows -->
@@ -1056,7 +1065,7 @@
     <div class="member-grid" id="dat-mua">
       <!-- Silver -->
       <div class="member-card member-card--silver" onclick="toggleMemberCard(this, event)">
-        <img src="images/Bac.png" alt="Thẻ Bạc CIH" class="member-card__img" />
+        <img src="images/Bac.png" alt="Thẻ Bạc CIH" class="member-card__img" loading="lazy" />
         <h2 class="member-card__title">Thẻ Bạc</h2>
         <div class="member-card__price">1.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
@@ -1075,7 +1084,7 @@
 
       <!-- Gold -->
       <div class="member-card member-card--gold" onclick="toggleMemberCard(this, event)">
-        <img src="images/Vang.png" alt="Thẻ Vàng CIH" class="member-card__img" />
+        <img src="images/Vang.png" alt="Thẻ Vàng CIH" class="member-card__img" loading="lazy" />
         <h2 class="member-card__title">Thẻ Vàng</h2>
         <div class="member-card__price">3.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
@@ -1094,7 +1103,7 @@
 
       <!-- Platinum -->
       <div class="member-card member-card--platinum" onclick="toggleMemberCard(this, event)">
-        <img src="images/Bach_Kim.png" alt="Thẻ Bạch Kim CIH" class="member-card__img" />
+        <img src="images/Bach_Kim.png" alt="Thẻ Bạch Kim CIH" class="member-card__img" loading="lazy" />
         <h2 class="member-card__title">Thẻ Bạch Kim</h2>
         <div class="member-card__price">5.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
@@ -1113,7 +1122,7 @@
 
       <!-- Diamond -->
       <div class="member-card member-card--diamond" onclick="toggleMemberCard(this, event)">
-        <img src="images/Kim_Cuong.png" alt="Thẻ Kim Cương CIH" class="member-card__img" />
+        <img src="images/Kim_Cuong.png" alt="Thẻ Kim Cương CIH" class="member-card__img" loading="lazy" />
         <h2 class="member-card__title">Thẻ Kim Cương</h2>
         <div class="member-card__price">20.000.000 VNĐ <span class="member-card__price-sub">/ năm</span></div>
         <div class="member-card__toggle-link">Xem chi tiết ▾</div>
@@ -1808,7 +1817,7 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
         <div class="footer__logo">
           <img src="images/logo_cih_acci.png"
                alt="" class="footer__logo-img"
-               onerror="this.style.display='none'" />
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
@@ -1830,41 +1839,33 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
-        <ul class="footer__links">
-          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
-          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
-          <li>
+          <li class="footer__contact-address">
             <span class="footer__contact-icon" style="margin-top: 2px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -1874,11 +1875,19 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
           </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -1886,11 +1895,7 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -1907,7 +1912,7 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
   </a>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=1787643496"></script>
 <script>
   // FAQ Tab switching logic
   function switchFaqTab(groupId) {
@@ -2056,6 +2061,8 @@ Bệnh viện Quốc tế City sẽ liên hệ tư vấn về thẻ hội viên 
     initSlider();
   });
 </script>
-<script src="booking_modal.js"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

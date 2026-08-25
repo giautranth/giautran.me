@@ -905,18 +905,22 @@ body {
 
 .infinite-marquee-track {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   width: max-content;
   will-change: transform;
-  animation: infiniteScroll 30s linear infinite;
+  animation: infiniteScroll 55s linear infinite;
 }
 
 .infinite-marquee-track.reverse {
-  animation: infiniteScrollReverse 32s linear infinite;
+  animation: infiniteScrollReverse 55s linear infinite;
 }
 
 .infinite-marquee-wrapper:hover .infinite-marquee-track {
-  animation-play-state: paused;
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  will-change: transform;
+  animation: infiniteScroll 55s linear infinite;
 }
 
 @keyframes infiniteScroll {
@@ -964,15 +968,7 @@ body {
 }
 
 .member-partner-card .card-badge-type {
-  position: absolute;
-  top: 5px;
-  right: 7px;
-  font-size: 0.62rem;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  text-transform: uppercase;
-  padding: 1px 6px;
-  border-radius: 4px;
+  display: none !important;
 }
 
 .member-partner-card .card-badge-type.hospital {

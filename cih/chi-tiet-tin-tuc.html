@@ -3,13 +3,15 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="page-head-title">Chi Tiết Tin Tức | Bệnh viện Quốc tế City</title>
   <meta name="description" content="Thông tin y khoa chính thức và tin tức sự kiện từ Bệnh viện Quốc tế City – City International Hospital." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026072308" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
 </head>
 <body style="background: #f8fafc;">
 
@@ -20,20 +22,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -43,20 +74,44 @@
     </button>
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
-      <img src="images/logo_cih_acci.png" alt="" class="header__logo-img" onerror="this.style.display='none'" />
+      <img src="images/logo_cih_acci.png" alt="Bệnh viện Quốc tế City" class="header__logo-img" onerror="this.onerror=null; this.style.display='none'" />
     </a>
 
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -67,10 +122,10 @@
 </header>
 
 <!-- BREADCRUMBS BANNER -->
-<section class="subpage-hero" style="padding: 1.25rem 0; background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+<section class="subpage-hero" style="padding: 0.35rem 0; background: #ffffff; border-bottom: 1px solid #e2e8f0;">
   <div class="container subpage-hero__inner" style="max-width: 960px;">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b;">
-      <a href="./">Trang Chủ</a> &nbsp;»&nbsp; <a href="tin-tuc">Tin Tức</a> &nbsp;»&nbsp; <span id="bread-title" style="color: #0f3775; font-weight: 600;">Chi Tiết Bài Viết</span>
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000;">
+      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Tin tức</span>
     </div>
   </div>
 </section>
@@ -82,57 +137,51 @@
     <article class="article-detail-wrap" style="background: #ffffff; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
       
       <!-- Article Title Uppercase Blue -->
-      <h1 id="art-title" style="font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 900; line-height: 1.35; color: #0f3775; text-transform: uppercase; margin-bottom: 1.25rem; letter-spacing: -0.3px;">
+      <h1 id="art-title" style="font-size: clamp(1.25rem, 2vw, 1.55rem); font-weight: 800; line-height: 1.4; color: #007DA5; text-transform: uppercase; margin-bottom: 1.25rem; letter-spacing: -0.2px;">
         Tiêu đề bài viết
       </h1>
 
-      <!-- Meta Bar under Title (Tâm Anh Style) -->
-      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; padding-bottom: 1.25rem; border-bottom: 1px solid #f1f5f9;">
-        
+      <!-- Meta Bar under Title -->
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid #f1f5f9;">
         <!-- Date -->
         <span id="art-date" style="font-size: 0.875rem; color: #64748b; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
           📅 <span id="art-date-val">23/07/2026</span>
         </span>
-
-        <!-- Google News Follow Badge -->
-        <a href="https://news.google.com" target="_blank" rel="noopener" style="background: #f1f5f9; padding: 0.35rem 0.9rem; border-radius: 99px; font-size: 0.8rem; font-weight: 600; color: #475569; display: inline-flex; align-items: center; gap: 5px; text-decoration: none; border: 1px solid #e2e8f0; transition: background 0.2s;">
-          Theo dõi Bệnh viện Quốc tế City trên <span style="font-weight: 800;"><span style="color: #4285f4;">G</span><span style="color: #ea4335;">o</span><span style="color: #fbbc05;">o</span><span style="color: #4285f4;">g</span><span style="color: #34a853;">l</span><span style="color: #ea4335;">e</span> News</span>
-        </a>
-
-        <!-- Tag Button right-aligned -->
-        <span id="art-cat" style="margin-left: auto; background: #0f3775; color: #ffffff; font-size: 0.8rem; font-weight: 700; padding: 0.45rem 1.25rem; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 2px 6px rgba(15, 55, 117, 0.2);">
-          BỆNH VIỆN QUỐC TẾ CITY
-        </span>
       </div>
 
       <!-- Article Body -->
-      <div id="art-body" style="font-size: 1.05rem; line-height: 1.85; color: #334155; text-align: justify; text-justify: inter-word;">
+      <div id="art-body" style="font-size: 1.05rem; line-height: 1.85; color: #334155; text-align: justify; text-justify: inter-word; overflow: hidden; word-wrap: break-word; overflow-wrap: break-word;">
+        <style>
+          #art-body img { max-width: 100% !important; height: auto !important; border-radius: 8px; display: block; margin: 1rem auto; }
+          #art-body figure { max-width: 100% !important; margin: 1.5rem 0; }
+          #art-body iframe { max-width: 100% !important; }
+          #art-body table { max-width: 100%; overflow-x: auto; display: block; }
+          #art-body .wp-block-image, #art-body .wp-block-gallery { max-width: 100% !important; }
+          #art-body p { margin-bottom: 1rem !important; }
+          #art-body h2, #art-body h3 { color: #0f3775; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 700; }
+          #art-body ul, #art-body ol { padding-left: 1.75rem !important; margin-bottom: 1.25rem !important; }
+          #art-body ul { list-style-type: disc !important; }
+          #art-body ol { list-style-type: decimal !important; }
+          #art-body ul li, #art-body ol li { display: list-item !important; margin-bottom: 0.5rem !important; line-height: 1.8 !important; color: #334155 !important; }
+          #art-body a { color: #005f80; text-decoration: underline; }
+          #art-body img { max-width: 100% !important; height: auto !important; max-height: 500px !important; object-fit: contain !important; display: block; margin: 1rem auto; }
+          #art-body figure { max-width: 100% !important; overflow: hidden; }
+          #art-body h2 { font-size: 1.25rem !important; margin-top: 2rem !important; margin-bottom: 0.75rem !important; color: #0f3775 !important; }
+          #art-body h3 { font-size: 1.1rem !important; margin-top: 1.5rem !important; margin-bottom: 0.5rem !important; color: #0f3775 !important; }
+          #art-body blockquote { border-left: 4px solid #007DA5; padding: 0.75rem 1.25rem; margin: 1.5rem 0; background: #f0f9ff; border-radius: 0 8px 8px 0; font-style: italic; color: #475569; }
+          #art-body figcaption, #art-body .wp-caption-text { text-align: center; font-size: 0.875rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
+        </style>
         <p>Đang tải nội dung bài viết...</p>
       </div>
 
-      <!-- Social Media Share Bar (Tâm Anh Style with Icons) -->
-      <div style="margin-top: 3.5rem; padding-top: 1.75rem; border-top: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-        <span style="font-weight: 700; color: #0f3775; font-size: 0.95rem;">Chia sẻ bài viết này:</span>
+      <!-- Social Media Share Bar (Only Facebook & Copy Link) -->
+      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+        <span style="font-weight: 700; color: #007DA5; font-size: 0.95rem;">Chia sẻ bài viết này:</span>
         <div style="display: flex; gap: 0.75rem; align-items: center;">
           
           <!-- Facebook Icon -->
           <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener" title="Chia sẻ qua Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: #fff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, opacity 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-
-          <!-- Zalo Icon -->
-          <a href="#" target="_blank" rel="noopener" title="Chia sẻ qua Zalo" style="width: 40px; height: 40px; border-radius: 50%; background: #0068ff; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.75rem; text-decoration: none; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            Zalo
-          </a>
-
-          <!-- Messenger Icon -->
-          <a href="#" target="_blank" rel="noopener" title="Chia sẻ qua Messenger" style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #0084ff, #a033ff); color: #fff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111C24 4.974 18.627 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26 6.559-6.963 3.13 3.259 5.889-3.259-6.56 6.964z"/></svg>
-          </a>
-
-          <!-- Email Icon -->
-          <a href="mailto:?subject=Chia%20s%E1%BA%A3%20b%C3%A0i%20vi%E1%BA%BFt&body=Link:%20" title="Gửi Email" style="width: 40px; height: 40px; border-radius: 50%; background: #ea4335; color: #fff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           </a>
 
           <!-- Copy Link Button -->
@@ -142,20 +191,23 @@
         </div>
       </div>
 
-      <!-- Related Articles Row -->
-      <div style="margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+      <!-- Related Articles Row Slider -->
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
         
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
-          <h3 style="font-size: 1.3rem; font-weight: 800; color: #0f3775; margin: 0; text-transform: uppercase;">
-            Bài viết liên quan
-          </h3>
-          <div style="display: flex; gap: 0.5rem;">
-            <button id="rel-prev-btn" aria-label="Bài trước" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #0f3775; font-size: 1.4rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.05);" onmouseover="this.style.background='#0f3775';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#0f3775';">‹</button>
-            <button id="rel-next-btn" aria-label="Bài sau" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #0f3775; font-size: 1.4rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.05);" onmouseover="this.style.background='#0f3775';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#0f3775';">›</button>
-          </div>
-        </div>
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #007DA5; margin-bottom: 1.5rem; text-transform: uppercase;">
+          Bài viết liên quan
+        </h3>
 
-        <div id="related-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;"></div>
+        <div style="position: relative; padding: 0 1rem;">
+          <!-- Slider Prev Arrow (Left Middle) -->
+          <button id="rel-prev-btn" aria-label="Bài trước" style="position: absolute; left: -18px; top: 50%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">‹</button>
+
+          <!-- Cards Grid -->
+          <div id="related-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;"></div>
+
+          <!-- Slider Next Arrow (Right Middle) -->
+          <button id="rel-next-btn" aria-label="Bài sau" style="position: absolute; right: -18px; top: 50%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">›</button>
+        </div>
       </div>
 
     </article>
@@ -169,51 +221,253 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <div class="footer__logo">
-          <img src="images/logo_cih_acci.png" alt="" class="footer__logo-img" onerror="this.style.display='none'" />
+          <img src="images/logo_cih_acci.png"
+               alt="" class="footer__logo-img"
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
-          <p class="footer__license">Số đăng ký kinh doanh: 0310898993 cấp bởi Sở Kế hoạch và Đầu tư TP. HCM.</p>
+          <p class="footer__license">Số đăng ký kinh doanh: 0310898993 cấp bởi Sở Kế hoạch và Đầu tư TP. HCM, đăng ký lần đầu ngày 03/06/2011.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/benhvienquoctecity" class="footer__soc-btn" id="footer-fb" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V1h-4c-3 0-5 2-5 5v2z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@bvqtcity" class="footer__soc-btn" id="footer-yt" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1.1-1.2-2-2.3-2.3C19.2 3.5 12 3.5 12 3.5s-7.2 0-9.2.4c-1.1.3-2 1.2-2.3 2.3C.1 8.2.1 12 .1 12s0 3.8.4 5.8c.3 1.1 1.2 2 2.3 2.3 2 .4 9.2.4 9.2.4s7.2 0 9.2-.4c1.1-.3 2-1.2 2.3-2.3.4-2 .4-5.8.4-5.8s0-3.8-.4-5.8zM9.5 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@benhvienquoctecity" class="footer__soc-btn" id="footer-tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 3v11.7c0 2-1.7 3.8-3.8 3.8a3.8 3.8 0 0 1-3.8-3.8c0-2 1.7-3.8 3.8-3.8.3 0 .7.1 1 .2V7.1a7.8 7.8 0 0 0-4.8 1c-1.8 1.1-3 3-3 5.3a7.8 7.8 0 0 0 7.8 7.8 7.8 7.8 0 0 0 7.8-7.8V8.2c1.3.9 3 1.5 4.8 1.5V6a4.8 4.8 0 0 1-4-2.2V3h-3z"/></svg>
+          </a>
         </div>
       </div>
+
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
+
       <div class="footer__col">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
-          <li><span>Địa chỉ: Số 3 Đường 17A, Phường An Lạc, TP. HCM</span></li>
-          <li><span>Tổng đài: <a href="tel:19008146"><strong>1900 8146</strong></a></span></li>
+          <li class="footer__contact-address">
+            <span class="footer__contact-icon" style="margin-top: 2px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <span>Email: &nbsp;<a href="mailto:truyenthong@cih.com.vn">truyenthong@cih.com.vn</a></span>
+          </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=1787643496"></script>
 <script src="news_data.js"></script>
 <script>
+  function formatNewsDate(dStr) {
+    if (!dStr) return '';
+    dStr = String(dStr).trim();
+    const ymdMatch = dStr.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})/);
+    if (ymdMatch) {
+      const y = ymdMatch[1];
+      const m = ymdMatch[2].padStart(2, '0');
+      const d = ymdMatch[3].padStart(2, '0');
+      return `${d}/${m}/${y}`;
+    }
+    const dmyMatch = dStr.match(/^(\d{1,2})[-/](\d{1,2})[-/](\d{4})/);
+    if (dmyMatch) {
+      const d = dmyMatch[1].padStart(2, '0');
+      const m = dmyMatch[2].padStart(2, '0');
+      const y = dmyMatch[3];
+      return `${d}/${m}/${y}`;
+    }
+    return dStr;
+  }
+
+  function formatTitleCase(str) {
+    if (!str) return '';
+    str = String(str).trim();
+    const letters = str.replace(/[^a-zA-ZàáảãạâầấẩẫậăằắẳẵặèéẻẽẹêềếểễệđìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵĐÀÁẢÃẠÂẦẤẨẪẬĂẰẮẲẴẶÈÉẺẼẸÊỀẾỂỄỆÌÍỈĨỊÒÓỎÕỌÔỒỐỔỖỘƠỜỚỞỠỢÙÚỦŨỤƯỪỨỬỮỰỲÝỶỸỴ]/g, '');
+    if (letters && letters === letters.toUpperCase()) {
+      let res = str.toLowerCase();
+      res = res.charAt(0).toUpperCase() + res.slice(1);
+      const acronyms = [
+        ['cme', 'CME'], ['cih', 'CIH'], ['pr', 'PR'], ['aaci', 'AACI'], ['jci', 'JCI'],
+        ['nicu', 'NICU'], ['vip', 'VIP'], ['tp. hcm', 'TP. HCM'], ['bs.ckii', 'BS.CKII'],
+        ['bs.cki', 'BS.CKI'], ['bs', 'BS'], ['gs', 'GS']
+      ];
+      acronyms.forEach(([ac, rep]) => {
+        const reg = new RegExp('\\b' + ac.replace('.', '\\.') + '\\b', 'gi');
+        res = res.replace(reg, rep);
+      });
+      return res;
+    }
+    return str;
+  }
+
+  let currentPkgQty = 1;
+  window.incrementQty = function() {
+    currentPkgQty++;
+    const el = document.getElementById('pkg-qty');
+    if (el) el.value = currentPkgQty;
+  };
+  window.decrementQty = function() {
+    if (currentPkgQty > 1) {
+      currentPkgQty--;
+      const el = document.getElementById('pkg-qty');
+      if (el) el.value = currentPkgQty;
+    }
+  };
+
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
     const artId = parseInt(params.get('id')) || 9;
 
+    fetch('real_45_packages.json')
+      .then(res => res.json())
+      .then(packagesData => {
+        const foundPackage = packagesData.find(p => p.id === artId);
+        if (foundPackage) {
+          renderPackageDetail(foundPackage, packagesData);
+        } else {
+          renderNewsDetail(artId);
+        }
+      })
+      .catch(() => {
+        renderNewsDetail(artId);
+      });
+  });
+
+  function renderPackageDetail(pkg, allPkgs) {
+    document.getElementById('page-head-title').innerText = formatTitleCase(pkg.title) + ' | Bệnh viện Quốc tế City';
+    
+    // Update breadcrumb
+    const bcSpan = document.querySelector('.subpage-hero__breadcrumbs');
+    if (bcSpan) {
+      bcSpan.innerHTML = `<a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <a href="goi-kham" style="color: #000000; font-weight: 700; text-decoration: none;">Gói dịch vụ</a> &nbsp;»&nbsp; <span style="color: #007DA5; font-weight: 700;">${formatTitleCase(pkg.title)}</span>`;
+    }
+
+    const artWrap = document.querySelector('.article-detail-wrap');
+    if (!artWrap) return;
+
+    artWrap.innerHTML = `
+      <!-- Package Hero Product Layout -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; align-items: start; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #e2e8f0;">
+        <!-- Left: Image -->
+        <div style="border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; background: #ffffff;">
+          <img src="${pkg.image}" alt="${pkg.title}" style="width: 100%; height: auto; max-height: 380px; object-fit: cover; display: block;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+        </div>
+
+        <!-- Right: Specs & Price -->
+        <div>
+          <span style="background: #e0f2fe; color: #007DA5; padding: 0.35rem 0.9rem; border-radius: 99px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 0.75rem;">${pkg.category || 'GÓI KHÁM TỔNG QUÁT'}</span>
+          <h1 style="font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 800; line-height: 1.35; color: #0f3775; margin: 0 0 1rem 0;">${formatTitleCase(pkg.title)}</h1>
+          
+          <div style="font-size: 2rem; font-weight: 800; color: #dc2626; margin-bottom: 0.25rem;">${pkg.price || 'Liên hệ báo giá'}</div>
+          <div style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 0.5rem;">${pkg.date_note || 'Giá gói áp dụng theo niêm yết hiện hành.'}</div>
+        </div>
+      </div>
+
+      <!-- Package Description & Medical Table -->
+      <div style="font-size: 1.05rem; line-height: 1.8; color: #334155;">
+        <p style="font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 1.25rem;">${pkg.intro || ''}</p>
+        <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem 1.25rem; border-left: 4px solid #007DA5; border-radius: 0 8px 8px 0;">
+          Nếu quý khách có nhu cầu đăng ký hoặc cần hỗ trợ tư vấn thủ tục, nội dung gói khám,... vui lòng liên hệ <strong>tổng đài 1900 8146</strong> hoặc <strong>inbox fanpage CIH</strong>. Dưới đây là nội dung chi tiết:
+        </p>
+
+        <!-- Medical Items Table -->
+        <div style="overflow-x: auto; margin: 1.5rem 0 2rem 0; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #ffffff;">
+            <thead>
+              <tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1; color: #0f3775;">
+                <th style="padding: 0.9rem 1rem; text-align: center; font-weight: 800; width: 70px; border-right: 1px solid #cbd5e1;">STT</th>
+                <th style="padding: 0.9rem 1.25rem; text-align: left; font-weight: 800;">${formatTitleCase(pkg.title)}</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(pkg.table || []).map((row, idx) => `
+                <tr style="border-bottom: 1px solid #e2e8f0; background: ${idx % 2 === 0 ? '#ffffff' : '#f8fafc'};">
+                  <td style="padding: 0.8rem 1rem; text-align: center; color: #64748b; font-weight: 700; border-right: 1px solid #e2e8f0;">${row.stt}</td>
+                  <td style="padding: 0.8rem 1.25rem; color: #1e293b; font-weight: 500;">${row.item}</td>
+                </tr>
+              `).join('')}
+              <tr style="background: #f0f9ff; font-weight: 700;">
+                <td style="padding: 0.9rem 1rem; text-align: center; border-right: 1px solid #cbd5e1; color: #007DA5;">-</td>
+                <td style="padding: 0.9rem 1.25rem; color: #007DA5; font-size: 1.05rem;">Giá gói: ${pkg.price || 'Liên hệ'}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 2rem;">${pkg.date_note || ''}</p>
+      </div>
+
+      <!-- Related Packages Slider -->
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+        <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f3775; margin-bottom: 1.5rem; text-transform: uppercase;">
+          Gói dịch vụ khác
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem;">
+          ${(allPkgs || []).filter(p => p.id !== pkg.id).slice(0, 3).map(rel => `
+            <div style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+              <a href="chi-tiet-tin-tuc?id=${rel.id}">
+                <img src="${rel.image}" alt="${formatTitleCase(rel.title)}" style="width: 100%; height: 160px; object-fit: cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              </a>
+              <div style="padding: 1rem;">
+                <h4 style="font-size: 0.95rem; font-weight: 700; line-height: 1.45; margin: 0 0 0.5rem 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                  <a href="chi-tiet-tin-tuc?id=${rel.id}" style="color: #0f3775; text-decoration: none;">${formatTitleCase(rel.title)}</a>
+                </h4>
+                <div style="color: #dc2626; font-weight: 800; font-size: 0.9rem;">${rel.price || 'Liên hệ báo giá'}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderNewsDetail(artId) {
     const article = CIH_NEWS_DATA.find(n => n.id === artId) || CIH_NEWS_DATA[0];
 
-    document.getElementById('page-head-title').innerText = article.title + ' | Bệnh viện Quốc tế City';
-    document.getElementById('bread-title').innerText = article.title;
-    document.getElementById('art-title').innerText = article.title;
-    document.getElementById('art-date-val').innerText = article.date || '23/07/2026';
+    document.getElementById('page-head-title').innerText = formatTitleCase(article.title) + ' | Bệnh viện Quốc tế City';
+    document.getElementById('art-title').innerText = formatTitleCase(article.title);
+    document.getElementById('art-date-val').innerText = formatNewsDate(article.date) || '23/07/2026';
     document.getElementById('art-body').innerHTML = article.content;
 
     // Filter related articles (excluding current article)
@@ -222,6 +476,7 @@
 
     function renderRelated() {
       const relatedGrid = document.getElementById('related-grid');
+      if (!relatedGrid) return;
       const items = [];
       for (let i = 0; i < 3; i++) {
         const item = otherArticles[(relIndex + i) % otherArticles.length];
@@ -231,11 +486,11 @@
       relatedGrid.innerHTML = items.map(rel => `
         <div style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
           <a href="chi-tiet-tin-tuc?id=${rel.id}">
-            <img src="${rel.img}" alt="${rel.title}" style="width: 100%; height: 160px; object-fit: cover;" onerror="this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" />
+            <img src="${rel.img}" alt="${formatTitleCase(rel.title)}" style="width: 100%; height: 160px; object-fit: cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
           </a>
           <div style="padding: 1rem;">
             <h4 style="font-size: 0.95rem; font-weight: 700; line-height: 1.45; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-              <a href="chi-tiet-tin-tuc?id=${rel.id}" style="color: #0f3775; text-decoration: none;">${rel.title}</a>
+              <a href="chi-tiet-tin-tuc?id=${rel.id}" style="color: #0f3775; text-decoration: none;">${formatTitleCase(rel.title)}</a>
             </h4>
           </div>
         </div>
@@ -245,27 +500,28 @@
     renderRelated();
 
     // Navigation arrow handlers
-    document.getElementById('rel-next-btn').addEventListener('click', function() {
-      relIndex = (relIndex + 3) % otherArticles.length;
-      renderRelated();
-    });
-
-    document.getElementById('rel-prev-btn').addEventListener('click', function() {
-      relIndex = (relIndex - 3 + otherArticles.length) % otherArticles.length;
-      renderRelated();
-    });
-  });
+    const nextBtn = document.getElementById('rel-next-btn');
+    const prevBtn = document.getElementById('rel-prev-btn');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        relIndex = (relIndex + 3) % otherArticles.length;
+        renderRelated();
+      });
+    }
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        relIndex = (relIndex - 3 + otherArticles.length) % otherArticles.length;
+        renderRelated();
+      });
+    }
+  }
 </script>
 
-<script src="booking_modal.js"></script>
+<script src="booking_modal.js?v=1787643496"></script>
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -282,5 +538,7 @@
   </a>
 </div>
 
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

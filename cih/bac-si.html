@@ -3,13 +3,15 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Đội Ngũ Bác Sĩ | Bệnh viện Quốc tế City – City International Hospital</title>
   <meta name="description" content="Gặp gỡ đội ngũ bác sĩ, chuyên gia y tế đầu ngành được đào tạo quốc tế và giàu kinh nghiệm tại Bệnh viện Quốc tế City." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
   <style>
     /* Bác sĩ page specific styles */
     .filter-bar {
@@ -54,81 +56,98 @@
     }
     .doc-grid-4 {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.25rem 1.75rem;
       margin-bottom: 4rem;
     }
     
+    .doc-grid-4 > .doc-card-v2 {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .doc-grid-4 > .doc-card-v2.is-visible {
+      display: flex !important;
+    }
+
     .doc-card-v2 {
       background: var(--c-white);
-      border-radius: 16px;
-      padding: 1rem;
+      border-radius: 18px;
+      padding: 0;
+      overflow: hidden;
       border: 1px solid var(--c-border);
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
       display: flex;
       flex-direction: column;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      height: 100%;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .doc-card-v2:hover {
       transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(0, 125, 165, 0.25);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.09);
+      border-color: rgba(0, 125, 165, 0.3);
     }
     
     .doc-card-v2__img-wrap {
       width: 100%;
       aspect-ratio: 1 / 1;
-      border-radius: 10px;
       overflow: hidden;
-      margin-bottom: 1rem;
+      margin-bottom: 0;
       background: #f8f9fa;
       position: relative;
+      border-radius: 18px 18px 0 0;
     }
     .doc-card-v2__img {
       width: 100%;
       height: 100%;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       object-position: top;
       transition: transform 0.4s ease;
     }
     .doc-card-v2:hover .doc-card-v2__img {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
     
     .doc-card-v2__body {
+      padding: 1.25rem 1.35rem;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+      flex: 1 1 auto;
+      justify-content: space-between;
     }
     
     .doc-card-v2__name {
-      font-size: 1.1rem;
+      font-size: 1.1rem !important;
       font-weight: 700;
-      color: var(--c-text);
+      color: #0f172a;
       margin-bottom: 0.35rem;
-      line-height: 1.3;
+      line-height: 1.4;
       transition: color 0.2s ease;
+      text-align: center !important;
     }
     .doc-card-v2:hover .doc-card-v2__name {
       color: var(--c-primary);
     }
     
     .doc-card-v2__position {
-      font-size: 0.8rem;
-      color: var(--c-text3);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      line-height: 1.4;
-      min-height: 2.2rem; /* Keeps cards aligned even with multi-line positions */
+      font-size: 0.88rem;
+      color: #64748b;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+      min-height: 2.6rem;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      text-align: center !important;
     }
     
     .doc-card-v2__specialty {
       margin-bottom: 1rem;
-      margin-top: auto; /* Pushes the specialty and CTA to the bottom to align perfectly */
+      margin-top: auto;
     }
     
     .doc-card-v2__specialty-badge {
@@ -148,14 +167,15 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      color: var(--c-primary);
+      color: #1e293b;
       text-decoration: none;
       transition: all 0.25s ease;
       width: fit-content;
-      padding: 0.15rem 0;
-      align-self: flex-end;
+      margin-top: auto;
+      align-self: flex-start;
+      cursor: pointer;
     }
     
     .doc-card-v2__more-link .arrow {
@@ -163,29 +183,23 @@
     }
     
     .doc-card-v2__more-link:hover {
-      color: var(--c-primary-d, #005f7e);
+      color: #007DA5;
     }
     
     .doc-card-v2__more-link:hover .arrow {
       transform: translateX(4px);
     }
     
-    @media(max-width: 1200px) {
-      .doc-grid-4 {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
-      }
-    }
     @media(max-width: 992px) {
       .doc-grid-4 {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem;
+        gap: 1.75rem 1.25rem;
       }
     }
     @media(max-width: 600px) {
       .doc-grid-4 {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
+        gap: 1.5rem;
       }
     }
   </style>
@@ -199,20 +213,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -223,8 +266,8 @@
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
       <img src="images/logo_cih_acci.png"
-           alt="" class="header__logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+           alt="Bệnh viện Quốc tế City" class="header__logo-img"
+           onerror="this.onerror=null; this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
       <div id="logo-fallback" class="logo-fallback" style="display:none">
         <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
       </div>
@@ -233,85 +276,57 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
-        <li class="nav__item nav__item--has-dropdown">
-          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
-          <div class="nav__dropdown">
-            <div class="dropdown__grid">
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Nội Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
-                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Ngoại Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
-                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
-                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
-                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chẩn Đoán</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
-              </div>
-            </div>
-          </div>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
         </li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
 
 <!-- SUBPAGE BREADCRUMBS HERO BAR -->
-<section class="subpage-hero" style="background: #f4f8fb; padding: 1.25rem 0; border-bottom: 1px solid #e2e8f0;">
+<section class="subpage-hero" style="background: #f4f8fb; padding: 0.35rem 0; border-bottom: 1px solid #e2e8f0;">
   <div class="container subpage-hero__inner">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.35rem;">
-      <a href="./" style="color: #005f80; font-weight: 700; text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span style="color: #0f3775; font-weight: 700;">Bác Sĩ</span>
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000; margin-bottom: 0.35rem;">
+      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Bác sĩ</span>
     </div>
     
   </div>
 </section>
 
-<!-- DEDICATED HERO BANNER FOR PAGE -->
-<section class="hero" style="position: relative; overflow: hidden;">
-  <div style="position: relative; width: 100%; aspect-ratio: 1536 / 536; height: auto; max-height: 480px; overflow: hidden;">
-    <img src="images/banner/BANNER-WEB-7.webp" alt="Hero Banner" style="width: 100%; height: 100%; object-fit: cover; object-position: center; " />
-  </div>
-</section>
 
 <!-- SUBPAGE CONTENT -->
 <main class="subpage-content">
@@ -323,10 +338,18 @@
         <label class="filter-label" for="filter-specialty">Chuyên khoa</label>
         <select id="filter-specialty" class="filter-select">
           <option value="">Tất cả chuyên khoa</option>
-          <option value="Ban Giám Đốc">Ban Giám Đốc</option>
-          <option value="Chấn Thương Chỉnh Hình">Chấn Thương Chỉnh Hình</option>
-          <option value="Nhi & Hồi Sức Sơ Sinh">Nhi & Hồi Sức Sơ Sinh</option>
-          <option value="Tiêu Hóa & Nội Soi">Tiêu Hóa & Nội Soi</option>
+          <option value="ban-giam-doc">Ban Giám Đốc</option>
+          <option value="khoa-phu-san">Khoa Phụ Sản</option>
+          <option value="khoa-ho-tro-sinh-san-ivf">Trung tâm IVF</option>
+          <option value="khoa-nhi">Khoa Nhi & NICU</option>
+          <option value="khoa-noi-tieu-hoa">Nội Tiêu Hóa & Nội Soi</option>
+          <option value="khoa-chan-thuong-chinh-hinh">Chấn Thương Chỉnh Hình</option>
+          <option value="khoa-ngoai-than-kinh">Ngoại Thần Kinh</option>
+          <option value="khoa-can-thiep-mach-mau-dsa">Tim Mạch Can Thiệp (DSA)</option>
+          <option value="khoa-mat">Khoa Mắt</option>
+          <option value="khoa-tai-mui-hong">Tai Mũi Họng</option>
+          <option value="khoa-cap-cuu">Cấp Cứu & Hồi Sức Tích Cực</option>
+          <option value="khoa-kham-tong-quat-ehs">Khám Sức Khỏe Tổng Quát</option>
         </select>
       </div>
       
@@ -351,75 +374,660 @@
 
     <!-- Doctor List -->
     <div class="doc-grid-4">
-      
-      <!-- Bác sĩ 1 -->
-      <div class="doc-card-v2 doc-detail-card animate-fade-up" data-specialty="Ban Giám Đốc" data-role="giam-doc" data-degree="ckii">
-        <div class="doc-card-v2__img-wrap">
-          <img src="https://cih.com.vn/wp-content/uploads/2026/05/Ban-sao-cua-Doctor-template-for-website-900-×-900-px-1.webp" alt="BS.CKII. Phan Hoàng Nguyên" class="doc-card-v2__img" onerror="this.src='images/doctor_male_1.png'" />
-        </div>
-        <div class="doc-card-v2__body">
-          <h3 class="doc-card-v2__name">BS.CKII. Phan Hoàng Nguyên</h3>
-          <div class="doc-card-v2__position">Giám đốc Y khoa</div>
-          
-          <div class="doc-card-v2__specialty">
-            <span class="doc-card-v2__specialty-badge">Ban Giám Đốc</span>
-          </div>
 
-          <a href="lien-he.html#dat-lich" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="bac-si" data-degree="" data-id="26352">
+        <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2025/06/Bio-Doctor-template-for-website_2026-5.png" alt="ThS.BS. Trần Quốc Thành" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" style="color: inherit; text-decoration: none;">ThS.BS. Trần Quốc Thành</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Giám đốc Điều hành Bệnh viện Quốc tế City và Bệnh viện Gia An 115</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
-      <!-- Bác sĩ 2 -->
-      <div class="doc-card-v2 doc-detail-card animate-fade-up" style="animation-delay: 0.05s;" data-specialty="Chấn Thương Chỉnh Hình" data-role="truong-khoa" data-degree="ts">
-        <div class="doc-card-v2__img-wrap">
-          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Lang.png" alt="TS.BS. Phạm Chí Lăng" class="doc-card-v2__img" onerror="this.src='images/doctor_male_1.png'" />
-        </div>
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="bac-si" data-degree="" data-id="45321">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2025/05/Bio-Doctor-template-for-website_2026-2-768x768.webp" alt="BS.CKII. Phan Hoàng Nguyên" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
         <div class="doc-card-v2__body">
-          <h3 class="doc-card-v2__name">TS.BS. Phạm Chí Lăng</h3>
-          <div class="doc-card-v2__position">Trưởng khoa Chấn thương Chỉnh hình & Cơ Xương Khớp</div>
-          
-          <div class="doc-card-v2__specialty">
-            <span class="doc-card-v2__specialty-badge">Chấn thương Chỉnh hình</span>
-          </div>
-
-          <a href="lien-he.html#dat-lich" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" style="color: inherit; text-decoration: none;">BS.CKII. Phan Hoàng Nguyên</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Cố vấn Chuyên môn BGĐ BV Quốc tế City và Phó Giám đốc Điều hành BV Gia An 115</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
-      <!-- Bác sĩ 3 -->
-      <div class="doc-card-v2 doc-detail-card animate-fade-up" style="animation-delay: 0.1s;" data-specialty="Nhi & Hồi Sức Sơ Sinh" data-role="truong-khoa" data-degree="ckii">
-        <div class="doc-card-v2__img-wrap">
-          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Hue.png" alt="BS.CKII. Nguyễn Bạch Huệ" class="doc-card-v2__img" onerror="this.src='images/doctor_female_1.png'" />
-        </div>
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="bac-si" data-degree="" data-id="7423">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/53.png" alt="BS.CKII. Đặng Quang Thuyết" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
         <div class="doc-card-v2__body">
-          <h3 class="doc-card-v2__name">BS.CKII. Nguyễn Bạch Huệ</h3>
-          <div class="doc-card-v2__position">Trưởng khoa Nhi & Hồi sức Tích cực Sơ sinh (NICU)</div>
-          
-          <div class="doc-card-v2__specialty">
-            <span class="doc-card-v2__specialty-badge">Nhi & Hồi Sức Sơ Sinh</span>
-          </div>
-
-          <a href="lien-he.html#dat-lich" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" style="color: inherit; text-decoration: none;">BS.CKII. Đặng Quang Thuyết</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Phó Giám đốc Y Khoa</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
-      <!-- Bác sĩ 4 -->
-      <div class="doc-card-v2 doc-detail-card animate-fade-up" style="animation-delay: 0.15s;" data-specialty="Tiêu Hóa & Nội Soi" data-role="truong-khoa" data-degree="ckii">
-        <div class="doc-card-v2__img-wrap">
-          <img src="https://cih.com.vn/wp-content/uploads/2024/09/50.png" alt="BS.CKII. Lê Kim Sang" class="doc-card-v2__img" onerror="this.src='images/doctor_male_1.png'" />
-        </div>
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="bac-si" data-degree="" data-id="30169">
+        <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/14.png" alt="ThS.BS. Trần Như Hải" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
         <div class="doc-card-v2__body">
-          <h3 class="doc-card-v2__name">BS.CKII. Lê Kim Sang</h3>
-          <div class="doc-card-v2__position">Trưởng Khoa Tiêu Hóa & Nội Soi Tiêu Hóa</div>
-          
-          <div class="doc-card-v2__specialty">
-            <span class="doc-card-v2__specialty-badge">Tiêu Hóa & Nội Soi</span>
-          </div>
-
-          <a href="lien-he.html#dat-lich" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" style="color: inherit; text-decoration: none;">ThS.BS. Trần Như Hải</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên khoa Nội tổng quát  - Trưởng phòng khám Quốc tế - Cố vấn cấp cao</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-doan-hinh-anh" data-role="bac-si" data-degree="" data-id="42828">
+        <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/01/10.png" alt="PGS.TS. BS. Trần Minh Hoàng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" style="color: inherit; text-decoration: none;">PGS.TS. BS. Trần Minh Hoàng</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng Đơn vị Can thiệp mạch máu (DSA) và Chẩn đoán hình ảnh</div>
+          <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="bac-si" data-degree="" data-id="24866">
+        <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/46-768x768.png" alt="BS.CKI. Nguyễn Thị Ngọc Sương" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Thị Ngọc Sương</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng Trung tâm Hỗ trợ sinh sản</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-benh" data-role="bac-si" data-degree="" data-id="7426">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-1.png" alt="BS.CKII. Trần Thanh Bình" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" style="color: inherit; text-decoration: none;">BS.CKII. Trần Thanh Bình</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Khám bệnh</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="7428">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Hue.png" alt="BS.CKII. Nguyễn Bạch Huệ" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Bạch Huệ</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng khoa Nhi & Hồi sức Tích cực Sơ sinh</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si" data-degree="" data-id="7434">
+        <a href="chi-tiet-bac-si?slug=ts-bs-pham-chi-lang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Lang.png" alt="TS.BS. Phạm Chí Lăng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ts-bs-pham-chi-lang" style="color: inherit; text-decoration: none;">TS.BS. Phạm Chí Lăng</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng khoa Chấn Thương Chỉnh Hình</div>
+          <a href="chi-tiet-bac-si?slug=ts-bs-pham-chi-lang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tieu-hoa" data-role="bac-si" data-degree="" data-id="7437">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-le-kim-sang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/50-768x768.png" alt="BS.CKII. Lê Kim Sang" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-le-kim-sang" style="color: inherit; text-decoration: none;">BS.CKII. Lê Kim Sang</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Tiêu Hóa & Nội Soi Tiêu Hóa</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-le-kim-sang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="bac-si" data-degree="" data-id="7440">
+        <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-nhom" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Nguyen-Van-Nhom.png" alt="ThS.BS.CKII. Nguyễn Văn Nhôm" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-nhom" style="color: inherit; text-decoration: none;">ThS.BS.CKII. Nguyễn Văn Nhôm</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Cấp Cứu - Hồi sức Tích cực</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-nhom" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si" data-degree="" data-id="7445">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-xuan-thanh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/6-1.png" alt="BS.CKII. Nguyễn Bảo Xuân Thanh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-xuan-thanh" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Bảo Xuân Thanh</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Ngoại Tổng Quát</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-xuan-thanh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7527">
+        <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-ngan-ha" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/7-1.png" alt="BS.CKI. Nguyễn Ngân Hà" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-ngan-ha" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Ngân Hà</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Phụ Sản</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-ngan-ha" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7523">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/5.png" alt="BS.CKII. Phạm Minh Khôi Nguyên" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" style="color: inherit; text-decoration: none;">BS.CKII. Phạm Minh Khôi Nguyên</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Phụ Sản</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7511">
+        <a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/9-1.png" alt="BS.CKII. Trần Thế Lộc" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" style="color: inherit; text-decoration: none;">BS.CKII. Trần Thế Lộc</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Phụ Sản</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="bac-si" data-degree="" data-id="25206">
+        <a href="chi-tiet-bac-si?slug=thac-si-dang-truong-son" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/44-768x768.png" alt="Thạc sĩ Đặng Trường Sơn" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=thac-si-dang-truong-son" style="color: inherit; text-decoration: none;">Thạc sĩ Đặng Trường Sơn</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Phó trưởng Trung tâm Hỗ trợ sinh sản</div>
+          <a href="chi-tiet-bac-si?slug=thac-si-dang-truong-son" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7509">
+        <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-xuan-cong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/ChatGPT-Image-Jan-23-2026-10_09_22-AM-768x768.png" alt="ThS.BS. Nguyễn Xuân Công" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-xuan-cong" style="color: inherit; text-decoration: none;">ThS.BS. Nguyễn Xuân Công</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Siêu Âm khoa Phụ Sản</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-xuan-cong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7453">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-3.png" alt="BS.CKII. Nguyễn Vũ Mỹ Linh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Vũ Mỹ Linh</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">BS.CKII. Nguyễn Vũ Mỹ Linh - Phó Trưởng Khoa Phụ Sản</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="7520">
+        <a href="chi-tiet-bac-si?slug=bscki-nguyen-xuan-tai" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS_Tai.png" alt="BS.CKI. Nguyễn Xuân Tài" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bscki-nguyen-xuan-tai" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Xuân Tài</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nhi</div>
+          <a href="chi-tiet-bac-si?slug=bscki-nguyen-xuan-tai" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-can-thiep-mach-mau-dsa" data-role="bac-si" data-degree="" data-id="25131">
+        <a href="chi-tiet-bac-si?slug=bs-cki-tra" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/12.png" alt="ThS.BS.CKI. Trần Thế Vinh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-tra" style="color: inherit; text-decoration: none;">ThS.BS.CKI. Trần Thế Vinh</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Tim Mạch</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-tra" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-can-thiep-mach-mau-dsa" data-role="bac-si" data-degree="" data-id="24871">
+        <a href="chi-tiet-bac-si?slug=bs-cki-le-van-tuyen" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/11.png" alt="BS.CKI. Lê Văn Tuyến" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-le-van-tuyen" style="color: inherit; text-decoration: none;">BS.CKI. Lê Văn Tuyến</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Tim Mạch</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-le-van-tuyen" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="7506">
+        <a href="chi-tiet-bac-si?slug=bscki-nguyen-thi-le-lieu" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Le-Thi-Lieu.png" alt="BS.CKI. Nguyễn Thị Lệ Liễu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bscki-nguyen-thi-le-lieu" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Thị Lệ Liễu</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nhi</div>
+          <a href="chi-tiet-bac-si?slug=bscki-nguyen-thi-le-lieu" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7501">
+        <a href="chi-tiet-bac-si?slug=bs-cki-le-thi-ngoc-tran" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-2-1.png" alt="BS.CKI. Lê Thị Ngọc Trân" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-le-thi-ngoc-tran" style="color: inherit; text-decoration: none;">BS.CKI. Lê Thị Ngọc Trân</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Chuyên Khoa Dinh Dưỡng</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-le-thi-ngoc-tran" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7456">
+        <a href="chi-tiet-bac-si?slug=ths-bs-do-duc-tin" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-4.png" alt="ThS.BS. Đỗ Đức Tín" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-do-duc-tin" style="color: inherit; text-decoration: none;">ThS.BS. Đỗ Đức Tín</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Khám sức khỏe Tổng quát</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-do-duc-tin" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tieu-hoa" data-role="bac-si" data-degree="" data-id="7495">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-dinh-duc-minh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/51-768x768.png" alt="BS.CKII. Đinh Đức Minh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-dinh-duc-minh" style="color: inherit; text-decoration: none;">BS.CKII. Đinh Đức Minh</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nội soi</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-dinh-duc-minh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-can-thiep-mach-mau-dsa" data-role="bac-si" data-degree="" data-id="7459">
+        <a href="chi-tiet-bac-si?slug=ths-bs-bui-thi-xuan-nga" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/13.png" alt="ThS.BS. Bùi Thị Xuân Nga" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-bui-thi-xuan-nga" style="color: inherit; text-decoration: none;">ThS.BS. Bùi Thị Xuân Nga</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Tim Mạch</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-bui-thi-xuan-nga" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si" data-degree="" data-id="7467">
+        <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-khoa" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/8-1.png" alt="ThS.BS. Nguyễn Văn Khoa" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-khoa" style="color: inherit; text-decoration: none;">ThS.BS. Nguyễn Văn Khoa</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Tổng Quát</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-khoa" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-doan-hinh-anh" data-role="bac-si" data-degree="" data-id="7538">
+        <a href="chi-tiet-bac-si?slug=bs-cki-ong-kien-huy" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-3-1.png" alt="BS.CKI. Ông Kiến Huy" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-ong-kien-huy" style="color: inherit; text-decoration: none;">BS.CKI. Ông Kiến Huy</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Chẩn Đoán Hình Ảnh</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-ong-kien-huy" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si" data-degree="" data-id="7461">
+        <a href="chi-tiet-bac-si?slug=ths-bs-tran-van-be-bay" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Tran-Van-Be-Bay.png" alt="ThS.BS. Trần Văn Bé Bảy" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-van-be-bay" style="color: inherit; text-decoration: none;">ThS.BS. Trần Văn Bé Bảy</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chấn Thương Chỉnh Hình & Cơ Xương Khớp</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-van-be-bay" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si" data-degree="" data-id="24869">
+        <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-van-tinh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Nguyen-Van-Tinh.png" alt="BS.CKI. Nguyễn Văn Tịnh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-van-tinh" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Văn Tịnh</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ điều trị Chấn thương Chỉnh hình</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-van-tinh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si" data-degree="" data-id="7492">
+        <a href="chi-tiet-bac-si?slug=ths-bs-ckii-tran-trong-tam" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/48-768x768.png" alt="ThS.BS.CKII. Trần Trọng Tâm" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-ckii-tran-trong-tam" style="color: inherit; text-decoration: none;">ThS.BS.CKII. Trần Trọng Tâm</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Thần kinh</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-ckii-tran-trong-tam" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si" data-degree="" data-id="7475">
+        <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-quoc-giang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/45-768x768.png" alt="BS.CKI. Nguyễn Quốc Giang" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-quoc-giang" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Quốc Giang</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Thần kinh</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-quoc-giang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si" data-degree="" data-id="7470">
+        <a href="chi-tiet-bac-si?slug=ts-bs-huynh-hong-chau" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/47-768x768.png" alt="TS.BS. Huỳnh Hồng Châu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ts-bs-huynh-hong-chau" style="color: inherit; text-decoration: none;">TS.BS. Huỳnh Hồng Châu</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Ngoại Thần kinh</div>
+          <a href="chi-tiet-bac-si?slug=ts-bs-huynh-hong-chau" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-than-kinh" data-role="bac-si" data-degree="" data-id="7473">
+        <a href="chi-tiet-bac-si?slug=ths-bs-tran-thi-mai-thy" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/49-768x768.png" alt="ThS.BS. Trần Thị Mai Thy" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-thi-mai-thy" style="color: inherit; text-decoration: none;">ThS.BS. Trần Thị Mai Thy</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Nội Thần Kinh</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-thi-mai-thy" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tong-hop" data-role="bac-si" data-degree="" data-id="7481">
+        <a href="chi-tiet-bac-si?slug=bsckii-duong-anh-phuong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-2.png" alt="BS. CKII. Dương Anh Phượng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bsckii-duong-anh-phuong" style="color: inherit; text-decoration: none;">BS. CKII. Dương Anh Phượng</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Trưởng khoa Nội Tổng Quát</div>
+          <a href="chi-tiet-bac-si?slug=bsckii-duong-anh-phuong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tong-hop" data-role="bac-si" data-degree="" data-id="7478">
+        <a href="chi-tiet-bac-si?slug=ths-bs-ckii-hoang-chan-phuong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-1-1.png" alt="ThS. BS. CKII. Hoàng Chân Phương" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-ckii-hoang-chan-phuong" style="color: inherit; text-decoration: none;">ThS. BS. CKII. Hoàng Chân Phương</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nội Tổng Quát</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-ckii-hoang-chan-phuong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-gay-me-hoi-suc" data-role="bac-si" data-degree="" data-id="7543">
+        <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-minh-tuan-b" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-4-1.png" alt="BS.CKI. Nguyễn Minh Tuấn B" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-minh-tuan-b" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Minh Tuấn B</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Gây mê Hồi sức</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-minh-tuan-b" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="7540">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-thi-hong-cam" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/bs-ckii-nguyen-thi-hong-cam_66f8da21dcf11-png.avif" alt="BS.CKII. Nguyễn Thị Hồng Cẩm" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-thi-hong-cam" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Thị Hồng Cẩm</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Chuyên khoa Tim mạch Nhi</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-thi-hong-cam" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-hoi-suc-tich-cuc-icu" data-role="bac-si" data-degree="" data-id="7535">
+        <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-phuoc-loc" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/BS-Nguyen-Phuoc-Loc.png" alt="ThS.BS. Nguyễn Phước Lộc" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-phuoc-loc" style="color: inherit; text-decoration: none;">ThS.BS. Nguyễn Phước Lộc</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Hồi Sức Tích Cực</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-phuoc-loc" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7517">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-hoa" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026.png" alt="BS.CKII. Nguyễn Bảo Hòa" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-hoa" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Bảo Hòa</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Da liễu & Nội cơ xương khớp</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-hoa" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-mat" data-role="bac-si" data-degree="" data-id="7514">
+        <a href="chi-tiet-bac-si?slug=bs-cki-mai-thi-huong-thao" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-5.png" alt="BS.CKI. Mai Thị Hương Thảo" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-mai-thi-huong-thao" style="color: inherit; text-decoration: none;">BS.CKI. Mai Thị Hương Thảo</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Mắt</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-mai-thi-huong-thao" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-than-loc-mau" data-role="bac-si" data-degree="" data-id="7503">
+        <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-thai-ha" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/8.png" alt="BS.CKI. Nguyễn Thị Thái Hà" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-thai-ha" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Thị Thái Hà</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Tiết Niệu</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-thai-ha" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7489">
+        <a href="chi-tiet-bac-si?slug=bs-le-duc-tho" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/59.png" alt="BS. Lê Đức Thọ" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-le-duc-tho" style="color: inherit; text-decoration: none;">BS. Lê Đức Thọ</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Da liễu</div>
+          <a href="chi-tiet-bac-si?slug=bs-le-duc-tho" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-than-loc-mau" data-role="bac-si" data-degree="" data-id="7487">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-duong-thi-kim-cuc" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-1-2.png" alt="BS.CKII. Dương Thị Kim Cúc" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-duong-thi-kim-cuc" style="color: inherit; text-decoration: none;">BS.CKII. Dương Thị Kim Cúc</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Nhi, Tiết Niệu</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-duong-thi-kim-cuc" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="bac-si" data-degree="" data-id="25486">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-cu-thi-kim-loan" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-6.png" alt="BS.CKII. Cù Thị Kim Loan" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-cu-thi-kim-loan" style="color: inherit; text-decoration: none;">BS.CKII. Cù Thị Kim Loan</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Trung tâm Hỗ trợ sinh sản</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-cu-thi-kim-loan" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si" data-degree="" data-id="46473">
+        <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-manh-hung" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/08/Bio-Doctor-template-for-website_2026-768x768.webp" alt="BS.CKI. NGUYỄN MẠNH HÙNG" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-manh-hung" style="color: inherit; text-decoration: none;">BS.CKI. NGUYỄN MẠNH HÙNG</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Thần kinh - Cố vấn Chuyên môn Cấp cao Ban Giám đốc</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-manh-hung" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="45966">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-ngoc-quynh-dung" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/07/Bio-Doctor-template-for-website_2026-2.webp" alt="BS.CKII. Nguyễn Ngọc Quỳnh Dung" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-ngoc-quynh-dung" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Ngọc Quỳnh Dung</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Nội Tim mạch</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-ngoc-quynh-dung" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="44525">
+        <a href="chi-tiet-bac-si?slug=ths-bs-pham-tran-thien-nhan" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/03/Bio-Doctor-template-for-website_2026-7.webp" alt="ThS.BS. Phạm Trần Thiên Nhân" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-pham-tran-thien-nhan" style="color: inherit; text-decoration: none;">ThS.BS. Phạm Trần Thiên Nhân</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Dinh dưỡng</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-pham-tran-thien-nhan" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-gay-me-hoi-suc" data-role="bac-si" data-degree="" data-id="44112">
+        <a href="chi-tiet-bac-si?slug=bs-cki-khuc-thua-minh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/03/Bio-Doctor-template-for-website_2026-1-768x768.png" alt="BS. CKI. Khúc Thừa Minh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-khuc-thua-minh" style="color: inherit; text-decoration: none;">BS. CKI. Khúc Thừa Minh</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Nội Thần kinh</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-khuc-thua-minh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si" data-degree="" data-id="44067">
+        <a href="chi-tiet-bac-si?slug=ths-bs-cki-ha-phu-xuan" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/03/Bio-Doctor-template-for-website_2026-6.png" alt="ThS.BS.CKI. Hà Phú Xuân" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-cki-ha-phu-xuan" style="color: inherit; text-decoration: none;">ThS.BS.CKI. Hà Phú Xuân</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Ngoại Tổng Quát</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-cki-ha-phu-xuan" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="bac-si" data-degree="" data-id="25265">
+        <a href="chi-tiet-bac-si?slug=bs-cki-le-quoc-khanh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/43-768x768.png" alt="BS.CKI. Lê Quốc Khánh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-le-quoc-khanh" style="color: inherit; text-decoration: none;">BS.CKI. Lê Quốc Khánh</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Cấp cứu</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-le-quoc-khanh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="46055">
+        <a href="chi-tiet-bac-si?slug=bs-cki-truong-thanh-phuong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/02/My_-Bio-Doctor-template-for-website_2026-1.webp" alt="BS. CKI. Trương Thanh Phương" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-truong-thanh-phuong" style="color: inherit; text-decoration: none;">BS. CKI. Trương Thanh Phương</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Cấp cứu</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-truong-thanh-phuong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-mat" data-role="bac-si" data-degree="" data-id="7450">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-trinh-bach-tuyet" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/26.png" alt="BS.CKII. Trịnh Bạch Tuyết" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-trinh-bach-tuyet" style="color: inherit; text-decoration: none;">BS.CKII. Trịnh Bạch Tuyết</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Trưởng khoa Mắt</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-trinh-bach-tuyet" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tai-mui-hong" data-role="bac-si" data-degree="" data-id="45973">
+        <a href="chi-tiet-bac-si?slug=cki-le-ngoc-hieu" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/07/Bio-Doctor-template-for-website_2026.webp" alt="BS. CKI. Lê Ngọc Hiếu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=cki-le-ngoc-hieu" style="color: inherit; text-decoration: none;">BS. CKI. Lê Ngọc Hiếu</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Tai Mũi Họng</div>
+          <a href="chi-tiet-bac-si?slug=cki-le-ngoc-hieu" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-hoi-suc-tich-cuc-icu" data-role="bac-si" data-degree="" data-id="44842">
+        <a href="chi-tiet-bac-si?slug=bs-tran-hieu" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/04/Bio-Doctor-template-for-website_2026-1.webp" alt="BS. Trần Hiếu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-tran-hieu" style="color: inherit; text-decoration: none;">BS. Trần Hiếu</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Cấp cứu</div>
+          <a href="chi-tiet-bac-si?slug=bs-tran-hieu" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tai-mui-hong" data-role="bac-si" data-degree="" data-id="44662">
+        <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-le-nhan-van" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/01/Bio-Doctor-template-for-website_2026.webp" alt="ThS. BS. Nguyễn Lê Nhân Văn" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-le-nhan-van" style="color: inherit; text-decoration: none;">ThS. BS. Nguyễn Lê Nhân Văn</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Tai Mũi Họng</div>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-le-nhan-van" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phau-thuat-tao-hinh-tham-my" data-role="bac-si" data-degree="" data-id="30120">
+        <a href="chi-tiet-bac-si?slug=bs-cki-ho-thanh-phong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/01/My_-Bio-Doctor-template-for-website_2026.webp" alt="BS.CKI. Hồ Thanh Phong" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-ho-thanh-phong" style="color: inherit; text-decoration: none;">BS.CKI. Hồ Thanh Phong</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Phẫu thuật tạo hình thẩm mỹ</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-ho-thanh-phong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7431">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-ha-thi-kim-hong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/5-1.png" alt="BS.CKII. Hà Thị Kim Hồng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-ha-thi-kim-hong" style="color: inherit; text-decoration: none;">BS.CKII. Hà Thị Kim Hồng</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khám Tổng Quát & Nội Tiết</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-ha-thi-kim-hong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="44281">
+        <a href="chi-tiet-bac-si?slug=bs-cki-tran-phuong-thao" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/03/Bio-Doctor-Thao.jpg" alt="BS.CKI. Trần Phương Thảo" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-tran-phuong-thao" style="color: inherit; text-decoration: none;">BS.CKI. Trần Phương Thảo</a></h3>
+          <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Phục hồi Chức năng</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-tran-phuong-thao" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Doctor Pagination Bar (20 Doctors per Page) -->
+    <div class="pagination-bar" id="doctor-pagination" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2.5rem; margin-bottom: 1rem;"></div>
 
   </div>
 </main>
@@ -432,7 +1040,7 @@
         <div class="footer__logo">
           <img src="images/logo_cih_acci.png"
                alt="" class="footer__logo-img"
-               onerror="this.style.display='none'" />
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
@@ -454,41 +1062,33 @@
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
-        <ul class="footer__links">
-          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
-          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
-          <li>
+          <li class="footer__contact-address">
             <span class="footer__contact-icon" style="margin-top: 2px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -498,11 +1098,19 @@
           </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -510,11 +1118,7 @@
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -531,49 +1135,132 @@
   </a>
 </div>
 
-<script src="script.js"></script>
+<script src="cih_doctors_data.js?v=1787643496"></script>
+<script src="script.js?v=1787643496"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initDoctorCatalog() {
     const specialtySelect = document.getElementById('filter-specialty');
     const roleSelect = document.getElementById('filter-role');
     const degreeSelect = document.getElementById('filter-degree');
-    const doctorCards = document.querySelectorAll('.doc-detail-card');
+    const doctorCards = Array.from(document.querySelectorAll('.doc-detail-card'));
+    const paginationContainer = document.getElementById('doctor-pagination');
 
-    const filterDoctors = () => {
-      const selectedSpecialty = specialtySelect.value;
-      const selectedRole = roleSelect.value;
-      const selectedDegree = degreeSelect.value;
+    if (!doctorCards.length) return;
+
+    const ITEMS_PER_PAGE = 9;
+    let currentPage = 1;
+
+    // Check search URL parameter if any
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = (urlParams.get('search') || urlParams.get('s') || '').trim().toLowerCase();
+
+    const updatePaginationAndDisplay = () => {
+      const selectedSpecialty = specialtySelect ? specialtySelect.value.trim().toLowerCase() : '';
+      const selectedRole = roleSelect ? roleSelect.value.trim().toLowerCase() : '';
+      const selectedDegree = degreeSelect ? degreeSelect.value.trim().toLowerCase() : '';
+
+      const matchingCards = doctorCards.filter(card => {
+        const specSlug = (card.getAttribute('data-specialty') || '').toLowerCase();
+        const role = (card.getAttribute('data-role') || '').toLowerCase();
+        const degree = (card.getAttribute('data-degree') || '').toLowerCase();
+        const name = (card.querySelector('.doc-card-v2__name')?.textContent || '').toLowerCase();
+        const pos = (card.querySelector('.doc-card-v2__position')?.textContent || '').toLowerCase();
+        const fullText = specSlug + ' ' + name + ' ' + pos;
+
+        // Search query filter
+        if (searchQuery && !fullText.includes(searchQuery)) {
+          return false;
+        }
+
+        // Specialty filter
+        let matchesSpecialty = true;
+        if (selectedSpecialty) {
+          matchesSpecialty = specSlug.includes(selectedSpecialty) || fullText.includes(selectedSpecialty);
+        }
+
+        // Role filter
+        let matchesRole = true;
+        if (selectedRole === 'giam-doc') {
+          matchesRole = fullText.includes('giám đốc') || fullText.includes('ban giám đốc');
+        } else if (selectedRole === 'truong-khoa') {
+          matchesRole = fullText.includes('trưởng khoa') || fullText.includes('trưởng trung tâm') || fullText.includes('trưởng đơn vị') || fullText.includes('trưởng phòng lab') || role === 'truong-khoa';
+        }
+
+        // Degree filter
+        let matchesDegree = true;
+        if (selectedDegree === 'ts') {
+          matchesDegree = /(ts|pgs|gs)/i.test(name) || degree === 'ts';
+        } else if (selectedDegree === 'ckii') {
+          matchesDegree = /ckii/i.test(name) || degree === 'ckii';
+        }
+
+        return matchesSpecialty && matchesRole && matchesDegree;
+      });
+
+      const totalPages = Math.ceil(matchingCards.length / ITEMS_PER_PAGE) || 1;
+      if (currentPage > totalPages) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
 
       doctorCards.forEach(card => {
-        const spec = card.getAttribute('data-specialty');
-        const role = card.getAttribute('data-role');
-        const degree = card.getAttribute('data-degree');
+        card.classList.remove('is-visible');
+        card.style.display = 'none';
+      });
 
-        const matchesSpecialty = !selectedSpecialty || spec === selectedSpecialty;
-        const matchesRole = !selectedRole || role === selectedRole;
-        const matchesDegree = !selectedDegree || degree === selectedDegree;
-
-        if (matchesSpecialty && matchesRole && matchesDegree) {
-          card.style.display = '';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 50);
-        } else {
-          card.style.display = 'none';
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(22px)';
+      matchingCards.forEach((card, index) => {
+        if (index >= startIndex && index < endIndex) {
+          card.classList.add('is-visible');
+          card.style.display = 'flex';
         }
       });
+
+      renderPaginationControls(totalPages);
     };
 
-    if (specialtySelect && roleSelect && degreeSelect) {
-      specialtySelect.addEventListener('change', filterDoctors);
-      roleSelect.addEventListener('change', filterDoctors);
-      degreeSelect.addEventListener('change', filterDoctors);
-    }
-  });
+    const renderPaginationControls = (totalPages) => {
+      if (!paginationContainer) return;
+      if (totalPages <= 1) {
+        paginationContainer.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+      html += `<button type="button" class="page-btn ${currentPage === 1 ? 'disabled' : ''}" ${currentPage === 1 ? 'disabled' : ''} onclick="changeDoctorPage(${currentPage - 1})">‹ Trước</button>`;
+
+      for (let p = 1; p <= totalPages; p++) {
+        html += `<button type="button" class="page-btn ${p === currentPage ? 'active' : ''}" onclick="changeDoctorPage(${p})">${p}</button>`;
+      }
+
+      html += `<button type="button" class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" ${currentPage === totalPages ? 'disabled' : ''} onclick="changeDoctorPage(${currentPage + 1})">Sau ›</button>`;
+
+      paginationContainer.innerHTML = html;
+    };
+
+    window.changeDoctorPage = (newPage) => {
+      currentPage = newPage;
+      updatePaginationAndDisplay();
+      const docGrid = document.querySelector('.filter-bar') || document.querySelector('.doc-grid-4');
+      if (docGrid) {
+        docGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+
+    if (specialtySelect) specialtySelect.addEventListener('change', () => { currentPage = 1; updatePaginationAndDisplay(); });
+    if (roleSelect) roleSelect.addEventListener('change', () => { currentPage = 1; updatePaginationAndDisplay(); });
+    if (degreeSelect) degreeSelect.addEventListener('change', () => { currentPage = 1; updatePaginationAndDisplay(); });
+
+    updatePaginationAndDisplay();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDoctorCatalog);
+  } else {
+    initDoctorCatalog();
+  }
 </script>
-<script src="booking_modal.js"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

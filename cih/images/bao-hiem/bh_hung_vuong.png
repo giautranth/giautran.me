@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=1"/>
+    <title></title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCQNHXB6V5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCQNHXB6V5');
+</script>
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="/lib/sweetalert2/sweetalert2.css"/>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/fontawesome/js/all.min.js"></script>
+    <script src="/lib/sweetalert2/sweetalert2.js"></script>
+
+        <script src="/build/shared/js/shared_api.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/shared/js/shared_function.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/shared/js/func_notification.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/shared/scripts/layout.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/publish/pages/products/scripts/index.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/publish/pages/news_article/scripts/detail.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/publish/pages/informations/structures/scripts/index.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/publish/layout/scripts/index.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/publish/pages/informations/about_us/scripts/index.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+    <script src="/build/publish/pages/informations/agency/scripts/index.js?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4"></script>
+
+        <link rel="stylesheet" href="/build/publish/dist/css/products.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/aboutus.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/layout.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/agency.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/home.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/agency.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/structure.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/employs.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/news.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+    <link rel="stylesheet" href="/build/publish/dist/css/support.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+
+    <link rel="stylesheet" href="/build/shared/dist/layout.css?v=ccb827a1-dff5-4b7b-ac58-08609c38cfd4" />
+
+</head>
+<body>
+    <style>
+    #f767bd51-8020-46f7-be75-442a6d73c58f{
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;      
+      z-index: 10001;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+     #a442a6d73c58f{
+          position: fixed;
+          /*top: 30vh;*/
+          /*left: 45vw;          */
+    }
+    #a442a6d73c58f .desc {
+         text-align: center;
+         position: absolute;
+         z-index: 200;
+         top: 2rem;
+         left: 1.3rem;
+         color: white;
+         font-size: 2rem;
+         font-weight: 800;
+    }
+    .f767bd51-8020-46f7-be75-442a6d73c58f {      
+      font-size: 10px;
+      margin: auto;
+      text-indent: -9999em;
+      width: 11em;
+      height: 11em;
+      border-radius: 50%;
+      background: #b3241c;
+      background: -moz-linear-gradient(left, #b3241c 10%, rgba(255, 255, 255, 0) 42%);
+      background: -webkit-linear-gradient(left, #b3241c 10%, rgba(255, 255, 255, 0) 42%);
+      background: -o-linear-gradient(left, #b3241c 10%, rgba(255, 255, 255, 0) 42%);
+      background: -ms-linear-gradient(left, #b3241c 10%, rgba(255, 255, 255, 0) 42%);
+      background: linear-gradient(to right, #b3241c 10%, rgba(255, 255, 255, 0) 52%);
+      /*position: relative;*/
+      -webkit-animation: load3 1.4s infinite linear;
+      animation: load3 1.4s infinite linear;
+      -webkit-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+    .f767bd51-8020-46f7-be75-442a6d73c58f:before {
+      width: 50%;
+      height: 50%;
+      background: #b3241c;
+      border-radius: 100% 0 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+    }
+    .f767bd51-8020-46f7-be75-442a6d73c58f:after {
+      background: #da8604;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    @-webkit-keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    .be75-442a6d73c58f{
+      display: none !important;
+    }
+</style>
+<div id="f767bd51-8020-46f7-be75-442a6d73c58f" class="be75-442a6d73c58f">
+  <div id="a442a6d73c58f">
+    <div class="desc">BHV</div>
+    <div class="f767bd51-8020-46f7-be75-442a6d73c58f">
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    const Loading = {
+      Show: function (){
+        shared.ViewFunc.DisableScroll();
+        $('#f767bd51-8020-46f7-be75-442a6d73c58f').removeClass('be75-442a6d73c58f');
+      },
+      Hide: function (){
+        shared.ViewFunc.EnableScroll();
+        $('#f767bd51-8020-46f7-be75-442a6d73c58f').addClass('be75-442a6d73c58f');
+      }
+    }
+</script>
+    <div class="e5c79614-3ef6-4a2b-8211-7507370748e8">
+        <div class="f2792d50">
+    <div class="lv1">
+        <div class="container">
+        </div>
+    </div>
+    <div class="lv2">
+        <div class="container">
+            <div class="--left">
+                <div class="logo" action-event="link" action-value="/">
+                    <img src="/cdn/image/logo/logo_bhv.png" alt="logo bhv"/>
+                </div>
+            </div>
+            <div class="--right">
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="d63d3c6d" id="d63d3c6d">
+    <div class="item icon-menu btn-mobile">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="item logo" action-event="click" action-value="/">
+        <img src="/cdn/image/logo/logo_bhv.png" alt="logo bhv"/>
+    </div>
+    <div class="item icon-search">
+        <img src="/cdn/image/icon/icon_search.png" alt="icon search"/>
+    </div>
+    <div class="d63d3c6d-data">
+        <div class="menu-control">
+            <div class="close-menu btn-mobile">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <div class="logo">
+                <img src="/cdn/image/logo/logo_bhv.png" alt="logo bhv"/>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="body-data">
+                <div class="ca5ecd52">
+            <img class="desktop" src="/cdn/image/banner/banner_home.png" alt="banner" />
+            <img class="mobile" src="/cdn/image/banner/banner_home_mobile.png" alt="banner" />
+    </div>
+
+            
+            50x
+        </div>
+        <div class="a7507370748e8">
+            <div class="container e5367700">
+    <div class="--lv1 pb-3">
+        <div class="row">
+        </div>
+    </div>
+    <div class="--lv2 pt-5 pb-3">
+        <div class="row">
+            <div class="item col-3">
+                <div class="title">
+                    <p>TẢI XUỐNG ỨNG DỤNG CỦA BHV</p>
+                    <p class="line"></p>
+                </div>
+                <div class="--info-app">
+                    <div class="item"
+                         target="_blank"
+                         action-event="link"
+                         action-value="https://apps.apple.com/vn/app/bhv-online/id1623313906">
+                        <img src="/cdn/image/shared/icon/app_qr_ios.png" alt="app ios"/>
+                    </div>
+                    <div class="item"
+                         target="_blank"
+                         action-event="link"
+                         action-value="https://play.google.com/store/apps/details?id=bhv.ac7d6a3f.bhv_online&hl=en&pli=1">
+                        <img src="/cdn/image/shared/icon/app_qr_android.png" alt="app android"/>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item col-4 m-auto">
+                <div class="title">
+                    <p>DỊCH VỤ KHÁCH HÀNG</p>
+                    <p class="line"></p>
+                </div>
+                <div class="--info" id="div_register_news">
+                    <p>1900 63 35 35 | (028) 7303 3536</p>
+                    <p>Nhận tin tức mới nhất từ Bảo hiểm Hùng Vương</p>
+                    <p class="register-news">
+                        <input placeholder="nhập email của bạn" name="contact_email"/>
+                        <button type="submit" onclick="vv_agency.register_news();" title="Tìm kiếm">
+                            đăng ký
+                        </button>
+                    </p>
+
+                </div>
+            </div>
+            <div class="item col-2">
+                <div class="title">
+                    <p>THEO DÕI BHV</p>
+                    <p class="line"></p>
+                </div>
+                <div class="--info-media">
+                    <div class="item">
+                        <a href="https://www.facebook.com/baohiemhungvuong" target="_blank">
+                            <img src="/cdn/image/shared/icon/icon_fakebook.png" alt="icon facebook"/>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://www.youtube.com/channel/UCZO9W-4Ztu42dcyNoLV8Ifg" target="_blank">
+                            <img src="/cdn/image/shared/icon/icon_youtube.png" alt="icon youtube"/>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://zalo.me/638957794529654741" target="_blank">
+                            <img src="/cdn/image/shared/icon/icon_zalo.png" alt="icon zalo"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="--lv3 pt-5 pb-3">
+        <div class="row">
+            <div class="item col-6 e9c46320">
+                <div class="icon">
+                    <img src="/cdn/image/shared/icon/icon_map.png" alt="icon map"/>
+                </div>
+                <div class="info">
+                    <p class="name">TRỤ SỞ CHÍNH</p>
+                    <p>Tầng 5, toà nhà Samsora Premier, 105 Chu Văn An, Phường Hà Đông, TP. Hà Nội</p>
+                </div>
+            </div>
+            <div class="item col-3 e9c46320">
+                <div class="icon">
+                    <img src="/cdn/image/shared/icon/icon_phone.png" alt="icon map"/>
+                </div>
+                <div class="info">
+                    <p>HOTLINE</p>
+                    <p>1900 63 35 35</p>
+                </div>
+            </div>
+            <div class="item col-3 e9c46320">
+                <div class="icon">
+                    <img src="/cdn/image/shared/icon/icon_email.png" alt="icon map"/>
+                </div>
+                <div class="info">
+                    <p>EMAIL</p>
+                    <p>info@bhv.com.vn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="--lv4 pb-5 pt-3">Copyright © 2025 BHV Insurance. All rights reserved.</div>
+</div>
+        </div>
+        <div class="chat-face">
+            <a href="https://m.me/baohiemhungvuong/" target="_blank">
+                <img src="/image/shared/icon/face_mess.png" alt="">
+            </a>
+        </div>
+    </div>
+    
+</body>
+</html>

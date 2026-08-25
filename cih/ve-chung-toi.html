@@ -3,13 +3,15 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Về Chúng Tôi | Bệnh viện Quốc tế City – City International Hospital</title>
-  <meta name="description" content="Khám phá lịch sử hình thành, tầm nhìn sứ mệnh, đội ngũ lãnh đạo và tiêu chuẩn chất lượng quốc tế JCI của Bệnh viện Quốc tế City." />
+  <meta name="description" content="Bệnh viện Quốc tế City cam kết mang đến dịch vụ chăm sóc sức khỏe đa chuyên khoa cao cấp, đạt tiêu chuẩn quốc tế." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
 </head>
 <body>
 
@@ -20,20 +22,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -44,8 +75,8 @@
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
       <img src="images/logo_cih_acci.png"
-           alt="" class="header__logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+           alt="Bệnh viện Quốc tế City" class="header__logo-img"
+           onerror="this.onerror=null; this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
       <div id="logo-fallback" class="logo-fallback" style="display:none">
         <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
       </div>
@@ -54,201 +85,1005 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
-        <li class="nav__item nav__item--has-dropdown">
-          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
-          <div class="nav__dropdown">
-            <div class="dropdown__grid">
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Nội Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
-                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Ngoại Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
-                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
-                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
-                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chẩn Đoán</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
-              </div>
-            </div>
-          </div>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
         </li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
 
-<!-- SUBPAGE BREADCRUMBS HERO BAR -->
-<section class="subpage-hero" style="background: #f4f8fb; padding: 1.25rem 0; border-bottom: 1px solid #e2e8f0;">
-  <div class="container subpage-hero__inner">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.35rem;">
-      <a href="./" style="color: #005f80; font-weight: 700; text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span style="color: #0f3775; font-weight: 700;">Về Chúng Tôi</span>
-    </div>
+  <style>
+    /* Premium About Us Styling (Hoa Lâm Corporate Style) */
+    .about-group {
+      background: #ffffff;
+      padding: 40px 0 60px 0;
+    }
+    .about-group-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 991px) {
+      .about-group-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    .about-lead {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #1e293b;
+      margin-bottom: 24px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+    .group-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0;
+      list-style: none;
+    }
+    .group-bullets li {
+      font-size: 0.98rem;
+      color: #475569;
+      position: relative;
+      padding-left: 26px;
+      line-height: 1.6;
+    }
+    .group-bullets li::before {
+      content: '✓';
+      color: #007DA5;
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      font-size: 1.1rem;
+    }
+
+    .glass-visual-box {
+      position: relative;
+    }
+    .visual-img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 59, 92, 0.12);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+    }
+    .glass-card-float {
+      position: absolute;
+      bottom: -24px;
+      left: -20px;
+      background: rgba(0, 59, 92, 0.92);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 20px 24px;
+      border-radius: 16px;
+      max-width: 300px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      color: #ffffff;
+    }
+    @media (max-width: 600px) {
+      .glass-card-float {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin-top: 15px;
+        max-width: 100%;
+      }
+    }
+    .glass-card-float h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: #f59e0b;
+    }
+    .glass-card-float p {
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* History Timeline */
+    .history-timeline {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 48px;
+      margin-bottom: 48px;
+    }
+    .timeline-section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      text-align: center;
+      color: #007DA5;
+      margin-bottom: 36px;
+    }
+    .horizontal-timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    @media (max-width: 991px) {
+      .horizontal-timeline {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .horizontal-timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+    .t-node {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .t-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 4px solid #007DA5;
+      margin: 0 auto 20px;
+      transition: all 0.3s;
+    }
+    .t-node:hover .t-dot {
+      background: #007DA5;
+      box-shadow: 0 0 12px rgba(0, 59, 92, 0.4);
+    }
+    .t-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 22px 18px;
+      height: calc(100% - 56px);
+      transition: all 0.3s;
+    }
+    .t-box:hover {
+      background: #ffffff;
+      border-color: #007DA5;
+      box-shadow: 0 8px 25px rgba(0, 59, 92, 0.08);
+      transform: translateY(-4px);
+    }
+    .t-box h4 {
+      font-weight: 800;
+      color: #007DA5;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .t-box span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #0082a6;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .t-box p {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* VMG Grid - Dribbble 2026 Ultra Modern Styling */
+    .vmg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 768px) {
+      .vmg-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .vmg-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 38px 34px;
+      box-shadow: 0 10px 30px -8px rgba(0, 59, 92, 0.05);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .vmg-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #007DA5 0%, #00B4D8 100%);
+      opacity: 0.8;
+      transition: height 0.3s ease;
+    }
+    .vmg-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px -10px rgba(0, 125, 165, 0.15);
+      border-color: rgba(0, 125, 165, 0.3);
+    }
+    .vmg-card:hover::before {
+      height: 6px;
+    }
+    .vmg-badge {
+      width: 58px;
+      height: 58px;
+      background: linear-gradient(135deg, rgba(0,125,165,0.08) 0%, rgba(2,132,199,0.15) 100%);
+      border-radius: 16px;
+      border: 1px solid rgba(0, 125, 165, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 16px -4px rgba(0, 125, 165, 0.1);
+    }
+    .vmg-card h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #007DA5;
+      margin-bottom: 14px;
+      letter-spacing: -0.3px;
+    }
+    .vmg-card p {
+      color: #475569;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
     
+    /* 🌟 DRIBBBLE 2026 ULTRA-MODERN VMG DESIGN */
+    .vmg-wrapper {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+    
+    .vmg-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 3.5rem;
+    }
+    @media (max-width: 768px) {
+      .vmg-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .vmg-hero-card {
+      position: relative;
+      border-radius: 24px;
+      padding: 38px 36px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px -6px rgba(217, 119, 6, 0.12);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(145deg, #ffffff 0%, #fffbeb 45%, #fef3c7 100%);
+      border: 1.5px solid #fde68a;
+    }
+    .vmg-hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #f59e0b 0%, #d97706 50%, #92400E 100%);
+      z-index: 3;
+    }
+    .vmg-hero-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 42px -8px rgba(217, 119, 6, 0.22);
+      border-color: #f59e0b;
+    }
+
+    .vmg-hero-card--vision::after {
+      content: 'VISION';
+      position: absolute;
+      bottom: -12px;
+      right: 18px;
+      font-size: 4.8rem;
+      font-weight: 900;
+      color: #d97706;
+      opacity: 0.05;
+      letter-spacing: 4px;
+      pointer-events: none;
+      user-select: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      font-family: inherit;
+      line-height: 1;
+    }
+    .vmg-hero-card--vision:hover::after {
+      transform: translateY(-4px) scale(1.05);
+      opacity: 0.1;
+    }
+
+    .vmg-hero-card--mission::after {
+      content: 'MISSION';
+      position: absolute;
+      bottom: -12px;
+      right: 18px;
+      font-size: 4.8rem;
+      font-weight: 900;
+      color: #d97706;
+      opacity: 0.05;
+      letter-spacing: 4px;
+      pointer-events: none;
+      user-select: none;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      font-family: inherit;
+      line-height: 1;
+    }
+    .vmg-hero-card--mission:hover::after {
+      transform: translateY(-4px) scale(1.05);
+      opacity: 0.1;
+    }
+
+    /* Modern 3D Glowing Icon Badges */
+    .vmg-icon-badge-modern {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s ease;
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+      box-shadow: 0 6px 18px rgba(217, 119, 6, 0.28);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+    }
+    .vmg-hero-card:hover .vmg-icon-badge-modern {
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .vmg-hero-card h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #92400E;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.4px;
+      position: relative;
+      z-index: 2;
+    }
+    .vmg-hero-card p {
+      color: #334155;
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 0;
+      font-weight: 500;
+      text-align: justify !important;
+      text-justify: inter-word !important;
+      text-align-last: left !important;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Intro Stats Cards (4 Cards) */
+    .intro-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.1rem;
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 500px) {
+      .intro-stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .intro-stat-card {
+      background: linear-gradient(145deg, #ffffff 0%, #fffbeb 45%, #fef3c7 100%);
+      border: 1.5px solid #fde68a;
+      border-radius: 18px;
+      padding: 1.15rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 8px 24px -4px rgba(217, 119, 6, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .intro-stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #f59e0b 0%, #d97706 50%, #92400E 100%);
+      z-index: 2;
+    }
+    .intro-stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -6px rgba(217, 119, 6, 0.2);
+      border-color: #f59e0b;
+    }
+    .intro-stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+      box-shadow: 0 5px 15px rgba(217, 119, 6, 0.28);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      transition: transform 0.3s ease;
+    }
+    .intro-stat-card:hover .intro-stat-icon {
+      transform: scale(1.08) rotate(3deg);
+    }
+    .intro-stat-num {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #92400E;
+      line-height: 1.15;
+      margin-bottom: 2px;
+    }
+    .intro-stat-label {
+      font-size: 0.88rem;
+      color: #92400E;
+      font-weight: 700;
+    }
+
+    /* Core Values Modern Bento Grid */
+    .vmg-values-header {
+      text-align: left;
+      margin-bottom: 1.75rem;
+    }
+    .vmg-values-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #007DA5;
+      margin-bottom: 0;
+      letter-spacing: -0.4px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .vmg-values-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 1024px) {
+      .vmg-values-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .vmg-values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .v-val-card {
+      background: linear-gradient(145deg, #ffffff 0%, #fffbeb 45%, #fef3c7 100%);
+      border: 1.5px solid #fde68a;
+      border-radius: 20px;
+      padding: 28px 18px;
+      text-align: center;
+      box-shadow: 0 8px 24px -4px rgba(217, 119, 6, 0.1);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .v-val-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #f59e0b 0%, #d97706 50%, #92400E 100%);
+      transition: height 0.3s ease;
+      z-index: 2;
+    }
+    .v-val-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px -6px rgba(217, 119, 6, 0.22);
+      border-color: #f59e0b;
+    }
+    .v-val-card:hover::before {
+      height: 5px;
+    }
+
+    .v-val-icon-box {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      box-shadow: 0 6px 16px rgba(217, 119, 6, 0.28);
+      transition: transform 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
+    .v-val-card:hover .v-val-icon-box {
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .v-val-card h4 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #92400E;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 2;
+    }
+    .v-val-card p {
+      font-size: 0.88rem;
+      color: #334155;
+      line-height: 1.55;
+      margin: 0;
+      font-weight: 500;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 🏆 BẢNG VÀNG GIẢI THƯỞNG NỔI BẬT (WARM GOLD/CREAM YELLOW STYLING) */
+    .highlight-awards-section {
+      background: linear-gradient(135deg, #fffef5 0%, #fffbeb 60%, #fef3c7 100%);
+      border: 1.5px solid #fde68a;
+      border-radius: 24px;
+      padding: 2.5rem 3rem;
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+      box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.12);
+    }
+    @media (max-width: 768px) {
+      .highlight-awards-section {
+        padding: 1.75rem 1.25rem;
+      }
+    }
+
+    .highlight-awards-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .highlight-awards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.1rem 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .highlight-awards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .award-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #ffffff;
+      padding: 1.1rem 1.4rem;
+      border-radius: 16px;
+      border: 1.5px solid #fde68a;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.06);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #1e293b;
+      transition: all 0.3s ease;
+    }
+    .award-badge-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.15);
+      border-color: #f59e0b;
+    }
+
+    .award-badge-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .award-badge-item strong {
+      color: #b45309;
+      font-weight: 800;
+    }
+
+/* Ban Lãnh Đạo */
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 768px) {
+      .leaders-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .leader-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 59, 92, 0.04);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .leader-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 59, 92, 0.1);
+      border-color: #007DA5;
+    }
+    .leader-img-wrapper {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 16px auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #007DA5;
+      background: #f8fafc;
+      flex-shrink: 0;
+    }
+    .leader-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .leader-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #007DA5;
+      margin-bottom: 4px;
+    }
+    .leader-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #0082a6;
+    }
+
+    /* 📊 MODERN STATS SECTION (CON SỐ ẤN TƯỢNG) */
+    .stats-section {
+      background: linear-gradient(135deg, #fffef7 0%, #fef5d8 50%, #fce8a6 100%);
+      color: #003b5c;
+      border: 1.5px solid rgba(252, 232, 166, 0.8);
+      padding: 44px 32px;
+      border-radius: 28px;
+      margin-bottom: 48px;
+      box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.12), 0 0 0 1px rgba(254, 243, 199, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align: center;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 16px;
+      }
+    }
+    .stat-item {
+      position: relative;
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+    .stat-item:hover {
+      transform: translateY(-4px);
+    }
+    .stat-num {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #007DA5 0%, #004b6e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+    .stat-label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #334155;
+      letter-spacing: 0.2px;
+    }
+  
+    /* 🌟 MODERN HORIZONTAL STAT BAR (KHỚP 100% ẢNH MẪU) */
+    .modern-stat-bar {
+      background: #eff6ff;
+      border-radius: 20px;
+      padding: 32px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 1.8rem;
+      border: 1px solid #dbeafe;
+      box-shadow: 0 4px 15px rgba(0, 125, 165, 0.05);
+    }
+    .stat-bar-item {
+      text-align: center;
+      flex: 1;
+    }
+    .stat-bar-number {
+      font-size: 3.4rem;
+      font-weight: 800;
+      color: #007DA5;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+    .stat-bar-number sup {
+      font-size: 2.2rem;
+      top: -0.45em;
+      font-weight: 700;
+      margin-left: 2px;
+    }
+    .stat-bar-label {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #007DA5;
+      letter-spacing: 0.2px;
+    }
+    .stat-bar-divider {
+      width: 1px;
+      height: 54px;
+      background: #cbd5e1;
+      opacity: 0.7;
+    }
+    @media (max-width: 768px) {
+      .modern-stat-bar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px 16px;
+      }
+      .stat-bar-divider {
+        width: 80%;
+        height: 1px;
+      }
+      .stat-bar-number {
+        font-size: 2.8rem;
+      }
+    }
+
+  </style>
+
+<!-- SUBPAGE BREADCRUMBS HERO BAR -->
+<section class="subpage-hero" style="background: #f4f8fb; padding: 0.35rem 0; border-bottom: 1px solid #e2e8f0;">
+  <div class="container subpage-hero__inner">
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000; margin-bottom: 0.35rem;">
+      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Về chúng tôi</span>
+    </div>
   </div>
 </section>
 
-<!-- SUBPAGE CONTENT -->
-<main class="subpage-content">
+<!-- MAIN ABOUT SECTION (Hoa Lâm Corporate Style) -->
+<main class="about-group">
   <div class="container">
-    
-    <!-- Giới thiệu chung -->
-    <div class="subpage-card animate-fade-up">
-      <h2 class="subpage-heading">Giới Thiệu Tổng Quan</h2>
-      <p style="margin-bottom: 1.2rem; font-size: 1.05rem; line-height: 1.8;">
-        Chính thức đi vào hoạt động từ ngày 05/01/2014, <strong>Bệnh viện Quốc tế City (CIH)</strong> là bệnh viện đa khoa quốc tế đầu tiên và hạt nhân tại <strong>Khu Y tế Kỹ thuật cao Hoa Lâm Shangri-La</strong> (Quận Bình Tân, TP.HCM). Với quy mô 320 giường bệnh, bệnh viện được thiết kế theo tiêu chuẩn quốc tế hiện đại bậc nhất, sẵn sàng cung cấp các dịch vụ y tế kỹ thuật cao toàn diện cho bệnh nhân tại TP.HCM và các tỉnh lân cận thuộc khu vực miền Nam cũng như khu vực các nước lân cận (Campuchia, Lào).
-      </p>
-      <p style="font-size: 1.05rem; line-height: 1.8;">
-        CIH tự hào là một trong số ít bệnh viện tư nhân tại Việt Nam đạt tiêu chuẩn quản lý chất lượng nghiêm ngặt của <strong>JCI (Joint Commission International)</strong> – chứng nhận an toàn y tế và chất lượng dịch vụ y tế danh giá toàn cầu.
-      </p>
-    </div>
 
-    <!-- Tầm nhìn - Sứ mệnh - Giá trị cốt lõi -->
-    <div class="subpage-card animate-fade-up" style="animation-delay: 0.1s;">
-      <h2 class="subpage-heading">Tầm Nhìn & Sứ Mệnh</h2>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
-        <div style="background: var(--c-bg); padding: 1.5rem; border-radius: var(--r-md); border-left: 4px solid var(--c-primary);">
-          <h3 style="color: var(--c-primary); font-weight: 700; margin-bottom: 0.75rem;">🔭 Tầm Nhìn</h3>
-          <p style="font-size: 0.95rem; line-height: 1.7;">
-            Trở thành nhà cung cấp dịch vụ chăm sóc sức khỏe chất lượng quốc tế hàng đầu tại Việt Nam và khu vực Đông Nam Á, tiên phong ứng dụng công nghệ y học hiện đại và mang đến sự an tâm tuyệt đối cho khách hàng.
-          </p>
-        </div>
-        <div style="background: var(--c-bg); padding: 1.5rem; border-radius: var(--r-md); border-left: 4px solid var(--c-green);">
-          <h3 style="color: var(--c-green-d); font-weight: 700; margin-bottom: 0.75rem;">🎯 Sứ Mệnh</h3>
-          <p style="font-size: 0.95rem; line-height: 1.7;">
-            "Sức khỏe của bệnh nhân là ưu tiên hàng đầu". Chúng tôi cam kết mang lại sự chăm sóc y tế toàn diện, an toàn, hiệu quả bằng sự tận tâm, chuyên nghiệp của đội ngũ chuyên gia đầu ngành cùng hệ thống trang thiết bị tiên tiến nhất.
-          </p>
-        </div>
-      </div>
-      
-      <div style="margin-top: 2rem;">
-        <h3 style="font-weight: 700; margin-bottom: 1rem; color: var(--c-text);">💎 Giá Trị Cốt Lõi (C-I-H)</h3>
-        <ul style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-          <li style="background: var(--c-primary-l); padding: 1.25rem; border-radius: var(--r-md); text-align: center;">
-            <strong style="display: block; font-size: 1.5rem; color: var(--c-primary); margin-bottom: 0.5rem;">C</strong>
-            <strong>Compassion (Tận Tâm)</strong>
-            <p style="font-size: 0.85rem; color: var(--c-text3); margin-top: 0.5rem;">Lắng nghe và chia sẻ nỗi đau, chăm sóc người bệnh như người thân ruột thịt.</p>
-          </li>
-          <li style="background: rgba(118,188,33,0.1); padding: 1.25rem; border-radius: var(--r-md); text-align: center;">
-            <strong style="display: block; font-size: 1.5rem; color: var(--c-green-d); margin-bottom: 0.5rem;">I</strong>
-            <strong>Integrity (Trung Thực)</strong>
-            <p style="font-size: 0.85rem; color: var(--c-text3); margin-top: 0.5rem;">Đảm bảo tính chính trực chuyên môn, minh bạch chi phí và bảo mật thông tin.</p>
-          </li>
-          <li style="background: var(--c-teal-l); padding: 1.25rem; border-radius: var(--r-md); text-align: center;">
-            <strong style="display: block; font-size: 1.5rem; color: var(--c-teal-d); margin-bottom: 0.5rem;">H</strong>
-            <strong>High Quality (Chất Lượng Cao)</strong>
-            <p style="font-size: 0.85rem; color: var(--c-text3); margin-top: 0.5rem;">Nỗ lực đạt tiêu chuẩn y tế quốc tế JCI và cải tiến quy trình lâm sàng liên tục.</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Lịch sử và Cột mốc -->
-    <div class="subpage-card animate-fade-up" style="animation-delay: 0.2s;">
-      <h2 class="subpage-heading">Cột Mốc Lịch Sử Phát Triển</h2>
-      <div style="position: relative; padding-left: 2rem; border-left: 2px solid var(--c-border); margin: 2rem 0 1rem 1rem;">
+    <!-- Section 1: Overview Grid -->
+    <div class="about-group-grid animate-fade-up">
+      <div class="group-content">
+        <h2 class="timeline-section-title" style="text-align: left; margin-bottom: 20px; font-size: 1.8rem;">Về chúng tôi</h2>
         
-        <div style="position: relative; margin-bottom: 2rem;">
-          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 1rem; height: 1rem; border-radius: 50%; background: var(--c-primary); border: 3px solid var(--c-white); box-shadow: 0 0 0 3px var(--c-primary-l);"></div>
-          <strong style="font-size: 1.15rem; color: var(--c-primary);">Năm 2014</strong>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem;">Bệnh viện Quốc tế City chính thức đi vào hoạt động, mở rộng dịch vụ đa khoa chất lượng cao phục vụ nhân dân miền Nam.</p>
-        </div>
+        <p class="about-lead">
+          Bệnh viện Quốc tế City chính thức đi vào hoạt động từ ngày 05/01/2014, toạ lạc tại Khu Y tế kỹ thuật cao TP. HCM. Bệnh viện được trang bị cơ sở vật chất và trang thiết bị hiện đại đạt tiêu chuẩn quốc tế.
+        </p>
 
-        <div style="position: relative; margin-bottom: 2rem;">
-          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 1rem; height: 1rem; border-radius: 50%; background: var(--c-green); border: 3px solid var(--c-white); box-shadow: 0 0 0 3px rgba(118,188,33,0.2);"></div>
-          <strong style="font-size: 1.15rem; color: var(--c-green-d);">Năm 2018 - 2020</strong>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem;">Khánh thành Trung tâm Hỗ trợ sinh sản (IVF Center) và Trung tâm Tim mạch kỹ thuật cao. Bắt đầu đẩy mạnh nghiên cứu và đào tạo liên tục CME.</p>
-        </div>
+        <!-- Bộ 4 Con Số Ấn Tượng ngay dưới đoạn văn giới thiệu mở đầu -->
+        <div class="intro-stats-grid">
+          
+          <div class="intro-stat-card">
+            <div class="intro-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+                <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+                <circle cx="20" cy="10" r="2"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="intro-stat-num">16</div>
+              <div class="intro-stat-label">Chuyên khoa</div>
+            </div>
+          </div>
 
-        <div style="position: relative; margin-bottom: 2rem;">
-          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 1rem; height: 1rem; border-radius: 50%; background: var(--c-primary); border: 3px solid var(--c-white); box-shadow: 0 0 0 3px var(--c-primary-l);"></div>
-          <strong style="font-size: 1.15rem; color: var(--c-primary);">Năm 2023</strong>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem;">Bệnh viện chính thức đón nhận Chứng chỉ quản lý chất lượng y khoa JCI danh giá của Hoa Kỳ, khẳng định vị thế bệnh viện chuẩn quốc tế.</p>
-        </div>
+          <div class="intro-stat-card">
+            <div class="intro-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 4v16"></path>
+                <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                <path d="M2 17h20"></path>
+                <path d="M6 8v9"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="intro-stat-num">320</div>
+              <div class="intro-stat-label">Giường</div>
+            </div>
+          </div>
 
-        <div style="position: relative; margin-bottom: 2rem;">
-          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 1rem; height: 1rem; border-radius: 50%; background: var(--c-green); border: 3px solid var(--c-white); box-shadow: 0 0 0 3px rgba(118,188,33,0.2);"></div>
-          <strong style="font-size: 1.15rem; color: var(--c-green-d);">Năm 2025</strong>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem;">Khai trương Trung tâm Thẩm mỹ - Y học tái tạo và Phòng khám Quốc tế. Nhận giải thưởng "Top 10 thương hiệu xuất sắc Châu Á năm 2025".</p>
-        </div>
+          <div class="intro-stat-card">
+            <div class="intro-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="intro-stat-num">550+</div>
+              <div class="intro-stat-label">Nhân sự y tế</div>
+            </div>
+          </div>
 
-        <div style="position: relative;">
-          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 1rem; height: 1rem; border-radius: 50%; background: var(--c-primary); border: 3px solid var(--c-white); box-shadow: 0 0 0 3px var(--c-primary-l);"></div>
-          <strong style="font-size: 1.15rem; color: var(--c-primary);">Năm 2026</strong>
-          <p style="font-size: 0.95rem; margin-top: 0.25rem;">Tiếp tục nâng cấp chuyển đổi số y tế, tự động hóa dịch vụ đặt lịch, kết quả cận lâm sàng trực tuyến và ra mắt giao diện số hiện đại.</p>
+          <div class="intro-stat-card">
+            <div class="intro-stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                <path d="M9 22v-4h6v4"></path>
+                <path d="M8 6h.01"></path>
+                <path d="M16 6h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M16 10h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M16 14h.01"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="intro-stat-num">27.000+</div>
+              <div class="intro-stat-label">m² (Diện tích)</div>
+            </div>
+          </div>
+
         </div>
 
       </div>
-    </div>
 
-    <!-- Tiêu chuẩn chất lượng JCI -->
-    <div class="subpage-card animate-fade-up" style="animation-delay: 0.3s;">
-      <h2 class="subpage-heading">Tiêu Chuẩn Vàng JCI Quốc Tế</h2>
-      <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 280px;">
-          <p style="margin-bottom: 1rem; line-height: 1.7;">
-            <strong>JCI (Joint Commission International)</strong> là tổ chức phi lợi nhuận uy tín hàng đầu thế giới của Mỹ chuyên thẩm định chất lượng dịch vụ y tế và an toàn người bệnh. Một bệnh viện đạt chứng nhận JCI đồng nghĩa với việc sở hữu quy trình vận hành lâm sàng cực kỳ chuẩn mực, hạn chế tối đa các rủi ro y khoa cho người bệnh.
-          </p>
-          <ul style="display: grid; gap: 0.5rem;">
-            <li>🛡️ <strong>Nhận dạng đúng người bệnh</strong> trước khi thực hiện bất kỳ thủ thuật nào.</li>
-            <li>🏥 <strong>Kiểm soát nhiễm khuẩn</strong> cực kỳ nghiêm ngặt theo tiêu chuẩn Mỹ.</li>
-            <li>💬 <strong>Giao tiếp y khoa hiệu quả</strong> giữa bác sĩ, điều dưỡng và người bệnh.</li>
-            <li>💊 <strong>An toàn sử dụng thuốc</strong> cao, tránh tuyệt đối nhầm lẫn y khoa.</li>
-          </ul>
-        </div>
-        <div style="background: var(--c-primary-d); color: var(--c-white); padding: 2rem; border-radius: var(--r-md); text-align: center; max-width: 320px; margin: 0 auto; box-shadow: var(--shadow-lg);">
-          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🏅</div>
-          <strong style="font-size: 1.25rem; display: block; margin-bottom: 0.5rem;">Chứng Nhận JCI</strong>
-          <p style="font-size: 0.85rem; opacity: 0.9;">
-            "Chứng nhận vàng danh giá nhất dành cho các bệnh viện quốc tế cam kết tuyệt đối về sự an toàn và chăm sóc y tế toàn diện cho người bệnh."
-          </p>
+      <div class="group-visual">
+        <div class="glass-visual-box">
+          <img src="images/cih1.jpg" alt="Bệnh viện Quốc tế City" class="visual-img" />
         </div>
       </div>
     </div>
+
+    
+    <!-- Section 3: Tầm nhìn - Sứ mệnh - Giá trị cốt lõi (Dribbble 2026 Redesign) -->
+    <div class="vmg-wrapper animate-fade-up" id="giai-thuong">
+      
+      <!-- Top Row: Tầm nhìn & Sứ mệnh -->
+      <div class="vmg-hero-grid">
+        <div class="vmg-hero-card vmg-hero-card--vision">
+          <div class="vmg-icon-badge-modern">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h3>Tầm nhìn</h3>
+          <p>Đi đầu trong lĩnh vực chăm sóc sức khỏe y tế tích hợp theo tiêu chuẩn quốc tế.</p>
+        </div>
+
+        <div class="vmg-hero-card vmg-hero-card--mission">
+          <div class="vmg-icon-badge-modern">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          </div>
+          <h3>Sứ mệnh</h3>
+          <p>Dịch vụ chăm sóc sức khỏe ưu việt sẽ mang lại cuộc sống tốt đẹp cho người bệnh.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Giá Trị Cốt Lõi (5 Cards Bento Grid) -->
+      <div class="vmg-values-header">
+        <h3 class="vmg-values-title">Giá trị cốt lõi</h3>
+      </div>
+
+      <div class="vmg-values-grid">
+        
+        <div class="v-val-card">
+          <div class="v-val-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h4>Chính trực</h4>
+          <p>Làm đúng từ tâm<br />Vững niềm tin lâu dài.</p>
+        </div>
+
+        <div class="v-val-card">
+          <div class="v-val-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h4>Minh bạch</h4>
+          <p>Rõ ràng trong hành động<br />Bền vững trong phát triển.</p>
+        </div>
+
+        <div class="v-val-card">
+          <div class="v-val-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+          </div>
+          <h4>Tận tâm</h4>
+          <p>Phục vụ bằng trái tim<br />Tạo giá trị thật.</p>
+        </div>
+
+        <div class="v-val-card">
+          <div class="v-val-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 1 0 7.75"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h4>Tôn trọng</h4>
+          <p>Trân quý con người<br />Gắn kết tập thể.</p>
+        </div>
+
+        <div class="v-val-card">
+          <div class="v-val-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h4>Tử tế</h4>
+          <p>Lan toả điều lành<br />Xây dựng văn hoá đẹp.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
 
   </div>
 </main>
 
-<!-- FOOTER -->
 <footer class="footer" id="lien-he">
   <div class="footer__main">
     <div class="container footer__grid">
@@ -256,7 +1091,7 @@
         <div class="footer__logo">
           <img src="images/logo_cih_acci.png"
                alt="" class="footer__logo-img"
-               onerror="this.style.display='none'" />
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
@@ -278,41 +1113,33 @@
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
-        <ul class="footer__links">
-          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
-          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
-          <li>
+          <li class="footer__contact-address">
             <span class="footer__contact-icon" style="margin-top: 2px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -322,11 +1149,19 @@
           </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -334,11 +1169,7 @@
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -355,7 +1186,21 @@
   </a>
 </div>
 
-<script src="script.js"></script>
-<script src="booking_modal.js"></script>
+<!-- ═══════════════════════════════════════════════
+     AWARD DETAIL POPUP MODAL
+═══════════════════════════════════════════════ -->
+<div class="award-modal" id="award-modal" onclick="if(event.target===this) closeAwardModal()" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0, 26, 38, 0.75); align-items:center; justify-content:center; padding:1.25rem;">
+  <div class="award-modal__content" style="background:#ffffff; border-radius:24px; padding:2.5rem 2rem; max-width:520px; width:100%; position:relative; text-align:center; box-shadow:0 25px 50px -12px rgba(0,0,0,0.25);">
+    <button class="award-modal__close" id="award-modal-close" onclick="closeAwardModal()" aria-label="Đóng" style="position:absolute; top:1rem; right:1rem; width:38px; height:38px; border-radius:50%; border:1px solid #cbd5e1; background:#f8fafc; color:#64748b; font-size:1.25rem; font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.2s;">✕</button>
+    <div class="award-modal__icon" id="award-modal-logo-wrap" style="height:75px; display:flex; align-items:center; justify-content:center; margin-bottom:1rem;"><img id="award-modal-logo" src="" alt="Award Logo" style="max-height:70px; max-width:200px; object-fit:contain;" /></div>
+    <h3 class="award-modal__title" id="award-modal-title" style="font-size:1.35rem; font-weight:800; color:#007DA5; line-height:1.4; margin-bottom:1.25rem; padding:0 0.5rem;"></h3>
+    <div class="award-modal__desc" id="award-modal-desc" style="font-size:0.95rem; color:#475569; line-height:1.75; text-align:justify; text-justify:inter-word; text-align-last:center;"></div>
+  </div>
+</div>
+
+<script src="script.js?v=1787643496"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

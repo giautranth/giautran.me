@@ -3,13 +3,15 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Liên Hệ | Bệnh viện Quốc tế City – City International Hospital</title>
   <meta name="description" content="Liên hệ Bệnh viện Quốc tế City (CIH). Thông tin địa chỉ, hotline cấp cứu 24/7 và form đặt lịch hẹn khám bệnh trực tuyến." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
   <style>
     /* Contact page layout container */
     .contact-layout-grid {
@@ -37,42 +39,65 @@
     }
     
     .contact-card-white {
-      background: var(--c-white);
-      border: 1px solid #f0f4f8;
-      border-radius: 20px;
-      padding: 1.25rem 1.5rem;
-      box-shadow: var(--shadow-sm);
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 1.15rem 1.25rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
       display: flex;
-      gap: 1.25rem;
+      gap: 1.15rem;
       align-items: center;
+      transition: all 0.3s ease;
+    }
+    .contact-card-white:hover {
+      border-color: #007DA5;
+      box-shadow: 0 6px 20px rgba(0, 125, 165, 0.1);
+      transform: translateY(-2px);
     }
     
     .contact-icon-box {
-      width: 52px;
-      height: 52px;
+      width: 46px;
+      height: 46px;
       border-radius: 12px;
-      background: #eef5fa;
-      color: #0e4a78;
+      background: rgba(0, 125, 165, 0.08);
+      border: 1px solid rgba(0, 125, 165, 0.15);
+      color: #007DA5;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      box-shadow: none;
+      transition: all 0.3s ease;
+    }
+    .contact-card-white:hover .contact-icon-box {
+      background: #007DA5;
+      color: #ffffff;
+      border-color: #007DA5;
     }
     
     .contact-card-body h3 {
-      font-size: 0.8rem;
+      font-size: 0.775rem;
       font-weight: 700;
       letter-spacing: 0.5px;
       margin-bottom: 0.25rem;
-      color: #004870;
+      color: #64748b;
       text-transform: uppercase;
     }
     
     .contact-card-body p, .contact-card-body a {
       font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--c-text2);
-      line-height: 1.4;
+      font-weight: 400 !important;
+      color: #1e293b !important;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+    .contact-card-body a {
+      color: #1e293b !important;
+      transition: color 0.2s;
+    }
+    .contact-card-body a:hover {
+      color: #007DA5 !important;
+      text-decoration: underline;
     }
     
     .contact-grid-bottom {
@@ -196,20 +221,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -220,8 +274,8 @@
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
       <img src="images/logo_cih_acci.png"
-           alt="" class="header__logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+           alt="Bệnh viện Quốc tế City" class="header__logo-img"
+           onerror="this.onerror=null; this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
       <div id="logo-fallback" class="logo-fallback" style="display:none">
         <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
       </div>
@@ -230,74 +284,52 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
-        <li class="nav__item nav__item--has-dropdown">
-          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
-          <div class="nav__dropdown">
-            <div class="dropdown__grid">
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Nội Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
-                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Ngoại Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
-                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
-                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
-                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chẩn Đoán</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
-              </div>
-            </div>
-          </div>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
         </li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
 
 <!-- SUBPAGE BREADCRUMBS HERO BAR -->
-<section class="subpage-hero" style="background: #f4f8fb; padding: 1.25rem 0; border-bottom: 1px solid #e2e8f0;">
+<section class="subpage-hero" style="background: #f4f8fb; padding: 0.35rem 0; border-bottom: 1px solid #e2e8f0;">
   <div class="container subpage-hero__inner">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.35rem;">
-      <a href="./" style="color: #005f80; font-weight: 700; text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span style="color: #0f3775; font-weight: 700;">Liên Hệ</span>
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000; margin-bottom: 0.35rem;">
+      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Liên hệ</span>
     </div>
     
   </div>
@@ -311,7 +343,7 @@
       <!-- Cột trái: Hình ảnh bệnh viện & các thẻ thông tin -->
       <div class="contact-left-col">
         <!-- 1. Hình ảnh bệnh viện -->
-        <img src="images/cih1.jpg" alt="City International Hospital" class="contact-banner-img animate-fade-up" />
+        <img src="images/cih1.jpg" alt="City International Hospital" class="contact-banner-img animate-fade-up" loading="lazy" />
         
         <!-- 2. Thẻ Địa chỉ -->
         <div class="contact-card-white animate-fade-up" style="animation-delay: 0.1s;">
@@ -323,7 +355,7 @@
           </div>
           <div class="contact-card-body">
             <h3>Địa chỉ</h3>
-            <p>Số 3 Đường 17A, Phường An Lạc, TP. HCM</p>
+            <p>Số 3 Đường 17A, P. An Lạc, TP. HCM</p>
           </div>
         </div>
         
@@ -338,9 +370,9 @@
             </div>
             <div class="contact-card-body">
               <h3>Điện thoại</h3>
-              <p style="font-size: 0.85rem; line-height: 1.5; margin: 0;">
-                Tổng đài: <a href="tel:19008146" style="font-weight: 700;">1900 8146</a><br />
-                Cấp cứu: <a href="tel:02862901155" style="font-weight: 700;">(028) 6290 1155</a>
+              <p style="font-size: 0.82rem; line-height: 1.5; margin: 0; white-space: nowrap;">
+                Tổng đài: <a href="tel:19008146" style="font-weight: 400;">1900 8146</a><br />
+                <span style="white-space: nowrap;">Cấp cứu: <a href="tel:02862901155" style="font-weight: 400;">(028) 6290 1155</a></span>
               </p>
             </div>
           </div>
@@ -361,241 +393,124 @@
         </div>
       </div>
       
-      <!-- Cột phải: Form liên hệ -->
-      <!-- BỆNH VIỆN QUỐC TẾ CITY - DẠNG ĐĂNG KÝ KHÁM BỆNH PHONG CÁCH TÂM ANH -->
+<!-- Cột phải: Form liên hệ chuẩn thiết kế -->
 <section id="dat-lich" style="scroll-margin-top: 100px; margin-bottom: 3.5rem;">
-  <div class="contact-form-card" style="background: #ffffff; border-radius: 20px; padding: 2.5rem; border: 1px solid #cbd5e1; box-shadow: 0 10px 30px rgba(15, 55, 117, 0.08);">
+  <div class="contact-form-card" style="background: #ffffff; border-radius: 24px; padding: 2.5rem; border: 1px solid #eaedf0; box-shadow: 0 10px 30px rgba(0, 59, 92, 0.06);">
     
-    <div style="text-align: center; margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 2px solid #e2e8f0;">
-      <span style="background: #dbeafe; color: #1e40af; font-size: 0.8rem; font-weight: 800; padding: 0.35rem 1rem; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.5px;">ĐẶT LỊCH HẸN TRỰC TUYẾN</span>
-      <h2 style="font-size: 1.8rem; font-weight: 900; color: #0f3775; margin: 0.75rem 0 0.25rem; text-transform: uppercase;">ĐĂNG KÝ KHÁM BỆNH</h2>
-      <p style="font-size: 0.9rem; color: #64748b; margin: 0;">Quý khách vui lòng điền thông tin bên dưới để được ưu tiên xếp lịch khám nhanh nhất.</p>
-    </div>
+    <h2 style="font-size: 1.75rem; font-weight: 800; color: #007DA5; margin-top: 0; margin-bottom: 1.75rem;">Liên hệ</h2>
 
-    <form id="tam-anh-booking-form" onsubmit="handleBookingSubmit(event)">
+    <form id="contact-custom-form" novalidate onsubmit="handleContactSubmit(event)">
       
-      <!-- STEP 1: THÔNG TIN KHÁM -->
-      <div style="background: #f8fafc; border-radius: 14px; padding: 1.5rem; border: 1px solid #e2e8f0; margin-bottom: 1.75rem;">
-        <h3 style="font-size: 1.05rem; font-weight: 800; color: #0f3775; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">
-          <span style="width: 26px; height: 26px; border-radius: 50%; background: #0f3775; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.85rem;">1</span>
-          THÔNG TIN CHUYÊN KHOA & LỊCH KHÁM
-        </h3>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
-          <!-- Chọn chuyên khoa -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              * Chọn chuyên khoa <span style="color: #dc2626;">*</span>
-            </label>
-            <select id="bk-specialty" required style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #ffffff; color: #0f172a; outline: none; cursor: pointer;" onchange="updateDoctorDropdown(this.value)">
-              <option value="">-- Chọn Chuyên Khoa --</option>
-              <option value="khoa-phu-san">Khoa Phụ Sản</option>
-              <option value="khoa-nhi">Khoa Nhi</option>
-              <option value="ivf">Trung tâm Hỗ trợ sinh sản (IVF)</option>
-              <option value="khoa-than-kinh">Khoa Thần Kinh</option>
-              <option value="noi-soi-tieu-hoa">Trung tâm Tiêu hóa - Nội soi</option>
-              <option value="khoa-ngoai-tong-quat">Khoa Ngoại Tổng Quát</option>
-              <option value="khoa-tim-mach">Khoa Tim Mạch</option>
-              <option value="khoa-kham-tong-quat">Khoa Khám Tổng Quát (EHS)</option>
-            </select>
-          </div>
-
-          <!-- Chọn bác sĩ -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              * Chọn bác sĩ <span style="color: #dc2626;">*</span>
-            </label>
-            <select id="bk-doctor" required style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #ffffff; color: #0f172a; outline: none; cursor: pointer;">
-              <option value="">-- Bác sĩ khám bất kỳ (Khuyên dùng) --</option>
-              <option value="BS.CKII. Nguyễn Vũ Mỹ Linh">BS.CKII. Nguyễn Vũ Mỹ Linh (Trưởng khoa Sản)</option>
-              <option value="TS.BS.CKII. Trần Việt Thế Phương">TS.BS.CKII. Trần Việt Thế Phương (Phó khoa Sản)</option>
-              <option value="BS.CKII. Nguyễn Bạch Huệ">BS.CKII. Nguyễn Bạch Huệ (Trưởng khoa Nhi)</option>
-              <option value="BS.CKII. Lê Kim Sang">BS.CKII. Lê Kim Sang (Trưởng khoa Tiêu Hóa)</option>
-              <option value="TS.BS. Nguyễn Huỳnh Thiện Lương">TS.BS. Nguyễn Huỳnh Thiện Lương (Trưởng khoa Thần Kinh)</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Chọn ngày & Khung giờ -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
-          <!-- Chọn Ngày -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              * Chọn ngày khám <span style="color: #dc2626;">*</span>
-            </label>
-            <input type="date" id="bk-date" required min="2026-07-24" value="2026-07-25" style="width: 100%; padding: 0.75rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #ffffff; color: #0f172a; outline: none;" onchange="updateSelectedTimeLabel()" />
-          </div>
-
-          <!-- Khung giờ (Sáng / Chiều Buttons) -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              * Chọn khung giờ <span style="color: #dc2626;">*</span>
-            </label>
-            <div style="display: flex; gap: 0.5rem; background: #e2e8f0; padding: 4px; border-radius: 10px;">
-              <button type="button" id="time-slot-sang" class="time-slot-btn active-slot" onclick="selectTimeSlot('Sáng', this)" style="flex: 1; padding: 0.6rem 0.5rem; border: none; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: #0f3775; color: #ffffff;">
-                🌅 Sáng (07:30 - 11:30)
-              </button>
-              <button type="button" id="time-slot-chieu" class="time-slot-btn" onclick="selectTimeSlot('Chiều', this)" style="flex: 1; padding: 0.6rem 0.5rem; border: none; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; background: transparent; color: #475569;">
-                ⛅ Chiều (13:00 - 16:30)
-              </button>
-            </div>
-            <input type="hidden" id="bk-timeslot" value="Sáng (07:30 - 11:30)" />
-          </div>
-        </div>
-
-        <!-- Nhập vấn đề cần khám -->
+      <!-- Row 1: Họ tên & Số điện thoại -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1rem;">
         <div>
-          <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-            Nhập vấn đề cần khám / Triệu chứng bệnh
-          </label>
-          <textarea id="bk-issue" rows="3" placeholder="Nhập tình trạng sức khỏe của bạn, câu hỏi dành cho bác sĩ hoặc vấn đề cần khám..." style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.9rem; background: #ffffff; color: #0f172a; outline: none; resize: vertical;"></textarea>
+          <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Họ tên <span style="color: #dc2626;">*</span></label>
+          <input type="text" id="contact-name" placeholder="" style="width: 100%; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.95rem; color: #0f172a; outline: none; transition: all 0.2s;" onfocus="clearFieldError('name'); this.style.borderColor='#007DA5';this.style.background='#fff'" onblur="if(!this.value.trim()){this.style.borderColor='#e2e8f0';this.style.background='#f8fafc'}" />
+          <div id="err-name" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng nhập họ và tên của bạn.</div>
         </div>
-
+        <div>
+          <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Số điện thoại <span style="color: #dc2626;">*</span></label>
+          <input type="tel" id="contact-phone" placeholder="" style="width: 100%; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.95rem; color: #0f172a; outline: none; transition: all 0.2s;" oninput="formatPhoneInput(this)" onfocus="clearFieldError('phone'); this.style.borderColor='#007DA5';this.style.background='#fff'" onblur="if(!this.value.trim()){this.style.borderColor='#e2e8f0';this.style.background='#f8fafc'}" />
+          <div id="err-phone" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng nhập số điện thoại hợp lệ (chỉ gồm số, +, (, ), không chứa khoảng trắng).</div>
+        </div>
       </div>
 
-      <!-- STEP 2: THÔNG TIN CÁ NHÂN KHÁCH HÀNG -->
-      <div style="background: #f8fafc; border-radius: 14px; padding: 1.5rem; border: 1px solid #e2e8f0; margin-bottom: 1.75rem;">
-        <h3 style="font-size: 1.05rem; font-weight: 800; color: #0f3775; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">
-          <span style="width: 26px; height: 26px; border-radius: 50%; background: #0f3775; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.85rem;">2</span>
-          THÔNG TIN NGƯỜI ĐĂNG KÝ KHÁM
-        </h3>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
-          <!-- Họ tên -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              * Họ và tên bệnh nhân <span style="color: #dc2626;">*</span>
-            </label>
-            <input type="text" id="bk-fullname" required placeholder="Nhập họ và tên có dấu..." style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #ffffff; color: #0f172a; outline: none;" />
-          </div>
-
-          <!-- Số điện thoại -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              * Số điện thoại liên hệ <span style="color: #dc2626;">*</span>
-            </label>
-            <input type="tel" id="bk-phone" required placeholder="Nhập số điện thoại..." style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #ffffff; color: #0f172a; outline: none;" />
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
-          <!-- Ngày sinh -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              * Ngày sinh bệnh nhân <span style="color: #dc2626;">*</span>
-            </label>
-            <input type="date" id="bk-dob" required style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #ffffff; color: #0f172a; outline: none;" />
-          </div>
-
-          <!-- Mã khách hàng (nếu có) không bắt buộc -->
-          <div>
-            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem;">
-              Mã khách hàng / Mã BHYT <span style="color: #64748b; font-weight: 400;">(Không bắt buộc)</span>
-            </label>
-            <input type="text" id="bk-code" placeholder="Nhập mã KH / Mã BHYT (nếu có)..." style="width: 100%; padding: 0.8rem 1rem; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.95rem; background: #ffffff; color: #0f172a; outline: none;" />
-          </div>
-        </div>
-
+      <!-- Row 2: Email -->
+      <div style="margin-bottom: 1rem;">
+        <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Email <span style="color: #dc2626;">*</span></label>
+        <input type="email" id="contact-email" placeholder="" style="width: 100%; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.95rem; color: #0f172a; outline: none; transition: all 0.2s;" onfocus="clearFieldError('email'); this.style.borderColor='#007DA5';this.style.background='#fff'" onblur="if(!this.value.trim()){this.style.borderColor='#e2e8f0';this.style.background='#f8fafc'}" />
+        <div id="err-email" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng nhập địa chỉ email hợp lệ (ví dụ: example@gmail.com).</div>
       </div>
 
-      <!-- Selected Lịch khám display banner -->
-      <div id="booking-summary-bar" style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 0.85rem 1.25rem; font-size: 0.9rem; font-weight: 700; color: #1e40af; margin-bottom: 1.5rem; text-align: center;">
-        📅 Bạn đang chọn khám ngày: <span id="sum-date">25/07/2026</span> - Khung giờ: <span id="sum-slot">Sáng (07:30 - 11:30)</span>
+      <!-- Row 3: Nội dung -->
+      <div style="margin-bottom: 1.75rem;">
+        <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Nội dung <span style="color: #dc2626;">*</span></label>
+        <textarea id="contact-message" rows="4" placeholder="" style="width: 100%; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.95rem; color: #0f172a; outline: none; transition: all 0.2s; resize: vertical;" onfocus="clearFieldError('message'); this.style.borderColor='#007DA5';this.style.background='#fff'" onblur="if(!this.value.trim()){this.style.borderColor='#e2e8f0';this.style.background='#f8fafc'}"></textarea>
+        <div id="err-message" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng nhập nội dung liên hệ.</div>
       </div>
 
-      <!-- Submit Button -->
-      <button type="submit" style="width: 100%; background: #0f3775; color: #ffffff; border: none; padding: 1.1rem; border-radius: 12px; font-weight: 900; font-size: 1.1rem; text-transform: uppercase; cursor: pointer; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(15, 55, 117, 0.3); transition: background 0.2s;" onmouseover="this.style.background='#005f80'" onmouseout="this.style.background='#0f3775'">
-        ĐĂNG KÝ KHÁM BỆNH NGAY →
-      </button>
+      <!-- Row 4: Button Gửi -->
+      <button type="submit" style="width: 100%; padding: 0.9rem 2rem; background: #007DA5; color: #ffffff; border: none; border-radius: 50px; font-weight: 700; font-size: 1.05rem; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 59, 92, 0.25); transition: all 0.25s ease;" onmouseover="this.style.background='#005f80';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#007DA5';this.style.transform='translateY(0)'">Gửi</button>
 
     </form>
   </div>
 </section>
 
 <script>
-  const doctorMap = {
-    'khoa-phu-san': [
-      'BS.CKII. Nguyễn Vũ Mỹ Linh (Trưởng khoa Sản)',
-      'TS.BS.CKII. Trần Việt Thế Phương (Phó khoa Sản)',
-      'ThS.BS. Lê Thị Bích Châu'
-    ],
-    'khoa-nhi': [
-      'BS.CKII. Nguyễn Bạch Huệ (Trưởng khoa Nhi)',
-      'BS.CKI. Nguyễn Thị Hạnh'
-    ],
-    'ivf': [
-      'ThS.BS. Lê Thị Bích Châu (Trung tâm IVF)',
-      'BS.CKII. Nguyễn Vũ Mỹ Linh'
-    ],
-    'khoa-than-kinh': [
-      'TS.BS. Nguyễn Huỳnh Thiện Lương (Trưởng khoa Thần Kinh)'
-    ],
-    'noi-soi-tieu-hoa': [
-      'BS.CKII. Lê Kim Sang (Trưởng khoa Tiêu Hóa)'
-    ],
-    'khoa-ngoai-tong-quat': [
-      'TS.BS. Trương Vĩnh Long (Trưởng khoa Ngoại)'
-    ],
-    'khoa-tim-mach': [
-      'BS.CKII. Đặng Quảng Trị (Trưởng khoa Tim Mạch)'
-    ],
-    'khoa-kham-tong-quat': [
-      'BS.CKI. Đào Cảnh Tuất (Trưởng khoa EHS)'
-    ]
-  };
+function formatPhoneInput(input) {
+  // Strip all whitespace and characters other than digits, +, (, )
+  input.value = input.value.replace(/\s+/g, '').replace(/[^0-9+()]/g, '');
+  clearFieldError('phone');
+}
 
-  function updateDoctorDropdown(specSlug) {
-    const docSelect = document.getElementById('bk-doctor');
-    docSelect.innerHTML = '<option value="">-- Bác sĩ khám bất kỳ (Khuyên dùng) --</option>';
-    
-    if (specSlug && doctorMap[specSlug]) {
-      doctorMap[specSlug].forEach(d => {
-        const opt = document.createElement('option');
-        opt.value = d;
-        opt.innerText = d;
-        docSelect.appendChild(opt);
-      });
-    }
+function clearFieldError(field) {
+  const errEl = document.getElementById('err-' + field);
+  const inputEl = document.getElementById('contact-' + field);
+  if (errEl) errEl.style.display = 'none';
+  if (inputEl) inputEl.style.borderColor = '#007DA5';
+}
+
+function handleContactSubmit(e) {
+  e.preventDefault();
+  
+  const nameEl = document.getElementById('contact-name');
+  const phoneEl = document.getElementById('contact-phone');
+  const emailEl = document.getElementById('contact-email');
+  const msgEl = document.getElementById('contact-message');
+  
+  let isValid = true;
+  
+  // Validate Name
+  const nameVal = nameEl.value.trim();
+  if (!nameVal || nameVal.length < 2) {
+    document.getElementById('err-name').style.display = 'block';
+    nameEl.style.borderColor = '#dc2626';
+    isValid = false;
+  } else {
+    document.getElementById('err-name').style.display = 'none';
+    nameEl.style.borderColor = '#e2e8f0';
   }
-
-  function selectTimeSlot(slotType, btn) {
-    document.querySelectorAll('.time-slot-btn').forEach(b => {
-      b.style.background = 'transparent';
-      b.style.color = '#475569';
-    });
-    btn.style.background = '#0f3775';
-    btn.style.color = '#ffffff';
-
-    const fullSlot = slotType === 'Sáng' ? 'Sáng (07:30 - 11:30)' : 'Chiều (13:00 - 16:30)';
-    document.getElementById('bk-timeslot').value = fullSlot;
-    document.getElementById('sum-slot').innerText = fullSlot;
+  
+  // Validate Phone: No spaces, only digits, +, (, ), min 8 chars
+  const phoneVal = phoneEl.value.trim();
+  const phoneRegex = /^[+\d()]{8,15}$/;
+  if (!phoneVal || !phoneRegex.test(phoneVal) || /\s/.test(phoneVal)) {
+    document.getElementById('err-phone').style.display = 'block';
+    phoneEl.style.borderColor = '#dc2626';
+    isValid = false;
+  } else {
+    document.getElementById('err-phone').style.display = 'none';
+    phoneEl.style.borderColor = '#e2e8f0';
   }
-
-  function updateSelectedTimeLabel() {
-    const dVal = document.getElementById('bk-date').value;
-    if (dVal) {
-      const parts = dVal.split('-');
-      if (parts.length === 3) {
-        document.getElementById('sum-date').innerText = parts[2] + '/' + parts[1] + '/' + parts[0];
-      }
-    }
+  
+  // Validate Email
+  const emailVal = emailEl.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailVal || !emailRegex.test(emailVal)) {
+    document.getElementById('err-email').style.display = 'block';
+    emailEl.style.borderColor = '#dc2626';
+    isValid = false;
+  } else {
+    document.getElementById('err-email').style.display = 'none';
+    emailEl.style.borderColor = '#e2e8f0';
   }
-
-  function handleBookingSubmit(e) {
-    e.preventDefault();
-    const name = document.getElementById('bk-fullname').value;
-    const phone = document.getElementById('bk-phone').value;
-    const date = document.getElementById('sum-date').innerText;
-    const slot = document.getElementById('sum-slot').innerText;
-    const doc = document.getElementById('bk-doctor').value || 'Bác sĩ trực chuyên khoa';
-
-    alert('🎉 ĐĂNG KÝ KHÁM BỆNH THÀNH CÔNG!\n\n' +
-          'Bệnh nhân: ' + name + '\n' +
-          'Số điện thoại: ' + phone + '\n' +
-          'Ngày khám: ' + date + ' (' + slot + ')\n' +
-          'Bác sĩ: ' + doc + '\n\n' +
-          'Bệnh viện Quốc tế City sẽ liên hệ xác nhận lịch khám qua điện thoại trong 15 phút.');
+  
+  // Validate Message
+  const msgVal = msgEl.value.trim();
+  if (!msgVal) {
+    document.getElementById('err-message').style.display = 'block';
+    msgEl.style.borderColor = '#dc2626';
+    isValid = false;
+  } else {
+    document.getElementById('err-message').style.display = 'none';
+    msgEl.style.borderColor = '#e2e8f0';
   }
+  
+  if (!isValid) return;
+  
+  alert("Cảm ơn Quý khách đã gửi thông tin liên hệ! Bệnh viện Quốc tế City sẽ phản hồi trong thời gian sớm nhất.");
+  e.target.reset();
+}
 </script>
 
       
@@ -611,7 +526,7 @@
         <div class="footer__logo">
           <img src="images/logo_cih_acci.png"
                alt="" class="footer__logo-img"
-               onerror="this.style.display='none'" />
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
@@ -633,41 +548,33 @@
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
-        <ul class="footer__links">
-          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
-          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
-          <li>
+          <li class="footer__contact-address">
             <span class="footer__contact-icon" style="margin-top: 2px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -677,11 +584,19 @@
           </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -689,11 +604,7 @@
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -710,7 +621,9 @@
   </a>
 </div>
 
-<script src="script.js"></script>
-<script src="booking_modal.js"></script>
+<script src="script.js?v=1787643496"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

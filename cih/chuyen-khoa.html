@@ -3,13 +3,31 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chuyên Khoa | Bệnh viện Quốc tế City – City International Hospital</title>
   <meta name="description" content="Hệ thống 50+ chuyên khoa lâm sàng và cận lâm sàng đạt tiêu chuẩn quốc tế JCI tại Bệnh viện Quốc tế City." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2026072405" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
+  <style>
+    /* Hide all specialty cards by default until JS renders the active 9 */
+    .specialties-grid > .spec-card {
+      display: none !important;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .specialties-grid > .spec-card.is-visible {
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,20 +38,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -44,8 +91,8 @@
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
       <img src="images/logo_cih_acci.png"
-           alt="" class="header__logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+           alt="Bệnh viện Quốc tế City" class="header__logo-img"
+           onerror="this.onerror=null; this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
       <div id="logo-fallback" class="logo-fallback" style="display:none">
         <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
       </div>
@@ -54,288 +101,357 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
-        <li class="nav__item nav__item--has-dropdown">
-          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
-          <div class="nav__dropdown">
-            <div class="dropdown__grid">
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Nội Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
-                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Ngoại Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
-                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
-                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
-                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chẩn Đoán</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
-              </div>
-            </div>
-          </div>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
         </li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
 
 <!-- SUBPAGE BREADCRUMBS HERO BAR -->
-<section class="subpage-hero" style="background: #f4f8fb; padding: 1.25rem 0; border-bottom: 1px solid #e2e8f0;">
+<section class="subpage-hero" style="background: #f4f8fb; padding: 0.35rem 0; border-bottom: 1px solid #e2e8f0;">
   <div class="container subpage-hero__inner">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.35rem;">
-      <a href="./" style="color: #005f80; font-weight: 700; text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span style="color: #0f3775; font-weight: 700;">Chuyên Khoa</span>
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000; margin-bottom: 0.35rem;">
+      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Chuyên khoa</span>
     </div>
     
   </div>
 </section>
 
-<!-- DEDICATED HERO BANNER FOR CHUYÊN KHOA -->
-<section class="hero" style="position: relative; overflow: hidden;">
-  <div style="position: relative; width: 100%; aspect-ratio: 1536 / 536; height: auto; max-height: 480px; overflow: hidden;">
-    <img src="images/banner/BANNER-WEB-1536x536.webp" alt="Chuyên Khoa Banner" style="width: 100%; height: 100%; object-fit: cover; object-position: center; " />
-  </div>
-</section>
 
 <!-- SUBPAGE CONTENT -->
-<main class="subpage-content">
+<main class="subpage-content" style="padding: 2.5rem 0 4rem 0;">
   <div class="container">
     
-    <!-- Giới thiệu các nhóm khoa -->
-    <div class="subpage-card animate-fade-up">
-      <h2 class="subpage-heading">Chăm Sóc Y Tế Đa Chuyên Khoa</h2>
-      <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 2rem;">
-        Bệnh viện Quốc tế City sở hữu hệ thống chuyên khoa lâm sàng và cận lâm sàng toàn diện, được hỗ trợ bởi các trung tâm y khoa kỹ thuật cao hàng đầu. Các chuyên khoa hoạt động chặt chẽ theo mô hình phối hợp đa chuyên khoa (MDT), mang lại phác đồ điều trị tối ưu nhất cho từng bệnh nhân.
-      </p>
-      
-      
+    <div class="about-group-header animate-fade-up" style="text-align: left; margin-bottom: 2rem;">
+      <h1 class="timeline-section-title" style="text-align: left; margin-bottom: 0; font-size: 1.8rem; font-weight: 800; color: #007DA5;">Chuyên khoa</h1>
+    </div>
+
     <!-- Danh sách Chuyên Khoa Chi Tiết từ CIH -->
-    <div class="subpage-card animate-fade-up" style="margin-top: 2rem;">
-      <h2 class="subpage-heading">Danh Mục Các Chuyên Khoa Nổi Bật</h2>
-      <div class="specialties-grid">
-        <a href="chi-tiet-chuyen-khoa?slug=khoa-phu-san" class="spec-card">
-          <div class="spec-card__img" style="background:linear-gradient(135deg,#be185d,#ec4899)">
-            <img src="images/HÌNH ẢNH/Phụ sản/1784087168303_1272607247884588763_1272607247884588763_bb81c268bd748520eee1d2b2fc2b9040.jpg" alt="Khoa Phụ Sản" onerror="this.style.display='none'" />
-            <div class="spec-card__emoji">🌸</div>
-          </div>
-          <div class="spec-card__body">
-            <h3>Khoa Phụ Sản</h3>
-            <p>Chăm sóc sức khỏe thai kỳ và điều trị các bệnh lý phụ khoa toàn diện.</p>
-            <span class="spec-card__link">Xem chi tiết →</span>
-          </div>
-        </a>
+    <div class="specialties-grid animate-fade-up">
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-phu-san" class="spec-card" id="spec-khoa-phu-san">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/12-2.webp" alt="Khoa Phụ Sản" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Phụ Sản</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
 
-        <a href="chi-tiet-chuyen-khoa?slug=ivf" class="spec-card">
-          <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Trung Tâm Hỗ Trợ Sinh Sản (IVF)" onerror="this.style.display='none'" />
-            <div class="spec-card__emoji">👶</div>
-          </div>
-          <div class="spec-card__body">
-            <h3>Trung Tâm IVF</h3>
-            <p>Dịch vụ hỗ trợ sinh sản chất lượng 5 sao hàng đầu khu vực phía Tây TP.HCM.</p>
-            <span class="spec-card__link">Xem chi tiết →</span>
-          </div>
-        </a>
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-ho-tro-sinh-san-ivf" class="spec-card" id="spec-khoa-ho-tro-sinh-san-ivf">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/SAN00365_Edit-1.png" alt="Trung tâm Hỗ Trợ Sinh Sản (IVF)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Trung tâm Hỗ Trợ Sinh Sản (IVF)</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
 
-        <a href="chi-tiet-chuyen-khoa?slug=khoa-nhi" class="spec-card">
-          <div class="spec-card__img" style="background:linear-gradient(135deg,#166534,#22c55e)">
-            <img src="images/HÌNH ẢNH/Nhi khoa/1784087274560_1272607247884588763_1272607247884588763_76b4e9af2fc6a67625111039d33f9bf0.jpg" alt="Khoa Nhi" onerror="this.style.display='none'" />
-            <div class="spec-card__emoji">🧸</div>
-          </div>
-          <div class="spec-card__body">
-            <h3>Khoa Nhi</h3>
-            <p>Khám chữa bệnh chất lượng cao cho trẻ em từ sơ sinh đến 16 tuổi.</p>
-            <span class="spec-card__link">Xem chi tiết →</span>
-          </div>
-        </a>
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-nhi" class="spec-card" id="spec-khoa-nhi">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-Nhi-02-png.avif" alt="Khoa Nhi" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Nhi</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
 
-        <a href="chi-tiet-chuyen-khoa?slug=khoa-than-kinh" class="spec-card">
-          <div class="spec-card__img" style="background:linear-gradient(135deg,#5b21b6,#8b5cf6)">
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/28.png" alt="Khoa Thần Kinh" onerror="this.style.display='none'" />
-            <div class="spec-card__emoji">🧠</div>
-          </div>
-          <div class="spec-card__body">
-            <h3>Khoa Thần Kinh</h3>
-            <p>Phẫu thuật & điều trị đột quỵ, chấn thương sọ não, cột sống và tủy sống.</p>
-            <span class="spec-card__link">Xem chi tiết →</span>
-          </div>
-        </a>
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-hoi-suc-tich-cuc-so-sinh-nicu" class="spec-card" id="spec-khoa-hoi-suc-tich-cuc-so-sinh-nicu">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/mau-moi-1.jpg" alt="Khoa Hồi sức tích cực sơ sinh (NICU)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Hồi sức tích cực sơ sinh (NICU)</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
 
-        <a href="chi-tiet-chuyen-khoa?slug=noi-soi-tieu-hoa" class="spec-card">
-          <div class="spec-card__img" style="background:linear-gradient(135deg,#0284c7,#38bdf8)">
-            <img src="images/HÌNH ẢNH/Thẩm mỹ/CIH07303.JPG" alt="Trung Tâm Tiêu Hóa - Nội Soi" onerror="this.style.display='none'" />
-            <div class="spec-card__emoji">🔬</div>
-          </div>
-          <div class="spec-card__body">
-            <h3>Nội Soi Tiêu Hóa</h3>
-            <p>Nội soi chẩn đoán và điều trị dưới an thần không đau, an toàn tuyệt đối.</p>
-            <span class="spec-card__link">Xem chi tiết →</span>
-          </div>
-        </a>
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-kham-tong-quat-ehs" class="spec-card" id="spec-khoa-kham-tong-quat-ehs">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/mau-moi-.jpg" alt="Khoa Khám Tổng Quát (EHS)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Khám Tổng Quát (EHS)</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
 
-        <a href="chi-tiet-chuyen-khoa?slug=khoa-ngoai-tong-quat" class="spec-card">
-          <div class="spec-card__img" style="background:linear-gradient(135deg,#b45309,#f59e0b)">
-            <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/z7072522756464_2f05ce5dbcd3bf7ec6b65d394ef6dc93.jpg" alt="Khoa Ngoại Tổng Quát" onerror="this.style.display='none'" />
-            <div class="spec-card__emoji">🏥</div>
-          </div>
-          <div class="spec-card__body">
-            <h3>Ngoại Tổng Quát</h3>
-            <p>Điều trị chuyên sâu các bệnh lý đường tiêu hóa và Gan - Mật - Tụy.</p>
-            <span class="spec-card__link">Xem chi tiết →</span>
-          </div>
-        </a>
-      </div>
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-noi-tong-hop" class="spec-card" id="spec-khoa-noi-tong-hop">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-noi-tong-hop-fn-png.avif" alt="Khoa Nội Tổng Hợp" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Nội Tổng Hợp</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-noi-than-kinh" class="spec-card" id="spec-khoa-noi-than-kinh">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-than-kinh.png" alt="Khoa Thần Kinh" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Thần Kinh</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-tim-mach" class="spec-card" id="spec-khoa-tim-mach">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/mau-moi-2.jpg" alt="Khoa Tim mạch" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Tim mạch</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-tieu-hoa-noi-soi" class="spec-card" id="spec-khoa-tieu-hoa-noi-soi">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-noi-soi-1-1.png" alt="Trung Tâm Tiêu hóa &#8211; Nội soi" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Trung Tâm Tiêu hóa &#8211; Nội soi</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-da-lieu" class="spec-card" id="spec-khoa-da-lieu">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/10.png" alt="Khoa Da Liễu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Da Liễu</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-ngoai-tong-quat" class="spec-card" id="spec-khoa-ngoai-tong-quat">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-Ngoai-3.png" alt="Khoa Ngoại Tổng quát" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Ngoại Tổng quát</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-hoi-suc-tich-cuc-icu" class="spec-card" id="spec-khoa-hoi-suc-tich-cuc-icu">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/z6097136890244_118f2afe02d12f3d52f5a9a3f26e7b0b.webp" alt="Khoa Hồi sức tích cực (ICU)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Hồi sức tích cực (ICU)</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-chan-thuong-chinh-hinh" class="spec-card" id="spec-khoa-chan-thuong-chinh-hinh">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/CTCT-fn-png.avif" alt="Khoa Chấn Thương Chỉnh Hình" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Chấn Thương Chỉnh Hình</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-can-thiep-mach-mau" class="spec-card" id="spec-khoa-can-thiep-mach-mau">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Can-thiep-mach-mau-fn-png.avif" alt="Khoa Can Thiệp Mạch Máu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Can Thiệp Mạch Máu</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-tiet-nieu" class="spec-card" id="spec-khoa-tiet-nieu">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Tiet-nieu-1.png" alt="Khoa Tiết Niệu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Tiết Niệu</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=trung-tam-tai-mui-hong-va-phau-thuat-dau-co" class="spec-card" id="spec-trung-tam-tai-mui-hong-va-phau-thuat-dau-co">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/d6ca5e4e-9286-47e4-b567-e0e6bab2fa6a.webp" alt="Trung tâm Tai Mũi Họng chuyên sâu &#038; Phẫu thuật đầu cổ" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Trung tâm Tai Mũi Họng chuyên sâu &#038; Phẫu thuật đầu cổ</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-mat" class="spec-card" id="spec-khoa-mat">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-mat-1.png" alt="Khoa Mắt" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Mắt</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-rang-ham-mat" class="spec-card" id="spec-khoa-rang-ham-mat">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/RHM-jpg.avif" alt="Khoa Răng Hàm Mặt" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Răng Hàm Mặt</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-cap-cuu" class="spec-card" id="spec-khoa-cap-cuu">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/2560x1441_anh-bai-web-1.webp" alt="Khoa Cấp Cứu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Cấp Cứu</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-tham-my" class="spec-card" id="spec-khoa-tham-my">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/44-scaled.webp" alt="Trung tâm Thẩm mỹ &#8211; Y học tái tạo" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Trung tâm Thẩm mỹ &#8211; Y học tái tạo</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-xet-nghiem" class="spec-card" id="spec-khoa-xet-nghiem">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/9.png" alt="Khoa Xét Nghiệm" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Xét Nghiệm</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-chan-doan-hinh-anh" class="spec-card" id="spec-khoa-chan-doan-hinh-anh">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-chan-doan-hinh-anh-png.avif" alt="Khoa Chẩn Đoán Hình Ảnh" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Chẩn Đoán Hình Ảnh</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=trung-tam-tiem-chung" class="spec-card" id="spec-trung-tam-tiem-chung">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Trung-tam-tiem-chung-1-png.avif" alt="Trung Tâm Tiêm Chủng" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Trung Tâm Tiêm Chủng</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-duoc" class="spec-card" id="spec-khoa-duoc">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/KHOA-DUOC-jpg.avif" alt="Khoa Dược" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Dược</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-phuc-hoi-chuc-nang" class="spec-card" id="spec-khoa-phuc-hoi-chuc-nang">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-PHCN-fn-png.avif" alt="Khoa Phục Hồi Chức Năng" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Phục Hồi Chức Năng</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <a href="chi-tiet-chuyen-khoa?slug=khoa-gay-me-hoi-suc" class="spec-card" id="spec-khoa-gay-me-hoi-suc">
+        <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/10/GMHS-fn-png.avif" alt="Khoa Gây Mê Hồi Sức" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+        </div>
+        <div class="spec-card__body">
+          <h3>Khoa Gây Mê Hồi Sức</h3>
+          <p>Chẩn đoán & điều trị y khoa chuyên sâu tại Bệnh viện Quốc tế City</p>
+          <span class="spec-card__link">Xem thêm <span class="arrow">→</span></span>
+        </div>
+      </a>
     </div>
 
-      <!-- Lưới phân nhóm chuyên khoa -->
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" class="quick-actions__grid">
-        <div style="background: var(--c-bg); padding: 1.5rem; border-radius: var(--r-md); border-top: 4px solid var(--c-primary);">
-          <h3 style="font-size: 1.1rem; color: var(--c-primary); margin-bottom: 0.75rem;">🩺 Khối Nội Khoa</h3>
-          <ul style="font-size: 0.875rem; color: var(--c-text2); line-height: 1.8;">
-            <li>• Tim mạch tổng quát & can thiệp</li>
-            <li>• Thần kinh học</li>
-            <li>• Tiêu hóa & Gan mật</li>
-            <li>• Nội tiết - Đái tháo đường</li>
-            <li>• Hô hấp - Thận - Khớp</li>
-          </ul>
-        </div>
-        <div style="background: var(--c-bg); padding: 1.5rem; border-radius: var(--r-md); border-top: 4px solid var(--c-teal);">
-          <h3 style="font-size: 1.1rem; color: var(--c-teal-d); margin-bottom: 0.75rem;">🔪 Khối Ngoại Khoa</h3>
-          <ul style="font-size: 0.875rem; color: var(--c-text2); line-height: 1.8;">
-            <li>• Ngoại tổng quát & Tiêu hóa</li>
-            <li>• Chấn thương chỉnh hình</li>
-            <li>• Phẫu thuật thần kinh</li>
-            <li>• Phẫu thuật nội soi ít xâm lấn</li>
-            <li>• Thẩm mỹ - Y học tái tạo</li>
-          </ul>
-        </div>
-        <div style="background: var(--c-bg); padding: 1.5rem; border-radius: var(--r-md); border-top: 4px solid var(--c-green);">
-          <h3 style="font-size: 1.1rem; color: var(--c-green-d); margin-bottom: 0.75rem;">👶 Sản & Nhi Khoa</h3>
-          <ul style="font-size: 0.875rem; color: var(--c-text2); line-height: 1.8;">
-            <li>• Khám & Theo dõi thai sản</li>
-            <li>• Điều trị bệnh lý phụ sản</li>
-            <li>• Nhi khoa & Tiêm chủng</li>
-            <li>• Hồi sức tích cực sơ sinh (NICU)</li>
-            <li>• Trung tâm IVF hỗ trợ sinh sản</li>
-          </ul>
-        </div>
-        <div style="background: var(--c-bg); padding: 1.5rem; border-radius: var(--r-md); border-top: 4px solid var(--c-orange);">
-          <h3 style="font-size: 1.1rem; color: var(--c-orange); margin-bottom: 0.75rem;">🔬 Khối Cận Lâm Sàng</h3>
-          <ul style="font-size: 0.875rem; color: var(--c-text2); line-height: 1.8;">
-            <li>• Chẩn đoán hình ảnh (MRI/CT)</li>
-            <li>• Trung tâm Xét nghiệm tự động</li>
-            <li>• Nội soi tiêu hóa không đau</li>
-            <li>• Thăm dò chức năng (ECG, Siêu âm)</li>
-            <li>• Nhà thuốc đạt chuẩn GPP</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Chi tiết Chuyên khoa mũi nhọn -->
-    <div class="subpage-card animate-fade-up" style="animation-delay: 0.1s;">
-      <h2 class="subpage-heading">Các Dịch Vụ Y Tế Mũi Nhọn</h2>
-      
-      <!-- Khoa 1: IVF -->
-      <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 3rem; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 300px;">
-          <h3 style="font-size: 1.35rem; color: var(--c-primary); margin-bottom: 0.5rem;">🌸 Trung tâm Hỗ trợ sinh sản (IVF Center)</h3>
-          <span style="display: inline-block; background: var(--c-primary-l); color: var(--c-primary); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: var(--r-full); margin-bottom: 0.75rem; text-transform: uppercase;">Chuẩn Quốc Tế RTAC</span>
-          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-            Được dẫn dắt bởi chuyên gia hiếm muộn uy tín <strong>BS.CKI. Nguyễn Thị Ngọc Sương</strong> và Giám đốc điều hành <strong>ThS.BS. Trần Quốc Thành</strong>, IVF Center của CIH tự hào đạt tiêu chuẩn chất lượng **RTAC** danh giá của Hiệp hội Sinh sản Úc. Trung tâm trang bị phòng sạch IVF lab khép kín hiện đại bậc nhất, mang lại tỷ lệ thụ thai thành công vượt trội và đồng hành toàn diện cùng các cặp vợ chồng hiếm muộn.
-          </p>
-          <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm">📅 Đăng ký tư vấn IVF</a>
-        </div>
-        <div style="flex: 1; min-width: 300px; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-md);">
-          <img src="images/HÌNH ẢNH/Phụ sản/1784087168303_1272607247884588763_1272607247884588763_bb81c268bd748520eee1d2b2fc2b9040.jpg" alt="Tư vấn IVF tại CIH" style="width: 100%; height: 220px; object-fit: cover;" />
-        </div>
-      </div>
-
-      <hr style="border: 0; border-top: 1px solid var(--c-border); margin: 2rem 0;" />
-
-      <!-- Khoa 2: Chấn thương chỉnh hình -->
-      <div style="display: flex; gap: 2rem; align-items: center; margin-bottom: 3rem; flex-wrap: wrap; flex-direction: row-reverse;">
-        <div style="flex: 1; min-width: 300px;">
-          <h3 style="font-size: 1.35rem; color: var(--c-primary); margin-bottom: 0.5rem;">🦴 Khoa Chấn Thương Chỉnh Hình & Cơ Xương Khớp</h3>
-          <span style="display: inline-block; background: var(--c-teal-l); color: var(--c-teal-d); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: var(--r-full); margin-bottom: 0.75rem; text-transform: uppercase;">Chuyên Gia Đầu Ngành</span>
-          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-            Dưới sự chỉ đạo chuyên môn của **TS.BS. Phạm Chí Lăng** (nguyên bác sĩ Chợ Rẫy, FV, tu nghiệp Pháp, Mỹ) và **ThS.BS. Trần Văn Bé Bảy**, khoa chuyên sâu điều trị các chấn thương thể thao phức tạp, phẫu thuật nội soi khớp gối/khớp vai ít xâm lấn, phẫu thuật thay khớp háng, khớp gối nhân tạo thế hệ mới giúp hồi phục nhanh.
-          </p>
-          <a href="bac-si" class="btn btn--outline-primary btn--sm">👨‍⚕️ Xem đội ngũ bác sĩ cơ xương khớp</a>
-        </div>
-        <div style="flex: 1; min-width: 300px; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-md);">
-          <img src="https://cih.com.vn/wp-content/uploads/2026/05/Web-banner-1024x358.webp" alt="Phẫu thuật cơ xương khớp công nghệ cao" style="width: 100%; height: 220px; object-fit: cover;" />
-        </div>
-      </div>
-
-      <hr style="border: 0; border-top: 1px solid var(--c-border); margin: 2rem 0;" />
-
-      <!-- Khoa 3: Thẩm mỹ - Y học tái tạo -->
-      <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
-        <div style="flex: 1; min-width: 300px;">
-          <h3 style="font-size: 1.35rem; color: var(--c-primary); margin-bottom: 0.5rem;">✨ Trung Tâm Thẩm Mỹ - Y Học Tái Tạo & Phòng Khám Quốc Tế</h3>
-          <span style="display: inline-block; background: rgba(118,188,33,0.1); color: var(--c-green-d); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: var(--r-full); margin-bottom: 0.75rem; text-transform: uppercase;">Dự Án Mới Nhất 2025</span>
-          <p style="font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
-            Chính thức khai trương vào tháng 09/2025, do **BS.CKII. Đặng Quang Thuyết** làm Trưởng trung tâm. Sự kết hợp độc đáo giữa công nghệ phẫu thuật thẩm mỹ an toàn chuẩn y khoa quốc tế và các giải pháp y học tái tạo (liệu pháp tế bào, phục hồi da) mang lại vẻ đẹp tự nhiên và sức khỏe bền vững cho khách hàng quốc tế.
-          </p>
-          <a href="lien-he" class="btn btn--primary btn--sm">📅 Đặt lịch tư vấn thẩm mỹ</a>
-        </div>
-        <div style="flex: 1; min-width: 300px; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-md);">
-          <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/27.png" alt="Phòng khám quốc tế CIH sang trọng" style="width: 100%; height: 220px; object-fit: cover;" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Trang thiết bị hiện đại -->
-    <div class="subpage-card animate-fade-up" style="animation-delay: 0.2s;">
-      <h2 class="subpage-heading">Trang Thiết Bị Y Khoa Tiên Tiến</h2>
-      <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
-        Chúng tôi hiểu rằng chẩn đoán chính xác là tiền đề của điều trị hiệu quả. Do đó, Bệnh viện Quốc tế City không ngừng đầu tư hàng triệu USD vào hệ thống máy móc chẩn đoán và điều trị công nghệ cao từ các tập đoàn thiết bị y tế hàng đầu thế giới (GE, Siemens, Olympus):
-      </p>
-      <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.95rem;">
-        <li>🖥️ <strong>Hệ thống MRI 1.5 Tesla (Siemens)</strong>: Chụp cộng hưởng từ sọ não, mạch máu sắc nét, không bức xạ.</li>
-        <li>🌀 <strong>Máy CT-Scanner 128 lát cắt (GE)</strong>: Chẩn đoán nhanh đột quỵ, tầm soát mạch vành và các khối u nhỏ.</li>
-        <li>🔬 <strong>Hệ thống nội soi tiêu hóa Olympus CV-190</strong>: Công nghệ dải tần ánh sáng hẹp (NBI) giúp tầm soát ung thư dạ dày/đại tràng cực sớm.</li>
-        <li>🤰 <strong>Máy siêu âm sản khoa 4D/5D thế hệ mới</strong>: Quan sát sự phát triển của thai nhi cực kỳ rõ nét và phát hiện sớm các dị tật bẩm sinh.</li>
-      </ul>
-    </div>
+    <!-- Specialties Pagination Controls (9 items per page) -->
+    <div class="pagination-bar" id="specialties-pagination" style="display: flex; justify-content: center; align-items: center; gap: 8px; margin: 3rem auto 1rem auto; flex-wrap: wrap;"></div>
 
   </div>
 </main>
@@ -348,7 +464,7 @@
         <div class="footer__logo">
           <img src="images/logo_cih_acci.png"
                alt="" class="footer__logo-img"
-               onerror="this.style.display='none'" />
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
@@ -370,41 +486,33 @@
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
-        <ul class="footer__links">
-          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
-          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
-          <li>
+          <li class="footer__contact-address">
             <span class="footer__contact-icon" style="margin-top: 2px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -414,11 +522,19 @@
           </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -426,11 +542,7 @@
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -447,7 +559,70 @@
   </a>
 </div>
 
-<script src="script.js"></script>
-<script src="booking_modal.js"></script>
+<script src="script.js?v=1787643496"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const specCards = Array.from(document.querySelectorAll('.specialties-grid > .spec-card'));
+  const paginationContainer = document.getElementById('specialties-pagination');
+  const ITEMS_PER_PAGE = 9;
+  let currentPage = 1;
+
+  function renderPaginationControls(totalPages) {
+    if (!paginationContainer) return;
+    if (totalPages <= 1) {
+      paginationContainer.innerHTML = '';
+      return;
+    }
+
+    let html = `<button type="button" class="page-btn ${currentPage === 1 ? 'disabled' : ''}" ${currentPage === 1 ? 'disabled' : ''} onclick="changeSpecPage(${currentPage - 1})">‹ Trước</button>`;
+
+    for (let p = 1; p <= totalPages; p++) {
+      html += `<button type="button" class="page-btn ${p === currentPage ? 'active' : ''}" onclick="changeSpecPage(${p})">${p}</button>`;
+    }
+
+    html += `<button type="button" class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" ${currentPage === totalPages ? 'disabled' : ''} onclick="changeSpecPage(${currentPage + 1})">Sau ›</button>`;
+
+    paginationContainer.innerHTML = html;
+  }
+
+  function updateSpecDisplay() {
+    const totalPages = Math.ceil(specCards.length / ITEMS_PER_PAGE) || 1;
+
+    if (currentPage > totalPages) currentPage = 1;
+    if (currentPage < 1) currentPage = 1;
+
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+
+    specCards.forEach((card, index) => {
+      if (index >= startIndex && index < endIndex) {
+        card.classList.add('is-visible');
+        card.style.setProperty('display', 'flex', 'important');
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      } else {
+        card.classList.remove('is-visible');
+        card.style.setProperty('display', 'none', 'important');
+      }
+    });
+
+    renderPaginationControls(totalPages);
+  }
+
+  window.changeSpecPage = function(newPage) {
+    currentPage = newPage;
+    updateSpecDisplay();
+    const target = document.querySelector('.specialties-grid') || document.querySelector('.subpage-hero');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  updateSpecDisplay();
+});
+</script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -6,24 +6,26 @@
   <title>Chứng Nhận &amp; Giải Thưởng Quốc Tế | Bệnh Viện Quốc Tế City (CIH)</title>
   <meta name="description" content="Tổng hợp đầy đủ các Chứng nhận Chất lượng Quốc tế (AACI, WSO Diamond, RTAC, IHF, ESC/HFA, ISO 15189:2022) và Giải thưởng Y tế danh giá của Bệnh viện Quốc tế City." />
   <link rel="icon" type="image/png" href="images/logo_cih_acci.png" />
-  <link rel="stylesheet" href="style.css?v=1786517708" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
   <style>
     .awards-header-box {
-      text-align: center;
-      max-width: 850px;
-      margin: 0 auto 3.5rem auto;
+      text-align: left;
+      max-width: 100%;
+      margin: 0 0 2.5rem 0;
     }
     .awards-header-title {
-      font-size: 2.2rem;
-      font-weight: 900;
+      font-size: 1.8rem;
+      font-weight: 800;
       color: #007DA5;
-      margin-bottom: 1rem;
-      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+      letter-spacing: -0.4px;
+      text-align: left;
     }
     .awards-header-subtitle {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       color: #475569;
       line-height: 1.75;
+      text-align: left;
     }
 
     /* Infographic Banner Board */
@@ -138,15 +140,17 @@
       background: #ffffff;
       border: 1.5px solid #fde68a;
       border-radius: 20px;
-      padding: 24px 20px;
+      padding: 1.5rem;
       box-shadow: 0 8px 20px -4px rgba(217, 119, 6, 0.08);
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
       text-align: center;
       position: relative;
       overflow: hidden;
+      height: 100%;
     }
     .cert-card::before {
       content: '';
@@ -154,8 +158,8 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%);
+      height: 3.5px;
+      background: linear-gradient(90deg, #d97706 0%, #f59e0b 35%, #fbbf24 70%, #fef08a 100%);
     }
     .cert-card:hover {
       transform: translateY(-6px);
@@ -164,15 +168,16 @@
     }
     .cert-img-box {
       width: 100%;
-      height: 180px;
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #f8fafc;
-      border-radius: 12px;
-      padding: 10px;
-      margin-bottom: 16px;
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 1.15rem;
       border: 1px solid #f1f5f9;
+      flex-shrink: 0;
     }
     .cert-img-box img {
       max-width: 100%;
@@ -191,12 +196,20 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-    .cert-card h3 {
-      font-size: 1.1rem;
+    .cert-card h3,
+    .cert-card-title {
+      font-size: 1.05rem;
       font-weight: 800;
-      color: #007DA5;
-      margin-bottom: 10px;
-      line-height: 1.4;
+      color: #92400E;
+      margin: 0;
+      line-height: 1.35;
+      min-height: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
     }
     .cert-card, .aaci-featured-hero-box {
       cursor: pointer;
@@ -268,9 +281,38 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -314,19 +356,20 @@
             <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
           </ul>
         </li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
@@ -346,68 +389,112 @@
   <div class="container">
     
     <div class="awards-header-box">
-      <h1 class="awards-header-title">CHỨNG NHẬN &amp; GIẢI THƯỞNG</h1>
+      <h1 class="awards-header-title">Chứng nhận &amp; giải thưởng</h1>
       <p class="awards-header-subtitle">
         Bệnh viện Quốc tế City tự hào khẳng định vị thế y tế chất lượng cao hàng đầu khu vực khi liên tục đạt được các chứng nhận kiểm định chất lượng an toàn y tế toàn cầu và danh hiệu thương hiệu xuất sắc từ các tổ chức y tế quốc tế uy tín.
       </p>
     </div>
 
     <!-- 🏆 STANDALONE FEATURED AACI CERTIFICATE BOX -->
-    <div class="aaci-featured-hero-box animate-fade-up" style="background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1.2px, transparent 1.2px), linear-gradient(135deg, #fffef5 0%, #fffbeb 50%, #fef3c7 100%); background-size: 18px 18px, 100% 100%; border: 2px solid #fde68a; border-radius: 24px; padding: 2.25rem 2.5rem; margin-bottom: 2.5rem; box-shadow: 0 12px 35px -5px rgba(217, 119, 6, 0.15); display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: center; position: relative; overflow: hidden;">
+    <div class="aaci-featured-hero-box animate-fade-up" onclick="openAwardModal('aaci')" style="background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1.2px, transparent 1.2px), linear-gradient(135deg, #fffef5 0%, #fffbeb 50%, #fef3c7 100%); background-size: 18px 18px, 100% 100%; border: 2px solid #fde68a; border-radius: 24px; padding: 2.25rem 2.5rem; margin-bottom: 2.5rem; box-shadow: 0 12px 35px -5px rgba(217, 119, 6, 0.15); display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: center; position: relative; overflow: hidden; cursor: pointer;">
       <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.12); border: 2px solid #fde68a; background: #ffffff; text-align: center;">
         <img src="images/Website/giai-thuong/AACI CERTIFICATE.jpg?v=20260812" alt="Bằng chứng nhận AACI Hoa Kỳ - Bệnh viện Quốc tế City" style="width: 100%; height: auto; max-height: 280px; object-fit: contain; padding: 10px;" loading="lazy" />
       </div>
       <div>
-        <h3 style="font-size: 1.6rem; font-weight: 800; color: #007DA5; margin: 0 0 0.85rem 0; line-height: 1.35; letter-spacing: -0.3px;">Bệnh viện đầu tiên tại Việt Nam đạt chuẩn chất lượng AACI Của Hoa Kỳ</h3>
-        <p style="font-size: 1.05rem; color: #1e293b; line-height: 1.75; margin: 0; font-weight: 500; text-align: justify;">Bệnh viện Quốc tế City tự hào là bệnh viện đa khoa đầu tiên tại Việt Nam đạt Tiêu chuẩn An toàn &amp; Chất lượng Y tế Quốc tế AACI (American Accreditation Commission International) V6.0 – bộ tiêu chuẩn kiểm định độc lập uy tín toàn cầu của Hoa Kỳ.</p>
+        <div style="margin-bottom: 0.85rem;">
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: #92400e; margin: 0; line-height: 1.35; letter-spacing: -0.3px;">BỆNH VIỆN ĐẦU TIÊN TẠI VIỆT NAM ĐẠT CHUẨN CHẤT LƯỢNG AACI (HOA KỲ)</h3>
+        </div>
+        <p style="font-size: 1.05rem; color: #1e293b; line-height: 1.75; margin: 0; font-weight: 500; text-align: justify;">Bệnh viện Quốc tế City là bệnh viện đầu tiên tại Việt Nam đạt Tiêu chuẩn An toàn &amp; Chất lượng Y tế Quốc tế AACI (American Accreditation Commission International).</p>
       </div>
     </div>
 
     <div class="cert-detail-grid animate-fade-up">
 
-      <!-- Cert 3: RTAC -->
-      <div class="cert-card">
+      <!-- 1. CHỨNG NHẬN RTAC -->
+      <div class="cert-card" onclick="openAwardModal('rtac')">
         <div class="cert-img-box">
           <img src="images/Website/giai-thuong/gt_rtac.jpg?v=20260812" alt="Chứng nhận RTAC" />
         </div>
-        <h3>CHỨNG NHẬN QUỐC TẾ RTAC</h3>
-        <p>Trung tâm IVF CIH đạt Chứng nhận Quốc tế RTAC (Reproductive Technology Accreditation Committee) về bộ tiêu chuẩn an toàn trong Kỹ thuật hỗ trợ sinh sản.</p>
+        <h3 class="cert-card-title">CHỨNG NHẬN RTAC</h3>
       </div>
 
-      <!-- Cert 4: ASIA EXCELLENT BRAND -->
-      <div class="cert-card">
+      <!-- 2. CHỨNG NHẬN ICARE-HF -->
+      <div class="cert-card" onclick="openAwardModal('esc')">
         <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.jpg?v=20260812" alt="Asia Excellent Brand 2025" />
+          <img src="images/Website/giai-thuong/cert_esc_icare.png?v=20260812" alt="Chứng nhận ICARe-HF" />
         </div>
-        <h3>THƯƠNG HIỆU XUẤT SẮC CHÂU Á</h3>
-        <p>Vinh dự đạt danh hiệu Top 10 Thương hiệu Xuất sắc Châu Á (Asia Excellent Brand 2025) cho những đóng góp và cống hiến y tế nổi bật.</p>
+        <h3 class="cert-card-title">CHỨNG NHẬN ICARE-HF</h3>
       </div>
 
-      <!-- Cert 5: IHF MEMBERSHIP -->
-      <div class="cert-card">
+      <!-- 3. CHỨNG NHẬN ISO 15189:2022 -->
+      <div class="cert-card" onclick="openAwardModal('iso')">
+        <div class="cert-img-box">
+          <img src="images/Website/giai-thuong/iso.png?v=20260812" alt="Chứng nhận ISO 15189:2022" />
+        </div>
+        <h3 class="cert-card-title">CHỨNG NHẬN ISO 15189:2022</h3>
+      </div>
+
+      <!-- 4. THÀNH VIÊN LIÊN ĐOÀN BỆNH VIỆN IHF -->
+      <div class="cert-card" onclick="openAwardModal('ihf')">
         <div class="cert-img-box">
           <img src="images/Website/giai-thuong/gt_ihf.jpg?v=20260812" alt="IHF Membership Certificate" />
         </div>
-        <h3>THÀNH VIÊN LIÊN ĐOÀN BỆNH VIỆN IHF</h3>
-        <p>Chứng nhận thành viên chính thức Liên đoàn Bệnh viện Quốc tế (International Hospital Federation - IHF), kết nối cùng mạng lưới y tế toàn cầu.</p>
+        <h3 class="cert-card-title">
+          <span>THÀNH VIÊN</span>
+          <span>LIÊN ĐOÀN BỆNH VIỆN IHF</span>
+        </h3>
       </div>
 
-      <!-- Cert 6: ESC / ICARe-HF -->
-      <div class="cert-card">
+      <!-- 5. TOP 3 THƯƠNG HIỆU TIÊU BIỂU CHÂU Á THÁI BÌNH DƯƠNG 2026 -->
+      <div class="cert-card" onclick="openAwardModal('top3')">
         <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/cert_esc_icare.png?v=20260812" alt="ESC / ICARe-HF Certificate" />
+          <img src="images/Website/giai-thuong/top3.png?v=20260812" alt="Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026" />
         </div>
-        <h3>CHỨNG NHẬN SUY TIM ESC / HFA</h3>
-        <p>Chứng nhận chất lượng điều trị suy tim cao nhất theo chương trình Full ICARe-HF (Heart Failure Association of ESC), bảo chứng chuẩn mực Châu Âu.</p>
+        <h3 class="cert-card-title">
+          <span>TOP 3 THƯƠNG HIỆU TIÊU BIỂU</span>
+          <span>CHÂU Á THÁI BÌNH DƯƠNG 2026</span>
+        </h3>
       </div>
 
-      <!-- Cert 7: HEALTHCARE ASIA AWARDS 2023 -->
-      <div class="cert-card">
+      <!-- 6. TOP 10 THƯƠNG HIỆU XUẤT SẮC CHÂU Á 2025 -->
+      <div class="cert-card" onclick="openAwardModal('top10-asia-2025')">
+        <div class="cert-img-box">
+          <img src="images/Website/giai-thuong/gt_thuonghieuxuatsac.jpg?v=20260812" alt="Top 10 thương hiệu xuất sắc Châu Á 2025" />
+        </div>
+        <h3 class="cert-card-title">
+          <span>TOP 10 THƯƠNG HIỆU</span>
+          <span>XUẤT SẮC CHÂU Á 2025</span>
+        </h3>
+      </div>
+
+      <!-- 7. TOP 10 THƯƠNG HIỆU UY TÍN HÀNG ĐẦU CHÂU Á 2025 -->
+      <div class="cert-card" onclick="openAwardModal('asia')">
+        <div class="cert-img-box">
+          <img src="images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.jpg?v=20260812" alt="Top 10 Thương hiệu uy tín hàng đầu Châu Á 2025" />
+        </div>
+        <h3 class="cert-card-title">
+          <span>TOP 10 THƯƠNG HIỆU UY TÍN</span>
+          <span>HÀNG ĐẦU CHÂU Á 2025</span>
+        </h3>
+      </div>
+
+      <!-- 8. GIẢI THƯỞNG HEALTHCARE ASIA AWARDS 2023 -->
+      <div class="cert-card" onclick="openAwardModal('healthcare-asia')">
         <div class="cert-img-box">
           <img src="images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.jpg?v=20260812" alt="Healthcare Asia Awards 2023" />
         </div>
-        <h3>GIẢI THƯỞNG HEALTHCARE ASIA AWARDS 2023</h3>
-        <p>Đạt giải Bệnh viện có cống hiến nhất vì cộng đồng tại Healthcare Asia Awards 2023 nhờ những thành tích xuất sắc trong công tác khám chữa bệnh và chống dịch Covid-19 trong những năm 2021, 2022.</p>
+        <h3 class="cert-card-title">
+          <span>GIẢI THƯỞNG</span>
+          <span>HEALTHCARE ASIA AWARDS 2023</span>
+        </h3>
+      </div>
+
+      <!-- 9. TOP 10 TRUNG TÂM HỖ TRỢ SINH SẢN TỐT NHẤT VIỆT NAM 2025 -->
+      <div class="cert-card" onclick="openAwardModal('top10ivf')">
+        <div class="cert-img-box">
+          <img src="images/Website/giai-thuong/top10ivf.jpg?v=20260812" alt="Top 10 Trung tâm Hỗ trợ sinh sản tốt nhất Việt Nam 2025" />
+        </div>
+        <h3 class="cert-card-title">TOP 10 TRUNG TÂM HỖ TRỢ SINH SẢN TỐT NHẤT VIỆT NAM 2025</h3>
       </div>
 
     </div>
@@ -421,21 +508,34 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <div class="footer__logo">
-          <img src="images/logo_cih_acci.png" alt="" class="footer__logo-img" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
+          <img src="images/logo_cih_acci.png"
+               alt="" class="footer__logo-img"
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
           <p class="footer__license">Số đăng ký kinh doanh: 0310898993 cấp bởi Sở Kế hoạch và Đầu tư TP. HCM, đăng ký lần đầu ngày 03/06/2011.</p>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/benhvienquoctecity" class="footer__soc-btn" id="footer-fb" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8H7v3h2v9h4v-9h3.6l.4-3H13V6c0-.5.5-1 1-1h3V1h-4c-3 0-5 2-5 5v2z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@bvqtcity" class="footer__soc-btn" id="footer-yt" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2c-.3-1.1-1.2-2-2.3-2.3C19.2 3.5 12 3.5 12 3.5s-7.2 0-9.2.4c-1.1.3-2 1.2-2.3 2.3C.1 8.2.1 12 .1 12s0 3.8.4 5.8c.3 1.1 1.2 2 2.3 2.3 2 .4 9.2.4 9.2.4s7.2 0 9.2-.4c1.1-.3 2-1.2 2.3-2.3.4-2 .4-5.8.4-5.8s0-3.8-.4-5.8zM9.5 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+          </a>
+          <a href="https://tiktok.com/@benhvienquoctecity" class="footer__soc-btn" id="footer-tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 3v11.7c0 2-1.7 3.8-3.8 3.8a3.8 3.8 0 0 1-3.8-3.8c0-2 1.7-3.8 3.8-3.8.3 0 .7.1 1 .2V7.1a7.8 7.8 0 0 0-4.8 1c-1.8 1.1-3 3-3 5.3a7.8 7.8 0 0 0 7.8 7.8 7.8 7.8 0 0 0 7.8-7.8V8.2c1.3.9 3 1.5 4.8 1.5V6a4.8 4.8 0 0 1-4-2.2V3h-3z"/></svg>
+          </a>
         </div>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
 
@@ -443,73 +543,66 @@
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
           <li class="footer__contact-address">
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span class="footer__contact-icon" style="margin-top: 2px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
-          <li><span>Tổng đài: 1900 8146</span></li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
+            </span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
+          </li>
+          <li>
+            <span class="footer__contact-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <span>Email: &nbsp;<a href="mailto:truyenthong@cih.com.vn">truyenthong@cih.com.vn</a></span>
+          </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
-    <div class="container">
-      <p>&copy; 2026 Bệnh viện Quốc tế City (CIH). Tất cả quyền được bảo lưu.</p>
+    <div class="container footer__bottom-inner">
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
 
-<!-- LIGHTBOX MODAL CONTAINER -->
-<div class="img-lightbox-modal" id="imageLightboxModal">
-  <span class="img-lightbox-close" onclick="closeImageLightbox()">&times;</span>
-  <img class="img-lightbox-content" id="lightboxTargetImg" alt="Xem ảnh phóng to" />
+<!-- ═══════════════════════════════════════════════
+     AWARD & CERTIFICATE DETAIL POPUP MODAL
+═══════════════════════════════════════════════ -->
+<div class="award-modal" id="award-modal" onclick="if(event.target===this) closeAwardModal()">
+  <div class="award-modal__content">
+    <button class="award-modal__close" onclick="closeAwardModal()" aria-label="Đóng">✕</button>
+    <div class="award-modal__img-box" id="award-modal-img-wrap">
+      <img id="award-modal-img" src="" alt="Chứng nhận" />
+    </div>
+    <div id="award-modal-badge" class="award-modal__badge">🏆 Chứng nhận Quốc tế</div>
+    <h3 class="award-modal__title" id="award-modal-title"></h3>
+    <p class="award-modal__desc" id="award-modal-desc"></p>
+  </div>
 </div>
 
-<script src="script.js?v=1786517708"></script>
-<script>
-  function openImageLightbox(src, alt) {
-    const modal = document.getElementById('imageLightboxModal');
-    const targetImg = document.getElementById('lightboxTargetImg');
-    if (!modal || !targetImg) return;
-    targetImg.src = src;
-    targetImg.alt = alt || 'Bằng chứng nhận CIH';
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeImageLightbox() {
-    const modal = document.getElementById('imageLightboxModal');
-    if (!modal) return;
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    // Add click listeners to all cert cards, img boxes, and hero banner
-    document.querySelectorAll('.cert-card, .aaci-featured-hero-box, .cert-img-box').forEach(card => {
-      card.addEventListener('click', (e) => {
-        const img = card.querySelector('img');
-        if (img && img.src) {
-          openImageLightbox(img.src, img.alt);
-        }
-      });
-    });
-
-    // Close lightbox on clicking dark backdrop
-    const modal = document.getElementById('imageLightboxModal');
-    if (modal) {
-      modal.addEventListener('click', (e) => {
-        if (e.target.id === 'imageLightboxModal') {
-          closeImageLightbox();
-        }
-      });
-    }
-
-    // Close on Escape key press
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeImageLightbox();
-      }
-    });
-  });
-</script>
+<script src="script.js?v=1787643496"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

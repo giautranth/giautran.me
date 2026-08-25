@@ -3,186 +3,236 @@
 <head>
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="images/logo1x1.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cơ Hội Nghề Nghiệp | Bệnh viện Quốc tế City – City International Hospital</title>
   <meta name="description" content="Gia nhập đội ngũ nhân sự y tế chuyên nghiệp tại Bệnh viện Quốc tế City với môi trường làm việc JCI quốc tế năng động, hiện đại và cơ hội thăng tiến rộng mở." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1787643496" />
   <style>
-    /* Custom Recruitment styles */
-    .recruitment-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 2rem;
-      margin-top: 2rem;
+    /* Careers Page Specific Premium Styling (Hoa Lâm Style) */
+    .careers-section-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      text-align: center;
+      color: #007DA5;
+      margin-top: 40px;
+      margin-bottom: 28px;
     }
+
     .jobs-list {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 16px;
+      margin-bottom: 48px;
     }
-    .job-card {
-      background: var(--c-white);
-      border-radius: var(--r-md);
-      border: 1px solid var(--c-border);
-      padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .job-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--c-primary);
-    }
-    .job-header {
+
+    .job-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 22px 32px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      border-bottom: 1px dashed var(--c-border);
-      padding-bottom: 0.75rem;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 59, 92, 0.04);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
-    .job-title {
-      font-size: 1.25rem;
+    .job-item:hover {
+      transform: translateY(-2px);
+      border-color: #007DA5;
+      box-shadow: 0 8px 25px rgba(0, 59, 92, 0.1);
+    }
+    .job-info h4 {
+      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--c-primary);
-      margin: 0;
+      color: #1e293b;
+      margin-top: 6px;
+      margin-bottom: 8px;
+    }
+    .job-info h4 a {
+      color: #1e293b !important;
+      transition: color 0.2s;
+    }
+    .job-item:hover .job-info h4 a {
+      color: #007DA5 !important;
     }
     .job-meta {
       display: flex;
-      gap: 1rem;
-      font-size: 0.825rem;
-      color: var(--c-text3);
-      margin-top: 0.25rem;
+      gap: 16px;
+      flex-wrap: wrap;
     }
     .job-meta span {
+      font-size: 0.88rem;
+      color: #64748b;
       display: flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 6px;
     }
-    .job-tag {
-      background: var(--c-primary-l);
-      color: var(--c-primary);
+    .job-badge {
+      background: rgba(0, 59, 92, 0.08);
+      color: #007DA5;
+      padding: 3px 12px;
+      border-radius: 99px;
       font-size: 0.75rem;
       font-weight: 700;
-      padding: 0.2rem 0.6rem;
-      border-radius: var(--r-full);
       text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
-    .job-desc {
-      font-size: 0.925rem;
-      line-height: 1.6;
-      color: var(--c-text2);
-      margin-bottom: 1rem;
-    }
-    .job-requirements {
+    .btn-apply-now {
+      background: #007DA5;
+      color: #ffffff;
+      padding: 10px 28px;
+      border-radius: 99px;
       font-size: 0.9rem;
-      color: var(--c-text);
-      margin-bottom: 1rem;
-    }
-    .job-requirements ul {
-      padding-left: 1.25rem;
-      margin-top: 0.5rem;
-    }
-    .job-requirements li {
-      margin-bottom: 0.35rem;
-      list-style-type: square;
-    }
-    .sidebar-card {
-      background: var(--c-white);
-      border-radius: var(--r-md);
-      border: 1px solid var(--c-border);
-      padding: 1.5rem;
-      box-shadow: var(--shadow-sm);
-      height: fit-content;
-      position: sticky;
-      top: 100px;
-    }
-    .sidebar-title {
-      font-size: 1.15rem;
       font-weight: 700;
-      color: var(--c-text);
-      margin-bottom: 1rem;
-      border-left: 4px solid var(--c-accent);
-      padding-left: 0.75rem;
-    }
-    .benefit-item {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-    }
-    .benefit-icon {
-      font-size: 1.5rem;
-      color: var(--c-primary);
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
       flex-shrink: 0;
     }
-    .benefit-text h4 {
-      font-weight: 700;
-      margin: 0 0 0.2rem 0;
-      color: var(--c-text);
-      font-size: 0.95rem;
+    .btn-apply-now:hover {
+      background: #0082a6;
+      box-shadow: 0 4px 14px rgba(0, 130, 166, 0.3);
+      transform: translateY(-2px);
     }
-    .benefit-text p {
-      font-size: 0.85rem;
-      color: var(--c-text3);
-      margin: 0;
-      line-height: 1.4;
+    @media (max-width: 768px) {
+      .job-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+      }
+      .btn-apply-now {
+        width: 100%;
+        text-align: center;
+      }
     }
-    .timeline-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+
+    /* Application Form Card */
+    .apply-form-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 10px 35px rgba(0, 59, 92, 0.06);
+      max-width: 900px;
+      margin: 0 auto 50px auto;
     }
-    .step-card {
+    .apply-form-card h2 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #007DA5;
       text-align: center;
-      background: var(--c-bg);
-      padding: 1.5rem;
-      border-radius: var(--r-md);
-      border: 1px solid var(--c-border);
-      position: relative;
+      margin-top: 0;
+      margin-bottom: 24px;
     }
-    .step-number {
-      width: 40px;
-      height: 40px;
-      background: var(--c-primary);
-      color: var(--c-white);
-      border-radius: var(--r-full);
+    .apply-form-card .form-group {
+      margin-bottom: 20px;
+    }
+    .apply-form-card .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+    .apply-form-card input[type="text"],
+    .apply-form-card input[type="tel"],
+    .apply-form-card input[type="email"],
+    .apply-form-card select,
+    .apply-form-card textarea {
+      width: 100%;
+      font-size: 0.95rem;
+      color: #0f172a;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 12px 16px;
+      outline: none;
+      transition: all 0.25s;
+    }
+    .apply-form-card input:focus,
+    .apply-form-card select:focus,
+    .apply-form-card textarea:focus {
+      border-color: #007DA5;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(0, 59, 92, 0.1);
+    }
+    .apply-form-card .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 600px) {
+      .apply-form-card .form-row {
+        grid-template-columns: 1fr;
+      }
+      .apply-form-card {
+        padding: 24px 18px;
+      }
+    }
+    .apply-form-card .btn-submit {
+      width: 100%;
+      padding: 14px 28px;
+      background: #007DA5;
+      color: #ffffff;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 59, 92, 0.25);
+      transition: all 0.25s ease;
+      margin-top: 10px;
+    }
+    .apply-form-card .btn-submit:hover {
+      background: #005f80;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0, 59, 92, 0.35);
+    }
+    .file-input-box {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      margin: 0 auto 1rem auto;
-      font-size: 1.1rem;
+      gap: 12px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-height: 48px;
     }
-    .step-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-      color: var(--c-text);
+    .file-input-box:hover {
+      border-color: #007DA5;
+      background: #ffffff;
     }
-    .step-desc {
-      font-size: 0.825rem;
-      color: var(--c-text3);
-      line-height: 1.4;
+    .file-select-btn {
+      background: #e2e8f0;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: background 0.2s;
     }
-    @media (max-width: 992px) {
-      .recruitment-grid {
-        grid-template-columns: 1fr;
-      }
-      .sidebar-card {
-        position: static;
-      }
-      .timeline-steps {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .file-input-box:hover .file-select-btn {
+      background: #cbd5e1;
     }
-    @media (max-width: 576px) {
-      .timeline-steps {
-        grid-template-columns: 1fr;
-      }
+    .file-name-text {
+      font-size: 0.9rem;
+      color: #64748b;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   </style>
 </head>
@@ -195,20 +245,49 @@
     <div class="top-bar__right">
       <a href="tel:19008146" class="top-bar__item top-bar__item--hotline">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
-        Tổng đài: <strong>1900 8146</strong>
+        Tổng đài: 1900 8146
       </a>
       <span class="top-bar__sep">|</span>
       <a href="tel:02862901155" class="top-bar__item top-bar__item--emergency">
-        <span class="pulse-dot"></span> Cấp cứu: <strong>(028) 6290 1155</strong>
+        <span class="pulse-dot"></span> Cấp cứu: (028) 6290 1155
       </a>
       <span class="top-bar__sep">|</span>
       <a href="danh-cho-khach-hang" class="top-bar__portal">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-    </div>
+                  <span class="top-bar__sep">|</span>
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
+          <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
+          <span class="lang-arrow">▴</span>
+        </button>
+        <ul class="lang-switcher__menu" id="lang-switcher-menu">
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('vi')" class="lang-option active" data-lang="vi">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-item-flag" />
+              <span>Tiếng Việt</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" data-lang="en">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7410 3900'><rect width='7410' height='3900' fill='%23b22234'/><path d='M0,600H7410M0,1200H7410M0,1800H7410M0,2400H7410M0,3000H7410M0,3600H7410' stroke='%23fff' stroke-width='300'/><rect width='2964' height='2100' fill='%233c3b6e'/><g fill='%23fff'><circle cx='247' cy='175' r='70'/><circle cx='741' cy='175' r='70'/><circle cx='1235' cy='175' r='70'/><circle cx='1729' cy='175' r='70'/><circle cx='2223' cy='175' r='70'/><circle cx='2717' cy='175' r='70'/><circle cx='494' cy='350' r='70'/><circle cx='988' cy='350' r='70'/><circle cx='1482' cy='350' r='70'/><circle cx='1976' cy='350' r='70'/><circle cx='2470' cy='350' r='70'/><circle cx='247' cy='525' r='70'/><circle cx='741' cy='525' r='70'/><circle cx='1235' cy='525' r='70'/><circle cx='1729' cy='525' r='70'/><circle cx='2223' cy='525' r='70'/><circle cx='2717' cy='525' r='70'/><circle cx='494' cy='700' r='70'/><circle cx='988' cy='700' r='70'/><circle cx='1482' cy='700' r='70'/><circle cx='1976' cy='700' r='70'/><circle cx='2470' cy='700' r='70'/><circle cx='247' cy='875' r='70'/><circle cx='741' cy='875' r='70'/><circle cx='1235' cy='875' r='70'/><circle cx='1729' cy='875' r='70'/><circle cx='2223' cy='875' r='70'/><circle cx='2717' cy='875' r='70'/><circle cx='494' cy='1050' r='70'/><circle cx='988' cy='1050' r='70'/><circle cx='1482' cy='1050' r='70'/><circle cx='1976' cy='1050' r='70'/><circle cx='2470' cy='1050' r='70'/><circle cx='247' cy='1225' r='70'/><circle cx='741' cy='1225' r='70'/><circle cx='1235' cy='1225' r='70'/><circle cx='1729' cy='1225' r='70'/><circle cx='2223' cy='1225' r='70'/><circle cx='2717' cy='1225' r='70'/><circle cx='494' cy='1400' r='70'/><circle cx='988' cy='1400' r='70'/><circle cx='1482' cy='1400' r='70'/><circle cx='1976' cy='1400' r='70'/><circle cx='2470' cy='1400' r='70'/><circle cx='247' cy='1575' r='70'/><circle cx='741' cy='1575' r='70'/><circle cx='1235' cy='1575' r='70'/><circle cx='1729' cy='1575' r='70'/><circle cx='2223' cy='1575' r='70'/><circle cx='2717' cy='1575' r='70'/><circle cx='494' cy='1750' r='70'/><circle cx='988' cy='1750' r='70'/><circle cx='1482' cy='1750' r='70'/><circle cx='1976' cy='1750' r='70'/><circle cx='2470' cy='1750' r='70'/><circle cx='247' cy='1925' r='70'/><circle cx='741' cy='1925' r='70'/><circle cx='1235' cy='1925' r='70'/><circle cx='1729' cy='1925' r='70'/><circle cx='2223' cy='1925' r='70'/><circle cx='2717' cy='1925' r='70'/></g></svg>" alt="English" class="lang-item-flag" />
+              <span>Tiếng Anh</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="changeLanguage('km')" class="lang-option" data-lang="km">
+              <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'><rect width='1000' height='150' fill='%23032ea1'/><rect y='150' width='1000' height='300' fill='%23e00025'/><rect y='450' width='1000' height='150' fill='%23032ea1'/><path d='M430,390H570V350H550V330H530V290H510V270H490V290H470V330H450V350H430Z' fill='%23fff'/><path d='M450,330V350H550V330M470,290V330H530V290' fill='%23fff' stroke='%23e00025' stroke-width='6'/></svg>" alt="Cambodia" class="lang-item-flag" />
+              <span>Tiếng Campuchia</span>
+            </a>
+          </li>
+        </ul>
+      </div>
   </div>
 </div>
+</div>
+
+
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -219,8 +298,8 @@
 
     <a href="./" class="header__logo" id="site-logo" aria-label="CIH Trang chủ">
       <img src="images/logo_cih_acci.png"
-           alt="" class="header__logo-img"
-           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+           alt="Bệnh viện Quốc tế City" class="header__logo-img"
+           onerror="this.onerror=null; this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
       <div id="logo-fallback" class="logo-fallback" style="display:none">
         <div class="logo-mark">C<span class="logo-cross">✚</span>IH</div>
       </div>
@@ -229,288 +308,560 @@
     <!-- Navigation -->
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="ve-chung-toi" class="nav__link">Giới Thiệu</a></li>
-        <li class="nav__item nav__item--has-dropdown">
-          <a href="chuyen-khoa" class="nav__link">Chuyên Khoa <span class="nav__arrow">▾</span></a>
-          <div class="nav__dropdown">
-            <div class="dropdown__grid">
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Nội Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Tim Mạch</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tiêu Hóa – Gan Mật</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Tiết – Đái Tháo Đường</a>
-                <a href="chuyen-khoa" class="dropdown__link">Hô Hấp</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thận – Tiết Niệu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Ngoại Khoa</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Tổng Quát</a>
-                <a href="chuyen-khoa" class="dropdown__link">Chấn Thương Chỉnh Hình</a>
-                <a href="chuyen-khoa" class="dropdown__link">Thần Kinh Ngoại Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Phẫu Thuật Thẩm Mỹ</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chuyên Khoa Khác</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Sản Phụ Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nhi Khoa</a>
-                <a href="chuyen-khoa" class="dropdown__link">Ung Bướu</a>
-                <a href="chuyen-khoa" class="dropdown__link">Mắt</a>
-                <a href="chuyen-khoa" class="dropdown__link">Tai Mũi Họng</a>
-                <a href="chuyen-khoa" class="dropdown__link">Da Liễu</a>
-              </div>
-              <div class="dropdown__col">
-                <h4 class="dropdown__heading">Chẩn Đoán</h4>
-                <a href="chuyen-khoa" class="dropdown__link">Chẩn Đoán Hình Ảnh</a>
-                <a href="chuyen-khoa" class="dropdown__link">Xét Nghiệm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Nội Soi</a>
-                <a href="chuyen-khoa" class="dropdown__link">Siêu Âm</a>
-                <a href="chuyen-khoa" class="dropdown__link">Điện Tâm Đồ</a>
-              </div>
-            </div>
-          </div>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Giới Thiệu <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="ve-chung-toi">VỀ CHÚNG TÔI</a></li>
+            <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
+          </ul>
         </li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
-        <li class="nav__item"><a href="vien-dao-tao-nckh" class="nav__link">Viện Đào Tạo & NCKH</a></li>
-        <li class="nav__item"><a href="tuyen-dung" class="nav__link">Tuyển Dụng</a></li>
+        <li class="nav__item nav__item--dropdown">
+          <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
+          <ul class="nav__dropdown">
+            <li><a href="vien-dao-tao-nckh#ke-hoach">Kế hoạch</a></li>
+            <li><a href="vien-dao-tao-nckh#chieu-sinh">Thông báo chiêu sinh</a></li>
+            <li><a href="vien-dao-tao-nckh#hoat-dong-dao-tao">Hoạt động đào tạo</a></li>
+            <li><a href="vien-dao-tao-nckh#quyet-dinh">Quyết định cấp GCN/ Chứng chỉ</a></li>
+            <li><a href="vien-dao-tao-nckh#giang-vien">Đội ngũ Giảng viên</a></li>
+            <li><a href="vien-dao-tao-nckh#nghien-cuu-khoa-hoc">Hoạt động NCKH</a></li>
+            <li><a href="vien-dao-tao-nckh#khac">Khác</a></li>
+          </ul>
+        </li>
         <li class="nav__item"><a href="lien-he" class="nav__link">Liên Hệ</a></li>
+        <li class="nav__item nav__item--search">
+          <a href="javascript:void(0)" class="nav__link nav__link--search header-search-btn" aria-label="Tìm kiếm" title="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div class="header__cta">
       <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" id="header-booking-btn">📅 Đặt Lịch Khám</a>
-      <button class="header-search-btn" id="header-search-btn" aria-label="Tìm kiếm">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-      </button>
     </div>
   </div>
 </header>
 
 <!-- SUBPAGE BREADCRUMBS HERO BAR -->
-<section class="subpage-hero" style="background: #f4f8fb; padding: 1.25rem 0; border-bottom: 1px solid #e2e8f0;">
+<section class="subpage-hero" style="background: #f4f8fb; padding: 0.35rem 0; border-bottom: 1px solid #e2e8f0;">
   <div class="container subpage-hero__inner">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #64748b; margin-bottom: 0.35rem;">
-      <a href="./" style="color: #005f80; font-weight: 700; text-decoration: none;">Trang Chủ</a> &nbsp;»&nbsp; <span style="color: #0f3775; font-weight: 700;">Tuyển Dụng</span>
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000; margin-bottom: 0.35rem;">
+      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Tuyển dụng</span>
     </div>
-    
   </div>
 </section>
 
+
+
 <!-- SUBPAGE CONTENT -->
-<main class="subpage-content">
+<main class="subpage-content" style="padding-top: 1.5rem;">
   <div class="container">
     
-    <!-- Giới thiệu Tuyển dụng -->
-    <div class="subpage-card animate-fade-up">
-      <h2 class="subpage-heading">Gia Nhập Đội Ngũ CIH</h2>
-      <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 0;">
-        Tại Bệnh viện Quốc tế City (CIH), chúng tôi tin rằng con người là tài sản quý giá nhất quyết định chất lượng dịch vụ y tế. Chúng tôi luôn chào đón những chuyên gia y tế, bác sĩ, điều dưỡng và nhân viên hành chính tận tâm, có chuyên môn cao và mong muốn phát triển sự nghiệp trong một môi trường y tế chuẩn quốc tế JCI chuyên nghiệp, nhân văn và hiện đại.
-      </p>
-    </div>
-
-    <!-- Hàng chính gồm danh sách công việc & sidebar -->
-    <div class="recruitment-grid">
+    <!-- Section 1: Vị trí đang tuyển -->
+    <h3 class="careers-section-title" id="positions-title" style="margin-top: 0;">Vị trí đang tuyển</h3>
+    
+    <div class="jobs-list">
       
-      <!-- Danh sách công việc (bên trái) -->
-      <div class="jobs-list">
-        <h3 class="subpage-heading" style="margin-top: 0; font-size: 1.4rem;">Vị Trí Đang Tuyển Dụng</h3>
-        
-        <!-- Job 1 -->
-        <div class="job-card animate-fade-up">
-          <div class="job-header">
-            <div>
-              <h4 class="job-title">Bác sĩ Trưởng khoa Nhi (NICU)</h4>
-              <div class="job-meta">
-                <span>📍 Quận Bình Tân, TP. HCM</span>
-                <span>💼 Toàn thời gian</span>
-              </div>
-            </div>
-            <span class="job-tag">Y Tế</span>
+      <!-- Job 1 -->
+      <div class="job-item animate-fade-up" style="cursor: pointer;" onclick="window.location.href='chi-tiet-tuyen-dung?id=1'">
+        <div class="job-info">
+          <span class="job-badge">Chuyên môn y khoa</span>
+          <h4><a href="chi-tiet-tuyen-dung?id=1" style="color: inherit; text-decoration: none;">Bác sĩ Trưởng khoa Nhi (NICU)</a></h4>
+          <div class="job-meta">
+            <span>📍 TP. HCM</span>
+            <span>💼 Toàn thời gian</span>
+            <span>💰 Mức lương: Thỏa thuận</span>
           </div>
-          <p class="job-desc">
-            Chịu trách nhiệm quản lý, điều hành chuyên môn và hành chính của Khoa Nhi & Hồi sức tích cực Sơ sinh (NICU). Thực hiện chẩn đoán, điều trị chuyên sâu cho các bệnh nhi và trẻ sơ sinh.
-          </p>
-          <div class="job-requirements">
-            <strong>Yêu cầu công việc:</strong>
-            <ul>
-              <li>Tốt nghiệp Bác sĩ Chuyên khoa II hoặc Tiến sĩ chuyên ngành Nhi khoa.</li>
-              <li>Có ít nhất 10 năm kinh nghiệm lâm sàng, ưu tiên người có kinh nghiệm quản lý khoa tại các bệnh viện lớn.</li>
-              <li>Có chứng chỉ hành nghề khám chữa bệnh Nhi khoa.</li>
-              <li>Tiếng Anh giao tiếp chuyên môn tốt là một lợi thế lớn.</li>
-            </ul>
-          </div>
-          <a href="mailto:truyenthong@cih.com.vn?subject=Ung tuyen Bac si Truong khoa Nhi" class="btn btn--primary btn--sm">Ứng Tuyển Ngay</a>
         </div>
-
-        <!-- Job 2 -->
-        <div class="job-card animate-fade-up" style="animation-delay: 0.1s;">
-          <div class="job-header">
-            <div>
-              <h4 class="job-title">Bác sĩ Chấn thương Chỉnh hình</h4>
-              <div class="job-meta">
-                <span>📍 Quận Bình Tân, TP. HCM</span>
-                <span>💼 Toàn thời gian</span>
-              </div>
-            </div>
-            <span class="job-tag">Y Tế</span>
-          </div>
-          <p class="job-desc">
-            Thực hiện khám bệnh, tư vấn và điều trị ngoại khoa các bệnh lý Cơ Xương Khớp, Chấn thương chỉnh hình. Tham gia thực hiện các ca phẫu thuật thay khớp, nội soi khớp và trực gác theo lịch của bệnh viện.
-          </p>
-          <div class="job-requirements">
-            <strong>Yêu cầu công việc:</strong>
-            <ul>
-              <li>Tốt nghiệp Bác sĩ Chuyên khoa I, Chuyên khoa II hoặc Thạc sĩ ngoại CTCH.</li>
-              <li>Có ít nhất 5 năm kinh nghiệm thực hiện phẫu thuật cơ xương khớp.</li>
-              <li>Có chứng chỉ hành nghề phẫu thuật chấn thương chỉnh hình.</li>
-            </ul>
-          </div>
-          <a href="mailto:truyenthong@cih.com.vn?subject=Ung tuyen Bac si Chan thuong Chinh hinh" class="btn btn--primary btn--sm">Ứng Tuyển Ngay</a>
+        <div style="display: flex; gap: 0.6rem; align-items: center;" onclick="event.stopPropagation();">
+          <a href="chi-tiet-tuyen-dung?id=1" class="btn-apply-now" style="background: #f1f5f9; color: #1e293b; border: 1px solid #cbd5e1; text-decoration: none; display: inline-flex; align-items: center; font-weight: 700;">Xem chi tiết <span class="arrow">→</span></a>
+          <button class="btn-apply-now" onclick="applyJob('Bác sĩ Trưởng khoa Nhi')">Ứng tuyển</button>
         </div>
-
-        <!-- Job 3 -->
-        <div class="job-card animate-fade-up" style="animation-delay: 0.2s;">
-          <div class="job-header">
-            <div>
-              <h4 class="job-title">Điều dưỡng trưởng khoa Tiêu hóa</h4>
-              <div class="job-meta">
-                <span>📍 Quận Bình Tân, TP. HCM</span>
-                <span>💼 Toàn thời gian</span>
-              </div>
-            </div>
-            <span class="job-tag">Y Tế</span>
-          </div>
-          <p class="job-desc">
-            Quản lý, phân công và kiểm tra công tác chăm sóc bệnh nhân của đội ngũ điều dưỡng trong khoa Tiêu hóa. Đảm bảo quy trình chăm sóc tuân thủ tiêu chuẩn an toàn người bệnh JCI.
-          </p>
-          <div class="job-requirements">
-            <strong>Yêu cầu công việc:</strong>
-            <ul>
-              <li>Tốt nghiệp Cử nhân Điều dưỡng trở lên.</li>
-              <li>Có ít nhất 3 năm kinh nghiệm ở vị trí điều dưỡng trưởng hoặc phó khoa.</li>
-              <li>Có chứng chỉ hành nghề điều dưỡng.</li>
-              <li>Kỹ năng giao tiếp, quản lý và giải quyết vấn đề tốt.</li>
-            </ul>
-          </div>
-          <a href="mailto:truyenthong@cih.com.vn?subject=Ung tuyen Dieu duong truong khoa Tieu hoa" class="btn btn--primary btn--sm">Ứng Tuyển Ngay</a>
-        </div>
-
-        <!-- Job 4 -->
-        <div class="job-card animate-fade-up" style="animation-delay: 0.3s;">
-          <div class="job-header">
-            <div>
-              <h4 class="job-title">Chuyên viên Truyền thông & Quan hệ công chúng (PR Specialist)</h4>
-              <div class="job-meta">
-                <span>📍 Quận Bình Tân, TP. HCM</span>
-                <span>💼 Toàn thời gian</span>
-              </div>
-            </div>
-            <span class="job-tag">Hành Chính</span>
-          </div>
-          <p class="job-desc">
-            Xây dựng và triển khai các chiến dịch truyền thông thương hiệu, quản lý các kênh mạng xã hội, viết thông cáo báo chí, tổ chức sự kiện y khoa cộng đồng của bệnh viện.
-          </p>
-          <div class="job-requirements">
-            <strong>Yêu cầu công việc:</strong>
-            <ul>
-              <li>Tốt nghiệp Đại học chuyên ngành Báo chí, Truyền thông, Quan hệ công chúng hoặc Marketing.</li>
-              <li>Có ít nhất 3 năm kinh nghiệm trong lĩnh vực PR/Truyền thông (ưu tiên ngành Y tế/Bệnh viện).</li>
-              <li>Khả năng viết lách tốt, sáng tạo và nhạy bén với các xu hướng truyền thông mới.</li>
-            </ul>
-          </div>
-          <a href="mailto:truyenthong@cih.com.vn?subject=Ung tuyen Chuyen vien Truyen thong PR" class="btn btn--primary btn--sm">Ứng Tuyển Ngay</a>
-        </div>
-
       </div>
 
-      <!-- Sidebar bên phải (Phúc lợi & Thông tin liên hệ) -->
-      <div>
-        <div class="sidebar-card">
-          <h3 class="sidebar-title">Phúc Lợi Dành Cho Bạn</h3>
-          
-          <div class="benefit-item">
-            <div class="benefit-icon">🏢</div>
-            <div class="benefit-text">
-              <h4>Môi trường chuẩn JCI</h4>
-              <p>Trải nghiệm và làm việc trong môi trường y khoa quốc tế hiện đại, an toàn hàng đầu.</p>
-            </div>
+      <!-- Job 2 -->
+      <div class="job-item animate-fade-up" style="animation-delay: 0.05s; cursor: pointer;" onclick="window.location.href='chi-tiet-tuyen-dung?id=2'">
+        <div class="job-info">
+          <span class="job-badge">Chuyên môn y khoa</span>
+          <h4><a href="chi-tiet-tuyen-dung?id=2" style="color: inherit; text-decoration: none;">Bác sĩ Chấn thương Chỉnh hình</a></h4>
+          <div class="job-meta">
+            <span>📍 TP. HCM</span>
+            <span>💼 Toàn thời gian</span>
+            <span>💰 Mức lương: Thỏa thuận</span>
           </div>
+        </div>
+        <div style="display: flex; gap: 0.6rem; align-items: center;" onclick="event.stopPropagation();">
+          <a href="chi-tiet-tuyen-dung?id=2" class="btn-apply-now" style="background: #f1f5f9; color: #1e293b; border: 1px solid #cbd5e1; text-decoration: none; display: inline-flex; align-items: center; font-weight: 700;">Xem chi tiết <span class="arrow">→</span></a>
+          <button class="btn-apply-now" onclick="applyJob('Bác sĩ Chấn thương Chỉnh hình')">Ứng tuyển</button>
+        </div>
+      </div>
 
-          <div class="benefit-item">
-            <div class="benefit-icon">💰</div>
-            <div class="benefit-text">
-              <h4>Thu nhập cạnh tranh</h4>
-              <p>Lương thưởng hấp dẫn cùng các khoản phụ cấp trực, phụ cấp chuyên môn xứng đáng.</p>
-            </div>
+      <!-- Job 3 -->
+      <div class="job-item animate-fade-up" style="animation-delay: 0.1s; cursor: pointer;" onclick="window.location.href='chi-tiet-tuyen-dung?id=3'">
+        <div class="job-info">
+          <span class="job-badge">Điều dưỡng</span>
+          <h4><a href="chi-tiet-tuyen-dung?id=3" style="color: inherit; text-decoration: none;">Điều dưỡng trưởng khoa Tiêu hóa</a></h4>
+          <div class="job-meta">
+            <span>📍 TP. HCM</span>
+            <span>💼 Toàn thời gian</span>
+            <span>💰 Mức lương: Cạnh tranh</span>
           </div>
+        </div>
+        <div style="display: flex; gap: 0.6rem; align-items: center;" onclick="event.stopPropagation();">
+          <a href="chi-tiet-tuyen-dung?id=3" class="btn-apply-now" style="background: #f1f5f9; color: #1e293b; border: 1px solid #cbd5e1; text-decoration: none; display: inline-flex; align-items: center; font-weight: 700;">Xem chi tiết <span class="arrow">→</span></a>
+          <button class="btn-apply-now" onclick="applyJob('Điều dưỡng trưởng khoa Tiêu hóa')">Ứng tuyển</button>
+        </div>
+      </div>
 
-          <div class="benefit-item">
-            <div class="benefit-icon">📈</div>
-            <div class="benefit-text">
-              <h4>Đào tạo và Thăng tiến</h4>
-              <p>Được tham gia các khóa đào tạo liên tục chuyên môn sâu và cơ hội thăng tiến rõ ràng.</p>
-            </div>
+      <!-- Job 4 -->
+      <div class="job-item animate-fade-up" style="animation-delay: 0.15s; cursor: pointer;" onclick="window.location.href='chi-tiet-tuyen-dung?id=4'">
+        <div class="job-info">
+          <span class="job-badge">Khối văn phòng / Dự án</span>
+          <h4><a href="chi-tiet-tuyen-dung?id=4" style="color: inherit; text-decoration: none;">Chuyên viên Truyền thông & Quan hệ công chúng (PR Specialist)</a></h4>
+          <div class="job-meta">
+            <span>📍 TP. HCM</span>
+            <span>💼 Toàn thời gian</span>
+            <span>💰 Mức lương: Thỏa thuận</span>
           </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon">🩺</div>
-            <div class="benefit-text">
-              <h4>Chăm sóc sức khỏe</h4>
-              <p>Chương trình bảo hiểm sức khỏe đặc biệt cho bản thân và ưu đãi khám chữa bệnh cho người thân.</p>
-            </div>
-          </div>
-
-          <hr style="border: 0; border-top: 1px solid var(--c-border); margin: 1.5rem 0;" />
-          
-          <h3 class="sidebar-title" style="margin-top: 0;">Thông Tin Liên Hệ</h3>
-          <p style="font-size: 0.9rem; line-height: 1.5; color: var(--c-text2); margin-bottom: 0.8rem;">
-            Vui lòng gửi CV/Hồ sơ ứng tuyển của bạn về phòng Nhân sự qua email:
-          </p>
-          <a href="mailto:truyenthong@cih.com.vn" style="font-weight: 700; color: var(--c-primary); display: block; font-size: 1.05rem; margin-bottom: 1rem; word-break: break-all;">📧 truyenthong@cih.com.vn</a>
-          <p style="font-size: 0.85rem; color: var(--c-text3); line-height: 1.4; margin: 0;">
-            📍 Phòng Nhân sự – Bệnh viện Quốc tế City<br />
-            Số 3 Đường 17A, Phường An Lạc, TP. HCM
-          </p>
+        </div>
+        <div style="display: flex; gap: 0.6rem; align-items: center;" onclick="event.stopPropagation();">
+          <a href="chi-tiet-tuyen-dung?id=4" class="btn-apply-now" style="background: #f1f5f9; color: #1e293b; border: 1px solid #cbd5e1; text-decoration: none; display: inline-flex; align-items: center; font-weight: 700;">Xem chi tiết <span class="arrow">→</span></a>
+          <button class="btn-apply-now" onclick="applyJob('Chuyên viên Truyền thông PR')">Ứng tuyển</button>
         </div>
       </div>
 
     </div>
 
-    <!-- Quy trình tuyển dụng -->
-    <div class="subpage-card animate-fade-up" style="margin-top: 3rem;">
-      <h3 class="subpage-heading" style="margin-top: 0; text-align: center;">Quy Trình Tuyển Dụng Tại CIH</h3>
-      <div class="timeline-steps">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h4 class="step-title">Nộp Hồ Sơ</h4>
-          <p class="step-desc">Ứng viên gửi CV qua email phòng Nhân sự</p>
+    <!-- Section 2: Form Nộp hồ sơ ứng tuyển -->
+    <div class="apply-form-card animate-fade-up" id="apply-section">
+      <h2>Nộp hồ sơ ứng tuyển</h2>
+      
+      <form id="recruitmentForm" novalidate onsubmit="handleRecruitmentSubmit(event)">
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rec-name">Họ tên <span style="color: #dc2626;">*</span></label>
+            <input type="text" id="rec-name" placeholder="" onfocus="clearRecError('name')" />
+            <div id="err-rec-name" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng nhập họ và tên của bạn.</div>
+          </div>
+          <div class="form-group">
+            <label for="rec-phone">Số điện thoại <span style="color: #dc2626;">*</span></label>
+            <input type="tel" id="rec-phone" placeholder="" oninput="formatPhoneInput(this)" onfocus="clearRecError('phone')" />
+            <div id="err-rec-phone" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng nhập số điện thoại hợp lệ (chỉ gồm số, +, (, ), không chứa khoảng trắng).</div>
+          </div>
         </div>
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h4 class="step-title">Sàng Lọc</h4>
-          <p class="step-desc">Phòng Nhân sự xem xét hồ sơ và liên hệ ứng viên phù hợp</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rec-email">Email <span style="color: #dc2626;">*</span></label>
+            <input type="email" id="rec-email" placeholder="" onfocus="clearRecError('email')" />
+            <div id="err-rec-email" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng nhập địa chỉ email hợp lệ (ví dụ: example@gmail.com).</div>
+          </div>
+          <div class="form-group">
+            <label for="positionSelect">Vị trí ứng tuyển <span style="color: #dc2626;">*</span></label>
+            <select id="positionSelect" onchange="clearRecError('position')">
+              <option value="" disabled selected>Chọn vị trí ứng tuyển...</option>
+              <option value="Bác sĩ Trưởng khoa Nhi">Bác sĩ Trưởng khoa Nhi (NICU)</option>
+              <option value="Bác sĩ Chấn thương Chỉnh hình">Bác sĩ Chấn thương Chỉnh hình</option>
+              <option value="Điều dưỡng trưởng khoa Tiêu hóa">Điều dưỡng trưởng khoa Tiêu hóa</option>
+              <option value="Chuyên viên Truyền thông PR">Chuyên viên Truyền thông & Quan hệ công chúng (PR Specialist)</option>
+              <option value="Khác">Vị trí ứng tuyển khác</option>
+            </select>
+            <div id="err-rec-position" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng chọn vị trí ứng tuyển.</div>
+          </div>
         </div>
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h4 class="step-title">Phỏng Vấn</h4>
-          <p class="step-desc">Phỏng vấn trực tiếp chuyên môn với Hội đồng Tuyển dụng</p>
+
+        <div class="form-group">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+            <label for="rec-cv" style="margin-bottom: 0;">Đính kèm thông tin (CV, Porfolio,...) <span style="color: #dc2626;">*</span></label>
+            <span id="rec-cv-count" style="font-size: 0.85rem; font-weight: 600; color: #64748b;">Đã chọn 0/5 tệp</span>
+          </div>
+          <input type="file" id="rec-cv" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.zip,.rar" multiple onchange="handleFileSelect(this)" style="display: none;" />
+          <div class="file-input-box" id="rec-cv-box" onclick="document.getElementById('rec-cv').click()">
+            <button type="button" class="file-select-btn">Chọn tệp</button>
+            <span class="file-name-text" id="rec-cv-filename">Chưa chọn tệp nào</span>
+          </div>
+          <div id="rec-cv-filelist" style="margin-top: 0.5rem; font-size: 0.85rem; color: #334155;"></div>
+          <div id="err-rec-cv" style="color: #dc2626; font-size: 0.8rem; margin-top: 0.35rem; display: none;">Vui lòng chọn đính kèm file hồ sơ / CV của bạn từ máy tính hoặc điện thoại (tối đa 5 tệp).</div>
         </div>
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <h4 class="step-title">Nhận Việc</h4>
-          <p class="step-desc">Thỏa thuận chế độ đãi ngộ, ký hợp đồng và thử việc</p>
+
+        <div class="form-group">
+          <label for="rec-message">Thư ứng tuyển</label>
+          <textarea id="rec-message" rows="4" placeholder=""></textarea>
         </div>
-      </div>
+
+        <button type="submit" class="btn-submit">Gửi</button>
+      </form>
     </div>
 
   </div>
 </main>
+
+<!-- JOB DETAIL MODAL OVERLAY -->
+<div id="job-detail-modal" class="modal-overlay" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px); z-index: 9999; align-items: center; justify-content: center; padding: 1rem;">
+  <div class="modal-card" style="background: #ffffff; border-radius: 20px; max-width: 720px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; position: relative;">
+    
+    <!-- Modal Header -->
+    <div style="padding: 1.5rem 2rem 1.25rem 2rem; border-bottom: 1px solid #f1f5f9; position: sticky; top: 0; background: #ffffff; z-index: 10; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem;">
+      <div>
+        <span id="modal-job-badge" style="background: rgba(0,125,165,0.1); color: #007DA5; font-size: 0.78rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 99px; text-transform: uppercase; display: inline-block; margin-bottom: 0.5rem;"></span>
+        <h3 id="modal-job-title" style="font-size: 1.35rem; font-weight: 800; color: #0f3775; margin: 0; line-height: 1.35;"></h3>
+      </div>
+      <button onclick="closeJobModal()" style="background: #f1f5f9; border: none; border-radius: 50%; width: 36px; height: 36px; font-size: 1.2rem; cursor: pointer; color: #64748b; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s;" title="Đóng">✕</button>
+    </div>
+
+    <!-- Modal Body -->
+    <div style="padding: 1.5rem 2rem; color: #334155; font-size: 0.95rem; line-height: 1.7;">
+      
+      <!-- Quick Info Meta Grid -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem 1.5rem; background: #f8fafc; padding: 1.25rem; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 1.75rem;">
+        <div>📍 <strong>Địa điểm:</strong> <span id="modal-job-loc"></span></div>
+        <div>💼 <strong>Hình thức:</strong> <span id="modal-job-type"></span></div>
+        <div>💰 <strong>Mức lương:</strong> <span id="modal-job-salary" style="color: #007DA5; font-weight: 700;"></span></div>
+        <div>🎓 <strong>Bằng cấp:</strong> <span id="modal-job-degree"></span></div>
+      </div>
+
+      <!-- Job Description -->
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f3775; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 6px;">
+          📋 MÔ TẢ CÔNG VIỆC
+        </h4>
+        <ul id="modal-job-desc" style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; color: #334155;"></ul>
+      </div>
+
+      <!-- Job Requirements -->
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f3775; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 6px;">
+          🎯 YÊU CẦU ỨNG VIÊN
+        </h4>
+        <ul id="modal-job-reqs" style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; color: #334155;"></ul>
+      </div>
+
+      <!-- Benefits -->
+      <div style="margin-bottom: 1.75rem;">
+        <h4 style="font-size: 1.05rem; font-weight: 800; color: #0f3775; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 6px;">
+          🎁 QUYỀN LỢI ĐƯỢC HƯỞNG
+        </h4>
+        <ul id="modal-job-benefits" style="padding-left: 1.25rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; color: #334155;"></ul>
+      </div>
+
+    </div>
+
+    <!-- Modal Footer CTA -->
+    <div style="padding: 1.25rem 2rem; border-top: 1px solid #f1f5f9; background: #ffffff; position: sticky; bottom: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-radius: 0 0 20px 20px;">
+      <span style="font-size: 0.85rem; color: #64748b;">Hạn nộp: <strong>30/08/2026</strong></span>
+      <button id="modal-apply-btn" style="background: linear-gradient(135deg, #007DA5, #0f3775); color: #ffffff; border: none; padding: 0.75rem 1.75rem; border-radius: 99px; font-weight: 700; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,125,165,0.25); transition: transform 0.2s;">🚀 Ứng Tuyển Ngay</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const CIH_JOBS_DATA = [
+  {
+    id: 1,
+    badge: 'Chuyên môn y khoa',
+    title: 'Bác sĩ Trưởng khoa Nhi (NICU)',
+    posValue: 'Bác sĩ Trưởng khoa Nhi',
+    loc: 'TP. HCM',
+    type: 'Toàn thời gian',
+    salary: 'Thỏa thuận',
+    degree: 'BS.CKI / BS.CKII / Thạc sĩ Nhi khoa',
+    desc: [
+      'Khám, chẩn đoán và điều trị chuyên sâu cho các bệnh nhi và bệnh nhi sơ sinh tại Khoa Nhi & Đơn vị Hồi sức sơ sinh (NICU).',
+      'Quản lý, điều hành và phân công lịch trực, chỉ đạo chuyên môn cho đội ngũ bác sĩ, điều dưỡng trong khoa.',
+      'Chủ trì các buổi giao ban, hội chẩn chuyên môn ca bệnh nặng, ca bệnh phức tạp.',
+      'Xây dựng, chuẩn hóa các quy trình kỹ thuật chuyên môn Nhi khoa & NICU theo chuẩn quốc tế AACI.'
+    ],
+    reqs: [
+      'Tốt nghiệp Đại học Y Dược chuyên ngành Nhi khoa (Ưu tiên BS.CKI, BS.CKII, Thạc sĩ).',
+      'Có Chứng chỉ hành nghề (CCHN) khám bệnh, chữa bệnh chuyên khoa Nhi.',
+      'Tối thiểu 5 năm kinh nghiệm làm việc và quản lý tại khoa Nhi / NICU các Bệnh viện lớn.',
+      'Kỹ năng quản lý nhóm, xử lý tình huống cấp cứu nhi khoa thành thạo.'
+    ],
+    benefits: [
+      'Mức lương & thu nhập hấp dẫn, thỏa thuận trực tiếp theo năng lực chuyên môn.',
+      'Đóng đầy đủ BHXH, BHYT, BHTN và Bảo hiểm chăm sóc sức khỏe CIH Care.',
+      'Môi trường làm việc chuẩn quốc tế AACI, trang thiết bị y tế hiện đại bậc nhất.',
+      'Cơ hội tham gia các khóa đào tạo CME và hội nghị y khoa quốc tế.'
+    ]
+  },
+  {
+    id: 2,
+    badge: 'Chuyên môn y khoa',
+    title: 'Bác sĩ Chấn thương Chỉnh hình',
+    posValue: 'Bác sĩ Chấn thương Chỉnh hình',
+    loc: 'TP. HCM',
+    type: 'Toàn thời gian',
+    salary: 'Thỏa thuận',
+    degree: 'BS.CKI / BS.CKII / Thạc sĩ Ngoại Chấn thương',
+    desc: [
+      'Khám, chẩn đoán và phẫu thuật điều trị các bệnh lý Chấn thương Chỉnh hình, xương khớp, thay khớp, nội soi khớp.',
+      'Thực hiện các thủ thuật, phẫu thuật cấp cứu chấn thương và theo dõi hồi phục sau mổ cho bệnh nhân.',
+      'Tư vấn kế hoạch điều trị, phục hồi chức năng toàn diện cho người bệnh.',
+      'Tham gia các hoạt động sinh hoạt chuyên môn, hội chẩn liên khoa.'
+    ],
+    reqs: [
+      'Tốt nghiệp Bác sĩ đa khoa, ưu tiên có bằng CKI/CKII/Thạc sĩ Chấn thương Chỉnh hình.',
+      'Có CCHN chuyên khoa Ngoại / Chấn thương chỉnh hình.',
+      'Tối thiểu 3 năm kinh nghiệm phẫu thuật và điều trị lâm sàng.'
+    ],
+    benefits: [
+      'Thu nhập cạnh tranh, hưởng chế độ phẫu thuật & thủ thuật theo chính sách bệnh viện.',
+      'Đầy đủ các chế độ bảo hiểm và phúc lợi sức khỏe cho bản thân & gia đình.',
+      'Hệ thống phòng mổ áp lực dương hiện đại chuẩn quốc tế.'
+    ]
+  },
+  {
+    id: 3,
+    badge: 'Điều dưỡng',
+    title: 'Điều dưỡng trưởng khoa Tiêu hóa',
+    posValue: 'Điều dưỡng trưởng khoa Tiêu hóa',
+    loc: 'TP. HCM',
+    type: 'Toàn thời gian',
+    salary: 'Cạnh tranh',
+    degree: 'Cử nhân Điều dưỡng',
+    desc: [
+      'Quản lý, điều hành toàn bộ hoạt động điều dưỡng và chăm sóc người bệnh tại Khoa Tiêu hóa & Nội soi.',
+      'Lập kế hoạch phân công ca trực, theo dõi quy trình kỹ thuật điều dưỡng và kiểm soát nhiễm khuẩn.',
+      'Đào tạo, hướng dẫn và đánh giá năng lực đội ngũ điều dưỡng viên trong khoa.',
+      'Giải quyết các phản hồi của khách hàng, đảm bảo trải nghiệm dịch vụ hài lòng nhất.'
+    ],
+    reqs: [
+      'Tốt nghiệp Cử nhân Điều dưỡng (Đại học chính quy).',
+      'Có CCHN điều dưỡng và chứng chỉ Quản lý điều dưỡng.',
+      'Tối thiểu 3 năm kinh nghiệm ở vị trí Điều dưỡng trưởng / Điều dưỡng phó.'
+    ],
+    benefits: [
+      'Lương thưởng cạnh tranh, phụ cấp chức vụ hấp dẫn.',
+      'Chế độ đãi ngộ y tế gia đình, kiểm tra sức khỏe định kỳ miễn phí.',
+      'Môi trường làm việc chuyên nghiệp, văn minh, gắn kết.'
+    ]
+  },
+  {
+    id: 4,
+    badge: 'Khối văn phòng / Dự án',
+    title: 'Chuyên viên Truyền thông & Quan hệ công chúng (PR Specialist)',
+    posValue: 'Chuyên viên Truyền thông PR',
+    loc: 'TP. HCM',
+    type: 'Toàn thời gian',
+    salary: 'Thỏa thuận',
+    degree: 'Đại học chuyên ngành Báo chí, PR, Marketing',
+    desc: [
+      'Xây dựng và thực thi các chiến dịch truyền thông thương hiệu, PR báo chí cho Bệnh viện Quốc tế City.',
+      'Viết bài PR, thông cáo báo chí, quản lý nội dung các kênh truyền thông chính thức (Website, Fanpage, Youtube).',
+      'Duy trì và phát triển mối quan hệ hợp tác với các cơ quan báo chí, truyền hình và đối tác y tế.',
+      'Phối hợp tổ chức các sự kiện hội thảo y khoa, chương trình tư vấn sức khỏe cộng đồng.'
+    ],
+    reqs: [
+      'Tốt nghiệp Đại học chuyên ngành Truyền thông, Báo chí, QHCC, Marketing.',
+      'Kỹ năng viết bài sắc bén, tư duy truyền thông thương hiệu tốt.',
+      'Có mối quan hệ làm việc với các đơn vị báo chí, truyền thông là một lợi thế.'
+    ],
+    benefits: [
+      'Mức lương thỏa thuận hấp dẫn theo năng lực và kinh nghiệm.',
+      'Thưởng theo hiệu quả chiến dịch và các dịp lễ tết trong năm.',
+      'Được tiếp xúc và làm việc trong môi trường y tế hiện đại, văn minh.'
+    ]
+  }
+];
+
+function openJobModal(jobId) {
+  const job = CIH_JOBS_DATA.find(j => j.id === jobId);
+  if (!job) return;
+
+  document.getElementById('modal-job-badge').innerText = job.badge;
+  document.getElementById('modal-job-title').innerText = job.title;
+  document.getElementById('modal-job-loc').innerText = job.loc;
+  document.getElementById('modal-job-type').innerText = job.type;
+  document.getElementById('modal-job-salary').innerText = job.salary;
+  document.getElementById('modal-job-degree').innerText = job.degree;
+
+  document.getElementById('modal-job-desc').innerHTML = job.desc.map(d => `<li>${d}</li>`).join('');
+  document.getElementById('modal-job-reqs').innerHTML = job.reqs.map(r => `<li>${r}</li>`).join('');
+  document.getElementById('modal-job-benefits').innerHTML = job.benefits.map(b => `<li>${b}</li>`).join('');
+
+  const applyBtn = document.getElementById('modal-apply-btn');
+  applyBtn.onclick = function() {
+    closeJobModal();
+    applyJob(job.posValue);
+  };
+
+  const modal = document.getElementById('job-detail-modal');
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeJobModal() {
+  const modal = document.getElementById('job-detail-modal');
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function applyJob(posVal) {
+  const posSelect = document.getElementById('positionSelect');
+  if (posSelect) {
+    posSelect.value = posVal;
+  }
+  const applySec = document.getElementById('apply-section');
+  if (applySec) {
+    applySec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+let selectedCvFiles = [];
+
+function formatPhoneInput(input) {
+  input.value = input.value.replace(/\s+/g, '').replace(/[^0-9+()]/g, '');
+  clearRecError('phone');
+}
+
+function handleFileSelect(input) {
+  clearRecError('cv');
+  if (input.files && input.files.length > 0) {
+    const newFiles = Array.from(input.files);
+    let limitExceeded = false;
+
+    for (let f of newFiles) {
+      if (selectedCvFiles.length >= 5) {
+        limitExceeded = true;
+        break;
+      }
+      // Check if file with same name & size already added
+      const exists = selectedCvFiles.some(existing => existing.name === f.name && existing.size === f.size);
+      if (!exists) {
+        selectedCvFiles.push(f);
+      }
+    }
+
+    if (limitExceeded) {
+      alert('⚠️ Tối đa 5 tệp! Đã giữ lại 5 tệp đầu tiên.');
+    }
+
+    input.value = ''; // Reset input so user can click to add more files repeatedly
+    renderCvFileList();
+  }
+}
+
+function removeSelectedFile(index) {
+  selectedCvFiles.splice(index, 1);
+  renderCvFileList();
+}
+
+function renderCvFileList() {
+  const filenameEl = document.getElementById('rec-cv-filename');
+  const filelistEl = document.getElementById('rec-cv-filelist');
+  const countEl = document.getElementById('rec-cv-count');
+
+  if (countEl) {
+    if (selectedCvFiles.length > 0) {
+      countEl.textContent = `Đã chọn ${selectedCvFiles.length}/5 tệp`;
+      countEl.style.color = '#007DA5';
+      countEl.style.fontWeight = '700';
+    } else {
+      countEl.textContent = 'Đã chọn 0/5 tệp';
+      countEl.style.color = '#64748b';
+      countEl.style.fontWeight = '600';
+    }
+  }
+
+  if (selectedCvFiles.length > 0) {
+    if (filenameEl) {
+      filenameEl.textContent = '';
+    }
+    if (filelistEl) {
+      filelistEl.innerHTML = selectedCvFiles.map((f, i) => `
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 0.6rem; margin-top: 0.35rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px;">
+          <span style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; font-size: 0.85rem; color: #1e293b;">
+            📎 ${f.name} <span style="color: #94a3b8; font-size: 0.78rem; font-weight: normal;">(${(f.size / 1024).toFixed(0)} KB)</span>
+          <button type="button" onclick="removeSelectedFile(${i})" style="background: none; border: none; color: #ef4444; font-size: 1rem; cursor: pointer; padding: 0 0.3rem; margin-left: 0.5rem; font-weight: bold;" title="Xóa tệp này">✕</button>
+        </div>
+      `).join('');
+    }
+  } else {
+    if (filenameEl) {
+      filenameEl.textContent = 'Chưa chọn tệp nào';
+      filenameEl.style.color = '#64748b';
+      filenameEl.style.fontWeight = 'normal';
+    }
+    if (filelistEl) {
+      filelistEl.innerHTML = '';
+    }
+  }
+}
+
+function clearRecError(field) {
+  const errEl = document.getElementById('err-rec-' + field);
+  const inputEl = field === 'position' ? document.getElementById('positionSelect') : (field === 'cv' ? document.getElementById('rec-cv-box') : document.getElementById('rec-' + field));
+  if (errEl) errEl.style.display = 'none';
+  if (inputEl) inputEl.style.borderColor = '#e2e8f0';
+}
+
+function handleRecruitmentSubmit(e) {
+  e.preventDefault();
+  
+  const nameEl = document.getElementById('rec-name');
+  const phoneEl = document.getElementById('rec-phone');
+  const emailEl = document.getElementById('rec-email');
+  const posEl = document.getElementById('positionSelect');
+  
+  let isValid = true;
+  
+  // Name
+  if (!nameEl.value.trim() || nameEl.value.trim().length < 2) {
+    document.getElementById('err-rec-name').style.display = 'block';
+    nameEl.style.borderColor = '#dc2626';
+    isValid = false;
+  }
+  
+  // Phone
+  const phoneVal = phoneEl.value.trim();
+  const phoneRegex = /^[+\d()]{8,15}$/;
+  if (!phoneVal || !phoneRegex.test(phoneVal) || /\s/.test(phoneVal)) {
+    document.getElementById('err-rec-phone').style.display = 'block';
+    phoneEl.style.borderColor = '#dc2626';
+    isValid = false;
+  }
+  
+  // Email
+  const emailVal = emailEl.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailVal || !emailRegex.test(emailVal)) {
+    document.getElementById('err-rec-email').style.display = 'block';
+    emailEl.style.borderColor = '#dc2626';
+    isValid = false;
+  }
+  
+  // Position
+  if (!posEl.value) {
+    document.getElementById('err-rec-position').style.display = 'block';
+    posEl.style.borderColor = '#dc2626';
+    isValid = false;
+  }
+  
+  // CV File Attachment
+  if (selectedCvFiles.length === 0) {
+    document.getElementById('err-rec-cv').style.display = 'block';
+    const boxEl = document.getElementById('rec-cv-box');
+    if (boxEl) boxEl.style.borderColor = '#dc2626';
+    isValid = false;
+  }
+  
+  if (!isValid) return;
+  
+  alert(`✅ GỬI HỒ SƠ THÀNH CÔNG!\n\nĐã nhận ${selectedCvFiles.length} tệp đính kèm từ Quý ứng viên.\nBộ phận Nhân sự Bệnh viện Quốc tế City sẽ liên hệ lại trong thời gian sớm nhất.`);
+  e.target.reset();
+  selectedCvFiles = [];
+  renderCvFileList();
+}
+</script>
 
 <!-- FOOTER -->
 <footer class="footer" id="lien-he">
@@ -520,7 +871,7 @@
         <div class="footer__logo">
           <img src="images/logo_cih_acci.png"
                alt="" class="footer__logo-img"
-               onerror="this.style.display='none'" />
+               onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
         </div>
         <div class="footer__company-info">
           <p class="footer__legal-name">CÔNG TY TNHH BỆNH VIỆN QUỐC TẾ CITY</p>
@@ -542,41 +893,33 @@
       <div class="footer__col">
         <h4 class="footer__heading">TRUY CẬP NHANH</h4>
         <ul class="footer__links">
-          <li><a href="ve-chung-toi">Giới thiệu</a></li>
           <li><a href="chuyen-khoa">Chuyên khoa</a></li>
           <li><a href="bac-si">Bác sĩ</a></li>
           <li><a href="goi-kham">Gói dịch vụ</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <h4 class="footer__heading">DÀNH CHO KHÁCH HÀNG</h4>
-        <ul class="footer__links">
-          <li><a href="danh-cho-khach-hang">Cổng khách hàng</a></li>
-          <li><a href="the-thanh-vien">Thẻ thành viên</a></li>
+          <li><a href="tuyen-dung">Tuyển dụng</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
-          <li>
+          <li class="footer__contact-address">
             <span class="footer__contact-icon" style="margin-top: 2px;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, Phường An Lạc, TP. HCM</span>
+            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Tổng đài: &nbsp;<a href="tel:19008146"><strong>1900 8146</strong></a></span>
+            <span>Tổng đài: &nbsp;<a href="tel:19008146">1900 8146</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.87 2 2 0 0 1 3.59 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.76-.76a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"></path></svg>
             </span>
-            <span>Cấp cứu: &nbsp;<a href="tel:02862901155"><strong>(028) 6290 1155</strong></a></span>
+            <span>Cấp cứu: &nbsp;<a href="tel:02862901155">(028) 6290 1155</a></span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -586,11 +929,19 @@
           </li>
         </ul>
       </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">BẢN ĐỒ</h4>
+        <div class="footer__map" style="margin-top: 0; border-radius: 8px; overflow: hidden;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9151618130154!2d106.60654471112414!3d10.741021859800515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dc8efe35abb%3A0xd63a1887de44cbb5!2sCity%20International%20Hospital!5e0!3m2!1sen!2s!4v1784883817831!5m2!1sen!2s" width="100%" height="155" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
   <div class="footer__bottom">
     <div class="container footer__bottom-inner">
-      <p>Copyright © 2026 City International Hospital. All Rights Reserved.</p>
+      <p><span class="footer__copy-main">Copyright © 2026 City International Hospital.</span> <span class="footer__copy-sub">All Rights Reserved.</span></p>
     </div>
   </div>
 </footer>
@@ -598,11 +949,7 @@
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">
-    <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#0068FF"/>
-      <path d="M10 14h16v9H15l-4 3v-3h-1V14z" fill="#FFFFFF" opacity="0.25"/>
-      <text x="18" y="22" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFFFFF" text-anchor="middle">Zalo</text>
-    </svg>
+    <img src="images/icon_zalo.png" alt="Zalo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;" />
   </a>
   <a href="https://m.me/benhvienquoctecity" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--messenger float-btn__icon-ring" id="float-messenger" title="Chat qua Facebook Messenger">
     <svg width="34" height="34" viewBox="0 0 36 36" fill="none">
@@ -619,7 +966,9 @@
   </a>
 </div>
 
-<script src="script.js"></script>
-<script src="booking_modal.js"></script>
+<script src="script.js?v=1787643496"></script>
+<script src="booking_modal.js?v=1787643496"></script>
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -295,31 +295,31 @@ body {
   border: none;
 }
 
-/* Language Selector Box (Hoa Lam Standard) */
+/* Language Selector Box (Dark Modern Theme - Chuẩn 100% Theo Ảnh Mẫu) */
 .lang-box {
   position: relative;
   display: inline-block;
 }
 
 .lang-current {
-  background: #f8fafc;
-  border: 1.5px solid #cbd5e1;
+  background: #081726;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  padding: 6px 12px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #1e293b;
+  color: #ffffff;
   cursor: pointer;
   font-family: inherit;
   transition: all 0.2s ease;
-  height: 38px;
+  height: 36px;
 }
 
 .lang-current:hover {
-  background: #ffffff;
-  border-color: #27AAE1;
-  box-shadow: 0 2px 8px rgba(39, 170, 225, 0.15);
+  background: #0c2035;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .lang-flag {
@@ -329,35 +329,37 @@ body {
 }
 
 .lang-flag img {
+  width: 22px;
+  height: 15px;
+  object-fit: cover;
   border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .lang-chevron {
-  color: #64748b;
+  color: #cbd5e1;
   transition: transform 0.25s ease;
 }
 
 .lang-box.open .lang-chevron {
   transform: rotate(180deg);
-  color: #e22b27;
+  color: #ffffff;
 }
 
 .lang-dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 6px);
   right: 0;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-top: 3px solid #e22b27;
+  background: #081726;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
-  padding: 6px;
-  min-width: 170px;
+  padding: 8px;
+  min-width: 175px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
+  transform: translateY(6px);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
   z-index: 1050;
   list-style: none;
   margin: 0;
@@ -372,24 +374,38 @@ body {
 .lang-opt {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border-radius: 6px;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.15s ease;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  color: #334155;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.lang-opt:last-child {
+  margin-bottom: 0;
+}
+
+.lang-opt .flag img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  display: block;
 }
 
 .lang-opt:hover {
-  background: #f1f5f9;
-  color: #e22b27;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .lang-opt.active {
-  background: rgba(226, 43, 39, 0.08);
-  color: #e22b27;
+  background: #251c2a;
+  color: #ffffff;
   font-weight: 700;
 }
 

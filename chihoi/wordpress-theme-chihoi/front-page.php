@@ -400,7 +400,7 @@
   <section class="site-section">
     <div class="container">
       <div class="section-header-row">
-        <div class="section-main-title">CHƯƠNG TRÌNH ĐÀO TẠO CME</div>
+        <div class="section-main-title">CHƯƠNG TRÌNH ĐÀO TẠO</div>
         <a href="dao-tao" class="btn-aih-navy">Xem tất cả ❯</a>
       </div>
       

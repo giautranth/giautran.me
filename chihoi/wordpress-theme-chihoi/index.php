@@ -300,285 +300,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City (CIH)" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV (Pháp Việt)" />
-            </div>
-            <div class="member-partner-card" title="Tập đoàn Y khoa Hoàn Mỹ">
-              <img src="photo/logo/hoanmy.webp" alt="Tập đoàn Y khoa Hoàn Mỹ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Phương Nam">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
-              <img src="photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Minh Anh">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Đa khoa Hồng Bàng">
-              <img src="photo/logo/hongbang.png" alt="Bệnh viện Đa khoa Hồng Bàng" />
-            </div>
-            <div class="member-partner-card" title="Trung tâm Y khoa Medic - Hòa Hảo">
-              <img src="photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Sài Gòn ITO">
-              <img src="photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Đa khoa Tân Hưng">
-              <img src="photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Triều An">
-              <img src="photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Việt Mỹ">
-              <img src="photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
-            </div>
-
-            <!-- Set 2 (Seamless Loop Duplicate) -->
-            <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City (CIH)" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV (Pháp Việt)" />
-            </div>
-            <div class="member-partner-card" title="Tập đoàn Y khoa Hoàn Mỹ" aria-hidden="true">
-              <img src="photo/logo/hoanmy.webp" alt="Tập đoàn Y khoa Hoàn Mỹ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
-              <img src="photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Đa khoa Hồng Bàng" aria-hidden="true">
-              <img src="photo/logo/hongbang.png" alt="Bệnh viện Đa khoa Hồng Bàng" />
-            </div>
-            <div class="member-partner-card" title="Trung tâm Y khoa Medic - Hòa Hảo" aria-hidden="true">
-              <img src="photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Sài Gòn ITO" aria-hidden="true">
-              <img src="photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Đa khoa Tân Hưng" aria-hidden="true">
-              <img src="photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Triều An" aria-hidden="true">
-              <img src="photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Việt Mỹ" aria-hidden="true">
-              <img src="photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
-            </div>
-          </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
-              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Phương Nam">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
-              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Minh Anh">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
-              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Phương Nam">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
-              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Minh Anh">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-
-            <!-- Set 2 (Seamless Loop Duplicate) -->
-            <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
-              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
-              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
-              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
-              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
-            </div>
-            <div class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-          </div>
-
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
-              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Phương Nam">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
-              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Minh Anh">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-
-            <!-- Duplicated Set 1 for Seamless Infinite Loop -->
-            <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
-              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
-              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
-            </div>
-
-            <div class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
-            </div>
-
-          </div>
         </div>
-
-        </div>
-
       </div>
     </div>
   </section>
@@ -601,7 +323,15 @@
       </div>
 
       <!-- Training Cards Grid (3 Cards hiển thị trang chủ) -->
-      <div class="training-cards-grid">
+            <!-- Training Slider Container with Left & Right Navigation Arrows -->
+      <div class="section-slider-container">
+        <button type="button" class="section-slider-arrow prev" onclick="scrollSectionCards('training-cards-grid', -1)" aria-label="Xem khóa học trước">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="training-cards-grid" id="training-cards-grid">
         
         <!-- Card 1 -->
         <div class="cme-training-card" data-category="chieu-sinh">
@@ -679,6 +409,13 @@
         </div>
 
       </div>
+
+        <button type="button" class="section-slider-arrow next" onclick="scrollSectionCards('training-cards-grid', 1)" aria-label="Xem khóa học tiếp theo">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -698,7 +435,15 @@
       </div>
 
       <!-- News Cards Grid -->
-      <div class="news-cards-grid">
+            <!-- News Slider Container with Left & Right Navigation Arrows -->
+      <div class="section-slider-container">
+        <button type="button" class="section-slider-arrow prev" onclick="scrollSectionCards('news-cards-grid', -1)" aria-label="Xem tin trước">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="news-cards-grid" id="news-cards-grid">
         
         <!-- Card 1 -->
         <div class="news-article-card" data-category="su-kien">
@@ -767,10 +512,17 @@
         </div>
 
       </div>
+
+        <button type="button" class="section-slider-arrow next" onclick="scrollSectionCards('news-cards-grid', 1)" aria-label="Xem tin tiếp theo">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
-    <!-- ========== VIDEO SECTION ========== -->
+  <!-- ========== VIDEO SECTION ========== -->
   <section class="site-section bg-subtle">
     <div class="container">
       <div class="section-header-row" style="margin-bottom: 20px;">

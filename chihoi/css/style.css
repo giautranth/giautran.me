@@ -2058,3 +2058,73 @@ body > .skiptranslate {
 body {
   top: 0px !important;
 }
+
+/* ==========================================================================
+   SECTION CAROUSEL / SLIDER ARROWS (TIN TỨC & CHƯƠNG TRÌNH ĐÀO TẠO)
+   ========================================================================== */
+.section-slider-container {
+  position: relative;
+  width: 100%;
+}
+
+.section-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(44, 54, 145, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 50, 100, 0.15);
+  color: var(--brand-navy, #2C3691);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.section-slider-arrow:hover {
+  background: var(--brand-navy, #2C3691);
+  color: #ffffff;
+  border-color: var(--brand-navy, #2C3691);
+  box-shadow: 0 8px 24px rgba(44, 54, 145, 0.35);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.section-slider-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.section-slider-arrow.prev {
+  left: -22px;
+}
+
+.section-slider-arrow.next {
+  right: -22px;
+}
+
+@media (max-width: 1280px) {
+  .section-slider-arrow.prev {
+    left: -10px;
+  }
+  .section-slider-arrow.next {
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-slider-arrow {
+    width: 36px;
+    height: 36px;
+  }
+  .section-slider-arrow.prev {
+    left: -4px;
+  }
+  .section-slider-arrow.next {
+    right: -4px;
+  }
+}

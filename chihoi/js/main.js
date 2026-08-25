@@ -674,3 +674,16 @@ if (document.readyState === 'loading') {
 } else {
   initLanguageSwitcher();
 }
+
+/* ── SECTION CARDS HORIZONTAL NAVIGATION ── */
+function scrollSectionCards(gridId, direction) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  const card = grid.querySelector('.cme-training-card, .news-article-card');
+  const scrollAmount = card ? (card.offsetWidth + 24) : 380;
+  grid.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+window.scrollSectionCards = scrollSectionCards;

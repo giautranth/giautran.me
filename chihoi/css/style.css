@@ -180,9 +180,7 @@ body {
 }
 
 .aih-menu-link .arrow-icon {
-  font-size: 0.6rem;
-  transition: transform 0.2s ease;
-  color: #64748b;
+  display: none !important;
 }
 
 .aih-menu-item:hover .aih-menu-link,

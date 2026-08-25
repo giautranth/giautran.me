@@ -51,7 +51,7 @@ function initBannerSlider() {
   const prevBtn = document.getElementById('bannerPrevBtn');
   const nextBtn = document.getElementById('bannerNextBtn');
 
-  if (!slides.length) return;
+  if (slides.length <= 1) return;
 
   let currentSlide = 0;
   let slideInterval = null;

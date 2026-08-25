@@ -1,38 +1,14 @@
 <?php get_header(); ?>
 
 
-    <!-- ========== AIH PANORAMIC HERO BANNER SECTION (Kích thước 1536 x 536) ========== -->
+      <!-- ========== AIH PANORAMIC HERO BANNER SECTION (Banner Nhận Diện Mới 1536 x 536) ========== -->
   <section class="aih-hero-banner-section">
-    
-    <!-- Circular White Slider Arrows with Blue Icons -->
-    <button type="button" class="aih-slider-arrow prev" id="bannerPrevBtn" aria-label="Slide trước">
-      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
-    </button>
-    <button type="button" class="aih-slider-arrow next" id="bannerNextBtn" aria-label="Slide tiếp">
-      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
-    </button>
-
-    <!-- Banner Slides Wrapper -->
     <div class="aih-banner-slides-wrap">
-      
-      <!-- Slide 1: Lễ Công Bố Quyết Định Thành Lập Chi Hội & Ra Mắt Ban Chấp Hành -->
+      <!-- Banner Mới: Nhận Diện Thương Hiệu Chi Hội Bệnh Viện Tư Nhân TP.HCM & Các Tỉnh Phía Nam -->
       <div class="aih-hero-slide banner-slide active">
-        <img src="photo/banner/banner_bch_1.jpg" alt="Công Bố Quyết Định Thành Lập Chi Hội Và Quyết Định Công Nhận Ban Chấp Hành" class="aih-banner-full-img" />
+        <img src="photo/banner/banner_main.jpg" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Nhiệm kỳ 2026 – 2029" class="aih-banner-full-img" />
       </div>
-
-      <!-- Slide 2: Lễ Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân Phía Nam -->
-      <div class="aih-hero-slide banner-slide">
-        <img src="photo/banner/banner_bch_2.jpg" alt="Lễ Công Bố & Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh Phía Nam" class="aih-banner-full-img" />
-      </div>
-
     </div>
-
-    <!-- Slider Dots Indicator -->
-    <div class="aih-slider-dots">
-      <span class="carousel-dot active" data-slide-index="0" aria-label="Chuyển đến Slide 1"></span>
-      <span class="carousel-dot" data-slide-index="1" aria-label="Chuyển đến Slide 2"></span>
-    </div>
-
   </section>
 
   <!-- ========== 2. GIỚI THIỆU SECTION ========== -->

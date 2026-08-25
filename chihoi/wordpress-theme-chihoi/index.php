@@ -113,7 +113,6 @@
     <div class="container">
       <div class="section-header-row">
         <div class="section-main-title">CHƯƠNG TRÌNH ĐÀO TẠO</div>
-        <a href="dao-tao" class="btn-aih-navy">Xem tất cả ❯</a>
       </div>
       
       <!-- Filter Tabs -->
@@ -219,6 +218,10 @@
           </svg>
         </button>
       </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="dao-tao" class="btn-aih-navy" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 36px; font-size: 0.95rem; font-weight: 700; border-radius: 999px;">Xem tất cả</a>
+      </div>
     </div>
   </section>
 
@@ -227,7 +230,6 @@
     <div class="container">
       <div class="section-header-row">
         <div class="section-main-title">TIN TỨC</div>
-        <a href="tin-tuc" class="btn-aih-navy">Xem tất cả ❯</a>
       </div>
       
       <!-- Filter Tabs -->
@@ -321,6 +323,10 @@
             <polyline points="9 18 15 12 9 6"></polyline>
           </svg>
         </button>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="tin-tuc" class="btn-aih-navy" style="display: inline-flex; align-items: center; justify-content: center; padding: 10px 36px; font-size: 0.95rem; font-weight: 700; border-radius: 999px;">Xem tất cả</a>
       </div>
     </div>
   </section>

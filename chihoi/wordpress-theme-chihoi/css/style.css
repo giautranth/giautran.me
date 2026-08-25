@@ -2359,3 +2359,17 @@ body {
     display: block !important;
   }
 }
+
+/* Footer Copyright Inline under Email */
+.footer-copyright-inline {
+  margin-top: 16px;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+}
+
+.footer-bottom-strip {
+  display: none !important;
+}

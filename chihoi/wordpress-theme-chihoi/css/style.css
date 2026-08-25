@@ -433,10 +433,13 @@ body {
 .aih-hero-banner-section {
   position: relative;
   width: 100%;
+  max-width: 1536px;
+  margin: 0 auto;
+  height: 536px;
+  min-height: 536px;
   overflow: hidden;
   background: #c3e5f5;
   background: radial-gradient(circle at 75% 30%, #eef8fd 0%, #cceaf8 45%, #a8ddf5 100%);
-  min-height: 520px;
 }
 
 .aih-hero-bg-nature {
@@ -450,19 +453,14 @@ body {
 }
 
 .aih-hero-wave-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  pointer-events: none;
-  z-index: 4;
+  display: none !important;
 }
 
 .aih-banner-slides-wrap {
   position: relative;
   width: 100%;
-  min-height: 520px;
+  height: 536px;
+  min-height: 536px;
 }
 
 .aih-hero-slide {
@@ -490,10 +488,11 @@ body {
   grid-template-columns: 1fr 1.3fr;
   gap: 36px;
   align-items: center;
-  max-width: 1360px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 30px 48px 90px;
+  padding: 24px 48px;
   width: 100%;
+  height: 100%;
   position: relative;
   z-index: 5;
 }
@@ -644,19 +643,7 @@ body {
 
 /* Bottom Information Strip in Teal Wave */
 .aih-bottom-info-strip {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(90deg, #2C3691 0%, #1d69a6 50%, #27AAE1 100%);
-  color: #ffffff;
-  padding: 10px 36px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.82rem;
-  font-weight: 600;
-  z-index: 10;
+  display: none !important;
 }
 
 .aih-bottom-info-left {
@@ -1838,6 +1825,11 @@ textarea.form-control {
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 1024px) {
+  .aih-hero-banner-section,
+  .aih-banner-slides-wrap {
+    height: auto;
+    min-height: auto;
+  }
   .training-cards-grid,
   .news-cards-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1861,11 +1853,24 @@ textarea.form-control {
 }
 
 @media (max-width: 1024px) {
-  .aih-slide-grid {
-    grid-template-columns: 1fr;
-    padding: 20px 24px 80px;
-    gap: 24px;
+  .aih-hero-banner-section,
+  .aih-banner-slides-wrap {
+    height: auto;
+    min-height: auto;
   }
+  .aih-slide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 36px;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 48px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 5;
+}
   
   .aih-shield-glow {
     max-width: 100%;
@@ -1973,12 +1978,8 @@ textarea.form-control {
   }
 
   .aih-bottom-info-strip {
-    flex-direction: column;
-    gap: 6px;
-    text-align: center;
-    padding: 8px 16px;
-    font-size: 0.75rem;
-  }
+  display: none !important;
+}
 
   .aih-bottom-info-left,
   .aih-bottom-info-right {

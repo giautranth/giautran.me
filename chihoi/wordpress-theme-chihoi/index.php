@@ -6,12 +6,7 @@
     <div class="aih-hero-bg-nature"></div>
 
     <!-- Curved Wave at Bottom -->
-    <svg class="aih-hero-wave-bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
-      <path d="M0 40C320 120 720 0 1120 60C1280 84 1380 50 1440 40V120H0V40Z" fill="#27AAE1" opacity="0.85"/>
-      <path d="M0 60C360 130 840 20 1240 70C1360 85 1410 70 1440 60V120H0V60Z" fill="#00729e"/>
-    </svg>
-
-    <!-- Circular Teal Slider Arrows -->
+<!-- Circular Teal Slider Arrows -->
     <button class="aih-slider-arrow prev" id="bannerPrevBtn" aria-label="Slide trước">
       <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
     </button>
@@ -234,16 +229,6 @@
 
     </div>
 
-    <!-- Bottom Information Strip in Teal Wave -->
-    <div class="aih-bottom-info-strip">
-      <div class="aih-bottom-info-left">
-        <span class="aih-bottom-brand-name">CHI HỘI BỆNH VIỆN TƯ NHÂN TP.HCM VÀ CÁC TỈNH PHÍA NAM</span>
-        <span class="aih-bottom-address">Số 5 Đường 17A, P. An Lạc, TP. HCM</span>
-      </div>
-      <div class="aih-bottom-info-right">
-        <span class="aih-bottom-hotline">Hotline: 1900 8146</span>
-      </div>
-    </div>
 
   </section>
 

@@ -59,7 +59,7 @@ get_header(); ?>
               
             </div>
             <div class="news-card-footer">
-              <a href="#" class="link-read-more btn-news-detail" data-news-title="Hiệp hội Bệnh viện Tư nhân Việt Nam ra mắt Ban Chấp hành Chi hội TP.HCM và các tỉnh phía Nam (Nhiệm kỳ 2026 – 2029)" data-news-cat="SỰ KIỆN" data-news-date="19/08/2026">Đọc bài viết →</a>
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Hiệp hội Bệnh viện Tư nhân Việt Nam ra mắt Ban Chấp hành Chi hội TP.HCM và các tỉnh phía Nam (Nhiệm kỳ 2026 – 2029)" data-news-cat="SỰ KIỆN" data-news-date="19/08/2026">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ get_header(); ?>
               
             </div>
             <div class="news-card-footer">
-              <a href="#" class="link-read-more btn-news-detail" data-news-title="Bộ Y tế: Khối y tế tư nhân phía Nam đóng vai trò then chốt trong chăm sóc sức khỏe nhân dân" data-news-cat="TIN TỨC" data-news-date="19/08/2026">Đọc bài viết →</a>
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Bộ Y tế: Khối y tế tư nhân phía Nam đóng vai trò then chốt trong chăm sóc sức khỏe nhân dân" data-news-cat="TIN TỨC" data-news-date="19/08/2026">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ get_header(); ?>
               
             </div>
             <div class="news-card-footer">
-              <a href="#" class="link-read-more btn-news-detail" data-news-title="GS.VS Nguyễn Văn Đệ: Chi hội phía Nam sẽ quy tụ nguồn lực và nâng tầm vị thế y tế tư nhân" data-news-cat="CHI HỘI" data-news-date="19/08/2026">Đọc bài viết →</a>
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="GS.VS Nguyễn Văn Đệ: Chi hội phía Nam sẽ quy tụ nguồn lực và nâng tầm vị thế y tế tư nhân" data-news-cat="CHI HỘI" data-news-date="19/08/2026">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@ get_header(); ?>
               
             </div>
             <div class="news-card-footer">
-              <a href="#" class="link-read-more btn-news-detail" data-news-title="Chi hội triển khai chuỗi khóa Đào tạo Y khoa liên tục (CME) và nâng cao năng lực quản lý điều dưỡng" data-news-cat="ĐÀO TẠO" data-news-date="15/08/2026">Đọc bài viết →</a>
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Chi hội triển khai chuỗi khóa Đào tạo Y khoa liên tục (CME) và nâng cao năng lực quản lý điều dưỡng" data-news-cat="ĐÀO TẠO" data-news-date="15/08/2026">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@ get_header(); ?>
               
             </div>
             <div class="news-card-footer">
-              <a href="#" class="link-read-more btn-news-detail" data-news-title="Ứng dụng Bệnh án điện tử (EMR), Trí tuệ nhân tạo và Hội chẩn Telemedicine kết nối liên viện" data-news-cat="CÔNG NGHỆ" data-news-date="10/08/2026">Đọc bài viết →</a>
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Ứng dụng Bệnh án điện tử (EMR), Trí tuệ nhân tạo và Hội chẩn Telemedicine kết nối liên viện" data-news-cat="CÔNG NGHỆ" data-news-date="10/08/2026">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ get_header(); ?>
               
             </div>
             <div class="news-card-footer">
-              <a href="#" class="link-read-more btn-news-detail" data-news-title="Tầm soát sớm bệnh lý tim mạch, ung bướu và can thiệp ngoại khoa kỹ thuật cao" data-news-cat="Y KHOA" data-news-date="05/08/2026">Đọc bài viết →</a>
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Tầm soát sớm bệnh lý tim mạch, ung bướu và can thiệp ngoại khoa kỹ thuật cao" data-news-cat="Y KHOA" data-news-date="05/08/2026">Xem thêm →</a>
             </div>
           </div>
         </div>

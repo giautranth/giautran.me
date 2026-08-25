@@ -331,19 +331,39 @@
     </div>
   </section>
 
-  <!-- ========== VIDEO SECTION ========== -->
+    <!-- ========== VIDEO SECTION (Slider Arrows on Both Sides) ========== -->
   <section class="site-section bg-subtle">
     <div class="container">
       <div class="section-header-row" style="margin-bottom: 20px;">
         <div class="section-main-title">VIDEO</div>
       </div>
-      <div class="video-grid-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 16px rgba(15,23,42,0.1);">
-          <iframe src="https://www.youtube.com/embed/_3A7urkzB6I" title="Video Chi Hội 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe>
+
+      <!-- Video Slider Container with Left & Right Navigation Arrows -->
+      <div class="section-slider-container">
+        <button type="button" class="section-slider-arrow prev" onclick="scrollSectionCards('video-slider-grid', -1)" aria-label="Xem video trước">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="video-grid-2col" id="video-slider-grid">
+          <div class="video-card-item">
+            <div class="video-embed-wrap">
+              <iframe src="https://www.youtube.com/embed/_3A7urkzB6I" title="Video Chi Hội 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="video-card-item">
+            <div class="video-embed-wrap">
+              <iframe src="https://www.youtube.com/embed/Pk2GA9-9OCs" title="Video Chi Hội 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 16px rgba(15,23,42,0.1);">
-          <iframe src="https://www.youtube.com/embed/Pk2GA9-9OCs" title="Video Chi Hội 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe>
-        </div>
+
+        <button type="button" class="section-slider-arrow next" onclick="scrollSectionCards('video-slider-grid', 1)" aria-label="Xem video tiếp theo">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
     </div>
   </section>

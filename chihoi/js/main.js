@@ -675,12 +675,18 @@ if (document.readyState === 'loading') {
   initLanguageSwitcher();
 }
 
-/* ── SECTION CARDS HORIZONTAL NAVIGATION ── */
+/* ── SECTION CARDS HORIZONTAL NAVIGATION (Mobile 1 Box Snap & Desktop Smooth Scroll) ── */
 function scrollSectionCards(gridId, direction) {
   const grid = document.getElementById(gridId);
   if (!grid) return;
-  const card = grid.querySelector('.cme-training-card, .news-article-card');
-  const scrollAmount = card ? (card.offsetWidth + 24) : 380;
+  const isMobile = window.innerWidth <= 768;
+  let scrollAmount;
+  if (isMobile) {
+    scrollAmount = grid.clientWidth || grid.offsetWidth;
+  } else {
+    const card = grid.querySelector('.cme-training-card, .news-article-card, .video-card-item');
+    scrollAmount = card ? (card.offsetWidth + 24) : 380;
+  }
   grid.scrollBy({
     left: direction * scrollAmount,
     behavior: 'smooth'

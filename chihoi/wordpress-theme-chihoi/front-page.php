@@ -238,7 +238,7 @@
     <div class="aih-bottom-info-strip">
       <div class="aih-bottom-info-left">
         <span class="aih-bottom-brand-name">CHI HỘI BỆNH VIỆN TƯ NHÂN TP.HCM VÀ CÁC TỈNH PHÍA NAM</span>
-        <span class="aih-bottom-address">Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. Hồ Chí Minh</span>
+        <span class="aih-bottom-address">Số 5 Đường 17A, P. An Lạc, TP. HCM</span>
       </div>
       <div class="aih-bottom-info-right">
         <span class="aih-bottom-hotline">Hotline: 1900 8146</span>

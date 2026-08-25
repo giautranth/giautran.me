@@ -26,7 +26,7 @@ get_header(); ?>
             </div>
             <div class="contact-card-body">
               <h3>Địa chỉ</h3>
-              <p>Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. HCM</p>
+              <p>Số 5 Đường 17A, P. An Lạc, TP. HCM</p>
             </div>
           </div>
           

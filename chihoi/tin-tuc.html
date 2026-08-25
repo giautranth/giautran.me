@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tin Tức & Sự Kiện - Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam</title>
+  <meta name="description" content="Cập nhật tin tức hoạt động chi hội, sự kiện y tế, chính sách y tế mới, ưu đãi và kỹ thuật y khoa hiện đại." />
+  
+  <link rel="icon" type="image/png" href="photo/logo/chihoi.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== AIH UNIFIED HEADER (Chuẩn Bệnh viện Quốc tế Mỹ AIH) ========== -->
+  <header class="aih-header">
+    <div class="aih-header-container">
+      
+      <!-- Brand Logo & Gold Accreditation Seal -->
+      <div class="aih-brand-group">
+        <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="photo/logo/chihoi.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
+        </a>
+        <div class="aih-gold-badge" title="Hiệp hội Bệnh viện Tư nhân Việt Nam & Tiêu chuẩn Y tế Quốc tế">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="16" fill="url(#goldGrad)" stroke="#c69214" stroke-width="1.5"/>
+            <circle cx="18" cy="18" r="13" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>
+            <path d="M18 6.5l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6-4.3-4.2 6-.9z" fill="#ffffff" opacity="0.95"/>
+            <defs>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="36" y2="36">
+                <stop offset="0%" stop-color="#fce18b"/>
+                <stop offset="50%" stop-color="#d49b28"/>
+                <stop offset="100%" stop-color="#996a12"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Main Navigation Menu -->
+      <nav class="aih-nav" aria-label="Menu chính">
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Mở menu">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+        <ul class="aih-menu-list" id="navMenuList">
+          <li class="aih-menu-item">
+            <a href="index.html" class="aih-menu-link">TRANG CHỦ</a>
+          </li>
+          <li class="aih-menu-item has-dropdown">
+            <a href="gioi-thieu.html" class="aih-menu-link">GIỚI THIỆU <span class="arrow-icon">▼</span></a>
+            <ul class="dropdown-menu-list">
+              <li class="dropdown-item"><a href="gioi-thieu.html">Về chi hội</a></li>
+              <li class="dropdown-item"><a href="so-do-to-chuc.html">Sơ đồ tổ chức</a></li>
+            </ul>
+          </li>
+          <li class="aih-menu-item">
+            <a href="hoi-vien.html" class="aih-menu-link">HỘI VIÊN</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="dao-tao.html" class="aih-menu-link">ĐÀO TẠO</a>
+          </li>
+          <li class="aih-menu-item active">
+            <a href="tin-tuc.html" class="aih-menu-link active">TIN TỨC</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="lien-he.html" class="aih-menu-link">LIÊN HỆ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Utilities Tools (Search & Language Switcher) -->
+      <div class="aih-header-tools">
+        <a href="tel:19008146" class="aih-header-hotline-btn" title="Tổng đài hỗ trợ Chi hội 24/7">
+          <span class="hotline-pulse-dot"></span>
+          <span>1900 8146</span>
+        </a>
+        <button class="aih-search-btn" title="Tìm kiếm" onclick="alert('Tính năng tìm kiếm dữ liệu Chi hội y tế');">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+        <div class="aih-lang-picker">
+          <span class="aih-flag-icon">🇺🇸</span>
+          <select class="aih-lang-select" aria-label="Chọn Ngôn ngữ">
+            <option value="vi">Chọn Ngôn ngữ</option>
+            <option value="vi-full">Tiếng Việt</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT: TIN TỨC & SỰ KIỆN (Chuẩn AIH) ========== -->
+  <main class="site-section">
+    <div class="container">
+      
+      <div class="section-header-row">
+        <div class="section-main-title">TIN TỨC & HOẠT ĐỘNG CHI HỘI</div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs-wrapper">
+        <button class="tab-btn news-tab-btn active" data-filter="all">Tất cả</button>
+        <button class="tab-btn news-tab-btn" data-filter="van-ban">Văn bản & Quyết định</button>
+        <button class="tab-btn news-tab-btn" data-filter="chi-hoi">Tin tức chi hội</button>
+        <button class="tab-btn news-tab-btn" data-filter="su-kien">Sự kiện y tế</button>
+        <button class="tab-btn news-tab-btn" data-filter="y-hoc">Y học thường thức</button>
+      </div>
+
+      <!-- News Grid -->
+      <div class="news-cards-grid">
+        
+        <!-- Card 0: Quyết định 160 & 170 -->
+        <div class="news-article-card" data-category="van-ban">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/quyetdinh/phuong_huong_p1.png" alt="Văn bản Quyết định Chi hội" class="news-thumbnail-img" />
+            <span class="news-category-badge" style="background:#161d52;color:#fff;">VĂN BẢN</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>19/08/2026</div>
+              <h3 class="news-card-title">
+                Công bố Quyết định số 160 & 170/QĐ-BTV của Hiệp hội Bệnh viện Tư nhân Việt Nam
+              </h3>
+              <p style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+                Chuẩn y danh sách 24 thành viên Ban Chấp hành và 15 thành viên Ban Thư ký Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh thành phía Nam nhiệm kỳ 2026 – 2029.
+              </p>
+            </div>
+            <div class="news-card-footer">
+              <a href="so-do-to-chuc.html" class="link-read-more" style="color:#27AAE1;font-weight:700;">Xem toàn văn danh sách →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="news-article-card" data-category="su-kien">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-1.webp" alt="Ra mắt ban chấp hành chi hội" class="news-thumbnail-img" />
+            <span class="news-category-badge event">SỰ KIỆN</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>19/08/2026</div>
+              <h3 class="news-card-title">
+                Hiệp hội Bệnh viện Tư nhân Việt Nam ra mắt Ban Chấp hành Chi hội TP.HCM và các tỉnh phía Nam (Nhiệm kỳ 2026 – 2029)
+              </h3>
+              <p style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+                Ngày 19/8/2026 tại Bệnh viện Quốc tế City, Hiệp hội Bệnh viện Tư nhân Việt Nam tổ chức Lễ ra mắt Ban Chấp hành Chi hội phía Nam. Madam Trần Thị Lâm được bầu làm Chủ tịch Chi hội.
+              </p>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Hiệp hội Bệnh viện Tư nhân Việt Nam ra mắt Ban Chấp hành Chi hội TP.HCM và các tỉnh phía Nam (Nhiệm kỳ 2026 – 2029)" data-news-cat="SỰ KIỆN" data-news-date="19/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="news-article-card" data-category="chi-hoi">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-49.jpg" alt="Bộ Y tế phát biểu tại hội nghị" class="news-thumbnail-img" />
+            <span class="news-category-badge">TIN TỨC</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>19/08/2026</div>
+              <h3 class="news-card-title">
+                Bộ Y tế: Khối y tế tư nhân phía Nam đóng vai trò then chốt trong chăm sóc và bảo vệ sức khỏe nhân dân
+              </h3>
+              <p style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+                TS.BS. Hà Anh Đức – Cục trưởng Cục Quản lý Khám, chữa bệnh (Bộ Y tế) đánh giá cao sự lớn mạnh và đóng góp quan trọng của hệ thống bệnh viện ngoài công lập.
+              </p>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Bộ Y tế: Khối y tế tư nhân phía Nam đóng vai trò then chốt trong chăm sóc sức khỏe nhân dân" data-news-cat="TIN TỨC" data-news-date="19/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="news-article-card" data-category="chi-hoi">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-50.jpg" alt="GS.VS Nguyễn Văn Đệ phát biểu" class="news-thumbnail-img" />
+            <span class="news-category-badge medical">CHI HỘI</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>19/08/2026</div>
+              <h3 class="news-card-title">
+                GS.VS Nguyễn Văn Đệ: Chi hội phía Nam sẽ quy tụ nguồn lực và nâng tầm vị thế y tế tư nhân
+              </h3>
+              <p style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+                Chủ tịch Hiệp hội Bệnh viện Tư nhân Việt Nam định hướng công tác liên kết đào tạo, nghiên cứu khoa học và bảo vệ quyền lợi chính đáng cho các hội viên.
+              </p>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="GS.VS Nguyễn Văn Đệ: Chi hội phía Nam sẽ quy tụ nguồn lực và nâng tầm vị thế y tế tư nhân" data-news-cat="CHI HỘI" data-news-date="19/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="news-article-card" data-category="chi-hoi">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-51.jpg" alt="Chương trình đào tạo CME liên viện" class="news-thumbnail-img" />
+            <span class="news-category-badge">ĐÀO TẠO</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>15/08/2026</div>
+              <h3 class="news-card-title">
+                Chi hội triển khai chuỗi khóa Đào tạo Y khoa liên tục (CME) và nâng cao năng lực quản lý điều dưỡng
+              </h3>
+              <p style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+                Chương trình chuẩn Bộ Y tế phối hợp cùng các viện nghiên cứu, trường đại học y dược và các bệnh viện thành viên phía Nam.
+              </p>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Chi hội triển khai chuỗi khóa Đào tạo Y khoa liên tục (CME) và nâng cao năng lực quản lý điều dưỡng" data-news-cat="ĐÀO TẠO" data-news-date="15/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="news-article-card" data-category="su-kien">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-52.jpg" alt="Chuyển đổi số và Telemedicine" class="news-thumbnail-img" />
+            <span class="news-category-badge event">CÔNG NGHỆ</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>10/08/2026</div>
+              <h3 class="news-card-title">
+                Ứng dụng Bệnh án điện tử (EMR), Trí tuệ nhân tạo và Hội chẩn Telemedicine kết nối liên viện
+              </h3>
+              <p style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+                Thiết lập hệ thống hội chẩn trực tuyến hỗ trợ chuyển giao kỹ thuật và xử lý các ca bệnh phức tạp giữa các bệnh viện trong mạng lưới.
+              </p>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Ứng dụng Bệnh án điện tử (EMR), Trí tuệ nhân tạo và Hội chẩn Telemedicine kết nối liên viện" data-news-cat="CÔNG NGHỆ" data-news-date="10/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="news-article-card" data-category="y-hoc">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-53.jpg" alt="Tầm soát bệnh lý tim mạch" class="news-thumbnail-img" />
+            <span class="news-category-badge medical">Y KHOA</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>05/08/2026</div>
+              <h3 class="news-card-title">
+                Tầm soát sớm bệnh lý tim mạch, ung bướu và can thiệp ngoại khoa kỹ thuật cao tại các bệnh viện hội viên
+              </h3>
+              <p style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+                Khuyến cáo chuyên môn của Hội đồng Y khoa Chi hội về tầm quan trọng của việc chủ động tầm soát và can thiệp điều trị bảo tồn chức năng cơ quan.
+              </p>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Tầm soát sớm bệnh lý tim mạch, ung bướu và can thiệp ngoại khoa kỹ thuật cao" data-news-cat="Y KHOA" data-news-date="05/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">CHI HỘI BỆNH VIỆN TƯ NHÂN TP.HCM VÀ CÁC TỈNH PHÍA NAM</div>
+          <p class="footer-brand-desc">
+            Tổ chức đại diện cho khối cơ sở khám chữa bệnh tư nhân khu vực phía Nam. Cam kết nâng cao chất lượng phục vụ và an toàn sức khỏe cho người bệnh.
+          </p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" color="#27AAE1" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span><strong>Văn phòng:</strong> Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. Hồ Chí Minh</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Về Chi Hội</h4>
+          <ul class="footer-links-list">
+            <li><a href="gioi-thieu.html">Về chúng tôi</a></li>
+            <li><a href="so-do-to-chuc.html">Sơ đồ tổ chức</a></li>
+            <li><a href="hoi-vien.html">Danh sách hội viên</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hoạt Động</h4>
+          <ul class="footer-links-list">
+            <li><a href="dao-tao.html">Khóa đào tạo CME</a></li>
+            <li><a href="tin-tuc.html">Tin tức - Sự kiện</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Liên Hệ Nhanh</h4>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;">
+            Hotline: <strong>1900 8146</strong><br />
+            Email: <strong>vanphong@chihoiyte.vn</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-strip">
+      <div class="container">
+        © 2026 Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== APP MODAL ========== -->
+  <div class="modal-overlay" id="appModalOverlay">
+    <div class="modal-content-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Thông tin chi tiết</h3>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Đóng popup">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

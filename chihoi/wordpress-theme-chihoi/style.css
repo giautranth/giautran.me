@@ -1,0 +1,14 @@
+/*
+Theme Name: Chi Hội Bệnh Viện Tư Nhân Phía Nam
+Theme URI: https://giautran.me/chihoi
+Author: Chi Hội Bệnh Viện Tư Nhân TP.HCM & Các Tỉnh Phía Nam
+Author URI: https://giautran.me
+Description: Giao diện chuẩn Bệnh viện Quốc tế (kết hợp FV Hospital & AIH) dành cho Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh thành phía Nam. Hỗ trợ đầy đủ CMS quản lý Bệnh viện hội viên, Khóa đào tạo CME, Quyết định văn kiện, Sơ đồ tổ chức, và Banner toàn cảnh.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: chihoi
+Tags: medical, hospital, health, healthcare, custom-post-types, full-site-editing, responsive-layout
+*/
+
+@import url('css/style.css');

@@ -1,0 +1,752 @@
+<?php get_header(); ?>
+
+
+  <!-- ========== AIH PANORAMIC HERO BANNER SECTION (Chuẩn 100% Hình Ảnh AIH) ========== -->
+  <section class="aih-hero-banner-section">
+    <div class="aih-hero-bg-nature"></div>
+
+    <!-- Curved Wave at Bottom -->
+    <svg class="aih-hero-wave-bottom" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+      <path d="M0 40C320 120 720 0 1120 60C1280 84 1380 50 1440 40V120H0V40Z" fill="#27AAE1" opacity="0.85"/>
+      <path d="M0 60C360 130 840 20 1240 70C1360 85 1410 70 1440 60V120H0V60Z" fill="#00729e"/>
+    </svg>
+
+    <!-- Circular Teal Slider Arrows -->
+    <button class="aih-slider-arrow prev" id="bannerPrevBtn" aria-label="Slide trước">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button class="aih-slider-arrow next" id="bannerNextBtn" aria-label="Slide tiếp">
+      <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <!-- Banner Slides Wrapper -->
+    <div class="aih-banner-slides-wrap">
+      
+      <!-- Slide 1: LỄ RA MẮT BAN CHẤP HÀNH CHI HỘI (Nhiệm kỳ 2026 - 2029) -->
+      <div class="aih-hero-slide banner-slide active">
+        <div class="aih-slide-grid">
+          
+          <!-- Left: Shield Frame with Event Photo -->
+          <div class="aih-shield-container">
+            <div class="aih-shield-glow">
+              <img src="photo/news/ra-mat-bch-cih.webp" alt="Lễ ra mắt Ban Chấp Hành" class="aih-shield-img" />
+              <div class="aih-shield-badge-overlay">
+                <svg width="14" height="14" fill="#e22b27" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>SỰ KIỆN TRỌNG ĐẠI 19/08/2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: AIH Content Layout with Dual Cards -->
+          <div class="aih-banner-content-col">
+            <div class="aih-pill-q3">NHIỆM KỲ 2026 – 2029</div>
+            <h1 class="aih-main-heading">LỄ RA MẮT BAN CHẤP HÀNH CHI HỘI</h1>
+            <div class="aih-sub-heading">EXECUTIVE COMMITTEE LAUNCH 2026 – 2029</div>
+
+            <!-- Two Side-by-Side Rounded White Glass Cards -->
+            <div class="aih-dual-cards-row">
+              
+              <!-- Card 1: Dịch vụ / Activities -->
+              <div class="aih-feature-card">
+                <div class="aih-card-pill-header">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  <span>Dịch vụ / Service</span>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Đào tạo CME Y khoa</div>
+                  <div class="aih-item-title-en">CME Medical Training</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Hội chẩn từ xa</div>
+                  <div class="aih-item-title-en">Telemedicine Consultation</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Chuyển giao Kỹ thuật cao</div>
+                  <div class="aih-item-title-en">Clinical Tech Transfer</div>
+                </div>
+              </div>
+
+              <!-- Card 2: Gói / Packages -->
+              <div class="aih-feature-card">
+                <div class="aih-card-pill-header">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                  <span>Gói / Packages</span>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Đăng ký Hội viên chính thức</div>
+                  <div class="aih-item-title-en">Official Membership</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Chuẩn hóa Quản trị JCI/ISO</div>
+                  <div class="aih-item-title-en">Hospital Accreditation</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Bảo vệ Quyền lợi Hội viên</div>
+                  <div class="aih-item-title-en">Member Legal Protection</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slide 2: CHƯƠNG TRÌNH TRI ÂN KHÁCH HÀNG (Chuẩn 100% Ảnh Screenshot AIH) -->
+      <div class="aih-hero-slide banner-slide">
+        <div class="aih-slide-grid">
+          
+          <!-- Left: Shield Frame with Family Health Photo -->
+          <div class="aih-shield-container">
+            <div class="aih-shield-glow">
+              <img src="photo/banner/hero_banner.png" alt="Chăm sóc sức khỏe gia đình" class="aih-shield-img" />
+              <div class="aih-shield-badge-overlay">
+                <svg width="14" height="14" fill="#27AAE1" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                <span>CHĂM SÓC TOÀN DIỆN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: AIH Content Layout -->
+          <div class="aih-banner-content-col">
+            <div class="aih-pill-q3">Q3/2026</div>
+            <h1 class="aih-main-heading">CHƯƠNG TRÌNH TRI ÂN KHÁCH HÀNG</h1>
+            <div class="aih-sub-heading">CUSTOMER APPRECIATION PROGRAM</div>
+
+            <!-- Two Side-by-Side Rounded White Glass Cards -->
+            <div class="aih-dual-cards-row">
+              
+              <!-- Card 1: Dịch vụ / Service -->
+              <div class="aih-feature-card">
+                <div class="aih-card-pill-header">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  <span>Dịch vụ / Service</span>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Dịch vụ Nội soi</div>
+                  <div class="aih-item-title-en">Endoscopy Services</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Dịch vụ Thẩm mỹ</div>
+                  <div class="aih-item-title-en">Cosmetic Care</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Dịch vụ Nha Khoa</div>
+                  <div class="aih-item-title-en">Dental Care</div>
+                </div>
+              </div>
+
+              <!-- Card 2: Gói / Packages -->
+              <div class="aih-feature-card">
+                <div class="aih-card-pill-header">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                  <span>Gói / Packages</span>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Combo Gói khám thai & Gói sinh</div>
+                  <div class="aih-item-title-en">Prenatal Check-up & Delivery Combo</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Gói sinh</div>
+                  <div class="aih-item-title-en">Delivery Packages</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Gói Khám sức khỏe tổng quát</div>
+                  <div class="aih-item-title-en">General Health Check-up Packages</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Slide 3: LỊCH NGHỈ LỄ QUỐC KHÁNH 2/9 & CẤP CỨU 24/7 -->
+      <div class="aih-hero-slide banner-slide">
+        <div class="aih-slide-grid">
+          
+          <!-- Left: Shield Frame with Hospital Building Photo -->
+          <div class="aih-shield-container">
+            <div class="aih-shield-glow">
+              <img src="photo/banner/building.png" alt="Bệnh viện Quốc tế" class="aih-shield-img" />
+              <div class="aih-shield-badge-overlay">
+                <svg width="14" height="14" fill="#e22b27" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>TRỰC CẤP CỨU 24/7</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: AIH Content Layout -->
+          <div class="aih-banner-content-col">
+            <div class="aih-pill-q3">THÔNG BÁO LỄ 2/9</div>
+            <h1 class="aih-main-heading">LỊCH NGHỈ LỄ QUỐC KHÁNH 2/9</h1>
+            <div class="aih-sub-heading">NATIONAL DAY HOLIDAY SCHEDULE</div>
+
+            <!-- Two Side-by-Side Rounded White Glass Cards -->
+            <div class="aih-dual-cards-row">
+              
+              <!-- Card 1: Lịch nghỉ -->
+              <div class="aih-feature-card">
+                <div class="aih-card-pill-header">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <span>Lịch Nghỉ / Schedule</span>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Nghỉ lễ: Thứ 3 (01/09/2026)</div>
+                  <div class="aih-item-title-en">Tuesday: 01.09.2026</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Nghỉ lễ: Thứ 4 (02/09/2026)</div>
+                  <div class="aih-item-title-en">Wednesday: 02.09.2026</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Làm việc lại: Thứ 5 (03/09/2026)</div>
+                  <div class="aih-item-title-en">Resume: Thursday 03.09.2026</div>
+                </div>
+              </div>
+
+              <!-- Card 2: Cấp cứu 24/7 -->
+              <div class="aih-feature-card">
+                <div class="aih-card-pill-header">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                  <span>Khẩn Cấp / Emergency</span>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Khoa Cấp Cứu 24/7</div>
+                  <div class="aih-item-title-en">24/7 Emergency Department</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi">Khoa Nội trú, ICU & NICU</div>
+                  <div class="aih-item-title-en">Inpatient, ICU & NICU Active</div>
+                </div>
+                <div class="aih-card-item">
+                  <div class="aih-item-title-vi" style="color:#e22b27;">Hotline: 028 6290 1155</div>
+                  <div class="aih-item-title-en">24/7 Emergency Line</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Information Strip in Teal Wave -->
+    <div class="aih-bottom-info-strip">
+      <div class="aih-bottom-info-left">
+        <span class="aih-bottom-brand-name">CHI HỘI BỆNH VIỆN TƯ NHÂN TP.HCM VÀ CÁC TỈNH PHÍA NAM</span>
+        <span class="aih-bottom-address">Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. Hồ Chí Minh</span>
+      </div>
+      <div class="aih-bottom-info-right">
+        <a href="http://giautran.me/chihoi" class="aih-bottom-web-link">giautran.me/chihoi</a>
+        <span class="aih-bottom-hotline">Hotline: 028 6290 1155 | 1900 8146</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== 2. GIỚI THIỆU SECTION ========== -->
+  <section class="site-section">
+    <div class="container">
+      <div class="section-label-tag">GIỚI THIỆU</div>
+      <div class="white-box-card intro-content-container">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;">
+          <span style="background:#fee2e2;color:#e22b27;font-size:0.8rem;font-weight:800;padding:4px 12px;border-radius:999px;">
+            PHƯƠNG CHÂM HOẠT ĐỘNG
+          </span>
+          <strong style="color:#2C3691;font-size:1.05rem;letter-spacing:0.3px;">
+            "Đoàn kết – Hợp tác – Phát triển bền vững"
+          </strong>
+        </div>
+
+        <p class="intro-lead-text">
+          <strong>Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam</strong> là tổ chức xã hội - nghề nghiệp trực thuộc Hiệp hội Bệnh viện Tư nhân Việt Nam, quy tụ các bệnh viện, phòng khám đa khoa - chuyên khoa tư nhân tiêu biểu tại khu vực TP.HCM và các tỉnh, thành phố phía Nam.
+        </p>
+        <p style="font-size:0.95rem;color:#334e68;line-height:1.7;margin-bottom:18px;">
+          Với sứ mệnh là cầu nối vững chắc giữa khối y tế tư nhân với các cơ quan quản lý nhà nước và cộng đồng người bệnh, Chi hội không ngừng nâng cao chất lượng quản trị bệnh viện, triển khai <strong>8 Chương trình trọng điểm</strong> về liên kết chuyên môn, đào tạo CME, chuyển đổi số - AI và bảo vệ quyền lợi hội viên.
+        </p>
+        
+        <div class="intro-features-grid">
+          <div class="intro-stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Bệnh viện & PK Hội viên</div>
+          </div>
+          <div class="intro-stat-item">
+            <div class="stat-number">08</div>
+            <div class="stat-label">Chương Trình Trọng Điểm</div>
+          </div>
+          <div class="intro-stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Khóa Đào Tạo CME</div>
+          </div>
+          <div class="intro-stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Chuẩn Hóa Y Khoa</div>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;flex-wrap:wrap;gap:12px;">
+          <div style="font-size:0.86rem;color:#64748b;">
+            Nhiệm kỳ 2026 – 2029 | Chủ tịch: <strong>Madam Trần Thị Lâm</strong>
+          </div>
+          <a href="gioi-thieu.html" class="link-read-more" style="font-size:0.92rem;color:#27AAE1;font-weight:700;">
+            Xem chi tiết 10 định hướng & 8 chương trình →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. HỘI VIÊN CHI HỘI & ĐỐI TÁC ĐỒNG HÀNH (Infinite Loop Carousel) ========== -->
+  <section class="site-section bg-subtle" style="overflow:hidden;">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <div class="section-main-title">HỘI VIÊN CHI HỘI & ĐỐI TÁC ĐỒNG HÀNH</div>
+          <div style="font-size:0.86rem;color:#64748b;margin-top:4px;">
+            Mạng lưới hơn 50 bệnh viện thành viên tiêu biểu và các tổ chức y tế, tập đoàn đồng hành
+          </div>
+        </div>
+        <a href="hoi-vien.html" class="btn-aih-navy">Xem danh bạ ❯</a>
+      </div>
+      
+      <div class="infinite-marquee-container">
+        
+        <!-- Lane 1: Bệnh Viện Hội Viên (Cuộn Vô Tận Trái -> Phải) -->
+        <div class="infinite-marquee-wrapper">
+          <div class="infinite-marquee-track" id="marqueeTrackLane1">
+            
+            <!-- Original Set 1 -->
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Phương Nam">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Columbia Asia">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Minh Anh">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
+            </a>
+
+            <!-- Duplicated Set 1 for Seamless Infinite Loop -->
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Lane 2: Đối Tác Chiến Lược & Đồng Hành (Cuộn Vô Tận Ngược Chiều) -->
+        <div class="infinite-marquee-wrapper" style="margin-top:12px;">
+          <div class="infinite-marquee-track reverse" id="marqueeTrackLane2">
+            
+            <!-- Original Set 2 -->
+            <div class="member-partner-card" title="Tập đoàn Hoa Lâm">
+              <span class="card-badge-type partner">ĐỐI TÁC</span>
+              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+            </div>
+
+            <div class="member-partner-card" title="Ngân hàng VietBank">
+              <span class="card-badge-type partner">ĐỒNG HÀNH</span>
+              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng VietBank" />
+            </div>
+
+            <div class="member-partner-card" title="Vietlott">
+              <span class="card-badge-type partner">ĐỒNG HÀNH</span>
+              <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
+            </div>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
+            </a>
+
+            <!-- Duplicated Set 2 for Seamless Infinite Loop -->
+            <div class="member-partner-card" title="Tập đoàn Hoa Lâm" aria-hidden="true">
+              <span class="card-badge-type partner">ĐỐI TÁC</span>
+              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+            </div>
+
+            <div class="member-partner-card" title="Ngân hàng VietBank" aria-hidden="true">
+              <span class="card-badge-type partner">ĐỒNG HÀNH</span>
+              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng VietBank" />
+            </div>
+
+            <div class="member-partner-card" title="Vietlott" aria-hidden="true">
+              <span class="card-badge-type partner">ĐỒNG HÀNH</span>
+              <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
+            </div>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện FV" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec" />
+            </a>
+
+            <a href="hoi-vien.html" class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
+              <span class="card-badge-type hospital">BỆNH VIỆN</span>
+              <img src="photo/logo/sis.png" alt="Bệnh viện S.I.S Cần Thơ" />
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Controls Bar -->
+        <div class="marquee-controls-bar">
+          <div class="marquee-status-hint">
+            <span class="status-dot"></span>
+            <span>Tự động cuộn liên tục (Rê chuột để dừng)</span>
+          </div>
+          <div class="marquee-action-btns">
+            <button class="btn-marquee-toggle" id="marqueePausePlayBtn" title="Tạm dừng / Tiếp tục cuộn">
+              <span id="marqueePlayIcon">⏸️</span>
+              <span id="marqueePlayText">Tạm dừng</span>
+            </button>
+            <button class="btn-marquee-toggle" id="marqueeSpeedBtn" title="Thay đổi tốc độ cuộn">
+              <span>⚡</span>
+              <span id="marqueeSpeedText">Tốc độ: Chuẩn</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. CHƯƠNG TRÌNH ĐÀO TẠO SECTION (Nền Trắng AIH) ========== -->
+  <section class="site-section">
+    <div class="container">
+      <div class="section-header-row">
+        <div class="section-main-title">CHƯƠNG TRÌNH ĐÀO TẠO CME</div>
+        <a href="dao-tao.html" class="btn-aih-navy">Xem tất cả ❯</a>
+      </div>
+      
+      <!-- Filter Tabs -->
+      <div class="filter-tabs-wrapper">
+        <button class="tab-btn training-tab-btn active" data-filter="all">Tất cả</button>
+        <button class="tab-btn training-tab-btn" data-filter="chieu-sinh">Thông báo chiêu sinh</button>
+        <button class="tab-btn training-tab-btn" data-filter="hoat-dong">Hoạt động đào tạo</button>
+        <button class="tab-btn training-tab-btn" data-filter="giang-vien">Đội ngũ giảng viên</button>
+        <button class="tab-btn training-tab-btn" data-filter="nghien-cuu">Nghiên cứu khoa học</button>
+      </div>
+
+      <!-- Training Cards Grid (3 Cards hiển thị trang chủ) -->
+      <div class="training-cards-grid">
+        
+        <!-- Card 1 -->
+        <div class="cme-training-card" data-category="chieu-sinh">
+          <div class="cme-card-header">
+            <span class="cme-header-tag">THÔNG BÁO CHIÊU SINH</span>
+            <span class="cme-institute-seal"><svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:2px;"><path d="M19 10.5h-5.5V5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v5.5H5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5h5.5V19c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5.5H19c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/></svg> MER / HCA</span>
+            <div class="cme-course-type">KHÓA ĐÀO TẠO LIÊN TỤC (CME)</div>
+            <div class="cme-course-name">"HỒI SINH TIM PHỔI CƠ BẢN"</div>
+            <div class="cme-course-batch">KHÓA 5</div>
+          </div>
+          <div class="cme-card-body">
+            <div>
+              <div class="cme-date-line">
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                22/07/2026
+              </div>
+              <p class="cme-summary-text">
+                Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – khóa 5.
+              </p>
+            </div>
+            <div class="cme-card-footer">
+              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-1">Chi tiết khóa học →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="cme-training-card" data-category="chieu-sinh">
+          <div class="cme-card-header">
+            <span class="cme-header-tag">THÔNG BÁO CHIÊU SINH</span>
+            <span class="cme-institute-seal"><svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:2px;"><path d="M19 10.5h-5.5V5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v5.5H5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5h5.5V19c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5.5H19c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/></svg> MER / HCA</span>
+            <div class="cme-course-type">KHÓA ĐÀO TẠO LIÊN TỤC (CME)</div>
+            <div class="cme-course-name">"CHĂM SÓC NGƯỜI BỆNH TOÀN DIỆN"</div>
+            <div class="cme-course-batch">KHÓA 1</div>
+          </div>
+          <div class="cme-card-body">
+            <div>
+              <div class="cme-date-line">
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                22/07/2026
+              </div>
+              <p class="cme-summary-text">
+                Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Chăm sóc người bệnh toàn diện – khóa 1.
+              </p>
+            </div>
+            <div class="cme-card-footer">
+              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-2">Chi tiết khóa học →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="cme-training-card" data-category="chieu-sinh">
+          <div class="cme-card-header">
+            <span class="cme-header-tag">THÔNG BÁO CHIÊU SINH</span>
+            <span class="cme-institute-seal"><svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:2px;"><path d="M19 10.5h-5.5V5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v5.5H5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5h5.5V19c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-5.5H19c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5z"/></svg> MER / HCA</span>
+            <div class="cme-course-type">KHÓA ĐÀO TẠO LIÊN TỤC (CME)</div>
+            <div class="cme-course-name">"TĂNG CƯỜNG NĂNG LỰC QUẢN LÝ ĐIỀU DƯỠNG"</div>
+            <div class="cme-course-batch">KHÓA 2</div>
+          </div>
+          <div class="cme-card-body">
+            <div>
+              <div class="cme-date-line">
+                <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                22/07/2026
+              </div>
+              <p class="cme-summary-text">
+                Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – khóa 2.
+              </p>
+            </div>
+            <div class="cme-card-footer">
+              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-3">Chi tiết khóa học →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 5. TIN TỨC SECTION (Chuẩn Tin Tức AIH) ========== -->
+  <section class="site-section bg-subtle">
+    <div class="container">
+      <div class="section-header-row">
+        <div class="section-main-title">TIN TỨC & HOẠT ĐỘNG</div>
+        <a href="tin-tuc.html" class="btn-aih-navy">Xem tất cả ❯</a>
+      </div>
+      
+      <!-- Filter Tabs -->
+      <div class="filter-tabs-wrapper">
+        <button class="tab-btn news-tab-btn active" data-filter="all">Tất cả</button>
+        <button class="tab-btn news-tab-btn" data-filter="chi-hoi">Tin tức chi hội</button>
+        <button class="tab-btn news-tab-btn" data-filter="su-kien">Sự kiện</button>
+      </div>
+
+      <!-- News Cards Grid -->
+      <div class="news-cards-grid">
+        
+        <!-- Card 1 -->
+        <div class="news-article-card" data-category="su-kien">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-1.webp" alt="Ra mắt ban chấp hành chi hội" class="news-thumbnail-img" />
+            <span class="news-category-badge event">SỰ KIỆN</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                19/08/2026
+              </div>
+              <h3 class="news-card-title">
+                Hiệp hội Bệnh viện Tư nhân Việt Nam ra mắt Ban Chấp hành Chi hội TP.HCM và các tỉnh phía Nam
+              </h3>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Hiệp hội Bệnh viện Tư nhân Việt Nam ra mắt Ban Chấp hành Chi hội TP.HCM và các tỉnh phía Nam (Nhiệm kỳ 2026 – 2029)" data-news-cat="SỰ KIỆN" data-news-date="19/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="news-article-card" data-category="chi-hoi">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-49.jpg" alt="Bộ Y tế phát biểu" class="news-thumbnail-img" />
+            <span class="news-category-badge">TIN TỨC</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                19/08/2026
+              </div>
+              <h3 class="news-card-title">
+                Bộ Y tế: Khối y tế tư nhân phía Nam đóng vai trò then chốt trong chăm sóc sức khỏe nhân dân
+              </h3>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="Bộ Y tế: Khối y tế tư nhân phía Nam đóng vai trò then chốt trong chăm sóc sức khỏe nhân dân" data-news-cat="TIN TỨC" data-news-date="19/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="news-article-card" data-category="chi-hoi">
+          <div class="news-card-thumbnail-wrap">
+            <img src="photo/news/event-photo-50.jpg" alt="GS.VS Nguyễn Văn Đệ phát biểu" class="news-thumbnail-img" />
+            <span class="news-category-badge medical">CHI HỘI</span>
+          </div>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                19/08/2026
+              </div>
+              <h3 class="news-card-title">
+                GS.VS Nguyễn Văn Đệ: Chi hội phía Nam sẽ quy tụ nguồn lực và nâng tầm vị thế y tế tư nhân
+              </h3>
+            </div>
+            <div class="news-card-footer">
+              <a href="#" class="link-read-more btn-news-detail" data-news-title="GS.VS Nguyễn Văn Đệ: Chi hội phía Nam sẽ quy tụ nguồn lực và nâng tầm vị thế y tế tư nhân" data-news-cat="CHI HỘI" data-news-date="19/08/2026">Đọc bài viết →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. ĐỐI TÁC ĐỒNG HÀNH SECTION ========== -->
+  <section class="site-section">
+    <div class="container">
+      <div class="section-label-tag">ĐỐI TÁC ĐỒNG HÀNH</div>
+      
+      <div class="partner-slider-wrap">
+        <button class="carousel-btn prev" id="partnerPrevBtn" aria-label="Lùi đối tác">❮</button>
+        <div class="partner-logo-track" id="partnerLogosTrack">
+          
+          <div class="partner-logo-card" title="Tập đoàn Hoa Lâm">
+            <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" class="partner-logo-img" />
+          </div>
+
+          <div class="partner-logo-card" title="Bệnh viện Gia An 115">
+            <img src="photo/doitac/logo_giaan115.jpg" alt="Bệnh viện Gia An 115" class="partner-logo-img" />
+          </div>
+
+          <div class="partner-logo-card" title="Bệnh viện Quốc tế City">
+            <img src="photo/doitac/logo_benhvienquoctecity.png" alt="Bệnh viện Quốc tế City" class="partner-logo-img" />
+          </div>
+
+          <div class="partner-logo-card" title="Ngân hàng Vietbank">
+            <img src="photo/doitac/logo_vietbank.jpg" alt="Vietbank" class="partner-logo-img" />
+          </div>
+
+          <div class="partner-logo-card" title="Vietlott">
+            <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" class="partner-logo-img" />
+          </div>
+
+        </div>
+        <button class="carousel-btn next" id="partnerNextBtn" aria-label="Tiến đối tác">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  
+<?php get_footer(); ?>

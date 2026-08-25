@@ -1,0 +1,36 @@
+{
+  "key": "group_chihoi_settings",
+  "title": "Cấu Hình Chi Hội Bệnh Viện Tư Nhân",
+  "fields": [
+    {
+      "key": "field_chihoi_hotline",
+      "label": "Hotline Cấp Cứu 24/7",
+      "name": "chihoi_hotline",
+      "type": "text",
+      "default_value": "1900 8146"
+    },
+    {
+      "key": "field_chihoi_slogan",
+      "label": "Khẩu Hiệu / Phương Châm",
+      "name": "chihoi_slogan",
+      "type": "text",
+      "default_value": "Đoàn kết – Hợp tác – Phát triển bền vững"
+    },
+    {
+      "key": "field_chihoi_address",
+      "label": "Địa Chỉ Văn Phòng Trụ Sở",
+      "name": "chihoi_address",
+      "type": "textarea",
+      "default_value": "Số 3 Đường 17A, Khu Y tế Kỹ thuật cao, P. An Lạc, Q. Bình Tân, TP. Hồ Chí Minh"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "default"
+      }
+    ]
+  ]
+}

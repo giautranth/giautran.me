@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Về Chi Hội - Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam</title>
+  <meta name="description" content="Tìm hiểu lịch sử hình thành, sứ mệnh, tầm nhìn, tôn chỉ mục đích và chức năng nhiệm vụ của Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam." />
+  
+  <link rel="icon" type="image/png" href="photo/logo/chihoi.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== AIH UNIFIED HEADER (Chuẩn Bệnh viện Quốc tế Mỹ AIH) ========== -->
+  <header class="aih-header">
+    <div class="aih-header-container">
+      
+      <!-- Brand Logo & Gold Accreditation Seal -->
+      <div class="aih-brand-group">
+        <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="photo/logo/chihoi.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
+        </a>
+        <div class="aih-gold-badge" title="Hiệp hội Bệnh viện Tư nhân Việt Nam & Tiêu chuẩn Y tế Quốc tế">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="16" fill="url(#goldGrad)" stroke="#c69214" stroke-width="1.5"/>
+            <circle cx="18" cy="18" r="13" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>
+            <path d="M18 6.5l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6-4.3-4.2 6-.9z" fill="#ffffff" opacity="0.95"/>
+            <defs>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="36" y2="36">
+                <stop offset="0%" stop-color="#fce18b"/>
+                <stop offset="50%" stop-color="#d49b28"/>
+                <stop offset="100%" stop-color="#996a12"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Main Navigation Menu -->
+      <nav class="aih-nav" aria-label="Menu chính">
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Mở menu">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+        <ul class="aih-menu-list" id="navMenuList">
+          <li class="aih-menu-item">
+            <a href="index.html" class="aih-menu-link">TRANG CHỦ</a>
+          </li>
+          <li class="aih-menu-item has-dropdown active">
+            <a href="gioi-thieu.html" class="aih-menu-link active">GIỚI THIỆU <span class="arrow-icon">▼</span></a>
+            <ul class="dropdown-menu-list">
+              <li class="dropdown-item active"><a href="gioi-thieu.html">Về chi hội</a></li>
+              <li class="dropdown-item"><a href="so-do-to-chuc.html">Sơ đồ tổ chức</a></li>
+            </ul>
+          </li>
+          <li class="aih-menu-item">
+            <a href="hoi-vien.html" class="aih-menu-link">HỘI VIÊN</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="dao-tao.html" class="aih-menu-link">ĐÀO TẠO</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="tin-tuc.html" class="aih-menu-link">TIN TỨC</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="lien-he.html" class="aih-menu-link">LIÊN HỆ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Utilities Tools (Search & Language Switcher) -->
+      <div class="aih-header-tools">
+        <a href="tel:19008146" class="aih-header-hotline-btn" title="Tổng đài hỗ trợ Chi hội 24/7">
+          <span class="hotline-pulse-dot"></span>
+          <span>1900 8146</span>
+        </a>
+        <button class="aih-search-btn" title="Tìm kiếm" onclick="alert('Tính năng tìm kiếm dữ liệu Chi hội y tế');">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </button>
+        <div class="aih-lang-picker">
+          <span class="aih-flag-icon">🇺🇸</span>
+          <select class="aih-lang-select" aria-label="Chọn Ngôn ngữ">
+            <option value="vi">Chọn Ngôn ngữ</option>
+            <option value="vi-full">Tiếng Việt</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT: VỀ CHI HỘI ========== -->
+  <main class="site-section">
+    <div class="container">
+      
+      <div class="page-title-banner">
+        <h1 class="page-main-heading">VỀ CHI HỘI BỆNH VIỆN TƯ NHÂN</h1>
+      </div>
+
+      <div class="white-box-card" style="margin-bottom:24px;">
+        <h2 style="color:#2C3691;font-size:1.3rem;font-weight:800;margin-bottom:14px;">1. Tổng Quan Giới Thiệu</h2>
+        <p style="color:#334155;line-height:1.8;font-size:0.95rem;margin-bottom:16px;">
+          <strong>Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam</strong> là tổ chức xã hội - nghề nghiệp trực thuộc <strong>Hiệp hội Bệnh viện Tư nhân Việt Nam</strong>. Ngày <strong>19/08/2026</strong>, tại Bệnh viện Quốc tế City (Khu Y tế Kỹ thuật cao TP.HCM), Hiệp hội đã long trọng tổ chức Hội nghị lần thứ nhất và Lễ ra mắt Ban Chấp hành Chi hội nhiệm kỳ 2026 – 2029 với sự tham dự và phát biểu chỉ đạo của đại diện Bộ Y tế (TS.BS. Hà Anh Đức – Cục trưởng Cục Quản lý Khám, chữa bệnh) và lãnh đạo Hiệp hội (GS.VS. Nguyễn Văn Đệ).
+        </p>
+        <p style="color:#334155;line-height:1.8;font-size:0.95rem;">
+          Chi hội được thành lập nhằm tăng cường liên kết chuyên môn, quy tụ nguồn lực, phát huy thế mạnh của hơn 50 cơ sở y tế tư nhân tại TP.HCM và các tỉnh miền Nam; bảo vệ quyền và lợi ích hợp pháp của các đơn vị hội viên; đẩy mạnh đào tạo y khoa liên tục (CME), nghiên cứu khoa học và chuyển đổi số y tế, góp phần tích cực cùng hệ thống y tế công lập trong sự nghiệp chăm sóc, bảo vệ sức khỏe nhân dân.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+        <div class="white-box-card">
+          <h2 style="color:#2C3691;font-size:1.2rem;font-weight:800;margin-bottom:12px;">2. Tầm Nhìn & Sứ Mệnh</h2>
+          <div style="margin-bottom:14px;">
+            <strong style="color:#27AAE1;display:inline-flex;align-items:center;gap:4px;"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> TẦM NHÌN:</strong>
+            <p style="color:#475569;font-size:0.92rem;line-height:1.6;margin-top:4px;">
+              Trở thành tổ chức xã hội - nghề nghiệp y tế tư nhân kiểu mẫu hàng đầu Việt Nam, đi đầu trong chuẩn hóa quản trị bệnh viện theo chuẩn quốc tế (JCI, ISO, ACI), phát triển y tế chuyên sâu và công nghệ cao.
+            </p>
+          </div>
+          <div>
+            <strong style="color:#2C3691;display:inline-flex;align-items:center;gap:4px;"><svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> SỨ MỆNH:</strong>
+            <p style="color:#475569;font-size:0.92rem;line-height:1.6;margin-top:4px;">
+              Đại diện tiếng nói và bảo vệ quyền lợi chính đáng của khối y tế ngoài công lập; thúc đẩy hợp tác chuyên môn, chuyển giao kỹ thuật lâm sàng, đào tạo nhân lực và đồng hành cùng sự phát triển của ngành y tế nước nhà.
+            </p>
+          </div>
+        </div>
+
+        <div class="white-box-card">
+          <h2 style="color:#2C3691;font-size:1.2rem;font-weight:800;margin-bottom:12px;">3. Giá Trị Cốt Lõi</h2>
+          <ul style="padding-left:20px;color:#475569;font-size:0.92rem;line-height:1.8;">
+            <li><strong>ĐOÀN KẾT:</strong> Gắn kết chặt chẽ mạng lưới bệnh viện, phòng khám hội viên vì mục tiêu chung.</li>
+            <li><strong>Y ĐỨC:</strong> Đặt an toàn và tính mạng người bệnh lên hàng đầu trong mọi hoạt động.</li>
+            <li><strong>CHẤT LƯỢNG:</strong> Chuẩn hóa phác đồ điều trị, quy trình kiểm soát nhiễm khuẩn và dịch vụ y tế.</li>
+            <li><strong>ĐỔI MỚI:</strong> Tiên phong ứng dụng công nghệ số (EMR, AI, Telemedicine) trong quản lý y tế.</li>
+            <li><strong>HỘI NHẬP:</strong> Mở rộng giao lưu, chuyển giao kỹ thuật kỹ thuật cao với các tổ chức y tế quốc tế.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="white-box-card" style="margin-bottom:24px;">
+        <h2 style="color:#2C3691;font-size:1.2rem;font-weight:800;margin-bottom:14px;">4. Chức Năng & Nhiệm Vụ Chủ Yếu</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+          <div style="background:#f8fafc;padding:16px;border-radius:6px;border-left:4px solid #2C3691;border:1px solid #e2e8f0;border-left-width:4px;">
+            <h4 style="color:#2C3691;font-size:0.95rem;margin-bottom:6px;">Đại diện & Phản biện chính sách</h4>
+            <p style="font-size:0.86rem;color:#64748b;line-height:1.5;">Tham gia đóng góp ý kiến, phản biện các dự thảo luật khám chữa bệnh, chính sách bảo hiểm y tế, giá dịch vụ y tế với Bộ Y tế và các cơ quan chức năng.</p>
+          </div>
+          <div style="background:#f8fafc;padding:16px;border-radius:6px;border-left:4px solid #27AAE1;border:1px solid #e2e8f0;border-left-width:4px;">
+            <h4 style="color:#27AAE1;font-size:0.95rem;margin-bottom:6px;">Đào tạo & Nâng cao năng lực</h4>
+            <p style="font-size:0.86rem;color:#64748b;line-height:1.5;">Tổ chức thường xuyên các khóa đào tạo y khoa liên tục (CME), bồi dưỡng quản lý điều dưỡng, nâng cao tay nghề lâm sàng theo chuẩn quy định Bộ Y tế.</p>
+          </div>
+          <div style="background:#f8fafc;padding:16px;border-radius:6px;border-left:4px solid #e22b27;border:1px solid #e2e8f0;border-left-width:4px;">
+            <h4 style="color:#e22b27;font-size:0.95rem;margin-bottom:6px;">Hợp tác & Hội chẩn liên viện</h4>
+            <p style="font-size:0.86rem;color:#64748b;line-height:1.5;">Xây dựng mạng lưới hội chẩn Telemedicine, hỗ trợ chuyển giao kỹ thuật chuyên sâu và xử lý ca bệnh khó giữa các bệnh viện trong và ngoài khu vực.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== ĐỊNH HƯỚNG HOẠT ĐỘNG NHIỆM KỲ 2026 – 2030 (Từ Tài Liệu Văn Kiện Chính Thức) ========== -->
+      <div class="white-box-card" style="margin-bottom:24px;border-top:4px solid #27AAE1;">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
+          <div>
+            <h2 style="color:#2C3691;font-size:1.3rem;font-weight:900;text-transform:uppercase;margin:0;">
+              5. ĐỊNH HƯỚNG HOẠT ĐỘNG NHIỆM KỲ 2026 – 2030
+            </h2>
+            <div style="font-size:0.86rem;color:#e22b27;font-weight:700;margin-top:4px;">
+              Phương châm: "Đoàn kết – Hợp tác – Phát triển bền vững"
+            </div>
+          </div>
+          <span style="background:#dcfce7;color:#166534;font-weight:800;font-size:0.82rem;padding:6px 14px;border-radius:999px;">
+            10 Định Hướng Chiến Lược
+          </span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:24px;">
+          
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">1</span>
+              MÁI NHÀ CHUNG
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Tập hợp, kết nối và đại diện tiếng nói quyền lợi cho cộng đồng bệnh viện tư nhân phía Nam.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">2</span>
+              LIÊN KẾT CHUYÊN MÔN
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Xây dựng mạng lưới hỗ trợ kỹ thuật, hội chẩn liên viện và chia sẻ nguồn lực giữa các bệnh viện.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">3</span>
+              CHẤT LƯỢNG & AN TOÀN NGƯỜI BỆNH
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Chuẩn hóa quy trình, thiết lập bộ chỉ số tham chiếu chất lượng y tế theo chuẩn quốc tế.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">4</span>
+              THAM MƯU & PHẢN BIỆN CHÍNH SÁCH
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Chủ động góp ý hoàn thiện cơ chế, chính sách BHYT và hành lang pháp lý phát triển y tế tư nhân.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">5</span>
+              CHUYỂN ĐỔI SỐ - DỮ LIỆU - AI
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Đẩy mạnh bệnh án điện tử (EMR), ứng dụng AI chẩn đoán và hệ thống Telemedicine toàn diện.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">6</span>
+              NGUỒN NHÂN LỰC & QUẢN TRỊ
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Đào tạo CME liên tục, phát triển đội ngũ bác sĩ, điều dưỡng và lãnh đạo y tế trẻ tiềm năng.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">7</span>
+              HỢP TÁC CÔNG - TƯ
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Phối hợp công - tư trong chuyển giao kỹ thuật, đào tạo nhân lực, nghiên cứu và y tế dự phòng.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">8</span>
+              HỆ SINH THÁI MUA SẮM & NGUỒN LỰC
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Liên kết tự nguyện, tối ưu hóa chuỗi cung ứng trang thiết bị y tế và dược phẩm nhằm giảm chi phí.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">9</span>
+              NGHIÊN CỨU & HỢP TÁC QUỐC TẾ
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Thúc đẩy nghiên cứu lâm sàng, thử nghiệm đa trung tâm và công bố khoa học quốc tế.</p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid #e2e8f0;padding:14px;border-radius:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:800;color:#2C3691;margin-bottom:4px;">
+              <span style="background:#2C3691;color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.75rem;">10</span>
+              HÌNH ẢNH & THƯƠNG HIỆU CHUNG
+            </div>
+            <p style="font-size:0.86rem;color:#475569;margin:0;">Xây dựng hình ảnh y tế tư nhân: Chuyên nghiệp – Minh bạch – Trách nhiệm – Nhân văn.</p>
+          </div>
+
+        </div>
+
+        <!-- 8 Chương trình trọng điểm 2026 - 2027 -->
+        <h3 style="color:#2C3691;font-size:1.15rem;font-weight:800;margin-bottom:14px;text-transform:uppercase;border-top:1px solid #e2e8f0;padding-top:16px;">
+          6. TÁM (08) CHƯƠNG TRÌNH TRỌNG ĐIỂM (2026 – 2027)
+        </h3>
+        <p style="font-size:0.9rem;color:#e22b27;font-weight:700;margin-bottom:14px;">
+          Khẩu hiệu hành động: "Năm hành động - Kết nối thực chất, tạo giá trị cho hội viên"
+        </p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:24px;">
+          
+          <div style="border-left:4px solid #27AAE1;background:#f0f9ff;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#27AAE1;font-size:0.9rem;">CT 01: Hoàn thiện mạng lưới hội viên</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Xây dựng CSDL bệnh viện tư nhân, cụm liên kết TP.HCM – Đông Nam Bộ – Tây Nam Bộ – Nam Trung Bộ.</div>
+          </div>
+
+          <div style="border-left:4px solid #2C3691;background:#f8fafc;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#2C3691;font-size:0.9rem;">CT 02: Private Hospital CEO Forum</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Diễn đàn định kỳ về quản trị bệnh viện, tài chính y tế, nhân lực, BHYT, pháp lý và AI.</div>
+          </div>
+
+          <div style="border-left:4px solid #27AAE1;background:#f0f9ff;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#27AAE1;font-size:0.9rem;">CT 03: Mạng lưới chuyên môn phía Nam</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Kết nối liên viện chuyên khoa tim mạch, đột quỵ, hồi sức cấp cứu và hội chẩn ca bệnh khó.</div>
+          </div>
+
+          <div style="border-left:4px solid #2C3691;background:#f8fafc;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#2C3691;font-size:0.9rem;">CT 04: Chuyển đổi số & AI trong bệnh viện</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Tổ chức hội thảo, workshop AI y khoa/quản trị, bệnh án điện tử (EMR) và an ninh mạng y tế.</div>
+          </div>
+
+          <div style="border-left:4px solid #27AAE1;background:#f0f9ff;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#27AAE1;font-size:0.9rem;">CT 05: Nâng cao chất lượng bệnh viện</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Xây dựng bộ chỉ số tiêu chuẩn theo từng phân khúc bệnh viện nhằm nâng cao trải nghiệm người bệnh.</div>
+          </div>
+
+          <div style="border-left:4px solid #2C3691;background:#f8fafc;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#2C3691;font-size:0.9rem;">CT 06: Đào tạo lãnh đạo y tế trẻ</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Khởi động chương trình “Young Healthcare Leaders” – đào tạo, cố vấn và tham quan mô hình quản trị.</div>
+          </div>
+
+          <div style="border-left:4px solid #27AAE1;background:#f0f9ff;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#27AAE1;font-size:0.9rem;">CT 07: Đối thoại chính sách y tế tư nhân</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Cầu nối giữa Bệnh viện – Hiệp hội – Bộ/Sở Y tế – BHXH – Chuyên gia pháp lý tháo gỡ vướng mắc.</div>
+          </div>
+
+          <div style="border-left:4px solid #e22b27;background:#fff5f5;padding:12px 16px;border-radius:0 8px 8px 0;">
+            <strong style="color:#e22b27;font-size:0.9rem;">CT 08: Thành lập Hiệp hội BV Tư nhân TP.HCM</strong>
+            <div style="font-size:0.84rem;color:#475569;margin-top:2px;">Chuẩn bị các thủ tục pháp lý thành lập Hiệp hội riêng cho TP.HCM (Dự kiến tổ chức vào tháng 10/2027).</div>
+          </div>
+
+        </div>
+
+        <!-- Bảng chỉ tiêu 2027 -->
+        <h4 style="color:#2C3691;font-size:1.05rem;font-weight:800;margin-bottom:12px;text-transform:uppercase;">
+          BẢNG CHỈ TIÊU ĐỀ XUẤT ĐẾN NĂM 2027
+        </h4>
+        <div style="overflow-x:auto;">
+          <table class="member-data-table" style="width:100%;border-collapse:collapse;font-size:0.86rem;margin-bottom:16px;">
+            <thead>
+              <tr style="background:#2C3691;color:#fff;">
+                <th style="padding:10px 14px;border:1px solid #cbd5e1;width:60px;text-align:center;">STT</th>
+                <th style="padding:10px 14px;border:1px solid #cbd5e1;width:240px;">CHƯƠNG TRÌNH</th>
+                <th style="padding:10px 14px;border:1px solid #cbd5e1;">CHỈ TIÊU ĐẶT RA ĐẾN NĂM 2027</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">01</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Mạng lưới hội viên</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 100 bệnh viện thành viên tích cực, hoàn thiện CSDL, kết nối theo cụm khu vực</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">02</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">CEO Forum</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 02 Diễn đàn CEO/Quản trị, 02 chương trình đào tạo chuyên môn sâu</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">03</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Mạng lưới chuyên môn</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">03 – 05 mạng lưới chuyên môn liên bệnh viện (tim mạch, đột quỵ, hồi sức cấp cứu)</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">04</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Chuyển đổi số & AI</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 01 Diễn đàn Chuyển đổi số & AI, 01 Workshop hỗ trợ triển khai thực tế</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">05</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Chất lượng bệnh viện</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 01 bộ chỉ số tiêu chuẩn theo từng phân khúc bệnh viện</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">06</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Lãnh đạo trẻ</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">Khởi động “Young Healthcare Leaders”, đào tạo và bồi dưỡng cán bộ tiềm năng</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">07</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Đối thoại chính sách</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">&ge; 01 chương trình/năm, đề xuất 02 – 03 kiến nghị chính sách trọng điểm</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;text-align:center;font-weight:700;">08</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;font-weight:700;color:#2C3691;">Thành lập Hiệp hội BV Tư nhân TPHCM</td>
+                <td style="padding:8px 14px;border:1px solid #e2e8f0;">Dự kiến tổ chức Đại hội vào tháng 10/2027</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- Slide Trình Chiếu Văn Kiện Hoạt Động -->
+      <div class="white-box-card" style="margin-bottom:24px;">
+        <h3 style="color:#2C3691;font-size:1.1rem;font-weight:800;margin-bottom:14px;text-transform:uppercase;">
+          7. TÀI LIỆU TRÌNH BÀY ĐỊNH HƯỚNG HOẠT ĐỘNG
+        </h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;">
+          <div style="border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-card);">
+            <img src="photo/quyetdinh/phuong_huong_p1.png" alt="Định hướng hoạt động" style="width:100%;height:auto;display:block;" />
+          </div>
+          <div style="border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-card);">
+            <img src="photo/quyetdinh/phuong_huong_p3.png" alt="10 định hướng nhiệm kỳ" style="width:100%;height:auto;display:block;" />
+          </div>
+          <div style="border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-card);">
+            <img src="photo/quyetdinh/phuong_huong_p5.png" alt="8 chương trình trọng điểm" style="width:100%;height:auto;display:block;" />
+          </div>
+          <div style="border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-card);">
+            <img src="photo/quyetdinh/phuong_huong_p6.png" alt="Chỉ tiêu đề xuất 2027" style="width:100%;height:auto;display:block;" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">CHI HỘI BỆNH VIỆN TƯ NHÂN TP.HCM VÀ CÁC TỈNH PHÍA NAM</div>
+          <p class="footer-brand-desc">
+            Tổ chức đại diện cho khối cơ sở khám chữa bệnh tư nhân khu vực phía Nam. Cam kết nâng cao chất lượng phục vụ và an toàn sức khỏe cho người bệnh.
+          </p>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" color="#27AAE1" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span><strong>Văn phòng:</strong> Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP. Hồ Chí Minh</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Về Chi Hội</h4>
+          <ul class="footer-links-list">
+            <li><a href="gioi-thieu.html">Về chúng tôi</a></li>
+            <li><a href="so-do-to-chuc.html">Sơ đồ tổ chức</a></li>
+            <li><a href="hoi-vien.html">Danh sách hội viên</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Hoạt Động</h4>
+          <ul class="footer-links-list">
+            <li><a href="dao-tao.html">Khóa đào tạo CME</a></li>
+            <li><a href="tin-tuc.html">Tin tức - Sự kiện</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Liên Hệ Nhanh</h4>
+          <p style="font-size:0.85rem;color:#cbd5e1;line-height:1.6;">
+            Hotline: <strong>1900 8146</strong><br />
+            Email: <strong>vanphong@chihoiyte.vn</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-strip">
+      <div class="container">
+        © 2026 Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

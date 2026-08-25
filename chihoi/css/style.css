@@ -810,8 +810,7 @@ body {
 }
 
 /* Buttons */
-.btn-primary-pill,
-.btn-aih-navy {
+.btn-primary-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -828,6 +827,24 @@ body {
   cursor: pointer;
   box-shadow: 0 3px 10px rgba(44, 54, 145, 0.22);
   transition: all 0.25s ease;
+}
+
+.btn-aih-navy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  background: var(--brand-navy);
+  border: 1px solid var(--brand-navy);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44, 54, 145, 0.18);
+  transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 .btn-primary-pill:hover,

@@ -42,7 +42,7 @@ get_header(); ?>
               <div class="contact-card-body">
                 <h3>Điện thoại</h3>
                 <p style="font-size: 0.85rem; line-height: 1.5; margin: 0; white-space: nowrap;">
-                  Tổng đài: <a href="tel:19008146">1900 8146</a><br />
+                  <a href="tel:19008146">1900 8146</a><br />
                   <span style="white-space: nowrap;">Hotline Thư ký: <a href="tel:02862901155">(028) 6290 1155</a></span>
                 </p>
               </div>

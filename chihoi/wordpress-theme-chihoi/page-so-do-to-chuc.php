@@ -52,7 +52,7 @@ get_header(); ?>
           <div class="org-sub-card">
             <div class="org-card-role">TIỂU BAN 01</div>
             <div class="org-card-title">Ban Chuyên Môn & Đào Tạo CME</div>
-            <div class="org-card-duty">Phụ trách chuẩn hóa quy trình y khoa, tổ chức các lớp cấp chứng chỉ CME, cập nhật kỹ thuật điều trị mới và hợp tác quốc tế.</div>
+            <div class="org-card-duty">Phụ trách chuẩn hóa quy trình y khoa, tổ chức các lớp cấp chứng chỉ CME cập nhật kỹ thuật điều trị mới và hợp tác quốc tế.</div>
           </div>
 
           <div class="org-sub-card">

@@ -58,7 +58,7 @@ get_header(); ?>
               </div>
               <div class="contact-card-body">
                 <h3>Email</h3>
-                <p><a href="mailto:vanphong@chihoiyte.vn">vanphong@chihoiyte.vn</a></p>
+                <p><a href="mailto:info@chihoibenhvientu.com">info@chihoibenhvientu.com</a></p>
               </div>
             </div>
           </div>

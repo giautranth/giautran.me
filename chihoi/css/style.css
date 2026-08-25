@@ -948,8 +948,8 @@ body {
 
 .member-partner-card {
   flex: 0 0 auto;
-  width: 224px;
-  height: 106px;
+  width: 220px;
+  height: 100px;
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
@@ -2003,4 +2003,10 @@ textarea.form-control {
   width: auto;
   display: block;
   object-fit: contain;
+}
+/* Video Section Responsive */
+@media (max-width: 768px) {
+  .video-grid-2col {
+    grid-template-columns: 1fr !important;
+  }
 }

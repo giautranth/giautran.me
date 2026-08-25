@@ -583,7 +583,24 @@
     </div>
   </section>
 
-    <!-- ========== 6. ĐỐI TÁC ĐỒNG HÀNH SECTION (Infinite Loop) ========== -->
+    <!-- ========== VIDEO SECTION ========== -->
+  <section class="site-section bg-subtle">
+    <div class="container">
+      <div class="section-header-row" style="margin-bottom: 20px;">
+        <div class="section-main-title">VIDEO</div>
+      </div>
+      <div class="video-grid-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 16px rgba(15,23,42,0.1);">
+          <iframe src="https://www.youtube.com/embed/_3A7urkzB6I" title="Video Chi Hội 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe>
+        </div>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 16px rgba(15,23,42,0.1);">
+          <iframe src="https://www.youtube.com/embed/Pk2GA9-9OCs" title="Video Chi Hội 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. ĐỐI TÁC ĐỒNG HÀNH SECTION (Infinite Loop) ========== -->
   <section class="site-section">
     <div class="container">
       <div class="section-header-row" style="margin-bottom: 20px;">
@@ -599,16 +616,12 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
 
-            <div class="member-partner-card" title="Ngân hàng Vietbank">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+            <div class="member-partner-card" title="Bệnh viện Gia An 115">
+              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
 
-            <div class="member-partner-card" title="Vietlott">
-              <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
-            </div>
-
-            <div class="member-partner-card" title="Tập đoàn Hoa Lâm">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
 
             <div class="member-partner-card" title="Ngân hàng Vietbank">
@@ -624,16 +637,12 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
 
-            <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+            <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
+              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
 
-            <div class="member-partner-card" title="Vietlott" aria-hidden="true">
-              <img src="photo/doitac/logo_vietlot.jpg" alt="Vietlott" />
-            </div>
-
-            <div class="member-partner-card" title="Tập đoàn Hoa Lâm" aria-hidden="true">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
 
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">

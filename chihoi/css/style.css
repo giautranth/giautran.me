@@ -1,3 +1,12 @@
+
+/* Mobile Navigation Toggle (Hidden on Desktop) */
+.mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap');
 
 /* ==========================================================================
@@ -1974,9 +1983,7 @@ textarea.form-control {
     display: block;
   }
   
-  .aih-header-tools {
-    display: none;
-  }
+  
 
   .aih-main-heading {
     font-size: 1.5rem;
@@ -2202,5 +2209,153 @@ body {
   }
   .section-slider-arrow.next {
     right: -8px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ==========================================================================
+     MOBILE HEADER LAYOUT (Left: Hamburger, Center: Logo, Right: Lang Switcher)
+     ========================================================================== */
+  .aih-header-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 14px !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  /* 1. Left: Hamburger Icon */
+  .mobile-nav-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    order: 1 !important;
+    width: 40px !important;
+    height: 40px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(44, 54, 145, 0.25) !important;
+    border-radius: 8px !important;
+    color: var(--brand-navy, #2C3691) !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 6px rgba(0, 50, 100, 0.08) !important;
+  }
+
+  .mobile-nav-toggle:hover,
+  .mobile-nav-toggle:active {
+    background: rgba(44, 54, 145, 0.08) !important;
+    border-color: var(--brand-navy, #2C3691) !important;
+  }
+
+  .mobile-nav-toggle svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  /* 2. Center: Brand Logo */
+  .aih-brand-group {
+    order: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 1 !important;
+    margin: 0 8px !important;
+    text-align: center !important;
+  }
+
+  .aih-brand-group a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .aih-logo-img {
+    max-height: 38px !important;
+    width: auto !important;
+    max-width: 170px !important;
+    object-fit: contain !important;
+  }
+
+  /* 3. Right: Language Switcher */
+  .aih-header-tools {
+    display: flex !important;
+    order: 3 !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-shrink: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .lang-box {
+    position: relative !important;
+  }
+
+  .lang-current {
+    padding: 5px 8px !important;
+    font-size: 0.8rem !important;
+    height: 36px !important;
+    border-radius: 6px !important;
+  }
+
+  .lang-dropdown {
+    right: 0 !important;
+    left: auto !important;
+    min-width: 135px !important;
+  }
+
+  /* Mobile Dropdown Navigation Menu */
+  .aih-nav {
+    position: static !important;
+  }
+
+  .aih-menu-list {
+    display: none;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18) !important;
+    border-top: 1px solid var(--border-light, #e2e8f0) !important;
+    z-index: 9999 !important;
+    padding: 8px 0 !important;
+    margin: 0 !important;
+  }
+
+  .aih-menu-list.show-mobile {
+    display: flex !important;
+  }
+
+  .aih-menu-item {
+    width: 100% !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.7) !important;
+  }
+
+  .aih-menu-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 20px !important;
+    font-size: 0.9rem !important;
+    color: var(--brand-navy, #2C3691) !important;
+    font-weight: 600 !important;
+  }
+
+  .dropdown-menu-list {
+    position: static !important;
+    box-shadow: none !important;
+    background: #f8fafc !important;
+    border-top: 1px solid #e2e8f0 !important;
+    padding: 4px 0 !important;
+    display: none;
+  }
+
+  .dropdown-menu-list.show-mobile-sub {
+    display: block !important;
   }
 }

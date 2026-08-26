@@ -313,7 +313,7 @@ body {
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   padding: 2px 8px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   color: var(--brand-navy, #2C3691);
@@ -323,6 +323,7 @@ body {
   height: 28px;
   user-select: none;
   box-shadow: none;
+  white-space: nowrap !important;
 }
 
 .lang-box:hover .lang-current,
@@ -334,9 +335,10 @@ body {
 }
 
 .lang-flag {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .lang-flag img {
@@ -351,6 +353,7 @@ body {
 .lang-chevron {
   color: #64748b;
   transition: transform 0.25s ease;
+  flex-shrink: 0;
 }
 
 .lang-box:hover .lang-chevron,
@@ -367,13 +370,15 @@ body {
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 8px;
-  min-width: 180px;
+  min-width: 175px !important;
+  width: max-content !important;
+  white-space: nowrap !important;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: translateY(6px);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.14);
   z-index: 9999;
   list-style: none;
   margin: 0;
@@ -388,9 +393,9 @@ body {
 }
 
 .lang-opt {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
   padding: 9px 12px;
   border-radius: 10px;
   cursor: pointer;
@@ -400,6 +405,19 @@ body {
   color: #334155;
   margin-bottom: 3px;
   user-select: none;
+  white-space: nowrap !important;
+}
+
+.lang-opt .flag {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.lang-opt .lng {
+  white-space: nowrap !important;
+  display: inline-block !important;
+  flex-shrink: 0;
 }
 
 .lang-opt:last-child {
@@ -2301,7 +2319,7 @@ body {
     margin-left: 0 !important;
   }
 
-  .lang-box {
+    .lang-box {
     position: relative !important;
   }
 
@@ -2310,12 +2328,24 @@ body {
     font-size: 0.8rem !important;
     height: 28px !important;
     border-radius: 6px !important;
+    white-space: nowrap !important;
   }
 
   .lang-dropdown {
     right: 0 !important;
     left: auto !important;
-    min-width: 135px !important;
+    min-width: 170px !important;
+    width: max-content !important;
+    white-space: nowrap !important;
+  }
+
+  .lang-opt {
+    white-space: nowrap !important;
+    font-size: 0.88rem !important;
+  }
+
+  .lang-opt .lng {
+    white-space: nowrap !important;
   }
 
   /* Mobile Dropdown Navigation Menu */

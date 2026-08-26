@@ -2126,6 +2126,16 @@ textarea.form-control {
 }
 }
 
+.footer-slogan-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 .footer-logo-wrapper {
   background: #ffffff;
   padding: 6px 14px;

@@ -86,9 +86,9 @@ body {
   color: var(--text-main);
   line-height: 1.65;
   overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  
+  
+  
   -webkit-font-smoothing: antialiased;
 }
 
@@ -744,7 +744,7 @@ body {
    SECTIONS & LAYOUT (Chuẩn Nền Trắng Thoáng Kiểu AIH)
    ========================================================================== */
 .site-section {
-  padding: 50px 0;
+  padding: 32px 0 24px;
   background: var(--bg-white);
 }
 
@@ -1254,6 +1254,7 @@ body {
    ========================================================================== */
 .news-cards-grid {
   display: grid;
+  margin-bottom: 0;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
@@ -1747,7 +1748,7 @@ textarea.form-control {
    FOOTER (Chuẩn Bệnh viện Quốc tế: Royal Navy Sâu, Tối Giản, Đầy Đủ Thông Tin)
    ========================================================================== */
 .site-footer {
-  margin-top: auto;
+  margin-top: 0 !important;
   background: linear-gradient(175deg, #1e266d 0%, #161d52 60%, #0e1338 100%);
   color: #cbd5e1;
   padding: 30px 0 16px !important;
@@ -2435,7 +2436,7 @@ body {
    FOOTER (All White Text #ffffff)
    ========================================================================== */
 .site-footer {
-  margin-top: auto;
+  margin-top: 0 !important;
   background: linear-gradient(175deg, #1e266d 0%, #161d52 60%, #0e1338 100%);
   color: #ffffff !important;
   padding: 30px 0 16px !important;

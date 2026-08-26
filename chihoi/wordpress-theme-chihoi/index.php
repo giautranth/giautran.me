@@ -139,7 +139,7 @@
           <div style="font-size:0.86rem;color:#64748b;">
             Nhiệm kỳ 2026 – 2029 | Chủ tịch: <strong>Madam Trần Thị Lâm</strong>
           </div>
-          <a href="gioi-thieu" class="link-read-more" style="font-size:0.92rem;color:#27AAE1;font-weight:700;">
+          <a href="ve-chi-hoi" class="link-read-more" style="font-size:0.92rem;color:#27AAE1;font-weight:700;">
             Xem chi tiết 10 định hướng & 8 chương trình →
           </a>
         </div>

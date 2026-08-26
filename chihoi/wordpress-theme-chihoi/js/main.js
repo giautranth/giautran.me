@@ -396,7 +396,7 @@ function initModalHandlers() {
 
       if (modalTitle && modalBody) {
                 modalTitle.textContent = 'Thông Tin Chi Tiết Khóa Đào Tạo';
-        const imgPrefix = window.location.pathname.includes('/dao-tao') || window.location.pathname.includes('/hoi-vien') || window.location.pathname.includes('/gioi-thieu') || window.location.pathname.includes('/tin-tuc') || window.location.pathname.includes('/lien-he') || window.location.pathname.includes('/so-do-to-chuc') ? '../' : '';
+        const imgPrefix = window.location.pathname.includes('/dao-tao') || window.location.pathname.includes('/hoi-vien') || window.location.pathname.includes('/ve-chi-hoi') || window.location.pathname.includes('/tin-tuc') || window.location.pathname.includes('/lien-he') || window.location.pathname.includes('/so-do-to-chuc') ? '../' : '';
         modalBody.innerHTML = `
           <div style="margin-bottom: 16px;">
             <div style="width: 100%; max-height: 220px; overflow: hidden; border-radius: 8px; margin-bottom: 14px; border: 1px solid #e2e8f0;">
@@ -1154,7 +1154,7 @@ const siteSearchData = [
     category: "Giới thiệu",
     badge: "",
     desc: "Tôn chỉ mục đích, 10 Định hướng chiến lược và 8 Chương trình trọng điểm của Chi hội.",
-    url: "gioi-thieu"
+    url: "ve-chi-hoi"
   },
   {
     title: "Sơ đồ tổ chức Ban Chấp Hành",

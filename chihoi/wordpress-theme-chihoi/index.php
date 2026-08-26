@@ -236,7 +236,6 @@
       <div class="filter-tabs-wrapper">
         <button class="tab-btn training-tab-btn active" data-filter="all">Tất cả</button>
         <button class="tab-btn training-tab-btn" data-filter="chieu-sinh">Thông báo chiêu sinh</button>
-        <button class="tab-btn training-tab-btn" data-filter="hoat-dong">Hoạt động đào tạo</button>
         <button class="tab-btn training-tab-btn" data-filter="giang-vien">Đội ngũ giảng viên</button>
         <button class="tab-btn training-tab-btn" data-filter="nghien-cuu">Nghiên cứu khoa học</button>
       </div>

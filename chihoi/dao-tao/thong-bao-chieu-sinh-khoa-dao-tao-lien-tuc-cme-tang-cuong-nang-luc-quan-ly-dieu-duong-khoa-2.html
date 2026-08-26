@@ -13,48 +13,34 @@
 </head>
 <body class="inner-page news-single-page">
 
-  <!-- ========== HEADER ========== -->
-  <header class="aih-header" role="banner">
+    <!-- ========== AIH UNIFIED HEADER (Chuẩn Bệnh viện Quốc tế Mỹ AIH) ========== -->
+    <!-- ========== AIH UNIFIED HEADER (Chuẩn Bệnh viện Quốc tế Mỹ AIH) ========== -->
+  <header class="aih-header">
     <div class="aih-header-container">
-      <div class="aih-logo-box">
-        <a href="../" class="aih-logo-link">
-          <div class="aih-logo-img-wrap">
-            <svg class="aih-cross-shield-logo" viewBox="0 0 440 100" height="37" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="logoRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#EF4444" />
-                  <stop offset="100%" stop-color="#B91C1C" />
-                </linearGradient>
-                <linearGradient id="logoNavyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#1E3A8A" />
-                  <stop offset="100%" stop-color="#0F172A" />
-                </linearGradient>
-              </defs>
-              <circle cx="50" cy="50" r="46" fill="url(#logoNavyGrad)" />
-              <circle cx="50" cy="50" r="42" fill="#FFFFFF" />
-              <path d="M50 14 C68 14 82 24 82 44 C82 66 50 84 50 84 C50 84 18 66 18 44 C18 24 32 14 50 14 Z" fill="url(#logoRedGrad)" />
-              <path d="M44 28 H56 V44 H72 V56 H56 V72 H44 V56 H28 V44 H44 Z" fill="#FFFFFF" />
-              <text x="110" y="38" font-family="'Montserrat', sans-serif" font-weight="900" font-size="20" fill="#2C3691" letter-spacing="0.5">CHI HỘI BỆNH VIỆN TƯ NHÂN</text>
-              <text x="110" y="62" font-family="'Montserrat', sans-serif" font-weight="800" font-size="12.5" fill="#e22b27" letter-spacing="1">TP. HỒ CHÍ MINH & CÁC TỈNH PHÍA NAM</text>
-              <text x="110" y="80" font-family="'Montserrat', sans-serif" font-weight="600" font-size="9.5" fill="#64748b" letter-spacing="0.3">HIỆP HỘI BỆNH VIỆN TƯ NHÂN VIỆT NAM</text>
-            </svg>
-          </div>
+      
+      <!-- Mobile Nav Toggle (Left on Mobile) -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Mở menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      
+      <!-- Brand Logo & Gold Accreditation Seal -->
+      <div class="aih-brand-group">
+        <a href="../" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="../photo/logo/chihoi2.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
         </a>
       </div>
 
+      <!-- Main Navigation Menu -->
       <nav class="aih-nav" aria-label="Menu chính">
-        <ul class="aih-menu-list">
+        <ul class="aih-menu-list" id="navMenuList">
           <li class="aih-menu-item">
             <a href="../" class="aih-menu-link">TRANG CHỦ</a>
           </li>
           <li class="aih-menu-item has-dropdown">
-            <a href="../gioi-thieu" class="aih-menu-link">
-              GIỚI THIỆU
-              <span class="arrow-icon">▼</span>
-            </a>
+            <a href="javascript:void(0)" class="aih-menu-link">GIỚI THIỆU</a>
             <ul class="dropdown-menu-list">
-              <li class="dropdown-item"><a href="../gioi-thieu">Về Chi Hội</a></li>
-              <li class="dropdown-item"><a href="../so-do-to-chuc">Sơ Đồ Cơ Cấu Tổ Chức</a></li>
+              <li class="dropdown-item"><a href="../gioi-thieu">VỀ CHI HỘI</a></li>
+              <li class="dropdown-item"><a href="../so-do-to-chuc">SƠ ĐỒ TỔ CHỨC</a></li>
             </ul>
           </li>
           <li class="aih-menu-item">
@@ -69,24 +55,43 @@
           <li class="aih-menu-item">
             <a href="../lien-he" class="aih-menu-link">LIÊN HỆ</a>
           </li>
+          <li class="aih-menu-item aih-search-menu-item">
+            <button class="aih-search-btn" title="Tìm kiếm" onclick="openSiteSearch();" aria-label="Tìm kiếm">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </button>
+          </li>
         </ul>
       </nav>
 
+      <!-- Utilities Tools (Search & Language Switcher) -->
       <div class="aih-header-tools">
-        <a href="tel:19008146" class="aih-header-hotline-btn" title="Tổng đài hỗ trợ Chi hội 24/7">
-          <div class="phone-icon-circle">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          </div>
-          <span class="hotline-text-wrap">
-            <span class="hotline-lbl">HOTLINE HỖ TRỢ</span>
-            <span class="hotline-num">1900 8146</span>
-          </span>
-        </a>
-
-        <button class="mobile-menu-toggle" id="mobileNavToggle" aria-label="Mở menu">
-          <span></span><span></span><span></span>
-        </button>
+        
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="ja" data-flag="jp" data-code="JA" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/jp.png" alt="jp" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">日本語</span>
+            </li>
+            <li class="lang-opt" data-lang="zh" data-flag="cn" data-code="ZH" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/cn.png" alt="cn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">中文</span>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </header>
 

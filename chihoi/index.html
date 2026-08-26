@@ -545,12 +545,16 @@
       </div>
 
             <!-- Split Layout: 1 Big Left, 12 Photos Scrollable Right -->
+            <!-- Split Layout: 1 Big Left (Media Viewer), Video + 12 Photos Scrollable Right -->
       <div class="facilities-split-layout">
         
-        <!-- Left Big Featured Image -->
+        <!-- Left Big Featured Media View -->
         <div class="facilities-split__left">
           <div class="facilities-main-view">
-            <img id="facility-main-img" src="photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội Bệnh viện Tư nhân" class="facility-main-image" />
+            <img id="facility-main-img" src="photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội Bệnh viện Tư nhân" class="facility-main-image" style="display:block;" />
+            <div id="facility-main-video-wrap" class="facility-main-video-wrap" style="display:none;width:100%;height:100%;">
+              <iframe id="facility-main-video-iframe" src="" title="Video Chi hội Bệnh viện Tư nhân" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:none;border-radius:20px;"></iframe>
+            </div>
           </div>
         </div>
 
@@ -558,51 +562,60 @@
         <div class="facilities-split__right">
           <div class="facilities-side-grid">
             
-            <div class="facility-side-card active" onclick="switchFacilityImg('photo/hinh-anh-video/1.jpg', this)">
+            <!-- Video Item -->
+            <div class="facility-side-card card-video" data-type="video" data-video="https://www.youtube.com/embed/_3A7urkzB6I" onclick="switchFacilityMedia(this)">
+              <img src="photo/hinh-anh-video/video-thumb.jpg" alt="Video Lễ Ra Mắt Chi Hội" loading="lazy" />
+              <div class="video-play-overlay">
+                <span class="video-play-icon">▶</span>
+                <span class="video-card-badge">VIDEO SỰ KIỆN</span>
+              </div>
+            </div>
+
+            <div class="facility-side-card active" data-type="image" data-src="photo/hinh-anh-video/1.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội 1" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/2.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/2.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/2.jpg" alt="Hình ảnh Chi hội 2" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/3.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/3.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/3.jpg" alt="Hình ảnh Chi hội 3" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/4.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/4.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/4.jpg" alt="Hình ảnh Chi hội 4" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/5.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/5.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/5.jpg" alt="Hình ảnh Chi hội 5" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/6.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/6.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/6.jpg" alt="Hình ảnh Chi hội 6" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/7.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/7.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/7.jpg" alt="Hình ảnh Chi hội 7" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/8.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/8.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/8.jpg" alt="Hình ảnh Chi hội 8" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/9.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/9.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/9.jpg" alt="Hình ảnh Chi hội 9" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/10.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/10.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/10.jpg" alt="Hình ảnh Chi hội 10" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/11.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/11.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/11.jpg" alt="Hình ảnh Chi hội 11" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" onclick="switchFacilityImg('photo/hinh-anh-video/12.jpg', this)">
+            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/12.jpg" onclick="switchFacilityMedia(this)">
               <img src="photo/hinh-anh-video/12.jpg" alt="Hình ảnh Chi hội 12" loading="lazy" />
             </div>
 

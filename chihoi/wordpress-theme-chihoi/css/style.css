@@ -1775,7 +1775,7 @@ textarea.form-control {
   background: linear-gradient(175deg, #1e266d 0%, #161d52 60%, #0e1338 100%);
   color: #cbd5e1;
   padding: 30px 0 16px !important;
-  border-top: 4px solid var(--brand-red, #e22b27) !important;
+  border-top: 4px solid var(--brand-cyan, #27AAE1) !important;
 }
 
 .footer-grid {
@@ -1818,7 +1818,7 @@ textarea.form-control {
   left: 0;
   width: 32px;
   height: 2.5px;
-  background: var(--brand-red, #e22b27) !important;
+  background: var(--brand-cyan, #27AAE1) !important;
   border-radius: 2px;
 }
 
@@ -2475,7 +2475,7 @@ body {
   background: linear-gradient(175deg, #1e266d 0%, #161d52 60%, #0e1338 100%);
   color: #ffffff !important;
   padding: 30px 0 16px !important;
-  border-top: 4px solid var(--brand-red, #e22b27) !important;
+  border-top: 4px solid var(--brand-cyan, #27AAE1) !important;
 }
 
 .site-footer p,

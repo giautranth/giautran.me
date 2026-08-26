@@ -3914,3 +3914,12 @@ a[href*="1900"] {
   color: inherit !important;
   border-bottom: none !important;
 }
+
+
+/* Section Slider Arrows on Subpages (Desktop vs Mobile) */
+@media (min-width: 769px) {
+  .page-template-page-tin-tuc .section-slider-arrow,
+  .page-template-page-dao-tao .section-slider-arrow {
+    display: none !important;
+  }
+}

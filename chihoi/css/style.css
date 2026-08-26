@@ -4910,3 +4910,28 @@ a[href*="1900"] {
     scroll-snap-align: start !important;
   }
 }
+
+
+/* Footer Newsletter Input White Background */
+.site-footer input[type="email"],
+.footer-newsletter-input {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 50px !important;
+  padding: 8px 18px !important;
+  font-size: 0.88rem !important;
+}
+
+.site-footer input[type="email"]::placeholder,
+.footer-newsletter-input::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+.site-footer input[type="email"]:focus,
+.footer-newsletter-input:focus {
+  border-color: var(--brand-cyan, #27AAE1) !important;
+  box-shadow: 0 0 0 3px rgba(39, 170, 225, 0.25) !important;
+  outline: none !important;
+}

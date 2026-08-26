@@ -167,11 +167,11 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City (CIH)" />
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City">
+              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV (Pháp Việt)" />
+            <div class="member-partner-card" title="Bệnh viện FV">
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Phương Nam">
               <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
@@ -217,11 +217,11 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City (CIH)" />
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
+              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện FV (Pháp Việt)" aria-hidden="true">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV (Pháp Việt)" />
+            <div class="member-partner-card" title="Bệnh viện FV" aria-hidden="true">
+              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
               <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
@@ -597,7 +597,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
@@ -609,7 +609,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
@@ -621,7 +621,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
@@ -633,7 +633,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
@@ -647,7 +647,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
@@ -659,7 +659,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
@@ -671,7 +671,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
@@ -683,7 +683,7 @@
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
               <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
             </div>
-            <div class="member-partner-card" title="Bệnh viện Quốc tế City (CIH)" aria-hidden="true">
+            <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">

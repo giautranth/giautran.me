@@ -1086,7 +1086,7 @@ const siteSearchData = [
   },
   // Hội viên tiêu biểu
   {
-    title: "Bệnh viện Quốc tế City (CIH)",
+    title: "Bệnh viện Quốc tế City",
     category: "Hội viên",
     badge: "badge-hoi-vien",
     desc: "Số 3, Đường 17A, Phường An Lạc, TP. Hồ Chí Minh - Trụ sở văn phòng Chi hội.",

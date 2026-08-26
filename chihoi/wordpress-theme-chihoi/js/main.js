@@ -415,6 +415,10 @@ function initModalHandlers() {
   // Open News Detail Modal
   document.querySelectorAll('.btn-news-detail').forEach(btn => {
     btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
+        return; // Allow direct navigation to article page URL
+      }
       e.preventDefault();
       const title = btn.getAttribute('data-news-title') || 'Tin tức Chi hội';
       const category = btn.getAttribute('data-news-cat') || 'TIN TỨC';

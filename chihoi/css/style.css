@@ -3292,3 +3292,54 @@ body {
   background: #ffffff;
   border-color: #ffffff;
 }
+
+
+/* ==========================================================================
+   CHI TIẾT BÀI VIẾT (SINGLE ARTICLE PAGE LAYOUT)
+   ========================================================================== */
+.article-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 36px;
+  align-items: start;
+}
+
+.single-article-content {
+  background: #ffffff;
+  padding: 36px 40px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.single-article-content h1 {
+  word-break: break-word;
+}
+
+.article-body-text p {
+  margin-bottom: 16px;
+  color: #334155;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.article-body-text img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 991.98px) {
+  .article-layout-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .single-article-content {
+    padding: 24px 20px !important;
+  }
+
+  .single-article-content h1 {
+    font-size: 1.5rem !important;
+  }
+}

@@ -907,3 +907,75 @@ function nudgeMarquee(trackId, direction) {
   }
 }
 window.nudgeMarquee = nudgeMarquee;
+
+
+/* ════════════════════════════════════════════════════════════════
+   HÌNH ẢNH - VIDEO SPLIT GALLERY VIEWER (AUTO-PLAY & SCROLL)
+════════════════════════════════════════════════════════════════ */
+let facilityAutoPlayInterval = null;
+let currentFacilityIdx = 0;
+
+function switchFacilityByIndex(idx) {
+  const cards = document.querySelectorAll('.facility-side-card');
+  if (!cards.length) return;
+  
+  currentFacilityIdx = (idx + cards.length) % cards.length;
+  const targetCard = cards[currentFacilityIdx];
+  const img = targetCard.querySelector('img');
+  if (!img) return;
+
+  const mainImg = document.getElementById('facility-main-img');
+  if (mainImg && !mainImg.src.includes(img.getAttribute('src'))) {
+    mainImg.classList.add('fade-out');
+    setTimeout(() => {
+      mainImg.src = img.getAttribute('src');
+      mainImg.classList.remove('fade-out');
+    }, 160);
+  }
+
+  cards.forEach(c => c.classList.remove('active'));
+  targetCard.classList.add('active');
+
+  // Scroll side list smoothly so the active card stays in view
+  const sideGrid = document.querySelector('.facilities-side-grid');
+  if (sideGrid) {
+    if (window.innerWidth > 992) {
+      const cardTop = targetCard.offsetTop - sideGrid.offsetTop;
+      sideGrid.scrollTo({
+        top: Math.max(0, cardTop - 10),
+        behavior: 'smooth'
+      });
+    } else {
+      const cardLeft = targetCard.offsetLeft - sideGrid.offsetLeft;
+      sideGrid.scrollTo({
+        left: Math.max(0, cardLeft - 10),
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+
+function startFacilityAutoPlay() {
+  if (facilityAutoPlayInterval) clearInterval(facilityAutoPlayInterval);
+  facilityAutoPlayInterval = setInterval(() => {
+    switchFacilityByIndex(currentFacilityIdx + 1);
+  }, 4000);
+}
+
+window.switchFacilityImg = function(src, cardEl) {
+  const cards = Array.from(document.querySelectorAll('.facility-side-card'));
+  const idx = cards.indexOf(cardEl);
+  if (idx !== -1) {
+    switchFacilityByIndex(idx);
+    startFacilityAutoPlay();
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sideGrid = document.querySelector('.facilities-side-grid');
+  if (sideGrid) {
+    startFacilityAutoPlay();
+    sideGrid.addEventListener('mouseenter', () => clearInterval(facilityAutoPlayInterval));
+    sideGrid.addEventListener('mouseleave', () => startFacilityAutoPlay());
+  }
+});

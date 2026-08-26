@@ -30,7 +30,7 @@ get_header(); ?>
               <img src="photo/dao-tao/13.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
             </div>
           </a>
-          <div class="cme-card-body" style="padding:20px;display:flex;flex-direction:column;justify-content:space-between;flex:1;background:#ffffff;">
+          <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
             <div>
               <div style="display:flex;align-items:center;margin-bottom:12px;">
                 <span style="font-size:0.84rem;color:#64748b;font-weight:600;display:flex;align-items:center;gap:6px;">
@@ -42,7 +42,7 @@ get_header(); ?>
                 <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2</a>
               </h3>
             </div>
-            <div class="cme-card-footer" style="padding-top:16px;margin-top:16px;border-top:1px solid #f1f5f9;display:flex;align-items:center;justify-content:flex-end;">
+            <div class="cme-card-footer" style="padding-top:8px;margin-top:8px;border-top:none;display:flex;align-items:center;justify-content:flex-end;">
               <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
             </div>
           </div>
@@ -55,7 +55,7 @@ get_header(); ?>
               <img src="photo/dao-tao/11.png" alt="Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
             </div>
           </a>
-          <div class="cme-card-body" style="padding:20px;display:flex;flex-direction:column;justify-content:space-between;flex:1;background:#ffffff;">
+          <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
             <div>
               <div style="display:flex;align-items:center;margin-bottom:12px;">
                 <span style="font-size:0.84rem;color:#64748b;font-weight:600;display:flex;align-items:center;gap:6px;">
@@ -67,7 +67,7 @@ get_header(); ?>
                 <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4</a>
               </h3>
             </div>
-            <div class="cme-card-footer" style="padding-top:16px;margin-top:16px;border-top:1px solid #f1f5f9;display:flex;align-items:center;justify-content:flex-end;">
+            <div class="cme-card-footer" style="padding-top:8px;margin-top:8px;border-top:none;display:flex;align-items:center;justify-content:flex-end;">
               <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
             </div>
           </div>
@@ -80,7 +80,7 @@ get_header(); ?>
               <img src="photo/dao-tao/12.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
             </div>
           </a>
-          <div class="cme-card-body" style="padding:20px;display:flex;flex-direction:column;justify-content:space-between;flex:1;background:#ffffff;">
+          <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
             <div>
               <div style="display:flex;align-items:center;margin-bottom:12px;">
                 <span style="font-size:0.84rem;color:#64748b;font-weight:600;display:flex;align-items:center;gap:6px;">
@@ -92,7 +92,7 @@ get_header(); ?>
                 <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3</a>
               </h3>
             </div>
-            <div class="cme-card-footer" style="padding-top:16px;margin-top:16px;border-top:1px solid #f1f5f9;display:flex;align-items:center;justify-content:flex-end;">
+            <div class="cme-card-footer" style="padding-top:8px;margin-top:8px;border-top:none;display:flex;align-items:center;justify-content:flex-end;">
               <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
             </div>
           </div>

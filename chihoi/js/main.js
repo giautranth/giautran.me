@@ -474,7 +474,7 @@ function initModalHandlers() {
           <div style="color: #334e68; font-size: 0.95rem; line-height: 1.8;">
             <p style="margin-bottom: 12px;"><strong>Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam</strong> tiếp tục đẩy mạnh các hoạt động kết nối, đào tạo liên tục và đồng hành cùng các bệnh viện hội viên nhằm nâng cao chất lượng dịch vụ khám chữa bệnh, bảo đảm quyền lợi người bệnh và nâng cao hiệu quả quản trị y tế tư nhân.</p>
             <p style="margin-bottom: 12px;">Trong thời gian tới, Chi hội sẽ tổ chức chuỗi hội thảo chuyên đề, giao lưu chia sẻ kinh nghiệm quản lý bệnh viện thông minh, ứng dụng chuyển đổi số trong hồ sơ bệnh án điện tử (EMR) và các chương trình bồi dưỡng nâng cao tay nghề lâm sàng.</p>
-            <p style="margin-bottom: 16px;">Các bệnh viện, phòng khám hội viên có nhu cầu tham gia phối hợp hoặc đăng ký hội viên chính thức vui lòng liên hệ Ban Thường Trực Chi hội qua Hotline: <strong>1900 8146</strong> hoặc email: <strong>vanphong@chihoiyte.vn</strong>.</p>
+            <p style="margin-bottom: 16px;">Các bệnh viện, phòng khám hội viên có nhu cầu tham gia phối hợp hoặc đăng ký hội viên chính thức vui lòng liên hệ Ban Thường Trực Chi hội qua Hotline: <strong>1900 8146</strong> hoặc email: <strong>info@chihoibenhvien.com</strong>.</p>
           </div>
         `;
       }

@@ -93,11 +93,26 @@ function initBannerSlider() {
   }
 
   function stopAutoPlay() {
-    if (slideInterval) clearInterval(slideInterval);
+    if (slideInterval) {
+      clearInterval(slideInterval);
+      slideInterval = null;
+    }
   }
 
-  if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); nextSlide(); startAutoPlay(); });
-  if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); prevSlide(); startAutoPlay(); });
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      nextSlide();
+      startAutoPlay();
+    });
+  }
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      prevSlide();
+      startAutoPlay();
+    });
+  }
 
   dots.forEach(dot => {
     dot.addEventListener('click', (e) => {
@@ -112,29 +127,30 @@ function initBannerSlider() {
 
   const bannerWrapper = document.querySelector('.banner-carousel-wrapper, .aih-hero-banner-section');
   if (bannerWrapper) {
-    bannerWrapper.addEventListener('mouseenter', stopAutoPlay);
-    bannerWrapper.addEventListener('mouseleave', startAutoPlay);
-
     // Touch swipe support for mobile
     let touchStartX = 0;
     let touchEndX = 0;
 
     bannerWrapper.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-      stopAutoPlay();
+      if (e.changedTouches && e.changedTouches[0]) {
+        touchStartX = e.changedTouches[0].screenX;
+      }
     }, { passive: true });
 
     bannerWrapper.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      if (touchStartX - touchEndX > 50) {
-        nextSlide();
-      } else if (touchEndX - touchStartX > 50) {
-        prevSlide();
+      if (e.changedTouches && e.changedTouches[0]) {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) {
+          nextSlide();
+        } else if (touchEndX - touchStartX > 50) {
+          prevSlide();
+        }
+        startAutoPlay();
       }
-      startAutoPlay();
     }, { passive: true });
   }
 
+  // Tự động chuyển banner đúng chu kỳ 5 giây (5s)
   startAutoPlay();
 }
 

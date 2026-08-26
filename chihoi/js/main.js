@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initBannerSlider();
   initScrollCarousels();
+    initSmoothMarquees();
   initTrainingTabs();
   initNewsTabs();
   initMemberTableSearch();
@@ -756,28 +757,140 @@ function scrollSectionCards(gridId, direction) {
 }
 window.scrollSectionCards = scrollSectionCards;
 
-/* ── MARQUEE MANUAL NAVIGATION ARROWS ── */
+/* ==========================================================================
+   INTERACTIVE SMOOTH MARQUEE CONTROLLER (HỘI VIÊN & ĐỐI TÁC ĐỒNG HÀNH)
+   Auto-scroll vô tận 60fps, tạm dừng khi hover, cuộn mượt khi click mũi tên
+   ========================================================================== */
+const marqueeControllers = {};
+
+class SmoothMarquee {
+  constructor(trackId, speed = 0.55) {
+    this.track = document.getElementById(trackId);
+    if (!this.track) return;
+
+    this.trackId = trackId;
+    this.speed = speed; // Tốc độ tự cuộn (pixel per frame)
+    this.currentX = 0;
+    this.targetX = 0;
+    this.isHovered = false;
+    this.isNudging = false;
+    this.halfWidth = 2000;
+
+    this.init();
+  }
+
+  init() {
+    // Đảm bảo không bị CSS animation ghi đè
+    this.track.style.animation = 'none';
+    this.track.style.willChange = 'transform';
+
+    this.calculateHalfWidth();
+
+    // Tính toán lại halfWidth khi ảnh tải xong hoặc resize
+    window.addEventListener('resize', () => this.calculateHalfWidth());
+    window.addEventListener('load', () => this.calculateHalfWidth());
+
+    // Wrapper hover event để dừng/chạy tiếp
+    const wrapper = this.track.closest('.infinite-marquee-wrapper') || this.track.parentElement;
+    if (wrapper) {
+      wrapper.addEventListener('mouseenter', () => { this.isHovered = true; });
+      wrapper.addEventListener('mouseleave', () => { this.isHovered = false; });
+
+      // Hỗ trợ vuốt chạm trên Mobile
+      let touchStartX = 0;
+      wrapper.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        this.isHovered = true;
+      }, { passive: true });
+
+      wrapper.addEventListener('touchmove', (e) => {
+        const currentTouchX = e.touches[0].clientX;
+        const diff = touchStartX - currentTouchX;
+        if (Math.abs(diff) > 8) {
+          this.nudge(diff > 0 ? 1 : -1, Math.min(Math.abs(diff) * 1.5, 120));
+          touchStartX = currentTouchX;
+        }
+      }, { passive: true });
+
+      wrapper.addEventListener('touchend', () => {
+        this.isHovered = false;
+      }, { passive: true });
+    }
+
+    // Bắt đầu vòng lặp animation
+    this.loop = this.loop.bind(this);
+    requestAnimationFrame(this.loop);
+  }
+
+  calculateHalfWidth() {
+    if (this.track && this.track.scrollWidth > 0) {
+      // Set 1 và Set 2 giống hệt nhau nên độ dài 1 chu kỳ là scrollWidth / 2
+      this.halfWidth = this.track.scrollWidth / 2;
+    }
+  }
+
+  nudge(direction, distance) {
+    if (!distance) {
+      distance = window.innerWidth <= 768 ? 200 : 320;
+    }
+    this.isNudging = true;
+    this.targetX += direction * distance;
+  }
+
+  loop() {
+    this.calculateHalfWidth();
+
+    // Nếu không hover và không đang bấm nút cuộn thì tự động trôi từ từ
+    if (!this.isHovered && !this.isNudging) {
+      this.targetX += this.speed;
+    }
+
+    // Nội suy mượt (lerp) từ currentX tới targetX
+    const diff = this.targetX - this.currentX;
+    if (Math.abs(diff) > 0.05) {
+      this.currentX += diff * (this.isNudging ? 0.12 : 0.25);
+    } else {
+      this.currentX = this.targetX;
+      this.isNudging = false;
+    }
+
+    // Vòng lặp vô tận không bao giờ giật lag
+    if (this.halfWidth > 100) {
+      while (this.currentX >= this.halfWidth) {
+        this.currentX -= this.halfWidth;
+        this.targetX -= this.halfWidth;
+      }
+      while (this.currentX < 0) {
+        this.currentX += this.halfWidth;
+        this.targetX += this.halfWidth;
+      }
+    }
+
+    this.track.style.transform = `translate3d(${-this.currentX.toFixed(2)}px, 0, 0)`;
+    requestAnimationFrame(this.loop);
+  }
+}
+
+function initSmoothMarquees() {
+  if (document.getElementById('marqueeTrackLane1')) {
+    marqueeControllers['marqueeTrackLane1'] = new SmoothMarquee('marqueeTrackLane1', 0.55);
+  }
+  if (document.getElementById('marqueeTrackPartner')) {
+    marqueeControllers['marqueeTrackPartner'] = new SmoothMarquee('marqueeTrackPartner', 0.5);
+  }
+}
+
+// Global nudge function được gọi khi bấm nút mũi tên prev/next
 function nudgeMarquee(trackId, direction) {
-  const track = document.getElementById(trackId);
-  if (!track) return;
-  
-  const style = window.getComputedStyle(track);
-  const matrix = new DOMMatrixReadOnly(style.transform);
-  const currentX = matrix.m41;
-  const shift = direction * (window.innerWidth <= 768 ? 200 : 360);
-  let newX = currentX - shift;
-  
-  const halfWidth = (track.scrollWidth / 2) || 2000;
-  if (newX < -halfWidth) newX += halfWidth;
-  if (newX > 0) newX -= halfWidth;
-
-  track.style.animation = 'none';
-  track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-  track.style.transform = `translateX(${newX}px)`;
-
-  setTimeout(() => {
-    track.style.transition = 'none';
-    track.style.animation = '';
-  }, 450);
+  if (marqueeControllers[trackId]) {
+    marqueeControllers[trackId].nudge(direction);
+  } else {
+    // Fallback nếu chưa khởi tạo controller
+    const track = document.getElementById(trackId);
+    if (track) {
+      marqueeControllers[trackId] = new SmoothMarquee(trackId, 0.55);
+      marqueeControllers[trackId].nudge(direction);
+    }
+  }
 }
 window.nudgeMarquee = nudgeMarquee;

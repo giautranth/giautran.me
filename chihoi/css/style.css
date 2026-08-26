@@ -950,7 +950,8 @@ body {
   gap: 20px;
   width: max-content;
   will-change: transform;
-  animation: infiniteScroll 85s linear infinite !important;
+  /* Animation handled smoothly via MarqueeController JS */
+  animation: none !important;
 }
 
 .infinite-marquee-wrapper:hover .infinite-marquee-track {

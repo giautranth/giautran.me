@@ -1064,21 +1064,21 @@ const siteSearchData = [
   },
   // Tin tức
   {
-    title: "Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh, Thành Phía Nam",
+    title: "Ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam",
     category: "Tin tức",
     badge: "badge-tin-tuc",
     desc: "Lễ ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam (Nhiệm kỳ 2026 – 2029).",
     url: "tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm"
   },
   {
-    title: "Diễn Đàn Phát Triển Y Tế Tư Nhân Việt Nam Năm 2026: Đổi Mới Quản Trị Y Tế",
+    title: "Diễn đàn phát triển y tế tư nhân Việt Nam năm 2026: Đổi mới quản trị y tế",
     category: "Tin tức",
     badge: "badge-tin-tuc",
     desc: "Thông qua Tuyên bố Thành phố Hồ Chí Minh về phát triển y tế tư nhân Việt Nam 2026.",
     url: "tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026"
   },
   {
-    title: "Kết Nối Sức Mạnh Y Tế Tư Nhân Phía Nam: Madam Trần Thị Lâm Giữ Vai Trò Chủ Tịch Chi Hội",
+    title: "Kết nối sức mạnh y tế tư nhân phía Nam: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội",
     category: "Tin tức",
     badge: "badge-tin-tuc",
     desc: "Đại hội thành lập Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam.",

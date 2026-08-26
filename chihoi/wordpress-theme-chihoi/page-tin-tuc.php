@@ -39,7 +39,7 @@ get_header(); ?>
               <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>21/07/2026</div>
               <h3 class="news-card-title">
                 <a href="tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" style="color:inherit;text-decoration:none;">
-                  Kết Nối Sức Mạnh Y Tế Tư Nhân Phía Nam: Madam Trần Thị Lâm Giữ Vai Trò Chủ Tịch Chi Hội
+                  Kết nối sức mạnh y tế tư nhân phía Nam: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội
                 </a>
               </h3>
             </div>
@@ -59,7 +59,7 @@ get_header(); ?>
               <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>19/08/2026</div>
               <h3 class="news-card-title">
                 <a href="tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" style="color:inherit;text-decoration:none;">
-                  Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh, Thành Phía Nam
+                  Ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam
                 </a>
               </h3>
             </div>
@@ -79,7 +79,7 @@ get_header(); ?>
               <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>21/08/2026</div>
               <h3 class="news-card-title">
                 <a href="tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" style="color:inherit;text-decoration:none;">
-                  Diễn Đàn Phát Triển Y Tế Tư Nhân Việt Nam Năm 2026 (Lần Thứ II) Thành Công Tốt Đẹp
+                  Diễn đàn phát triển y tế tư nhân Việt Nam năm 2026 (lần thứ II) thành công tốt đẹp
                 </a>
               </h3>
             </div>

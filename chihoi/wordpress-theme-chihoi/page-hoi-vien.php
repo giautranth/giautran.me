@@ -45,17 +45,17 @@ get_header(); ?>
             <tr>
               <td class="col-stt">3</td>
               <td class="col-name">Bệnh viện FV (Pháp Việt)</td>
-              <td>Số 6 Nguyễn Lương Bằng, Khu đô thị Phú Mỹ Hưng, Phường Tân Phú, Quận 7, TP. Hồ Chí Minh</td>
+              <td>Số 6 Nguyễn Lương Bằng, Khu đô thị Phú Mỹ Hưng, Phường Tân Mỹ, Quận 7, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">4</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế Hồng Bàng</td>
-              <td>Số 3 Hoàng Việt, Phường 4, Quận Tân Bình, TP. Hồ Chí Minh</td>
+              <td>Số 3 Hoàng Việt, Phường Tân Sơn Nhất, Quận Tân Bình, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">5</td>
               <td class="col-name">Hệ thống Bệnh viện Sài Gòn - ITO</td>
-              <td>Số 305 Lê Văn Sỹ, Phường 2, Quận Tân Bình, TP. Hồ Chí Minh</td>
+              <td>Số 305 Lê Văn Sỹ, Phường Tân Sơn Hòa, Quận Tân Bình, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">6</td>
@@ -70,17 +70,17 @@ get_header(); ?>
             <tr>
               <td class="col-stt">8</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế Minh Anh</td>
-              <td>Số 36 Đường Số 1B, Phường Bình Trị Đông B, Quận Bình Tân, TP. Hồ Chí Minh</td>
+              <td>Số 36 Đường Số 1B, Phường An Lạc, Quận Bình Tân, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">9</td>
               <td class="col-name">Bệnh viện Phương Nam</td>
-              <td>Số 2 Nguyễn Lương Bằng, Phường Tân Phú, Quận 7, TP. Hồ Chí Minh</td>
+              <td>Số 2 Nguyễn Lương Bằng, Phường Tân Mỹ, Quận 7, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">10</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế Vinmec Central Park</td>
-              <td>Số 208 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh</td>
+              <td>Số 208 Nguyễn Hữu Cảnh, Phường Thạnh Mỹ Tây, Quận Bình Thạnh, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">11</td>
@@ -105,12 +105,12 @@ get_header(); ?>
             <tr>
               <td class="col-stt">15</td>
               <td class="col-name">Bệnh viện Đa khoa Việt Mỹ</td>
-              <td>Số 1 Hoàng Việt, Phường 4, Quận Tân Bình, TP. Hồ Chí Minh</td>
+              <td>Số 1 Hoàng Việt, Phường Tân Sơn Nhất, Quận Tân Bình, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">16</td>
               <td class="col-name">Bệnh viện Đa khoa Hoàn Mỹ Sài Gòn</td>
-              <td>Số 60-60A Phan Xích Long, Phường 1, Quận Phú Nhuận, TP. Hồ Chí Minh</td>
+              <td>Số 60-60A Phan Xích Long, Phường Cầu Kiệu, Quận Phú Nhuận, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">17</td>
@@ -125,7 +125,7 @@ get_header(); ?>
             <tr>
               <td class="col-stt">19</td>
               <td class="col-name">Phòng khám Đa khoa Thuận Kiều</td>
-              <td>Số 623-625 Nguyễn Chí Thanh, Phường 14, Quận 11, TP. Hồ Chí Minh</td>
+              <td>Số 623-625 Nguyễn Chí Thanh, Phường Hòa Bình, Quận 11, TP. Hồ Chí Minh</td>
             </tr>
             <tr>
               <td class="col-stt">20</td>

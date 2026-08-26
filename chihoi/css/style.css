@@ -1480,20 +1480,11 @@ body {
   box-shadow: 0 0 0 3px rgba(0, 135, 186, 0.12);
 }
 
-.member-table-container {
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  overflow-x: auto;
-  box-shadow: var(--shadow-card);
-  margin-bottom: 30px;
-}
-
 /* ==========================================================================
-   BẢNG THÀNH VIÊN / HỘI VIÊN (Thu Hẹp Chiều Rộng Vừa Khít Nội Dung)
+   BẢNG THÀNH VIÊN / HỘI VIÊN (Không Có Thanh Cuộn Ngang Trên Desktop)
    ========================================================================== */
 .table-filter-bar {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto 16px auto;
   display: flex;
   justify-content: flex-start;
@@ -1501,14 +1492,13 @@ body {
 }
 
 .member-table-container {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto 30px auto;
   background: #ffffff;
   border: 1px solid #cbd5e1;
   border-radius: 12px;
-  overflow-x: auto;
+  overflow: hidden;
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
-  -webkit-overflow-scrolling: touch;
 }
 
 .member-data-table {
@@ -1518,6 +1508,7 @@ body {
   font-size: 0.88rem;
   line-height: 1.5;
   margin: 0;
+  table-layout: auto;
 }
 
 .member-data-table th {
@@ -1532,7 +1523,6 @@ body {
   letter-spacing: 0.3px;
   text-align: center !important;
   vertical-align: middle;
-  white-space: nowrap;
 }
 
 .member-data-table th:first-child {
@@ -1552,7 +1542,6 @@ body {
   border: 1px solid var(--border-light, #e2e8f0);
   vertical-align: middle;
   font-weight: 400 !important;
-  white-space: nowrap;
 }
 
 .member-data-table td:first-child {
@@ -1577,19 +1566,15 @@ body {
 
 .member-data-table th.col-stt,
 .member-data-table td.col-stt {
-  width: 50px;
-  min-width: 45px;
-  max-width: 60px;
+  width: 55px;
   text-align: center !important;
   white-space: nowrap;
 }
 
 .member-data-table th.col-name,
 .member-data-table td.col-name {
-  width: 42%;
-  min-width: 320px;
+  width: 38%;
   text-align: left !important;
-  white-space: nowrap;
 }
 
 .member-data-table th.col-name {
@@ -1598,15 +1583,23 @@ body {
 
 .member-data-table th.col-address,
 .member-data-table td.col-address {
-  width: 58%;
-  min-width: 380px;
+  width: 62%;
   text-align: left !important;
-  white-space: nowrap;
   color: #334155 !important;
 }
 
 .member-data-table th.col-address {
   text-align: center !important;
+}
+
+@media (max-width: 767px) {
+  .member-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .member-data-table {
+    min-width: 600px;
+  }
 }
 
 /* ==========================================================================

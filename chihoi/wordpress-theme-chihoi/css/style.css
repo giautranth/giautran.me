@@ -774,7 +774,7 @@ body {
   left: 0;
   width: 42px;
   height: 3px;
-  background: linear-gradient(90deg, var(--brand-red) 0%, var(--brand-cyan) 100%);
+  background: var(--brand-red, #e22b27) !important;
   border-radius: 2px;
 }
 
@@ -1800,7 +1800,7 @@ textarea.form-control {
   left: 0;
   width: 32px;
   height: 2.5px;
-  background: linear-gradient(90deg, var(--brand-red) 0%, var(--brand-cyan) 100%);
+  background: var(--brand-red, #e22b27) !important;
   border-radius: 2px;
 }
 

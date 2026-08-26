@@ -90,13 +90,7 @@
             Chi hội được thành lập nhằm tăng cường liên kết chuyên môn, quy tụ nguồn lực, phát huy thế mạnh của hơn 50 cơ sở y tế tư nhân tại TP.HCM và các tỉnh miền Nam; bảo vệ quyền và lợi ích hợp pháp của các đơn vị hội viên; đẩy mạnh đào tạo y khoa liên tục (CME), nghiên cứu khoa học và chuyển đổi số y tế, góp phần tích cực cùng hệ thống y tế công lập trong sự nghiệp chăm sóc, bảo vệ sức khỏe nhân dân.
           </p>
 
-          <div class="about-quote-box">
-            <div class="quote-icon">“</div>
-            <div class="quote-content">
-              <strong>TS.BS Hà Anh Đức (Cục trưởng Cục Quản lý KCB - Bộ Y tế):</strong>
-              <p><em>"Khối y tế tư nhân phía Nam đóng vai trò then chốt trong giảm tải cho các bệnh viện tuyến cuối, là động lực quan trọng thúc đẩy y tế chuyên sâu, kỹ thuật cao và đổi mới sáng tạo phục vụ nhân dân."</em></p>
-            </div>
-          </div>
+          
         </div>
 
         <div>
@@ -116,16 +110,11 @@
       <div class="strategic-container">
         <div class="strategic-header-row">
           <div>
-            <div class="about-section-tag">VĂN KIỆN NHIỆM KỲ 2026 – 2030</div>
+            
             <h2 class="about-section-heading" style="margin-bottom:4px;">10 Định Hướng Chiến Lược Phát Triển</h2>
-            <div class="strategic-motto">
-              Phương châm: <strong>"Đoàn kết – Hợp tác – Phát triển bền vững"</strong>
-            </div>
+            
           </div>
-          <span class="strategic-approved-badge">
-            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            Được Bộ Y tế & Hiệp hội Phê chuẩn
-          </span>
+          
         </div>
 
         <!-- 10 Color-Coded Direction Cards -->
@@ -217,9 +206,7 @@
             <h3 class="programs-heading-title">
               08 Chương Trình Hành Động Trọng Điểm (2026 – 2027)
             </h3>
-            <span class="programs-motto-badge">
-              "Kết nối thực chất, tạo giá trị cho hội viên"
-            </span>
+            
           </div>
 
           <div class="programs-grid-modern">
@@ -273,57 +260,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- 4. HIGHLIGHTED ACTIVITIES PHOTO GALLERY (FV & Pinterest Style Mosaic) -->
-      <div class="about-gallery-section">
-        <div class="about-section-tag">
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          HÌNH ẢNH HOẠT ĐỘNG
-        </div>
-        <h2 class="about-section-heading" style="margin-bottom: 20px;">Dấu Ấn Nổi Bật Của Chi Hội</h2>
-
-        <div class="about-gallery-grid">
-          <div class="gallery-photo-card">
-            <div class="gallery-photo-wrap">
-              <img src="photo/news/event-photo-2.webp" alt="Lễ ra mắt Ban chấp hành Chi hội" loading="lazy" />
-            </div>
-            <div class="gallery-photo-info">
-              <div class="gallery-photo-tag">Sự kiện ra mắt</div>
-              <h4 class="gallery-photo-title">Hội nghị & Lễ Ra Mắt Ban Chấp Hành Chi Hội</h4>
-            </div>
-          </div>
-
-          <div class="gallery-photo-card">
-            <div class="gallery-photo-wrap">
-              <img src="photo/news/news-dien-dan-y-te-2026.jpg" alt="Diễn đàn phát triển y tế tư nhân" loading="lazy" />
-            </div>
-            <div class="gallery-photo-info">
-              <div class="gallery-photo-tag">Diễn đàn chuyên môn</div>
-              <h4 class="gallery-photo-title">Diễn Đàn Phát Triển Y Tế Tư Nhân Toàn Quốc 2026</h4>
-            </div>
-          </div>
-
-          <div class="gallery-photo-card">
-            <div class="gallery-photo-wrap">
-              <img src="photo/news/event-photo-3.webp" alt="Đào tạo CME liên viện" loading="lazy" />
-            </div>
-            <div class="gallery-photo-info">
-              <div class="gallery-photo-tag">Đào tạo CME</div>
-              <h4 class="gallery-photo-title">Khóa Đào Tạo Y Khoa Liên Tục Cấp Chứng Chỉ CME</h4>
-            </div>
-          </div>
-
-          <div class="gallery-photo-card">
-            <div class="gallery-photo-wrap">
-              <img src="photo/news/event-photo-4.webp" alt="Hợp tác liên viện và Telemedicine" loading="lazy" />
-            </div>
-            <div class="gallery-photo-info">
-              <div class="gallery-photo-tag">Liên kết bệnh viện</div>
-              <h4 class="gallery-photo-title">Mạng Lưới Hội Chẩn Lâm Sàng & Quản Trị Y Tế</h4>
-            </div>
-          </div>
-        </div>
       </div>
 
       </div>

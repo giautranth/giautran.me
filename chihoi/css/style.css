@@ -3133,3 +3133,162 @@ body {
   color: #444444 !important;
   transform: translateX(3px);
 }
+
+
+/* ==========================================================================
+   AIH PANORAMIC HERO BANNER SLIDER (Chuẩn Kiến Trúc & Kích Thước Bệnh Viện AIH)
+   Desktop aspect-ratio: 1536/536 (~2.87:1) / 1920/600 (3.2:1)
+   Mobile aspect-ratio: 526/357 (1.47:1)
+   ========================================================================== */
+.home-banner.banner-slider,
+.aih-hero-banner-section {
+  position: relative;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #0b1930;
+  height: auto !important;
+  min-height: unset !important;
+}
+
+.banner-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-slides-track {
+  position: relative;
+  width: 100%;
+}
+
+.banner-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.75s ease-in-out;
+  z-index: 1;
+}
+
+.banner-slide.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.home-banner .image,
+.home-banner .img-cover,
+.banner-slide .img-cover {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 1536 / 536; /* Chuẩn Desktop AIH */
+  background-color: #0b1930;
+}
+
+@media (max-width: 767.98px) {
+  .home-banner .image,
+  .home-banner .img-cover,
+  .banner-slide .img-cover {
+    aspect-ratio: 526 / 357 !important; /* Chuẩn Mobile AIH 1.47:1 */
+  }
+}
+
+.home-banner .img-cover img,
+.banner-slide .banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nút Chuyển Slide Chuẩn AIH */
+.banner-nav-arrows .button-prev,
+.banner-nav-arrows .button-next {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  z-index: 15;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+  color: #2C3691;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.banner-nav-arrows .button-next {
+  left: auto;
+  right: 24px;
+}
+
+.banner-nav-arrows .button-prev:hover,
+.banner-nav-arrows .button-next:hover {
+  background: #27AAE1;
+  border-color: #27AAE1;
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 20px rgba(39, 170, 225, 0.45);
+}
+
+@media (max-width: 767.98px) {
+  .banner-nav-arrows .button-prev,
+  .banner-nav-arrows .button-next {
+    width: 36px;
+    height: 36px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.75);
+  }
+  .banner-nav-arrows .button-next {
+    left: auto;
+    right: 10px;
+  }
+}
+
+/* Pagination Dots Chuẩn AIH */
+.banner-pagination-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+}
+
+.banner-pagination-dots .carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.banner-pagination-dots .carousel-dot.active {
+  width: 28px;
+  border-radius: 999px;
+  background: #ffffff;
+  border-color: #ffffff;
+}

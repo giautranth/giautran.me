@@ -51,7 +51,7 @@ function initMobileNav() {
 }
 
 /* ==========================================================================
-   2. BANNER SLIDER
+   2. BANNER SLIDER (Chuẩn AIH Carousel với Autoplay & Touch Swipe)
    ========================================================================== */
 function initBannerSlider() {
   const slides = document.querySelectorAll('.banner-slide');
@@ -87,6 +87,7 @@ function initBannerSlider() {
   }
 
   function startAutoPlay() {
+    stopAutoPlay();
     slideInterval = setInterval(nextSlide, 5000);
   }
 
@@ -94,15 +95,15 @@ function initBannerSlider() {
     if (slideInterval) clearInterval(slideInterval);
   }
 
-  if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); stopAutoPlay(); startAutoPlay(); });
-  if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); stopAutoPlay(); startAutoPlay(); });
+  if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); nextSlide(); startAutoPlay(); });
+  if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); prevSlide(); startAutoPlay(); });
 
   dots.forEach(dot => {
     dot.addEventListener('click', (e) => {
-      const idx = parseInt(e.target.getAttribute('data-slide-index'), 10);
+      e.preventDefault();
+      const idx = parseInt(dot.getAttribute('data-slide-index'), 10);
       if (!isNaN(idx)) {
         showSlide(idx);
-        stopAutoPlay();
         startAutoPlay();
       }
     });
@@ -112,6 +113,25 @@ function initBannerSlider() {
   if (bannerWrapper) {
     bannerWrapper.addEventListener('mouseenter', stopAutoPlay);
     bannerWrapper.addEventListener('mouseleave', startAutoPlay);
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    bannerWrapper.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoPlay();
+    }, { passive: true });
+
+    bannerWrapper.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) {
+        nextSlide();
+      } else if (touchEndX - touchStartX > 50) {
+        prevSlide();
+      }
+      startAutoPlay();
+    }, { passive: true });
   }
 
   startAutoPlay();

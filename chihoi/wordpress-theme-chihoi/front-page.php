@@ -272,7 +272,7 @@
               </p>
             </div>
             <div class="cme-card-footer">
-              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-1">Chi tiết khóa học →</a>
+              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-1">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -297,7 +297,7 @@
               </p>
             </div>
             <div class="cme-card-footer">
-              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-2">Chi tiết khóa học →</a>
+              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-2">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -322,7 +322,7 @@
               </p>
             </div>
             <div class="cme-card-footer">
-              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-3">Chi tiết khóa học →</a>
+              <a href="#" class="link-read-more btn-cme-detail" data-cme-id="cme-3">Xem thêm →</a>
             </div>
           </div>
         </div>

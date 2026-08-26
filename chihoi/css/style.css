@@ -3118,6 +3118,7 @@ body {
 /* Nút Xem Thêm Màu Đen */
 .link-read-more,
 .btn-news-detail,
+.btn-cme-detail,
 .news-card-footer .link-read-more,
 .news-card-footer a {
   color: #000000 !important;

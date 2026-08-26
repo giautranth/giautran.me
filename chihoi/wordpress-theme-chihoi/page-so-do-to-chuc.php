@@ -13,7 +13,7 @@ get_header(); ?>
         <h1 class="section-main-title">SƠ ĐỒ CƠ CẤU TỔ CHỨC</h1>
       </div>
 
-      <!-- Danh Sách Toàn Thể 24 Thành Viên Ban Chấp Hành -->
+      <!-- Danh Sách Ban Chấp Hành -->
       <div class="white-box-card" style="margin-top:30px;">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
           <div>
@@ -208,7 +208,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <!-- Danh Sách Toàn Thể 15 Thành Viên Ban Thư Ký -->
+      <!-- Danh Sách Ban Thư Ký -->
       <div class="white-box-card" style="margin-top:30px;">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
           <div>

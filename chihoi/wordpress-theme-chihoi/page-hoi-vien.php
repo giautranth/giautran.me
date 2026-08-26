@@ -16,9 +16,7 @@ get_header(); ?>
       <!-- Search & Filter Controls -->
       <div class="table-filter-bar">
         <input type="text" id="memberSearchInput" class="table-search-input" placeholder="🔍 Tìm kiếm bệnh viện, địa chỉ..." />
-        <div style="font-size:0.88rem;color:#64748b;">
-          Hiển thị danh sách các bệnh viện và cơ sở y tế hội viên chính thức
-        </div>
+        
       </div>
 
       <!-- Member Table -->

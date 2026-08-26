@@ -21,7 +21,7 @@
           <div class="image img-cover">
             <picture>
               <source media="(max-width: 767.98px)" srcset="photo/banner/3.png">
-              <img src="photo/banner/4.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Đoàn kết Hợp tác Phát triển" class="banner-img">
+              <img src="photo/banner/5.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Đoàn kết Hợp tác Phát triển" class="banner-img">
             </picture>
           </div>
         </div>

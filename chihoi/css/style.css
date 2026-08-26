@@ -314,7 +314,7 @@ body {
   background: transparent !important;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
-  padding: 5px 10px;
+  padding: 2px 8px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -322,7 +322,7 @@ body {
   cursor: pointer;
   font-family: inherit;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 36px;
+  height: 28px;
   user-select: none;
   box-shadow: none;
 }
@@ -2297,9 +2297,9 @@ body {
   }
 
   .lang-current {
-    padding: 5px 8px !important;
+    padding: 2px 7px !important;
     font-size: 0.8rem !important;
-    height: 36px !important;
+    height: 28px !important;
     border-radius: 6px !important;
   }
 

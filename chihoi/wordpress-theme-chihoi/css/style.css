@@ -2149,7 +2149,7 @@ textarea.form-control {
 .footer-slogan-text {
   font-size: 0.82rem;
   font-weight: 800;
-  color: #27AAE1;
+  color: #7dd3fc;
   letter-spacing: 0.6px;
   text-align: center;
   margin-top: 2px;
@@ -3435,7 +3435,7 @@ body {
 .banner-nav-arrows .button-prev:hover,
 .banner-nav-arrows .button-next:hover {
   background: #27AAE1;
-  border-color: #27AAE1;
+  border-color: #7dd3fc;
   color: #ffffff;
   transform: translateY(-50%) scale(1.08);
   box-shadow: 0 6px 20px rgba(39, 170, 225, 0.45);
@@ -3715,7 +3715,7 @@ textarea {
 }
 
 .facility-side-card.active {
-  border-color: #27AAE1;
+  border-color: #7dd3fc;
   box-shadow: 0 6px 20px rgba(39, 170, 225, 0.35);
   transform: scale(1.01);
 }
@@ -3842,7 +3842,7 @@ textarea {
 }
 
 .site-search-input-wrap:focus-within {
-  border-color: #27AAE1;
+  border-color: #7dd3fc;
   background: #ffffff;
   box-shadow: 0 0 0 3px rgba(39, 170, 225, 0.15);
 }
@@ -3963,7 +3963,7 @@ textarea {
 
 .site-search-item:hover {
   background: #ffffff;
-  border-color: #27AAE1;
+  border-color: #7dd3fc;
   box-shadow: 0 4px 12px rgba(39, 170, 225, 0.12);
   transform: translateY(-1px);
 }

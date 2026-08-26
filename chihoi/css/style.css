@@ -5028,15 +5028,20 @@ a[href*="1900"] {
 
 .org-data-table th {
   padding: 13px 16px;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.2px;
   border: 1px solid #1e293b;
   border-top: none;
   vertical-align: middle;
   background: var(--brand-navy, #2C3691);
   color: #ffffff !important;
+  text-align: left;
+}
+
+.org-data-table th.col-stt,
+.org-data-table th.col-role {
+  text-align: center !important;
 }
 
 .org-data-table th:first-child {
@@ -5052,6 +5057,7 @@ a[href*="1900"] {
   border: 1px solid var(--border-light, #e2e8f0);
   vertical-align: middle;
   font-weight: 400;
+  line-height: 1.55;
 }
 
 .org-data-table td:first-child {
@@ -5089,15 +5095,14 @@ a[href*="1900"] {
   width: 18%;
   min-width: 190px;
   color: var(--brand-navy, #2C3691) !important;
-  white-space: nowrap;
 }
 
 .bch-table th.col-role,
 .bch-table td.col-role {
   width: 18%;
-  min-width: 170px;
+  min-width: 160px;
   color: #0f172a !important;
-  white-space: nowrap;
+  text-align: center !important;
 }
 
 .bch-table th.col-pos,
@@ -5129,7 +5134,6 @@ a[href*="1900"] {
   width: 22%;
   min-width: 190px;
   color: var(--brand-navy, #2C3691) !important;
-  white-space: nowrap;
 }
 
 .thuky-table th.col-pos,
@@ -5145,3 +5149,4 @@ a[href*="1900"] {
   min-width: 260px;
   color: #334155 !important;
 }
+

@@ -2444,7 +2444,10 @@ body {
 .footer-brand-title,
 .footer-brand-desc,
 .footer-heading,
-.footer-links-list a,
+.footer-links-list a {
+  color: #ffffff !important;
+}
+
 .footer-copyright-inline { display: none !important; }
 
 .footer-copyright-inline { display: none !important; }

@@ -326,22 +326,7 @@
         </div>
       </div>
 
-      <!-- 5. CALL TO ACTION SECTION (High Impact Gradient) -->
-      <div class="about-cta-card">
-        <div class="about-cta-glow"></div>
-        <div class="about-cta-inner">
-          <h3 class="about-cta-title">Đồng Hành Cùng Chi Hội Bệnh Viện Tư Nhân Phía Nam</h3>
-          <p class="about-cta-desc">
-            Gia nhập mạng lưới hơn 50 bệnh viện và cơ sở y tế uy tín hàng đầu, cùng nhau hợp tác chuyên môn, nâng cao chất lượng dịch vụ và bảo vệ sức khỏe nhân dân.
-          </p>
-          <div class="about-cta-btns">
-            <a href="lien-he" class="btn-primary-red">Đăng Ký Gia Nhập Chi Hội</a>
-            <a href="so-do-to-chuc" class="btn-outline-white">Xem Sơ Đồ Tổ Chức Ban Chấp Hành</a>
-          </div>
-        </div>
       </div>
-
-    </div>
   </main>
 
 <?php get_footer(); ?>

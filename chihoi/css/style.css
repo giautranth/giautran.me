@@ -1490,56 +1490,81 @@ body {
 }
 
 /* ==========================================================================
-   BẢNG THÀNH VIÊN / HỘI VIÊN (Tiêu Đề Canh Giữa, Không Bold Nội Dung)
+   BẢNG THÀNH VIÊN / HỘI VIÊN (Thu Hẹp Chiều Rộng Vừa Khít Nội Dung)
    ========================================================================== */
+.table-filter-bar {
+  max-width: 960px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.member-table-container {
+  max-width: 960px;
+  margin: 0 auto 30px auto;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  -webkit-overflow-scrolling: touch;
+}
+
 .member-data-table {
   width: 100%;
   border-collapse: collapse;
   font-family: 'Noto Sans', sans-serif !important;
-  table-layout: auto;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .member-data-table th {
   background: var(--brand-navy, #2C3691);
   color: #ffffff !important;
   font-family: 'Noto Sans', sans-serif !important;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 800;
-  padding: 13px 16px;
+  padding: 12px 16px;
   border: 1px solid #1e293b;
+  border-top: none;
   letter-spacing: 0.3px;
   text-align: center !important;
   vertical-align: middle;
-}
-
-.member-data-table th.col-stt {
-  width: 60px;
-  min-width: 50px;
-  max-width: 70px;
-  text-align: center !important;
   white-space: nowrap;
 }
 
-.member-data-table th.col-name {
-  width: 35%;
-  min-width: 250px;
-  text-align: center !important;
+.member-data-table th:first-child {
+  border-left: none;
 }
 
-.member-data-table th.col-address {
-  width: auto;
-  text-align: center !important;
+.member-data-table th:last-child {
+  border-right: none;
 }
 
 .member-data-table td {
-  padding: 12px 16px;
+  padding: 11px 16px;
   font-family: 'Noto Sans', sans-serif !important;
-  font-size: 0.92rem;
-  line-height: 1.55;
+  font-size: 0.90rem;
+  line-height: 1.5;
   color: #111827 !important;
   border: 1px solid var(--border-light, #e2e8f0);
   vertical-align: middle;
   font-weight: 400 !important;
+  white-space: nowrap;
+}
+
+.member-data-table td:first-child {
+  border-left: none;
+}
+
+.member-data-table td:last-child {
+  border-right: none;
+}
+
+.member-data-table tr:last-child td {
+  border-bottom: none;
 }
 
 .member-data-table tr:nth-child(even) {
@@ -1550,26 +1575,38 @@ body {
   background-color: #f1f5f9;
 }
 
+.member-data-table th.col-stt,
 .member-data-table td.col-stt {
+  width: 50px;
+  min-width: 45px;
+  max-width: 60px;
   text-align: center !important;
-  font-weight: 400 !important;
-  color: #111827 !important;
   white-space: nowrap;
-  width: 60px;
 }
 
+.member-data-table th.col-name,
 .member-data-table td.col-name {
-  font-weight: 400 !important;
-  color: #111827 !important;
-  width: 35%;
+  width: 42%;
+  min-width: 320px;
   text-align: left !important;
+  white-space: nowrap;
 }
 
+.member-data-table th.col-name {
+  text-align: center !important;
+}
+
+.member-data-table th.col-address,
 .member-data-table td.col-address {
-  font-weight: 400 !important;
-  color: #334155 !important;
-  width: auto;
+  width: 58%;
+  min-width: 380px;
   text-align: left !important;
+  white-space: nowrap;
+  color: #334155 !important;
+}
+
+.member-data-table th.col-address {
+  text-align: center !important;
 }
 
 /* ==========================================================================

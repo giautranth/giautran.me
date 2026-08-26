@@ -1486,8 +1486,8 @@ body {
 }
 
 .member-data-table th.col-stt { width: 60px; text-align: center; }
-.member-data-table th.col-phone { width: 160px; text-align: center; }
-.member-data-table th.col-name { width: 35%; }
+.member-data-table th.col-name { width: 38%; }
+.member-data-table th.col-address { width: auto; }
 
 .member-data-table td {
   padding: 13px 16px;

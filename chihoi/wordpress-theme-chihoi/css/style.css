@@ -132,19 +132,15 @@ body {
 }
 
 .aih-logo-img {
-  height:  30px !important;
-  max-width:  190px !important;
+  height: 44px;
+  max-width: 300px;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
 
 .aih-brand-group:hover .aih-logo-img {
-  height:  30px !important;
-  max-width:  190px !important;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.2s ease;
+  transform: scale(1.02);
 }
 
 .aih-gold-badge {
@@ -2279,12 +2275,12 @@ body {
   }
 
   .aih-logo-img {
-  height:  30px !important;
-  max-width:  190px !important;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
+    height: 33px !important;
+    max-width: 210px !important;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
 
   /* 3. Right: Language Switcher */
   .aih-header-tools {

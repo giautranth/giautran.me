@@ -3187,7 +3187,7 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  aspect-ratio: 1536 / 536; /* Chuẩn Desktop AIH */
+  aspect-ratio: 1920 / 600; /* Chuẩn Desktop AIH */
   background-color: #0b1930;
 }
 
@@ -3195,7 +3195,7 @@ body {
   .home-banner .image,
   .home-banner .img-cover,
   .banner-slide .img-cover {
-    aspect-ratio: 526 / 357 !important; /* Chuẩn Mobile AIH 1.47:1 */
+    aspect-ratio: 1522 / 1033 !important; /* Chuẩn Mobile AIH 1.47:1 */
   }
 }
 

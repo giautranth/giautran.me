@@ -1757,7 +1757,7 @@ textarea.form-control {
   background: linear-gradient(175deg, #1e266d 0%, #161d52 60%, #0e1338 100%);
   color: #cbd5e1;
   padding: 30px 0 16px !important;
-  border-top: 4px solid var(--brand-cyan);
+  border-top: 4px solid var(--brand-red, #e22b27) !important;
 }
 
 .footer-grid {
@@ -2445,7 +2445,7 @@ body {
   background: linear-gradient(175deg, #1e266d 0%, #161d52 60%, #0e1338 100%);
   color: #ffffff !important;
   padding: 30px 0 16px !important;
-  border-top: 4px solid var(--brand-cyan);
+  border-top: 4px solid var(--brand-red, #e22b27) !important;
 }
 
 .site-footer p,

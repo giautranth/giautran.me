@@ -47,59 +47,7 @@
     </div>
   </section>
 
-<!-- ========== 2. GIỚI THIỆU SECTION ========== -->
-  <section class="site-section">
-    <div class="container">
-      <div class="section-label-tag">GIỚI THIỆU</div>
-      <div class="white-box-card intro-content-container">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap;">
-          <span style="background:#fee2e2;color:#e22b27;font-size:0.8rem;font-weight:800;padding:4px 12px;border-radius:999px;">
-            PHƯƠNG CHÂM HOẠT ĐỘNG
-          </span>
-          <strong style="color:#2C3691;font-size:1.05rem;letter-spacing:0.3px;">
-            "Đoàn kết – Hợp tác – Phát triển bền vững"
-          </strong>
-        </div>
-
-        <p class="intro-lead-text">
-          <strong>Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam</strong> là tổ chức xã hội - nghề nghiệp trực thuộc Hiệp hội Bệnh viện Tư nhân Việt Nam, quy tụ các bệnh viện, phòng khám đa khoa - chuyên khoa tư nhân tiêu biểu tại khu vực TP.HCM và các tỉnh, thành phố phía Nam.
-        </p>
-        <p style="font-size:0.95rem;color:#334e68;line-height:1.7;margin-bottom:18px;">
-          Với sứ mệnh là cầu nối vững chắc giữa khối y tế tư nhân với các cơ quan quản lý nhà nước và cộng đồng người bệnh, Chi hội không ngừng nâng cao chất lượng quản trị bệnh viện, triển khai <strong>8 Chương trình trọng điểm</strong> về liên kết chuyên môn, đào tạo CME, chuyển đổi số - AI và bảo vệ quyền lợi hội viên.
-        </p>
-        
-        <div class="intro-features-grid">
-          <div class="intro-stat-item">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">Bệnh viện & PK Hội viên</div>
-          </div>
-          <div class="intro-stat-item">
-            <div class="stat-number">08</div>
-            <div class="stat-label">Chương Trình Trọng Điểm</div>
-          </div>
-          <div class="intro-stat-item">
-            <div class="stat-number">100+</div>
-            <div class="stat-label">Khóa Đào Tạo CME</div>
-          </div>
-          <div class="intro-stat-item">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Chuẩn Hóa Y Khoa</div>
-          </div>
-        </div>
-
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px;flex-wrap:wrap;gap:12px;">
-          <div style="font-size:0.86rem;color:#64748b;">
-            Nhiệm kỳ 2026 – 2029 | Chủ tịch: <strong>Madam Trần Thị Lâm</strong>
-          </div>
-          <a href="ve-chi-hoi" class="link-read-more" style="font-size:0.92rem;color:#27AAE1;font-weight:700;">
-            Xem chi tiết 10 định hướng & 8 chương trình →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!-- ========== 3. HỘI VIÊN CHI HỘI (Infinite Loop Carousel) ========== -->
+  <!-- ========== 3. HỘI VIÊN CHI HỘI (Infinite Loop Carousel) ========== -->
   <section class="site-section bg-subtle">
     <div class="container">
       <div class="section-header-row" style="margin-bottom: 20px;">

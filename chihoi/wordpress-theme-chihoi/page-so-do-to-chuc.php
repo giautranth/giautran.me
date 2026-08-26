@@ -9,8 +9,8 @@ get_header(); ?>
   <main class="site-section">
     <div class="container">
       
-      <div class="page-title-banner">
-        <h1 class="page-main-heading">SƠ ĐỒ CƠ CẤU TỔ CHỨC</h1>
+      <div class="section-header-row">
+        <h1 class="section-main-title">SƠ ĐỒ CƠ CẤU TỔ CHỨC</h1>
       </div>
 
       <!-- Danh Sách Toàn Thể 24 Thành Viên Ban Chấp Hành Theo QĐ 160/2026/QĐ-BTV -->

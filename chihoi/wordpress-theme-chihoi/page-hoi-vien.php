@@ -9,8 +9,8 @@ get_header(); ?>
   <main class="site-section">
     <div class="container">
       
-      <div class="page-title-banner">
-        <h1 class="page-main-heading">DANH SÁCH HỘI VIÊN</h1>
+      <div class="section-header-row">
+        <h1 class="section-main-title">DANH SÁCH HỘI VIÊN</h1>
       </div>
 
       <!-- Search & Filter Controls -->

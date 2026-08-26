@@ -1427,7 +1427,8 @@ body {
    DANH SÁCH HỘI VIÊN (Bảng Tra Cứu Khoa Học, Sạch Sẽ)
    ========================================================================== */
 .page-title-banner {
-  padding: 28px 0 16px;
+  padding: 0 !important;
+  margin: 0 0 24px !important;
 }
 
 .page-main-heading {

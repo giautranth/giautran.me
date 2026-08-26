@@ -1233,7 +1233,7 @@ body {
 .link-read-more {
   font-size: 0.86rem;
   font-weight: 700;
-  color: var(--brand-navy);
+  color: #000000 !important;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -3109,4 +3109,27 @@ body {
   color: #ffffff !important;
   line-height: 1.5;
   text-align: left;
+}
+
+
+/* Nút Xem Thêm Màu Đen */
+.link-read-more,
+.btn-news-detail,
+.news-card-footer .link-read-more,
+.news-card-footer a {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.link-read-more:hover,
+.btn-news-detail:hover,
+.news-card-footer .link-read-more:hover,
+.news-card-footer a:hover {
+  color: #444444 !important;
+  transform: translateX(3px);
 }

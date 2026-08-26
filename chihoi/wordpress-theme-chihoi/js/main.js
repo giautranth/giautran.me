@@ -295,7 +295,7 @@ function initMemberTableSearch() {
    ========================================================================== */
 const cmeData = {
   'cme-1': {
-    title: 'Khóa Đào Tạo Liên Tục (CME): "Tăng Cường Năng Lực Quản Lý Điều Dưỡng" - Khóa 2',
+    title: 'Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2',
     organizer: 'Viện Đào tạo & Nghiên cứu Khoa học (CIMER) - BV Quốc tế City phối hợp Hội Khoa học Sức khỏe TP.HCM (HSA)',
     target: 'Điều dưỡng trưởng bệnh viện, Điều dưỡng trưởng khoa/phòng, Điều dưỡng viên có định hướng quản lý',
     duration: '40 tiết học (Lý thuyết kết hợp thực hành quản trị điều dưỡng thực chiến)',
@@ -308,7 +308,7 @@ const cmeData = {
     pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/07/20.-Thong-bao-chieu-sinh_Tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2-CAP-NHAT.pdf'
   },
   'cme-2': {
-    title: 'Khóa Đào Tạo Cập Nhật Kiến Thức Y Khoa Liên Tục (CME): "An Toàn Người Bệnh" - Khóa 4',
+    title: 'Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4',
     organizer: 'Viện Đào tạo & Nghiên cứu Khoa học (CIMER) - BV Quốc tế City phối hợp Hội Khoa học Sức khỏe TP.HCM (HSA)',
     target: 'Bác sĩ, Điều dưỡng, Kỹ thuật viên, Dược sĩ, Thành viên mạng lưới Quản lý Chất lượng & An toàn Người bệnh',
     duration: '32 tiết học (Phòng ngừa sự cố y khoa, kiểm soát rủi ro và văn hóa an toàn người bệnh)',
@@ -321,7 +321,7 @@ const cmeData = {
     pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/08/28.-TB-chieu-sinh-An-toan-nguoi-benh-khoa-4.pdf'
   },
   'cme-3': {
-    title: 'Khóa Đào Tạo Liên Tục (CME): "Hồi Sinh Tim Phổi Cơ Bản" - Khóa 3',
+    title: 'Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3',
     organizer: 'Viện Đào tạo & Nghiên cứu Khoa học (CIMER) - Bệnh viện Quốc tế City',
     target: 'Bác sĩ, Điều dưỡng, Kỹ thuật viên, Hộ sinh, Cứu hộ viên và Nhân viên y tế tuyến cơ sở',
     duration: '24 tiết học (Huấn luyện CPR/BLS và sử dụng máy AED trên mô hình mô phỏng chuẩn AHA)',

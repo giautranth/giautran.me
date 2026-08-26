@@ -15,193 +15,191 @@ get_header(); ?>
 
       <!-- Danh Sách Ban Chấp Hành -->
       <div class="white-box-card" style="margin-top:30px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
-          <div>
-            <h2 style="color:#2C3691;font-size:1.25rem;font-weight:900;text-transform:uppercase;margin:0;">
-              DANH SÁCH BAN CHẤP HÀNH NHIỆM KỲ 2026 – 2029
-            </h2>
-          </div>
+        <div style="margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
+          <h2 style="color:#2C3691;font-size:1.25rem;font-weight:900;text-transform:uppercase;margin:0;">
+            DANH SÁCH BAN CHẤP HÀNH NHIỆM KỲ 2026 – 2029
+          </h2>
         </div>
 
-        <div style="overflow-x:auto;">
-          <table class="member-data-table" style="width:100%;border-collapse:collapse;margin-bottom:24px;font-size:0.88rem;">
+        <div class="table-responsive-rounded">
+          <table class="org-data-table bch-table">
             <thead>
-              <tr style="background:#2C3691;color:#ffffff;text-align:left;">
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;width:60px;text-align:center;font-weight:800;text-transform:uppercase;">STT</th>
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;min-width:180px;font-weight:800;text-transform:uppercase;">HỌ VÀ TÊN</th>
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;min-width:160px;font-weight:800;text-transform:uppercase;">CHỨC DANH CHI HỘI</th>
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;min-width:200px;font-weight:800;text-transform:uppercase;">CHỨC VỤ</th>
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;min-width:240px;font-weight:800;text-transform:uppercase;">ĐƠN VỊ CÔNG TÁC</th>
+              <tr>
+                <th class="col-stt">STT</th>
+                <th class="col-name">HỌ VÀ TÊN</th>
+                <th class="col-role">CHỨC DANH CHI HỘI</th>
+                <th class="col-pos">CHỨC VỤ</th>
+                <th class="col-org">ĐƠN VỊ CÔNG TÁC</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">1</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Madam Trần Thị Lâm</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Chủ tịch Chi hội</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Chủ tịch sáng lập / Trưởng ban UB Chiến lược / Chủ tịch danh dự</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Tập đoàn Hoa Lâm / Khu Y tế Kỹ thuật cao TP.HCM / Hội KHSK TP.HCM</td>
+                <td class="col-stt">1</td>
+                <td class="col-name">Madam Trần Thị Lâm</td>
+                <td class="col-role">Chủ tịch Chi hội</td>
+                <td class="col-pos">Chủ tịch sáng lập / Trưởng ban UB Chiến lược / Chủ tịch danh dự</td>
+                <td class="col-org">Tập đoàn Hoa Lâm / Khu Y tế Kỹ thuật cao TP.HCM / Hội KHSK TP.HCM</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">2</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">ThS.BS. Trần Quốc Thành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch Thường trực</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Điều hành / Phó Chủ tịch Thường trực</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Quốc tế City & BV Gia An 115 / Hội KHSK TP.HCM</td>
+                <td class="col-stt">2</td>
+                <td class="col-name">ThS.BS. Trần Quốc Thành</td>
+                <td class="col-role">Phó Chủ tịch Thường trực</td>
+                <td class="col-pos">Giám đốc Điều hành / Phó Chủ tịch Thường trực</td>
+                <td class="col-org">Bệnh viện Quốc tế City & BV Gia An 115 / Hội KHSK TP.HCM</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">3</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">TS.BS. Đào Cảnh Tuất</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Phó Chủ tịch / Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Hiệp hội Bệnh viện Tư nhân Việt Nam / Bệnh viện ĐK Quốc tế Hồng Bàng</td>
+                <td class="col-stt">3</td>
+                <td class="col-name">TS.BS. Đào Cảnh Tuất</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Phó Chủ tịch / Chủ tịch</td>
+                <td class="col-org">Hiệp hội Bệnh viện Tư nhân Việt Nam / Bệnh viện ĐK Quốc tế Hồng Bàng</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">4</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Ông Phạm Thế Đồng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Chủ tịch Hội đồng Quản trị</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Hệ thống Bệnh viện Sài Gòn - ITO</td>
+                <td class="col-stt">4</td>
+                <td class="col-name">Ông Phạm Thế Đồng</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Chủ tịch Hội đồng Quản trị</td>
+                <td class="col-org">Hệ thống Bệnh viện Sài Gòn - ITO</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">5</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">PGS.TS. Nguyễn Thanh Bình</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Chủ tịch / Trưởng đơn vị nghiên cứu AI</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Hội KHSK TP.HCM / TT Nghiên cứu Y sinh ĐHYK Phạm Ngọc Thạch</td>
+                <td class="col-stt">5</td>
+                <td class="col-name">PGS.TS. Nguyễn Thanh Bình</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Chủ tịch / Trưởng đơn vị nghiên cứu AI</td>
+                <td class="col-org">Hội KHSK TP.HCM / TT Nghiên cứu Y sinh ĐHYK Phạm Ngọc Thạch</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">6</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">PGS.TS.BS. Nguyễn Thanh Hiệp</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Hiệu trưởng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trường Y và Khoa học Sức khỏe thuộc HUTECH</td>
+                <td class="col-stt">6</td>
+                <td class="col-name">PGS.TS.BS. Nguyễn Thanh Hiệp</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Hiệu trưởng</td>
+                <td class="col-org">Trường Y và Khoa học Sức khỏe thuộc HUTECH</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">7</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">TS.BS. Trương Vĩnh Long</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Phó Ban Ủy ban Chiến lược</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Khu Y tế Kỹ thuật cao Hoa Lâm – Shangri-La</td>
+                <td class="col-stt">7</td>
+                <td class="col-name">TS.BS. Trương Vĩnh Long</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Phó Ban Ủy ban Chiến lược</td>
+                <td class="col-org">Khu Y tế Kỹ thuật cao Hoa Lâm – Shangri-La</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">8</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">TS. Nguyễn Chí Tân</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Chủ tịch HĐTV / Giám đốc / Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Phòng khám Đa khoa Thuận Kiều / CTCP Hạnh Phúc Lab / Hội KHSK TP.HCM</td>
+                <td class="col-stt">8</td>
+                <td class="col-name">TS. Nguyễn Chí Tân</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Chủ tịch HĐTV / Giám đốc / Phó Chủ tịch</td>
+                <td class="col-org">Phòng khám Đa khoa Thuận Kiều / CTCP Hạnh Phúc Lab / Hội KHSK TP.HCM</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">9</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">ThS.BS.CKII. Nguyễn Trương Khương</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Chuyên môn</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Đa khoa Quốc tế Nam Sài Gòn</td>
+                <td class="col-stt">9</td>
+                <td class="col-name">ThS.BS.CKII. Nguyễn Trương Khương</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Giám đốc Chuyên môn</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế Nam Sài Gòn</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">10</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">TS.BS. Trần Chí Cường</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Phó Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Đa khoa Quốc tế S.I.S Cần Thơ</td>
+                <td class="col-stt">10</td>
+                <td class="col-name">TS.BS. Trần Chí Cường</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Giám đốc</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế S.I.S Cần Thơ</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">11</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Trần Thị Chung</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Thư ký Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Tập đoàn Hoa Lâm</td>
+                <td class="col-stt">11</td>
+                <td class="col-name">Bà Trần Thị Chung</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">12</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Trần Ngọc Hiền</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Điều hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Đa khoa Medic Bình Dương</td>
+                <td class="col-stt">12</td>
+                <td class="col-name">Bà Trần Ngọc Hiền</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giám đốc Điều hành</td>
+                <td class="col-org">Bệnh viện Đa khoa Medic Bình Dương</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">13</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">PGS.TS.BS. Nguyễn Hoài Nam</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Chủ tịch Hội đồng Thành viên</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Đa khoa Quốc tế Minh Anh</td>
+                <td class="col-stt">13</td>
+                <td class="col-name">PGS.TS.BS. Nguyễn Hoài Nam</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Chủ tịch Hội đồng Thành viên</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế Minh Anh</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">14</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Phạm Thị Thanh Mai</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Vận hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện FV</td>
+                <td class="col-stt">14</td>
+                <td class="col-name">Bà Phạm Thị Thanh Mai</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giám đốc Vận hành</td>
+                <td class="col-org">Bệnh viện FV</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">15</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">BS.CKII. Nguyễn Hoàng Tuấn</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Phương Nam</td>
+                <td class="col-stt">15</td>
+                <td class="col-name">BS.CKII. Nguyễn Hoàng Tuấn</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giám đốc</td>
+                <td class="col-org">Bệnh viện Phương Nam</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">16</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">BS.CKII. Nguyễn Văn Minh</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Y khoa</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Quốc tế Hồng Bàng</td>
+                <td class="col-stt">16</td>
+                <td class="col-name">BS.CKII. Nguyễn Văn Minh</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giám đốc Y khoa</td>
+                <td class="col-org">Bệnh viện Quốc tế Hồng Bàng</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">17</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">PGS.TS.BS. Trần Minh Hoàng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giảng viên cao cấp / Cố vấn cao cấp Ban Giám đốc</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Đại học Y Dược TP.HCM / Bệnh viện Quốc tế City</td>
+                <td class="col-stt">17</td>
+                <td class="col-name">PGS.TS.BS. Trần Minh Hoàng</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giảng viên cao cấp / Cố vấn cao cấp Ban Giám đốc</td>
+                <td class="col-org">Đại học Y Dược TP.HCM / Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">18</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">BS. Nguyễn Tài Chánh</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Chuyên môn</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Đa khoa Việt Mỹ</td>
+                <td class="col-stt">18</td>
+                <td class="col-name">BS. Nguyễn Tài Chánh</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giám đốc Chuyên môn</td>
+                <td class="col-org">Bệnh viện Đa khoa Việt Mỹ</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">19</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Ông Dương Trung Hiếu</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Vận hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Quốc tế Columbia Asia Bình Dương</td>
+                <td class="col-stt">19</td>
+                <td class="col-name">Ông Dương Trung Hiếu</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giám đốc Vận hành</td>
+                <td class="col-org">Bệnh viện Quốc tế Columbia Asia Bình Dương</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">20</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">BS.CKII. Nguyễn Phi Hùng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trưởng khoa Y Dược / Tổng Giám đốc</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trường Đại học Văn Hiến / Phòng khám Maimay</td>
+                <td class="col-stt">20</td>
+                <td class="col-name">BS.CKII. Nguyễn Phi Hùng</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Trưởng khoa Y Dược / Tổng Giám đốc</td>
+                <td class="col-org">Trường Đại học Văn Hiến / Phòng khám Maimay</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">21</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">TS.BS. Lê Quan Anh Tuấn</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Đa khoa Quốc tế Vinmec Central Park</td>
+                <td class="col-stt">21</td>
+                <td class="col-name">TS.BS. Lê Quan Anh Tuấn</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Giám đốc</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế Vinmec Central Park</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">22</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">BS.CKII. Hoàng Đức Quyền</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Phó Tổng Giám đốc – Trưởng phòng Kế hoạch Tổng hợp</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Triều An</td>
+                <td class="col-stt">22</td>
+                <td class="col-name">BS.CKII. Hoàng Đức Quyền</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Phó Tổng Giám đốc – Trưởng phòng Kế hoạch Tổng hợp</td>
+                <td class="col-org">Bệnh viện Triều An</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">23</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">BS.CKII. Hồ Trúc Lệ</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên Ban Chấp hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Phó Giám đốc</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Tân Hưng</td>
+                <td class="col-stt">23</td>
+                <td class="col-name">BS.CKII. Hồ Trúc Lệ</td>
+                <td class="col-role">Ủy viên Ban Chấp hành</td>
+                <td class="col-pos">Phó Giám đốc</td>
+                <td class="col-org">Bệnh viện Tân Hưng</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">24</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Lê Hồng Bảo Chương</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#0f172a;">Ủy viên - Thư ký</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trưởng phòng Pháp lý cấp cao</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Công ty Cổ phần Y khoa Hoàn Mỹ</td>
+                <td class="col-stt">24</td>
+                <td class="col-name">Bà Lê Hồng Bảo Chương</td>
+                <td class="col-role">Ủy viên - Thư ký</td>
+                <td class="col-pos">Trưởng phòng Pháp lý cấp cao</td>
+                <td class="col-org">Công ty Cổ phần Y khoa Hoàn Mỹ</td>
               </tr>
             </tbody>
           </table>
@@ -210,114 +208,112 @@ get_header(); ?>
 
       <!-- Danh Sách Ban Thư Ký -->
       <div class="white-box-card" style="margin-top:30px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
-          <div>
-            <h2 style="color:#2C3691;font-size:1.25rem;font-weight:900;text-transform:uppercase;margin:0;">
-              DANH SÁCH BAN THƯ KÝ CHI HỘI
-            </h2>
-          </div>
+        <div style="margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
+          <h2 style="color:#2C3691;font-size:1.25rem;font-weight:900;text-transform:uppercase;margin:0;">
+            DANH SÁCH BAN THƯ KÝ CHI HỘI
+          </h2>
         </div>
 
-        <div style="overflow-x:auto;">
-          <table class="member-data-table" style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+        <div class="table-responsive-rounded">
+          <table class="org-data-table thuky-table">
             <thead>
-              <tr style="background:#161d52;color:#ffffff;text-align:left;">
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;width:60px;text-align:center;font-weight:800;text-transform:uppercase;">STT</th>
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;min-width:200px;font-weight:800;text-transform:uppercase;">HỌ VÀ TÊN</th>
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;min-width:260px;font-weight:800;text-transform:uppercase;">CHỨC VỤ</th>
-                <th style="padding:12px 14px;border:1px solid #cbd5e1;min-width:300px;font-weight:800;text-transform:uppercase;">ĐƠN VỊ CÔNG TÁC</th>
+              <tr>
+                <th class="col-stt">STT</th>
+                <th class="col-name">HỌ VÀ TÊN</th>
+                <th class="col-pos">CHỨC VỤ</th>
+                <th class="col-org">ĐƠN VỊ CÔNG TÁC</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">1</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Ông Nguyễn Thanh Tuyền</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Phó Tổng Giám đốc</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Công ty CP Đầu tư Phát triển Hoa Lâm</td>
+                <td class="col-stt">1</td>
+                <td class="col-name">Ông Nguyễn Thanh Tuyền</td>
+                <td class="col-pos">Phó Tổng Giám đốc</td>
+                <td class="col-org">Công ty CP Đầu tư Phát triển Hoa Lâm</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">2</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Lê Thị Nhi Kỳ</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trợ lý Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Tập đoàn Hoa Lâm</td>
+                <td class="col-stt">2</td>
+                <td class="col-name">Bà Lê Thị Nhi Kỳ</td>
+                <td class="col-pos">Trợ lý Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">3</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Đặng Thị Ngọc Bích</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Thư ký Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Tập đoàn Hoa Lâm</td>
+                <td class="col-stt">3</td>
+                <td class="col-name">Bà Đặng Thị Ngọc Bích</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">4</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Bùi Thị Tường Vy</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Thư ký Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Tập đoàn Hoa Lâm</td>
+                <td class="col-stt">4</td>
+                <td class="col-name">Bà Bùi Thị Tường Vy</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">5</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Nguyễn Thị Kim Phượng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Thư ký Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Tập đoàn Hoa Lâm</td>
+                <td class="col-stt">5</td>
+                <td class="col-name">Bà Nguyễn Thị Kim Phượng</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">6</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Ông Nguyễn Thể Hưng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Thư ký Chủ tịch</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Tập đoàn Hoa Lâm</td>
+                <td class="col-stt">6</td>
+                <td class="col-name">Ông Nguyễn Thể Hưng</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">7</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Nguyễn Thị Huế</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Giám đốc Nhân sự</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
+                <td class="col-stt">7</td>
+                <td class="col-name">Bà Nguyễn Thị Huế</td>
+                <td class="col-pos">Giám đốc Nhân sự</td>
+                <td class="col-org">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">8</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Nguyễn Thị Kim Thúy</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trưởng phòng Thương hiệu & Truyền thông cấp cao</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
+                <td class="col-stt">8</td>
+                <td class="col-name">Bà Nguyễn Thị Kim Thúy</td>
+                <td class="col-pos">Trưởng phòng Thương hiệu & Truyền thông cấp cao</td>
+                <td class="col-org">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">9</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Nguyễn Thị Lan Hương</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trưởng phòng Trải nghiệm Khách hàng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Gia An 115</td>
+                <td class="col-stt">9</td>
+                <td class="col-name">Bà Nguyễn Thị Lan Hương</td>
+                <td class="col-pos">Trưởng phòng Trải nghiệm Khách hàng</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">10</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Trần Thị Thu</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trưởng phòng Trải nghiệm Khách hàng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Quốc tế City</td>
+                <td class="col-stt">10</td>
+                <td class="col-name">Bà Trần Thị Thu</td>
+                <td class="col-pos">Trưởng phòng Trải nghiệm Khách hàng</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">11</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Ông Hồ Trọng Nhân</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trưởng phòng Thiết bị Y tế CC kiêm Quản lý CNTT</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Quốc tế City</td>
+                <td class="col-stt">11</td>
+                <td class="col-name">Ông Hồ Trọng Nhân</td>
+                <td class="col-pos">Trưởng phòng Thiết bị Y tế CC kiêm Quản lý CNTT</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">12</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Lê Nguyễn Hồng Anh</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trưởng phòng Mua hàng cấp cao</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Quốc tế City</td>
+                <td class="col-stt">12</td>
+                <td class="col-name">Bà Lê Nguyễn Hồng Anh</td>
+                <td class="col-pos">Trưởng phòng Mua hàng cấp cao</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">13</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Vũ Thị Thu</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Phó phòng Mua hàng</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Gia An 115</td>
+                <td class="col-stt">13</td>
+                <td class="col-name">Bà Vũ Thị Thu</td>
+                <td class="col-pos">Phó phòng Mua hàng</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">14</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Lê Thị Vy</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Chủ tịch Công đoàn</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Gia An 115</td>
+                <td class="col-stt">14</td>
+                <td class="col-name">Bà Lê Thị Vy</td>
+                <td class="col-pos">Chủ tịch Công đoàn</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
               </tr>
               <tr>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;text-align:center;">15</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#2C3691;">Bà Phạm Thị Như Quỳnh</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Trợ lý Giám đốc Điều hành</td>
-                <td style="padding:10px 14px;border:1px solid #e2e8f0;color:#334155;">Bệnh viện Quốc tế City</td>
+                <td class="col-stt">15</td>
+                <td class="col-name">Bà Phạm Thị Như Quỳnh</td>
+                <td class="col-pos">Trợ lý Giám đốc Điều hành</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
             </tbody>
           </table>

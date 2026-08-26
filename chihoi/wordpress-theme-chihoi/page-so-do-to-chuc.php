@@ -21,9 +21,6 @@ get_header(); ?>
               DANH SÁCH BAN CHẤP HÀNH NHIỆM KỲ 2026 – 2029
             </h2>
           </div>
-          <span style="background:#e0f2fe;color:#27AAE1;font-weight:800;font-size:0.85rem;padding:6px 16px;border-radius:999px;">
-            24 Thành Viên Ban Chấp Hành
-          </span>
         </div>
 
         <div style="overflow-x:auto;">
@@ -219,9 +216,6 @@ get_header(); ?>
               DANH SÁCH BAN THƯ KÝ CHI HỘI
             </h2>
           </div>
-          <span style="background:#fef3c7;color:#92400e;font-weight:800;font-size:0.85rem;padding:6px 16px;border-radius:999px;">
-            15 Thành Viên Ban Thư Ký
-          </span>
         </div>
 
         <div style="overflow-x:auto;">

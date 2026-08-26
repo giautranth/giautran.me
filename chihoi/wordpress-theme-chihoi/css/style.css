@@ -4046,3 +4046,26 @@ a[href*="1900"] {
     padding: 18px 16px;
   }
 }
+
+
+/* Red Background for Footer Newsletter Button */
+.footer-newsletter-btn,
+.site-footer .footer-newsletter-btn,
+.site-footer button.footer-newsletter-btn {
+  background: #e22b27 !important;
+  background-color: #e22b27 !important;
+  border-color: #e22b27 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  transition: all 0.25s ease !important;
+}
+
+.footer-newsletter-btn:hover,
+.site-footer .footer-newsletter-btn:hover,
+.site-footer button.footer-newsletter-btn:hover {
+  background: #b91c1c !important;
+  background-color: #b91c1c !important;
+  border-color: #b91c1c !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(226, 43, 39, 0.45) !important;
+}

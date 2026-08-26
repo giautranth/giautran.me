@@ -1490,12 +1490,13 @@ body {
 }
 
 /* ==========================================================================
-   BẢNG THÀNH VIÊN / HỘI VIÊN (Chuẩn Font, Tiêu Đề Canh Giữa, Chữ Đen)
+   BẢNG THÀNH VIÊN / HỘI VIÊN (Chuẩn Font, Cột Fit Vừa Nội Dung, Chữ Đen)
    ========================================================================== */
 .member-data-table {
   width: 100%;
   border-collapse: collapse;
   font-family: 'Noto Sans', sans-serif !important;
+  table-layout: auto;
 }
 
 .member-data-table th {
@@ -1505,24 +1506,39 @@ body {
   font-size: 0.88rem;
   font-weight: 800;
   text-transform: uppercase;
-  padding: 14px 16px;
+  padding: 13px 16px;
   border: 1px solid #1e293b;
   letter-spacing: 0.5px;
-  text-align: center !important;
   vertical-align: middle;
 }
 
-.member-data-table th.col-stt { width: 70px; text-align: center !important; }
-.member-data-table th.col-name { width: 38%; text-align: center !important; }
-.member-data-table th.col-address { width: auto; text-align: center !important; }
+.member-data-table th.col-stt {
+  width: 60px;
+  min-width: 50px;
+  max-width: 70px;
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+.member-data-table th.col-name {
+  width: 35%;
+  min-width: 250px;
+  text-align: left !important;
+}
+
+.member-data-table th.col-address {
+  width: auto;
+  text-align: left !important;
+}
 
 .member-data-table td {
-  padding: 13px 16px;
+  padding: 12px 16px;
   font-family: 'Noto Sans', sans-serif !important;
   font-size: 0.92rem;
-  line-height: 1.6;
+  line-height: 1.55;
   color: #111827 !important;
   border: 1px solid var(--border-light, #e2e8f0);
+  vertical-align: middle;
 }
 
 .member-data-table tr:nth-child(even) {
@@ -1534,20 +1550,22 @@ body {
 }
 
 .member-data-table td.col-stt {
-  text-align: center;
+  text-align: center !important;
   font-weight: 700;
   color: #111827 !important;
+  white-space: nowrap;
+  width: 60px;
 }
 
 .member-data-table td.col-name {
   font-weight: 700;
   color: #111827 !important;
+  width: 35%;
 }
 
-.member-data-table td.col-phone {
-  text-align: center;
-  font-weight: 600;
-  color: #111827 !important;
+.member-data-table td.col-address {
+  color: #334155 !important;
+  width: auto;
 }
 
 /* ==========================================================================

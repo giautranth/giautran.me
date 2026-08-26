@@ -3923,3 +3923,130 @@ a[href*="1900"] {
     display: none !important;
   }
 }
+
+
+/* ==========================================================================
+   CORE VALUES SECTION (ĐOÀN KẾT - HỢP TÁC - PHÁT TRIỂN)
+   ========================================================================== */
+.core-values-section {
+  padding: 30px 0 10px;
+  background: #ffffff;
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.core-value-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light, #e2e8f0);
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.28s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.core-value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--brand-navy, #2C3691);
+  transition: width 0.25s ease;
+}
+
+.core-value-card:nth-child(2)::before {
+  background: var(--brand-cyan, #27AAE1);
+}
+
+.core-value-card:nth-child(3)::before {
+  background: var(--brand-red, #e22b27);
+}
+
+.core-value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(44, 54, 145, 0.12);
+  border-color: rgba(44, 54, 145, 0.25);
+}
+
+.core-value-card:hover::before {
+  width: 6px;
+}
+
+.core-value-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.core-value-card:hover .core-value-icon-box {
+  transform: scale(1.08);
+}
+
+.icon-doan-ket {
+  background: rgba(44, 54, 145, 0.08);
+  color: #2C3691;
+}
+
+.icon-hop-tac {
+  background: rgba(39, 170, 225, 0.12);
+  color: #0284c7;
+}
+
+.icon-phat-trien {
+  background: rgba(226, 43, 39, 0.08);
+  color: #e22b27;
+}
+
+.core-value-content {
+  flex: 1;
+}
+
+.core-value-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--brand-navy, #2C3691);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.core-value-card:nth-child(2) .core-value-title {
+  color: #0369a1;
+}
+
+.core-value-card:nth-child(3) .core-value-title {
+  color: #dc2626;
+}
+
+.core-value-desc {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .core-values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .core-value-card {
+    padding: 18px 16px;
+  }
+}

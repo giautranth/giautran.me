@@ -228,92 +228,92 @@ get_header(); ?>
               <tr>
                 <td class="col-stt">1</td>
                 <td class="col-name">Ông Nguyễn Thanh Tuyền</td>
-                <td class="col-pos">- Phó Tổng Giám đốc</td>
-                <td class="col-org">- Công ty CP Đầu tư Phát triển Hoa Lâm</td>
+                <td class="col-pos">Phó Tổng Giám đốc</td>
+                <td class="col-org">Công ty CP Đầu tư Phát triển Hoa Lâm</td>
               </tr>
               <tr>
                 <td class="col-stt">2</td>
                 <td class="col-name">Bà Lê Thị Nhi Kỳ</td>
-                <td class="col-pos">- Trợ lý Chủ tịch</td>
-                <td class="col-org">- Tập đoàn Hoa Lâm</td>
+                <td class="col-pos">Trợ lý Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
                 <td class="col-stt">3</td>
                 <td class="col-name">Bà Đặng Thị Ngọc Bích</td>
-                <td class="col-pos">- Thư ký Chủ tịch</td>
-                <td class="col-org">- Tập đoàn Hoa Lâm</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
                 <td class="col-stt">4</td>
                 <td class="col-name">Bà Bùi Thị Tường Vy</td>
-                <td class="col-pos">- Thư ký Chủ tịch</td>
-                <td class="col-org">- Tập đoàn Hoa Lâm</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
                 <td class="col-stt">5</td>
                 <td class="col-name">Bà Nguyễn Thị Kim Phượng</td>
-                <td class="col-pos">- Thư ký Chủ tịch</td>
-                <td class="col-org">- Tập đoàn Hoa Lâm</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
                 <td class="col-stt">6</td>
                 <td class="col-name">Ông Nguyễn Thể Hưng</td>
-                <td class="col-pos">- Thư ký Chủ tịch</td>
-                <td class="col-org">- Tập đoàn Hoa Lâm</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
               </tr>
               <tr>
                 <td class="col-stt">7</td>
                 <td class="col-name">Bà Nguyễn Thị Huế</td>
-                <td class="col-pos">- Giám đốc Nhân sự</td>
-                <td class="col-org">- Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
+                <td class="col-pos">Giám đốc Nhân sự</td>
+                <td class="col-org">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
                 <td class="col-stt">8</td>
                 <td class="col-name">Bà Nguyễn Thị Kim Thúy</td>
-                <td class="col-pos">- Trưởng phòng Thương hiệu & Truyền thông cấp cao</td>
-                <td class="col-org">- Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
+                <td class="col-pos">Trưởng phòng Thương hiệu & Truyền thông cấp cao</td>
+                <td class="col-org">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
                 <td class="col-stt">9</td>
                 <td class="col-name">Bà Nguyễn Thị Lan Hương</td>
-                <td class="col-pos">- Trưởng phòng Trải nghiệm Khách hàng</td>
-                <td class="col-org">- Bệnh viện Gia An 115</td>
+                <td class="col-pos">Trưởng phòng Trải nghiệm Khách hàng</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
               </tr>
               <tr>
                 <td class="col-stt">10</td>
                 <td class="col-name">Bà Trần Thị Thu</td>
-                <td class="col-pos">- Trưởng phòng Trải nghiệm Khách hàng</td>
-                <td class="col-org">- Bệnh viện Quốc tế City</td>
+                <td class="col-pos">Trưởng phòng Trải nghiệm Khách hàng</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
                 <td class="col-stt">11</td>
                 <td class="col-name">Ông Hồ Trọng Nhân</td>
-                <td class="col-pos">- Trưởng phòng Thiết bị Y tế CC kiêm Quản lý CNTT</td>
-                <td class="col-org">- Bệnh viện Quốc tế City</td>
+                <td class="col-pos">Trưởng phòng Thiết bị Y tế CC kiêm Quản lý CNTT</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
                 <td class="col-stt">12</td>
                 <td class="col-name">Bà Lê Nguyễn Hồng Anh</td>
-                <td class="col-pos">- Trưởng phòng Mua hàng cấp cao</td>
-                <td class="col-org">- Bệnh viện Quốc tế City</td>
+                <td class="col-pos">Trưởng phòng Mua hàng cấp cao</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
               <tr>
                 <td class="col-stt">13</td>
                 <td class="col-name">Bà Vũ Thị Thu</td>
-                <td class="col-pos">- Phó phòng Mua hàng</td>
-                <td class="col-org">- Bệnh viện Gia An 115</td>
+                <td class="col-pos">Phó phòng Mua hàng</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
               </tr>
               <tr>
                 <td class="col-stt">14</td>
                 <td class="col-name">Bà Lê Thị Vy</td>
-                <td class="col-pos">- Chủ tịch Công đoàn</td>
-                <td class="col-org">- Bệnh viện Gia An 115</td>
+                <td class="col-pos">Chủ tịch Công đoàn</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
               </tr>
               <tr>
                 <td class="col-stt">15</td>
                 <td class="col-name">Bà Phạm Thị Như Quỳnh</td>
-                <td class="col-pos">- Trợ lý Giám đốc Điều hành</td>
-                <td class="col-org">- Bệnh viện Quốc tế City</td>
+                <td class="col-pos">Trợ lý Giám đốc Điều hành</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
               </tr>
             </tbody>
           </table>

@@ -3347,3 +3347,25 @@ body {
     font-size: 1.5rem !important;
   }
 }
+
+
+/* ==========================================================================
+   FORM CONTROLS FONT RESET (Fix lỗi font chữ tiếng Việt trên Button & Input)
+   ========================================================================== */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: var(--font-main) !important;
+}
+
+.site-footer button,
+.site-footer .btn-primary-pill,
+.footer-newsletter-btn {
+  font-family: var(--font-main) !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

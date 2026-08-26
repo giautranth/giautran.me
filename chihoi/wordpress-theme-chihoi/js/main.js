@@ -1290,3 +1290,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+
+window.scrollRelatedNews = function(direction) {
+  const track = document.getElementById('relatedNewsSlider');
+  if (track) {
+    const card = track.querySelector('.news-article-card');
+    const scrollAmount = card ? card.offsetWidth + 20 : 340;
+    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+};

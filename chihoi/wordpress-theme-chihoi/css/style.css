@@ -3384,10 +3384,9 @@ body {
    CHI TIẾT BÀI VIẾT (SINGLE ARTICLE PAGE LAYOUT)
    ========================================================================== */
 .article-layout-grid {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 36px;
-  align-items: start;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .single-article-content {
@@ -3418,9 +3417,10 @@ body {
 
 @media (max-width: 991.98px) {
   .article-layout-grid {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
   .single-article-content {
     padding: 24px 20px !important;
@@ -4830,5 +4830,50 @@ a[href*="1900"] {
   }
   .about-cta-title {
     font-size: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   RELATED NEWS (Below Article - 3 Box Layout with 2-Side Arrows)
+   ========================================================================== */
+.single-article-main-container {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.related-news-section {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 2px solid #e2e8f0;
+  width: 100%;
+}
+
+.related-news-slider-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .related-news-slider-track {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    gap: 16px !important;
+    padding: 6px 2px 14px !important;
+    scrollbar-width: none !important;
+  }
+  .related-news-slider-track::-webkit-scrollbar {
+    display: none !important;
+  }
+  .related-news-slider-track .news-article-card {
+    flex: 0 0 calc(85% - 8px) !important;
+    min-width: calc(85% - 8px) !important;
+    max-width: calc(85% - 8px) !important;
+    scroll-snap-align: start !important;
   }
 }

@@ -182,47 +182,67 @@
           
 
         </article>
-
-        <!-- Right: Sidebar -->
-        <aside class="single-article-sidebar">
-          
-          <!-- Widget: Related News -->
-          <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:22px;margin-bottom:24px;box-shadow:0 4px 14px rgba(0,0,0,0.03);">
-            <h3 style="color:#2C3691;font-size:1.08rem;font-weight:800;margin-bottom:18px;padding-bottom:8px;border-bottom:2px solid #27AAE1;">
-              TIN TỨC LIÊN QUAN
-            </h3>
-            
-          <div style="display:flex;gap:12px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #e2e8f0;">
-            <a href="../ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" style="flex-shrink:0;width:90px;height:65px;border-radius:6px;overflow:hidden;display:block;">
-              <img src="../../photo/news/news-cih-madam-lam.webp" alt="Kết Nối Sức Mạnh Y Tế Tư Nhân Phía Nam: Madam Trần Thị Lâm Giữ Vai Trò Chủ Tịch Chi Hội" style="width:100%;height:100%;object-fit:cover;" />
-            </a>
-            <div>
-              <div style="font-size:0.75rem;color:#64748b;margin-bottom:4px;">21/07/2026</div>
-              <a href="../ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" style="font-size:0.86rem;font-weight:700;color:#2C3691;text-decoration:none;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
-                Kết Nối Sức Mạnh Y Tế Tư Nhân Phía Nam: Madam Trần Thị Lâm Giữ Vai Trò Chủ Tịch Chi Hội
-              </a>
-            </div>
-          </div>
-        
-          <div style="display:flex;gap:12px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #e2e8f0;">
-            <a href="../ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" style="flex-shrink:0;width:90px;height:65px;border-radius:6px;overflow:hidden;display:block;">
-              <img src="../../photo/news/news-cih-ra-mat-bch.webp" alt="Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh, Thành Phía Nam" style="width:100%;height:100%;object-fit:cover;" />
-            </a>
-            <div>
-              <div style="font-size:0.75rem;color:#64748b;margin-bottom:4px;">19/08/2026</div>
-              <a href="../ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" style="font-size:0.86rem;font-weight:700;color:#2C3691;text-decoration:none;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
-                Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh, Thành Phía Nam
-              </a>
-            </div>
-          </div>
-        
-          </div>
-
-          
-
-        </aside>
-
       </div>
+
+<!-- ========== TIN TỨC LIÊN QUAN (Layout 3 Box kèm Mũi Tên 2 Bên) ========== -->
+      <section class="related-news-section">
+        <div class="section-header-row" style="margin-bottom: 24px;">
+          <div class="section-main-title">TIN TỨC LIÊN QUAN</div>
+        </div>
+
+        <div class="section-slider-container">
+          <button type="button" class="section-slider-arrow prev" onclick="scrollRelatedNews(-1)" aria-label="Tin trước">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+
+          <div class="related-news-slider-track" id="relatedNewsSlider">
+            <article class="news-article-card">
+              <a href="../ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" class="news-card-img-wrap">
+                <img src="../../photo/news/event-photo-1.webp" alt="Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh, Thành Phía Nam" loading="lazy" />
+                <span class="news-card-category-badge">SỰ KIỆN NỔI BẬT</span>
+              </a>
+              <div class="news-card-body">
+                <div class="news-card-date">19/08/2026</div>
+                <h3 class="news-card-title">
+                  <a href="../ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/">Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh, Thành Phía Nam</a>
+                </h3>
+                <p class="news-card-excerpt">Hội nghị lần thứ nhất và Lễ ra mắt Ban Chấp hành Chi hội nhiệm kỳ 2026 – 2029 với 25 thành viên Ban Chấp hành tiêu biểu.</p>
+              </div>
+            </article>
+            <article class="news-article-card">
+              <a href="../dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" class="news-card-img-wrap">
+                <img src="../../photo/news/news-dien-dan-y-te-2026.jpg" alt="Diễn Đàn Phát Triển Y Tế Tư Nhân Việt Nam Năm 2026 (Lần Thứ II) Thành Công Tốt Đẹp" loading="lazy" />
+                <span class="news-card-category-badge">DIỄN ĐÀN CHUYÊN MÔN</span>
+              </a>
+              <div class="news-card-body">
+                <div class="news-card-date">21/08/2026</div>
+                <h3 class="news-card-title">
+                  <a href="../dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/">Diễn Đàn Phát Triển Y Tế Tư Nhân Việt Nam Năm 2026 (Lần Thứ II) Thành Công Tốt Đẹp</a>
+                </h3>
+                <p class="news-card-excerpt">Diễn đàn tập trung thảo luận các cơ chế chính sách tài chính y tế, bảo hiểm y tế, tự chủ và thúc đẩy chuyển đổi số - ứng dụng AI tại các bệnh viện.</p>
+              </div>
+            </article>
+            <article class="news-article-card">
+              <a href="../ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" class="news-card-img-wrap">
+                <img src="../../photo/news/news-cih-madam-lam.webp" alt="Kết Nối Sức Mạnh Y Tế Tư Nhân Phía Nam: Madam Trần Thị Lâm Giữ Vai Trò Chủ Tịch Chi Hội" loading="lazy" />
+                <span class="news-card-category-badge">HOẠT ĐỘNG CHI HỘI</span>
+              </a>
+              <div class="news-card-body">
+                <div class="news-card-date">21/07/2026</div>
+                <h3 class="news-card-title">
+                  <a href="../ket-noi-suc-manh-y-te-tu-nhan-phia-nam/">Kết Nối Sức Mạnh Y Tế Tư Nhân Phía Nam: Madam Trần Thị Lâm Giữ Vai Trò Chủ Tịch Chi Hội</a>
+                </h3>
+                <p class="news-card-excerpt">Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam đặt mục tiêu phát huy sức mạnh khối y tế tư nhân, nâng cao chất lượng dịch vụ và bảo vệ người bệnh.</p>
+              </div>
+            </article>
+          </div>
+
+          <button type="button" class="section-slider-arrow next" onclick="scrollRelatedNews(1)" aria-label="Tin tiếp theo">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </section>
+
     </div>
   </main>
 

@@ -33,27 +33,27 @@ get_header(); ?>
             <tr>
               <td class="col-stt">1</td>
               <td class="col-name">Bệnh viện Gia An 115</td>
-              <td class="col-address">Số 5 Đường 17A, Phường An Lạc, TP. HCM</td>
+              <td class="col-address">Số 5 Đường 17A, P. An Lạc, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">2</td>
               <td class="col-name">Bệnh viện Quốc tế City</td>
-              <td class="col-address">Số 3 Đường 17A, Phường An Lạc, TP. HCM</td>
+              <td class="col-address">Số 3 Đường 17A, P. An Lạc, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">3</td>
               <td class="col-name">Bệnh viện FV</td>
-              <td class="col-address">Số 6 Nguyễn Lương Bằng, Phường Tân Mỹ, TP. HCM</td>
+              <td class="col-address">Số 6 Nguyễn Lương Bằng, P. Tân Mỹ, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">4</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế Hồng Bàng</td>
-              <td class="col-address">Số 3 Hoàng Việt, Phường Tân Sơn Nhất, TP. HCM</td>
+              <td class="col-address">Số 3 Hoàng Việt, P. Tân Sơn Nhất, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">5</td>
               <td class="col-name">Hệ thống Bệnh viện Sài Gòn - ITO</td>
-              <td class="col-address">Số 305 Lê Văn Sỹ, Phường Tân Sơn Hòa, TP. HCM</td>
+              <td class="col-address">Số 305 Lê Văn Sỹ, P. Tân Sơn Hòa, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">6</td>
@@ -63,62 +63,62 @@ get_header(); ?>
             <tr>
               <td class="col-stt">7</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế S.I.S Cần Thơ</td>
-              <td class="col-address">Số 397 Nguyễn Văn Cừ Nối Dài, Phường An Bình, TP. Cần Thơ</td>
+              <td class="col-address">Số 397 Nguyễn Văn Cừ Nối Dài, P. An Bình, TP. Cần Thơ</td>
             </tr>
             <tr>
               <td class="col-stt">8</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế Minh Anh</td>
-              <td class="col-address">Số 36 Đường Số 1B, Phường An Lạc, TP. HCM</td>
+              <td class="col-address">Số 36 Đường Số 1B, P. An Lạc, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">9</td>
               <td class="col-name">Bệnh viện Phương Nam</td>
-              <td class="col-address">Số 2 Nguyễn Lương Bằng, Phường Tân Mỹ, TP. HCM</td>
+              <td class="col-address">Số 2 Nguyễn Lương Bằng, P. Tân Mỹ, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">10</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế Vinmec Central Park</td>
-              <td class="col-address">Số 208 Nguyễn Hữu Cảnh, Phường Thạnh Mỹ Tây, TP. HCM</td>
+              <td class="col-address">Số 208 Nguyễn Hữu Cảnh, P. Thạnh Mỹ Tây, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">11</td>
               <td class="col-name">Bệnh viện Triều An</td>
-              <td class="col-address">Số 425 Kinh Dương Vương, Phường An Lạc, TP. HCM</td>
+              <td class="col-address">Số 425 Kinh Dương Vương, P. An Lạc, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">12</td>
               <td class="col-name">Bệnh viện Tân Hưng</td>
-              <td class="col-address">Số 871 Trần Xuân Soạn, Phường Tân Hưng, TP. HCM</td>
+              <td class="col-address">Số 871 Trần Xuân Soạn, P. Tân Hưng, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">13</td>
               <td class="col-name">Bệnh viện Đa khoa Medic Bình Dương</td>
-              <td class="col-address">Số 14A Nguyễn An Ninh, Phường Phú Cường, TP. Thủ Dầu Một, TP. HCM</td>
+              <td class="col-address">Số 14A Nguyễn An Ninh, P. Phú Cường, TP. Thủ Dầu Một, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">14</td>
               <td class="col-name">Bệnh viện Quốc tế Columbia Asia Bình Dương</td>
-              <td class="col-address">Đường 22/12, Khu phố Hòa Lân 2, Phường Thuận Giao, TP. Thuận An, TP. HCM</td>
+              <td class="col-address">Đường 22/12, Khu phố Hòa Lân 2, P. Thuận Giao, TP. Thuận An, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">15</td>
               <td class="col-name">Bệnh viện Đa khoa Việt Mỹ</td>
-              <td class="col-address">Số 1 Hoàng Việt, Phường Tân Sơn Nhất, TP. HCM</td>
+              <td class="col-address">Số 1 Hoàng Việt, P. Tân Sơn Nhất, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">16</td>
               <td class="col-name">Bệnh viện Đa khoa Hoàn Mỹ Sài Gòn</td>
-              <td class="col-address">Số 60-60A Phan Xích Long, Phường Cầu Kiệu, TP. HCM</td>
+              <td class="col-address">Số 60-60A Phan Xích Long, P. Cầu Kiệu, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">17</td>
               <td class="col-name">Phòng khám Đa khoa Thuận Kiều</td>
-              <td class="col-address">Số 623-625 Nguyễn Chí Thanh, Phường Hòa Bình, TP. HCM</td>
+              <td class="col-address">Số 623-625 Nguyễn Chí Thanh, P. Hòa Bình, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">18</td>
               <td class="col-name">Phòng khám Đa khoa Maimay</td>
-              <td class="col-address">Số 80 Nguyễn Thị Thập, Phường Tân Hưng, TP. HCM</td>
+              <td class="col-address">Số 80 Nguyễn Thị Thập, P. Tân Hưng, TP. HCM</td>
             </tr>
             <tr id="memberNoResultRow" style="display:none;">
               <td colspan="3" style="text-align:center;padding:30px;color:#64748b;">

@@ -1,15 +1,49 @@
 <?php get_header(); ?>
 
 
-          <!-- ========== AIH PANORAMIC HERO BANNER (Desktop: 1.png, Mobile: 2.png) ========== -->
-  <section class="home-banner aih-hero-banner-section">
+            <!-- ========== AIH PANORAMIC HERO BANNER (Chuẩn Kiến Trúc Responsive AIH) ========== -->
+  <section class="home-banner banner-slider aih-hero-banner-section">
     <div class="banner-carousel-wrapper">
-      <div class="image img-cover">
-        <picture>
-          <source media="(max-width: 767.98px)" srcset="photo/banner/2.png">
-          <img src="photo/banner/1.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam" class="banner-img" fetchpriority="high">
-        </picture>
+      <div class="banner-slides-track">
+        
+        <!-- Slide 1: Lễ Ra Mắt Chi Hội (Desktop: 1.png, Mobile: 2.png) -->
+        <div class="banner-slide active" data-slide-index="0">
+          <div class="image img-cover">
+            <picture>
+              <source media="(max-width: 767.98px)" srcset="photo/banner/2.png">
+              <img src="photo/banner/1.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Lễ ra mắt Ban Chấp hành" class="banner-img" fetchpriority="high">
+            </picture>
+          </div>
+        </div>
+
+        <!-- Slide 2: Đoàn Kết - Hợp Tác - Phát Triển (Desktop: 4.png, Mobile: 3.png) -->
+        <div class="banner-slide" data-slide-index="1">
+          <div class="image img-cover">
+            <picture>
+              <source media="(max-width: 767.98px)" srcset="photo/banner/3.png">
+              <img src="photo/banner/4.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Đoàn kết Hợp tác Phát triển" class="banner-img">
+            </picture>
+          </div>
+        </div>
+
       </div>
+
+      <!-- AIH Swiper Navigation Arrows -->
+      <div class="swiper-button banner-nav-arrows">
+        <button type="button" class="button-prev" id="bannerPrevBtn" aria-label="Banner trước">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button type="button" class="button-next" id="bannerNextBtn" aria-label="Banner tiếp theo">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <!-- AIH Swiper Pagination Dots -->
+      <div class="banner-pagination-dots">
+        <button type="button" class="carousel-dot active" data-slide-index="0" aria-label="Chuyển đến banner 1"></button>
+        <button type="button" class="carousel-dot" data-slide-index="1" aria-label="Chuyển đến banner 2"></button>
+      </div>
+
     </div>
   </section>
 

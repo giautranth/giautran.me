@@ -399,6 +399,8 @@ function initModalHandlers() {
             </div>
             <button type="submit" class="btn-primary-pill" style="width: 100%; text-align: center; border-radius: 6px;">Gửi Đăng Ký Trực Tuyến</button>
           </form>
+        `;
+
         modalOverlay.classList.add('active');
       }
     });

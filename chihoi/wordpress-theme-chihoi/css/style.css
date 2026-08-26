@@ -3413,3 +3413,20 @@ textarea {
   text-align: justify !important;
   word-break: break-word;
 }
+
+
+.cme-card-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.cme-card-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}

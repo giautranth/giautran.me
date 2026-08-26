@@ -27,7 +27,7 @@ get_header(); ?>
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2 -->
         <div class="cme-training-card" data-category="chieu-sinh">
           <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
-            <div class="cme-card-thumb-wrap" style="position:relative;height:200px;overflow:hidden;background:#f8fafc;">
+            <div class="cme-card-thumb-wrap" style="position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;background:#f8fafc;">
               <img src="photo/dao-tao/13.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
             </div>
           </a>
@@ -52,7 +52,7 @@ get_header(); ?>
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4 -->
         <div class="cme-training-card" data-category="chieu-sinh">
           <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
-            <div class="cme-card-thumb-wrap" style="position:relative;height:200px;overflow:hidden;background:#f8fafc;">
+            <div class="cme-card-thumb-wrap" style="position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;background:#f8fafc;">
               <img src="photo/dao-tao/11.png" alt="Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
             </div>
           </a>
@@ -77,7 +77,7 @@ get_header(); ?>
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3 -->
         <div class="cme-training-card" data-category="chieu-sinh">
           <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
-            <div class="cme-card-thumb-wrap" style="position:relative;height:200px;overflow:hidden;background:#f8fafc;">
+            <div class="cme-card-thumb-wrap" style="position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;background:#f8fafc;">
               <img src="photo/dao-tao/12.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
             </div>
           </a>

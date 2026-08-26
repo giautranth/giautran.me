@@ -376,6 +376,10 @@ function initModalHandlers() {
   // Open CME Detail Modal
   document.querySelectorAll('.btn-cme-detail').forEach(btn => {
     btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
+        return; // Allow direct navigation to dedicated course page URL
+      }
       e.preventDefault();
       const cmeId = btn.getAttribute('data-cme-id');
       const data = cmeData[cmeId] || cmeData['cme-1'];

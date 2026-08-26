@@ -1490,7 +1490,7 @@ body {
 }
 
 /* ==========================================================================
-   BẢNG THÀNH VIÊN / HỘI VIÊN (Chuẩn Font, Cột Fit Vừa Nội Dung, Chữ Đen)
+   BẢNG THÀNH VIÊN / HỘI VIÊN (Tiêu Đề Canh Giữa, Không Bold Nội Dung)
    ========================================================================== */
 .member-data-table {
   width: 100%;
@@ -1503,12 +1503,12 @@ body {
   background: var(--brand-navy, #2C3691);
   color: #ffffff !important;
   font-family: 'Noto Sans', sans-serif !important;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 800;
-  text-transform: uppercase;
   padding: 13px 16px;
   border: 1px solid #1e293b;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  text-align: center !important;
   vertical-align: middle;
 }
 
@@ -1523,12 +1523,12 @@ body {
 .member-data-table th.col-name {
   width: 35%;
   min-width: 250px;
-  text-align: left !important;
+  text-align: center !important;
 }
 
 .member-data-table th.col-address {
   width: auto;
-  text-align: left !important;
+  text-align: center !important;
 }
 
 .member-data-table td {
@@ -1539,6 +1539,7 @@ body {
   color: #111827 !important;
   border: 1px solid var(--border-light, #e2e8f0);
   vertical-align: middle;
+  font-weight: 400 !important;
 }
 
 .member-data-table tr:nth-child(even) {
@@ -1551,21 +1552,24 @@ body {
 
 .member-data-table td.col-stt {
   text-align: center !important;
-  font-weight: 700;
+  font-weight: 400 !important;
   color: #111827 !important;
   white-space: nowrap;
   width: 60px;
 }
 
 .member-data-table td.col-name {
-  font-weight: 700;
+  font-weight: 400 !important;
   color: #111827 !important;
   width: 35%;
+  text-align: left !important;
 }
 
 .member-data-table td.col-address {
+  font-weight: 400 !important;
   color: #334155 !important;
   width: auto;
+  text-align: left !important;
 }
 
 /* ==========================================================================

@@ -22,11 +22,11 @@ get_header(); ?>
       <!-- Member Table -->
       <div class="member-table-container">
         <table class="member-data-table" id="memberDataTable">
-                    <thead>
+                              <thead>
             <tr>
-              <th class="col-stt">TT</th>
-              <th class="col-name">TÊN BỆNH VIỆN</th>
-              <th class="col-address">ĐỊA CHỈ</th>
+              <th class="col-stt" style="text-align:center;">TT</th>
+              <th class="col-name" style="text-align:center;">Bệnh viện</th>
+              <th class="col-address" style="text-align:center;">Địa chỉ</th>
             </tr>
           </thead>
                     <tbody>
@@ -58,7 +58,7 @@ get_header(); ?>
             <tr>
               <td class="col-stt">6</td>
               <td class="col-name">Bệnh viện Đa khoa Quốc tế Nam Sài Gòn</td>
-              <td class="col-address">Số 88 Đường Số 8, Khu dân cư Trung Sơn, Xã Bình Hưng, Huyện Bình Chánh, TP. HCM</td>
+              <td class="col-address">Số 88 Đường Số 8, KDC Trung Sơn, Xã Bình Hưng, TP. HCM</td>
             </tr>
             <tr>
               <td class="col-stt">7</td>

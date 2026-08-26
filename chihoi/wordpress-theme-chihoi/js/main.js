@@ -295,58 +295,43 @@ function initMemberTableSearch() {
    ========================================================================== */
 const cmeData = {
   'cme-1': {
-    title: 'Khóa Đào Tạo Liên Tục (CME): "Hồi Sinh Tim Phổi Cơ Bản" - Khóa 5',
-    target: 'Bác sĩ, Điều dưỡng, Kỹ thuật viên cấp cứu, Nhân viên y tế tuyến cơ sở',
-    duration: '24 tiết học (Lý thuyết kết hợp thực hành mô phỏng chuẩn AHA)',
-    certificate: 'Chứng chỉ Đào tạo Y khoa Liên tục (CME) có giá trị toàn quốc',
-    instructors: 'Đội ngũ Bác sĩ Chuyên khoa Hồi sức Cấp cứu - BV Gia An 115 & BV Quốc tế City',
-    tuition: '1.500.000 VNĐ / Học viên (Giảm 15% cho Bệnh viện Hội viên)',
-    startDate: '22/07/2026'
+    title: 'Khóa Đào Tạo Liên Tục (CME): "Tăng Cường Năng Lực Quản Lý Điều Dưỡng" - Khóa 2',
+    organizer: 'Viện Đào tạo & Nghiên cứu Khoa học (CIMER) - BV Quốc tế City phối hợp Hội Khoa học Sức khỏe TP.HCM (HSA)',
+    target: 'Điều dưỡng trưởng bệnh viện, Điều dưỡng trưởng khoa/phòng, Điều dưỡng viên có định hướng quản lý',
+    duration: '40 tiết học (Lý thuyết kết hợp thực hành quản trị điều dưỡng thực chiến)',
+    certificate: 'Chứng chỉ Đào tạo Y khoa Liên tục (CME) do Bệnh viện Quốc tế City / Hội Khoa học Sức khỏe TP.HCM cấp có giá trị toàn quốc',
+    instructors: 'Ban Lãnh đạo Điều dưỡng BV Quốc tế City & Các Chuyên gia Quản lý Điều dưỡng TP.HCM',
+    location: 'Bệnh viện Quốc tế City - Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP.HCM',
+    tuition: 'Học phí theo quy định đào tạo (Ưu đãi đặc biệt cho Bệnh viện Hội viên Chi hội)',
+    startDate: '22/07/2026',
+    image: 'photo/dao-tao/cme_1_card.jpg',
+    pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/07/20.-Thong-bao-chieu-sinh_Tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2-CAP-NHAT.pdf'
   },
   'cme-2': {
-    title: 'Khóa Đào Tạo Liên Tục (CME): "Chăm Sóc Người Bệnh Toàn Diện" - Khóa 1',
-    target: 'Điều dưỡng trưởng, Điều dưỡng viên các khoa lâm sàng',
-    duration: '32 tiết học',
-    certificate: 'Chứng chỉ CME Chăm sóc Toàn diện',
-    instructors: 'Chuyên gia Điều dưỡng Bệnh viện FV và Bệnh viện Phương Nam',
-    tuition: '1.800.000 VNĐ / Học viên (Giảm 15% cho Bệnh viện Hội viên)',
-    startDate: '22/07/2026'
+    title: 'Khóa Đào Tạo Cập Nhật Kiến Thức Y Khoa Liên Tục (CME): "An Toàn Người Bệnh" - Khóa 4',
+    organizer: 'Viện Đào tạo & Nghiên cứu Khoa học (CIMER) - BV Quốc tế City phối hợp Hội Khoa học Sức khỏe TP.HCM (HSA)',
+    target: 'Bác sĩ, Điều dưỡng, Kỹ thuật viên, Dược sĩ, Thành viên mạng lưới Quản lý Chất lượng & An toàn Người bệnh',
+    duration: '32 tiết học (Phòng ngừa sự cố y khoa, kiểm soát rủi ro và văn hóa an toàn người bệnh)',
+    certificate: 'Chứng chỉ Đào tạo Y khoa Liên tục (CME) An Toàn Người Bệnh theo tiêu chuẩn Bộ Y tế',
+    instructors: 'Chuyên gia Quản lý Chất lượng & Hội đồng An toàn Người bệnh BV Quốc tế City',
+    location: 'Bệnh viện Quốc tế City - Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP.HCM',
+    tuition: 'Học phí theo quy định đào tạo (Ưu đãi đặc biệt cho Bệnh viện Hội viên Chi hội)',
+    startDate: '15/08/2026',
+    image: 'photo/dao-tao/cme_2_card.jpg',
+    pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/08/28.-TB-chieu-sinh-An-toan-nguoi-benh-khoa-4.pdf'
   },
   'cme-3': {
-    title: 'Khóa Đào Tạo Liên Tục (CME): "Tăng Cường Năng Lực Quản Lý Điều Dưỡng" - Khóa 2',
-    target: 'Lãnh đạo phòng Điều dưỡng, Điều dưỡng trưởng khoa, Tổ trưởng điều dưỡng',
-    duration: '40 tiết học',
-    certificate: 'Chứng chỉ CME Quản lý Điều dưỡng Bệnh viện',
-    instructors: 'Giảng viên Trường Đại học Y Dược TP.HCM & Lãnh đạo Chi hội',
-    tuition: '2.500.000 VNĐ / Học viên',
-    startDate: '22/07/2026'
-  },
-  'cme-4': {
-    title: 'Khóa Đào Tạo Liên Tục (CME): "Phòng Và Kiểm Soát Nhiễm Khuẩn Bệnh Viện" - Khóa 5',
-    target: 'Thành viên mạng lưới kiểm soát nhiễm khuẩn, Bác sĩ, Điều dưỡng',
-    duration: '30 tiết học',
-    certificate: 'Chứng chỉ Kiểm soát Nhiễm khuẩn chuẩn Bộ Y tế',
-    instructors: 'Chuyên gia Kiểm soát Nhiễm khuẩn - Hội KSNK TP.HCM',
-    tuition: '1.600.000 VNĐ / Học viên',
-    startDate: '22/07/2026'
-  },
-  'cme-5': {
-    title: 'Khóa Đào Tạo Liên Tục (CME): "Hồi Sinh Tim Phổi Cơ Bản" - Khóa 4',
-    target: 'Bác sĩ, Điều dưỡng, Nhân viên Y tế',
-    duration: '24 tiết học',
-    certificate: 'Chứng chỉ CME Cấp cứu Cơ bản',
-    instructors: 'Đội ngũ Bác sĩ Hồi sức Cấp cứu',
-    tuition: '1.500.000 VNĐ / Học viên',
-    startDate: '11/07/2026'
-  },
-  'cme-6': {
     title: 'Khóa Đào Tạo Liên Tục (CME): "Hồi Sinh Tim Phổi Cơ Bản" - Khóa 3',
-    target: 'Bác sĩ, Điều dưỡng',
-    duration: '24 tiết học',
-    certificate: 'Chứng chỉ CME Cấp cứu Cơ bản',
-    instructors: 'Đội ngũ Bác sĩ Hồi sức Cấp cứu',
-    tuition: '1.500.000 VNĐ / Học viên',
-    startDate: '09/07/2026'
+    organizer: 'Viện Đào tạo & Nghiên cứu Khoa học (CIMER) - Bệnh viện Quốc tế City',
+    target: 'Bác sĩ, Điều dưỡng, Kỹ thuật viên, Hộ sinh, Cứu hộ viên và Nhân viên y tế tuyến cơ sở',
+    duration: '24 tiết học (Huấn luyện CPR/BLS và sử dụng máy AED trên mô hình mô phỏng chuẩn AHA)',
+    certificate: 'Chứng chỉ Đào tạo Y khoa Liên tục (CME) Hồi sinh Tim phổi Cơ bản (BLS) chuẩn Bộ Y tế',
+    instructors: 'Đội ngũ Bác sĩ Chuyên khoa Hồi sức Cấp cứu - BV Quốc tế City',
+    location: 'Trung tâm Huấn luyện Kỹ năng Lâm sàng - Bệnh viện Quốc tế City',
+    tuition: '1.500.000 VNĐ / Học viên (Giảm 15% cho Bệnh viện Hội viên)',
+    startDate: '09/07/2026',
+    image: 'photo/dao-tao/cme_3_card.jpg',
+    pdfUrl: 'https://cih.com.vn/wp-content/uploads/2026/07/9.-Thong-bao-chieu-sinh-BLS-khoa-3.pdf'
   }
 };
 
@@ -380,34 +365,40 @@ function initModalHandlers() {
       const data = cmeData[cmeId] || cmeData['cme-1'];
 
       if (modalTitle && modalBody) {
-        modalTitle.textContent = 'Thông Tin Chi Tiết Khóa Đào Tạo';
+                modalTitle.textContent = 'Thông Tin Chi Tiết Khóa Đào Tạo';
+        const imgPrefix = window.location.pathname.includes('/dao-tao') || window.location.pathname.includes('/hoi-vien') || window.location.pathname.includes('/gioi-thieu') || window.location.pathname.includes('/tin-tuc') || window.location.pathname.includes('/lien-he') || window.location.pathname.includes('/so-do-to-chuc') ? '../' : '';
         modalBody.innerHTML = `
           <div style="margin-bottom: 16px;">
-            <h3 style="color: #2C3691; font-size: 1.15rem; font-weight: 800; line-height: 1.4; margin-bottom: 10px;">${data.title}</h3>
-            <p style="color: #27AAE1; font-weight: 700; font-size: 0.88rem; margin-bottom: 16px;">Ngày khai giảng: ${data.startDate}</p>
+            <div style="width: 100%; max-height: 220px; overflow: hidden; border-radius: 8px; margin-bottom: 14px; border: 1px solid #e2e8f0;">
+              <img src="${imgPrefix}${data.image}" alt="${data.title}" style="width: 100%; height: 100%; object-fit: cover;" />
+            </div>
+            <h3 style="color: #2C3691; font-size: 1.12rem; font-weight: 800; line-height: 1.4; margin-bottom: 8px;">${data.title}</h3>
+            <p style="color: #27AAE1; font-weight: 700; font-size: 0.88rem; margin-bottom: 12px;">Ngày đăng / khai giảng: ${data.startDate}</p>
           </div>
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 20px; font-size: 0.9rem; line-height: 1.7;">
-            <p><strong>Đối tượng học viên:</strong> ${data.target}</p>
-            <p><strong>Thời lượng:</strong> ${data.duration}</p>
-            <p><strong>Chứng chỉ:</strong> ${data.certificate}</p>
-            <p><strong>Giảng viên:</strong> ${data.instructors}</p>
-            <p><strong>Học phí:</strong> <span style="color: #e22b27; font-weight: 800;">${data.tuition}</span></p>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; font-size: 0.88rem; line-height: 1.7;">
+            <p style="margin-bottom: 6px;"><strong>Đơn vị tổ chức:</strong> ${data.organizer}</p>
+            <p style="margin-bottom: 6px;"><strong>Đối tượng học viên:</strong> ${data.target}</p>
+            <p style="margin-bottom: 6px;"><strong>Thời lượng đào tạo:</strong> ${data.duration}</p>
+            <p style="margin-bottom: 6px;"><strong>Địa điểm:</strong> ${data.location}</p>
+            <p style="margin-bottom: 6px;"><strong>Chứng chỉ:</strong> ${data.certificate}</p>
+            <p style="margin-bottom: 6px;"><strong>Giảng viên:</strong> ${data.instructors}</p>
+            <p style="margin-bottom: 6px;"><strong>Học phí:</strong> <span style="color: #e22b27; font-weight: 800;">${data.tuition}</span></p>
+            ${data.pdfUrl ? `<div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed #cbd5e1;"><a href="${data.pdfUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #2C3691; font-weight: 700; text-decoration: none; background: #e0f2fe; padding: 6px 12px; border-radius: 6px; font-size: 0.84rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Xem Thông Báo Chiêu Sinh Chính Thức (PDF) ↗</a></div>` : ''}
           </div>
-          <form id="quickRegisterForm" onsubmit="handleQuickRegister(event)" style="border-top: 1px solid #e2e8f0; padding-top: 16px;">
-            <h4 style="color: #2C3691; font-size: 0.95rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase;">Đăng Ký Khóa Học Nhanh</h4>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+          <form id="quickRegisterForm" onsubmit="handleQuickRegister(event)" style="border-top: 1px solid #e2e8f0; padding-top: 14px;">
+            <h4 style="color: #2C3691; font-size: 0.92rem; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Đăng Ký Khóa Học Trực Tuyến</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
               <input type="text" required placeholder="Họ và tên *" class="form-control" />
               <input type="tel" required placeholder="Số điện thoại *" class="form-control" />
             </div>
-            <div style="margin-bottom: 14px;">
+            <div style="margin-bottom: 10px;">
               <input type="email" placeholder="Email nhận thông báo" class="form-control" />
             </div>
-            <div style="margin-bottom: 14px;">
+            <div style="margin-bottom: 12px;">
               <input type="text" placeholder="Đơn vị công tác (Bệnh viện / Phòng khám)" class="form-control" />
             </div>
             <button type="submit" class="btn-primary-pill" style="width: 100%; text-align: center; border-radius: 6px;">Gửi Đăng Ký Trực Tuyến</button>
           </form>
-        `;
         modalOverlay.classList.add('active');
       }
     });

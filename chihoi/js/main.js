@@ -979,3 +979,259 @@ document.addEventListener('DOMContentLoaded', () => {
     sideGrid.addEventListener('mouseleave', () => startFacilityAutoPlay());
   }
 });
+
+
+/* ════════════════════════════════════════════════════════════════
+   SITE SEARCH MODAL & INSTANT SEARCH ENGINE
+════════════════════════════════════════════════════════════════ */
+const siteSearchData = [
+  // Đào tạo
+  {
+    title: "Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2",
+    category: "Đào tạo CME",
+    badge: "badge-dao-tao",
+    desc: "Khóa đào tạo cập nhật kiến thức y khoa liên tục về quản lý điều dưỡng bệnh viện.",
+    url: "dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2"
+  },
+  {
+    title: "Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4",
+    category: "Đào tạo CME",
+    badge: "badge-dao-tao",
+    desc: "Cập nhật kiến thức chuyên sâu về quản lý rủi ro và nâng cao văn hóa an toàn người bệnh.",
+    url: "dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4"
+  },
+  {
+    title: "Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3",
+    category: "Đào tạo CME",
+    badge: "badge-dao-tao",
+    desc: "Chuẩn hóa kỹ năng cấp cứu ngưng tuần hoàn hô hấp cơ bản theo phác đồ quốc tế.",
+    url: "dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3"
+  },
+  // Tin tức
+  {
+    title: "Ra Mắt Ban Chấp Hành Chi Hội Bệnh Viện Tư Nhân TP.HCM Và Các Tỉnh, Thành Phía Nam",
+    category: "Tin tức",
+    badge: "badge-tin-tuc",
+    desc: "Lễ ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam (Nhiệm kỳ 2026 – 2029).",
+    url: "tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm"
+  },
+  {
+    title: "Diễn Đàn Phát Triển Y Tế Tư Nhân Việt Nam Năm 2026: Đổi Mới Quản Trị Y Tế",
+    category: "Tin tức",
+    badge: "badge-tin-tuc",
+    desc: "Thông qua Tuyên bố Thành phố Hồ Chí Minh về phát triển y tế tư nhân Việt Nam 2026.",
+    url: "tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026"
+  },
+  {
+    title: "Kết Nối Sức Mạnh Y Tế Tư Nhân Phía Nam: Madam Trần Thị Lâm Giữ Vai Trò Chủ Tịch Chi Hội",
+    category: "Tin tức",
+    badge: "badge-tin-tuc",
+    desc: "Đại hội thành lập Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam.",
+    url: "tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam"
+  },
+  // Hội viên tiêu biểu
+  {
+    title: "Bệnh viện Quốc tế City (CIH)",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "Số 3, Đường 17A, Phường An Lạc, TP. Hồ Chí Minh - Trụ sở văn phòng Chi hội.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Bệnh viện Gia An 115",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "Số 05, Đường 17A, Phường An Lạc, TP. Hồ Chí Minh.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Bệnh viện Đa khoa Hoàn Mỹ Sài Gòn",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "60-60A Phan Xích Long, Phường 1, TP. Hồ Chí Minh.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Bệnh viện Đa khoa Triều An",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "425 Kinh Dương Vương, Phường An Lạc, TP. Hồ Chí Minh.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Bệnh viện Đa khoa Quốc tế Vinmec Central Park",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "208 Nguyễn Hữu Cảnh, Phường 22, TP. Hồ Chí Minh.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Bệnh viện Đa khoa Tâm Anh TP.HCM",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "2B Phổ Quang, Phường 2, TP. Hồ Chí Minh.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Bệnh viện Đa khoa Quốc tế S.I.S Cần Thơ",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "397 Nguyễn Văn Cừ, Phường An Bình, Thành phố Cần Thơ.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Bệnh viện Đa khoa Quốc tế Nam Sài Gòn",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "Số 88, Đường số 8, KDC Trung Sơn, Xã Bình Hưng, TP. Hồ Chí Minh.",
+    url: "hoi-vien"
+  },
+  {
+    title: "Phòng khám Đa khoa Thuận Kiều",
+    category: "Hội viên",
+    badge: "badge-hoi-vien",
+    desc: "Thuận Kiều, TP. Hồ Chí Minh.",
+    url: "hoi-vien"
+  },
+  // Các trang chính
+  {
+    title: "Giới thiệu Chi hội & 10 Định hướng chiến lược",
+    category: "Giới thiệu",
+    badge: "",
+    desc: "Tôn chỉ mục đích, 10 Định hướng chiến lược và 8 Chương trình trọng điểm của Chi hội.",
+    url: "gioi-thieu"
+  },
+  {
+    title: "Sơ đồ tổ chức Ban Chấp Hành",
+    category: "Cơ cấu",
+    badge: "",
+    desc: "Cơ cấu tổ chức Ban Thường vụ, Ban Chấp hành và các Ban chuyên môn Chi hội.",
+    url: "so-do-to-chuc"
+  },
+  {
+    title: "Liên hệ Văn phòng Chi hội Bệnh viện Tư nhân",
+    category: "Liên hệ",
+    badge: "",
+    desc: "Địa chỉ trụ sở, email tiếp nhận thông tin và số điện thoại hỗ trợ hội viên.",
+    url: "lien-he"
+  }
+];
+
+function getBasePath() {
+  const path = window.location.pathname;
+  if (path.includes('/tin-tuc/') || path.includes('/dao-tao/')) {
+    const parts = path.split('/').filter(Boolean);
+    const chihoiIdx = parts.indexOf('chihoi');
+    const depth = chihoiIdx !== -1 ? parts.length - 1 - chihoiIdx : 1;
+    return depth > 1 ? '../' : '';
+  }
+  return '';
+}
+
+function resolveSearchUrl(url) {
+  // If in WordPress, prepend home_url
+  if (window.chihoiThemeData && window.chihoiThemeData.homeUrl) {
+    return window.chihoiThemeData.homeUrl.replace(/\/$/, '') + '/' + url.replace(/^\//, '');
+  }
+  const base = getBasePath();
+  return base ? base + url : url;
+}
+
+window.openSiteSearch = function() {
+  const modal = document.getElementById('siteSearchModal');
+  if (!modal) return;
+  modal.classList.add('is-open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  const input = document.getElementById('siteSearchInput');
+  if (input) {
+    input.value = '';
+    setTimeout(() => input.focus(), 80);
+    renderSearchResults('');
+  }
+};
+
+window.closeSiteSearch = function() {
+  const modal = document.getElementById('siteSearchModal');
+  if (!modal) return;
+  modal.classList.remove('is-open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+};
+
+window.clearSiteSearch = function() {
+  const input = document.getElementById('siteSearchInput');
+  if (input) {
+    input.value = '';
+    input.focus();
+    renderSearchResults('');
+  }
+};
+
+window.fillSearchTag = function(keyword) {
+  const input = document.getElementById('siteSearchInput');
+  if (input) {
+    input.value = keyword;
+    input.focus();
+    renderSearchResults(keyword);
+  }
+};
+
+function renderSearchResults(keyword) {
+  const container = document.getElementById('siteSearchResults');
+  const clearBtn = document.getElementById('siteSearchClear');
+  if (!container) return;
+
+  const kw = keyword.trim().toLowerCase();
+  if (clearBtn) {
+    clearBtn.style.display = kw ? 'flex' : 'none';
+  }
+
+  if (!kw) {
+    container.innerHTML = '<div class="site-search-empty">Nhập từ khóa để tìm kiếm tin tức, hội viên, đào tạo CME hoặc thông tin Chi hội...</div>';
+    return;
+  }
+
+  const results = siteSearchData.filter(item => {
+    return item.title.toLowerCase().includes(kw) ||
+           item.desc.toLowerCase().includes(kw) ||
+           item.category.toLowerCase().includes(kw);
+  });
+
+  if (!results.length) {
+    container.innerHTML = `<div class="site-search-empty">Không tìm thấy kết quả phù hợp cho <strong>"${keyword}"</strong>. Vui lòng thử từ khóa khác.</div>`;
+    return;
+  }
+
+  let html = '';
+  results.forEach(item => {
+    const finalUrl = resolveSearchUrl(item.url);
+    html += `
+      <a href="${finalUrl}" class="site-search-item">
+        <span class="site-search-item-badge ${item.badge}">${item.category}</span>
+        <div class="site-search-item-content">
+          <h4 class="site-search-item-title">${item.title}</h4>
+          <p class="site-search-item-desc">${item.desc}</p>
+        </div>
+      </a>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('siteSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      renderSearchResults(e.target.value);
+    });
+  }
+
+  // Keyboard shortcut: ESC to close
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeSiteSearch();
+    }
+  });
+});

@@ -3578,3 +3578,253 @@ textarea {
     border-radius: 12px;
   }
 }
+
+
+/* ═══════════════════════════════════════════════
+   SITE SEARCH MODAL & LIVE SEARCH
+═══════════════════════════════════════════════ */
+.site-search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 16px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.site-search-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.site-search-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.site-search-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transform: translateY(-20px) scale(0.98);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+}
+
+.site-search-modal.is-open .site-search-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.site-search-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  gap: 12px;
+}
+
+.site-search-input-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 8px 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-search-input-wrap:focus-within {
+  border-color: #27AAE1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(39, 170, 225, 0.15);
+}
+
+.site-search-icon {
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.site-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #1e293b;
+  font-family: inherit;
+  width: 100%;
+}
+
+.site-search-clear-btn {
+  background: #e2e8f0;
+  color: #64748b;
+  border: none;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.site-search-clear-btn:hover {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+.site-search-close-btn {
+  background: #f1f5f9;
+  color: #475569;
+  border: none;
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.site-search-close-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.site-search-body {
+  padding: 16px 20px 20px;
+  overflow-y: auto;
+}
+
+.site-search-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.site-search-tag-label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.site-search-tag {
+  background: #f1f5f9;
+  color: #2C3691;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.site-search-tag:hover {
+  background: #2C3691;
+  color: #ffffff;
+  border-color: #2C3691;
+}
+
+.site-search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-search-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  transition: all 0.2s;
+}
+
+.site-search-item:hover {
+  background: #ffffff;
+  border-color: #27AAE1;
+  box-shadow: 0 4px 12px rgba(39, 170, 225, 0.12);
+  transform: translateY(-1px);
+}
+
+.site-search-item-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #e0f2fe;
+  color: #0369a1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.site-search-item-badge.badge-dao-tao {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.site-search-item-badge.badge-hoi-vien {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.site-search-item-content {
+  flex: 1;
+}
+
+.site-search-item-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.site-search-item-desc {
+  font-size: 0.83rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.site-search-empty {
+  text-align: center;
+  padding: 30px 10px;
+  color: #64748b;
+  font-size: 0.92rem;
+}

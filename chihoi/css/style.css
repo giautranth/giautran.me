@@ -1232,7 +1232,7 @@ body {
 
 .link-read-more {
   font-size: 0.86rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000000 !important;
   text-decoration: none;
   display: inline-flex;
@@ -3115,14 +3115,14 @@ body {
 }
 
 
-/* Nút Xem Thêm Màu Đen */
+/* Nút Xem Thêm Màu Đen (Không bold) */
 .link-read-more,
 .btn-news-detail,
 .btn-cme-detail,
 .news-card-footer .link-read-more,
 .news-card-footer a {
   color: #000000 !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   text-decoration: none;
   display: inline-flex;
   align-items: center;

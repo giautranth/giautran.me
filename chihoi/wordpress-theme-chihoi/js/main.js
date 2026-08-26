@@ -304,7 +304,7 @@ const cmeData = {
     location: 'Bệnh viện Quốc tế City - Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP.HCM',
     tuition: 'Học phí theo quy định đào tạo (Ưu đãi đặc biệt cho Bệnh viện Hội viên Chi hội)',
     startDate: '22/07/2026',
-    image: 'photo/dao-tao/cme_1_card.jpg',
+    image: 'photo/dao-tao/13.png',
     pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/07/20.-Thong-bao-chieu-sinh_Tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2-CAP-NHAT.pdf'
   },
   'cme-2': {
@@ -317,7 +317,7 @@ const cmeData = {
     location: 'Bệnh viện Quốc tế City - Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP.HCM',
     tuition: 'Học phí theo quy định đào tạo (Ưu đãi đặc biệt cho Bệnh viện Hội viên Chi hội)',
     startDate: '15/08/2026',
-    image: 'photo/dao-tao/cme_2_card.jpg',
+    image: 'photo/dao-tao/11.png',
     pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/08/28.-TB-chieu-sinh-An-toan-nguoi-benh-khoa-4.pdf'
   },
   'cme-3': {
@@ -330,7 +330,7 @@ const cmeData = {
     location: 'Trung tâm Huấn luyện Kỹ năng Lâm sàng - Bệnh viện Quốc tế City',
     tuition: '1.500.000 VNĐ / Học viên (Giảm 15% cho Bệnh viện Hội viên)',
     startDate: '09/07/2026',
-    image: 'photo/dao-tao/cme_3_card.jpg',
+    image: 'photo/dao-tao/12.png',
     pdfUrl: 'https://cih.com.vn/wp-content/uploads/2026/07/9.-Thong-bao-chieu-sinh-BLS-khoa-3.pdf'
   }
 };

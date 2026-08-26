@@ -2143,30 +2143,19 @@ body {
   transition: stroke 0.2s ease, color 0.2s ease;
 }
 
-.section-slider-arrow:hover {
-  background: var(--brand-navy, #2C3691) !important;
-  color: #ffffff !important;
-  border-color: var(--brand-navy, #2C3691) !important;
-  box-shadow: 0 8px 24px rgba(44, 54, 145, 0.38) !important;
-  transform: translateY(-50%) scale(1.08);
-}
-
-.section-slider-arrow:hover svg {
-  stroke: #ffffff !important;
-  color: #ffffff !important;
-}
-
-.section-slider-arrow:active {
-  background: var(--brand-navy, #2C3691) !important;
-  color: #ffffff !important;
-  border-color: var(--brand-navy, #2C3691) !important;
-  transform: translateY(-50%) scale(0.94) !important;
-  box-shadow: 0 4px 12px rgba(44, 54, 145, 0.35) !important;
-}
-
-.section-slider-arrow:active svg {
-  stroke: #ffffff !important;
-  color: #ffffff !important;
+/* Desktop Hover Only (Only applies when mouse actually hovers) */
+@media (hover: hover) and (pointer: fine) {
+  .section-slider-arrow:hover {
+    background: var(--brand-navy, #2C3691) !important;
+    color: #ffffff !important;
+    border-color: var(--brand-navy, #2C3691) !important;
+    box-shadow: 0 8px 24px rgba(44, 54, 145, 0.38) !important;
+    transform: translateY(-50%) scale(1.08) !important;
+  }
+  .section-slider-arrow:hover svg {
+    stroke: #ffffff !important;
+    color: #ffffff !important;
+  }
 }
 
 .section-slider-arrow.prev {
@@ -2212,11 +2201,30 @@ body {
     right: -6px !important;
   }
 
-  /* Mobile touch states */
+  /* Reset hover / focus on touch devices so color NEVER stays stuck */
+  .section-slider-arrow:hover,
+  .section-slider-arrow:focus,
+  .section-slider-arrow:focus-visible {
+    background: #ffffff !important;
+    color: var(--brand-navy, #2C3691) !important;
+    border-color: rgba(44, 54, 145, 0.25) !important;
+    box-shadow: 0 4px 14px rgba(0, 50, 100, 0.22) !important;
+    transform: translateY(-50%) !important;
+    outline: none !important;
+  }
+  .section-slider-arrow:hover svg,
+  .section-slider-arrow:focus svg,
+  .section-slider-arrow:focus-visible svg {
+    stroke: var(--brand-navy, #2C3691) !important;
+    color: var(--brand-navy, #2C3691) !important;
+  }
+
+  /* Active state only while finger physically presses down */
   .section-slider-arrow:active {
     background: var(--brand-navy, #2C3691) !important;
     color: #ffffff !important;
     border-color: var(--brand-navy, #2C3691) !important;
+    transform: translateY(-50%) scale(0.92) !important;
   }
   .section-slider-arrow:active svg {
     stroke: #ffffff !important;

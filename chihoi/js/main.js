@@ -1300,3 +1300,25 @@ window.scrollRelatedNews = function(direction) {
     track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
   }
 };
+
+
+/* Auto-blur slider arrow buttons on touch/click to prevent sticky focus/hover colors on mobile */
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('touchend', (e) => {
+    const arrow = e.target.closest('.section-slider-arrow, .banner-nav-btn, .aih-slider-arrow');
+    if (arrow) {
+      setTimeout(() => {
+        arrow.blur();
+      }, 100);
+    }
+  }, { passive: true });
+
+  document.addEventListener('click', (e) => {
+    const arrow = e.target.closest('.section-slider-arrow');
+    if (arrow) {
+      setTimeout(() => {
+        arrow.blur();
+      }, 100);
+    }
+  });
+});

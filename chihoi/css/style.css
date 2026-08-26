@@ -241,7 +241,9 @@ body {
   z-index: 1010;
 }
 
-.aih-menu-item:hover .dropdown-menu-list {
+.aih-menu-item:hover .dropdown-menu-list,
+.aih-menu-item.open .dropdown-menu-list,
+.aih-menu-item.has-dropdown.open .dropdown-menu-list {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

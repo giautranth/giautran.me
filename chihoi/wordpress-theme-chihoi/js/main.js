@@ -42,12 +42,22 @@ function initMobileNav() {
 
     if (link && submenu) {
       link.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          submenu.classList.toggle('show-mobile-sub');
-        }
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = item.classList.toggle('open');
+        submenu.classList.toggle('show-mobile-sub', isOpen);
       });
     }
+  });
+
+  document.addEventListener('click', (e) => {
+    dropdownParents.forEach(item => {
+      if (!item.contains(e.target)) {
+        item.classList.remove('open');
+        const submenu = item.querySelector('.dropdown-menu-list');
+        if (submenu) submenu.classList.remove('show-mobile-sub');
+      }
+    });
   });
 }
 

@@ -16,7 +16,6 @@ get_header(); ?>
       <!-- Filter Tabs -->
       <div class="filter-tabs-wrapper">
         <button class="tab-btn news-tab-btn active" data-filter="all">Tất cả</button>
-        <button class="tab-btn news-tab-btn" data-filter="van-ban">Văn bản & Quyết định</button>
         <button class="tab-btn news-tab-btn" data-filter="chi-hoi">Tin tức chi hội</button>
         <button class="tab-btn news-tab-btn" data-filter="su-kien">Sự kiện</button>
         </div>

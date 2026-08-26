@@ -2359,28 +2359,14 @@ body {
 
 /* Footer Copyright Inline under Email */
 /* Footer Copyright Inline under Email (Single Line) */
-.footer-copyright-inline {
-  margin-top: 10px;
-  font-size: 0.78rem;
-  color: #94a3b8;
-  line-height: 1.5;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 8px;
-  white-space: nowrap;
-}
+.footer-copyright-inline { display: none !important; }
 
 @media (max-width: 1280px) {
-  .footer-copyright-inline {
-    font-size: 0.74rem;
-    white-space: nowrap;
-  }
+  .footer-copyright-inline { display: none !important; }
 }
 
 @media (max-width: 992px) {
-  .footer-copyright-inline {
-    white-space: normal;
-    font-size: 0.8rem;
-  }
+  .footer-copyright-inline { display: none !important; }
 }
 
 .footer-bottom-strip {
@@ -2459,32 +2445,16 @@ body {
 .footer-brand-desc,
 .footer-heading,
 .footer-links-list a,
-.footer-copyright-inline {
-  color: #ffffff !important;
-}
+.footer-copyright-inline { display: none !important; }
 
-.footer-copyright-inline {
-  margin-top: 10px;
-  font-size: 0.78rem;
-  color: #ffffff !important;
-  line-height: 1.5;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 8px;
-  white-space: nowrap;
-}
+.footer-copyright-inline { display: none !important; }
 
 @media (max-width: 1280px) {
-  .footer-copyright-inline {
-    font-size: 0.74rem;
-    white-space: nowrap;
-  }
+  .footer-copyright-inline { display: none !important; }
 }
 
 @media (max-width: 992px) {
-  .footer-copyright-inline {
-    white-space: normal;
-    font-size: 0.8rem;
-  }
+  .footer-copyright-inline { display: none !important; }
 }
 
 

@@ -3123,3 +3123,20 @@ body {
   .programs-grid-modern { grid-template-columns: 1fr; }
   .about-doc-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Full Width Footer Divider & Copyright Row */
+.footer-bottom-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  margin-top: 22px;
+  padding-top: 12px;
+  width: 100%;
+}
+
+.footer-copyright-text {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ffffff !important;
+  line-height: 1.5;
+  text-align: left;
+}

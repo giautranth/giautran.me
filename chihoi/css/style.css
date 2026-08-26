@@ -132,16 +132,16 @@ body {
 }
 
 .aih-logo-img {
-  height: 38px;
-  max-width: 280px;
+  height:  30px !important;
+  max-width:  190px !important;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
 
 .aih-brand-group:hover .aih-logo-img {
-  height: 38px;
-  max-width: 280px;
+  height:  30px !important;
+  max-width:  190px !important;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
@@ -2278,8 +2278,8 @@ body {
   }
 
   .aih-logo-img {
-  height: 38px;
-  max-width: 280px;
+  height:  30px !important;
+  max-width:  190px !important;
   width: auto;
   object-fit: contain;
   transition: transform 0.2s ease;
@@ -3884,4 +3884,32 @@ textarea {
   padding: 2px 8px;
   border-radius: 4px;
   text-transform: uppercase;
+}
+
+
+/* Responsive Break Utilities for Footer */
+.br-desktop {
+  display: block;
+}
+.br-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .br-desktop {
+    display: none !important;
+  }
+  .br-mobile {
+    display: block !important;
+  }
+}
+
+/* Remove underline on phone numbers and links in footer */
+.footer-contact-item a,
+.footer-contact-item a:hover,
+a[href^="tel:"],
+a[href*="1900"] {
+  text-decoration: none !important;
+  color: inherit !important;
+  border-bottom: none !important;
 }

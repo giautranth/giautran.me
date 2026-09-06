@@ -2,10 +2,17 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vegan Garden Berlin | 100 % Vegane Vietnamesische Küche in Friedrichshain</title>
   <meta name="description" content="Mitten in Friedrichshain erwartet Sie Vegan Garden Berlin - 100 % vegane vietnamesische Küche in einzigartiger Gartenatmosphäre.">
-  <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans (Full Vietnamese Support) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260904_footer_hours_swap">
   <!-- FontAwesome for crisp icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -19,16 +26,14 @@
       </button>
 
       <a href="#" class="brand-logo">
-        <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 38px; width: auto; max-width: 175px; object-fit: contain;">
+        <img src="logo/logo_header_new.png?v=20260820_fresh_now" alt="Vegan Garden Berlin Logo" style="height: 44px; width: auto; max-width: 210px; object-fit: contain;">
       </a>
 
       <nav>
         <ul class="nav-menu" id="navMenu">
           <li><a href="about" class="nav-link">ABOUT</a></li>
           <li><a href="#speisekarte" class="nav-link">SPEISEKARTE</a></li>
-          <li><a href="#garten" class="nav-link">GARTEN</a></li>
-          <li><a href="#events" class="nav-link">EVENTS</a></li>
-          <li><a href="ratgeber" class="nav-link">NEWS</a></li>
+          <li><a href="ratgeber" class="nav-link">JOURNAL</a></li>
           <li><a href="kontakt" class="nav-link">KONTAKT</a></li>
         </ul>
       </nav>
@@ -65,29 +70,25 @@
     </div>
   </header>
 
-  <!-- HERO BANNER SLIDER SECTION -->
+  <!-- HERO BANNER SECTION -->
   <section class="hero" id="home">
     <div class="hero-slider-wrap" id="heroSliderWrap">
       <div class="hero-slide active">
-        <img src="images/hero_banner_1.jpg" alt="Vegan Garden Berlin Banner 1" class="hero-slide-img" fetchpriority="high">
-      </div>
-      <div class="hero-slide">
-        <img src="images/hero_banner_2.jpg" alt="Vegan Garden Berlin Banner 2" class="hero-slide-img" loading="lazy">
+        <img src="images/banner_4.jpeg?v=20260903_banner4" alt="Vegan Garden Berlin Banner" class="hero-slide-img" fetchpriority="high">
       </div>
     </div>
-
-    <!-- Navigation Arrows -->
-    <button class="hero-arrow hero-arrow-left" id="heroPrevBtn" aria-label="Vorheriges Bild">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-    <button class="hero-arrow hero-arrow-right" id="heroNextBtn" aria-label="Nächstes Bild">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-    <!-- Slider Dots -->
-    <div class="hero-dots" id="heroDots">
-      <span class="hero-dot active" data-slide="0"></span>
-      <span class="hero-dot" data-slide="1"></span>
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-buttons">
+        <button class="btn btn-primary js-open-reserve" aria-label="Tisch reservieren">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>Tisch reservieren</span>
+        </button>
+        <a href="#speisekarte" class="btn btn-glass" aria-label="Speisekarte ansehen">
+          <i class="fa-solid fa-utensils"></i>
+          <span>Speisekarte ansehen</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -117,21 +118,23 @@
         </div>
       </div>
     </div>
+  </section>
+
   <!-- GOOGLE REVIEWS SECTION (INTERACTIVE SLIDER) -->
-  <section class="section-reviews" id="bewertungen" style="background: #f7f5ee; padding: 40px 0;">
+  <section class="section-reviews" id="bewertungen" style="background: #F6F1E7; padding: 40px 0;">
     <div class="container">
       <div class="reviews-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 20px;">
         <div class="reviews-google-badge" style="display: flex; align-items: center; gap: 16px;">
           <img src="images/google_logo.png" alt="Google Logo" style="height: 30px; width: auto; max-width: 105px; object-fit: contain; display: block;">
           <div>
-            <div class="rating-stars" style="color: #f4b400; font-size: 1.1rem; display: flex; gap: 2px;">
+            <div class="rating-stars" style="color: #A98224; font-size: 1.1rem; display: flex; gap: 2px;">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <div class="rating-score" style="font-weight: 700; color: #1c241d; font-size: 0.95rem; margin-top: 2px;">300+ Bewertungen</div>
+            <div class="rating-score" style="font-weight: 700; color: #211A16; font-size: 0.95rem; margin-top: 2px;">300+ Bewertungen</div>
           </div>
         </div>
       </div>
@@ -225,7 +228,7 @@
   <section class="section-highlights" id="speisekarte">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title notranslate">MENU</h2>
+        <h2 class="section-title notranslate">SPEISEKARTE</h2>
       </div>
 
       <div class="slider-container-wrap">
@@ -248,24 +251,24 @@
           <!-- Dish 2 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="images/pho_bo_chay.jpg" alt="Vegan Garden Suppe">
+              <img src="images/tu_buu_kho_chao.jpg" alt="Tứ Bửu Kho Chao">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Vegan Garden Suppe</h3>
-              <p class="food-desc">mit Königsgemüse, Lotuswurzeln, Pilzen, Ingwer und Tofu.</p>
-              <div class="food-price">6,50 €</div>
+              <h3 class="food-name">Tứ Bửu Kho Chao</h3>
+              <p class="food-desc">Soybean Curd Chilli, Pilze und Tofu.</p>
+              <div class="food-price">12,90 €</div>
             </div>
           </div>
 
           <!-- Dish 3 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="images/spring_rolls.jpg" alt="Sommerrollen">
+              <img src="images/lau_thai.jpg" alt="LẨU THÁI">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Sommerrollen</h3>
-              <p class="food-desc">Reispapierrollen gefüllt mit Karotten, Paprika, Gurken, Kräuterseitlingen, Tofu, Mango, Reisnudeln, Kräutern und Erdnusssoße.</p>
-              <div class="food-price">6,50 €</div>
+              <h3 class="food-name">LẨU THÁI</h3>
+              <p class="food-desc">Mit saisonalem Gemüse, Pilzen, Tomaten, Ananas, Tofu und Gemüsebrühe.</p>
+              <div class="food-price">35,90 €</div>
             </div>
           </div>
 
@@ -292,6 +295,30 @@
               <div class="food-price">12,90 €</div>
             </div>
           </div>
+
+          <!-- Dish 6 -->
+          <div class="food-card">
+            <div class="food-img-wrap">
+              <img src="images/thai_reisnudelsuppe.jpg" alt="THAI REISNUDELSUPPE">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">THAI REISNUDELSUPPE</h3>
+              <p class="food-desc">Mit Tofu, Ananas, Pilzen, Tomaten, Zitronengras, Limettenblättern, Kräutern und Gemüsebrühe.</p>
+              <div class="food-price">12,90 €</div>
+            </div>
+          </div>
+
+          <!-- Dish 7 -->
+          <div class="food-card">
+            <div class="food-img-wrap">
+              <img src="images/spargel.jpg" alt="SPARGEL">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">SPARGEL</h3>
+              <p class="food-desc">Und Spitzmorcheln, Tofu, Senfkohlblättern u. Cordycep (Schlauchpilze) und Vegan Garden Soße.</p>
+              <div class="food-price">6,50 €</div>
+            </div>
+          </div>
         </div>
         <button class="side-arrow side-arrow--next" id="highlightsNext" aria-label="Nächstes Gericht">
           <i class="fa-solid fa-chevron-right"></i>
@@ -312,7 +339,7 @@
       <div class="events-grid">
         <!-- Banner 1 -->
         <div class="event-banner">
-          <img src="images/sommergarten.jpg" alt="Sommergarten">
+          <img src="images/sommergarten.jpg?v=20260903_sommergarten4" alt="Sommergarten">
           <div class="event-overlay">
             <h3 class="event-title">SOMMERGARTEN</h3>
             <p class="event-subtitle">Über 100 Plätze im Grünen</p>
@@ -321,7 +348,7 @@
 
         <!-- Banner 2 -->
         <div class="event-banner">
-          <img src="images/restaurant.jpg" alt="Restaurant Indoor">
+          <img src="images/restaurant.jpg?v=20260903_restaurant4" alt="Restaurant Indoor">
           <div class="event-overlay">
             <h3 class="event-title">RESTAURANT</h3>
             <p class="event-subtitle">Modern, gemütlich & entspannt</p>
@@ -330,7 +357,7 @@
 
         <!-- Banner 3 -->
         <div class="event-banner" id="events">
-          <img src="images/events.jpg" alt="Events & Feiern">
+          <img src="images/events.jpg?v=20260903_event5" alt="Events & Feiern">
           <div class="event-overlay">
             <h3 class="event-title">EVENTS & FEIERN</h3>
             <p class="event-subtitle">Private & Exclusive</p>
@@ -357,43 +384,37 @@
         </button>
         <div class="food-grid-slider gallery-grid-slider" id="galleryGrid">
           <div class="insta-card">
-            <img src="images/gallery_1.jpg" alt="Vegan Garden Gallery 1">
+            <img src="images/gallery/CHIHUONG28.084320-Edit.jpg?v=20260903_g" alt="Vegan Garden Berlin - Bánh Mì Vegan" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_2.jpg" alt="Vegan Garden Gallery 2">
+            <img src="images/gallery/bo-tuu-kho-chao.png?v=20260903_g" alt="Vegan Garden Berlin - Tứ Bửu Kho Chao" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_3.jpg" alt="Vegan Garden Gallery 3">
+            <img src="images/gallery/lau.jpg?v=20260903_g" alt="Vegan Garden Berlin - Lẩu Thái" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_4.jpg" alt="Vegan Garden Gallery 4">
+            <img src="images/gallery/bunbo.jpg?v=20260903_g" alt="Vegan Garden Berlin - Bún Bò Huế" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_5.jpg" alt="Vegan Garden Gallery 5">
+            <img src="images/gallery/bunthai.png?v=20260903_g" alt="Vegan Garden Berlin - Bún Thái" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_6.jpg" alt="Vegan Garden Gallery 6">
+            <img src="images/gallery/SPARGEL.jpg?v=20260903_g" alt="Vegan Garden Berlin - Măng Tây Spargel" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_7.jpg" alt="Vegan Garden Gallery 7">
+            <img src="images/gallery/CHIHUONG28.084336-Edit.jpg?v=20260903_g" alt="Vegan Garden Berlin - Món Cuốn Nem Giòn" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_8.jpg" alt="Vegan Garden Gallery 8">
+            <img src="images/gallery/4.jpg?v=20260903_g" alt="Vegan Garden Berlin - Bàn Tiệc Ẩm Thực" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_9.jpg" alt="Vegan Garden Gallery 9">
+            <img src="images/gallery/CHIHUONG28.084466.jpg?v=20260903_g" alt="Vegan Garden Berlin - Cơm Chay Thực Dưỡng" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_10.jpg" alt="Vegan Garden Gallery 10">
+            <img src="images/gallery/a.jpg?v=20260903_g" alt="Vegan Garden Berlin - Đặc Sản Chay" loading="lazy">
           </div>
           <div class="insta-card">
-            <img src="images/gallery_11.jpg" alt="Vegan Garden Gallery 11">
-          </div>
-          <div class="insta-card">
-            <img src="images/gallery_12.jpg" alt="Vegan Garden Gallery 12">
-          </div>
-          <div class="insta-card">
-            <img src="images/gallery_13.jpg" alt="Vegan Garden Gallery 13">
+            <img src="images/gallery/CHIHUONG28.085441.jpg?v=20260903_g" alt="Vegan Garden Berlin - Góc Ẩm Thực Chay" loading="lazy">
           </div>
         </div>
         <button class="side-arrow side-arrow--next" id="galleryNext" aria-label="Nächstes Bild">
@@ -407,7 +428,7 @@
   <section class="section-highlights" id="ratgeber" style="background-color: var(--bg-cream); padding: 40px 0; text-align: center;">
     <div class="container">
       <div class="section-header" style="margin-bottom: 24px;">
-        <h2 class="section-title notranslate">NEWS</h2>
+        <h2 class="section-title notranslate">JOURNAL</h2>
       </div>
 
       <!-- Category Filter Tabs (CIH Style) -->
@@ -476,40 +497,6 @@
             </div>
           </article>
 
-          <!-- Article 4: Chè Dessert -->
-          <article class="news-card" data-category="rezepte">
-            <a href="articles/che-vietnamesisches-dessert-vegan-berlin" target="_blank" class="news-card__img-wrap">
-              <img src="images/article_che_dessert.jpg" alt="Chè – Vietnamesische Desserts vegan" class="news-card__img">
-              <span class="news-card__cat">REZEPTE</span>
-            </a>
-            <div class="news-card__body">
-              <h3 class="news-card__title">
-                <a href="articles/che-vietnamesisches-dessert-vegan-berlin" target="_blank">Chè – Vietnamesische Desserts vegan in Berlin</a>
-              </h3>
-              <a href="articles/che-vietnamesisches-dessert-vegan-berlin" target="_blank" class="news-card__more">
-                <span class="more-txt">Artikel lesen</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Article 5: Cơm Chay -->
-          <article class="news-card" data-category="rezepte">
-            <a href="articles/com-chay-vietnamesischer-veganer-reis-berlin" target="_blank" class="news-card__img-wrap">
-              <img src="images/article_com_chay.jpg" alt="Cơm Chay – Vietnamesischer Veganer Reis" class="news-card__img">
-              <span class="news-card__cat">REZEPTE</span>
-            </a>
-            <div class="news-card__body">
-              <h3 class="news-card__title">
-                <a href="articles/com-chay-vietnamesischer-veganer-reis-berlin" target="_blank">Cơm Chay – Vietnamesischer Veganer Reis in Berlin</a>
-              </h3>
-              <a href="articles/com-chay-vietnamesischer-veganer-reis-berlin" target="_blank" class="news-card__more">
-                <span class="more-txt">Artikel lesen</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
           <!-- Article 6: Bestes Restaurant -->
           <article class="news-card" data-category="kultur">
             <a href="articles/bestes-veganes-restaurant-berlin-2026" target="_blank" class="news-card__img-wrap">
@@ -544,22 +531,6 @@
             </div>
           </article>
 
-          <!-- Article 8: Sommerrollen -->
-          <article class="news-card" data-category="gesundheit">
-            <a href="articles/goi-cuon-vegan-rezept-berlin" target="_blank" class="news-card__img-wrap">
-              <img src="images/article_goi_cuon_vegan.jpg" alt="Vegane Sommerrollen (Gỏi Cuốn)" class="news-card__img">
-              <span class="news-card__cat">GESUNDHEIT</span>
-            </a>
-            <div class="news-card__body">
-              <h3 class="news-card__title">
-                <a href="articles/goi-cuon-vegan-rezept-berlin" target="_blank">Vegane Sommerrollen (Gỏi Cuốn) – Frische Vitalität & Erdnuss-Dip</a>
-              </h3>
-              <a href="articles/goi-cuon-vegan-rezept-berlin" target="_blank" class="news-card__more">
-                <span class="more-txt">Artikel lesen</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
         </div>
         <button class="side-arrow side-arrow--next" id="ratgeberNext" aria-label="Nächster Artikel">
           <i class="fa-solid fa-chevron-right"></i>
@@ -576,8 +547,8 @@
       <div class="footer-grid">
         <!-- Brand Column -->
         <div class="footer-brand">
-          <a href="index.html" class="brand-logo" style="display: inline-block; margin-bottom: 12px;">
-            <img src="logo/logo_cropped.png" alt="Vegan Garden Berlin Logo" style="height: 52px; width: auto; max-width: 250px; object-fit: contain; filter: brightness(0) invert(1); display: block;">
+          <a href="index.html" class="footer-logo">
+            <img src="logo/logo_footer.png?v=20260904_logo" alt="Vegan Garden Berlin Logo" style="height: 52px; width: auto; max-width: 240px; object-fit: contain; display: block;">
           </a>
           <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
           <div class="social-links">
@@ -586,14 +557,6 @@
             <a href="https://www.tiktok.com/@vegangarden_berlin" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
-        </div>
-
-        <!-- Hours Column -->
-        <div class="footer-hours">
-          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
-          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
-          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
-          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
         </div>
 
         <!-- Contact Column -->
@@ -616,6 +579,14 @@
           </div>
         </div>
 
+        <!-- Hours Column -->
+        <div class="footer-hours">
+          <h3 class="footer-col-title">ÖFFNUNGSZEITEN</h3>
+          <p><strong>Dienstag – Sonntag</strong><br>12:00 – 22:00 Uhr</p>
+          <p style="margin-top: 10px;"><strong>Montag Ruhetag</strong></p>
+          <p style="margin-top: 10px; font-size: 0.82rem; color: #838a84;">Küche bis 21:30 Uhr</p>
+        </div>
+
         <!-- Map Location Column -->
         <div class="footer-map">
           <h3 class="footer-col-title">FINDEN SIE UNS</h3>
@@ -628,11 +599,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2025 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
-        <div class="footer-links">
-          <a href="#">IMPRESSUM</a>
-          <a href="#">DATENSCHUTZ</a>
-        </div>
+        <div>© 2026 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
       </div>
     </div>
   </footer>
@@ -645,17 +612,39 @@
       <form id="reserveForm">
         <div class="form-group">
           <label class="form-label">Vollständiger Name</label>
-          <input type="text" id="resName" class="form-input" placeholder="z.B. Anna Schmidt" required>
+          <input type="text" id="resName" class="form-input" required>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Datum</label>
+            <label class="form-label">Datum <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Di – So, Mo Ruhetag)</span></label>
             <input type="date" id="resDate" class="form-input" required>
           </div>
           <div class="form-group">
-            <label class="form-label">Uhrzeit</label>
-            <input type="time" id="resTime" class="form-input" value="18:30" required>
+            <label class="form-label">Uhrzeit <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(12:00 – 22:00)</span></label>
+            <select id="resTime" class="form-select" required>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30" selected>18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="21:30">21:30</option>
+              <option value="22:00">22:00</option>
+            </select>
           </div>
         </div>
 
@@ -671,13 +660,18 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">E-Mail & Telefonnummer</label>
-          <input type="text" id="resContact" class="form-input" placeholder="kontakt@beispiel.de / 0170 123456" required>
+          <label class="form-label">Telefonnummer</label>
+          <input type="tel" id="resPhone" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">E-Mail-Adresse</label>
+          <input type="email" id="resEmail" class="form-input" required>
         </div>
 
         <div class="form-group">
           <label class="form-label">Anmerkungen / Wünsche</label>
-          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Besondere Wünsche, Allergien oder Anmerkungen..."></textarea>
+          <textarea id="resNotes" class="form-textarea" rows="3"></textarea>
         </div>
 
         <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
@@ -692,9 +686,9 @@
       <h2 class="serif-font" style="color: var(--primary-green-dark); margin-bottom: 8px;">Speisekarte</h2>
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">100 % vegane vietnamesische Spezialitäten.</p>
 
-      <a href="menu/Menu.pdf" target="_blank" class="btn btn-primary" style="margin-bottom: 24px; padding: 10px 20px; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 8px;">
+      <a href="menu/Druck_Speisekarte_VeganGarden.pdf" target="_blank" class="btn btn-primary" style="margin-bottom: 24px; padding: 10px 20px; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 8px;">
         <i class="fa-solid fa-file-pdf" style="font-size: 1.1rem;"></i>
-        <span>SPEISEKARTE PDF HERUNTERLADEN (23 SEITEN)</span>
+        <span>SPEISEKARTE PDF HERUNTERLADEN</span>
       </a>
 
       <div class="menu-tabs">
@@ -827,14 +821,14 @@
       <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">4.8 von 5 Sternen basierend auf über 520 Google Rezensionen.</p>
 
       <div style="display: flex; flex-direction: column; gap: 16px;">
-        <div style="background: #f9f8f4; padding: 16px; border-radius: 8px; border-left: 3px solid var(--primary-green);">
-          <div style="color: #f4b400; font-size: 0.85rem; margin-bottom: 4px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div style="background: #F6F1E7; padding: 16px; border-radius: 8px; border-left: 3px solid #A98224;">
+          <div style="color: #A98224; font-size: 0.85rem; margin-bottom: 4px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
           <p style="font-size: 0.9rem; color: var(--text-dark);">"Eines der schönsten Restaurants in Berlin. Die Summer Bowl war fantastisch frisch und der Garten ist pure Entspannung!"</p>
           <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-top: 6px; display: block;">– Sarah M.</span>
         </div>
 
-        <div style="background: #f9f8f4; padding: 16px; border-radius: 8px; border-left: 3px solid var(--primary-green);">
-          <div style="color: #f4b400; font-size: 0.85rem; margin-bottom: 4px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <div style="background: #F6F1E7; padding: 16px; border-radius: 8px; border-left: 3px solid #A98224;">
+          <div style="color: #A98224; font-size: 0.85rem; margin-bottom: 4px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
           <p style="font-size: 0.9rem; color: var(--text-dark);">"Super freundlicher Service, authentische vegane vietnamesische Aromen und ein wunderbarer Außenbereich."</p>
           <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-top: 6px; display: block;">– David K.</span>
         </div>
@@ -842,6 +836,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260904_footer_hours_swap"></script>
 </body>
 </html>

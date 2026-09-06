@@ -65,7 +65,7 @@
           <div class="infinite-marquee-track" id="marqueeTrackLane1">
             <!-- Set 1: Tất cả 16 Logo Bệnh viện Hội viên -->
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -115,7 +115,7 @@
 
             <!-- Set 2: Duplicate lặp vô tận (32 thẻ liên tục) -->
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -184,7 +184,6 @@
       <div class="filter-tabs-wrapper">
         <button class="tab-btn training-tab-btn active" data-filter="all">Tất cả</button>
         <button class="tab-btn training-tab-btn" data-filter="chieu-sinh">Thông báo chiêu sinh</button>
-        <button class="tab-btn training-tab-btn" data-filter="giang-vien">Đội ngũ giảng viên</button>
         <button class="tab-btn training-tab-btn" data-filter="nghien-cuu">Nghiên cứu khoa học</button>
       </div>
 
@@ -201,8 +200,8 @@
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2 -->
         <div class="cme-training-card" data-category="chieu-sinh">
           <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
-            <div class="cme-card-thumb-wrap" style="position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;background:#f8fafc;">
-              <img src="photo/dao-tao/13.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
+            <div class="cme-card-thumb-wrap">
+              <img src="photo/dao-tao/13.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2" class="cme-card-thumb-img" />
             </div>
           </a>
           <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
@@ -226,8 +225,8 @@
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4 -->
         <div class="cme-training-card" data-category="chieu-sinh">
           <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
-            <div class="cme-card-thumb-wrap" style="position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;background:#f8fafc;">
-              <img src="photo/dao-tao/11.png" alt="Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
+            <div class="cme-card-thumb-wrap">
+              <img src="photo/dao-tao/11.png" alt="Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4" class="cme-card-thumb-img" />
             </div>
           </a>
           <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
@@ -251,8 +250,8 @@
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3 -->
         <div class="cme-training-card" data-category="chieu-sinh">
           <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
-            <div class="cme-card-thumb-wrap" style="position:relative;aspect-ratio:16/9;width:100%;overflow:hidden;background:#f8fafc;">
-              <img src="photo/dao-tao/12.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3" style="width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease;" class="cme-card-thumb-img" />
+            <div class="cme-card-thumb-wrap">
+              <img src="photo/dao-tao/12.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3" class="cme-card-thumb-img" />
             </div>
           </a>
           <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
@@ -495,7 +494,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -507,7 +506,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -519,7 +518,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -531,7 +530,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -545,7 +544,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -557,7 +556,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -569,7 +568,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
@@ -581,7 +580,7 @@
               <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115.png" alt="Bệnh viện Gia An 115" />
+              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
               <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />

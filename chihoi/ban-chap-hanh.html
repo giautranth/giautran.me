@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sơ Đồ Tổ Chức - Chi hội Bệnh viện Tư nhân TP. HCM và các tỉnh phía Nam</title>
+  <meta name="description" content="Cơ cấu bộ máy tổ chức, Ban Chấp hành, Ban Thường trực và các tiểu ban chuyên môn của Chi hội Bệnh viện Tư nhân TP. HCM và các tỉnh phía Nam." />
+  
+  <link rel="icon" type="image/png" href="photo/logo/chihoi.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== AIH UNIFIED HEADER (Chuẩn Bệnh viện Quốc tế Mỹ AIH) ========== -->
+  <header class="aih-header">
+        <div class="aih-header-container">
+      
+      <!-- Mobile Nav Toggle (Left on Mobile) -->
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Mở menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      
+      <!-- Brand Logo & Gold Accreditation Seal -->
+      <div class="aih-brand-group">
+        <a href="./" style="display:flex;align-items:center;text-decoration:none;">
+          <img src="photo/logo/chihoi_2.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
+        </a>
+        </div>
+
+      <!-- Main Navigation Menu -->
+      <nav class="aih-nav" aria-label="Menu chính">
+        <ul class="aih-menu-list" id="navMenuList">
+          <li class="aih-menu-item">
+            <a href="./" class="aih-menu-link">TRANG CHỦ</a>
+          </li>
+          <li class="aih-menu-item has-dropdown active">
+            <a href="javascript:void(0)" class="aih-menu-link active">GIỚI THIỆU</a>
+            <ul class="dropdown-menu-list">
+              <li class="dropdown-item"><a href="ve-chi-hoi">VỀ CHI HỘI</a></li>
+              <li class="dropdown-item active"><a href="ban-chap-hanh" class="active">BAN CHẤP HÀNH</a></li>
+            </ul>
+          </li>
+          <li class="aih-menu-item">
+            <a href="hoi-vien" class="aih-menu-link">HỘI VIÊN</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="dao-tao" class="aih-menu-link">CHƯƠNG TRÌNH ĐÀO TẠO</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="tin-tuc" class="aih-menu-link">TIN TỨC</a>
+          </li>
+          <li class="aih-menu-item">
+            <a href="lien-he" class="aih-menu-link">LIÊN HỆ</a>
+          </li>
+          <li class="aih-menu-item aih-search-menu-item">
+            <button class="aih-search-btn" title="Tìm kiếm" onclick="openSiteSearch();" aria-label="Tìm kiếm">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Utilities Tools (Search & Language Switcher) -->
+      <div class="aih-header-tools">
+        
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="ja" data-flag="jp" data-code="JA" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/jp.png" alt="jp" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">日本語</span>
+            </li>
+            <li class="lang-opt" data-lang="zh" data-flag="cn" data-code="ZH" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/cn.png" alt="cn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">中文</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT: SƠ ĐỒ TỔ CHỨC ========== -->
+  <main class="site-section">
+    <div class="container">
+      
+      <div class="section-header-row">
+        <h1 class="section-main-title">BAN CHẤP HÀNH</h1>
+      </div>
+
+      <!-- Danh Sách Ban Chấp Hành -->
+      <div class="white-box-card" style="margin-top:30px;">
+        <div style="margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
+          <h2 style="color:#2C3691;font-size:1.25rem;font-weight:900;text-transform:uppercase;margin:0;">
+            DANH SÁCH BAN CHẤP HÀNH NHIỆM KỲ 2026 – 2029
+          </h2>
+        </div>
+
+        <div class="table-responsive-rounded">
+          <table class="org-data-table bch-table">
+            <thead>
+              <tr>
+                <th class="col-stt">STT</th>
+                <th class="col-name">Họ tên</th>
+                <th class="col-role">Chức danh<br />Chi hội</th>
+                <th class="col-pos">Chức vụ</th>
+                <th class="col-org">Đơn vị công tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-stt">1</td>
+                <td class="col-name">Madam<br />Trần Thị Lâm</td>
+                <td class="col-role">Chủ tịch Chi hội</td>
+                <td class="col-pos">- Chủ tịch sáng lập<br />- Trưởng ban Uỷ ban Chiến lược<br />- Chủ tịch danh dự</td>
+                <td class="col-org">- Tập đoàn Hoa Lâm<br />- Khu Y tế Kỹ thuật cao TP. HCM<br />- Hội KHSK TP. HCM</td>
+              </tr>
+              <tr>
+                <td class="col-stt">2</td>
+                <td class="col-name">ThS. BS.<br />Trần Quốc Thành</td>
+                <td class="col-role">Phó Chủ tịch<br />Thường trực</td>
+                <td class="col-pos">- Giám đốc Điều hành<br />- Phó Chủ tịch Thường trực</td>
+                <td class="col-org">- Bệnh viện Quốc tế City & Bệnh viện Gia An 115<br />- Hội KHSK TP. HCM</td>
+              </tr>
+              <tr>
+                <td class="col-stt">3</td>
+                <td class="col-name">TS. BS.<br />Đào Cảnh Tuất</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">- Phó Chủ tịch<br />- Chủ tịch</td>
+                <td class="col-org">- Hiệp hội Bệnh viện Tư nhân Việt Nam<br />- Bệnh viện ĐK Quốc tế Hồng Bàng</td>
+              </tr>
+              <tr>
+                <td class="col-stt">4</td>
+                <td class="col-name">Ông Phạm Thế Đồng</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Chủ tịch Hội đồng Quản trị</td>
+                <td class="col-org">Hệ thống Bệnh viện Sài Gòn - ITO</td>
+              </tr>
+              <tr>
+                <td class="col-stt">5</td>
+                <td class="col-name">PGS. TS.<br />Nguyễn Thanh Bình</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">- Chủ tịch<br />- Trưởng đơn vị nghiên cứu AI</td>
+                <td class="col-org">- Hội KHSK TP. HCM<br />- Trung tâm Nghiên cứu Y sinh ĐHYK Phạm Ngọc Thạch</td>
+              </tr>
+              <tr>
+                <td class="col-stt">6</td>
+                <td class="col-name">PGS. TS. BS.<br />Nguyễn Thanh Hiệp</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Hiệu trưởng</td>
+                <td class="col-org">Trường Y và Khoa học Sức khỏe thuộc HUTECH</td>
+              </tr>
+              <tr>
+                <td class="col-stt">7</td>
+                <td class="col-name">TS. BS.<br />Trương Vĩnh Long</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Phó Ban Ủy ban Chiến lược</td>
+                <td class="col-org">Khu Y tế Kỹ thuật cao Hoa Lâm – Shangri-La</td>
+              </tr>
+              <tr>
+                <td class="col-stt">8</td>
+                <td class="col-name">TS. Nguyễn Chí Tân</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">- Chủ tịch HĐTV<br />- Giám đốc<br />- Phó Chủ tịch</td>
+                <td class="col-org">- Phòng khám Đa khoa Thuận Kiều<br />- CTCP Hạnh Phúc Lab<br />- Hội KHSK TP. HCM</td>
+              </tr>
+              <tr>
+                <td class="col-stt">9</td>
+                <td class="col-name">ThS. BS. CKII.<br />Nguyễn Trương Khương</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Giám đốc Chuyên môn</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế Nam Sài Gòn</td>
+              </tr>
+              <tr>
+                <td class="col-stt">10</td>
+                <td class="col-name">TS. BS.<br />Trần Chí Cường</td>
+                <td class="col-role">Phó Chủ tịch</td>
+                <td class="col-pos">Giám đốc</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế S.I.S Cần Thơ</td>
+              </tr>
+              <tr>
+                <td class="col-stt">11</td>
+                <td class="col-name">Bà Trần Thị Chung</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
+              </tr>
+              <tr>
+                <td class="col-stt">12</td>
+                <td class="col-name">Bà Trần Ngọc Hiền</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Giám đốc Điều hành</td>
+                <td class="col-org">Bệnh viện Đa khoa Medic Bình Dương</td>
+              </tr>
+              <tr>
+                <td class="col-stt">13</td>
+                <td class="col-name">PGS. TS. BS.<br />Nguyễn Hoài Nam</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Chủ tịch Hội đồng Thành viên</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế Minh Anh</td>
+              </tr>
+              <tr>
+                <td class="col-stt">14</td>
+                <td class="col-name">Bà Phạm Thị Thanh Mai</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Giám đốc Vận hành</td>
+                <td class="col-org">Bệnh viện FV</td>
+              </tr>
+              <tr>
+                <td class="col-stt">15</td>
+                <td class="col-name">BS. CKII.<br />Nguyễn Hoàng Tuấn</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Giám đốc</td>
+                <td class="col-org">Bệnh viện Phương Nam</td>
+              </tr>
+              <tr>
+                <td class="col-stt">16</td>
+                <td class="col-name">BS. CKII.<br />Nguyễn Văn Minh</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Giám đốc Y khoa</td>
+                <td class="col-org">Bệnh viện Quốc tế Hồng Bàng</td>
+              </tr>
+              <tr>
+                <td class="col-stt">17</td>
+                <td class="col-name">PGS. TS. BS.<br />Trần Minh Hoàng</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">- Giảng viên cao cấp<br />- Cố vấn cao cấp Ban Giám đốc</td>
+                <td class="col-org">- Đại học Y Dược TP. HCM<br />- Bệnh viện Quốc tế City</td>
+              </tr>
+              <tr>
+                <td class="col-stt">18</td>
+                <td class="col-name">BS. Nguyễn Tài Chánh</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Giám đốc Chuyên môn</td>
+                <td class="col-org">Bệnh viện Đa khoa Việt Mỹ</td>
+              </tr>
+              <tr>
+                <td class="col-stt">19</td>
+                <td class="col-name">Ông Dương Trung Hiếu</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Giám đốc Vận hành</td>
+                <td class="col-org">Bệnh viện Quốc tế Columbia Asia Bình Dương</td>
+              </tr>
+              <tr>
+                <td class="col-stt">20</td>
+                <td class="col-name">BS. CKII.<br />Nguyễn Phi Hùng</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">- Trưởng khoa Y Dược<br />- Tổng Giám đốc</td>
+                <td class="col-org">- Trường Đại học Văn Hiến<br />- Phòng khám Maimay</td>
+              </tr>
+              <tr>
+                <td class="col-stt">21</td>
+                <td class="col-name">TS. BS.<br />Lê Quan Anh Tuấn</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Giám đốc</td>
+                <td class="col-org">Bệnh viện Đa khoa Quốc tế Vinmec Central Park</td>
+              </tr>
+              <tr>
+                <td class="col-stt">22</td>
+                <td class="col-name">BS. CKII.<br />Hoàng Đức Quyền</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">- Phó Tổng Giám đốc<br />- Trưởng phòng Kế hoạch Tổng hợp</td>
+                <td class="col-org">Bệnh viện Triều An</td>
+              </tr>
+              <tr>
+                <td class="col-stt">23</td>
+                <td class="col-name">BS. CKII.<br />Hồ Trúc Lệ</td>
+                <td class="col-role">Uỷ viên BCH</td>
+                <td class="col-pos">Phó Giám đốc</td>
+                <td class="col-org">Bệnh viện Tân Hưng</td>
+              </tr>
+              <tr>
+                <td class="col-stt">24</td>
+                <td class="col-name">Bà Lê Hồng Bảo Chương</td>
+                <td class="col-role">Uỷ viên BCH<br />Thư ký</td>
+                <td class="col-pos">Trưởng phòng Pháp lý cấp cao</td>
+                <td class="col-org">Công ty Cổ phần Y khoa Hoàn Mỹ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Danh Sách Ban Thư Ký -->
+      <div class="white-box-card" style="margin-top:30px;">
+        <div style="margin-bottom:20px;border-bottom:2px solid #e2e8f0;padding-bottom:12px;">
+          <h2 style="color:#2C3691;font-size:1.25rem;font-weight:900;text-transform:uppercase;margin:0;">
+            DANH SÁCH BAN THƯ KÝ CHI HỘI
+          </h2>
+        </div>
+
+        <div class="table-responsive-rounded">
+          <table class="org-data-table thuky-table">
+            <thead>
+              <tr>
+                <th class="col-stt">STT</th>
+                <th class="col-name">Họ tên</th>
+                <th class="col-pos">Chức vụ</th>
+                <th class="col-org">Đơn vị công tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-stt">1</td>
+                <td class="col-name">Ông Nguyễn Thanh Tuyền</td>
+                <td class="col-pos">Phó Tổng Giám đốc</td>
+                <td class="col-org">Công ty CP Đầu tư Phát triển Hoa Lâm</td>
+              </tr>
+              <tr>
+                <td class="col-stt">2</td>
+                <td class="col-name">Bà Lê Thị Nhi Kỳ</td>
+                <td class="col-pos">Trợ lý Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
+              </tr>
+              <tr>
+                <td class="col-stt">3</td>
+                <td class="col-name">Bà Đặng Thị Ngọc Bích</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
+              </tr>
+              <tr>
+                <td class="col-stt">4</td>
+                <td class="col-name">Bà Bùi Thị Tường Vy</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
+              </tr>
+              <tr>
+                <td class="col-stt">5</td>
+                <td class="col-name">Bà Nguyễn Thị Kim Phượng</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
+              </tr>
+              <tr>
+                <td class="col-stt">6</td>
+                <td class="col-name">Ông Nguyễn Thể Hưng</td>
+                <td class="col-pos">Thư ký Chủ tịch</td>
+                <td class="col-org">Tập đoàn Hoa Lâm</td>
+              </tr>
+              <tr>
+                <td class="col-stt">7</td>
+                <td class="col-name">Bà Nguyễn Thị Huế</td>
+                <td class="col-pos">Giám đốc Nhân sự</td>
+                <td class="col-org">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
+              </tr>
+              <tr>
+                <td class="col-stt">8</td>
+                <td class="col-name">Bà Nguyễn Thị Kim Thúy</td>
+                <td class="col-pos">Trưởng phòng Thương hiệu &<br />Truyền thông cấp cao</td>
+                <td class="col-org">Bệnh viện Gia An 115 & Bệnh viện Quốc tế City</td>
+              </tr>
+              <tr>
+                <td class="col-stt">9</td>
+                <td class="col-name">Bà Nguyễn Thị Lan Hương</td>
+                <td class="col-pos">Trưởng phòng Trải nghiệm Khách hàng</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
+              </tr>
+              <tr>
+                <td class="col-stt">10</td>
+                <td class="col-name">Bà Trần Thị Thu</td>
+                <td class="col-pos">Trưởng phòng Trải nghiệm Khách hàng</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
+              </tr>
+              <tr>
+                <td class="col-stt">11</td>
+                <td class="col-name">Ông Hồ Trọng Nhân</td>
+                <td class="col-pos">Trưởng phòng Thiết bị Y tế cấp cao<br />kiêm Quản lý Công nghệ thông tin</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
+              </tr>
+              <tr>
+                <td class="col-stt">12</td>
+                <td class="col-name">Bà Lê Nguyễn Hồng Anh</td>
+                <td class="col-pos">Trưởng phòng Mua hàng cấp cao</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
+              </tr>
+              <tr>
+                <td class="col-stt">13</td>
+                <td class="col-name">Bà Vũ Thị Thu</td>
+                <td class="col-pos">Phó phòng Mua hàng</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
+              </tr>
+              <tr>
+                <td class="col-stt">14</td>
+                <td class="col-name">Bà Lê Thị Vy</td>
+                <td class="col-pos">Chủ tịch Công đoàn</td>
+                <td class="col-org">Bệnh viện Gia An 115</td>
+              </tr>
+              <tr>
+                <td class="col-stt">15</td>
+                <td class="col-name">Bà Phạm Thị Như Quỳnh</td>
+                <td class="col-pos">Trợ lý Giám đốc Điều hành</td>
+                <td class="col-org">Bệnh viện Quốc tế City</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-logo-col">
+          <div class="footer-logo-wrapper">
+            <img src="photo/logo/chihoi_2.png" alt="Chi hội Bệnh viện Tư nhân TP. HCM" class="footer-logo-img" />
+          </div>
+          <div class="footer-affil-text">Thuộc Hiệp hội Bệnh viện Tư nhân Việt Nam</div>
+          <div class="footer-slogan-text">ĐOÀN KẾT - HỢP TÁC - PHÁT TRIỂN</div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">LIÊN HỆ</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" color="#27AAE1" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span><strong>Văn phòng:</strong> Số 5 Đường 17A, P. An Lạc, TP. HCM</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" color="#27AAE1" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span><strong>Hotline:</strong> <a href="tel:19008146" style="color:inherit;text-decoration:none !important;">1900 8146</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" fill="none" stroke="currentColor" color="#27AAE1" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span><strong>Email:</strong> info@chihoibenhvien.com</span>
+          </div>
+        </div>
+
+        
+
+                <div>
+          <h4 class="footer-heading">Đăng Ký Nhận Tin</h4>
+          <p style="font-size:0.85rem;color:#ffffff;margin-bottom:12px;">
+            Nhận thông báo về các khóa đào tạo,<br />hội nghị và chính sách y tế mới nhất.
+          </p>
+          <form onsubmit="alert('Đăng ký nhận bản tin thành công!'); event.preventDefault();">
+            <div style="display:flex;gap:6px;">
+              <input type="email" required placeholder="Nhập email của bạn" class="form-control footer-newsletter-input" style="background:#ffffff !important;border:1px solid #cbd5e1 !important;color:#1e293b !important;font-size:0.88rem;border-radius:50px;padding:8px 18px;" />
+              <button type="submit" class="btn-primary-pill footer-newsletter-btn" style="background:#e22b27;border-color:#e22b27;color:#ffffff;padding:8px 20px;font-size:0.88rem;font-weight:700;font-family:inherit;white-space:nowrap;letter-spacing:normal;cursor:pointer;">Gửi</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+        <div class="footer-bottom-row">
+        <p class="footer-copyright-text">Bản quyền © 2026 thuộc về Chi hội Bệnh viện Tư nhân <br class="br-mobile" />TP. HCM và các tỉnh, thành phía Nam.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- ========== SITE SEARCH MODAL ========== -->
+  <div id="siteSearchModal" class="site-search-modal" aria-hidden="true">
+    <div class="site-search-backdrop" onclick="closeSiteSearch()"></div>
+    <div class="site-search-dialog">
+      <div class="site-search-header">
+        <div class="site-search-input-wrap">
+          <svg class="site-search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" id="siteSearchInput" class="site-search-input" placeholder="Tìm kiếm tin tức, khóa học CME, hội viên, thông tin Chi hội..." autocomplete="off" />
+          <button type="button" class="site-search-clear-btn" id="siteSearchClear" onclick="clearSiteSearch()" style="display:none;" aria-label="Xóa">✕</button>
+        </div>
+        <button type="button" class="site-search-close-btn" onclick="closeSiteSearch()" aria-label="Đóng">✕</button>
+      </div>
+      
+      <div class="site-search-body">
+        <div class="site-search-tags" id="siteSearchTags">
+          <span class="site-search-tag-label">Gợi ý tìm kiếm:</span>
+          <button type="button" class="site-search-tag" onclick="fillSearchTag('Đào tạo CME')">Đào tạo CME</button>
+          <button type="button" class="site-search-tag" onclick="fillSearchTag('Hội viên')">Hội viên</button>
+          <button type="button" class="site-search-tag" onclick="fillSearchTag('Tin tức')">Tin tức</button>
+          <button type="button" class="site-search-tag" onclick="fillSearchTag('Madam Trần Thị Lâm')">Madam Trần Thị Lâm</button>
+          <button type="button" class="site-search-tag" onclick="fillSearchTag('Ban Chấp Hành')">Ban Chấp Hành</button>
+        </div>
+
+        <div class="site-search-results" id="siteSearchResults"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

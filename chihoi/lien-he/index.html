@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style.css?v=3.0" />
 
   <style>
     /* CIH Contact Page Layout Standard */
@@ -133,7 +133,7 @@
       left: 0;
       width: 44px;
       height: 3px;
-      background: linear-gradient(90deg, #e22b27 0%, #27AAE1 100%);
+      background: #e22b27;
       border-radius: 2px;
     }
     
@@ -164,25 +164,37 @@
       display: none;
     }
     
-    .btn-submit-contact {
-      width: 100%;
-      padding: 0.9rem 2rem;
-      background: #2C3691;
-      color: #ffffff;
-      border: none;
-      border-radius: 50px;
-      font-weight: 800;
-      font-size: 1.05rem;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(44, 54, 145, 0.25);
-      transition: all 0.25s ease;
-    }
-    
-    .btn-submit-contact:hover {
-      background: #e22b27;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(226, 43, 39, 0.35);
-    }
+    /* Contact Form Submit Button Dark Blue Gradient Theme */
+.btn-submit-contact {
+  width: 100% !important;
+  padding: 0.9rem 2rem !important;
+  background: #071f46 !important;
+  background: linear-gradient(135deg, #071f46 0%, #0b326c 40%, #114894 75%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 12px !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 20px rgba(7, 31, 70, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-submit-contact:hover {
+  background: linear-gradient(135deg, #061938 0%, #08295a 40%, #0e3d7d 75%, #0274b3 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+.btn-submit-contact:active,
+.btn-submit-contact:focus {
+  background: linear-gradient(135deg, #041228 0%, #072248 100%) !important;
+  color: #ffffff !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.35) !important;
+}
     
     @media (max-width: 900px) {
       .contact-layout-grid {
@@ -216,7 +228,7 @@
       <!-- Brand Logo -->
       <div class="aih-brand-group">
         <a href="../" style="display:flex;align-items:center;text-decoration:none;">
-          <img src="../photo/logo/chihoi2.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
+          <img src="../photo/logo/chihoi_2.png" alt="Logo Chi hội Bệnh viện Tư nhân" class="aih-logo-img" />
         </a>
       </div>
 
@@ -230,7 +242,7 @@
             <a href="javascript:void(0)" class="aih-menu-link">GIỚI THIỆU</a>
             <ul class="dropdown-menu-list">
               <li class="dropdown-item"><a href="../ve-chi-hoi">VỀ CHI HỘI</a></li>
-              <li class="dropdown-item"><a href="../so-do-to-chuc">SƠ ĐỒ TỔ CHỨC</a></li>
+              <li class="dropdown-item"><a href="../ban-chap-hanh">BAN CHẤP HÀNH</a></li>
             </ul>
           </li>
           <li class="aih-menu-item">
@@ -344,7 +356,7 @@
         <div>
           <div class="contact-form-card">
             
-            <h2 class="contact-form-title">Liên hệ</h2>
+            <h2 class="contact-form-title">LIÊN HỆ</h2>
 
             <form id="contact-custom-form" novalidate onsubmit="handleContactSubmit(event)">
               
@@ -353,7 +365,7 @@
                 <div>
                   <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Họ tên <span style="color: #e22b27;">*</span></label>
                   <input type="text" id="contact-name" class="form-input-custom" placeholder="" onfocus="clearFieldError('name')" />
-                  <div id="err-name" class="form-error-msg">Vui lòng nhập họ và tên của bạn.</div>
+                  <div id="err-name" class="form-error-msg">Vui lòng nhập họ tên của bạn.</div>
                 </div>
                 <div>
                   <label style="display: block; font-size: 0.9rem; font-weight: 700; color: #1e293b; margin-bottom: 0.4rem;">Số điện thoại <span style="color: #e22b27;">*</span></label>
@@ -396,8 +408,9 @@
       <div class="footer-grid">
         <div class="footer-logo-col">
           <div class="footer-logo-wrapper">
-            <img src="../photo/logo/chihoi2.png" alt="Chi hội Bệnh viện Tư nhân TP.HCM" class="footer-logo-img" />
+            <img src="../photo/logo/chihoi_2.png" alt="Chi hội Bệnh viện Tư nhân TP.HCM" class="footer-logo-img" />
           </div>
+          <div class="footer-affil-text">Thuộc Hiệp hội Bệnh viện Tư nhân Việt Nam</div>
           <div class="footer-slogan-text">ĐOÀN KẾT - HỢP TÁC - PHÁT TRIỂN</div>
         </div>
 
@@ -417,10 +430,8 @@
           </div>
         </div>
 
-        
-
-                <div>
-          <h4 class="footer-heading">Đăng Ký Nhận Tin</h4>
+        <div>
+          <h4 class="footer-heading">ĐĂNG KÝ NHẬN TIN</h4>
           <p style="font-size:0.85rem;color:#ffffff;margin-bottom:12px;">
             Nhận thông báo về các khóa đào tạo,<br />hội nghị và chính sách y tế mới nhất.
           </p>
@@ -433,21 +444,6 @@
         </div>
       </div>
 
-        <div>
-          <h4 class="footer-heading" style="color: #ffffff; font-weight: 700;">BẢN ĐỒ</h4>
-          <div class="footer-map-wrapper">
-            <iframe 
-              src="https://maps.google.com/maps?q=B%E1%BB%87nh%20vi%E1%BB%87n%20Gia%20An%20115,%20S%E1%BB%91%205%20%C4%90%C6%B0%E1%BB%9Dng%2017A,%20B%C3%ACnh%20T%C3%A2n,%20TP.HCM&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Bản đồ vị trí Chi hội Bệnh viện Tư nhân">
-            </iframe>
-            <a href="https://maps.app.goo.gl/WmDm2HPPv72K3XRk8" target="_blank" rel="noopener noreferrer" class="footer-map-link-btn">
-              Maps <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
-            </a>
-          </div>
-        </div>
       <div class="footer-bottom-row">
         <p class="footer-copyright-text">Bản quyền © 2026 thuộc về Chi hội Bệnh viện Tư nhân <br class="br-mobile" />TP. HCM và các tỉnh, thành phía Nam.</p>
       </div>

@@ -1,4 +1,3 @@
-
 /* Mobile Navigation Toggle (Hidden on Desktop) */
 .mobile-nav-toggle {
   display: none;
@@ -112,6 +111,15 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: 0 1px 6px rgba(15, 23, 42, 0.04);
+}
+
+body.admin-bar .aih-header {
+  top: 32px;
+}
+@media screen and (max-width: 782px) {
+  body.admin-bar .aih-header {
+    top: 46px;
+  }
 }
 
 .aih-header-container {
@@ -745,7 +753,14 @@ body {
 
 .aih-slider-arrow.prev { left: 16px; }
 .aih-slider-arrow.next { right: 16px; }
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(44, 54, 145, 0.2);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .carousel-dot.active {
@@ -1565,40 +1580,193 @@ body {
 }
 
 .member-data-table th.col-stt,
+.member-data-table th.col-name,
+.member-data-table th.col-address {
+  color: #ffffff !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.member-data-table th.col-stt,
 .member-data-table td.col-stt {
   width: 55px;
   text-align: center !important;
   white-space: nowrap;
 }
 
-.member-data-table th.col-name,
 .member-data-table td.col-name {
   width: 38%;
   text-align: left !important;
+  color: #111827 !important;
 }
 
-.member-data-table th.col-name {
-  text-align: center !important;
-}
-
-.member-data-table th.col-address,
 .member-data-table td.col-address {
   width: 62%;
   text-align: left !important;
   color: #334155 !important;
 }
 
-.member-data-table th.col-address {
-  text-align: center !important;
+/* ==========================================================================
+   TỐI ƯU CHIỀU RỘNG CỘT BẢNG HỘI VIÊN & BAN CHẤP HÀNH TRÊN MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* BẢNG HỘI VIÊN (3 Cột: STT, Bệnh viện, Địa chỉ) - Fit 100% bề ngang màn hình */
+  .member-table-container {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+  
+  .member-data-table {
+    min-width: 0 !important;
+    width: 100% !important;
+    table-layout: fixed !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .member-data-table th,
+  .member-data-table td {
+    padding: 8px 6px !important;
+    font-size: 0.8rem !important;
+    line-height: 1.35 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  .member-data-table th.col-stt,
+  .member-data-table td.col-stt {
+    width: 32px !important;
+    min-width: 32px !important;
+    max-width: 34px !important;
+    padding: 8px 2px !important;
+    text-align: center !important;
+    font-size: 0.78rem !important;
+  }
+  
+  .member-data-table th,
+  .member-data-table th.col-stt,
+  .member-data-table th.col-name,
+  .member-data-table th.col-address {
+    color: #ffffff !important;
+    background: var(--brand-navy, #2C3691) !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+  
+  .member-data-table th.col-name {
+    width: 44% !important;
+    font-size: 0.82rem !important;
+  }
+
+  .member-data-table td.col-name {
+    width: 44% !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    color: #111827 !important;
+  }
+  
+  .member-data-table th.col-address {
+    width: calc(56% - 32px) !important;
+    font-size: 0.82rem !important;
+  }
+
+  .member-data-table td.col-address {
+    width: calc(56% - 32px) !important;
+    font-size: 0.78rem !important;
+    color: #334155 !important;
+  }
+
+  /* BẢNG BAN CHẤP HÀNH & SƠ ĐỒ TỔ CHỨC (5 Cột) - Tối ưu chiều rộng gọn gàng */
+  .table-responsive-rounded {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 12px !important;
+    margin: 0 !important;
+  }
+  
+  .bch-table,
+  .org-data-table,
+  .thuky-table {
+    width: 100% !important;
+    min-width: 520px !important;
+    font-size: 0.78rem !important;
+  }
+  
+  .bch-table th,
+  .bch-table td,
+  .thuky-table th,
+  .thuky-table td,
+  .org-data-table th,
+  .org-data-table td {
+    padding: 7px 6px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .bch-table th.col-stt,
+  .bch-table td.col-stt,
+  .thuky-table th.col-stt,
+  .thuky-table td.col-stt {
+    width: 30px !important;
+    min-width: 30px !important;
+    max-width: 32px !important;
+    padding: 7px 2px !important;
+  }
+  
+  .bch-table th.col-name,
+  .bch-table td.col-name {
+    width: 22% !important;
+    min-width: 100px !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .bch-table th.col-role,
+  .bch-table td.col-role {
+    width: 20% !important;
+    min-width: 95px !important;
+  }
+  
+  .bch-table th.col-pos,
+  .bch-table td.col-pos {
+    width: 28% !important;
+    min-width: 125px !important;
+  }
+  
+  .bch-table th.col-org,
+  .bch-table td.col-org {
+    width: 30% !important;
+    min-width: 135px !important;
+  }
+  
+  .thuky-table th.col-name,
+  .thuky-table td.col-name {
+    width: 26% !important;
+    min-width: 110px !important;
+  }
+  
+  .thuky-table th.col-pos,
+  .thuky-table td.col-pos {
+    width: 36% !important;
+    min-width: 140px !important;
+  }
+  
+  .thuky-table th.col-org,
+  .thuky-table td.col-org {
+    width: 38% !important;
+    min-width: 150px !important;
+  }
 }
 
-@media (max-width: 767px) {
-  .member-table-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+@media (max-width: 480px) {
+  .member-data-table th.col-name,
+  .member-data-table td.col-name {
+    font-size: 0.8rem !important;
   }
-  .member-data-table {
-    min-width: 600px;
+  .member-data-table th.col-address,
+  .member-data-table td.col-address {
+    font-size: 0.75rem !important;
   }
 }
 
@@ -1822,120 +1990,6 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   FOOTER (Chuẩn Bệnh viện Quốc tế: Royal Navy Sâu, Tối Giản, Đầy Đủ Thông Tin)
-   ========================================================================== */
-/* ==========================================================================
-   FOOTER (Rich Modern Medical Gradient)
-   ========================================================================== */
-.site-footer {
-  margin-top: 0 !important;
-  background: linear-gradient(135deg, #0b1536 0%, #16245e 30%, #1b3a72 65%, #0d2847 100%) !important;
-  color: #ffffff !important;
-  padding: 34px 0 18px !important;
-  border-top: 4px solid var(--brand-cyan, #27AAE1) !important;
-  position: relative;
-  overflow: hidden;
-}
-
-.site-footer::before {
-  content: '';
-  position: absolute;
-  top: -120px;
-  right: -60px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(39, 170, 225, 0.16) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.35fr 1.25fr 0.95fr;
-  gap: 20px;
-  align-items: flex-start;
-  padding-bottom: 0 !important;
-}
-
-.footer-brand-title {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-
-.footer-brand-desc {
-  font-size: 0.86rem;
-  color: #94a3b8;
-  line-height: 1.65;
-  margin-bottom: 16px;
-}
-
-.footer-heading {
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: #ffffff;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  position: relative;
-  padding-bottom: 8px;
-}
-
-.footer-heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 32px;
-  height: 2.5px;
-  background: var(--brand-cyan, #27AAE1) !important;
-  border-radius: 2px;
-}
-
-.footer-links-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links-list li {
-  margin-bottom: 9px;
-}
-
-.footer-links-list a {
-  color: #94a3b8;
-  text-decoration: none;
-  font-size: 0.86rem;
-  transition: all 0.2s ease;
-}
-
-.footer-links-list a:hover {
-  color: var(--brand-cyan);
-  padding-left: 5px;
-}
-
-.footer-contact-item {
-  display: flex;
-  gap: 10px;
-  font-size: 0.86rem;
-  margin-bottom: 8px;
-  color: #cbd5e1;
-}
-
-.footer-contact-item strong {
-  color: #ffffff;
-}
-
-.footer-bottom-strip {
-  background: #090d29;
-  padding: 14px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  text-align: center;
-  font-size: 0.8rem;
-  color: #64748b;
-}
-
-/* ==========================================================================
    RESPONSIVE
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -2144,6 +2198,17 @@ textarea.form-control {
   display: block;
   object-fit: contain;
   margin: 0 auto;
+}
+
+.footer-affil-text {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.2px;
+  text-align: center !important;
+  margin-top: 8px !important;
+  margin-bottom: 2px !important;
+  line-height: 1.4 !important;
 }
 
 .footer-slogan-text {
@@ -2433,8 +2498,8 @@ body {
   }
 
   .aih-logo-img {
-    height: 33px !important;
-    max-width: 210px !important;
+    height: 35px !important;
+    max-width: 221px !important;
     width: auto;
     object-fit: contain;
     transition: transform 0.2s ease;
@@ -2599,9 +2664,6 @@ body {
 }
 
 
-/* ==========================================================================
-   FOOTER (All White Text #ffffff)
-   ========================================================================== */
 /* ==========================================================================
    FOOTER (Rich Modern Medical Gradient)
    ========================================================================== */
@@ -2806,11 +2868,13 @@ body {
 }
 
 .about-section-heading {
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: var(--brand-navy);
-  line-height: 1.3;
-  margin-bottom: 18px;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: var(--brand-navy, #2C3691) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  line-height: 1.3 !important;
+  margin: 0 0 20px 0 !important;
 }
 
 .about-overview-text {
@@ -3434,11 +3498,11 @@ body {
 
 .banner-nav-arrows .button-prev:hover,
 .banner-nav-arrows .button-next:hover {
-  background: #27AAE1;
-  border-color: #7dd3fc;
-  color: #ffffff;
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 6px 20px rgba(39, 170, 225, 0.45);
+  background: #2C3691 !important;
+  border-color: #1e266d !important;
+  color: #ffffff !important;
+  transform: translateY(-50%) scale(1.08) !important;
+  box-shadow: 0 6px 20px rgba(44, 54, 145, 0.45) !important;
 }
 
 @media (max-width: 767.98px) {
@@ -3602,20 +3666,52 @@ textarea {
 }
 
 
+.cme-card-thumb-link {
+  display: block !important;
+  width: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
 .cme-card-thumb-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: #f8fafc;
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  display: block !important;
 }
 
 .cme-card-thumb-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: contain !important;
+  display: block !important;
+  transition: transform 0.35s ease !important;
+}
+
+.cme-training-card:hover .cme-card-thumb-img {
+  transform: scale(1.03) !important;
+}
+
+@media (max-width: 768px) {
+  .cme-card-thumb-wrap {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px !important;
+    aspect-ratio: 16 / 9 !important;
+    display: block !important;
+  }
+  .cme-card-thumb-img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 180px !important;
+    aspect-ratio: 16 / 9 !important;
+    display: block !important;
+    object-fit: contain !important;
+  }
 }
 
 
@@ -4267,6 +4363,7 @@ a[href*="1900"] {
   border-color: #e22b27 !important;
   color: #ffffff !important;
   font-weight: 700 !important;
+  border-radius: 8px !important;
   transition: all 0.25s ease !important;
 }
 
@@ -4276,6 +4373,7 @@ a[href*="1900"] {
   background: #b91c1c !important;
   background-color: #b91c1c !important;
   border-color: #b91c1c !important;
+  border-radius: 8px !important;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(226, 43, 39, 0.45) !important;
 }
@@ -4575,99 +4673,75 @@ a[href*="1900"] {
 .directions-grid-modern {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
   gap: 16px;
-  margin-bottom: 36px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .direction-item-card {
-  padding: 18px 20px;
-  border-radius: 16px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  transition: all 0.25s ease;
-  border: 1px solid transparent;
+  background: #ffffff !important;
+  border: 1px solid #e0f2fe !important;
+  border-radius: 16px !important;
+  padding: 18px 20px !important;
+  display: flex !important;
+  gap: 16px !important;
+  align-items: flex-start !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.25s ease !important;
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 .direction-item-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  background: #ffffff !important;
+  border-color: #38bdf8 !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 26px rgba(39, 170, 225, 0.18) !important;
 }
 
 .direction-item-num {
-  width: 38px;
-  height: 38px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.05rem;
-  font-weight: 800;
-  flex-shrink: 0;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #27AAE1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(39, 170, 225, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  flex-shrink: 0 !important;
   font-family: 'Noto Sans', sans-serif !important;
 }
 
 .direction-item-title {
-  font-size: 1.02rem;
-  font-weight: 800;
-  margin-bottom: 4px;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  color: var(--brand-navy, #2C3691) !important;
+  margin: 0 0 4px 0 !important;
+  line-height: 1.35 !important;
   font-family: 'Noto Sans', sans-serif !important;
 }
 
 .direction-item-desc {
-  font-size: 0.88rem;
-  color: #475569;
-  line-height: 1.55;
-  margin: 0;
+  font-size: 0.88rem !important;
+  color: #475569 !important;
+  line-height: 1.55 !important;
+  margin: 0 !important;
 }
 
-/* Card Color Themes */
-.theme-blue { background: #f0f9ff; border-color: #bae6fd; }
-.theme-blue .direction-item-num { background: #bae6fd; color: #0284c7; }
-.theme-blue .direction-item-title { color: #0369a1; }
-
-.theme-cyan { background: #ecfeff; border-color: #a5f3fc; }
-.theme-cyan .direction-item-num { background: #a5f3fc; color: #0891b2; }
-.theme-cyan .direction-item-title { color: #0e7490; }
-
-.theme-green { background: #f0fdf4; border-color: #bbf7d0; }
-.theme-green .direction-item-num { background: #bbf7d0; color: #16a34a; }
-.theme-green .direction-item-title { color: #15803d; }
-
-.theme-indigo { background: #eef2ff; border-color: #c7d2fe; }
-.theme-indigo .direction-item-num { background: #c7d2fe; color: #4f46e5; }
-.theme-indigo .direction-item-title { color: #4338ca; }
-
-.theme-purple { background: #faf5ff; border-color: #e9d5ff; }
-.theme-purple .direction-item-num { background: #e9d5ff; color: #9333ea; }
-.theme-purple .direction-item-title { color: #7e22ce; }
-
-.theme-teal { background: #f0fdfa; border-color: #99f6e4; }
-.theme-teal .direction-item-num { background: #99f6e4; color: #0d9488; }
-.theme-teal .direction-item-title { color: #0f766e; }
-
-.theme-amber { background: #fffbeb; border-color: #fde68a; }
-.theme-amber .direction-item-num { background: #fde68a; color: #d97706; }
-.theme-amber .direction-item-title { color: #b45309; }
-
-.theme-sky { background: #eff6ff; border-color: #bfdbfe; }
-.theme-sky .direction-item-num { background: #bfdbfe; color: #2563eb; }
-.theme-sky .direction-item-title { color: #1d4ed8; }
-
-.theme-rose { background: #fff1f2; border-color: #fecdd3; }
-.theme-rose .direction-item-num { background: #fecdd3; color: #e11d48; }
-.theme-rose .direction-item-title { color: #be123c; }
-
-.theme-gold { background: #fefce8; border-color: #fef08a; }
-.theme-gold .direction-item-num { background: #fef08a; color: #ca8a04; }
-.theme-gold .direction-item-title { color: #a16207; }
-
 /* Programs Section */
+.directions-wrapper-modern,
 .programs-wrapper-modern {
   border-top: 2px solid #f1f5f9;
   padding-top: 30px;
 }
 
+.directions-header-row,
 .programs-header-row {
   display: flex;
   justify-content: space-between;
@@ -4899,6 +4973,8 @@ a[href*="1900"] {
   }
   .directions-grid-modern {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
   }
   .programs-grid-modern {
     grid-template-columns: repeat(2, 1fr);
@@ -4995,8 +5071,8 @@ a[href*="1900"] {
   background: #ffffff !important;
   color: #1e293b !important;
   border: 1px solid #cbd5e1 !important;
-  border-radius: 50px !important;
-  padding: 8px 18px !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
   font-size: 0.88rem !important;
 }
 
@@ -5153,20 +5229,33 @@ a[href*="1900"] {
   color: #334155 !important;
 }
 
+/* All Thu Ky & BCH headers: center align */
+.thuky-table th,
+.bch-table th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
 /* Specific column widths for Ban Thư Ký (4 cols) */
+.thuky-table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
 .thuky-table th.col-stt,
 .thuky-table td.col-stt {
-  width: 55px;
-  min-width: 50px;
-  max-width: 65px;
+  width: 52px !important;
+  min-width: 48px;
+  max-width: 56px;
   text-align: center !important;
   white-space: nowrap;
 }
 
 .thuky-table th.col-name,
 .thuky-table td.col-name {
-  width: 22%;
-  min-width: 190px;
+  width: 24% !important;
+  min-width: 200px;
+  white-space: nowrap;
 }
 
 .thuky-table td.col-name {
@@ -5176,8 +5265,8 @@ a[href*="1900"] {
 
 .thuky-table th.col-pos,
 .thuky-table td.col-pos {
-  width: 35%;
-  min-width: 230px;
+  width: 38% !important;
+  min-width: 320px;
 }
 
 .thuky-table td.col-pos {
@@ -5186,11 +5275,973 @@ a[href*="1900"] {
 
 .thuky-table th.col-org,
 .thuky-table td.col-org {
-  width: auto;
-  min-width: 260px;
+  width: auto !important;
+  min-width: 220px;
 }
 
 .thuky-table td.col-org {
   color: #334155 !important;
 }
 
+
+
+
+/* ==========================================================================
+   FOOTER OVERRIDES (3-cột, Logo trái + Slogan giữa, Gạch chân 42px, Responsive)
+   ========================================================================== */
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 28px !important;
+  align-items: start !important;
+}
+
+.footer-logo-col {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  text-align: left !important;
+  width: auto !important;
+  justify-self: start !important;
+}
+
+/* Cột giữa: LIÊN HỆ canh giữa đều 2 bên */
+.footer-grid > div:nth-child(2) {
+  justify-self: center !important;
+}
+
+/* Cột phải: ĐĂNG KÝ NHẬN TIN canh phải */
+.footer-grid > div:nth-child(3),
+.footer-grid > div:last-child {
+  justify-self: end !important;
+}
+
+.footer-logo-wrapper {
+  background: #ffffff !important;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.footer-logo-img {
+  height: 38px !important;
+  max-width: 280px !important;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.footer-affil-text {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.2px;
+  text-align: center !important;
+  margin-top: 8px !important;
+  margin-bottom: 2px !important;
+  line-height: 1.4 !important;
+}
+
+.footer-slogan-text {
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  color: #7dd3fc !important;
+  letter-spacing: 0.6px;
+  text-align: center !important;
+  margin-top: 4px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* Newsletter form: match input width with "nhất." text edge */
+.footer-grid > div:last-child form {
+  max-width: 340px;
+  width: fit-content;
+}
+
+.footer-newsletter-input {
+  width: 248px !important;
+  max-width: 248px !important;
+  border-radius: 8px !important;
+}
+
+.footer-newsletter-btn {
+  padding: 8px 18px !important;
+  flex-shrink: 0;
+  border-radius: 8px !important;
+}
+
+.footer-heading {
+  color: #ffffff !important;
+  font-size: 1.02rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: none !important;
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 42px;
+  height: 3px;
+  background: #7dd3fc !important;
+  border-radius: 2px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85rem !important;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+/* Footer Responsive (Mobile & Tablet) */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .footer-logo-col,
+  .footer-grid > div:nth-child(2),
+  .footer-grid > div:last-child {
+    justify-self: stretch !important;
+  }
+
+  .footer-logo-col {
+    align-items: center !important;
+    text-align: center !important;
+    margin-bottom: 4px;
+  }
+
+  .footer-logo-wrapper {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .footer-affil-text {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  letter-spacing: 0.2px;
+  text-align: center !important;
+  margin-top: 8px !important;
+  margin-bottom: 2px !important;
+  line-height: 1.4 !important;
+}
+
+.footer-slogan-text {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-heading {
+    font-size: 0.95rem !important;
+    margin-bottom: 10px !important;
+    border-bottom: none !important;
+    padding-bottom: 6px;
+  }
+
+  .footer-newsletter-input {
+    width: 248px !important;
+    max-width: 248px !important;
+    font-size: 0.84rem !important;
+    padding: 8px 14px !important;
+  }
+
+  .footer-newsletter-btn {
+    padding: 8px 16px !important;
+    font-size: 0.84rem !important;
+  }
+
+  .footer-bottom-row {
+    margin-top: 20px !important;
+    padding-top: 14px !important;
+  }
+
+  .footer-copyright-text {
+    font-size: 0.76rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   10 ĐỊNH HƯỚNG CHIẾN LƯỢC & 08 CHƯƠNG TRÌNH HÀNH ĐỘNG
+   ========================================================================== */
+.directions-wrapper-modern {
+  margin-top: 36px !important;
+  padding: 36px 32px 40px !important;
+  background-color: #071f46 !important;
+  background: 
+    linear-gradient(135deg, rgba(6, 25, 56, 0.75) 0%, rgba(10, 42, 92, 0.62) 50%, rgba(6, 25, 56, 0.75) 100%),
+    url('../photo/bg/vietnamese_medical_bg.jpg') center right / cover no-repeat !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 16px 45px rgba(7, 31, 70, 0.22) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.directions-header-row .about-section-heading {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.3px !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+.programs-wrapper-modern {
+  margin-top: 36px !important;
+  padding: 32px 28px 36px !important;
+  background: #f0f7ff !important;
+  border: 1px solid #dbeafe !important;
+  border-radius: 20px !important;
+  border-top: none !important;
+}
+
+.directions-header-row,
+.programs-header-row {
+  margin-bottom: 24px !important;
+  text-align: left !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.programs-heading-title {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: var(--brand-navy, #2C3691) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  margin: 0 !important;
+}
+
+.programs-grid-modern {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+}
+
+.program-item-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 18px !important;
+  padding: 26px 18px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-item-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 28px rgba(39, 170, 225, 0.16) !important;
+  border-color: #7dd3fc !important;
+  background: #ffffff !important;
+}
+
+.program-icon-box {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #0284c7 0%, #27AAE1 50%, #38bdf8 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  margin: 0 auto 16px auto !important;
+  box-shadow: 0 4px 14px rgba(39, 170, 225, 0.28) !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.25s ease !important;
+}
+
+.program-item-card:hover .program-icon-box {
+  transform: scale(1.08) !important;
+}
+
+.program-item-card .program-title {
+  font-size: 1.02rem !important;
+  font-weight: 700 !important;
+  color: var(--brand-navy, #2C3691) !important;
+  line-height: 1.35 !important;
+  margin: 0 0 10px 0 !important;
+  min-height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-wrap: balance !important;
+  text-align: center !important;
+}
+
+.program-item-card .program-desc {
+  font-size: 0.85rem !important;
+  color: #475569 !important;
+  line-height: 1.55 !important;
+  margin: 0 0 14px 0 !important;
+  text-align: center !important;
+  flex-grow: 1 !important;
+}
+
+.program-item-card .program-meta {
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: #2563eb !important;
+  margin-top: auto !important;
+  letter-spacing: 0.2px !important;
+  text-align: center !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+}
+
+@media (max-width: 1100px) {
+  .programs-grid-modern {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .directions-wrapper-modern,
+.programs-wrapper-modern {
+    padding: 20px 14px 24px !important;
+    border-radius: 16px !important;
+    margin-top: 20px !important;
+  }
+  .programs-heading-title {
+    font-size: 1.12rem !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+  }
+  .programs-grid-modern {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .program-item-card {
+    padding: 18px 14px 16px !important;
+    border-radius: 14px !important;
+  }
+  .program-item-card .program-title {
+    min-height: auto !important;
+    font-size: 0.98rem !important;
+  }
+  .program-item-card .program-desc {
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+
+
+/* ==========================================================================
+   VỀ CHI HỘI HERO BANNER (CHUẨN THEO ẢNH THIẾT KẾ MẪU - TỐI GIẢN CAO CẤP)
+   ========================================================================== */
+.fv-hero-card {
+  background: #071f46 !important;
+  background: linear-gradient(135deg, #071f46 0%, #0b326c 40%, #114894 75%, #0284c7 100%) !important;
+  border-radius: 28px !important;
+  box-shadow: 0 18px 45px rgba(2, 132, 199, 0.22) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  display: grid !important;
+  grid-template-columns: 1.15fr 1fr !important;
+  gap: 36px !important;
+  padding: 30px 36px 32px 44px !important;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden !important;
+  align-items: stretch !important;
+  min-height: 370px !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+.fv-hero-card:hover {
+  box-shadow: 0 22px 55px rgba(2, 132, 199, 0.32) !important;
+  border-color: rgba(56, 189, 248, 0.45) !important;
+}
+
+/* Subtle Ambient Glow & Single Faint Medical ECG Accent */
+.fv-hero-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    radial-gradient(circle at 15% 30%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 70%, rgba(39, 170, 225, 0.12) 0%, transparent 45%);
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+/* Single Delicate Animated ECG Wave at Bottom-Left */
+.fv-hero-card::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 4px;
+  left: 24px;
+  width: 220px;
+  height: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='32' viewBox='0 0 220 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 L60 20 L70 8 L77 28 L84 2 L91 22 L98 16 L105 20 L220 20' fill='none' stroke='%2338bdf8' stroke-width='1.8' stroke-opacity='0.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  animation: ecgPulseGlow 3.5s ease-in-out infinite !important;
+}
+
+@keyframes ecgPulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+.fv-hero-content-col {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+.fv-hero-title {
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  color: #ef4444 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  line-height: 1.3 !important;
+  margin: 0 0 20px 0 !important;
+  position: relative !important;
+  display: inline-block !important;
+  padding-bottom: 8px !important;
+}
+
+.fv-hero-title::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 42px !important;
+  height: 3px !important;
+  background: #38bdf8 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6) !important;
+  border-radius: 2px !important;
+}
+
+.fv-hero-paragraph {
+  position: relative !important;
+  padding-left: 22px !important;
+  font-size: 0.98rem !important;
+  line-height: 1.65 !important;
+  color: #e2e8f0 !important;
+  margin-bottom: 10px !important;
+  text-align: justify !important;
+}
+
+.fv-hero-paragraph::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 2px !important;
+  top: 9px !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #38bdf8 !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8) !important;
+  animation: cyanDotPulse 2.8s ease-in-out infinite !important;
+}
+
+@keyframes cyanDotPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
+  }
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 1), 0 0 22px rgba(39, 170, 225, 0.8);
+  }
+}
+
+.fv-hero-btn-wrap {
+  margin-top: 10px !important;
+  margin-bottom: 8px !important;
+  padding-left: 22px !important;
+}
+
+
+/* Floating Medical Cross Icons in Hero Banner */
+.fv-medical-cross {
+  position: absolute !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.fv-cross-1 {
+  top: 24px !important;
+  left: 45% !important;
+  opacity: 0.22 !important;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5)) !important;
+  animation: crossFloat 4.5s ease-in-out infinite !important;
+}
+
+.fv-cross-2 {
+  top: 18px !important;
+  left: 18px !important;
+  opacity: 0.18 !important;
+  animation: crossFloat 5.2s ease-in-out infinite 1s !important;
+}
+
+.fv-cross-3 {
+  bottom: 22px !important;
+  left: 46% !important;
+  opacity: 0.16 !important;
+  animation: crossFloat 4s ease-in-out infinite 0.5s !important;
+}
+
+@keyframes crossFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(6deg);
+  }
+}
+
+.about-hero-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: linear-gradient(135deg, #ff4d4f 0%, #e22b27 50%, #c81e1e 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  padding: 8px 24px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(226, 43, 39, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.about-hero-btn::after {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -60% !important;
+  width: 40% !important;
+  height: 200% !important;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.45), transparent) !important;
+  transform: rotate(25deg) !important;
+  animation: btnShineSweep 4.5s ease-in-out infinite !important;
+}
+
+@keyframes btnShineSweep {
+  0%, 75% {
+    left: -60%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+.about-hero-btn:hover {
+  background: linear-gradient(135deg, #e22b27 0%, #b91c1c 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 8px 24px rgba(200, 30, 30, 0.55) !important;
+}
+
+.fv-hero-image-col {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.fv-hero-main-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 20px !important;
+  display: block !important;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.fv-hero-image-col:hover .fv-hero-main-img {
+  transform: scale(1.05) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE OPTIMIZATION CHO VỀ CHI HỘI HERO CARD
+   ========================================================================== */
+@media (max-width: 992px) {
+  .fv-hero-card {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    border-radius: 24px !important;
+    padding: 30px 24px 28px !important;
+    gap: 24px !important;
+  }
+  
+  .fv-hero-content-col {
+    padding: 0 !important;
+  }
+  
+  .fv-hero-image-col {
+    border-radius: 18px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    max-height: 340px !important;
+  }
+  
+  .fv-hero-main-img {
+    border-radius: 18px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .fv-hero-card {
+    border-radius: 20px !important;
+    padding: 24px 18px 22px !important;
+    gap: 20px !important;
+    margin-top: 5px !important;
+    margin-bottom: 24px !important;
+  }
+  
+  .fv-hero-title {
+    font-size: 1.18rem !important;
+    margin-bottom: 14px !important;
+  }
+  
+  .fv-hero-paragraph {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    padding-left: 18px !important;
+    margin-bottom: 12px !important;
+    text-align: justify !important;
+  }
+  
+  .fv-hero-paragraph::before {
+    top: 7px !important;
+    left: 2px !important;
+    width: 6px !important;
+    height: 6px !important;
+  }
+  
+  .fv-hero-btn-wrap {
+    padding-left: 18px !important;
+  }
+  
+/* Floating Medical Cross Icons in Hero Banner */
+.fv-medical-cross {
+  position: absolute !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.fv-cross-1 {
+  top: 24px !important;
+  left: 45% !important;
+  opacity: 0.22 !important;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5)) !important;
+  animation: crossFloat 4.5s ease-in-out infinite !important;
+}
+
+.fv-cross-2 {
+  top: 18px !important;
+  left: 18px !important;
+  opacity: 0.18 !important;
+  animation: crossFloat 5.2s ease-in-out infinite 1s !important;
+}
+
+.fv-cross-3 {
+  bottom: 22px !important;
+  left: 46% !important;
+  opacity: 0.16 !important;
+  animation: crossFloat 4s ease-in-out infinite 0.5s !important;
+}
+
+@keyframes crossFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(6deg);
+  }
+}
+
+.about-hero-btn {
+    padding: 7px 20px !important;
+    font-size: 0.85rem !important;
+  }
+  
+  .fv-hero-image-col {
+    border-radius: 14px !important;
+    aspect-ratio: 16 / 9 !important;
+    max-height: 230px !important;
+  }
+  
+  .fv-hero-main-img {
+    border-radius: 14px !important;
+  }
+  
+  .fv-hero-card::after {
+    width: 160px !important;
+    height: 28px !important;
+    bottom: 6px !important;
+    left: 12px !important;
+    opacity: 0.2 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .fv-hero-btn-wrap {
+    padding-left: 16px !important;
+  }
+  .fv-hero-card {
+    padding: 20px 15px 18px !important;
+    border-radius: 16px !important;
+    gap: 16px !important;
+  }
+  
+  .fv-hero-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .fv-hero-paragraph {
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+    padding-left: 16px !important;
+    margin-bottom: 10px !important;
+    text-align: justify !important;
+  }
+  
+  .fv-hero-image-col {
+    border-radius: 12px !important;
+    max-height: 200px !important;
+  }
+  
+  .fv-hero-main-img {
+    border-radius: 12px !important;
+  }
+}
+
+
+
+/* Contact Form Title Red Underline Override */
+.contact-form-title {
+  text-transform: uppercase !important;
+}
+.contact-form-title::after {
+  background: #e22b27 !important;
+}
+
+/* Contact Form Submit Button Dark Blue Gradient Theme */
+.btn-submit-contact {
+  width: 100% !important;
+  padding: 0.9rem 2rem !important;
+  background: #071f46 !important;
+  background: linear-gradient(135deg, #071f46 0%, #0b326c 40%, #114894 75%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 12px !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 20px rgba(7, 31, 70, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-submit-contact:hover {
+  background: linear-gradient(135deg, #061938 0%, #08295a 40%, #0e3d7d 75%, #0274b3 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+.btn-submit-contact:active,
+.btn-submit-contact:focus {
+  background: linear-gradient(135deg, #041228 0%, #072248 100%) !important;
+  color: #ffffff !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.35) !important;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL & ENTRANCE ANIMATIONS (CHUẨN BỆNH VIỆN PHƯƠNG CHÂU / PHƯƠNG NAM)
+   ========================================================================== */
+.fv-hero-card {
+  opacity: 0;
+  transform: translateY(35px) scale(0.98);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+  will-change: opacity, transform;
+}
+
+.fv-hero-card.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.fv-hero-card .fv-hero-title {
+  opacity: 0;
+  transform: translateX(-25px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s !important;
+}
+
+.fv-hero-card.is-revealed .fv-hero-title {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.fv-hero-card .fv-hero-paragraph:nth-of-type(1) {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.28s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.28s !important;
+}
+
+.fv-hero-card.is-revealed .fv-hero-paragraph:nth-of-type(1) {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.fv-hero-card .fv-hero-paragraph:nth-of-type(2) {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.42s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.42s !important;
+}
+
+.fv-hero-card.is-revealed .fv-hero-paragraph:nth-of-type(2) {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.fv-hero-card .fv-hero-btn-wrap {
+  opacity: 0;
+  transform: translateY(18px) scale(0.95);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.55s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.55s !important;
+}
+
+.fv-hero-card.is-revealed .fv-hero-btn-wrap {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.fv-hero-card .fv-hero-image-col {
+  opacity: 0;
+  transform: translateX(35px) scale(0.96);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s !important;
+}
+
+.fv-hero-card.is-revealed .fv-hero-image-col {
+  opacity: 1 !important;
+  transform: translateX(0) scale(1) !important;
+}
+
+/* 10 Định hướng Scroll Reveal */
+.directions-wrapper-modern {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.directions-wrapper-modern.is-revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.directions-wrapper-modern .direction-item-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.directions-wrapper-modern.is-revealed .direction-item-card {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Course Registration Submit Button Dark Blue Gradient Theme */
+.btn-submit-course,
+#courseRegisterForm button[type="submit"],
+#quickRegisterForm button[type="submit"] {
+  width: 100% !important;
+  padding: 12px 24px !important;
+  background: #071f46 !important;
+  background: linear-gradient(135deg, #071f46 0%, #0b326c 40%, #114894 75%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 16px rgba(7, 31, 70, 0.28) !important;
+  transition: all 0.25s ease !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+.btn-submit-course:hover,
+#courseRegisterForm button[type="submit"]:hover,
+#quickRegisterForm button[type="submit"]:hover {
+  background: linear-gradient(135deg, #061938 0%, #08295a 40%, #0e3d7d 75%, #0274b3 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+/* ==========================================================================
+   SMART MOBILE LINE BREAK HELPER (.mobile-br)
+   ========================================================================== */
+.mobile-br {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .mobile-br {
+    display: block !important;
+    content: "" !important;
+  }
+}

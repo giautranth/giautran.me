@@ -584,15 +584,15 @@ window.closeDoctorModal = function() {
 /* ── AWARD DETAIL MODAL POPUP ── */
 const CIH_AWARDS_DATA = {
   aaci: {
-    img: 'images/Website/giai-thuong/AACI CERTIFICATE.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/acci_transparent.png',
+    img: 'images/Website/giai-thuong/gt_acci.jpg?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/acci_transparent.png',
     title: 'Chứng nhận Chất lượng Quốc tế AACI (Hoa Kỳ)',
     badge: 'Chứng nhận Quốc tế',
     desc: 'Bệnh viện Quốc tế City là bệnh viện đầu tiên tại Việt Nam đạt Tiêu chuẩn An toàn & Chất lượng Y tế Quốc tế AACI (American Accreditation Commission International). AACI đánh giá toàn diện các tiêu chuẩn khắt khe về an toàn người bệnh, quản lý rủi ro lâm sàng, cơ sở hạ tầng hiện đại và văn hóa y tế lấy người bệnh làm trung tâm.'
   },
   rtac: {
     img: 'images/Website/giai-thuong/gt_rtac.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/RTAC_transparent.png',
+    logo: 'images/Website/giai-thuong/logo/RTAC_transparent.png',
     title: 'Chứng nhận Quốc tế Hỗ trợ Sinh sản RTAC (Úc)',
     badge: 'Chứng nhận Quốc tế',
     desc: 'RTAC là bộ tiêu chuẩn chất lượng quốc tế uy tín trong lĩnh vực Hỗ trợ Sinh sản (IVF), do Ủy ban Chứng nhận Kỹ thuật Hỗ trợ Sinh sản trực thuộc Hiệp hội Sinh sản Úc và New Zealand (Fertility Society of Australia) xây dựng và thẩm định. Bộ tiêu chuẩn được áp dụng bắt buộc tại Úc và New Zealand, nhằm đảm bảo an toàn tối đa cho người bệnh, độ chính xác tuyệt đối trong thực hành chuyên môn và tỷ lệ thụ thai thành công vượt trội.'
@@ -620,7 +620,7 @@ const CIH_AWARDS_DATA = {
   },
   esc: {
     img: 'images/Website/giai-thuong/cert_esc_icare.png?v=20260812',
-    logo: 'images/Website/giai-thuong/Esc-logo_transparent.png',
+    logo: 'images/Website/giai-thuong/logo/Esc-logo_transparent.png',
     title: 'Chứng nhận Quốc tế Điều trị Suy tim Full ICARe-HF (ESC/HFA)',
     badge: 'Chứng nhận Quốc tế',
     desc: 'Bệnh viện Quốc tế City vinh dự là 1 trong 4 bệnh viện duy nhất tại TP. HCM đạt chứng nhận Quốc tế cao nhất trong điều trị suy tim (Full ICARe-HF Accreditation), cấp bởi Hiệp hội Tim mạch Châu Âu ESC/HFA. Đây là chứng nhận quốc tế uy tín, đánh giá toàn diện chất lượng chăm sóc và điều trị bệnh nhân suy tim dựa trên các tiêu chuẩn chuyên môn nghiêm ngặt của châu Âu.'
@@ -649,9 +649,9 @@ const CIH_AWARDS_DATA = {
   top3: {
     img: 'images/Website/giai-thuong/top3.png?v=20260812',
     logo: 'images/Website/giai-thuong/top3.png?v=20260812',
-    title: 'Top 3 Thương hiệu Tiêu biểu Châu Á Thái Bình Dương 2026',
+    title: 'Top 3 Thương hiệu Tiêu biểu Châu Á - Thái Bình Dương 2026',
     badge: 'Giải thưởng Quốc tế',
-    desc: 'Tại Diễn đàn Kinh tế Châu Á – Thái Bình Dương (APEF) diễn ra ở Bắc Kinh, Bệnh viện Quốc tế City vinh dự được vinh danh trong hạng mục “Top 3 Thương hiệu – Doanh nghiệp tiêu biểu Châu Á Thái Bình Dương 2026”. Giải thưởng là sự ghi nhận xứng đáng cho hành trình tiên phong đổi mới, năng lực y tế chuyên môn sâu, chất lượng dịch vụ 5 sao và uy tín vững chắc của CIH trên trường quốc tế.'
+    desc: 'Bệnh viện Quốc tế City tự hào đạt danh hiệu "Top 3 Thương hiệu Tiêu biểu Châu Á - Thái Bình Dương 2026". Đây là minh chứng rõ nét cho sự đầu tư chuẩn mực về chuyên môn, công nghệ y khoa hiện đại và dịch vụ y tế hướng tới trải nghiệm hoàn hảo cho khách hàng.'
   },
   'top-3': {
     img: 'images/Website/giai-thuong/top3.png?v=20260812',

@@ -1,0 +1,13 @@
+﻿# Backup & Archive zips (exceeding 100MB GitHub limit)
+*.zip
+
+# Heavy video files
+vegangarden/videos/
+
+# Temporary / Scratch
+chihoi/scratch/
+scratch/
+
+# OS Files
+Thumbs.db
+.DS_Store

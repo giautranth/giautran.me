@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsTabs();
   initMemberTableSearch();
   initModalHandlers();
+  initScrollRevealAnimations();
 });
 
 /* ==========================================================================
@@ -328,7 +329,7 @@ const cmeData = {
     certificate: 'Chứng chỉ Đào tạo Y khoa Liên tục (CME) do Bệnh viện Quốc tế City / Hội Khoa học Sức khỏe TP.HCM cấp có giá trị toàn quốc',
     instructors: 'Ban Lãnh đạo Điều dưỡng BV Quốc tế City & Các Chuyên gia Quản lý Điều dưỡng TP.HCM',
     location: 'Bệnh viện Quốc tế City - Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP.HCM',
-    tuition: 'Học phí theo quy định đào tạo (Ưu đãi đặc biệt cho Bệnh viện Hội viên Chi hội)',
+    tuition: '1.200.000 đ/ học viên',
     startDate: '22/07/2026',
     image: 'photo/dao-tao/13.png',
     pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/07/20.-Thong-bao-chieu-sinh_Tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2-CAP-NHAT.pdf'
@@ -341,7 +342,7 @@ const cmeData = {
     certificate: 'Chứng chỉ Đào tạo Y khoa Liên tục (CME) An Toàn Người Bệnh theo tiêu chuẩn Bộ Y tế',
     instructors: 'Chuyên gia Quản lý Chất lượng & Hội đồng An toàn Người bệnh BV Quốc tế City',
     location: 'Bệnh viện Quốc tế City - Số 3 Đường 17A, P. An Lạc, Q. Bình Tân, TP.HCM',
-    tuition: 'Học phí theo quy định đào tạo (Ưu đãi đặc biệt cho Bệnh viện Hội viên Chi hội)',
+    tuition: '600.000 đ/ học viên',
     startDate: '15/08/2026',
     image: 'photo/dao-tao/11.png',
     pdfUrl: 'http://cih.com.vn/wp-content/uploads/2026/08/28.-TB-chieu-sinh-An-toan-nguoi-benh-khoa-4.pdf'
@@ -354,7 +355,7 @@ const cmeData = {
     certificate: 'Chứng chỉ Đào tạo Y khoa Liên tục (CME) Hồi sinh Tim phổi Cơ bản (BLS) chuẩn Bộ Y tế',
     instructors: 'Đội ngũ Bác sĩ Chuyên khoa Hồi sức Cấp cứu - BV Quốc tế City',
     location: 'Trung tâm Huấn luyện Kỹ năng Lâm sàng - Bệnh viện Quốc tế City',
-    tuition: '1.500.000 VNĐ / Học viên (Giảm 15% cho Bệnh viện Hội viên)',
+    tuition: '900.000 đ/ học viên',
     startDate: '09/07/2026',
     image: 'photo/dao-tao/12.png',
     pdfUrl: 'https://cih.com.vn/wp-content/uploads/2026/07/9.-Thong-bao-chieu-sinh-BLS-khoa-3.pdf'
@@ -396,7 +397,7 @@ function initModalHandlers() {
 
       if (modalTitle && modalBody) {
                 modalTitle.textContent = 'Thông Tin Chi Tiết Khóa Đào Tạo';
-        const imgPrefix = window.location.pathname.includes('/dao-tao') || window.location.pathname.includes('/hoi-vien') || window.location.pathname.includes('/ve-chi-hoi') || window.location.pathname.includes('/tin-tuc') || window.location.pathname.includes('/lien-he') || window.location.pathname.includes('/so-do-to-chuc') ? '../' : '';
+        const imgPrefix = window.location.pathname.includes('/dao-tao') || window.location.pathname.includes('/hoi-vien') || window.location.pathname.includes('/ve-chi-hoi') || window.location.pathname.includes('/tin-tuc') || window.location.pathname.includes('/lien-he') || window.location.pathname.includes('/ban-chap-hanh') ? '../' : '';
         modalBody.innerHTML = `
           <div style="margin-bottom: 16px;">
             <div style="width: 100%; max-height: 220px; overflow: hidden; border-radius: 8px; margin-bottom: 14px; border: 1px solid #e2e8f0;">
@@ -413,21 +414,21 @@ function initModalHandlers() {
             <p style="margin-bottom: 6px;"><strong>Chứng chỉ:</strong> ${data.certificate}</p>
             <p style="margin-bottom: 6px;"><strong>Giảng viên:</strong> ${data.instructors}</p>
             <p style="margin-bottom: 6px;"><strong>Học phí:</strong> <span style="color: #e22b27; font-weight: 800;">${data.tuition}</span></p>
-            ${data.pdfUrl ? `<div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed #cbd5e1;"><a href="${data.pdfUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #2C3691; font-weight: 700; text-decoration: none; background: #e0f2fe; padding: 6px 12px; border-radius: 6px; font-size: 0.84rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Xem Thông Báo Chiêu Sinh Chính Thức (PDF) ↗</a></div>` : ''}
+            ${data.pdfUrl ? `<div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed #cbd5e1;"><a href="${data.pdfUrl}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 6px; color: #2C3691; font-weight: 700; text-decoration: none; background: #e0f2fe; padding: 6px 12px; border-radius: 6px; font-size: 0.84rem;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Thông tin chi tiết (File PDF)</a></div>` : ''}
           </div>
           <form id="quickRegisterForm" onsubmit="handleQuickRegister(event)" style="border-top: 1px solid #e2e8f0; padding-top: 14px;">
-            <h4 style="color: #2C3691; font-size: 0.92rem; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">Đăng Ký Khóa Học Trực Tuyến</h4>
+            <h4 style="color: #2C3691; font-size: 0.92rem; font-weight: 700; margin-bottom: 10px; text-transform: uppercase;">ĐĂNG KÝ KHOÁ HỌC</h4>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
-              <input type="text" required placeholder="Họ và tên *" class="form-control" />
+              <input type="text" required placeholder="Họ tên *" class="form-control" />
               <input type="tel" required placeholder="Số điện thoại *" class="form-control" />
             </div>
             <div style="margin-bottom: 10px;">
-              <input type="email" placeholder="Email nhận thông báo" class="form-control" />
+              <input type="email" placeholder="Email" class="form-control" />
             </div>
             <div style="margin-bottom: 12px;">
-              <input type="text" placeholder="Đơn vị công tác (Bệnh viện / Phòng khám)" class="form-control" />
+              <input type="text" placeholder="Đơn vị công tác *" class="form-control" />
             </div>
-            <button type="submit" class="btn-primary-pill" style="width: 100%; text-align: center; border-radius: 6px;">Gửi Đăng Ký Trực Tuyến</button>
+            <button type="submit" class="btn-submit-course">Gửi</button>
           </form>
         `;
 
@@ -462,10 +463,10 @@ function initModalHandlers() {
             <p style="margin-bottom: 12px;">Hội nghị đã bầu ra Ban Chấp hành Chi hội gồm các lãnh đạo uy tín trong ngành:</p>
             <ul style="padding-left: 20px; margin-bottom: 12px;">
               <li><strong>Chủ tịch Chi hội:</strong> Madam Trần Thị Lâm (Chủ tịch sáng lập Tập đoàn Hoa Lâm, Trưởng ban Ủy ban Chiến lược Khu Y tế Kỹ thuật cao TP.HCM).</li>
-              <li><strong>Phó Chủ tịch Thường trực:</strong> ThS.BS. Trần Quốc Thành (Giám đốc Điều hành BV Gia An 115 và BV Quốc tế City).</li>
-              <li><strong>Các Phó Chủ tịch:</strong> TS.BS. Trương Vĩnh Long, TS.BS. Đào Cảnh Tuất, Ông Phạm Thế Đồng.</li>
+              <li><strong>Phó Chủ tịch Thường trực:</strong> ThS. BS. Trần Quốc Thành (Giám đốc Điều hành BV Gia An 115 và BV Quốc tế City).</li>
+              <li><strong>Các Phó Chủ tịch:</strong> TS. BS. Trương Vĩnh Long, TS. BS. Đào Cảnh Tuất, Ông Phạm Thế Đồng.</li>
             </ul>
-            <p style="margin-bottom: 16px;">Sự kiện có sự tham dự và phát biểu chỉ đạo của <strong>TS.BS. Hà Anh Đức</strong> (Cục trưởng Cục Quản lý Khám, chữa bệnh – Bộ Y tế) và <strong>GS. Viện sĩ Nguyễn Văn Đệ</strong> (Chủ tịch Hiệp hội Bệnh viện Tư nhân Việt Nam).</p>
+            <p style="margin-bottom: 16px;">Sự kiện có sự tham dự và phát biểu chỉ đạo của <strong>TS. BS. Hà Anh Đức</strong> (Cục trưởng Cục Quản lý Khám, chữa bệnh – Bộ Y tế) và <strong>GS. Viện sĩ Nguyễn Văn Đệ</strong> (Chủ tịch Hiệp hội Bệnh viện Tư nhân Việt Nam).</p>
           </div>
         `;
       } else if (title.includes('Bộ Y tế')) {
@@ -477,14 +478,14 @@ function initModalHandlers() {
             <h3 style="color: #2C3691; font-size: 1.18rem; font-weight: 800; line-height: 1.4; margin-top: 10px;">${title}</h3>
           </div>
           <div style="color: #334e68; font-size: 0.92rem; line-height: 1.8;">
-            <p style="margin-bottom: 12px;">Phát biểu chỉ đạo tại Hội nghị, <strong>TS.BS Hà Anh Đức</strong> – Cục trưởng Cục Quản lý Khám, chữa bệnh (Bộ Y tế) ghi nhận và đánh giá cao những đóng góp to lớn của mạng lưới các cơ sở khám chữa bệnh tư nhân khu vực phía Nam đối với sự nghiệp bảo vệ sức khỏe nhân dân.</p>
+            <p style="margin-bottom: 12px;">Phát biểu chỉ đạo tại Hội nghị, <strong>TS. BS Hà Anh Đức</strong> – Cục trưởng Cục Quản lý Khám, chữa bệnh (Bộ Y tế) ghi nhận và đánh giá cao những đóng góp to lớn của mạng lưới các cơ sở khám chữa bệnh tư nhân khu vực phía Nam đối với sự nghiệp bảo vệ sức khỏe nhân dân.</p>
             <p style="margin-bottom: 12px;">Cục trưởng đề nghị Chi hội tiếp tục phát huy tinh thần trách nhiệm, chuẩn hóa quy trình chuyên môn kỹ thuật, đẩy mạnh đào tạo y khoa liên tục (CME), nghiên cứu khoa học và phối hợp chặt chẽ với hệ thống y tế công lập để nâng cao chất lượng dịch vụ điều trị.</p>
           </div>
         `;
       } else if (title.includes('Nguyễn Văn Đệ')) {
         bodyHtml = `
           <div style="margin-bottom: 16px;">
-            <img src="photo/news/event-photo-50.jpg" alt="GS.VS Nguyễn Văn Đệ phát biểu" style="width:100%;max-height:260px;object-fit:cover;border-radius:6px;margin-bottom:12px;" />
+            <img src="photo/news/event-photo-50.jpg" alt="GS. VS Nguyễn Văn Đệ phát biểu" style="width:100%;max-height:260px;object-fit:cover;border-radius:6px;margin-bottom:12px;" />
             <span style="background: #2C3691; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 3px; text-transform: uppercase;">${category}</span>
             <span style="color: #64748b; font-size: 0.8rem; margin-left: 8px;">${date}</span>
             <h3 style="color: #2C3691; font-size: 1.18rem; font-weight: 800; line-height: 1.4; margin-top: 10px;">${title}</h3>
@@ -1161,7 +1162,7 @@ const siteSearchData = [
     category: "Cơ cấu",
     badge: "",
     desc: "Cơ cấu tổ chức Ban Thường vụ, Ban Chấp hành và các Ban chuyên môn Chi hội.",
-    url: "so-do-to-chuc"
+    url: "ban-chap-hanh"
   },
   {
     title: "Liên hệ Văn phòng Chi hội Bệnh viện Tư nhân",
@@ -1322,3 +1323,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+/* ==========================================================================
+   SCROLL REVEAL OBSERVER (Smooth Entrance Effect)
+   ========================================================================== */
+function initScrollRevealAnimations() {
+  const revealElements = document.querySelectorAll('.fv-hero-card, .directions-wrapper-modern, .programs-wrapper-modern');
+  
+  if (!revealElements.length) return;
+  
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          // Add staggered delay to child cards if directions-wrapper
+          if (entry.target.classList.contains('directions-wrapper-modern')) {
+            const cards = entry.target.querySelectorAll('.direction-item-card');
+            cards.forEach((card, idx) => {
+              card.style.transitionDelay = `${0.08 * (idx + 1)}s`;
+            });
+          }
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+    
+    revealElements.forEach(el => observer.observe(el));
+  } else {
+    // Fallback
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
+}

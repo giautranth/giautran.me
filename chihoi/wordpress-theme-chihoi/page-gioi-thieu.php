@@ -25,7 +25,7 @@
         </span>
         <span class="about-badge badge-blue">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-          Trực thuộc Hiệp hội Bệnh viện Tư nhân Việt Nam
+          Thuộc Hiệp hội Bệnh viện Tư nhân Việt Nam
         </span>
         <span class="about-badge badge-green">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -77,17 +77,14 @@
       <!-- 2. OVERVIEW & FOUNDING STORY (FV Style Layout) -->
       <div class="about-overview-grid">
         <div>
-          <div class="about-section-tag">
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            TỔNG QUAN HÌNH THÀNH
-          </div>
-          <h2 class="about-section-heading">Mái Nhà Chung Của Khối Y Tế Ngoài Công Lập Phía Nam</h2>
           
-          <p class="about-overview-text">
-            <strong>Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam</strong> là tổ chức xã hội - nghề nghiệp trực thuộc <strong>Hiệp hội Bệnh viện Tư nhân Việt Nam</strong>. Ngày <strong>19/08/2026</strong>, tại Bệnh viện Quốc tế City (Khu Y tế Kỹ thuật cao TP.HCM), Hiệp hội đã long trọng tổ chức Hội nghị lần thứ nhất và Lễ ra mắt Ban Chấp hành Chi hội nhiệm kỳ 2026 – 2029 với sự tham dự chỉ đạo của đại diện Bộ Y tế (TS.BS. Hà Anh Đức – Cục trưởng Cục Quản lý Khám, chữa bệnh) và lãnh đạo Hiệp hội (GS.VS. Nguyễn Văn Đệ).
+          
+          
+                    <p class="about-overview-text">
+            Ngày 19/8/2026, Hiệp hội Bệnh viện Tư nhân Việt Nam chính thức tổ chức Hội nghị lần thứ nhất và Lễ ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP. HCM và các tỉnh, thành phía nam nhiệm kỳ 2026 - 2029.
           </p>
           <p class="about-overview-text">
-            Chi hội được thành lập nhằm tăng cường liên kết chuyên môn, quy tụ nguồn lực, phát huy thế mạnh của hơn 50 cơ sở y tế tư nhân tại TP.HCM và các tỉnh miền Nam; bảo vệ quyền và lợi ích hợp pháp của các đơn vị hội viên; đẩy mạnh đào tạo y khoa liên tục (CME), nghiên cứu khoa học và chuyển đổi số y tế, góp phần tích cực cùng hệ thống y tế công lập trong sự nghiệp chăm sóc, bảo vệ sức khỏe nhân dân.
+            Việc thành lập Chi hội giúp tăng cường liên kết chuyên môn, quy tụ nguồn lực, phát huy thế mạnh giữa các bệnh viện thành viên, đẩy mạnh hoạt động đào tạo, nghiên cứu khoa học và chuyển đổi số y tế, góp phần tích cực cùng hệ thống y tế công lập trong sự nghiệp chăm sóc, bảo vệ sức khỏe nhân dân.
           </p>
 
           
@@ -106,102 +103,99 @@
         </div>
       </div>
 
-      <!-- 3. 10 STRATEGIC DIRECTIONS & 08 ACTION PROGRAMS (Pinterest Medical UI Card Style) -->
-      <div class="strategic-container">
-        <div class="strategic-header-row">
-          <div>
-            
-            <h2 class="about-section-heading" style="margin-bottom:4px;">10 Định Hướng Chiến Lược Phát Triển</h2>
-            
-          </div>
-          
+            <!-- 3. 10 STRATEGIC DIRECTIONS (Separate Box) -->
+      <div class="directions-wrapper-modern">
+        <div class="directions-header-row">
+          <h2 class="about-section-heading">10 ĐỊNH HƯỚNG CHIẾN LƯỢC PHÁT TRIỂN</h2>
         </div>
 
-        <!-- 10 Color-Coded Direction Cards -->
         <div class="directions-grid-modern">
-          <div class="direction-item-card theme-blue">
+          <div class="direction-item-card">
             <div class="direction-item-num">01</div>
             <div>
-              <div class="direction-item-title">Mái Nhà Chung Khối Tư Nhân</div>
-              <p class="direction-item-desc">Tập hợp, kết nối và đại diện tiếng nói, quyền lợi chính đáng cho cộng đồng bệnh viện tư nhân phía Nam.</p>
+              <div class="direction-item-title">Mái nhà chung</div>
+              <p class="direction-item-desc">Tập hợp, kết nối, đại diện tiếng nói hội viên.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-cyan">
+          <div class="direction-item-card">
             <div class="direction-item-num">02</div>
             <div>
-              <div class="direction-item-title">Liên Kết Chuyên Môn Sâu</div>
-              <p class="direction-item-desc">Xây dựng mạng lưới hỗ trợ kỹ thuật, hội chẩn liên viện và chia sẻ nguồn lực lâm sàng giữa các đơn vị.</p>
+              <div class="direction-item-title">Liên kết chuyên môn</div>
+              <p class="direction-item-desc">Mạng lưới hỗ trợ lẫn nhau giữa các bệnh viện.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-green">
+          <div class="direction-item-card">
             <div class="direction-item-num">03</div>
             <div>
-              <div class="direction-item-title">Chất Lượng & An Toàn Người Bệnh</div>
-              <p class="direction-item-desc">Chuẩn hóa quy trình, thiết lập bộ chỉ số tham chiếu chất lượng y tế theo các tiêu chuẩn quốc tế.</p>
+              <div class="direction-item-title">Chất lượng & An toàn người bệnh</div>
+              <p class="direction-item-desc">Chuẩn hóa, bộ chỉ số tham chiếu chất lượng.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-indigo">
+          <div class="direction-item-card">
             <div class="direction-item-num">04</div>
             <div>
-              <div class="direction-item-title">Tham Mưu & Phản Biện Chính Sách</div>
-              <p class="direction-item-desc">Chủ động góp ý hoàn thiện cơ chế, chính sách BHYT và hành lang pháp lý phát triển y tế tư nhân.</p>
+              <div class="direction-item-title">Tham mưu, phản biện & Góp ý chính sách</div>
+              <p class="direction-item-desc">Phát triển y tế tư nhân.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-purple">
+          <div class="direction-item-card">
             <div class="direction-item-num">05</div>
             <div>
-              <div class="direction-item-title">Chuyển Đổi Số - Dữ Liệu - AI</div>
-              <p class="direction-item-desc">Đẩy mạnh triển khai bệnh án điện tử (EMR), ứng dụng AI chẩn đoán và hệ thống Telemedicine liên viện.</p>
+              <div class="direction-item-title">Chuyển đổi số - Dữ liệu - AI</div>
+              <p class="direction-item-desc">Bệnh án điện tử, AI, khám chữa bệnh từ xa.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-teal">
+          <div class="direction-item-card">
             <div class="direction-item-num">06</div>
             <div>
-              <div class="direction-item-title">Nguồn Nhân Lực & Quản Trị Y Tế</div>
-              <p class="direction-item-desc">Đào tạo CME liên tục, phát triển đội ngũ bác sĩ, điều dưỡng và bồi dưỡng lãnh đạo y tế trẻ tiềm năng.</p>
+              <div class="direction-item-title">Nguồn nhân lực & Quản trị</div>
+              <p class="direction-item-desc">Đào tạo toàn diện, phát triển lãnh đạo trẻ.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-amber">
+          <div class="direction-item-card">
             <div class="direction-item-num">07</div>
             <div>
-              <div class="direction-item-title">Hợp Tác Công - Tư Bền Vững</div>
-              <p class="direction-item-desc">Phối hợp chặt chẽ công - tư trong chuyển giao kỹ thuật, đào tạo nhân lực, nghiên cứu và y tế dự phòng.</p>
+              <div class="direction-item-title">Hợp tác công - Tư</div>
+              <p class="direction-item-desc">Chuyển giao kỹ thuật, đào tạo, nghiên cứu, y tế dự phòng.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-sky">
+          <div class="direction-item-card">
             <div class="direction-item-num">08</div>
             <div>
-              <div class="direction-item-title">Hệ Sinh Thái Mua Sắm Nguồn Lực</div>
-              <p class="direction-item-desc">Liên kết tự nguyện, tối ưu hóa chuỗi cung ứng trang thiết bị y tế và dược phẩm nhằm tối ưu chi phí.</p>
+              <div class="direction-item-title">Hệ sinh thái mua sắm & Nguồn lực</div>
+              <p class="direction-item-desc">Liên kết tự nguyện - Minh bạch, giảm chi phí.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-rose">
+          <div class="direction-item-card">
             <div class="direction-item-num">09</div>
             <div>
-              <div class="direction-item-title">Nghiên Cứu & Hợp Tác Quốc Tế</div>
-              <p class="direction-item-desc">Thúc đẩy nghiên cứu lâm sàng, thử nghiệm đa trung tâm và công bố các công trình khoa học quốc tế.</p>
+              <div class="direction-item-title">Nghiên cứu khoa học & Hợp tác quốc tế</div>
+              <p class="direction-item-desc">Nghiên cứu lâm sàng, công bố quốc tế.</p>
             </div>
           </div>
 
-          <div class="direction-item-card theme-gold">
+          <div class="direction-item-card">
             <div class="direction-item-num">10</div>
             <div>
-              <div class="direction-item-title">Hình Ảnh & Thương Hiệu Y Tế</div>
-              <p class="direction-item-desc">Xây dựng hình ảnh y tế tư nhân: Chuyên nghiệp – Minh bạch – Trách nhiệm – Nhân văn vì sức khỏe cộng đồng.</p>
+              <div class="direction-item-title">Hình ảnh & Thương hiệu chung</div>
+              <p class="direction-item-desc">Chuyên nghiệp - Minh bạch - Trách nhiệm - Nhân văn.</p>
             </div>
           </div>
-        </div>
+      </div>
+      </div>
 
-        <!-- 8 Action Programs Modern Subgrid -->
-        <div class="programs-wrapper-modern">
+
+
+      <!-- 4. 08 ACTION PROGRAMS (Separate Box) -->
+      <div class="programs-wrapper-modern">
           <div class="programs-header-row">
             <h3 class="programs-heading-title">
               08 Chương Trình Hành Động Trọng Điểm (2026 – 2027)
@@ -236,14 +230,14 @@
 
             <div class="program-item-card">
               <span class="program-tag tag-green">CHƯƠNG TRÌNH 05</span>
-              <div class="program-title">Nâng cao chất lượng bệnh viện</div>
+              <div class="program-title">Nâng cao Chất lượng bệnh viện</div>
               <p class="program-desc">Xây dựng bộ chỉ số tiêu chuẩn theo từng phân khúc bệnh viện nhằm nâng cao trải nghiệm người bệnh.</p>
             </div>
 
             <div class="program-item-card">
               <span class="program-tag tag-amber">CHƯƠNG TRÌNH 06</span>
               <div class="program-title">Đào tạo lãnh đạo y tế trẻ</div>
-              <p class="program-desc">Khởi động chương trình “Young Healthcare Leaders” – đào tạo, cố vấn và tham quan mô hình quản trị.</p>
+              <p class="program-desc">Khởi động chương trình “Young Healthcare Leaders - Lãnh đạo Y tế trẻ” - Đào tạo, cố vấn và tham quan mô hình quản trị.</p>
             </div>
 
             <div class="program-item-card">
@@ -254,15 +248,12 @@
 
             <div class="program-item-card program-card-special">
               <span class="program-tag tag-red">CHƯƠNG TRÌNH 08</span>
-              <div class="program-title">Thành lập Hiệp hội BVTN TP.HCM</div>
-              <p class="program-desc">Chuẩn bị các thủ tục pháp lý thành lập Hiệp hội riêng cho TP.HCM (Dự kiến tháng 10/2027).</p>
+              <div class="program-title">Thành lập Hiệp hội<br />Bệnh viện Tư nhân TP. HCM</div>
+              <p class="program-desc">Chuẩn bị các thủ tục pháp lý thành lập Hiệp hội riêng cho TP. HCM (Dự kiến tháng 10/2027).</p>
             </div>
           </div>
-        </div>
 
-      </div>
-
-      </div>
+    </div>
   </main>
 
 <?php get_footer(); ?>

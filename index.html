@@ -4,22 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>giautran.me | Website Đang Nâng Cấp</title>
-  <meta name="description" content="Hệ thống giautran.me đang trong quá trình nâng cấp và sẽ sớm hoạt động trở lại." />
+  <meta name="description" content="Website giautran.me đang cập nhật & nâng cấp giao diện mới." />
   <link rel="icon" type="image/png" href="https://api.iconify.design/lucide:sparkles.svg?color=%2338bdf8" />
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root {
       --bg: #070a13;
-      --card-bg: rgba(255, 255, 255, 0.03);
-      --card-border: rgba(255, 255, 255, 0.08);
       --text-primary: #f8fafc;
       --text-secondary: #94a3b8;
-      --accent: #38bdf8;
       --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
     }
 
@@ -40,19 +37,19 @@
       align-items: center;
       position: relative;
       overflow-x: hidden;
-      padding: 2.5rem 1.5rem 2rem 1.5rem;
+      padding: 2.5rem 2rem 2rem 2rem;
     }
 
     /* Ambient background lighting */
     .ambient-glow {
       position: fixed;
-      top: -15%;
+      top: -20%;
       left: 50%;
       transform: translateX(-50%);
-      width: 750px;
-      height: 750px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, rgba(99, 102, 241, 0.08) 40%, transparent 70%);
-      filter: blur(80px);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.06) 40%, transparent 70%);
+      filter: blur(90px);
       pointer-events: none;
       z-index: 0;
     }
@@ -63,7 +60,7 @@
       right: -10%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(168, 85, 247, 0.09) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
       filter: blur(100px);
       pointer-events: none;
       z-index: 0;
@@ -84,7 +81,7 @@
     /* Top brand header */
     header {
       width: 100%;
-      max-width: 960px;
+      max-width: 1000px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -96,7 +93,7 @@
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #fff;
@@ -156,10 +153,10 @@
     /* Main Container */
     main {
       width: 100%;
-      max-width: 760px;
+      max-width: 900px;
       text-align: center;
       margin: auto;
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
       position: relative;
       z-index: 10;
     }
@@ -168,11 +165,11 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 20px;
+      padding: 7px 18px;
       border-radius: 9999px;
       background: rgba(56, 189, 248, 0.08);
       border: 1px solid rgba(56, 189, 248, 0.25);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #7dd3fc;
       margin-bottom: 2rem;
@@ -181,11 +178,19 @@
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+      font-size: clamp(1.9rem, 4.2vw, 3.2rem);
       font-weight: 800;
-      line-height: 1.18;
+      line-height: 1.25;
       letter-spacing: -0.03em;
       margin-bottom: 1.5rem;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        white-space: normal;
+        font-size: 2rem;
+      }
     }
 
     h1 span {
@@ -195,18 +200,28 @@
     }
 
     .description {
-      font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+      font-size: clamp(1rem, 2vw, 1.15rem);
       color: var(--text-secondary);
-      line-height: 1.7;
-      max-width: 580px;
+      line-height: 1.75;
+      max-width: 640px;
       margin: 0 auto;
       font-weight: 400;
+    }
+
+    .desktop-br {
+      display: inline;
+    }
+
+    @media (max-width: 640px) {
+      .desktop-br {
+        display: none;
+      }
     }
 
     /* Footer */
     footer {
       width: 100%;
-      max-width: 960px;
+      max-width: 1000px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -244,10 +259,11 @@
       <span>🚀 Nâng Cấp Hệ Thống &amp; Giao Diện Mới</span>
     </div>
 
-    <h1>Website Đang Trong Quá Trình<br /><span>Cập Nhật &amp; Nâng Cấp</span></h1>
+    <h1>Website Đang <span>Cập Nhật &amp; Nâng Cấp</span></h1>
 
     <p class="description">
-      Chúng tôi đang nâng cấp và hoàn thiện không gian trải nghiệm số mới. Hệ thống sẽ sớm hoạt động trở lại. Xin cảm ơn sự kiên nhẫn của bạn!
+      Hệ thống đang được nâng cấp toàn diện và sẽ sớm ra mắt với diện mạo mới.<br class="desktop-br" />
+      Xin cảm ơn sự quan tâm và kiên nhẫn của bạn!
     </p>
   </main>
 

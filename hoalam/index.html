@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HOA LÂM - SHANGRILA | Khu y tế kỹ thuật cao đẳng cấp quốc tế</title>
+
+  <link rel="icon" type="image/png" href="assets/100x100.png" />
+
+  <meta name="description" content="Khu y tế kỹ thuật cao đẳng cấp quốc tế HOA LÂM - SHANGRILA: Quy mô 37,5 ha, tổ hợp y tế chuẩn quốc tế hàng đầu Việt Nam." />
+
+  <!-- Preconnect & Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css?v=1.43" />
+
+</head>
+
+<body>
+
+<!-- ========== NAVIGATION (Slide 3) ========== -->
+
+  <nav class="navbar" id="navbar">
+
+    <div class="nav-container">
+
+      <a href="#home" class="nav-logo" id="navLogo">
+
+        <img src="assets/logo.png" alt="Hoa Lâm Corporation Logo" class="logo-img" />
+
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li class="nav-dropdown">
+
+          <a href="javascript:void(0)" class="nav-link" id="link-about">GIỚI THIỆU <span class="arrow">▾</span></a>
+
+          <ul class="dropdown-menu">
+
+            <li><a href="tap-doan" id="link-about-group">VỀ TẬP ĐOÀN HOA LÂM</a></li>
+            <li><a href="nguoi-sang-lap" id="link-founder">VỀ NGƯỜI SÁNG LẬP</a></li>
+            <li><a href="hoalam-shangrila" id="link-about-shangrila">VỀ HOA LÂM - SHANGRILA</a></li>
+            <li><a href="thanh-tuu" id="link-awards">THÀNH TỰU & GIẢI THƯỞNG</a></li>
+
+          </ul>
+
+        </li>
+
+        <li><a href="tour-3d" class="nav-link" id="link-tour">TOUR THAM QUAN 3D</a></li>
+
+        <li><a href="doi-tac" class="nav-link" id="link-partners">DÀNH CHO ĐỐI TÁC</a></li>
+
+        <li><a href="tin-nong" class="nav-link" id="link-news">TIN TỨC</a></li>
+        <li><a href="tuyen-dung" class="nav-link" id="link-careers">TUYỂN DỤNG</a></li>
+
+        <li><a href="lien-he" class="nav-link" id="link-contact">LIÊN HỆ</a></li>
+
+      </ul>
+
+      <!-- Language Selector (Slide 27) -->
+
+        <div class="lang-box" id="langBox">
+
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Chọn ngôn ngữ">
+
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+
+          </button>
+
+                    <ul class="lang-dropdown" id="langDropdown" role="listbox">
+
+            <li class="lang-opt active" data-lang="vi" data-flag="vn" data-code="VI" role="option"><span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span><span class="lng">Tiếng Việt</span></li>
+
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option"><span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span><span class="lng">English</span></li>
+
+            <li class="lang-opt" data-lang="ja" data-flag="jp" data-code="JA" role="option"><span class="flag"><img src="https://flagcdn.com/w20/jp.png" alt="jp" width="20" style="vertical-align: middle; border-radius: 2px;" /></span><span class="lng">日本語</span></li>
+
+            <li class="lang-opt" data-lang="zh" data-flag="cn" data-code="ZH" role="option"><span class="flag"><img src="https://flagcdn.com/w20/cn.png" alt="cn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span><span class="lng">中文</span></li>
+
+          </ul>
+
+        </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu di động">
+
+        <span></span><span></span><span></span>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+<!-- ========== HERO SECTION (Slide 2) ========== -->
+
+  <section class="section hero" id="home">
+
+    <div class="hero-slider">
+
+      <div class="hero-slide active">
+
+        <img src="assets/cih1.jpg" alt="Khu Y Tế Kỹ Thuật Cao Hoa Lâm" class="hero-bg-img" />
+
+      </div>
+
+      <div class="hero-slide">
+
+        <img src="assets/giaan.jpg" alt="Bệnh viện Gia An 115" class="hero-bg-img" />
+
+      </div>
+
+      <div class="hero-overlay"></div>
+
+    </div>
+
+    <!-- Slider Controls -->
+
+    <button class="slider-btn prev" aria-label="Slide trước">
+
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20"><path d="M15 19l-7-7 7-7"/></svg>
+
+    </button>
+
+    <button class="slider-btn next" aria-label="Slide tiếp theo">
+
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20"><path d="M9 5l7 7-7 7"/></svg>
+
+    </button>
+
+    <div class="hero-content">
+
+      <div class="hero-title">
+
+        <span class="hero-title-line">HOA LÂM - SHANGRILA</span>
+
+      </div>
+
+      <p class="hero-title-sub">Khu y tế kỹ thuật cao đẳng cấp quốc tế</p>
+
+      <p class="hero-desc">Hội tụ công nghệ y tế tiên tiến, chuyên gia hàng đầu và tiên phong trong nghiên cứu - đổi mới vì sức khỏe cộng đồng.</p>
+
+      <div class="hero-cta">
+
+        <a href="lien-he" class="btn btn-primary">Liên Hệ Ngay</a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-scroll">
+
+      <span>Cuộn xuống</span>
+
+      <div class="scroll-line"></div>
+
+    </div>
+
+  </section>
+
+  <!-- ========== HỆ SINH THÁI & THẾ MẠNH (Slide 5) ========== -->
+
+  <section class="section ecosystem-highlights" id="ecosystem">
+
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <h2 class="section-title" style="color: var(--primary-red);">HỆ SINH THÁI</h2>
+
+        <p class="section-desc">HOA LÂM - SHANGRILA hướng tới trở thành hệ sinh thái y tế dẫn đầu, kiến tạo chuỗi giá trị toàn diện nhằm chăm sóc sức khỏe, nâng cao chất lượng sống và mang đến hạnh phúc bền vững cho mỗi gia đình Việt.</p>
+
+      </div>
+
+      <!-- Eco Showcase -->
+
+      <div class="eco-showcase reveal">
+
+        <div class="eco-hospital-card">
+
+          <div class="hospital-card-header">
+
+            <div class="hospital-card-img-wrap">
+
+              <img src="assets/cih1.jpg" alt="Bệnh viện Quốc tế City" class="hospital-card-img" />
+
+            </div>
+
+            <div class="hospital-card-logo-badge">
+
+              <img src="assets/logo_bvqtcity.jpg" alt="City International Hospital Logo" class="hospital-logo-badge-img" />
+
+            </div>
+
+          </div>
+
+          <div class="hospital-card-body">
+
+            <h3>Bệnh viện Quốc tế City</h3>
+
+            <p>Bệnh viện đa khoa quốc tế hàng đầu với quy mô 320 giường bệnh, cung cấp dịch vụ chăm sóc y tế toàn diện chuẩn quốc tế, đạt chứng nhận chất lượng Hoa Kỳ AACI.</p>
+
+            <a href="https://cih.com.vn" target="_blank" rel="noopener" class="hospital-link">Xem thêm</a>
+
+          </div>
+
+        </div>
+
+        <div class="eco-hospital-card">
+
+          <div class="hospital-card-header">
+
+            <div class="hospital-card-img-wrap">
+
+              <img src="assets/giaan.jpg" alt="Bệnh viện Gia An 115" class="hospital-card-img" />
+
+            </div>
+
+            <div class="hospital-card-logo-badge">
+
+              <img src="assets/logo_giaan115.jpg" alt="Bệnh viện Gia An 115 Logo" class="hospital-logo-badge-img" />
+
+            </div>
+
+          </div>
+
+          <div class="hospital-card-body">
+
+            <h3>Bệnh viện Gia An 115</h3>
+
+            <p>Mô hình hợp tác công tư (PPP) tiên phong giữa Tập đoàn Hoa Lâm và Bệnh viện Nhân dân 115. Bệnh viện đa khoa ứng dụng công nghệ chẩn đoán và điều trị hiện đại bậc&nbsp;nhất.</p>
+
+            <a href="https://giaan115.com" target="_blank" rel="noopener" class="hospital-link">Xem thêm</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Highlights Section (Làm giống box HỆ SINH THÁI) -->
+
+      <div class="section-header reveal" style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--slate-200);">
+
+        <h2 class="section-title" style="color: var(--primary-red);">THẾ MẠNH NỔI BẬT</h2>
+
+      </div>
+
+      <div class="highlight-cards-col reveal" style="margin-top: 24px;">
+
+        <div class="highlight-card">
+
+          <div class="hl-icon">🔬</div>
+
+          <div>
+
+            <h4>Công nghệ y tế tiên tiến</h4>
+
+            <p>Đầu tư liên tục vào nghiên cứu y học, ứng dụng công nghệ mới như xạ trị proton, liệu pháp tế bào gốc và các phương pháp điều trị cá thể hóa.</p>
+
+          </div>
+
+        </div>
+
+        <div class="highlight-card">
+
+          <div class="hl-icon">👨‍⚕️</div>
+
+          <div>
+
+            <h4>Chuyên gia hàng đầu</h4>
+
+            <p>Quy tụ đội ngũ bác sĩ, giáo sư, chuyên gia được đào tạo tại các trung tâm y khoa uy tín thế giới, hợp tác với mạng lưới y tế quốc tế.</p>
+
+          </div>
+
+        </div>
+
+        <div class="highlight-card">
+
+          <div class="hl-icon">🏆</div>
+
+          <div>
+
+            <h4>Chất lượng quốc tế</h4>
+
+            <p>Hạ tầng bệnh viện và quy trình chăm sóc theo tiêu chuẩn Singapore và ACCI, đảm bảo an toàn, hiệu quả và trải nghiệm bệnh nhân tối ưu.</p>
+
+          </div>
+
+        </div>
+
+        <div class="highlight-card">
+
+          <div class="hl-icon">🔄</div>
+
+          <div>
+
+            <h4>Liên tục nghiên cứu và đổi mới</h4>
+
+            <p>Đẩy mạnh nghiên cứu lâm sàng, chuyển giao kỹ thuật và luôn đi đầu trong việc cập nhật các phác đồ điều trị tiên tiến nhất thế giới.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========== TOUR THAM QUAN 3D TEASER ========== -->
+
+  <section class="section tour-3d-teaser" id="tour" style="background: var(--slate-900); color: var(--white); text-align: center; padding: 50px 0;">
+
+    <div class="container reveal">
+
+      <h2 class="section-title" style="margin-bottom: 24px; color: var(--primary-red);">TOUR THAM QUAN 3D</h2>
+
+      <p class="section-desc text-light" style="max-width: 700px; margin: 0 auto 36px auto;">Trải nghiệm trực quan quy hoạch chi tiết 37,5 ha của Khu y tế kỹ thuật cao HOA LÂM - SHANGRILA qua mô hình 3D thực tế ảo sống động.</p>
+
+      <a href="tour-3d" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+
+        <span>Bắt đầu tham quan 3D</span>
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ========== TIN TỨC & SỰ KIỆN (Slide 6 & 23) ========== -->
+
+  <section class="section news-section" id="news">
+
+    <div class="container">
+
+      <div class="section-header reveal">
+
+        <h2 class="section-title" style="color: var(--primary-red);">TIN TỨC - SỰ KIỆN</h2>
+
+      </div>
+
+      <!-- Categories Tabs -->
+
+      <div class="news-tabs reveal">
+        <button class="tab-btn active" data-filter="all">Tất cả</button>
+        <button class="tab-btn" data-filter="hot">Tin nóng</button>
+      </div>
+
+      <!-- News Grid -->
+
+      <div class="news-cards-grid">
+
+        <!-- Bài 1: TBT Tô Lâm (Văn hóa) -->
+
+        <a href="tin-1" class="news-card reveal" data-category="culture" data-news-id="1" style="text-decoration: none; color: inherit;">
+
+          <div class="news-img-box">
+
+            <img src="https://giaan115.com/uploads/files/2025/03/12/T-ng-B-th-T-L-m-nh-gi-cao-ng-g-p-c-a-Shangri-La-Healthcare-Investment.jpg" alt="Hoa Lâm Shangri-La diện kiến Tổng Bí thư Tô Lâm" class="news-card-img" style="object-fit: cover;" />
+
+            <span class="news-badge" style="background: var(--secondary-blue);">Văn Hóa</span>
+
+          </div>
+
+          <div class="news-card-content">
+
+            <span class="news-date">12/03/2025</span>
+
+            <h4 class="news-card-title" style="margin-bottom: 0;">Hoa Lâm Shangri-La diện kiến và làm việc với các cơ quan ban ngành</h4>
+
+            <div class="news-read-more">Xem thêm <span class="r-arrow">&rarr;</span></div>
+
+          </div>
+
+        </a>
+
+        <!-- Bài 2: Cyto-Facto (Tin Nóng) -->
+
+        <a href="tin-3" class="news-card reveal" data-category="hot" data-news-id="3" style="text-decoration: none; color: inherit;">
+
+          <div class="news-img-box">
+
+            <img src="https://cdn2.tuoitre.vn/thumb_w/730/471584752817336320/2024/12/18/photo-1734509460087-17345094607461584815944.jpg" alt="Lễ ký kết Cyto-Facto Nhật Bản" class="news-card-img" style="object-fit: cover;" />
+
+            <span class="news-badge">Tin Nóng</span>
+
+          </div>
+
+          <div class="news-card-content">
+
+            <span class="news-date">18/12/2024</span>
+
+            <h4 class="news-card-title" style="margin-bottom: 0;">Hoa Lâm Shangri-La Healthcare ký kết hợp tác y khoa Cyto-Facto, Nhật Bản</h4>
+
+            <div class="news-read-more">Xem thêm <span class="r-arrow">&rarr;</span></div>
+
+          </div>
+
+        </a>
+
+      </div>
+
+      <div class="news-load-more reveal">
+
+        <a href="tin-nong" class="btn btn-outline-light" style="color: var(--secondary-blue); border-color: var(--secondary-blue); background: transparent;">XEM TẤT CẢ TIN TỨC</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Contact section moved to separate page -->
+
+  <!-- ========== FOOTER ========== -->
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand-col">
+
+          <img src="assets/logo.png" alt="Hoa Lâm Logo" class="footer-logo-img" />
+
+          <h4 class="footer-brand-title">HOA LÂM - SHANGRILA</h4>
+
+          <p class="footer-copyright">© 2026 HOA LÂM - SHANGRILA Healthcare Park.</p>
+        </div>
+
+        <div class="footer-links-col">
+
+          <h5>Phân Khu Chức Năng</h5>
+
+          <ul>
+
+            <li><a href="#ecosystem">Bệnh viện Quốc tế City</a></li>
+
+            <li><a href="#ecosystem">Bệnh viện Gia An 115</a></li>
+
+            <li><a href="#">Trung tâm Tế bào gốc</a></li>
+
+            <li><a href="#">Viện Đào tạo & Nghiên cứu</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-links-col">
+
+          <h5>Liên Kết Nhanh</h5>
+
+          <ul>
+
+            <li><a href="tap-doan">Về Tập Đoàn</a></li>
+
+            <li><a href="nguoi-sang-lap">Người Sáng Lập</a></li>
+
+            <li><a href="tour-3d">Tour 3D Tham Quan</a></li>
+
+            <li><a href="doi-tac">Cơ Hội Đầu Tư</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-links-col">
+
+          <h5>Liên Hệ</h5>
+
+          <p>📍 Số 3 Đường 17A, Phường An Lạc, TP. HCM</p>
+
+          <p>📞 <a href="tel:+842363819181" class="footer-contact-link">(+84) 23 6381 9181</a></p>
+
+          <p>✉️ <a href="mailto:info@hoalam.com" class="footer-contact-link">info@hoalam.com</a></p>
+
+        </div>
+
+      </div>
+
+      
+
+    </div>
+
+  </footer>
+
+  <!-- ========== CHATBOT AI WIDGET (Slide 25, 26) ========== -->
+
+  <div class="chatbot-widget" id="chatbotWidget">
+
+    <button class="chatbot-btn" id="chatbotBtn" aria-label="Mở khung trò chuyện AI">
+
+      <span class="c-btn-icon">💬</span>
+
+      <span class="c-btn-pulse"></span>
+
+    </button>
+
+    <div class="chatbot-box" id="chatbotBox">
+
+      <div class="chat-header">
+
+        <span class="chat-avatar">🤖</span>
+
+        <div class="chat-header-info">
+
+          <strong>Hoa Lâm AI Assistant</strong>
+
+          <span>● Trực tuyến 24/7 (Đa ngôn ngữ)</span>
+
+        </div>
+
+        <button class="chat-close" id="chatClose">✕</button>
+
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+
+        <div class="chat-msg bot">
+
+          <div class="msg-bubble">
+
+            Xin chào! Tôi là trợ lý ảo AI của HOA LÂM - SHANGRILA. Tôi có thể hỗ trợ bạn tìm hiểu về cơ hội đầu tư, thông tin các bệnh viện và các số liệu vận hành của chúng tôi. 🏥
+
+          </div>
+
+        </div>
+
+        <div class="chat-msg bot">
+
+          <div class="msg-bubble">Bạn quan tâm đến thông tin nào sau đây?</div>
+
+          <div class="chat-options">
+
+            <button class="chat-opt-btn">💰 Cơ hội đầu tư</button>
+
+            <button class="chat-opt-btn">🏥 Các bệnh viện thành viên</button>
+
+            <button class="chat-opt-btn">📊 Con số ấn tượng</button>
+
+            <button class="chat-opt-btn">📅 Đặt lịch làm việc</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="chat-input-row">
+
+        <input type="text" id="chatInput" placeholder="Nhập câu hỏi của bạn..." />
+
+        <button id="chatSendBtn" aria-label="Gửi tin nhắn">
+
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18"><path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/></svg>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ========== BACK TO TOP ========== -->
+
+  <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20"><path d="M18 15l-6-6-6 6"/></svg>
+
+  </button>
+
+  <!-- Google Translate Element (Hidden) -->
+
+  <div id="google_translate_element" style="display:none"></div>
+
+  <script type="text/javascript">
+
+    function googleTranslateElementInit() {
+
+      new google.translate.TranslateElement({
+
+        pageLanguage: 'vi',
+
+        autoDisplay: false
+
+      }, 'google_translate_element');
+
+    }
+
+  </script>
+
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- ========== NEWS DETAIL MODAL (Popup) ========== -->
+
+  <script src="script.js?v=1.43"></script>
+
+</body>
+
+</html>

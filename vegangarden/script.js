@@ -661,3 +661,101 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initHeroSlider(5000);
 });
+
+// ── RECHTLICHE HINWEISE / LEGAL MODAL (Impressum, Datenschutz, Cookie-Einstellungen) ──
+window.openLegalModal = function(type) {
+  let modal = document.getElementById('vgLegalModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'vgLegalModal';
+    modal.className = 'modal-overlay';
+    modal.style.zIndex = '3000';
+    modal.innerHTML = `
+      <div class="modal-content" style="max-width: 680px; max-height: 85vh; display: flex; flex-direction: column; padding: 0; overflow: hidden; border-radius: 16px; background: #fff; text-align: left;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(42, 22, 15, 0.1); background: #FAF7F2;">
+          <h3 id="vgLegalTitle" class="serif-font" style="margin: 0; font-size: 1.35rem; color: #2A160F;">Rechtliche Hinweise</h3>
+          <button type="button" class="modal-close" style="position: static; font-size: 1.6rem; color: #6A625A; background: none; border: none; cursor: pointer;" onclick="closeLegalModal()">&times;</button>
+        </div>
+        <div id="vgLegalBody" style="padding: 24px; overflow-y: auto; font-size: 0.92rem; line-height: 1.65; color: #211A16;"></div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeLegalModal();
+    });
+  }
+
+  const contents = {
+    impressum: {
+      title: 'Impressum',
+      body: `
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">Angaben gemäß § 5 TMG</h4>
+        <p style="margin-bottom: 16px;">
+          <strong>Vegan Garden Berlin</strong><br>
+          Frankfurter Allee 21<br>
+          10247 Berlin (Friedrichshain), Deutschland
+        </p>
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">Kontakt</h4>
+        <p style="margin-bottom: 16px;">
+          Telefon: 030 2123 7260 / 0162 464 9999<br>
+          E-Mail: info@vegan-garden.berlin<br>
+          Website: https://giautran.me/vegangarden/
+        </p>
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h4>
+        <p style="margin-bottom: 16px;">Vegan Garden Berlin Management<br>Frankfurter Allee 21, 10247 Berlin</p>
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">Haftung für Inhalte &amp; Links</h4>
+        <p style="margin-bottom: 16px;">Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Für externe Links übernehmen wir keine Haftung; für die Inhalte der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">Urheberrecht</h4>
+        <p>Die durch die Betreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.</p>
+      `
+    },
+    datenschutz: {
+      title: 'Datenschutzerklärung',
+      body: `
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">1. Datenschutz auf einen Blick</h4>
+        <p style="margin-bottom: 16px;">Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO, BDSG) sowie dieser Datenschutzerklärung.</p>
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">2. Datenerfassung bei Tischreservierungen &amp; Kontakt</h4>
+        <p style="margin-bottom: 16px;">Wenn Sie über unsere Website einen Tisch reservieren oder uns per E-Mail / Telefon kontaktieren, werden Ihre Angaben (Name, Telefonnummer, E-Mail, Datum, Personenanzahl) ausschließlich zur Bearbeitung der Reservierung und für Rückfragen verwendet und nicht an Dritte weitergegeben.</p>
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">3. Externe Dienste (Google Maps &amp; Fonts)</h4>
+        <p style="margin-bottom: 16px;">Zur ansprechenden Darstellung unserer Speisekarte und unseres Standorts nutzen wir Google Web Fonts und eine interaktive Google Maps Karte. Anbieter ist die Google Ireland Limited.</p>
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">4. Ihre Rechte</h4>
+        <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Sperrung oder Löschung Ihrer bei uns gespeicherten personenbezogenen Daten. Wenden Sie sich hierzu gerne an info@vegan-garden.berlin.</p>
+      `
+    },
+    cookies: {
+      title: 'Cookie-Einstellungen',
+      body: `
+        <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">Cookie-Präferenzen verwalten</h4>
+        <p style="margin-bottom: 16px;">Wir verwenden Cookies, um die einwandfreie Funktion unserer Website (z. B. Sprachauswahl und Reservierungsmodal) zu gewährleisten.</p>
+        <div style="background: #F6F1E7; border-left: 4px solid #A98224; padding: 14px; border-radius: 8px; margin-bottom: 16px;">
+          <strong style="color: #2A160F;">✓ Technisch notwendige Cookies (Immer aktiv)</strong>
+          <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #6A625A;">Diese Cookies sind für das einwandfreie Funktionieren der Website unerlässlich.</p>
+        </div>
+        <p style="font-size: 0.88rem; color: #6A625A; margin-bottom: 20px;">Es werden keine Marketing- oder Tracking-Cookies von Drittanbietern ohne Ihre Zustimmung verwendet.</p>
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+          <button type="button" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.85rem;" onclick="closeLegalModal()">Auswahl speichern</button>
+        </div>
+      `
+    }
+  };
+
+  const item = contents[type];
+  if (!item) return;
+
+  document.getElementById('vgLegalTitle').innerText = item.title;
+  document.getElementById('vgLegalBody').innerHTML = item.body;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+};
+
+window.closeLegalModal = function() {
+  const modal = document.getElementById('vgLegalModal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+};
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLegalModal();
+});

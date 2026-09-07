@@ -223,14 +223,143 @@
       width: 100%;
       max-width: 1000px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      gap: 12px;
       padding-top: 2rem;
       border-top: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: #64748b;
       position: relative;
       z-index: 10;
+    }
+
+    @media (min-width: 640px) {
+      footer {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-legal-links {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-legal-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .footer-legal-links a:hover {
+      color: #38bdf8;
+      text-decoration: underline;
+    }
+
+    .footer-legal-sep {
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 0.75rem;
+    }
+
+    /* Legal Modal */
+    .legal-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .legal-modal-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .legal-modal-box {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      max-width: 620px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalPop {
+      0% { transform: scale(0.94); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .legal-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .legal-modal-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .legal-modal-close {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: #94a3b8;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+    }
+
+    .legal-modal-close:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .legal-modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: #cbd5e1;
+    }
+
+    .legal-modal-body h3 {
+      color: #fff;
+      font-size: 1rem;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .legal-modal-body h3:first-child {
+      margin-top: 0;
+    }
+
+    .legal-modal-body p {
+      margin-bottom: 0.8rem;
     }
   </style>
 </head>
@@ -270,7 +399,89 @@
   <!-- Footer -->
   <footer>
     <div>&copy; 2026 giautran.me &bull; All rights reserved</div>
+    <div class="footer-legal-links">
+      <a href="javascript:void(0)" onclick="openLegal('impressum')">Impressum</a>
+      <span class="footer-legal-sep">&bull;</span>
+      <a href="javascript:void(0)" onclick="openLegal('datenschutz')">Datenschutz</a>
+      <span class="footer-legal-sep">&bull;</span>
+      <a href="javascript:void(0)" onclick="openLegal('cookies')">Cookie-Einstellungen</a>
+    </div>
   </footer>
+
+  <!-- Modal -->
+  <div class="legal-modal-backdrop" id="legalModal" onclick="handleBackdropClick(event)">
+    <div class="legal-modal-box">
+      <div class="legal-modal-header">
+        <div class="legal-modal-title" id="legalModalTitle">Rechtliche Hinweise</div>
+        <button class="legal-modal-close" onclick="closeLegal()">&times;</button>
+      </div>
+      <div class="legal-modal-body" id="legalModalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const legalContents = {
+      impressum: {
+        title: "Impressum",
+        body: `
+          <h3>Angaben gemäß § 5 TMG</h3>
+          <p><strong>giautran.me</strong><br />Inhaber: Giau Tran<br />E-Mail: contact@giautran.me<br />Website: https://giautran.me</p>
+          <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+          <p>Giau Tran<br />Berlin, Deutschland</p>
+          <h3>Haftung für Inhalte</h3>
+          <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+          <h3>Urheberrecht</h3>
+          <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung bedürfen der schriftlichen Zustimmung.</p>
+        `
+      },
+      datenschutz: {
+        title: "Datenschutzerklärung",
+        body: `
+          <h3>1. Datenschutz auf einen Blick</h3>
+          <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+          <h3>2. Datenerfassung auf unserer Website</h3>
+          <p><strong>Hosting durch GitHub Pages:</strong><br />Wir hosten unsere Website bei GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Besuch der Website erfasst GitHub Server-Logfiles (u.a. IP-Adresse, Datum und Uhrzeit des Zugriffs).</p>
+          <h3>3. Ihre Rechte</h3>
+          <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
+        `
+      },
+      cookies: {
+        title: "Cookie-Einstellungen",
+        body: `
+          <h3>Hinweise zu Cookies</h3>
+          <p>Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den sicheren und ordnungsgemäßen Betrieb der Website unerlässlich sind (z. B. Lastverteilung und Sicherheitseinstellungen).</p>
+          <div style="background: rgba(255,255,255,0.05); padding: 14px; border-radius: 10px; margin: 12px 0; border: 1px solid rgba(255,255,255,0.1);">
+            <p style="margin: 0; font-weight: 600; color: #38bdf8;">✓ Technisch notwendige Cookies (Immer aktiv)</p>
+            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #94a3b8;">Erforderlich für grundlegende Funktionen und Sicherheit.</p>
+          </div>
+          <p style="margin-top: 12px;">Es werden keine Tracking-, Marketing- oder Analyse-Cookies von Drittanbietern ohne Ihre ausdrückliche Zustimmung gesetzt.</p>
+        `
+      }
+    };
+
+    function openLegal(type) {
+      const data = legalContents[type];
+      if (!data) return;
+      document.getElementById('legalModalTitle').innerText = data.title;
+      document.getElementById('legalModalBody').innerHTML = data.body;
+      const modal = document.getElementById('legalModal');
+      modal.classList.add('active');
+    }
+
+    function closeLegal() {
+      document.getElementById('legalModal').classList.remove('active');
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target.id === 'legalModal') {
+        closeLegal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLegal();
+    });
+  </script>
 
 </body>
 </html>

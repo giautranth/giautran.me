@@ -134,6 +134,9 @@ function chihoi_get_option($key, $default = '') {
         'seo_title' => 'Chi Hội Bệnh Viện Tư Nhân TP.HCM & Các Tỉnh Phía Nam - Trang Chủ',
         'seo_desc' => 'Cổng thông tin chính thức của Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh thành phía Nam. Cập nhật tin tức y tế, thông báo chiêu sinh đào tạo liên tục CME, kết nối mạng lưới bệnh viện tư nhân.',
         'social_img' => get_home_url(null, '/photo/og-image.jpg'),
+        'maintenance_mode' => '1',
+        'maintenance_title' => 'WEBSITE ĐANG TRONG QUÁ TRÌNH XÂY DỰNG',
+        'maintenance_desc' => "Website của Chi hội Bệnh viện Tư nhân TP. HCM và các tỉnh, thành phía Nam đang được hoàn thiện và sẽ sớm chính thức đi vào hoạt động.\n\nTrân trọng cảm ơn.",
     );
     return $defaults[$key] ?? $default;
 }
@@ -338,6 +341,46 @@ function chihoi_partner_custom_column($col, $post_id) {
 add_action('manage_partner_logo_posts_custom_column', 'chihoi_partner_custom_column', 10, 2);
 
 
+
+// ==============================================================================
+// 8. CHẾ ĐỘ TẠM ẨN / ĐANG TRONG QUÁ TRÌNH XÂY DỰNG (MAINTENANCE MODE)
+// ==============================================================================
+function chihoi_maintenance_mode_handler() {
+    // Không chặn trang đăng nhập hoặc admin
+    global $pagenow;
+    if ($pagenow === 'wp-login.php' || is_admin() || (defined('REST_REQUEST') && REST_REQUEST)) {
+        return;
+    }
+
+    $is_maintenance = chihoi_get_option('maintenance_mode', '1');
+    if ($is_maintenance === '1') {
+        // Quản trị viên đã đăng nhập được xem toàn bộ website bình thường
+        if (is_user_logged_in() && current_user_can('manage_options')) {
+            return;
+        }
+
+        // Khách vãng lai hiển thị trang thông báo tạm ẩn
+        $template = get_template_directory() . '/maintenance.php';
+        if (file_exists($template)) {
+            include $template;
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'chihoi_maintenance_mode_handler', 1);
+
+// Thanh thông báo màu vàng trên đầu web dành cho Admin khi đang bật Tạm ẩn
+function chihoi_maintenance_admin_banner() {
+    $is_maintenance = chihoi_get_option('maintenance_mode', '1');
+    if ($is_maintenance === '1' && current_user_can('manage_options')) {
+        echo '<div style="background:#fef3c7;color:#92400e;padding:12px 24px;text-align:center;font-weight:700;font-size:14px;border-bottom:2px solid #f59e0b;position:sticky;top:32px;z-index:9999999;box-shadow:0 2px 8px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
+            <span>⚠️ <strong>WEBSITE ĐANG Ở CHẾ ĐỘ TẠM ẨN:</strong> Khách truy cập sẽ thấy trang <em>"Website đang trong quá trình xây dựng"</em>. Chỉ quản trị viên đang đăng nhập mới xem được giao diện này.</span>
+            <a href="' . esc_url(admin_url('admin.php?page=chihoi-settings')) . '" style="color:#1e3a8a;background:#fff;border:1px solid #cbd5e1;padding:4px 14px;border-radius:6px;text-decoration:none;font-size:13px;">⚙️ Tắt Chế Độ Tạm Ẩn</a>
+        </div>';
+    }
+}
+add_action('wp_body_open', 'chihoi_maintenance_admin_banner');
+
 // 3. TRANG CÀI ĐẶT GIAO DIỆN WEBSITE (THEME OPTIONS CHUYÊN NGHIỆP)
 function chihoi_admin_menu() {
     add_menu_page(
@@ -379,6 +422,9 @@ function chihoi_settings_page_html() {
             'seo_title' => sanitize_text_field($_POST['seo_title'] ?? ''),
             'seo_desc' => sanitize_textarea_field($_POST['seo_desc'] ?? ''),
             'social_img' => esc_url_raw($_POST['social_img'] ?? ''),
+            'maintenance_mode' => isset($_POST['maintenance_mode']) ? '1' : '0',
+            'maintenance_title' => sanitize_text_field($_POST['maintenance_title'] ?? ''),
+            'maintenance_desc' => sanitize_textarea_field($_POST['maintenance_desc'] ?? ''),
         );
         update_option('chihoi_theme_options', $options);
 
@@ -581,6 +627,46 @@ add_filter('rank_math/opengraph/facebook/image', function($image) {
                                 <img src="<?php echo esc_url($social_img); ?>" style="max-height:120px;border-radius:6px;border:1px solid #cbd5e1;" />
                                 <?php endif; ?>
                             </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- SECTION 4: CHẾ ĐỘ TẠM ẨN / ĐANG XÂY DỰNG -->
+            <?php
+            $m_mode = chihoi_get_option('maintenance_mode', '1');
+            $m_title = chihoi_get_option('maintenance_title', 'WEBSITE ĐANG TRONG QUÁ TRÌNH XÂY DỰNG');
+            $m_desc = chihoi_get_option('maintenance_desc', "Website của Chi hội Bệnh viện Tư nhân TP. HCM và các tỉnh, thành phía Nam đang được hoàn thiện và sẽ sớm chính thức đi vào hoạt động.\n\nTrân trọng cảm ơn.");
+            ?>
+            <div style="background:#fff;padding:24px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.06);margin-top:20px;border-left:5px solid #f59e0b;">
+                <h2 style="color:#d97706;margin-top:0;display:flex;align-items:center;gap:8px;">
+                    <span class="dashicons dashicons-hammer"></span>
+                    4. Chế Độ Tạm Ẩn Website (Đang Trong Quá Trình Xây Dựng)
+                </h2>
+                <p class="description" style="margin-bottom:16px;font-size:0.95rem;">
+                    Khi bật chế độ này, <strong>khách vãng lai truy cập website sẽ chỉ thấy trang thông báo hoàn thiện</strong>. Quản trị viên khi đăng nhập vào <code>wp-admin</code> vẫn xem và chỉnh sửa website bình thường.
+                </p>
+                <table class="form-table">
+                    <tr>
+                        <th style="width:220px;"><strong>Trạng Thái Tạm Ẩn</strong></th>
+                        <td>
+                            <label style="font-size:1.05rem;font-weight:700;color:#1e293b;cursor:pointer;">
+                                <input type="checkbox" name="maintenance_mode" value="1" <?php checked($m_mode, '1'); ?> style="width:20px;height:20px;margin-right:8px;vertical-align:middle;" />
+                                BẬT chế độ Tạm ẩn Website (Khách chỉ thấy trang "Đang xây dựng")
+                            </label>
+                            <p class="description">Khi nào website chính thức ra mắt, bạn chỉ cần <strong>bỏ tích ô này</strong> và bấm Lưu là website mở lại công khai ngay lập tức.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="maintenance_title"><strong>Tiêu Đề Thông Báo</strong></label></th>
+                        <td>
+                            <input type="text" id="maintenance_title" name="maintenance_title" value="<?php echo esc_attr($m_title); ?>" class="large-text" style="font-weight:700;font-size:1rem;color:#1e3a8a;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label for="maintenance_desc"><strong>Nội Dung Thông Báo</strong></label></th>
+                        <td>
+                            <textarea id="maintenance_desc" name="maintenance_desc" rows="4" class="large-text" style="font-size:0.95rem;line-height:1.6;"><?php echo esc_textarea($m_desc); ?></textarea>
                         </td>
                     </tr>
                 </table>

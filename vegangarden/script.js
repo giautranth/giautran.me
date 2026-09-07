@@ -745,12 +745,14 @@ window.openLegalModal = function(type) {
   document.getElementById('vgLegalTitle').innerText = item.title;
   document.getElementById('vgLegalBody').innerHTML = item.body;
   modal.style.display = 'flex';
+  modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 };
 
 window.closeLegalModal = function() {
   const modal = document.getElementById('vgLegalModal');
   if (modal) {
+    modal.classList.remove('active');
     modal.style.display = 'none';
     document.body.style.overflow = '';
   }

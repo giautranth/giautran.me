@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie-Einstellungen | Vegan Garden Berlin</title>
+  <meta name="description" content="Cookie-Einstellungen und Datenschutz-Präferenzen für Vegan Garden Berlin verwalten.">
+  <link rel="stylesheet" href="styles.css?v=20260908_foodamigos">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .legal-page {
+      background-color: #F6F1E7;
+      color: #211A16;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .legal-hero {
+      background: linear-gradient(135deg, #2A160F 0%, #3d2319 100%);
+      color: #ffffff;
+      padding: 50px 0 40px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .legal-breadcrumbs {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 14px;
+    }
+    .legal-breadcrumbs a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .legal-breadcrumbs a:hover {
+      color: #34A853;
+    }
+    .legal-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+      margin: 0;
+    }
+    .legal-main {
+      flex: 1;
+      padding: 50px 0 70px;
+      background-color: #F6F1E7;
+    }
+    .legal-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 44px 40px;
+      box-shadow: 0 4px 24px rgba(42, 22, 15, 0.06);
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .cookie-category {
+      background: #FAF7F2;
+      border: 1px solid rgba(42, 22, 15, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      transition: border-color 0.2s ease;
+    }
+    .cookie-category:hover {
+      border-color: #34A853;
+    }
+    .cookie-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .cookie-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #2A160F;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cookie-switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 26px;
+    }
+    .cookie-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 26px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #34A853;
+    }
+    input:checked + .slider:before {
+      transform: translateX(22px);
+    }
+    input:disabled + .slider {
+      background-color: #34A853;
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    .cookie-status-badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #e8f5e9;
+      color: #2e7d32;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .cookie-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: flex-end;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    #saveNotice {
+      display: none;
+      background: #e8f5e9;
+      color: #1b5e20;
+      padding: 14px 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .legal-card {
+        padding: 28px 20px;
+        border-radius: 12px;
+      }
+      .legal-hero-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body class="legal-page">
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="index.html" class="brand-logo">
+        <img src="logo/logo_header_new.png?v=20260820_fresh_now" alt="Vegan Garden Berlin Logo" style="height: 44px; width: auto; max-width: 210px; object-fit: contain;">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="about" class="nav-link">ABOUT</a></li>
+          <li><a href="index.html#speisekarte" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="ratgeber" class="nav-link">JOURNAL</a></li>
+          <li><a href="kontakt" class="nav-link">KONTAKT</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary desktop-reserve-btn js-open-reserve">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>TISCH RESERVIEREN</span>
+        </button>
+
+        <div class="lang-box" id="langBox">
+          <button class="lang-current" id="langCurrent" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wählen">
+            <span class="lang-flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="lang-dropdown" id="langDropdown" role="listbox">
+            <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Deutsch</span>
+            </li>
+            <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">English</span>
+            </li>
+            <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
+              <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
+              <span class="lng">Tiếng Việt</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="legal-hero">
+    <div class="container">
+      <div class="legal-breadcrumbs">
+        <a href="index.html">Startseite</a> &nbsp;&bull;&nbsp; <span>Cookie-Einstellungen</span>
+      </div>
+      <h1 class="legal-hero-title">Cookie-Einstellungen</h1>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="legal-main">
+    <div class="container">
+      <article class="legal-card">
+        
+        <p style="font-size: 1rem; margin-bottom: 24px;">
+          Wir verwenden Cookies, um die einwandfreie Funktion unserer Website zu gewährleisten (z. B. Sprachauswahl và Reservierungsmodal) und Ihnen das bestmögliche Restauranterlebnis zu bieten. Sie können Ihre Einstellungen jederzeit anpassen.
+        </p>
+
+        <!-- Essential Cookies -->
+        <div class="cookie-category">
+          <div class="cookie-header">
+            <div class="cookie-title">
+              <i class="fa-solid fa-shield-halved" style="color: #34A853;"></i>
+              <span>Technisch notwendige Cookies</span>
+            </div>
+            <span class="cookie-status-badge">Immer aktiv</span>
+          </div>
+          <p style="font-size: 0.9rem; color: #554e47; margin: 0;">
+            Diese Cookies sind für den grundlegenden Betrieb der Website unerlässlich (z. B. Beibehalten der gewählten Sprache <code>vg_lang</code>, sichere Formularübermittlung und reibungslose Navigation). Sie können nicht deaktiviert werden.
+          </p>
+        </div>
+
+        <!-- Functional / External Media Cookies -->
+        <div class="cookie-category">
+          <div class="cookie-header">
+            <div class="cookie-title">
+              <i class="fa-solid fa-utensils" style="color: #34A853;"></i>
+              <span>Funktionale Medien &amp; Reservierung</span>
+            </div>
+            <label class="cookie-switch">
+              <input type="checkbox" id="cookieFunctional" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <p style="font-size: 0.9rem; color: #554e47; margin: 0;">
+            Ermöglicht die interaktive Einbindung von Drittanbieter-Diensten, wie dem Online-Tischreservierungssystem von <strong>Foodamigos</strong> und der interaktiven <strong>Google Maps</strong> Anfahrtskarte.
+          </p>
+        </div>
+
+        <!-- Analytics Cookies -->
+        <div class="cookie-category">
+          <div class="cookie-header">
+            <div class="cookie-title">
+              <i class="fa-solid fa-chart-line" style="color: #34A853;"></i>
+              <span>Anonyme Webanalyse</span>
+            </div>
+            <label class="cookie-switch">
+              <input type="checkbox" id="cookieAnalytics">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <p style="font-size: 0.9rem; color: #554e47; margin: 0;">
+            Hilft uns zu verstehen, welche Speisen und Ratgeber-Themen für unsere Gäste am interessantesten sind, um unser Angebot stetig zu verbessern. Es werden keine personenbezogenen Profile erstellt.
+          </p>
+        </div>
+
+        <div id="saveNotice">
+          <i class="fa-solid fa-circle-check"></i> Ihre Cookie-Einstellungen wurden erfolgreich gespeichert!
+        </div>
+
+        <div class="cookie-actions">
+          <button type="button" class="btn btn-outline" style="border: 1px solid #c79a4a; color: #2A160F; padding: 10px 22px; border-radius: 50px; font-weight: 600;" onclick="saveCookieChoice(false)">
+            Nur essenzielle akzeptieren
+          </button>
+          <button type="button" class="btn btn-primary" style="padding: 10px 26px; border-radius: 50px; font-weight: 700;" onclick="saveCookieChoice(true)">
+            Alle akzeptieren &amp; Speichern
+          </button>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="logo/logo_footer.png?v=20260904_logo" alt="Vegan Garden Berlin Logo" style="height: 52px; width: auto; max-width: 240px; object-fit: contain; display: block;">
+          </a>
+          <p style="margin-bottom: 14px; font-size: 0.85rem; line-height: 1.45; color: #a4aaa5;">100 % vegane vietnamesische Küche.<br>Natürlich. Frisch. Mit Liebe.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/vegangarden21" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/vegan_garden_berlin/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">ÖFFNUNGSZEITEN</h4>
+          <ul class="footer-hours-list">
+            <li><span>Montag</span> <span>Ruhetag</span></li>
+            <li><span>Dienstag – Sonntag</span> <span>12:00 – 22:00</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">STANDORT</h4>
+          <p class="footer-address">Frankfurter Allee 21<br>10247 Berlin (Friedrichshain)</p>
+          <a href="kontakt" class="footer-contact-link"><i class="fa-solid fa-map-location-dot"></i> Wegbeschreibung &amp; Anfahrt</a>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">KONTAKT &amp; RESERVIERUNG</h4>
+          <p class="footer-contact-item"><i class="fa-solid fa-phone"></i> 030 2123 7260</p>
+          <p class="footer-contact-item"><i class="fa-solid fa-envelope"></i> info@vegan-garden.berlin</p>
+          <button class="btn btn-primary js-open-reserve" style="margin-top: 10px; width: 100%; font-size: 0.8rem; padding: 8px 16px;">TISCH RESERVIEREN</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Vegan Garden Berlin &ndash; Alle Rechte vorbehalten</div>
+        <div class="footer-legal-links">
+          <a href="impressum">Impressum</a>
+          <span class="footer-legal-sep">&bull;</span>
+          <a href="datenschutz">Datenschutz</a>
+          <span class="footer-legal-sep">&bull;</span>
+          <a href="cookie-einstellungen">Cookie-Einstellungen</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING RESERVATION FAB BUTTON -->
+  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch jetzt reservieren" title="Tisch jetzt reservieren">
+    <div class="floating-reserve-pulse"></div>
+    <i class="fa-regular fa-calendar-check"></i>
+  </button>
+
+  <!-- MODAL: TABLE RESERVATION (FOODAMIGOS) -->
+  <div class="modal-overlay" id="reservationModal">
+    <div class="modal-content modal-content--reserve">
+      <button class="modal-close" aria-label="Schließen">&times;</button>
+      
+      <div class="reserve-modal-header">
+        <div>
+          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0 0 4px 0; font-size: 1.35rem;">Tisch reservieren</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Online-Reservierung via Foodamigos &bull; Sofortige Bestätigung</p>
+        </div>
+        <a href="https://vegangarden.tischreservieren.com" target="_blank" rel="noopener" class="reserve-ext-link">
+          <span>In neuem Tab öffnen</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <div class="foodamigos-iframe-wrap">
+        <iframe 
+          src="https://vegangarden.tischreservieren.com" 
+          title="Tisch reservieren über Foodamigos" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=20260908_foodamigos"></script>
+  <script>
+    function saveCookieChoice(all) {
+      if (all) {
+        document.getElementById('cookieFunctional').checked = true;
+        document.getElementById('cookieAnalytics').checked = true;
+      }
+      localStorage.setItem('vg_cookie_consent', JSON.stringify({
+        essential: true,
+        functional: document.getElementById('cookieFunctional').checked,
+        analytics: document.getElementById('cookieAnalytics').checked,
+        timestamp: new Date().toISOString()
+      }));
+      const notice = document.getElementById('saveNotice');
+      notice.style.display = 'block';
+      setTimeout(() => {
+        notice.style.display = 'none';
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

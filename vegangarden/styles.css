@@ -907,7 +907,7 @@ img {
 .google-logo span:nth-child(6) { color: #EA4335; }
 
 .rating-stars {
-  color: #A98224;
+  color: #FBBC04;
   font-size: 1.1rem;
 }
 
@@ -1945,7 +1945,7 @@ input[type="date"]::-webkit-date-and-time-value {
 }
 
 .review-stars {
-  color: #A98224;
+  color: #FBBC04;
   font-size: 0.85rem;
   margin-bottom: 12px;
   display: flex;

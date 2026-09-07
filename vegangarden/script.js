@@ -672,9 +672,15 @@ window.openLegalModal = function(type) {
     modal.style.zIndex = '3000';
     modal.innerHTML = `
       <div class="modal-content" style="max-width: 680px; max-height: 85vh; display: flex; flex-direction: column; padding: 0; overflow: hidden; border-radius: 16px; background: #fff; text-align: left;">
-        <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(42, 22, 15, 0.1); background: #FAF7F2;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; border-bottom: 1px solid rgba(42, 22, 15, 0.1); background: #FAF7F2; gap: 12px; flex-wrap: wrap;">
           <h3 id="vgLegalTitle" class="serif-font" style="margin: 0; font-size: 1.35rem; color: #2A160F;">Rechtliche Hinweise</h3>
-          <button type="button" class="modal-close" style="position: static; font-size: 1.6rem; color: #6A625A; background: none; border: none; cursor: pointer;" onclick="closeLegalModal()">&times;</button>
+          <div style="display: flex; align-items: center; gap: 14px; margin-left: auto;">
+            <a id="vgLegalPageLink" href="/vegangarden/impressum.html" target="_blank" style="font-size: 0.82rem; color: #34A853; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">
+              <span>In neuem Tab öffnen</span>
+              <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+            </a>
+            <button type="button" class="modal-close" style="position: static; font-size: 1.6rem; color: #6A625A; background: none; border: none; cursor: pointer; line-height: 1;" onclick="closeLegalModal()">&times;</button>
+          </div>
         </div>
         <div id="vgLegalBody" style="padding: 24px; overflow-y: auto; font-size: 0.92rem; line-height: 1.65; color: #211A16;"></div>
       </div>
@@ -683,6 +689,16 @@ window.openLegalModal = function(type) {
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeLegalModal();
     });
+  }
+
+  const linkMap = {
+    impressum: '/vegangarden/impressum.html',
+    datenschutz: '/vegangarden/datenschutz.html',
+    cookies: '/vegangarden/cookie-einstellungen.html'
+  };
+  const pageLink = document.getElementById('vgLegalPageLink');
+  if (pageLink && linkMap[type]) {
+    pageLink.href = linkMap[type];
   }
 
   const contents = {

@@ -420,80 +420,29 @@ Traditioneller veganer Feuertopf (Lẩu Chay) zum TeilenTraditioneller veganer F
     </div>
   </footer>
 
-  <!-- MODAL: TABLE RESERVATION -->
+  <!-- MODAL: TABLE RESERVATION (FOODAMIGOS) -->
   <div class="modal-overlay" id="reservationModal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h2 class="serif-font" style="color: var(--primary-green-dark); margin-bottom: 8px;">Tisch reservieren</h2>
-      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 24px;">Wir freuen uns darauf, Sie im Vegan Garden Berlin begrüßen zu dürfen.</p>
+    <div class="modal-content modal-content--reserve">
+      <button class="modal-close" aria-label="Schließen">&times;</button>
       
-      <form id="reserveForm">
-        <div class="form-group">
-          <label class="form-label">Vollständiger Name</label>
-          <input type="text" id="resName" class="form-input" required>
+      <div class="reserve-modal-header">
+        <div>
+          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0 0 4px 0; font-size: 1.35rem;">Tisch reservieren</h2>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Online-Reservierung via Foodamigos &bull; Sofortige Bestätigung</p>
         </div>
+        <a href="https://vegangarden.tischreservieren.com" target="_blank" rel="noopener" class="reserve-ext-link">
+          <span>In neuem Tab öffnen</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
 
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Datum <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(Di – So, Mo Ruhetag)</span></label>
-            <input type="date" id="resDate" class="form-input" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Uhrzeit <span style="font-size: 0.8em; font-weight: normal; color: var(--text-muted);">(12:00 – 22:00)</span></label>
-            <select id="resTime" class="form-select" required>
-              <option value="12:00">12:00</option>
-              <option value="12:30">12:30</option>
-              <option value="13:00">13:00</option>
-              <option value="13:30">13:30</option>
-              <option value="14:00">14:00</option>
-              <option value="14:30">14:30</option>
-              <option value="15:00">15:00</option>
-              <option value="15:30">15:30</option>
-              <option value="16:00">16:00</option>
-              <option value="16:30">16:30</option>
-              <option value="17:00">17:00</option>
-              <option value="17:30">17:30</option>
-              <option value="18:00">18:00</option>
-              <option value="18:30" selected>18:30</option>
-              <option value="19:00">19:00</option>
-              <option value="19:30">19:30</option>
-              <option value="20:00">20:00</option>
-              <option value="20:30">20:30</option>
-              <option value="21:00">21:00</option>
-              <option value="21:30">21:30</option>
-              <option value="22:00">22:00</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Anzahl Personen</label>
-          <select id="resGuests" class="form-select" required>
-            <option value="1">1 Person</option>
-            <option value="2" selected>2 Personen</option>
-            <option value="3">3 Personen</option>
-            <option value="4">4 Personen</option>
-            <option value="5">5+ Personen (Gruppe)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Telefonnummer</label>
-          <input type="tel" id="resPhone" class="form-input" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">E-Mail-Adresse</label>
-          <input type="email" id="resEmail" class="form-input" required>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Anmerkungen / Wünsche</label>
-          <textarea id="resNotes" class="form-textarea" rows="3"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">RESERVIERUNG BESTÄTIGEN</button>
-      </form>
+      <div class="foodamigos-iframe-wrap">
+        <iframe 
+          src="https://vegangarden.tischreservieren.com" 
+          title="Tisch reservieren über Foodamigos" 
+          loading="lazy">
+        </iframe>
+      </div>
     </div>
   </div>
 

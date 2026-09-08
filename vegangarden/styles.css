@@ -1493,14 +1493,17 @@ input[type="date"]::-webkit-date-and-time-value {
     position: relative !important;
   }
   .lang-current {
-    padding: 4px 8px !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    padding: 0 10px !important;
     font-size: 0.75rem !important;
     border-radius: 20px !important;
     background: #f4f6f4 !important;
     border: 1px solid #e0e6e0 !important;
     display: flex !important;
     align-items: center !important;
-    gap: 4px !important;
+    justify-content: center !important;
+    gap: 5px !important;
     color: var(--text-dark) !important;
   }
   .lang-flag img {

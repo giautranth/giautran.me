@@ -1031,7 +1031,7 @@ img {
 }
 
 .footer-logo img {
-  height: 52px !important;
+  height: 64px !important;
   width: auto !important;
   max-width: 250px !important;
   object-fit: contain !important;
@@ -1458,8 +1458,8 @@ input[type="date"]::-webkit-date-and-time-value {
   .footer-brand img {
     position: static !important;
     transform: none !important;
-    height: 48px !important;
-    max-height: 48px !important;
+    height: 56px !important;
+    max-height: 56px !important;
     width: auto !important;
     max-width: 220px !important;
     object-fit: contain !important;

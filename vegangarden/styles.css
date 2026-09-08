@@ -781,7 +781,7 @@ img {
 }
 
 .food-info {
-  padding: 20px;
+  padding: 18px 16px 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -790,14 +790,14 @@ img {
 }
 
 .food-name {
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--primary-green-dark);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-family: 'Playfair Display', serif;
-  height: 2.7em !important;
-  min-height: 2.7em !important;
-  max-height: 2.7em !important;
+  height: 2.5em !important;
+  min-height: 2.5em !important;
+  max-height: 2.5em !important;
   line-height: 1.25 !important;
   display: flex;
   align-items: center;
@@ -807,23 +807,11 @@ img {
 }
 
 .food-desc {
-  font-size: 0.86rem;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-  line-height: 1.45;
-  height: 4.35em !important;
-  min-height: 4.35em !important;
-  max-height: 4.35em !important;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-align: justify !important;
-  text-justify: inter-word !important;
+  display: none !important;
 }
 
 .food-price {
-  font-size: 1.1rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: var(--primary-green-dark);
   margin-top: auto;

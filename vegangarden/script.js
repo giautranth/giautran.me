@@ -463,8 +463,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Slider helper with seamless card navigation
-  function initAutoSlider(gridId, prevBtnId, nextBtnId, intervalMs = 0) {
+  // Seamless Infinite Auto Slider - Left to Right Direction (Google Reviews, SPEISEKARTE, GALLERY)
+  function initAutoSlider(gridId, prevBtnId, nextBtnId, intervalMs = 0, defaultDirection = 'ltr') {
     const grid = document.getElementById(gridId);
     const prevBtn = document.getElementById(prevBtnId);
     const nextBtn = document.getElementById(nextBtnId);
@@ -475,58 +475,67 @@ document.addEventListener('DOMContentLoaded', () => {
     let isTransitioning = false;
 
     function getStep() {
-      const firstChild = grid.children[0];
-      if (!firstChild) return 280;
+      const firstChild = grid.firstElementChild;
+      if (!firstChild) return 300;
       const computedGap = parseFloat(window.getComputedStyle(grid).gap) || 20;
       return firstChild.offsetWidth + computedGap;
     }
 
-    function stepNext() {
-      if (isTransitioning) return;
+    // Slide Left-to-Right: Cards move smoothly rightwards (→)
+    function slideLtr() {
+      if (isTransitioning || grid.children.length <= 1) return;
       isTransitioning = true;
 
       const step = getStep();
-      const maxScroll = grid.scrollWidth - grid.clientWidth;
+      const last = grid.lastElementChild;
+      if (last) {
+        grid.style.scrollBehavior = 'auto';
+        grid.insertBefore(last, grid.firstElementChild);
+        grid.scrollLeft += step;
+      }
 
-      if (grid.scrollLeft >= maxScroll - 15) {
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          grid.style.scrollBehavior = 'smooth';
+          grid.scrollBy({ left: -step, behavior: 'smooth' });
+
+          setTimeout(() => {
+            grid.style.scrollBehavior = 'auto';
+            isTransitioning = false;
+          }, 450);
+        }, 30);
+      });
+    }
+
+    // Slide Right-to-Left: Cards move smoothly leftwards (←)
+    function slideRtl() {
+      if (isTransitioning || grid.children.length <= 1) return;
+      isTransitioning = true;
+
+      const step = getStep();
+      grid.style.scrollBehavior = 'smooth';
+      grid.scrollBy({ left: step, behavior: 'smooth' });
+
+      setTimeout(() => {
+        grid.style.scrollBehavior = 'auto';
         const first = grid.firstElementChild;
         if (first) {
           grid.appendChild(first);
           grid.scrollLeft -= step;
         }
-      }
-
-      grid.scrollBy({ left: step, behavior: 'smooth' });
-
-      setTimeout(() => {
         isTransitioning = false;
-      }, 350);
-    }
-
-    function stepPrev() {
-      if (isTransitioning) return;
-      isTransitioning = true;
-
-      const step = getStep();
-
-      if (grid.scrollLeft <= 15) {
-        const last = grid.lastElementChild;
-        if (last) {
-          grid.insertBefore(last, grid.firstElementChild);
-          grid.scrollLeft += step;
-        }
-      }
-
-      grid.scrollBy({ left: -step, behavior: 'smooth' });
-
-      setTimeout(() => {
-        isTransitioning = false;
-      }, 350);
+      }, 450);
     }
 
     function startTimer() {
       if (intervalMs > 0 && !timer) {
-        timer = setInterval(stepNext, intervalMs);
+        timer = setInterval(() => {
+          if (defaultDirection === 'ltr') {
+            slideLtr();
+          } else {
+            slideRtl();
+          }
+        }, intervalMs);
       }
     }
 
@@ -543,13 +552,22 @@ document.addEventListener('DOMContentLoaded', () => {
       grid.addEventListener('mouseleave', startTimer);
       grid.addEventListener('touchstart', stopTimer, { passive: true });
       grid.addEventListener('touchend', startTimer, { passive: true });
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopTimer();
+        } else {
+          startTimer();
+        }
+      });
     }
 
     if (prevBtn) {
       prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         stopTimer();
-        stepPrev();
+        slideLtr();
         if (intervalMs > 0) startTimer();
       });
     }
@@ -557,18 +575,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nextBtn) {
       nextBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         stopTimer();
-        stepNext();
+        slideRtl();
         if (intervalMs > 0) startTimer();
       });
     }
   }
 
-  // SPEISEKARTE and GALLERY: Manual arrow navigation (3 on Desktop, 1 on Mobile)
-  initAutoSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext', 0);
-  initAutoSlider('galleryGrid', 'galleryPrev', 'galleryNext', 0);
+  // Google Reviews, SPEISEKARTE, and GALLERY: Smooth Auto Slider with Left-to-Right transition
+  initAutoSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext', 3200, 'ltr');
+  initAutoSlider('galleryGrid', 'galleryPrev', 'galleryNext', 3000, 'ltr');
+  initAutoSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext', 3500, 'ltr');
   initAutoSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext', 0);
-  initAutoSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext', 0);
 
   // Hero Banner Fade Slider logic (5 seconds auto slide)
   function initHeroSlider(intervalMs = 5000) {

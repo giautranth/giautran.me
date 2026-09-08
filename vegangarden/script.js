@@ -108,8 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.js-open-menu').forEach(btn => {
     btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (href && href.endsWith('.pdf')) {
+        return;
+      }
       e.preventDefault();
-      openModal(menuModal);
+      window.open('menu/Druck_Speisekarte_VeganGarden.pdf', '_blank');
     });
   });
 

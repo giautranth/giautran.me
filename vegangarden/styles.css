@@ -109,7 +109,7 @@ img {
 }
 
 .navbar .brand-logo img {
-  height: 44px;
+  height: 46px;
   width: auto;
   max-width: 170px;
   border-radius: 8px;
@@ -1456,11 +1456,11 @@ input[type="date"]::-webkit-date-and-time-value {
     z-index: 10 !important;
   }
   .navbar .brand-logo img {
-    height: 38px !important;
-    max-height: 38px !important;
+    height: 40px !important;
+    max-height: 40px !important;
     width: auto !important;
-    max-width: 135px !important;
-    border-radius: 6px !important;
+    max-width: 140px !important;
+    border-radius: 7px !important;
     object-fit: contain !important;
     box-shadow: 0 2px 8px rgba(42, 22, 15, 0.2) !important;
     border: 1px solid rgba(169, 130, 36, 0.28) !important;

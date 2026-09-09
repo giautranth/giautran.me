@@ -109,10 +109,11 @@ img {
 }
 
 .navbar .brand-logo img {
-  height: 48px;
-  width: 48px;
-  border-radius: 10px;
-  object-fit: cover;
+  height: 44px;
+  width: auto;
+  max-width: 170px;
+  border-radius: 8px;
+  object-fit: contain;
   box-shadow: 0 2px 8px rgba(42, 22, 15, 0.18);
   border: 1px solid rgba(169, 130, 36, 0.28);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -120,7 +121,7 @@ img {
 }
 
 .navbar .brand-logo:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 4px 12px rgba(42, 22, 15, 0.25);
 }
 
@@ -1035,9 +1036,9 @@ img {
 }
 
 .footer-logo img {
-  height: 64px !important;
+  height: 60px !important;
   width: auto !important;
-  max-width: 250px !important;
+  max-width: 220px !important;
   object-fit: contain !important;
   display: block !important;
   position: static !important;
@@ -1440,12 +1441,12 @@ input[type="date"]::-webkit-date-and-time-value {
     z-index: 10 !important;
   }
   .navbar .brand-logo img {
-    height: 40px !important;
-    max-height: 40px !important;
-    width: 40px !important;
-    max-width: 40px !important;
-    border-radius: 9px !important;
-    object-fit: cover !important;
+    height: 38px !important;
+    max-height: 38px !important;
+    width: auto !important;
+    max-width: 135px !important;
+    border-radius: 6px !important;
+    object-fit: contain !important;
     box-shadow: 0 2px 8px rgba(42, 22, 15, 0.2) !important;
     border: 1px solid rgba(169, 130, 36, 0.28) !important;
     margin: 0 !important;
@@ -1465,10 +1466,10 @@ input[type="date"]::-webkit-date-and-time-value {
   .footer-brand img {
     position: static !important;
     transform: none !important;
-    height: 56px !important;
-    max-height: 56px !important;
+    height: 50px !important;
+    max-height: 50px !important;
     width: auto !important;
-    max-width: 220px !important;
+    max-width: 190px !important;
     object-fit: contain !important;
     display: block !important;
   }

@@ -1383,6 +1383,21 @@ input[type="date"]::-webkit-date-and-time-value {
   }
 }
 
+@media (max-width: 1100px) and (min-width: 769px) {
+  .nav-menu {
+    gap: 14px;
+  }
+  .nav-link {
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+  }
+  .desktop-reserve-btn {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    gap: 6px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
   position: sticky;

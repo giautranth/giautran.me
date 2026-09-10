@@ -488,6 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Slide Left-to-Right: Cards move smoothly rightwards (→)
     function slideLtr() {
       if (isTransitioning || grid.children.length <= 1) return;
+      if (grid.scrollWidth <= grid.clientWidth + 5) return;
       isTransitioning = true;
 
       const step = getStep();
@@ -514,6 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Slide Right-to-Left: Cards move smoothly leftwards (←)
     function slideRtl() {
       if (isTransitioning || grid.children.length <= 1) return;
+      if (grid.scrollWidth <= grid.clientWidth + 5) return;
       isTransitioning = true;
 
       const step = getStep();

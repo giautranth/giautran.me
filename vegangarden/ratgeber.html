@@ -290,24 +290,24 @@
       <!-- 3-Column Articles Grid -->
       <div class="hub-news-grid" id="hubNewsGrid">
         
-        <!-- Article 1: Kultur & Restaurant -->
-        <article class="hub-news-card" data-category="kultur">
-          <a href="articles/bestes-veganes-restaurant-berlin-2026" class="hub-news-img-link">
-            <img src="images/article_bestes_restaurant.jpg" alt="Bestes veganes Restaurant Berlin 2026" class="hub-news-img" loading="lazy">
-            <span class="hub-news-badge">KULTUR &amp; TIPPS</span>
+        <!-- Article 1: Speisekarte & Gerichte -->
+        <article class="hub-news-card" data-category="speisekarte">
+          <a href="articles/vegan-garden-berlin-speisekarte" class="hub-news-img-link">
+            <img src="images/article_speisekarte.jpg" alt="Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge">SPEISEKARTE &amp; GERICHTE</span>
           </a>
           <div class="hub-news-body">
             <div class="hub-news-meta">
               <i class="fa-regular fa-clock"></i>
-              <span>5 Min. Lesezeit &bull; Kultur &amp; Restaurant</span>
+              <span>5 Min. Lesezeit &bull; Speisekarte &amp; Vielfalt</span>
             </div>
             <h3 class="hub-news-title">
-              <a href="articles/bestes-veganes-restaurant-berlin-2026">Bestes veganes Restaurant Berlin 2026: Warum Vegan Garden begeistert</a>
+              <a href="articles/vegan-garden-berlin-speisekarte">Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt</a>
             </h3>
             <p class="hub-news-excerpt">
-              Berlin gilt weltweit als Hauptstadt des pflanzlichen Genusses. Erfahren Sie, wie unsere authentische vietnamesische Kochkunst, frische Wildkräuter und der idyllische Garten das Esserlebnis neu definieren.
+              Entdecken Sie unsere 100 % pflanzliche Speisekarte 2026: Von knusprigen Frühlingsrollen über aromatische Suppen bis hin zu traditionellen Feuertöpfen.
             </p>
-            <a href="articles/bestes-veganes-restaurant-berlin-2026" class="hub-news-more">
+            <a href="articles/vegan-garden-berlin-speisekarte" class="hub-news-more">
               <span>Artikel lesen</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -315,7 +315,7 @@
         </article>
 
         <!-- Article 2: Bánh Mì Rezepte -->
-        <article class="hub-news-card" data-category="rezepte">
+        <article class="hub-news-card" data-category="rezepte kultur">
           <a href="articles/banh-mi-vegan-berlin" class="hub-news-img-link">
             <img src="images/article_banh_mi.jpg" alt="Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam" class="hub-news-img" loading="lazy">
             <span class="hub-news-badge">REZEPTE &amp; KULINARIK</span>
@@ -326,7 +326,7 @@
               <span>4 Min. Lesezeit &bull; Tradition &amp; Rezept</span>
             </div>
             <h3 class="hub-news-title">
-              <a href="articles/banh-mi-vegan-berlin">Bánh Mì Vegan in Berlin – Das legendäre vietnamesische Sandwich</a>
+              <a href="articles/banh-mi-vegan-berlin">Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam</a>
             </h3>
             <p class="hub-news-excerpt">
               Außen hauchdünn und splitternd kross, innen federleicht: Mit cremiger Linsen-Walnuss-Paté, mariniertem Zitronengras-Tofu und eingelegtem Đồ Chua wird unser Bánh Mì zum puren Hochgenuss.
@@ -339,18 +339,18 @@
         </article>
 
         <!-- Article 3: Speisekarte & Bún Bò Huế -->
-        <article class="hub-news-card" data-category="speisekarte">
+        <article class="hub-news-card" data-category="speisekarte rezepte">
           <a href="articles/bun-bo-hue-vegan-berlin" class="hub-news-img-link">
             <img src="images/gallery/bunbo.jpg?v=20260910" alt="Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras" class="hub-news-img" loading="lazy">
-            <span class="hub-news-badge">SPEISEKARTE &amp; GERICHTE</span>
+            <span class="hub-news-badge">REZEPTE &amp; KULINARIK</span>
           </a>
           <div class="hub-news-body">
             <div class="hub-news-meta">
               <i class="fa-regular fa-clock"></i>
-              <span>5 Min. Lesezeit &bull; Speisekarte &amp; Suppen</span>
+              <span>5 Min. Lesezeit &bull; Rezepte &amp; Suppen</span>
             </div>
             <h3 class="hub-news-title">
-              <a href="articles/bun-bo-hue-vegan-berlin">Bun Bo Hue vegan Berlin: Feurige Spezialität mit Zitronengras</a>
+              <a href="articles/bun-bo-hue-vegan-berlin">Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras</a>
             </h3>
             <p class="hub-news-excerpt">
               Eine unverwechselbare Spezialität aus Zentralvietnam: Kräftige Zitronengras-Brühe, samtiger Tofu, dicke Reisnudeln und frische Gartenkräuter für ein wohltuendes Geschmackserlebnis.
@@ -475,7 +475,7 @@
     </div>
   </div>
 
-  <script src="script.js?v=20260907_legal"></script>
+  <script src="script.js?v=20260910_journal"></script>
   <script>
     // Category Filter JS for Hub Page
     document.querySelectorAll('.hub-cat-btn').forEach(btn => {
@@ -485,7 +485,7 @@
 
         const filter = btn.dataset.filter;
         document.querySelectorAll('.hub-news-card').forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
+          if (filter === 'all' || (card.dataset.category && card.dataset.category.includes(filter))) {
             card.style.display = 'flex';
           } else {
             card.style.display = 'none';

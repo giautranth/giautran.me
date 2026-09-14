@@ -716,10 +716,15 @@ window.openLegalModal = function(type) {
     });
   }
 
+  const isSubdir = window.location.pathname.startsWith('/vegangarden');
+  const basePath = isSubdir ? '/vegangarden/' : '/';
+  const currentOrigin = window.location.origin ? window.location.origin : 'https://vegan-garden.berlin';
+  const siteUrl = isSubdir ? (currentOrigin + '/vegangarden/') : (currentOrigin + '/');
+
   const linkMap = {
-    impressum: '/vegangarden/impressum.html',
-    datenschutz: '/vegangarden/datenschutz.html',
-    cookies: '/vegangarden/cookie-einstellungen.html'
+    impressum: basePath + 'impressum.html',
+    datenschutz: basePath + 'datenschutz.html',
+    cookies: basePath + 'cookie-einstellungen.html'
   };
   const pageLink = document.getElementById('vgLegalPageLink');
   if (pageLink && linkMap[type]) {
@@ -740,7 +745,7 @@ window.openLegalModal = function(type) {
         <p style="margin-bottom: 16px;">
           Telefon: 030 2123 7260 / 0162 464 9999<br>
           E-Mail: info@vegan-garden.berlin<br>
-          Website: https://giautran.me/vegangarden/
+          Website: ${siteUrl}
         </p>
         <h4 style="font-size: 1.1rem; color: #2A160F; margin-bottom: 8px;">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h4>
         <p style="margin-bottom: 16px;">Vegan Garden Berlin Management<br>Frankfurter Allee 21, 10247 Berlin</p>

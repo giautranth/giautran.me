@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789457077" />
+  <link rel="stylesheet" href="style.css?v=1789457561" />
   <style>
     .doctor-detail { max-width: 900px; margin: 0 auto; }
     .doctor-hero { display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 2.5rem; flex-wrap: wrap; }
@@ -281,8 +281,8 @@
   <a href="https://m.me/cityinternationalhospital" target="_blank" class="float-btn float-btn--messenger" style="width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0695FF, #A334FA, #FF6968); box-shadow: 0 4px 12px rgba(0,0,0,0.2); color: #fff; text-decoration: none;">💬</a>
 </div>
 
-<script src="script.js?v=1789457077"></script>
-<script src="cih_doctors_data.js?v=1789457077"></script>
+<script src="script.js?v=1789457561"></script>
+<script src="cih_doctors_data.js?v=1789457561"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
@@ -391,6 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .replace(/Số 3 Đường 17A,\s*Phường An Lạc,\s*TP\.?HCM\.?/gi, '')
         .replace(/(?:Tổng đài|ĐT):\s*19008146/gi, '')
         .replace(/Cấp cứu:\s*\(028\)\s*6290\s*1155/gi, '')
+        .replace(/(?:<p>(?:&#8212;|[—\-])+<\/p>\s*)?(?:<div class="bt-social-share[^"]*">[\s\S]*?<\/div>\s*<\/div>\s*)?<p>(?:<span[^>]*>)?\s*Bản quyền\s*©\s*2018\s*thuộc về\s*Bệnh Viện Quốc Tế City[\s\S]*$/gi, '')
         .trim();
 
       return cleaned;

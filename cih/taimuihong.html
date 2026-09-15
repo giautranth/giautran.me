@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789455268" />
+  <link rel="stylesheet" href="style.css?v=1789455478" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -810,6 +810,48 @@
     .why-modal-next {
       right: -22px;
     }
+    .why-modal-box {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.75rem 2rem 2rem 2rem;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 2px solid #fef3c7;
+      position: relative;
+      animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .why-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: #f1f5f9;
+      border: none;
+      font-size: 1.5rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      z-index: 30;
+      line-height: 1;
+    }
+    .why-modal-close:hover {
+      background: #fee2e2;
+      color: #ef4444;
+      transform: scale(1.08);
+    }
+    .why-modal-header {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      padding-right: 48px; /* Safe clearance so text never goes under close button */
+    }
     @media (max-width: 600px) {
       .why-modal-prev {
         left: 6px;
@@ -822,6 +864,24 @@
         height: 38px;
         font-size: 1.3rem;
         background: rgba(255, 255, 255, 0.95);
+      }
+      .why-modal-box {
+        padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+        border-radius: 20px;
+      }
+      .why-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.3rem;
+      }
+      .why-modal-header {
+        padding-right: 40px;
+        gap: 0.75rem;
+      }
+      #whyModalTitle {
+        font-size: 1.05rem !important;
       }
     }
     .review-author-top {
@@ -1571,16 +1631,16 @@
 
 <!-- WHY CARD DETAIL MODAL -->
 <div class="why-modal-overlay" id="whyCardModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(6px); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
-  <div class="why-modal-box" style="background: #ffffff; border-radius: 24px; padding: 2rem; width: 100%; max-width: 520px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 2px solid #fef3c7; position: relative; animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
-    <button type="button" onclick="closeWhyModal()" style="position: absolute; top: 16px; right: 20px; background: #f1f5f9; border: none; font-size: 1.6rem; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #64748b; cursor: pointer; transition: all 0.2s; z-index: 30;">&times;</button>
+  <div class="why-modal-box">
+    <button type="button" class="why-modal-close" onclick="closeWhyModal()" aria-label="Đóng">&times;</button>
     
     <!-- Modal Side Navigation Arrow Buttons -->
     <button type="button" class="why-modal-arrow why-modal-prev" onclick="navigateWhyModal(-1)" aria-label="Xem nội dung trước">&lsaquo;</button>
     <button type="button" class="why-modal-arrow why-modal-next" onclick="navigateWhyModal(1)" aria-label="Xem nội dung tiếp">&rsaquo;</button>
 
-    <div class="why-modal-header" style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.25rem;">
+    <div class="why-modal-header">
       <div id="whyModalIcon" style="width: 48px; height: 48px; border-radius: 14px; background: #fef3c7; color: #b45309; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; flex-shrink: 0;">🏆</div>
-      <h4 id="whyModalTitle" style="font-size: 1.15rem; font-weight: 800; color: #92400e; margin: 0; line-height: 1.4;"></h4>
+      <h4 id="whyModalTitle" style="font-size: 1.15rem; font-weight: 800; color: #92400e; margin: 0; line-height: 1.4; flex: 1;"></h4>
     </div>
 
     <div class="why-modal-img-wrap" style="width: 100%; aspect-ratio: 1000 / 600; border-radius: 14px; overflow: hidden; background: #ffffff; border: 1px solid #e2e8f0; margin-bottom: 1.25rem;">
@@ -1591,7 +1651,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789455268"></script>
+<script src="script.js?v=1789455478"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

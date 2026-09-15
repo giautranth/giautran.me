@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789453226" />
+  <link rel="stylesheet" href="style.css?v=1789453352" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -717,28 +717,19 @@
       }
     }
 
-    /* Precision arrow centering for Section 4 (Ca bệnh điều trị thành công) over Image Box */
-    #ca-benh-thanh-cong .side-arrow {
-      top: 135px !important;
-      transform: translateY(-50%) !important;
-    }
-    @media (max-width: 991px) {
-      #ca-benh-thanh-cong .side-arrow {
-        top: 115px !important;
-        transform: translateY(-50%) !important;
-      }
-    }
-    @media (max-width: 576px) {
-      #ca-benh-thanh-cong .side-arrow {
-        top: 105px !important;
-        transform: translateY(-50%) !important;
-      }
-    }
-
-    /* Precision arrow centering for Section 5 (Chia sẻ từ khách hàng) */
+    /* Precision arrow centering for Section 4 (Ca bệnh điều trị thành công) & Section 5 (Chia sẻ từ khách hàng) */
+    #ca-benh-thanh-cong .side-arrow,
     #chia-se-khach-hang .side-arrow {
       top: 50% !important;
       transform: translateY(-50%) !important;
+    }
+    #ca-benh-thanh-cong .side-arrow:hover,
+    #chia-se-khach-hang .side-arrow:hover {
+      transform: translateY(-50%) scale(1.1) !important;
+    }
+    #ca-benh-thanh-cong .side-arrow:active,
+    #chia-se-khach-hang .side-arrow:active {
+      transform: translateY(-50%) scale(0.95) !important;
     }
 
     /* Match card box width & gap of Section 4 and Section 5 to Section 3 (.why-grid) */
@@ -1582,7 +1573,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789453226"></script>
+<script src="script.js?v=1789453352"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

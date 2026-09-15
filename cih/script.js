@@ -512,23 +512,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.cihGlobalDataset = dataset;
-
-    // 3. DOCTORS PAGE (bac-si.html)
-    const docGrid = document.querySelector('.doc-grid-4');
-    if (docGrid && docGrid.children.length === 0 && dataset.doctors.length > 0) {
-      docGrid.innerHTML = dataset.doctors.map((d, i) => `
-        <div class="doc-card-v2 doc-detail-card animate-fade-up" style="animation-delay: ${(i % 10) * 0.04}s;">
-          <a href="chi-tiet-bac-si?slug=${d.slug}" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
-            <img src="${d.image || 'images/doctor_male_1.png'}" alt="${d.name}" class="doc-card-v2__img" onerror="this.src='images/doctor_male_1.png'" />
-          </a>
-          <div class="doc-card-v2__body">
-            <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=${d.slug}" style="color: inherit; text-decoration: none;">${d.name}</a></h3>
-            <div class="doc-card-v2__position">${d.position ? d.position.replace(/&amp;/g, '&').slice(0, 80) : 'Bác sĩ chuyên khoa'}</div>
-            <a href="chi-tiet-bac-si?slug=${d.slug}" class="doc-card-v2__more-link" style="text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
-          </div>
-        </div>
-      `).join('');
-    }
   });
 });
 

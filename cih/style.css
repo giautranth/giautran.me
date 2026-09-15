@@ -122,8 +122,8 @@ ul{list-style:none}
 .top-bar__divider{opacity:.3}
 .top-bar__link{color:#fde047;transition:color .15s}
 .top-bar__link:hover,.top-bar__link.lang-active{color:#ffffff}
-.top-bar__portal{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:.3rem!important;background:rgba(253,224,71,0.15)!important;padding:.25rem .75rem!important;border-radius:var(--r-full);color:#fde047!important;font-weight:700!important;border:1px solid rgba(253,224,71,0.4)!important;box-shadow:0 1px 3px rgba(0,0,0,0.08)!important;transition:all .2s;line-height:1!important}
-.top-bar__portal:hover{background:#fde047!important;color:#005f80!important;border-color:#fde047!important}
+.top-bar__portal{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:.3rem!important;background:transparent!important;padding:.25rem .75rem!important;border-radius:var(--r-full);color:#fde047!important;font-weight:700!important;border:1px solid rgba(253,224,71,0.4)!important;box-shadow:none!important;transition:all .2s;line-height:1!important}
+.top-bar__portal:hover{background:rgba(255,255,255,0.15)!important;color:#ffffff!important;border-color:rgba(255,255,255,0.6)!important}
 
 /* ═══════════════════════════
    HEADER
@@ -2499,7 +2499,7 @@ div[style*="text-align: center; margin-top:"] {
   align-items: center !important;
   justify-content: center !important;
   gap: 0.4rem !important;
-  background: rgba(253, 224, 71, 0.15) !important;
+  background: transparent !important;
   border: 1px solid rgba(253, 224, 71, 0.4) !important;
   color: #fde047 !important;
   font-family: inherit;
@@ -2510,20 +2510,20 @@ div[style*="text-align: center; margin-top:"] {
   border-radius: 20px;
   transition: all 0.25s ease;
   line-height: 1;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+  box-shadow: none !important;
 }
 
 .lang-switcher__btn:hover {
-  background: #fde047 !important;
-  border-color: #fde047 !important;
-  color: #005f80 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  color: #ffffff !important;
 }
 
 .lang-arrow {
   color: #fde047 !important;
 }
 .lang-switcher__btn:hover .lang-arrow {
-  color: #005f80 !important;
+  color: #ffffff !important;
 }
 
 .lang-btn-flag {

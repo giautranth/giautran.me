@@ -60,7 +60,7 @@ const CIH_SPECIALTY_DATA = [
         "name": "BS.CKII. Nguyễn Bạch Huệ",
         "title": "Trưởng Khoa Nhi & Thầy Thuốc Ưu Tú",
         "degree": "Bác sĩ Chuyên khoa II Nhi Khoa",
-        "img": "images/HÌNH ẢNH/Nhi khoa/1784087274560_1272607247884588763_1272607247884588763_76b4e9af2fc6a67625111039d33f9bf0.jpg",
+        "img": "images/bac-si/bs-hue.png",
         "exp": "Hơn 30 năm kinh nghiệm điều trị Nhi khoa tổng quát & Hồi sức cấp cứu nhi."
       }
     ],

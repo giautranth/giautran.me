@@ -3026,12 +3026,13 @@ body {
   height: 100% !important;
   min-height: 100% !important;
   align-self: stretch !important;
-  display: flex !important;
+  display: flex;
   flex-direction: column !important;
   justify-content: space-between !important;
   box-sizing: border-box !important;
 }
 
+.doc-card-v2.is-visible,
 .news-card.is-visible,
 .news-card-v2.is-visible {
   display: flex !important;

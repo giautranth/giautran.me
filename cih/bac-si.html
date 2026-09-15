@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789454042" />
+  <link rel="stylesheet" href="style.css?v=1789454362" />
   <style>
     /* Bác sĩ page specific styles */
     .filter-bar {
@@ -62,13 +62,17 @@
     }
     
     .doc-grid-4 > .doc-card-v2 {
-      display: none;
-      flex-direction: column;
-      height: 100%;
+      display: none !important;
+      opacity: 0;
+      transform: translateY(12px);
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
     .doc-grid-4 > .doc-card-v2.is-visible {
       display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
     }
 
     .doc-card-v2 {
@@ -1026,8 +1030,8 @@
 
     </div>
 
-    <!-- Doctor Pagination Bar (20 Doctors per Page) -->
-    <div class="pagination-bar" id="doctor-pagination" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2.5rem; margin-bottom: 1rem;"></div>
+    <!-- Doctor Pagination Bar (9 Doctors per Page) -->
+    <div class="pagination-bar" id="doctor-pagination" style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 2.5rem; margin-bottom: 2rem; flex-wrap: wrap;"></div>
 
   </div>
 </main>
@@ -1135,8 +1139,8 @@
   </a>
 </div>
 
-<script src="cih_doctors_data.js?v=1789454042"></script>
-<script src="script.js?v=1789454042"></script>
+<script src="cih_doctors_data.js?v=1789454362"></script>
+<script src="script.js?v=1789454362"></script>
 <script>
   function initDoctorCatalog() {
     const specialtySelect = document.getElementById('filter-specialty');
@@ -1149,10 +1153,15 @@
 
     const ITEMS_PER_PAGE = 9;
     let currentPage = 1;
+    let totalPages = 1;
 
     // Check search URL parameter if any
     const urlParams = new URLSearchParams(window.location.search);
     const searchQuery = (urlParams.get('search') || urlParams.get('s') || '').trim().toLowerCase();
+    const urlSpecialty = (urlParams.get('specialty') || urlParams.get('khoa') || '').trim().toLowerCase();
+    if (urlSpecialty && specialtySelect) {
+      specialtySelect.value = urlSpecialty;
+    }
 
     const updatePaginationAndDisplay = () => {
       const selectedSpecialty = specialtySelect ? specialtySelect.value.trim().toLowerCase() : '';
@@ -1189,15 +1198,15 @@
         // Degree filter
         let matchesDegree = true;
         if (selectedDegree === 'ts') {
-          matchesDegree = /(ts|pgs|gs)/i.test(name) || degree === 'ts';
+          matchesDegree = / (ts|pgs|gs) /i.test(name) || degree === 'ts';
         } else if (selectedDegree === 'ckii') {
-          matchesDegree = /ckii/i.test(name) || degree === 'ckii';
+          matchesDegree = / ckii /i.test(name) || degree === 'ckii';
         }
 
         return matchesSpecialty && matchesRole && matchesDegree;
       });
 
-      const totalPages = Math.ceil(matchingCards.length / ITEMS_PER_PAGE) || 1;
+      totalPages = Math.ceil(matchingCards.length / ITEMS_PER_PAGE) || 1;
       if (currentPage > totalPages) currentPage = 1;
 
       const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -1205,22 +1214,22 @@
 
       doctorCards.forEach(card => {
         card.classList.remove('is-visible');
-        card.style.display = 'none';
+        card.style.setProperty('display', 'none', 'important');
       });
 
       matchingCards.forEach((card, index) => {
         if (index >= startIndex && index < endIndex) {
           card.classList.add('is-visible');
-          card.style.display = 'flex';
+          card.style.setProperty('display', 'flex', 'important');
         }
       });
 
       renderPaginationControls(totalPages);
     };
 
-    const renderPaginationControls = (totalPages) => {
+    const renderPaginationControls = (pagesCount) => {
       if (!paginationContainer) return;
-      if (totalPages <= 1) {
+      if (pagesCount <= 1) {
         paginationContainer.innerHTML = '';
         return;
       }
@@ -1228,16 +1237,17 @@
       let html = '';
       html += `<button type="button" class="page-btn ${currentPage === 1 ? 'disabled' : ''}" ${currentPage === 1 ? 'disabled' : ''} onclick="changeDoctorPage(${currentPage - 1})">‹ Trước</button>`;
 
-      for (let p = 1; p <= totalPages; p++) {
+      for (let p = 1; p <= pagesCount; p++) {
         html += `<button type="button" class="page-btn ${p === currentPage ? 'active' : ''}" onclick="changeDoctorPage(${p})">${p}</button>`;
       }
 
-      html += `<button type="button" class="page-btn ${currentPage === totalPages ? 'disabled' : ''}" ${currentPage === totalPages ? 'disabled' : ''} onclick="changeDoctorPage(${currentPage + 1})">Sau ›</button>`;
+      html += `<button type="button" class="page-btn ${currentPage === pagesCount ? 'disabled' : ''}" ${currentPage === pagesCount ? 'disabled' : ''} onclick="changeDoctorPage(${currentPage + 1})">Sau ›</button>`;
 
       paginationContainer.innerHTML = html;
     };
 
     window.changeDoctorPage = (newPage) => {
+      if (newPage < 1 || newPage > totalPages) return;
       currentPage = newPage;
       updatePaginationAndDisplay();
       const docGrid = document.querySelector('.filter-bar') || document.querySelector('.doc-grid-4');
@@ -1259,7 +1269,7 @@
     initDoctorCatalog();
   }
 </script>
-<script src="booking_modal.js?v=1789454042"></script>
+<script src="booking_modal.js?v=1789454362"></script>
 <div id="google_translate_element" style="display:none"></div>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>

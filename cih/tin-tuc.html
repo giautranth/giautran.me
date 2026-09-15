@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789454042" />
+  <link rel="stylesheet" href="style.css?v=1789454362" />
   <style>
     .news-category-bar {
       display: flex;
@@ -66,7 +66,7 @@
     /* Hide cards not on current page; JS pagination adds .is-visible to current 9 */
     .news-grid-3 > .news-card,
     .news-grid-3 > .news-card-v2 {
-      display: none;
+      display: none !important;
       opacity: 0;
       transform: translateY(12px);
       transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1165,7 +1165,7 @@
 </div>
 
 <script src="news_data.js"></script>
-<script src="script.js?v=1789454042"></script>
+<script src="script.js?v=1789454362"></script>
 <script>
   function initNewsPage() {
     const tabs = document.querySelectorAll('.news-category-bar .news-cat-btn');
@@ -1267,7 +1267,7 @@
     initNewsPage();
   }
 </script>
-<script src="booking_modal.js?v=1789454042"></script>
+<script src="booking_modal.js?v=1789454362"></script>
 <div id="google_translate_element" style="display:none"></div>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>

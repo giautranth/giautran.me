@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đang chuyển hướng... | Bệnh viện Quốc tế City</title>
+  <script>
+    (function() {
+      var path = window.location.pathname || '';
+      var cleanPath = path.replace(/\/+$/, '');
+      
+      // 1. Check /cih/bac-si/<slug> or /bac-si/<slug>
+      var docMatch = cleanPath.match(/(?:\/cih)?\/bac-si\/([^/?#]+)$/i);
+      if (docMatch && docMatch[1]) {
+        var slug = docMatch[1];
+        window.location.replace('/cih/chi-tiet-bac-si?slug=' + encodeURIComponent(slug));
+        return;
+      }
+
+      // 2. Check /cih/chuyen-khoa/<slug> or /chuyen-khoa/<slug>
+      var specMatch = cleanPath.match(/(?:\/cih)?\/chuyen-khoa\/([^/?#]+)$/i);
+      if (specMatch && specMatch[1]) {
+        var specSlug = specMatch[1];
+        window.location.replace('/cih/chi-tiet-chuyen-khoa?slug=' + encodeURIComponent(specSlug));
+        return;
+      }
+
+      // 3. Check /cih/tin-tuc/<slug> or /tin-tuc/<slug>
+      var newsMatch = cleanPath.match(/(?:\/cih)?\/tin-tuc\/([^/?#]+)$/i);
+      if (newsMatch && newsMatch[1]) {
+        var newsSlug = newsMatch[1];
+        window.location.replace('/cih/chi-tiet-tin-tuc?slug=' + encodeURIComponent(newsSlug));
+        return;
+      }
+
+      // 4. Check /cih/goi-kham/<slug> or /goi-kham/<slug>
+      var pkgMatch = cleanPath.match(/(?:\/cih)?\/goi-kham\/([^/?#]+)$/i);
+      if (pkgMatch && pkgMatch[1]) {
+        var pkgSlug = pkgMatch[1];
+        window.location.replace('/cih/chi-tiet-tin-tuc?slug=' + encodeURIComponent(pkgSlug));
+        return;
+      }
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="/cih/images/logo1x1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Be Vietnam Pro', system-ui, sans-serif; background: #f8fafc; color: #1e293b; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem 1rem; text-align: center; }
+    .box { background: #fff; border-radius: 24px; padding: 3rem 2rem; max-width: 520px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+    .logo { height: 48px; width: auto; margin-bottom: 2rem; }
+    .code { font-size: 5rem; font-weight: 900; color: #007DA5; line-height: 1; margin-bottom: 0.5rem; }
+    .title { font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 0.75rem; }
+    .desc { color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #007DA5; color: #fff; text-decoration: none; font-weight: 700; padding: 0.85rem 2rem; border-radius: 50px; font-size: 0.95rem; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 15px rgba(0,125,165,0.3); }
+    .btn:hover { background: #005f80; transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="/cih/images/logo_cih_acci.png" alt="Bệnh viện Quốc tế City" class="logo" />
+    <div class="code">404</div>
+    <h1 class="title">Trang không tồn tại</h1>
+    <p class="desc">Trang bạn đang tìm kiếm có thể đã bị xóa, chuyển hướng hoặc đường dẫn không chính xác.</p>
+    <a href="/cih/" class="btn">← Về trang chủ CIH</a>
+  </div>
+</body>
+</html>

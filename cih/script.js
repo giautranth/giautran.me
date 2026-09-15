@@ -515,16 +515,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. DOCTORS PAGE (bac-si.html)
     const docGrid = document.querySelector('.doc-grid-4');
-    if (docGrid && dataset.doctors.length > 0) {
+    if (docGrid && docGrid.children.length === 0 && dataset.doctors.length > 0) {
       docGrid.innerHTML = dataset.doctors.map((d, i) => `
         <div class="doc-card-v2 doc-detail-card animate-fade-up" style="animation-delay: ${(i % 10) * 0.04}s;">
-          <div class="doc-card-v2__img-wrap" onclick="openDoctorModal(${d.id})" style="cursor: pointer;">
+          <a href="chi-tiet-bac-si?slug=${d.slug}" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
             <img src="${d.image || 'images/doctor_male_1.png'}" alt="${d.name}" class="doc-card-v2__img" onerror="this.src='images/doctor_male_1.png'" />
-          </div>
+          </a>
           <div class="doc-card-v2__body">
-            <h3 class="doc-card-v2__name" onclick="openDoctorModal(${d.id})" style="cursor: pointer;">${d.name}</h3>
+            <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=${d.slug}" style="color: inherit; text-decoration: none;">${d.name}</a></h3>
             <div class="doc-card-v2__position">${d.position ? d.position.replace(/&amp;/g, '&').slice(0, 80) : 'Bác sĩ chuyên khoa'}</div>
-            <button type="button" onclick="openDoctorModal(${d.id})" class="doc-card-v2__more-link" style="background: none; border: none; padding: 0; cursor: pointer; text-align: left; margin-top: 0.5rem;">Xem thêm <span class="arrow">→</span></button>
+            <a href="chi-tiet-bac-si?slug=${d.slug}" class="doc-card-v2__more-link" style="text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
           </div>
         </div>
       `).join('');
@@ -545,9 +545,9 @@ window.openDoctorModal = function(docId) {
     return;
   }
 
-  // Navigate to doctor detail page (giống cih.com.vn/bac-si/slug/)
+  // Navigate to doctor detail page
   if (d.slug) {
-    window.location.href = 'bac-si/' + d.slug;
+    window.location.href = 'chi-tiet-bac-si?slug=' + encodeURIComponent(d.slug);
   } else {
     // Fallback: open modal if no slug
     const imgEl = document.getElementById('doc-modal-img');

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789453352" />
+  <link rel="stylesheet" href="style.css?v=1789453622" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -908,6 +908,39 @@
         grid-template-columns: 1fr !important;
       }
     }
+
+    /* Footer logo rounded white box */
+    .footer__logo {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #ffffff !important;
+      padding: 8px 16px !important;
+      border-radius: 12px !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+      margin-bottom: 0.85rem !important;
+      max-width: 100% !important;
+      width: fit-content !important;
+    }
+    .footer__logo-img {
+      height: 42px !important;
+      max-height: 42px !important;
+      width: auto !important;
+      max-width: 100% !important;
+      object-fit: contain !important;
+      display: block !important;
+      border-radius: 0 !important;
+    }
+    @media (max-width: 480px) {
+      .footer__logo {
+        padding: 6px 12px !important;
+        border-radius: 10px !important;
+      }
+      .footer__logo-img {
+        height: 36px !important;
+        max-height: 36px !important;
+      }
+    }
     
     .author-avatar {
       width: 46px;
@@ -1573,7 +1606,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789453352"></script>
+<script src="script.js?v=1789453622"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

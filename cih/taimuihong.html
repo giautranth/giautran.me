@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789459346" />
+  <link rel="stylesheet" href="style.css?v=1789460343" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -73,6 +73,20 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        gap: 2rem;
+      }
+      .header__inner .nav__link {
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+        color: #1e293b !important;
+        transition: color 0.2s !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.3px !important;
+        padding: 0.85rem 0.65rem !important;
+        text-decoration: none !important;
+      }
+      .header__inner .nav__link:hover {
+        color: #007DA5 !important;
       }
       #header-booking-btn {
         display: inline-flex;
@@ -1341,8 +1355,6 @@
 
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#dich-vu" class="nav__link">Dịch Vụ</a></li>
-        <li class="nav__item"><a href="#vi-sao-chon-cih" class="nav__link">Vì Sao Chọn CIH</a></li>
         <li class="nav__item"><a href="#ca-benh-thanh-cong" class="nav__link">Ca Bệnh Điều Trị Thành Công</a></li>
         <li class="nav__item"><a href="#chia-se-khach-hang" class="nav__link">Chia Sẻ Từ Khách Hàng</a></li>
       </ul>
@@ -1866,7 +1878,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789459346"></script>
+<script src="script.js?v=1789460343"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;
@@ -1991,13 +2003,23 @@
         mainNav.removeAttribute('style');
       }, true);
 
-      // Close menu when clicking nav links
-      mainNav.querySelectorAll('.nav__link').forEach(link => {
-        link.addEventListener('click', () => {
-          mainNav.classList.remove('nav--open');
-          hamburger.classList.remove('active');
-          hamburger.setAttribute('aria-expanded', 'false');
-          mainNav.removeAttribute('style');
+      // Close menu and smooth scroll when clicking nav links or in-page anchors
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const hash = this.getAttribute('href');
+          if (!hash || hash === '#' || hash === '#dang-ky-tuan') return;
+          const target = document.querySelector(hash);
+          if (target) {
+            e.preventDefault();
+            mainNav.classList.remove('nav--open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mainNav.removeAttribute('style');
+            target.scrollIntoView({ behavior: 'smooth' });
+            if (history.pushState) {
+              history.pushState(null, null, hash);
+            }
+          }
         });
       });
 

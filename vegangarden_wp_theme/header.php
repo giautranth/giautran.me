@@ -24,10 +24,10 @@
       <nav>
         <ul class="nav-menu" id="navMenu">
           <li><a href="<?php echo esc_url(home_url('/')); ?>" class="nav-link <?php echo is_front_page() ? 'active' : ''; ?>">HOME</a></li>
-          <li><a href="<?php echo esc_url(home_url('/#speisekarte')); ?>" class="nav-link">MENU</a></li>
-          <li><a href="<?php echo esc_url(home_url('/about/')); ?>" class="nav-link <?php echo is_page('about') ? 'active' : ''; ?>">ABOUT US</a></li>
+          <li><a href="<?php echo esc_url(home_url('/#speisekarte')); ?>" class="nav-link">SPEISEKARTE</a></li>
+          <li><a href="<?php echo esc_url(home_url('/about/')); ?>" class="nav-link <?php echo is_page('about') ? 'active' : ''; ?>">ÜBER UNS</a></li>
           <li><a href="<?php echo esc_url(home_url('/ratgeber/')); ?>" class="nav-link <?php echo is_page('ratgeber') ? 'active' : ''; ?>">JOURNAL</a></li>
-          <li><a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="nav-link <?php echo is_page('kontakt') ? 'active' : ''; ?>">CONTACT</a></li>
+          <li><a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="nav-link <?php echo is_page('kontakt') ? 'active' : ''; ?>">KONTAKT</a></li>
         </ul>
       </nav>
 
@@ -35,7 +35,7 @@
         <!-- Desktop Reservation Button -->
         <button class="btn btn-primary desktop-reserve-btn js-open-reserve">
           <i class="fa-regular fa-calendar-check"></i>
-          <span>BOOK A TABLE</span>
+          <span>TISCH RESERVIEREN</span>
         </button>
 
         <!-- Flag Language Box -->

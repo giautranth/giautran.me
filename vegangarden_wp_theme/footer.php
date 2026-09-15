@@ -77,38 +77,134 @@
       <div class="footer-bottom">
         <div>© 2026 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
                         <div class="footer-legal-links">
-          <a href="javascript:void(0)" onclick="openLegalModal('impressum')">Impressum</a>
+          <a href="<?php echo esc_url(home_url('/impressum.html')); ?>" target="_blank">Impressum</a>
           <span class="footer-legal-sep">&bull;</span>
-          <a href="javascript:void(0)" onclick="openLegalModal('datenschutz')">Datenschutz</a>
+          <a href="<?php echo esc_url(home_url('/datenschutz.html')); ?>" target="_blank">Datenschutz</a>
           <span class="footer-legal-sep">&bull;</span>
-          <a href="javascript:void(0)" onclick="openLegalModal('cookies')">Cookie-Einstellungen</a>
+          <a href="<?php echo esc_url(home_url('/cookie-einstellungen.html')); ?>" target="_blank">Cookie-Einstellungen</a>
         </div>
       </div>
     </div>
   </footer>
-    <!-- MODAL: TABLE RESERVATION (FOODAMIGOS) -->
+    <!-- MODAL: TABLE RESERVATION -->
   <div class="modal-overlay" id="reservationModal">
     <div class="modal-content modal-content--reserve">
       <button class="modal-close" aria-label="Schließen">&times;</button>
       
       <div class="reserve-modal-header">
         <div>
-          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0 0 4px 0; font-size: 1.35rem;">Tisch reservieren</h2>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Online-Reservierung via Foodamigos &bull; Sofortige Bestätigung</p>
+          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0; font-size: 1.35rem;">Tisch reservieren</h2>
         </div>
-        <a href="https://vegangarden.tischreservieren.com" target="_blank" rel="noopener" class="reserve-ext-link">
-          <span>In neuem Tab öffnen</span>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
       </div>
 
-      <div class="foodamigos-iframe-wrap">
-        <iframe 
-          src="https://vegangarden.tischreservieren.com" 
-          title="Tisch reservieren über Foodamigos" 
-          loading="lazy">
-        </iframe>
-      </div>
+      <form id="reserveForm" style="padding: 20px 0 0;">
+        <?php wp_nonce_field('vg_reserve_form', 'vg_reserve_nonce'); ?>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div style="grid-column: 1 / -1;">
+            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Name *</label>
+            <input type="text" name="res_name" id="resName" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+          </div>
+          
+          <div>
+            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Datum *</label>
+            <input type="date" name="res_date" id="resDate" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+          </div>
+          
+          <div>
+            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Uhrzeit *</label>
+            <input type="time" name="res_time" id="resTime" required value="18:30" min="12:00" max="22:00" style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+          </div>
+          
+          <div>
+            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Personen *</label>
+            <select name="res_guests" id="resGuests" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+              <?php for ($i = 1; $i <= 20; $i++): ?>
+                <option value="<?php echo $i; ?>" <?php echo $i === 2 ? 'selected' : ''; ?>><?php echo $i; ?> <?php echo $i === 1 ? 'Person' : 'Personen'; ?></option>
+              <?php endfor; ?>
+            </select>
+          </div>
+          
+          <div>
+            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Telefon *</label>
+            <input type="tel" name="res_phone" id="resPhone" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+          </div>
+          
+          <div style="grid-column: 1 / -1;">
+            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">E-Mail <span style="color:#999; font-weight:400;">(optional)</span></label>
+            <input type="email" name="res_email" id="resEmail" style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+          </div>
+          
+          <div style="grid-column: 1 / -1;">
+            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Anmerkung <span style="color:#999; font-weight:400;">(optional)</span></label>
+            <textarea name="res_note" id="resNote" rows="2" style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7; resize:vertical;"></textarea>
+          </div>
+        </div>
+
+        <div id="reserveStatus" style="margin-top:12px; padding:10px 14px; border-radius:8px; display:none; font-size:0.9rem;"></div>
+
+        <button type="submit" id="reserveSubmitBtn" class="btn btn-primary" style="width:100%; margin-top:16px; padding:14px; font-size:1rem; display:flex; align-items:center; justify-content:center; gap:8px;">
+          <i class="fa-regular fa-calendar-check"></i>
+          <span>JETZT RESERVIEREN</span>
+        </button>
+      </form>
+
+      <script>
+      (function(){
+        const form = document.getElementById('reserveForm');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const statusDiv = document.getElementById('reserveStatus');
+          const submitBtn = document.getElementById('reserveSubmitBtn');
+          
+          // Disable button
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Wird gesendet...</span>';
+          statusDiv.style.display = 'none';
+
+          const formData = new FormData(form);
+          formData.append('action', 'vg_reservation_submit');
+
+          fetch('<?php echo admin_url("admin-ajax.php"); ?>', {
+            method: 'POST',
+            body: formData
+          })
+          .then(r => r.json())
+          .then(data => {
+            statusDiv.style.display = 'block';
+            if (data.success) {
+              statusDiv.style.background = '#e8f5e9';
+              statusDiv.style.color = '#2e7d32';
+              statusDiv.style.border = '1px solid #a5d6a7';
+              statusDiv.innerHTML = '<i class="fa-solid fa-circle-check"></i> ' + data.data;
+              form.reset();
+              setTimeout(function() {
+                document.getElementById('reservationModal').classList.remove('active');
+                document.body.style.overflow = '';
+                statusDiv.style.display = 'none';
+              }, 3000);
+            } else {
+              statusDiv.style.background = '#fbe9e7';
+              statusDiv.style.color = '#c62828';
+              statusDiv.style.border = '1px solid #ef9a9a';
+              statusDiv.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> ' + data.data;
+            }
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-regular fa-calendar-check"></i> <span>JETZT RESERVIEREN</span>';
+          })
+          .catch(() => {
+            statusDiv.style.display = 'block';
+            statusDiv.style.background = '#fbe9e7';
+            statusDiv.style.color = '#c62828';
+            statusDiv.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Netzwerkfehler. Bitte versuchen Sie es erneut.';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-regular fa-calendar-check"></i> <span>JETZT RESERVIEREN</span>';
+          });
+        });
+      })();
+      </script>
     </div>
   </div>
 

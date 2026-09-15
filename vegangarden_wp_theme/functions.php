@@ -808,3 +808,257 @@ add_action('admin_menu', function () {
         }
     }
 }, 999);
+
+// ============================================
+// TABLE RESERVATION SYSTEM (CMS)
+// ============================================
+
+// Register Reservation custom post type
+add_action('init', function () {
+    register_post_type('vg_reservation', array(
+        'labels' => array(
+            'name'               => 'Reservierungen',
+            'singular_name'      => 'Reservierung',
+            'menu_name'          => '📅 Reservierungen',
+            'all_items'          => 'Alle Reservierungen',
+            'view_item'          => 'Reservierung ansehen',
+            'search_items'       => 'Reservierungen suchen',
+            'not_found'          => 'Keine Reservierungen gefunden',
+        ),
+        'public'             => false,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'menu_position'      => 6,
+        'menu_icon'          => 'dashicons-calendar-alt',
+        'supports'           => array('title'),
+        'capability_type'    => 'post',
+        'has_archive'        => false,
+    ));
+});
+
+// Handle AJAX reservation submission
+add_action('wp_ajax_vg_reservation_submit', 'vg_handle_reservation');
+add_action('wp_ajax_nopriv_vg_reservation_submit', 'vg_handle_reservation');
+
+function vg_handle_reservation() {
+    // Verify nonce
+    if (!isset($_POST['vg_reserve_nonce']) || !wp_verify_nonce($_POST['vg_reserve_nonce'], 'vg_reserve_form')) {
+        wp_send_json_error('Sicherheitsfehler. Bitte laden Sie die Seite neu.');
+        return;
+    }
+
+    // Sanitize
+    $name   = sanitize_text_field($_POST['res_name'] ?? '');
+    $email  = sanitize_email($_POST['res_email'] ?? '');
+    $phone  = sanitize_text_field($_POST['res_phone'] ?? '');
+    $date   = sanitize_text_field($_POST['res_date'] ?? '');
+    $time   = sanitize_text_field($_POST['res_time'] ?? '');
+    $guests = intval($_POST['res_guests'] ?? 1);
+    $note   = sanitize_textarea_field($_POST['res_note'] ?? '');
+
+    // Validate required
+    if (empty($name) || empty($phone) || empty($date) || empty($time) || $guests < 1) {
+        wp_send_json_error('Bitte füllen Sie alle Pflichtfelder aus.');
+        return;
+    }
+
+    // Validate date format & not Monday
+    if (preg_match('/^\d{4}-\d{2}-\d{2}$/', $date)) {
+        $day = date('N', strtotime($date)); // 1=Mon
+        if ($day == 1) {
+            wp_send_json_error('Montags hat unser Restaurant Ruhetag. Bitte wählen Sie Di–So.');
+            return;
+        }
+    }
+
+    // Validate time 12:00-22:00
+    if (preg_match('/^(\d{2}):(\d{2})$/', $time, $tm)) {
+        $mins = intval($tm[1]) * 60 + intval($tm[2]);
+        if ($mins < 720 || $mins > 1320) {
+            wp_send_json_error('Reservierungen nur von 12:00 bis 22:00 Uhr möglich.');
+            return;
+        }
+    }
+
+    // Rate limiting: max 5 reservations per IP per hour
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $rate_key = 'vg_reserve_' . md5($ip);
+    $submissions = get_transient($rate_key);
+    if ($submissions !== false && $submissions >= 5) {
+        wp_send_json_error('Zu viele Anfragen. Bitte versuchen Sie es später.');
+        return;
+    }
+    set_transient($rate_key, ($submissions ? $submissions + 1 : 1), HOUR_IN_SECONDS);
+
+    // Format date for title
+    $date_formatted = date('d.m.Y', strtotime($date));
+    $title = sprintf('%s — %s %s — %d Pers.', $name, $date_formatted, $time, $guests);
+
+    // Save to database
+    $post_id = wp_insert_post(array(
+        'post_type'    => 'vg_reservation',
+        'post_title'   => $title,
+        'post_content' => $note,
+        'post_status'  => 'publish',
+    ));
+
+    if ($post_id) {
+        update_post_meta($post_id, '_res_name', $name);
+        update_post_meta($post_id, '_res_email', $email);
+        update_post_meta($post_id, '_res_phone', $phone);
+        update_post_meta($post_id, '_res_date', $date);
+        update_post_meta($post_id, '_res_time', $time);
+        update_post_meta($post_id, '_res_guests', $guests);
+        update_post_meta($post_id, '_res_note', $note);
+        update_post_meta($post_id, '_res_status', 'new');
+        update_post_meta($post_id, '_res_ip', $ip);
+        update_post_meta($post_id, '_res_created', current_time('mysql'));
+
+        // Try email notification
+        $to      = 'giautranth@gmail.com';
+        $subject = sprintf('[Vegan Garden] Neue Reservierung: %s, %s %s', $name, $date_formatted, $time);
+        $body    = sprintf(
+            "Neue Tischreservierung:\n\n" .
+            "Name: %s\n" .
+            "Telefon: %s\n" .
+            "E-Mail: %s\n" .
+            "Datum: %s\n" .
+            "Uhrzeit: %s\n" .
+            "Personen: %d\n" .
+            "Anmerkung: %s\n\n" .
+            "---\n" .
+            "Reservierung verwalten: %s",
+            $name, $phone, $email, $date_formatted, $time, $guests,
+            ($note ?: '—'),
+            admin_url('edit.php?post_type=vg_reservation')
+        );
+        $headers = array('Content-Type: text/plain; charset=UTF-8');
+        wp_mail($to, $subject, $body, $headers);
+    }
+
+    wp_send_json_success('Vielen Dank! Ihre Reservierung wurde erfolgreich gesendet. Wir bestätigen in Kürze.');
+}
+
+// Admin columns for Reservations
+add_filter('manage_vg_reservation_posts_columns', function ($columns) {
+    return array(
+        'cb'      => $columns['cb'],
+        'title'   => 'Reservierung',
+        'date_time' => '📅 Datum & Uhrzeit',
+        'guests'  => '👥 Personen',
+        'phone'   => '📞 Telefon',
+        'email'   => '📧 E-Mail',
+        'status'  => 'Status',
+        'date'    => 'Erstellt',
+    );
+});
+
+add_action('manage_vg_reservation_posts_custom_column', function ($column, $post_id) {
+    switch ($column) {
+        case 'date_time':
+            $d = get_post_meta($post_id, '_res_date', true);
+            $t = get_post_meta($post_id, '_res_time', true);
+            if ($d) echo '<strong>' . date('d.m.Y', strtotime($d)) . '</strong>';
+            if ($t) echo ' um ' . esc_html($t);
+            // Highlight if today or past
+            if ($d && strtotime($d) < strtotime('today')) {
+                echo ' <span style="color:#999; font-size:11px;">✓ vergangen</span>';
+            } elseif ($d && strtotime($d) == strtotime('today')) {
+                echo ' <span style="color:#e65100; font-weight:700; font-size:11px;">⚡ HEUTE</span>';
+            }
+            break;
+        case 'guests':
+            echo intval(get_post_meta($post_id, '_res_guests', true));
+            break;
+        case 'phone':
+            $p = get_post_meta($post_id, '_res_phone', true);
+            echo '<a href="tel:' . esc_attr(preg_replace('/[^0-9+]/', '', $p)) . '">' . esc_html($p) . '</a>';
+            break;
+        case 'email':
+            $e = get_post_meta($post_id, '_res_email', true);
+            if ($e) echo '<a href="mailto:' . esc_attr($e) . '">' . esc_html($e) . '</a>';
+            else echo '—';
+            break;
+        case 'status':
+            $s = get_post_meta($post_id, '_res_status', true);
+            $labels = array(
+                'new'       => array('🆕 Neu', '#1976d2'),
+                'confirmed' => array('✅ Bestätigt', '#4CAF50'),
+                'cancelled' => array('❌ Storniert', '#f44336'),
+                'completed' => array('✓ Abgeschlossen', '#999'),
+            );
+            $info = $labels[$s] ?? array('🆕 Neu', '#1976d2');
+            echo '<span style="color:' . $info[1] . '; font-weight:600;">' . $info[0] . '</span>';
+            break;
+    }
+}, 10, 2);
+
+// Add status meta box to reservation edit screen
+add_action('add_meta_boxes', function () {
+    add_meta_box('vg_res_status_box', 'Reservierung-Status', 'vg_res_status_meta_box', 'vg_reservation', 'side', 'high');
+});
+
+function vg_res_status_meta_box($post) {
+    wp_nonce_field('vg_res_status', 'vg_res_status_nonce');
+    $status = get_post_meta($post->ID, '_res_status', true) ?: 'new';
+    $name   = get_post_meta($post->ID, '_res_name', true);
+    $phone  = get_post_meta($post->ID, '_res_phone', true);
+    $email  = get_post_meta($post->ID, '_res_email', true);
+    $date   = get_post_meta($post->ID, '_res_date', true);
+    $time   = get_post_meta($post->ID, '_res_time', true);
+    $guests = get_post_meta($post->ID, '_res_guests', true);
+    $note   = get_post_meta($post->ID, '_res_note', true);
+    ?>
+    <div style="margin-bottom: 12px;">
+        <label for="res_status" style="font-weight:600; display:block; margin-bottom:4px;">Status:</label>
+        <select name="res_status" id="res_status" style="width:100%; padding:6px;">
+            <option value="new" <?php selected($status, 'new'); ?>>🆕 Neu</option>
+            <option value="confirmed" <?php selected($status, 'confirmed'); ?>>✅ Bestätigt</option>
+            <option value="cancelled" <?php selected($status, 'cancelled'); ?>>❌ Storniert</option>
+            <option value="completed" <?php selected($status, 'completed'); ?>>✓ Abgeschlossen</option>
+        </select>
+    </div>
+    <hr>
+    <div style="font-size:13px; line-height:1.8;">
+        <strong>👤 Name:</strong> <?php echo esc_html($name); ?><br>
+        <strong>📞 Telefon:</strong> <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone)); ?>"><?php echo esc_html($phone); ?></a><br>
+        <?php if ($email): ?><strong>📧 E-Mail:</strong> <a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a><br><?php endif; ?>
+        <strong>📅 Datum:</strong> <?php echo $date ? date('d.m.Y', strtotime($date)) : '—'; ?><br>
+        <strong>🕒 Uhrzeit:</strong> <?php echo esc_html($time); ?><br>
+        <strong>👥 Personen:</strong> <?php echo intval($guests); ?><br>
+        <?php if ($note): ?><strong>📝 Anmerkung:</strong> <?php echo esc_html($note); ?><br><?php endif; ?>
+    </div>
+    <?php
+}
+
+// Save reservation status
+add_action('save_post_vg_reservation', function ($post_id) {
+    if (!isset($_POST['vg_res_status_nonce']) || !wp_verify_nonce($_POST['vg_res_status_nonce'], 'vg_res_status')) return;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    $valid = array('new', 'confirmed', 'cancelled', 'completed');
+    $status = sanitize_text_field($_POST['res_status'] ?? 'new');
+    if (in_array($status, $valid)) {
+        update_post_meta($post_id, '_res_status', $status);
+    }
+});
+
+// Show reservation count badge in admin menu
+add_action('admin_menu', function () {
+    $count = new WP_Query(array(
+        'post_type' => 'vg_reservation',
+        'post_status' => 'publish',
+        'meta_query' => array(array('key' => '_res_status', 'value' => 'new')),
+        'fields' => 'ids',
+        'posts_per_page' => -1,
+    ));
+    $total = $count->found_posts;
+    if ($total > 0) {
+        global $menu;
+        foreach ($menu as $key => $item) {
+            if (isset($item[2]) && $item[2] === 'edit.php?post_type=vg_reservation') {
+                $menu[$key][0] .= " <span class='update-plugins count-{$total}'><span class='plugin-count'>{$total}</span></span>";
+                break;
+            }
+        }
+    }
+}, 999);

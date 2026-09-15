@@ -189,6 +189,7 @@ get_header();
     </div>
   </section>
 
+
   <!-- HIGHLIGHTS / SPEISEKARTE SECTION -->
   <section class="section-highlights" id="speisekarte">
     <div class="container">

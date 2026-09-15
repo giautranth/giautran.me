@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789443684" />
+  <link rel="stylesheet" href="style.css?v=1789444714" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -997,7 +997,27 @@
       cursor: zoom-in !important;
     }
 
-    
+    /* Hero Banner Responsive (Desktop 1_d.png, Mobile 1_m.png) */
+    .tmh-hero-section {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      line-height: 0;
+      background: #f8fafc;
+    }
+    .tmh-hero-picture {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+    }
+    .tmh-hero-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -1032,10 +1052,11 @@
 </header>
 
 <!-- HERO SECTION -->
-<section class="tmh-hero-section">
-  <div class="container">
-    <!-- Hero Banner Image Only -->
-  </div>
+<section class="tmh-hero-section" id="hero">
+  <picture class="tmh-hero-picture">
+    <source media="(max-width: 768px)" srcset="taimuihong/banner/1_m.png" />
+    <img src="taimuihong/banner/1_d.png" alt="Trung Tâm Tai Mũi Họng Chuyên Sâu & Phẫu Thuật Đầu Cổ - Bệnh Viện Quốc Tế City" class="tmh-hero-img" loading="eager" />
+  </picture>
 </section>
 
 <!-- SECTION 2: KHI NÀO NÊN KHÁM TAI MŨI HỌNG NGAY? -->
@@ -1605,7 +1626,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789443684"></script>
+<script src="script.js?v=1789444714"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

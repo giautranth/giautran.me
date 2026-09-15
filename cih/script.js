@@ -816,6 +816,27 @@ window.googleTranslateElementInit = function() {
           changeLanguage(savedLang);
         }, 800);
       }
+    // Fix English menu overflow if Google Translate translates to extra long text
+    const fixEnglishNav = () => {
+      document.querySelectorAll('.nav__link').forEach(link => {
+        const text = link.textContent || '';
+        if (text.includes('INSTITUTE OF TRAINING') || text.includes('Institute of Training') || text.includes('SCIENTIFIC RESEARCH') || text.includes('Scientific Research')) {
+          link.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+              node.textContent = 'Training & Research ';
+            }
+          });
+        }
+      });
+    };
+
+    try {
+      const navObserver = new MutationObserver(() => {
+        if (document.documentElement.classList.contains('translated-ltr') || localStorage.getItem('cih_lang') === 'en') {
+          fixEnglishNav();
+        }
+      });
+      navObserver.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
     } catch(e) {}
   }
 };

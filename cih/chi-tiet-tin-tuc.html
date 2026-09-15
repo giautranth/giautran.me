@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789486830" />
+  <link rel="stylesheet" href="style.css?v=1789486954" />
 </head>
 <body style="background: #f8fafc;">
 
@@ -200,13 +200,13 @@
 
         <div style="position: relative; padding: 0 1rem;">
           <!-- Slider Prev Arrow (Left Middle) -->
-          <button id="rel-prev-btn" aria-label="Bài trước" style="position: absolute; left: -18px; top: 50%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">‹</button>
+          <button id="rel-prev-btn" aria-label="Bài trước" style="position: absolute; left: -18px; top: 40%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">‹</button>
 
           <!-- Cards Grid -->
-          <div id="related-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;"></div>
+          <div id="related-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;"></div>
 
           <!-- Slider Next Arrow (Right Middle) -->
-          <button id="rel-next-btn" aria-label="Bài sau" style="position: absolute; right: -18px; top: 50%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">›</button>
+          <button id="rel-next-btn" aria-label="Bài sau" style="position: absolute; right: -18px; top: 40%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">›</button>
         </div>
       </div>
 
@@ -297,8 +297,8 @@
   </div>
 </footer>
 
-<script src="script.js?v=1789486830"></script>
-<script src="news_data.js?v=1789486830"></script>
+<script src="script.js?v=1789486954"></script>
+<script src="news_data.js?v=1789486954"></script>
 <script>
   function formatNewsDate(dStr) {
     if (!dStr) return '';
@@ -483,12 +483,12 @@
       }
 
       relatedGrid.innerHTML = items.map(rel => `
-        <div style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
           <a href="chi-tiet-tin-tuc?id=${rel.id}">
-            <img src="${rel.img}" alt="${formatTitleCase(rel.title)}" style="width: 100%; height: 160px; object-fit: cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <img src="${rel.img}" alt="${formatTitleCase(rel.title)}" style="width: 100%; height: 180px; object-fit: cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
           </a>
-          <div style="padding: 1rem;">
-            <h4 style="font-size: 0.95rem; font-weight: 700; line-height: 1.45; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+          <div style="padding: 1rem 1.15rem; flex: 1;">
+            <h4 style="font-size: 0.95rem; font-weight: 700; line-height: 1.5; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
               <a href="chi-tiet-tin-tuc?id=${rel.id}" style="color: #0f3775; text-decoration: none;">${formatTitleCase(rel.title)}</a>
             </h4>
           </div>
@@ -516,7 +516,7 @@
   }
 </script>
 
-<script src="booking_modal.js?v=1789486830"></script>
+<script src="booking_modal.js?v=1789486954"></script>
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">

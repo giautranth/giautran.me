@@ -218,9 +218,9 @@
     loadFlatpickrAssets();
 
     // Attach click events to all booking buttons on the page
-    document.querySelectorAll('a[href*="lien-he.html#dat-lich"], button[id*="booking"], .btn--primary').forEach(btn => {
+    document.querySelectorAll('a[href*="lien-he"][href*="dat-lich"], button[id*="booking"], .btn--primary').forEach(btn => {
       btn.addEventListener('click', function(e) {
-        if (!window.location.href.includes('lien-he.html')) {
+        if (!window.location.href.includes('lien-he')) {
           e.preventDefault();
           openBookingModal();
         }

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789457561" />
+  <link rel="stylesheet" href="style.css?v=1789458117" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -60,9 +60,12 @@
 
     /* Center Header Navigation Menu Items */
     @media (min-width: 992px) {
+      .hamburger {
+        display: none !important;
+      }
       .header__inner .nav {
         flex: 1;
-        display: flex;
+        display: flex !important;
         justify-content: center;
       }
       .header__inner .nav__list {
@@ -71,6 +74,21 @@
         justify-content: center;
         margin: 0 auto;
       }
+      #header-booking-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      #header-booking-btn .btn-line-1,
+      #header-booking-btn .btn-line-2 {
+        display: inline;
+        white-space: nowrap;
+      }
+    }
+
+    /* Section scroll offset for sticky header */
+    section[id] {
+      scroll-margin-top: 72px;
     }
 
     /* Mobile Header Layout (Matching index.html) */
@@ -83,8 +101,36 @@
       }
       .hamburger {
         display: flex !important;
-        z-index: 10 !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        gap: 5px !important;
+        background: transparent !important;
+        border: none !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        z-index: 100 !important;
         margin-right: 0 !important;
+      }
+      .hamburger span {
+        display: block !important;
+        width: 24px !important;
+        height: 2.5px !important;
+        background: #007DA5 !important;
+        border-radius: 2px !important;
+        transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.25s ease !important;
+      }
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg) !important;
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+        transform: scaleX(0) !important;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg) !important;
       }
       .header__logo {
         position: absolute !important;
@@ -111,20 +157,87 @@
       }
       #header-booking-btn {
         display: inline-flex !important;
+        flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%) !important;
         color: #ffffff !important;
-        font-size: 0.75rem !important;
+        font-size: 0.72rem !important;
         font-weight: 800 !important;
-        padding: 7px 12px !important;
+        line-height: 1.15 !important;
+        padding: 5px 12px !important;
         border-radius: 99px !important;
         border: none !important;
         text-transform: uppercase !important;
-        letter-spacing: 0.2px !important;
+        letter-spacing: 0.3px !important;
         box-shadow: 0 3px 10px rgba(245, 158, 11, 0.35) !important;
-        white-space: nowrap !important;
         text-decoration: none !important;
+        text-align: center !important;
+      }
+      #header-booking-btn .btn-line-1,
+      #header-booking-btn .btn-line-2 {
+        display: block !important;
+        white-space: nowrap !important;
+        line-height: 1.15 !important;
+      }
+      .nav {
+        display: none;
+      }
+      .nav.nav--open {
+        display: block !important;
+        position: absolute !important;
+        top: 60px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        background: #ffffff !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+        border-top: 1px solid #f1f5f9 !important;
+        border-bottom: 3px solid #007DA5 !important;
+        padding: 0.5rem 1.25rem 1.25rem 1.25rem !important;
+        z-index: 999 !important;
+        animation: navSlideDown 0.25s ease forwards;
+      }
+      .nav.nav--open .nav__list {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+      }
+      .nav.nav--open .nav__item {
+        width: 100% !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+      }
+      .nav.nav--open .nav__item:last-child {
+        border-bottom: none !important;
+      }
+      .nav.nav--open .nav__link {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0.9rem 0.5rem !important;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        color: #1e293b !important;
+        text-decoration: none !important;
+        transition: color 0.2s, background-color 0.2s !important;
+      }
+      .nav.nav--open .nav__link:hover,
+      .nav.nav--open .nav__link:active {
+        color: #007DA5 !important;
+      }
+    }
+
+    @keyframes navSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -136,8 +249,9 @@
         height: 30px !important;
       }
       #header-booking-btn {
-        font-size: 0.68rem !important;
-        padding: 5px 8px !important;
+        font-size: 0.65rem !important;
+        padding: 4px 9px !important;
+        line-height: 1.15 !important;
       }
     }
 
@@ -1191,13 +1305,17 @@
     <nav class="nav" id="main-nav" aria-label="Menu chính">
       <ul class="nav__list">
         <li class="nav__item"><a href="#dich-vu" class="nav__link">Dịch Vụ</a></li>
+        <li class="nav__item"><a href="#vi-sao-chon-cih" class="nav__link">Vì Sao Chọn CIH</a></li>
         <li class="nav__item"><a href="#ca-benh-thanh-cong" class="nav__link">Ca Bệnh Điều Trị Thành Công</a></li>
         <li class="nav__item"><a href="#chia-se-khach-hang" class="nav__link">Chia Sẻ Từ Khách Hàng</a></li>
       </ul>
     </nav>
 
     <div class="header__cta">
-      <a href="#dang-ky-tuan" class="btn btn--primary btn--sm" id="header-booking-btn" onclick="openLeadModal(event)">TƯ VẤN MIỄN PHÍ</a>
+      <a href="#dang-ky-tuan" class="btn btn--primary btn--sm" id="header-booking-btn" onclick="openLeadModal(event)">
+        <span class="btn-line-1">TƯ VẤN</span>
+        <span class="btn-line-2">MIỄN PHÍ</span>
+      </a>
     </div>
   </div>
 </header>
@@ -1711,7 +1829,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789457561"></script>
+<script src="script.js?v=1789458117"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;
@@ -1823,6 +1941,42 @@
   };
 
   document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Hamburger Menu Navigation
+    const hamburger = document.getElementById('hamburger-btn');
+    const mainNav = document.getElementById('main-nav');
+    if (hamburger && mainNav) {
+      hamburger.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        const isOpen = mainNav.classList.toggle('nav--open');
+        hamburger.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        mainNav.removeAttribute('style');
+      }, true);
+
+      // Close menu when clicking nav links
+      mainNav.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', () => {
+          mainNav.classList.remove('nav--open');
+          hamburger.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+          mainNav.removeAttribute('style');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mainNav.contains(e.target) && !hamburger.contains(e.target)) {
+          if (mainNav.classList.contains('nav--open')) {
+            mainNav.classList.remove('nav--open');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            mainNav.removeAttribute('style');
+          }
+        }
+      });
+    }
+
     // Add click event for symptom-card: opens compact whyCardModal Popup with navigation
     const symptomCards = Array.from(document.querySelectorAll('.symptom-card'));
     symptomCards.forEach((card, idx) => {

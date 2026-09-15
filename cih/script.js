@@ -46,23 +46,25 @@ document.addEventListener('DOMContentLoaded', () => {
   let current  = 0;
   let autoTimer;
 
-  const goToSlide = (idx) => {
-    slides[current].classList.remove('hero__slide--active');
-    dots[current].classList.remove('hero__dot--active');
-    current = (idx + slides.length) % slides.length;
-    slides[current].classList.add('hero__slide--active');
-    dots[current].classList.add('hero__dot--active');
-  };
+  if (slides.length > 1) {
+    const goToSlide = (idx) => {
+      slides[current]?.classList.remove('hero__slide--active');
+      dots[current]?.classList.remove('hero__dot--active');
+      current = (idx + slides.length) % slides.length;
+      slides[current]?.classList.add('hero__slide--active');
+      dots[current]?.classList.add('hero__dot--active');
+    };
 
-  const startAuto = () => {
-    clearInterval(autoTimer);
-    autoTimer = setInterval(() => goToSlide(current + 1), 5000);
-  };
+    const startAuto = () => {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goToSlide(current + 1), 5000);
+    };
 
-  document.getElementById('slide-next')?.addEventListener('click', () => { goToSlide(current + 1); startAuto(); });
-  document.getElementById('slide-prev')?.addEventListener('click', () => { goToSlide(current - 1); startAuto(); });
-  dots.forEach((dot, i) => dot.addEventListener('click', () => { goToSlide(i); startAuto(); }));
-  startAuto();
+    document.getElementById('slide-next')?.addEventListener('click', () => { goToSlide(current + 1); startAuto(); });
+    document.getElementById('slide-prev')?.addEventListener('click', () => { goToSlide(current - 1); startAuto(); });
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { goToSlide(i); startAuto(); }));
+    startAuto();
+  }
 
   /* ── COUNTER ANIMATION ── */
   const animateCounter = (el, target, dur = 1800) => {

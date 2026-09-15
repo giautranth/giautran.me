@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789447689" />
+  <link rel="stylesheet" href="style.css?v=1789447978" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -449,6 +449,9 @@
       line-height: 1.45;
       margin: 0;
       text-align: center;
+    }
+    .symptom-title span {
+      display: inline !important;
     }
     @media (max-width: 991px) {
       .symptom-body {
@@ -1080,10 +1083,7 @@
           <img src="images/tmh/tmh_1.png" alt="Cần tham khảo ý kiến chuyên gia trước quyết định điều trị, phẫu thuật" />
         </div>
         <div class="symptom-body">
-          <h3 class="symptom-title">
-            <span style="display: block;">Cần tham khảo ý kiến chuyên gia</span>
-            <span style="display: block;">trước quyết định điều trị, phẫu thuật</span>
-          </h3>
+          <h3 class="symptom-title">Cần tham khảo ý kiến chuyên gia trước quyết định điều trị, phẫu thuật</h3>
         </div>
       </div>
 
@@ -1103,10 +1103,7 @@
           <img src="images/tmh/14.png" alt="Điều trị các vấn đề về rối loạn giọng nói" />
         </div>
         <div class="symptom-body">
-          <h3 class="symptom-title">
-            <span style="display: block;">Điều trị các vấn đề</span>
-            <span style="display: block;">về rối loạn giọng nói</span>
-          </h3>
+          <h3 class="symptom-title">Điều trị các vấn đề về rối loạn giọng nói</h3>
         </div>
       </div>
 
@@ -1126,10 +1123,7 @@
           <img src="images/tmh/2.png" alt="Điều trị ung thư vùng Tai Mũi Họng & Đầu cổ" />
         </div>
         <div class="symptom-body">
-          <h3 class="symptom-title">
-            <span style="display: block;">Điều trị ung thư</span>
-            <span style="display: block;">vùng Tai Mũi Họng & Đầu cổ</span>
-          </h3>
+          <h3 class="symptom-title">Điều trị ung thư vùng Tai Mũi Họng & Đầu cổ</h3>
         </div>
       </div>
 
@@ -1170,10 +1164,7 @@
         <div class="why-card-header">
           <div class="why-icon-box">👨‍⚕️</div>
           <div class="why-content">
-            <h4 style="line-height: 1.35;">
-              <span style="display: block;">Đội ngũ bác sĩ</span>
-              <span style="display: block;">giàu kinh nghiệm</span>
-            </h4>
+            <h4 style="line-height: 1.35;">Đội ngũ bác sĩ giàu kinh nghiệm</h4>
             <p>Quy tụ các chuyên gia, bác sĩ giàu kinh nghiệm - Chuyên nghiệp - Tận tâm trong lĩnh vực điều trị Tai Mũi Họng chuyên sâu & Phẫu thuật Đầu cổ.</p>
           </div>
         </div>
@@ -1187,10 +1178,7 @@
         <div class="why-card-header">
           <div class="why-icon-box">🩺</div>
           <div class="why-content">
-            <h4 style="line-height: 1.35;">
-              <span style="display: block;">Thăm khám 1:1 riêng tư,</span>
-              <span style="display: block;">kỹ lưỡng từng trường hợp</span>
-            </h4>
+            <h4 style="line-height: 1.35;">Thăm khám 1:1 riêng tư, kỹ lưỡng từng trường hợp</h4>
             <p>Mỗi bệnh nhân được thăm khám chu đáo trong không gian riêng tư, giải thích rõ ràng từng chỉ số và hướng điều trị tối ưu.</p>
           </div>
         </div>
@@ -1620,7 +1608,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789447689"></script>
+<script src="script.js?v=1789447978"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;
@@ -1632,7 +1620,7 @@
     activeModalIndex = index;
 
     document.getElementById('whyModalIcon').innerText = icon || '💡';
-    document.getElementById('whyModalTitle').innerText = title || '';
+    document.getElementById('whyModalTitle').innerText = (title || '').replace(/\s+/g, ' ').trim();
     document.getElementById('whyModalImg').src = imgSrc || '';
     document.getElementById('whyModalDesc').innerText = desc || '';
     modal.style.display = 'flex';
@@ -1651,7 +1639,7 @@
     const imgSrc = card.querySelector('img')?.src || '';
 
     document.getElementById('whyModalIcon').innerText = icon;
-    document.getElementById('whyModalTitle').innerText = title;
+    document.getElementById('whyModalTitle').innerText = (title || '').replace(/\s+/g, ' ').trim();
     document.getElementById('whyModalImg').src = imgSrc;
     document.getElementById('whyModalDesc').innerText = desc;
   };

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789446097" />
+  <link rel="stylesheet" href="style.css?v=1789446260" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -919,6 +919,17 @@
       transform: translateY(-3px) scale(1.1);
       box-shadow: 0 6px 16px rgba(0, 90, 120, 0.45);
     }
+
+    /* Footer grid override: 3 columns (no TRUY CẬP NHANH) */
+    .footer__grid {
+      grid-template-columns: 1.3fr 1.2fr 1.3fr !important;
+      gap: 2.5rem !important;
+    }
+    @media (max-width: 767.98px) {
+      .footer__grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
     
     .author-avatar {
       width: 46px;
@@ -1634,7 +1645,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789446097"></script>
+<script src="script.js?v=1789446260"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

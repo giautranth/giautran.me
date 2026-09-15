@@ -997,13 +997,16 @@
       cursor: zoom-in !important;
     }
 
-    /* Hero Banner Responsive (Desktop 1_d.png, Mobile 1_m.png) */
+    /* Hero Banner Responsive (Desktop 1_d.png, Mobile 1_m.png) — Chuẩn chihoi */
     .tmh-hero-section {
-      width: 100%;
       position: relative;
+      width: 100%;
+      max-width: 100% !important;
+      margin: 0 auto;
       overflow: hidden;
-      line-height: 0;
       background: #f8fafc;
+      height: auto !important;
+      min-height: unset !important;
     }
     .tmh-hero-picture {
       display: block;
@@ -1012,9 +1015,21 @@
       padding: 0;
       line-height: 0;
     }
+    .tmh-hero-img-wrap {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      aspect-ratio: 2123 / 741; /* Desktop banner ratio */
+      background-color: #f8fafc;
+    }
+    @media (max-width: 767.98px) {
+      .tmh-hero-img-wrap {
+        aspect-ratio: 1200 / 800 !important; /* Mobile banner ratio */
+      }
+    }
     .tmh-hero-img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
       object-fit: cover;
     }
@@ -1053,10 +1068,12 @@
 
 <!-- HERO SECTION -->
 <section class="tmh-hero-section" id="hero">
-  <picture class="tmh-hero-picture">
-    <source media="(max-width: 768px)" srcset="taimuihong/banner/1_m.png" />
-    <img src="taimuihong/banner/1_d.png" alt="Trung Tâm Tai Mũi Họng Chuyên Sâu & Phẫu Thuật Đầu Cổ - Bệnh Viện Quốc Tế City" class="tmh-hero-img" loading="eager" />
-  </picture>
+  <div class="tmh-hero-img-wrap">
+    <picture class="tmh-hero-picture">
+      <source media="(max-width: 767.98px)" srcset="taimuihong/banner/1_m.png" />
+      <img src="taimuihong/banner/1_d.png" alt="Trung Tâm Tai Mũi Họng Chuyên Sâu &amp; Phẫu Thuật Đầu Cổ - Bệnh Viện Quốc Tế City" class="tmh-hero-img" loading="eager" />
+    </picture>
+  </div>
 </section>
 
 <!-- SECTION 2: KHI NÀO NÊN KHÁM TAI MŨI HỌNG NGAY? -->

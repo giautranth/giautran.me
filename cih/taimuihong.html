@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789458466" />
+  <link rel="stylesheet" href="style.css?v=1789458978" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -1174,6 +1174,42 @@
         max-height: 36px !important;
       }
     }
+
+    /* Footer 3-Column Balanced Layout for Tai Mui Hong */
+    .footer__grid {
+      display: grid !important;
+      grid-template-columns: 1.15fr 1fr 1fr !important;
+      gap: 3rem !important;
+      align-items: start !important;
+    }
+    .footer__col--contact {
+      justify-self: center !important;
+      max-width: 360px !important;
+      width: 100% !important;
+    }
+    @media (max-width: 991px) and (min-width: 601px) {
+      .footer__grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+      }
+      .footer__brand {
+        grid-column: 1 / -1 !important;
+      }
+      .footer__col--contact {
+        justify-self: start !important;
+        max-width: 100% !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .footer__grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.75rem !important;
+      }
+      .footer__col--contact {
+        justify-self: start !important;
+        max-width: 100% !important;
+      }
+    }
     
     .author-avatar {
       width: 46px;
@@ -1699,7 +1735,7 @@
       </div>
 
 
-      <div class="footer__col">
+      <div class="footer__col footer__col--contact">
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
           <li class="footer__contact-address">
@@ -1829,7 +1865,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789458466"></script>
+<script src="script.js?v=1789458978"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

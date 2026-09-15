@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789447353" />
+  <link rel="stylesheet" href="style.css?v=1789447689" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -685,17 +685,32 @@
       }
     }
 
-    /* Full container width on mobile matching Section 3 (.why-card) */
+    /* Precision arrow positioning: centered right on the card border (nằm giữa border) */
+    .side-arrow {
+      z-index: 50 !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18) !important;
+    }
+    .side-arrow--prev {
+      left: -22px !important;
+    }
+    .side-arrow--next {
+      right: -22px !important;
+    }
     @media (max-width: 991px) {
       .carousel-wrap {
         padding: 0 !important;
         position: relative !important;
       }
+      .side-arrow {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1.35rem !important;
+      }
       .side-arrow--prev {
-        left: 8px !important;
+        left: -19px !important;
       }
       .side-arrow--next {
-        right: 8px !important;
+        right: -19px !important;
       }
     }
 
@@ -1605,7 +1620,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789447353"></script>
+<script src="script.js?v=1789447689"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

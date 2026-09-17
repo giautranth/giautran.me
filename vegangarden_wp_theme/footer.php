@@ -344,15 +344,12 @@
     </div>
   </div>
 
-  <!-- MODAL: VIDEO LIGHTBOX -->
+  <!-- MODAL: VIDEO LIGHTBOX (YOUTUBE) -->
   <div class="modal-overlay" id="videoModal">
-    <div class="modal-content" style="max-width: 900px; padding: 0; background: #000; overflow: hidden;">
-      <button class="modal-close" style="color: #fff; z-index: 10;">&times;</button>
+    <div class="modal-content" style="max-width: 900px; width: 92%; padding: 0; background: #000; overflow: hidden; border-radius: 12px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+      <button class="modal-close" style="color: #fff; z-index: 10; top: 12px; right: 12px; font-size: 1.6rem; background: rgba(0,0,0,0.6); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer;">&times;</button>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-        <video id="gardenVideo" controls playsinline style="position: absolute; top:0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-          <source src="<?php echo esc_url(home_url('/video/garden_preview.mp4')); ?>" type="video/mp4">
-          Ihr Browser unterstützt kein HTML5 Video.
-        </video>
+        <iframe id="gardenYouTubeIframe" src="" data-src="https://www.youtube-nocookie.com/embed/g2DIB_n3434?autoplay=1&rel=0&modestbranding=1" title="Vegan Garden Berlin Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
       </div>
     </div>
   </div>

@@ -147,14 +147,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const gardenVideo = document.getElementById('gardenVideo');
+  const gardenYouTubeIframe = document.getElementById('gardenYouTubeIframe');
 
   function openModal(modal) {
     if (!modal) return;
     closeAllModals();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    if (modal === videoModal && gardenVideo) {
-      gardenVideo.play().catch(() => {});
+    if (modal === videoModal) {
+      if (gardenYouTubeIframe) {
+        if (!gardenYouTubeIframe.src || gardenYouTubeIframe.src === 'about:blank' || !gardenYouTubeIframe.src.includes('embed')) {
+          gardenYouTubeIframe.src = gardenYouTubeIframe.dataset.src;
+        }
+      } else if (gardenVideo) {
+        gardenVideo.play().catch(() => {});
+      }
     }
   }
 
@@ -163,10 +170,20 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.classList.remove('active');
     });
     document.body.style.overflow = '';
+    if (gardenYouTubeIframe) {
+      gardenYouTubeIframe.src = '';
+    }
     if (gardenVideo) {
       gardenVideo.pause();
     }
   }
+
+  // Close modals on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllModals();
+    }
+  });
 
   // Menu Modal Tab Switcher
   const menuTabs = document.querySelectorAll('.menu-tab');

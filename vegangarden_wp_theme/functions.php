@@ -29,7 +29,7 @@ function vegangarden_scripts() {
     wp_enqueue_style('vegangarden-theme', get_stylesheet_uri(), array('vegangarden-main'), '1.0.3');
 
     // Main Script
-    wp_enqueue_script('vegangarden-script', get_template_directory_uri() . '/script.js', array(), '20260914', true);
+    wp_enqueue_script('vegangarden-script', get_template_directory_uri() . '/script.js', array(), '20260918_01', true);
 }
 add_action('wp_enqueue_scripts', 'vegangarden_scripts');
 

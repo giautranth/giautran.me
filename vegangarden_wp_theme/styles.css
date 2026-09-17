@@ -1820,11 +1820,12 @@ input[type="date"]::-webkit-date-and-time-value {
 .news-card-grid,
 .gallery-grid-slider {
   display: flex !important;
-  overflow-x: auto !important;
+  overflow-x: hidden !important;
   gap: 20px !important;
   padding: 10px 0 !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  touch-action: pan-y !important;
 }
 
 .food-grid-slider::-webkit-scrollbar,
@@ -1928,16 +1929,23 @@ input[type="date"]::-webkit-date-and-time-value {
 @media (max-width: 768px) {
   .food-grid-slider,
   .news-card-grid,
-  .gallery-grid-slider {
+  .gallery-grid-slider,
+  .reviews-card-slider {
     gap: 16px !important;
+    padding: 10px 0 !important;
+    overflow-x: hidden !important;
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: auto !important;
   }
   .food-grid-slider .food-card,
   .news-card-grid .news-card,
-  .gallery-grid-slider .insta-card {
+  .gallery-grid-slider .insta-card,
+  .reviews-card-slider .review-box {
     flex: 0 0 100% !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 100% !important;
+    box-sizing: border-box !important;
   }
   .side-arrow {
     width: 40px !important;
@@ -1992,11 +2000,12 @@ input[type="date"]::-webkit-date-and-time-value {
 /* GOOGLE REVIEWS CAROUSEL CARDS */
 .reviews-card-slider {
   display: flex !important;
-  overflow-x: auto !important;
+  overflow-x: hidden !important;
   gap: 20px !important;
   padding: 12px 4px !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  touch-action: pan-y !important;
 }
 
 .reviews-card-slider::-webkit-scrollbar {

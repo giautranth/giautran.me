@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return firstChild.offsetWidth + computedGap;
     }
 
-    // Slide Left-to-Right: Cards move smoothly rightwards (→)
+    // Slide Left-to-Right: Cards move smoothly rightwards (→) [Prev]
     function slideLtr() {
       if (isTransitioning || grid.children.length <= 1) return;
       if (grid.scrollWidth <= grid.clientWidth + 5) return;
@@ -536,7 +536,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (last) {
         grid.style.scrollBehavior = 'auto';
         grid.insertBefore(last, grid.firstElementChild);
-        grid.scrollLeft += step;
+        grid.scrollLeft = step;
       }
 
       requestAnimationFrame(() => {
@@ -546,31 +546,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
           setTimeout(() => {
             grid.style.scrollBehavior = 'auto';
+            grid.scrollLeft = 0;
             isTransitioning = false;
           }, 450);
         }, 30);
       });
     }
 
-    // Slide Right-to-Left: Cards move smoothly leftwards (←)
+    // Slide Right-to-Left: Cards move smoothly leftwards (←) [Next]
     function slideRtl() {
       if (isTransitioning || grid.children.length <= 1) return;
       if (grid.scrollWidth <= grid.clientWidth + 5) return;
       isTransitioning = true;
 
+      grid.style.scrollBehavior = 'auto';
+      grid.scrollLeft = 0;
       const step = getStep();
-      grid.style.scrollBehavior = 'smooth';
-      grid.scrollBy({ left: step, behavior: 'smooth' });
 
-      setTimeout(() => {
-        grid.style.scrollBehavior = 'auto';
-        const first = grid.firstElementChild;
-        if (first) {
-          grid.appendChild(first);
-          grid.scrollLeft -= step;
-        }
-        isTransitioning = false;
-      }, 450);
+      requestAnimationFrame(() => {
+        grid.style.scrollBehavior = 'smooth';
+        grid.scrollBy({ left: step, behavior: 'smooth' });
+
+        setTimeout(() => {
+          grid.style.scrollBehavior = 'auto';
+          const first = grid.firstElementChild;
+          if (first) {
+            grid.appendChild(first);
+          }
+          grid.scrollLeft = 0;
+          isTransitioning = false;
+        }, 450);
+      });
     }
 
     function startTimer() {
@@ -592,20 +598,60 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    // Touch Swipe Gesture Handling (disables slow pixel drag, advances 1 full card on swipe)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+
+    grid.addEventListener('touchstart', (e) => {
+      stopTimer();
+      if (e.touches && e.touches[0]) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchEndX = touchStartX;
+        touchEndY = touchStartY;
+      }
+    }, { passive: true });
+
+    grid.addEventListener('touchmove', (e) => {
+      if (e.touches && e.touches[0]) {
+        touchEndX = e.touches[0].clientX;
+        touchEndY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    grid.addEventListener('touchend', () => {
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 45) {
+        if (diffX < 0) {
+          slideRtl();
+        } else {
+          slideLtr();
+        }
+      }
+      if (intervalMs > 0) {
+        startTimer();
+      }
+    }, { passive: true });
+
+    grid.addEventListener('mouseenter', stopTimer);
+    grid.addEventListener('mouseleave', () => {
+      if (intervalMs > 0) startTimer();
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopTimer();
+      } else {
+        if (intervalMs > 0) startTimer();
+      }
+    });
+
     if (intervalMs > 0) {
       startTimer();
-      grid.addEventListener('mouseenter', stopTimer);
-      grid.addEventListener('mouseleave', startTimer);
-      grid.addEventListener('touchstart', stopTimer, { passive: true });
-      grid.addEventListener('touchend', startTimer, { passive: true });
-
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          stopTimer();
-        } else {
-          startTimer();
-        }
-      });
     }
 
     if (prevBtn) {

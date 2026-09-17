@@ -890,8 +890,9 @@ img {
 .section-reviews {
   padding: 36px 0;
   background-color: #F6F1E7;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
+  border-top: none !important;
+  border-bottom: none !important;
+  border: none !important;
 }
 
 .reviews-bar {
@@ -1930,16 +1931,16 @@ input[type="date"]::-webkit-date-and-time-value {
   background: #ffffff;
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: none !important;
+  border: none !important;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .review-box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: none !important;
 }
 
 .review-box-header {

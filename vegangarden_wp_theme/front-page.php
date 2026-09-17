@@ -107,7 +107,7 @@ get_header();
   </section>
 
   <!-- GOOGLE REVIEWS SECTION (INTERACTIVE SLIDER) -->
-  <section class="section-reviews" id="bewertungen" style="background: #F6F1E7; padding: 40px 0;">
+  <section class="section-reviews" id="bewertungen" style="background: #F6F1E7; padding: 40px 0; border: none;">
     <div class="container">
       <div class="reviews-header" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 20px;">
         <div class="reviews-google-badge" style="display: flex; align-items: center; gap: 16px;">

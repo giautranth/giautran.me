@@ -1851,23 +1851,59 @@ input[type="date"]::-webkit-date-and-time-value {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid var(--border-subtle, rgba(42, 22, 15, 0.15));
-  color: var(--primary-green-dark, #2A160F);
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle, rgba(42, 22, 15, 0.15)) !important;
+  color: #2A160F !important;
   font-size: 1.1rem;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(42, 22, 15, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
 }
 
-.side-arrow:hover {
-  background: var(--color-gold, #A98224);
-  color: #ffffff;
-  border-color: var(--color-gold, #A98224);
-  transform: translateY(-50%) scale(1.08);
+.side-arrow i {
+  color: #2A160F !important;
+  display: inline-block;
+  pointer-events: none;
+}
+
+/* Prevent icon from disappearing on focus */
+.side-arrow:focus,
+.side-arrow:focus-visible {
+  outline: none !important;
+  background: #ffffff !important;
+  color: #2A160F !important;
+}
+.side-arrow:focus i,
+.side-arrow:focus-visible i {
+  color: #2A160F !important;
+}
+
+/* Hover effect ONLY on devices that support hover (desktop mouse) */
+@media (hover: hover) and (pointer: fine) {
+  .side-arrow:hover {
+    background: var(--color-gold, #A98224) !important;
+    color: #ffffff !important;
+    border-color: var(--color-gold, #A98224) !important;
+    transform: translateY(-50%) scale(1.08);
+  }
+  .side-arrow:hover i {
+    color: #ffffff !important;
+  }
+}
+
+/* Tactile feedback on click/tap */
+.side-arrow:active {
+  transform: translateY(-50%) scale(0.92) !important;
+  background: #f5ede2 !important;
+  color: #2A160F !important;
+}
+.side-arrow:active i {
+  color: #2A160F !important;
 }
 
 .side-arrow--prev {
@@ -1907,10 +1943,29 @@ input[type="date"]::-webkit-date-and-time-value {
     width: 40px !important;
     height: 40px !important;
     font-size: 0.95rem !important;
-    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #2A160F !important;
     border: 1px solid var(--border-subtle, rgba(42, 22, 15, 0.18)) !important;
     box-shadow: 0 4px 16px rgba(42, 22, 15, 0.22) !important;
     z-index: 25 !important;
+  }
+  .side-arrow i {
+    color: #2A160F !important;
+  }
+  .side-arrow:hover,
+  .side-arrow:focus,
+  .side-arrow:focus-visible {
+    background-color: #ffffff !important;
+    color: #2A160F !important;
+  }
+  .side-arrow:hover i,
+  .side-arrow:focus i,
+  .side-arrow:focus-visible i {
+    color: #2A160F !important;
+  }
+  .side-arrow:active {
+    transform: translateY(-50%) scale(0.92) !important;
+    background-color: #f5ede2 !important;
   }
   .side-arrow--prev {
     left: -20px !important;

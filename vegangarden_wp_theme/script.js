@@ -612,6 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
       prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+        prevBtn.blur();
         stopTimer();
         slideLtr();
         if (intervalMs > 0) startTimer();
@@ -622,6 +623,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nextBtn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+        nextBtn.blur();
         stopTimer();
         slideRtl();
         if (intervalMs > 0) startTimer();

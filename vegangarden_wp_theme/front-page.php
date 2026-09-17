@@ -85,12 +85,8 @@ get_header();
             </p>
           </div>
 
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <div>
             <a href="<?php echo esc_url(home_url('/about/')); ?>" class="btn btn-primary">MEHR ÜBER UNS</a>
-            <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="btn btn-outline" style="border: 1px solid #2A160F; color: #2A160F; padding: 12px 24px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
-              <i class="fa-regular fa-envelope"></i>
-              <span>EVENT ANFRAGEN</span>
-            </a>
           </div>
         </div>
         <div class="video-card" id="videoCard">

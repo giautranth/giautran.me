@@ -1063,25 +1063,50 @@ img {
 }
 
 .social-links {
-  display: flex;
-  gap: 12px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
 }
 
 .social-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  transition: var(--transition);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 1.15rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
 }
 
 .social-icon:hover {
-  background: var(--primary-green-light);
-  transform: translateY(-3px);
+  background: var(--color-gold, #A98224) !important;
+  border-color: var(--color-gold, #A98224) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) !important;
+}
+
+.social-icon i,
+.social-icon svg {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
 }
 
 .footer-hours p, .footer-contact p {
@@ -1480,7 +1505,7 @@ input[type="date"]::-webkit-date-and-time-value {
   }
   .footer .brand-logo,
   .footer-logo,
-  .footer-brand a {
+  .footer-brand > a.footer-logo {
     position: static !important;
     transform: none !important;
     display: inline-block !important;
@@ -2024,43 +2049,55 @@ input[type="date"]::-webkit-date-and-time-value {
   }
 }
 
-/* FLOATING RESERVATION FAB BUTTON (MOBILE & TABLET WITH PULSE EFFECT) */
+/* FLOATING RESERVATION FAB BUTTON (GLOBAL ACROSS ALL PAGES) */
 .floating-reserve-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 20px;
-  z-index: 999;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #A98224 0%, #2A160F 100%);
-  color: #ffffff;
-  border: 2px solid rgba(199, 154, 74, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  cursor: pointer;
-  box-shadow: 0 8px 24px rgba(42, 22, 15, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 20px !important;
+  z-index: 999 !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #A98224 0%, #2A160F 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(199, 154, 74, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 20px rgba(42, 22, 15, 0.35) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Hide floating button when any modal is open */
+.modal-overlay.active ~ .floating-reserve-btn,
+body:has(.modal-overlay.active) .floating-reserve-btn {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .floating-reserve-btn:hover,
 .floating-reserve-btn:active {
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(211, 47, 47, 0.6);
+  transform: scale(1.1) !important;
+  box-shadow: 0 10px 28px rgba(169, 130, 36, 0.55) !important;
 }
 
 .floating-reserve-pulse {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 50%;
-  border: 2px solid #A98224;
-  animation: reservePulse 2s infinite ease-in-out;
-  pointer-events: none;
+  position: absolute !important;
+  top: -6px !important;
+  left: -6px !important;
+  right: -6px !important;
+  bottom: -6px !important;
+  border-radius: 50% !important;
+  border: 2px solid #A98224 !important;
+  animation: reservePulse 2s infinite ease-in-out !important;
+  pointer-events: none !important;
 }
 
 @keyframes reservePulse {
@@ -2069,11 +2106,11 @@ input[type="date"]::-webkit-date-and-time-value {
     opacity: 0.95;
   }
   70% {
-    transform: scale(1.4);
+    transform: scale(1.35);
     opacity: 0;
   }
   100% {
-    transform: scale(1.4);
+    transform: scale(1.35);
     opacity: 0;
   }
 }

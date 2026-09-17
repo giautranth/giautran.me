@@ -100,25 +100,25 @@
       <form id="reserveForm" style="padding: 20px 0 0;">
         <?php wp_nonce_field('vg_reserve_form', 'vg_reserve_nonce'); ?>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
-          <div style="grid-column: 1 / -1;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div>
             <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Name *</label>
-            <input type="text" name="res_name" id="resName" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+            <input type="text" name="res_name" id="resName" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
           </div>
           
           <div>
             <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Datum *</label>
-            <input type="date" name="res_date" id="resDate" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+            <input type="date" name="res_date" id="resDate" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
           </div>
           
           <div>
             <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Uhrzeit *</label>
-            <input type="time" name="res_time" id="resTime" required value="18:30" min="12:00" max="22:00" style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+            <input type="time" name="res_time" id="resTime" required value="18:30" min="12:00" max="22:00" style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
           </div>
           
           <div>
             <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Personen *</label>
-            <select name="res_guests" id="resGuests" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+            <select name="res_guests" id="resGuests" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
               <?php for ($i = 1; $i <= 20; $i++): ?>
                 <option value="<?php echo $i; ?>" <?php echo $i === 2 ? 'selected' : ''; ?>><?php echo $i; ?> <?php echo $i === 1 ? 'Person' : 'Personen'; ?></option>
               <?php endfor; ?>
@@ -127,17 +127,17 @@
           
           <div>
             <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Telefon *</label>
-            <input type="tel" name="res_phone" id="resPhone" required style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+            <input type="tel" name="res_phone" id="resPhone" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
           </div>
           
-          <div style="grid-column: 1 / -1;">
+          <div>
             <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">E-Mail <span style="color:#999; font-weight:400;">(optional)</span></label>
-            <input type="email" name="res_email" id="resEmail" style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7;">
+            <input type="email" name="res_email" id="resEmail" style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
           </div>
           
-          <div style="grid-column: 1 / -1;">
+          <div>
             <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Anmerkung <span style="color:#999; font-weight:400;">(optional)</span></label>
-            <textarea name="res_note" id="resNote" rows="2" style="width:100%; padding:10px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:0.95rem; background:#faf9f7; resize:vertical;"></textarea>
+            <textarea name="res_note" id="resNote" rows="2" style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; resize:vertical; box-sizing:border-box;"></textarea>
           </div>
         </div>
 
@@ -380,7 +380,12 @@
     </div>
   </div>
 
-  
+  <!-- FLOATING RESERVATION BUTTON (GLOBAL ACROSS ALL PAGES) -->
+  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch reservieren" title="Tisch reservieren">
+    <span class="floating-reserve-pulse"></span>
+    <i class="fa-solid fa-calendar-check"></i>
+  </button>
+
   <?php wp_footer(); ?>
 </body>
 </html>

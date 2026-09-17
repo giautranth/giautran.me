@@ -117,12 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const videoCard = document.getElementById('videoCard');
-  if (videoCard) {
-    videoCard.addEventListener('click', () => {
-      openModal(videoModal);
-    });
-  }
+  // Open video modal (Event delegation & direct fallback)
+  document.addEventListener('click', (e) => {
+    const videoBtn = e.target.closest('#videoCard, .js-open-video');
+    if (videoBtn) {
+      e.preventDefault();
+      const vModal = document.getElementById('videoModal');
+      if (vModal) {
+        openModal(vModal);
+      } else {
+        window.open('https://www.youtube.com/watch?v=g2DIB_n3434', '_blank');
+      }
+    }
+  });
 
   document.querySelectorAll('.js-open-reviews').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -156,8 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
     if (modal === videoModal) {
       if (gardenYouTubeIframe) {
+        const targetSrc = gardenYouTubeIframe.dataset.src || 'https://www.youtube.com/embed/g2DIB_n3434?autoplay=1&rel=0&modestbranding=1&enablejsapi=1';
         if (!gardenYouTubeIframe.src || gardenYouTubeIframe.src === 'about:blank' || !gardenYouTubeIframe.src.includes('embed')) {
-          gardenYouTubeIframe.src = gardenYouTubeIframe.dataset.src;
+          gardenYouTubeIframe.src = targetSrc;
         }
       } else if (gardenVideo) {
         gardenVideo.play().catch(() => {});
@@ -171,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.body.style.overflow = '';
     if (gardenYouTubeIframe) {
-      gardenYouTubeIframe.src = '';
+      gardenYouTubeIframe.src = 'about:blank';
     }
     if (gardenVideo) {
       gardenVideo.pause();

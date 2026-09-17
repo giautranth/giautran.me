@@ -349,7 +349,17 @@
     <div class="modal-content" style="max-width: 900px; width: 92%; padding: 0; background: #000; overflow: hidden; border-radius: 12px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
       <button class="modal-close" style="color: #fff; z-index: 10; top: 12px; right: 12px; font-size: 1.6rem; background: rgba(0,0,0,0.6); width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer;">&times;</button>
       <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-        <iframe id="gardenYouTubeIframe" src="" data-src="https://www.youtube-nocookie.com/embed/g2DIB_n3434?autoplay=1&rel=0&modestbranding=1" title="Vegan Garden Berlin Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+        <iframe id="gardenYouTubeIframe" src="about:blank" data-src="https://www.youtube.com/embed/g2DIB_n3434?autoplay=1&rel=0&modestbranding=1&enablejsapi=1" title="Vegan Garden Berlin Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top:0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
+      </div>
+      <div style="padding: 10px 16px; background: #1a1a1a; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+        <span style="color: #ddd; font-size: 0.85rem; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.2rem;"></i>
+          Vegan Garden Berlin
+        </span>
+        <a href="https://www.youtube.com/watch?v=g2DIB_n3434" target="_blank" rel="noopener noreferrer" style="color: #c5a572; font-size: 0.85rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+          <span>Auf YouTube ansehen</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+        </a>
       </div>
     </div>
   </div>

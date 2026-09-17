@@ -89,7 +89,7 @@ get_header();
             <a href="<?php echo esc_url(home_url('/about/')); ?>" class="btn btn-primary">MEHR ÜBER UNS</a>
           </div>
         </div>
-        <div class="video-card" id="videoCard">
+        <a href="https://www.youtube.com/watch?v=g2DIB_n3434" target="_blank" rel="noopener noreferrer" class="video-card js-open-video" id="videoCard" title="Vegan Garden Berlin Video auf YouTube ansehen" style="text-decoration: none; display: block;">
           <img src="<?php echo esc_url(home_url('/images/garden_preview.jpg')); ?>" alt="Vegan Garden Berlin Video Preview">
           <div class="video-overlay">
             <div class="play-btn">
@@ -97,7 +97,7 @@ get_header();
             </div>
             <div class="video-caption">Ein kurzer Einblick in unseren Garten</div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>

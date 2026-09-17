@@ -416,14 +416,6 @@ get_header();
         <h2 class="section-title notranslate">JOURNAL</h2>
       </div>
 
-      <!-- Category Filter Tabs (CIH Style) -->
-      <div class="news-filter-tabs" style="justify-content: center;">
-        <button class="news-tab active" data-filter="all" data-vi="Tất cả" data-de="Alle" data-en="All">Alle</button>
-        <button class="news-tab" data-filter="speisekarte" data-vi="Speisekarte & Món ăn" data-de="Speisekarte & Gerichte" data-en="Menu & Dishes">Speisekarte & Gerichte</button>
-        <button class="news-tab" data-filter="kultur" data-vi="Văn hóa & Mẹo" data-de="Kultur & Tipps" data-en="Culture & Tips">Kultur & Tipps</button>
-        <button class="news-tab" data-filter="rezepte" data-vi="Công thức" data-de="Rezepte" data-en="Recipes">Rezepte</button>
-        <button class="news-tab" data-filter="gesundheit" data-vi="Sức khỏe" data-de="Gesundheit" data-en="Health">Gesundheit</button>
-      </div>
 
       <!-- Articles Grid (CIH Style Slider) -->
       <div class="slider-container-wrap" style="margin-bottom: 36px;">

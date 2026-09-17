@@ -365,9 +365,6 @@ get_header();
         </button>
         <div class="food-grid-slider gallery-grid-slider" id="galleryGrid">
           <div class="insta-card">
-            <img src="<?php echo esc_url(home_url('/images/gallery/CHIHUONG28.084320-Edit.jpg?v=20260903_g')); ?>" alt="Vegan Garden Berlin - Banh Mi Vegan" loading="lazy">
-          </div>
-          <div class="insta-card">
             <img src="<?php echo esc_url(home_url('/images/gallery/bo-tuu-kho-chao.png?v=20260903_g')); ?>" alt="Vegan Garden Berlin - Tu Buu Kho Chao" loading="lazy">
           </div>
           <div class="insta-card">

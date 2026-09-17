@@ -433,15 +433,15 @@ get_header();
             </div>
           </article>
 
-          <!-- Article 2: Bánh Mì -->
+          <!-- Article 2: Lẩu (Feuertopf) -->
           <article class="news-card" data-category="rezepte">
             <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="news-card__img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/article_banh_mi.jpg')); ?>" alt="Bánh Mì Vegan in Berlin" class="news-card__img">
-              <span class="news-card__cat">REZEPTE</span>
+              <img src="<?php echo esc_url(home_url('/images/gallery/lau.jpg?v=20260918')); ?>" alt="Veganer Feuertopf (Lẩu) in Berlin" class="news-card__img">
+              <span class="news-card__cat">SPEZIALITÄTEN</span>
             </a>
             <div class="news-card__body">
               <h3 class="news-card__title">
-                <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>">Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam</a>
+                <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>">Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis</a>
               </h3>
               <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="news-card__more">
                 <span class="more-txt">Artikel lesen</span>

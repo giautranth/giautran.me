@@ -377,6 +377,15 @@
     </div>
   </div>
 
+  <!-- SCROLL TO TOP BUTTON (GLOBAL ACROSS ALL PAGES) -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Nach oben scrollen" title="Nach oben scrollen">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="4" x2="19" y2="4"></line>
+      <polyline points="6 12 12 6 18 12"></polyline>
+      <line x1="12" y1="6" x2="12" y2="20"></line>
+    </svg>
+  </button>
+
   <!-- FLOATING RESERVATION BUTTON (GLOBAL ACROSS ALL PAGES) -->
   <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch reservieren" title="Tisch reservieren">
     <span class="floating-reserve-pulse"></span>

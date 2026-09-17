@@ -53,6 +53,8 @@ html {
 
 body {
   overflow-x: hidden;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
   background-color: #F6F1E7 !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -375,14 +377,21 @@ img {
 .hero {
   position: relative;
   width: 100%;
-  aspect-ratio: 1536 / 536;
-  min-height: 480px;
+  aspect-ratio: 1920 / 600;
+  min-height: 400px;
   display: flex;
   align-items: center;
   overflow: hidden;
   color: #ffffff;
   background-color: #2A160F;
   padding: 60px 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: 1200 / 800;
+    min-height: 320px;
+  }
 }
 
 .hero-slider-wrap {
@@ -881,8 +890,9 @@ img {
 .section-reviews {
   padding: 36px 0;
   background-color: #F6F1E7;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
+  border-top: none !important;
+  border-bottom: none !important;
+  border: none !important;
 }
 
 .reviews-bar {
@@ -1053,25 +1063,50 @@ img {
 }
 
 .social-links {
-  display: flex;
-  gap: 12px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
 }
 
 .social-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  transition: var(--transition);
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 1.15rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
 }
 
 .social-icon:hover {
-  background: var(--primary-green-light);
-  transform: translateY(-3px);
+  background: var(--color-gold, #A98224) !important;
+  border-color: var(--color-gold, #A98224) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) !important;
+}
+
+.social-icon i,
+.social-icon svg {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
 }
 
 .footer-hours p, .footer-contact p {
@@ -1082,6 +1117,7 @@ img {
 
 .footer-contact-item {
   display: flex;
+  align-items: center;
   gap: 12px;
   margin-bottom: 12px;
   color: #a4aaa5;
@@ -1469,7 +1505,7 @@ input[type="date"]::-webkit-date-and-time-value {
   }
   .footer .brand-logo,
   .footer-logo,
-  .footer-brand a {
+  .footer-brand > a.footer-logo {
     position: static !important;
     transform: none !important;
     display: inline-block !important;
@@ -1784,11 +1820,12 @@ input[type="date"]::-webkit-date-and-time-value {
 .news-card-grid,
 .gallery-grid-slider {
   display: flex !important;
-  overflow-x: auto !important;
+  overflow-x: hidden !important;
   gap: 20px !important;
   padding: 10px 0 !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  touch-action: pan-y !important;
 }
 
 .food-grid-slider::-webkit-scrollbar,
@@ -1815,23 +1852,59 @@ input[type="date"]::-webkit-date-and-time-value {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid var(--border-subtle, rgba(42, 22, 15, 0.15));
-  color: var(--primary-green-dark, #2A160F);
+  background: #ffffff !important;
+  border: 1px solid var(--border-subtle, rgba(42, 22, 15, 0.15)) !important;
+  color: #2A160F !important;
   font-size: 1.1rem;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(42, 22, 15, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.25s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
 }
 
-.side-arrow:hover {
-  background: var(--color-gold, #A98224);
-  color: #ffffff;
-  border-color: var(--color-gold, #A98224);
-  transform: translateY(-50%) scale(1.08);
+.side-arrow i {
+  color: #2A160F !important;
+  display: inline-block;
+  pointer-events: none;
+}
+
+/* Prevent icon from disappearing on focus */
+.side-arrow:focus,
+.side-arrow:focus-visible {
+  outline: none !important;
+  background: #ffffff !important;
+  color: #2A160F !important;
+}
+.side-arrow:focus i,
+.side-arrow:focus-visible i {
+  color: #2A160F !important;
+}
+
+/* Hover effect ONLY on devices that support hover (desktop mouse) */
+@media (hover: hover) and (pointer: fine) {
+  .side-arrow:hover {
+    background: var(--color-gold, #A98224) !important;
+    color: #ffffff !important;
+    border-color: var(--color-gold, #A98224) !important;
+    transform: translateY(-50%) scale(1.08);
+  }
+  .side-arrow:hover i {
+    color: #ffffff !important;
+  }
+}
+
+/* Tactile feedback on click/tap */
+.side-arrow:active {
+  transform: translateY(-50%) scale(0.92) !important;
+  background: #f5ede2 !important;
+  color: #2A160F !important;
+}
+.side-arrow:active i {
+  color: #2A160F !important;
 }
 
 .side-arrow--prev {
@@ -1856,25 +1929,51 @@ input[type="date"]::-webkit-date-and-time-value {
 @media (max-width: 768px) {
   .food-grid-slider,
   .news-card-grid,
-  .gallery-grid-slider {
+  .gallery-grid-slider,
+  .reviews-card-slider {
     gap: 16px !important;
+    padding: 10px 0 !important;
+    overflow-x: hidden !important;
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: auto !important;
   }
   .food-grid-slider .food-card,
   .news-card-grid .news-card,
-  .gallery-grid-slider .insta-card {
+  .gallery-grid-slider .insta-card,
+  .reviews-card-slider .review-box {
     flex: 0 0 100% !important;
     width: 100% !important;
     max-width: 100% !important;
     min-width: 100% !important;
+    box-sizing: border-box !important;
   }
   .side-arrow {
     width: 40px !important;
     height: 40px !important;
     font-size: 0.95rem !important;
-    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #2A160F !important;
     border: 1px solid var(--border-subtle, rgba(42, 22, 15, 0.18)) !important;
     box-shadow: 0 4px 16px rgba(42, 22, 15, 0.22) !important;
     z-index: 25 !important;
+  }
+  .side-arrow i {
+    color: #2A160F !important;
+  }
+  .side-arrow:hover,
+  .side-arrow:focus,
+  .side-arrow:focus-visible {
+    background-color: #ffffff !important;
+    color: #2A160F !important;
+  }
+  .side-arrow:hover i,
+  .side-arrow:focus i,
+  .side-arrow:focus-visible i {
+    color: #2A160F !important;
+  }
+  .side-arrow:active {
+    transform: translateY(-50%) scale(0.92) !important;
+    background-color: #f5ede2 !important;
   }
   .side-arrow--prev {
     left: -20px !important;
@@ -1901,11 +2000,12 @@ input[type="date"]::-webkit-date-and-time-value {
 /* GOOGLE REVIEWS CAROUSEL CARDS */
 .reviews-card-slider {
   display: flex !important;
-  overflow-x: auto !important;
+  overflow-x: hidden !important;
   gap: 20px !important;
   padding: 12px 4px !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  touch-action: pan-y !important;
 }
 
 .reviews-card-slider::-webkit-scrollbar {
@@ -1920,16 +2020,16 @@ input[type="date"]::-webkit-date-and-time-value {
   background: #ffffff;
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: none !important;
+  border: none !important;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .review-box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: none !important;
 }
 
 .review-box-header {
@@ -2013,43 +2113,55 @@ input[type="date"]::-webkit-date-and-time-value {
   }
 }
 
-/* FLOATING RESERVATION FAB BUTTON (MOBILE & TABLET WITH PULSE EFFECT) */
+/* FLOATING RESERVATION FAB BUTTON (GLOBAL ACROSS ALL PAGES) */
 .floating-reserve-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 20px;
-  z-index: 999;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #A98224 0%, #2A160F 100%);
-  color: #ffffff;
-  border: 2px solid rgba(199, 154, 74, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  cursor: pointer;
-  box-shadow: 0 8px 24px rgba(42, 22, 15, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 20px !important;
+  z-index: 999 !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #A98224 0%, #2A160F 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(199, 154, 74, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 20px rgba(42, 22, 15, 0.35) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Hide floating button when any modal is open */
+.modal-overlay.active ~ .floating-reserve-btn,
+body:has(.modal-overlay.active) .floating-reserve-btn {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .floating-reserve-btn:hover,
 .floating-reserve-btn:active {
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(211, 47, 47, 0.6);
+  transform: scale(1.1) !important;
+  box-shadow: 0 10px 28px rgba(169, 130, 36, 0.55) !important;
 }
 
 .floating-reserve-pulse {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 50%;
-  border: 2px solid #A98224;
-  animation: reservePulse 2s infinite ease-in-out;
-  pointer-events: none;
+  position: absolute !important;
+  top: -6px !important;
+  left: -6px !important;
+  right: -6px !important;
+  bottom: -6px !important;
+  border-radius: 50% !important;
+  border: 2px solid #A98224 !important;
+  animation: reservePulse 2s infinite ease-in-out !important;
+  pointer-events: none !important;
 }
 
 @keyframes reservePulse {
@@ -2058,14 +2170,15 @@ input[type="date"]::-webkit-date-and-time-value {
     opacity: 0.95;
   }
   70% {
-    transform: scale(1.4);
+    transform: scale(1.35);
     opacity: 0;
   }
   100% {
-    transform: scale(1.4);
+    transform: scale(1.35);
     opacity: 0;
   }
 }
+
 
 /* HIDE ALL GOOGLE TRANSLATE FRAMES, TOOLTIPS, INJECTED DIVS & PREVENT BOTTOM WHITE SPACE */
 .goog-te-banner-frame,
@@ -2277,3 +2390,42 @@ body.about-page,
   }
 }
 
+/* ==========================================
+   WORDPRESS-SPECIFIC FIXES
+   ========================================== */
+
+/* Hide WordPress admin bar on frontend (prevents scroll conflicts) */
+#wpadminbar {
+  display: none !important;
+}
+html.wp-toolbar {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* Ensure WordPress block styles don't break layout */
+.wp-site-blocks,
+.entry-content,
+.wp-block-post-content {
+  overflow: visible !important;
+}
+
+/* Fix iOS Safari scroll issues */
+@supports (-webkit-touch-callout: none) {
+  body {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* WordPress admin bar mobile override */
+@media screen and (max-width: 782px) {
+  html {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  #wpadminbar {
+    display: none !important;
+    height: 0 !important;
+  }
+}

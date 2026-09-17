@@ -185,28 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Scroll to Top Button (AIH-style)
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-  if (scrollTopBtn) {
-    const handleScrollTopVisibility = () => {
-      if (window.scrollY > 280) {
-        scrollTopBtn.classList.add('is-visible');
-      } else {
-        scrollTopBtn.classList.remove('is-visible');
-      }
-    };
-
-    window.addEventListener('scroll', handleScrollTopVisibility, { passive: true });
-    handleScrollTopVisibility();
-
-    scrollTopBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  }
 
   // Menu Modal Tab Switcher
   const menuTabs = document.querySelectorAll('.menu-tab');

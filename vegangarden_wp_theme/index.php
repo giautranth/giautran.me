@@ -62,14 +62,17 @@ get_header();
         <div class="reviews-google-badge" style="display: flex; align-items: center; gap: 16px;">
           <img src="<?php echo esc_url(home_url('/images/google_logo.png')); ?>" alt="Google Logo" style="height: 30px; width: auto; max-width: 105px; object-fit: contain; display: block;">
           <div>
-            <div class="rating-stars" style="color: #FBBC04; font-size: 1.1rem; display: flex; gap: 2px;">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-weight: 800; font-size: 1.15rem; color: #211A16; line-height: 1;">4,8</span>
+              <div class="rating-stars" style="color: #FBBC04; font-size: 1rem; display: flex; gap: 2px;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
             </div>
-            <div class="rating-score" style="font-weight: 700; color: #211A16; font-size: 0.95rem; margin-top: 2px;">300+ Bewertungen</div>
+            <div class="rating-score" style="font-weight: 600; color: #6A625A; font-size: 0.85rem; margin-top: 2px;">285+ Google Bewertungen</div>
           </div>
         </div>
       </div>
@@ -174,33 +177,33 @@ get_header();
           <!-- Dish 1 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/nem_ran.jpg')); ?>" alt="Frühlingsrollen">
+              <img src="<?php echo esc_url(home_url('/images/nem_ran.jpg')); ?>" alt="Knusprige Frühlingsrollen">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Frühlingsrollen</h3>
-              <div class="food-price">6,50 €</div>
+              <h3 class="food-name">Knusprige Frühlingsrollen</h3>
+              <div class="food-price">5,90 €</div>
             </div>
           </div>
 
           <!-- Dish 2 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/tu_buu_kho_chao.jpg')); ?>" alt="Tu Buu Kho Chao">
+              <img src="<?php echo esc_url(home_url('/images/tu_buu_kho_chao.jpg')); ?>" alt="Vier Schätze in Chao-Soße">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Tu Buu Kho Chao</h3>
-              <div class="food-price">12,90 €</div>
+              <h3 class="food-name">Vier Schätze in Chao-Soße</h3>
+              <div class="food-price">13,90 €</div>
             </div>
           </div>
 
           <!-- Dish 3 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/lau_thai.jpg')); ?>" alt="Lau Thai - Vietnamesischer Feuertopf">
+              <img src="<?php echo esc_url(home_url('/images/lau_thai.jpg')); ?>" alt="Thailändischer Feuertopf">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Lau Thai Feuertopf</h3>
-              <div class="food-price">35,90 €</div>
+              <h3 class="food-name">Thailändischer Feuertopf</h3>
+              <div class="food-price">ab 35,90 €</div>
             </div>
           </div>
 
@@ -218,11 +221,11 @@ get_header();
           <!-- Dish 5 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/summer_bowl.jpg')); ?>" alt="Vegan Garden Reisnudeln">
+              <img src="<?php echo esc_url(home_url('/images/summer_bowl.jpg')); ?>" alt="Vegan Garden Reisnudel-Bowl">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Vegan Garden Reisnudeln</h3>
-              <div class="food-price">12,90 €</div>
+              <h3 class="food-name">Vegan Garden Reisnudel-Bowl</h3>
+              <div class="food-price">13,90 €</div>
             </div>
           </div>
 
@@ -240,10 +243,10 @@ get_header();
           <!-- Dish 7 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/spargel.jpg')); ?>" alt="SPARGEL">
+              <img src="<?php echo esc_url(home_url('/images/spargel.jpg')); ?>" alt="Tofu Royal">
             </div>
             <div class="food-info">
-              <h3 class="food-name">SPARGEL</h3>
+              <h3 class="food-name">Tofu Royal</h3>
               <div class="food-price">6,50 €</div>
             </div>
           </div>

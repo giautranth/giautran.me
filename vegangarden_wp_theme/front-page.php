@@ -68,9 +68,30 @@ get_header();
           </div>
           <h2 class="welcome-heading">VEGAN GARDEN BERLIN</h2>
           <p class="welcome-desc">
-            Mitten in Friedrichshain erwartet Sie ein außergewöhnlicher Ort voller Natur, Ruhe und Geschmack. Genießen Sie 100 % vegane vietnamesische Küche in einzigartiger Gartenatmosphäre.
+            Mitten in Friedrichshain erwartet Sie ein besonderer Ort voller Ruhe, Natur und Geschmack. Genießen Sie 100 % vegane vietnamesische Küche in entspannter Gartenatmosphäre.
           </p>
-          <a href="<?php echo esc_url(home_url('/about/')); ?>" class="btn btn-primary">MEHR ÜBER UNS</a>
+
+          <div class="welcome-events-box" style="margin: 18px 0 22px; padding: 16px 20px; background: rgba(169, 130, 36, 0.08); border-left: 3px solid var(--color-gold, #A98224); border-radius: 8px;">
+            <h3 style="font-size: 1.02rem; font-weight: 700; color: #2A160F; margin: 0 0 6px 0; display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-champagne-glasses" style="color: #A98224;"></i>
+              <span>Viel Platz für besondere Momente</span>
+            </h3>
+            <p style="font-size: 0.9rem; color: #3b332d; margin: 0 0 6px 0; line-height: 1.5;">
+              <strong>100 Plätze innen</strong> &bull; <strong>ca. 100 Plätze im Garten</strong><br>
+              <strong>VIP-Raum bis 20 Personen</strong> &bull; <strong>Bühne</strong>
+            </p>
+            <p style="font-size: 0.84rem; color: #6A625A; margin: 0; font-style: italic;">
+              Ideal für Geburtstage, Firmenfeiern, Gruppen &amp; Events
+            </p>
+          </div>
+
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="<?php echo esc_url(home_url('/about/')); ?>" class="btn btn-primary">MEHR ÜBER UNS</a>
+            <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="btn btn-outline" style="border: 1px solid #2A160F; color: #2A160F; padding: 12px 24px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+              <i class="fa-regular fa-envelope"></i>
+              <span>EVENT ANFRAGEN</span>
+            </a>
+          </div>
         </div>
         <div class="video-card" id="videoCard">
           <img src="<?php echo esc_url(home_url('/images/garden_preview.jpg')); ?>" alt="Vegan Garden Berlin Video Preview">
@@ -92,14 +113,17 @@ get_header();
         <div class="reviews-google-badge" style="display: flex; align-items: center; gap: 16px;">
           <img src="<?php echo esc_url(home_url('/images/google_logo.png')); ?>" alt="Google Logo" style="height: 30px; width: auto; max-width: 105px; object-fit: contain; display: block;">
           <div>
-            <div class="rating-stars" style="color: #FBBC04; font-size: 1.1rem; display: flex; gap: 2px;">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-weight: 800; font-size: 1.15rem; color: #211A16; line-height: 1;">4,8</span>
+              <div class="rating-stars" style="color: #FBBC04; font-size: 1rem; display: flex; gap: 2px;">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
             </div>
-            <div class="rating-score" style="font-weight: 700; color: #211A16; font-size: 0.95rem; margin-top: 2px;">300+ Bewertungen</div>
+            <div class="rating-score" style="font-weight: 600; color: #6A625A; font-size: 0.85rem; margin-top: 2px;">285+ Google Bewertungen</div>
           </div>
         </div>
       </div>
@@ -205,33 +229,33 @@ get_header();
           <!-- Dish 1 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/nem_ran.jpg')); ?>" alt="Frühlingsrollen">
+              <img src="<?php echo esc_url(home_url('/images/nem_ran.jpg')); ?>" alt="Knusprige Frühlingsrollen">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Frühlingsrollen</h3>
-              <div class="food-price">6,50 €</div>
+              <h3 class="food-name">Knusprige Frühlingsrollen</h3>
+              <div class="food-price">5,90 €</div>
             </div>
           </div>
 
           <!-- Dish 2 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/tu_buu_kho_chao.jpg')); ?>" alt="Tu Buu Kho Chao">
+              <img src="<?php echo esc_url(home_url('/images/tu_buu_kho_chao.jpg')); ?>" alt="Vier Schätze in Chao-Soße">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Tu Buu Kho Chao</h3>
-              <div class="food-price">12,90 €</div>
+              <h3 class="food-name">Vier Schätze in Chao-Soße</h3>
+              <div class="food-price">13,90 €</div>
             </div>
           </div>
 
           <!-- Dish 3 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/lau_thai.jpg')); ?>" alt="Lau Thai - Vietnamesischer Feuertopf">
+              <img src="<?php echo esc_url(home_url('/images/lau_thai.jpg')); ?>" alt="Thailändischer Feuertopf">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Lau Thai Feuertopf</h3>
-              <div class="food-price">35,90 €</div>
+              <h3 class="food-name">Thailändischer Feuertopf</h3>
+              <div class="food-price">ab 35,90 €</div>
             </div>
           </div>
 
@@ -249,11 +273,11 @@ get_header();
           <!-- Dish 5 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/summer_bowl.jpg')); ?>" alt="Vegan Garden Reisnudeln">
+              <img src="<?php echo esc_url(home_url('/images/summer_bowl.jpg')); ?>" alt="Vegan Garden Reisnudel-Bowl">
             </div>
             <div class="food-info">
-              <h3 class="food-name">Vegan Garden Reisnudeln</h3>
-              <div class="food-price">12,90 €</div>
+              <h3 class="food-name">Vegan Garden Reisnudel-Bowl</h3>
+              <div class="food-price">13,90 €</div>
             </div>
           </div>
 
@@ -271,10 +295,10 @@ get_header();
           <!-- Dish 7 -->
           <div class="food-card">
             <div class="food-img-wrap">
-              <img src="<?php echo esc_url(home_url('/images/spargel.jpg')); ?>" alt="SPARGEL">
+              <img src="<?php echo esc_url(home_url('/images/spargel.jpg')); ?>" alt="Tofu Royal">
             </div>
             <div class="food-info">
-              <h3 class="food-name">SPARGEL</h3>
+              <h3 class="food-name">Tofu Royal</h3>
               <div class="food-price">6,50 €</div>
             </div>
           </div>

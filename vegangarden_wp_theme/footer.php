@@ -232,29 +232,29 @@
       <div class="menu-category-content" id="cat-highlights" style="display: block;">
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Summer Bowl</h4>
-            <p>Frische Bowl mit Tofu, Mango, Avocado, edlem Gemüse und Erdnuss-Dressing</p>
+            <h4>Vegan Garden Reisnudel-Bowl</h4>
+            <p>Reisnudeln mit Bio-Tofu, Mango, Tomaten, Gurken, Erdnüssen, Sesam und Vegan-Garden-Sauce</p>
           </div>
-          <div class="menu-item-price">15,90 €</div>
+          <div class="menu-item-price">13,90 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Pho Bo Chay</h4>
-            <p>Aromatische Reisnudelsuppe mit Pilzen, Tofu und frischen Kräutern</p>
+            <h4>Traditionelle Reisbandnudelsuppe (Phở)</h4>
+            <p>Traditionelle vietnamesische Reisbandnudelsuppe mit Kräuterseitlingen, Tofu und frischen Kräutern</p>
           </div>
-          <div class="menu-item-price">14,90 €</div>
+          <div class="menu-item-price">12,90 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Frühlingsrollen (Nem Ran)</h4>
-            <p>Knusprige Reispapierrollen mit Gemüse, Glasnudeln und hausgemachter Erdnuss-Sauce</p>
+            <h4>Knusprige Frühlingsrollen</h4>
+            <p>Frittierte Reispapierrollen gefüllt mit Tofu, Gemüse, Mungobohnen, Pilzen und Glasnudeln</p>
           </div>
-          <div class="menu-item-price">6,90 €</div>
+          <div class="menu-item-price">5,90 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Mango Sticky Rice</h4>
-            <p>Klebreis mit Kokosmilch, frischer Mango und geröstetem Sesam</p>
+            <h4>Gedämpfter Klebreis mit Banane (Chuối Hấp)</h4>
+            <p>Gedämpfter Klebreis mit Bananenfüllung, Kokosmilch, Erdnüssen und geröstetem Sesam</p>
           </div>
           <div class="menu-item-price">6,50 €</div>
         </div>
@@ -264,24 +264,24 @@
       <div class="menu-category-content" id="cat-vorspeisen" style="display: none;">
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Sommerrollen (Goi Cuon)</h4>
+            <h4>Frische Sommerrollen (Gỏi Cuốn)</h4>
             <p>Frische Reispapierrollen mit Bio-Tofu, Kräutern, Mango und Erdnuss-Dip</p>
           </div>
           <div class="menu-item-price">6,50 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Edamame mit Meersalz</h4>
-            <p>Gedämpfte Sojabohnen mit grobem Meersalz und Chili-Flocken</p>
+            <h4>Gekochte Edamame</h4>
+            <p>Japanische Sojabohnen mit Meersalz</p>
           </div>
-          <div class="menu-item-price">5,20 €</div>
+          <div class="menu-item-price">5,90 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Gebratene Veggie Dumplings</h4>
-            <p>Gefüllte Teigtaschen mit Pilzen, Gemüse und Sesam-Sojasauce</p>
+            <h4>Gedämpfte Teigtaschen (Gyoza)</h4>
+            <p>Gefüllt mit Gemüse, Pilzen und Tofu, serviert mit Sojasoße</p>
           </div>
-          <div class="menu-item-price">6,90 €</div>
+          <div class="menu-item-price">5,90 €</div>
         </div>
       </div>
 
@@ -289,24 +289,38 @@
       <div class="menu-category-content" id="cat-hauptspeisen" style="display: none;">
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Bun Chay Berlin</h4>
-            <p>Laue Reisnudeln mit gegrilltem Tofu, frischem Salat, Erdnüssen und Limetten-Dresssing</p>
+            <h4>Vier Schätze in Chao-Soße</h4>
+            <p>Veganer Fisch, Seitan, Tofu, verschiedene Pilze und Gemüse in fermentierter Tofu-Soße</p>
           </div>
-          <div class="menu-item-price">14,50 €</div>
+          <div class="menu-item-price">13,90 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Red Curry Garden</h4>
+            <h4>Rotes Curry (Cà Ri Đỏ)</h4>
             <p>Cremiges rotes Kokos-Curry mit Süßkartoffeln, Kürbis, Tofu und Duftreis</p>
           </div>
-          <div class="menu-item-price">15,20 €</div>
+          <div class="menu-item-price">13,90 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Udon Stir Fry</h4>
-            <p>Wok-gebratene Udon-Nudeln mit buntem Marktgemüse und Seitan-Streifen</p>
+            <h4>Thailändische Reisnudelsuppe</h4>
+            <p>Aromatische thailändische Reisnudelsuppe mit saisonalem Gemüse, Kräutern und Tofu</p>
+          </div>
+          <div class="menu-item-price">13,90 €</div>
+        </div>
+        <div class="menu-item-row">
+          <div class="menu-item-info">
+            <h4>Gebratene Udonnudeln (Udon Xào)</h4>
+            <p>Wok-gebratene Udon-Nudeln mit buntem Marktgemüse und Tofu-Streifen</p>
           </div>
           <div class="menu-item-price">14,90 €</div>
+        </div>
+        <div class="menu-item-row">
+          <div class="menu-item-info">
+            <h4>Thailändischer Feuertopf</h4>
+            <p>Mit saisonalem Gemüse, Pilzen, Tomaten, Ananas, Tofu und aromatischer Brühe</p>
+          </div>
+          <div class="menu-item-price">ab 35,90 €</div>
         </div>
       </div>
 
@@ -314,17 +328,17 @@
       <div class="menu-category-content" id="cat-desserts" style="display: none;">
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Hausgemachte Matcha Lemonade</h4>
-            <p>Frische Matcha-Limonade mit Limette und Minze</p>
+            <h4>Aloe-Vera-Eistee (Trà Lô Hội)</h4>
+            <p>Frischer Aloe-Vera-Tee mit Limette, Minze und hausgemachtem Sirup</p>
           </div>
           <div class="menu-item-price">4,90 €</div>
         </div>
         <div class="menu-item-row">
           <div class="menu-item-info">
-            <h4>Vietnamesischer Kokos-Kaffee</h4>
-            <p>Espresso auf cremigem Kokos-Eis-Schaum</p>
+            <h4>Vietnamesischer Eiskaffee (Cà Phê Sữa Đá)</h4>
+            <p>Kräftiger Phin-Kaffee mit gesüßter veganer Kondensmilch und Eiswürfeln</p>
           </div>
-          <div class="menu-item-price">5,20 €</div>
+          <div class="menu-item-price">5,50 €</div>
         </div>
       </div>
     </div>
@@ -332,11 +346,11 @@
 
   <!-- MODAL: VIDEO LIGHTBOX -->
   <div class="modal-overlay" id="videoModal">
-    <div class="modal-content" style="max-width: 900px; padding: 12px; background: #000000; border-radius: 16px;">
-      <button class="modal-close" style="color: #ffffff; top: -40px; right: 0;">&times;</button>
-      <div style="aspect-ratio: 16/9; width: 100%; border-radius: 12px; overflow: hidden; position: relative;">
-        <video id="gardenVideo" controls poster="<?php echo esc_url(home_url('/images/garden_preview.jpg')); ?>" style="width: 100%; height: 100%; object-fit: cover;">
-          <source src="<?php echo esc_url(home_url('/video/garden_tour.mp4')); ?>" type="video/mp4">
+    <div class="modal-content" style="max-width: 900px; padding: 0; background: #000; overflow: hidden;">
+      <button class="modal-close" style="color: #fff; z-index: 10;">&times;</button>
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <video id="gardenVideo" controls playsinline style="position: absolute; top:0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+          <source src="<?php echo esc_url(home_url('/video/garden_preview.mp4')); ?>" type="video/mp4">
           Ihr Browser unterstützt kein HTML5 Video.
         </video>
       </div>
@@ -348,7 +362,7 @@
     <div class="modal-content">
       <button class="modal-close">&times;</button>
       <h2 class="serif-font" style="color: var(--primary-green-dark); margin-bottom: 8px;">Google Kundenbewertungen</h2>
-      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">4.8 von 5 Sternen basierend auf über 520 Google Rezensionen.</p>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">4,8 von 5 Sternen basierend auf über 285 Google Rezensionen.</p>
 
       <div style="display: flex; flex-direction: column; gap: 16px;">
         <div style="background: #F6F1E7; padding: 16px; border-radius: 8px; border-left: 3px solid #FBBC04;">

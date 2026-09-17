@@ -241,8 +241,32 @@ get_header();
         </div>
       </div>
 
-      <!-- FEATURE ROW 3: GASTFREUNDSCHAFT & HOURS -->
+      <!-- FEATURE ROW: EVENTS & FEIERN -->
       <div class="feature-row">
+        <div class="feature-img-wrap">
+          <img src="<?php echo esc_url(home_url('/images/events.jpg?v=20260903_event5')); ?>" alt="Vegan Garden Berlin - Events & Feiern">
+        </div>
+        <div class="feature-content">
+          <div class="feature-badge">
+            <i class="fa-solid fa-champagne-glasses"></i>
+            <span>EVENTS & FEIERN</span>
+          </div>
+          <h2 class="feature-title">Viel Platz für besondere Momente</h2>
+          <p class="feature-desc">
+            Ob stimmungsvolle Geburtstage, Firmenfeiern, private Events oder gemütliche Familientreffen – Vegan Garden Berlin bietet den idealen Rahmen für unvergessliche Momente in einzigartiger Atmosphäre mitten in Friedrichshain.
+          </p>
+          <div class="feature-highlights">
+            <div class="highlight-pill"><i class="fa-solid fa-chair" style="color: #A98224;"></i> 100 Plätze innen</div>
+            <div class="highlight-pill"><i class="fa-solid fa-tree" style="color: #A98224;"></i> ca. 100 Plätze im Garten</div>
+            <div class="highlight-pill"><i class="fa-solid fa-crown" style="color: #A98224;"></i> VIP-Raum bis 20 Personen</div>
+            <div class="highlight-pill"><i class="fa-solid fa-microphone" style="color: #A98224;"></i> Bühne vorhanden</div>
+            <div class="highlight-pill"><i class="fa-solid fa-calendar-check" style="color: #A98224;"></i> Geburtstage & Firmenfeiern</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE ROW 3: GASTFREUNDSCHAFT & HOURS -->
+      <div class="feature-row reverse">
         <div class="feature-img-wrap">
           <img src="<?php echo esc_url(home_url('/images/about_section_3.jpg')); ?>" alt="44790733 - Gastfreundschaft">
         </div>

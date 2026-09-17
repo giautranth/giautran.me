@@ -91,34 +91,34 @@
     <div class="modal-content modal-content--reserve">
       <button class="modal-close" aria-label="Schließen">&times;</button>
       
-      <div class="reserve-modal-header">
+      <div class="reserve-modal-header" style="margin-bottom: 6px; padding-right: 28px;">
         <div>
-          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0; font-size: 1.35rem;">Tisch reservieren</h2>
+          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0; font-size: 1.25rem;">Tisch reservieren</h2>
         </div>
       </div>
 
-      <form id="reserveForm" style="padding: 20px 0 0;">
+      <form id="reserveForm" style="padding: 4px 0 0;">
         <?php wp_nonce_field('vg_reserve_form', 'vg_reserve_nonce'); ?>
         
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 7px;">
           <div>
-            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Name *</label>
-            <input type="text" name="res_name" id="resName" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Name *</label>
+            <input type="text" name="res_name" id="resName" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
           </div>
           
           <div>
-            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Datum *</label>
-            <input type="date" name="res_date" id="resDate" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Datum *</label>
+            <input type="date" name="res_date" id="resDate" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
           </div>
           
           <div>
-            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Uhrzeit *</label>
-            <input type="time" name="res_time" id="resTime" required value="18:30" min="12:00" max="22:00" style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Uhrzeit *</label>
+            <input type="time" name="res_time" id="resTime" required value="18:30" min="12:00" max="22:00" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
           </div>
           
           <div>
-            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Personen *</label>
-            <select name="res_guests" id="resGuests" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Personen *</label>
+            <select name="res_guests" id="resGuests" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
               <?php for ($i = 1; $i <= 20; $i++): ?>
                 <option value="<?php echo $i; ?>" <?php echo $i === 2 ? 'selected' : ''; ?>><?php echo $i; ?> <?php echo $i === 1 ? 'Person' : 'Personen'; ?></option>
               <?php endfor; ?>
@@ -126,24 +126,24 @@
           </div>
           
           <div>
-            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Telefon *</label>
-            <input type="tel" name="res_phone" id="resPhone" required style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Telefon *</label>
+            <input type="tel" name="res_phone" id="resPhone" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
           </div>
           
           <div>
-            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">E-Mail <span style="color:#999; font-weight:400;">(optional)</span></label>
-            <input type="email" name="res_email" id="resEmail" style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; box-sizing:border-box;">
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">E-Mail <span style="color:#999; font-weight:400;">(optional)</span></label>
+            <input type="email" name="res_email" id="resEmail" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
           </div>
           
           <div>
-            <label style="font-weight:600; font-size:0.85rem; color:#2A160F; display:block; margin-bottom:4px;">Anmerkung <span style="color:#999; font-weight:400;">(optional)</span></label>
-            <textarea name="res_note" id="resNote" rows="2" style="width:100%; padding:11px 14px; border:1px solid #d4d0cb; border-radius:8px; font-size:16px; background:#faf9f7; resize:vertical; box-sizing:border-box;"></textarea>
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Anmerkung <span style="color:#999; font-weight:400;">(optional)</span></label>
+            <textarea name="res_note" id="resNote" rows="1" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; resize:vertical; box-sizing:border-box; min-height:38px; height:38px; line-height:1.2;"></textarea>
           </div>
         </div>
 
-        <div id="reserveStatus" style="margin-top:12px; padding:10px 14px; border-radius:8px; display:none; font-size:0.9rem;"></div>
+        <div id="reserveStatus" style="margin-top:8px; padding:8px 12px; border-radius:6px; display:none; font-size:0.85rem;"></div>
 
-        <button type="submit" id="reserveSubmitBtn" class="btn btn-primary" style="width:100%; margin-top:16px; padding:14px; font-size:1rem; display:flex; align-items:center; justify-content:center; gap:8px;">
+        <button type="submit" id="reserveSubmitBtn" class="btn btn-primary" style="width:100%; margin-top:10px; padding:10px 14px; font-size:0.95rem; font-weight:700; border-radius:6px; display:flex; align-items:center; justify-content:center; gap:8px;">
           <i class="fa-regular fa-calendar-check"></i>
           <span>JETZT RESERVIEREN</span>
         </button>

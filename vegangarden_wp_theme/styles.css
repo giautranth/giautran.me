@@ -2328,20 +2328,26 @@ body.about-page,
   text-justify: inter-word !important;
 }
 
-/* FOODAMIGOS RESERVATION MODAL */
+/* RESERVATION MODAL COMPACT */
 .modal-content--reserve {
-  max-width: 680px;
-  padding: 24px 20px 20px;
-  border-radius: 16px;
-  overflow: hidden;
+  max-width: 480px;
+  padding: 16px 20px 16px;
+  border-radius: 14px;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.modal-content--reserve .modal-close {
+  top: 10px;
+  right: 14px;
 }
 
 .reserve-modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
-  padding-right: 36px;
+  margin-bottom: 6px;
+  padding-right: 32px;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -2381,8 +2387,12 @@ body.about-page,
 
 @media (max-width: 640px) {
   .modal-content--reserve {
-    padding: 20px 12px 12px !important;
+    padding: 12px 14px 12px !important;
     max-height: 94vh !important;
+  }
+  .modal-content--reserve .modal-close {
+    top: 8px;
+    right: 10px;
   }
   .foodamigos-iframe-wrap {
     height: 580px !important;

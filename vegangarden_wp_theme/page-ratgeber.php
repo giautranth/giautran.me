@@ -234,7 +234,7 @@ get_header();
         
         <!-- Article 1: Speisekarte & Gerichte -->
         <article class="hub-news-card" data-category="speisekarte">
-          <a href="articles/vegan-garden-berlin-speisekarte" class="hub-news-img-link">
+          <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>" class="hub-news-img-link">
             <img src="<?php echo esc_url(home_url('/images/article_speisekarte.jpg')); ?>" alt="Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt" class="hub-news-img" loading="lazy">
             <span class="hub-news-badge">SPEISEKARTE &amp; GERICHTE</span>
           </a>
@@ -244,12 +244,12 @@ get_header();
               <span>5 Min. Lesezeit &bull; Speisekarte &amp; Vielfalt</span>
             </div>
             <h3 class="hub-news-title">
-              <a href="articles/vegan-garden-berlin-speisekarte">Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt</a>
+              <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>">Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt</a>
             </h3>
             <p class="hub-news-excerpt">
               Entdecken Sie unsere 100 % pflanzliche Speisekarte 2026: Von knusprigen Frühlingsrollen über aromatische Suppen bis hin zu traditionellen Feuertöpfen.
             </p>
-            <a href="articles/vegan-garden-berlin-speisekarte" class="hub-news-more">
+            <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>" class="hub-news-more">
               <span>Artikel lesen</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -258,7 +258,7 @@ get_header();
 
         <!-- Article 2: Bánh Mì Rezepte -->
         <article class="hub-news-card" data-category="rezepte kultur">
-          <a href="articles/banh-mi-vegan-berlin" class="hub-news-img-link">
+          <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="hub-news-img-link">
             <img src="<?php echo esc_url(home_url('/images/article_banh_mi.jpg')); ?>" alt="Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam" class="hub-news-img" loading="lazy">
             <span class="hub-news-badge">REZEPTE &amp; KULINARIK</span>
           </a>
@@ -268,12 +268,12 @@ get_header();
               <span>4 Min. Lesezeit &bull; Tradition &amp; Rezept</span>
             </div>
             <h3 class="hub-news-title">
-              <a href="articles/banh-mi-vegan-berlin">Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam</a>
+              <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>">Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam</a>
             </h3>
             <p class="hub-news-excerpt">
               Außen hauchdünn und splitternd kross, innen federleicht: Mit cremiger Linsen-Walnuss-Paté, mariniertem Zitronengras-Tofu und eingelegtem Đồ Chua wird unser Bánh Mì zum puren Hochgenuss.
             </p>
-            <a href="articles/banh-mi-vegan-berlin" class="hub-news-more">
+            <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="hub-news-more">
               <span>Artikel lesen</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -282,7 +282,7 @@ get_header();
 
         <!-- Article 3: Speisekarte & Bún Bò Huế -->
         <article class="hub-news-card" data-category="speisekarte rezepte">
-          <a href="articles/bun-bo-hue-vegan-berlin" class="hub-news-img-link">
+          <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>" class="hub-news-img-link">
             <img src="<?php echo esc_url(home_url('/images/gallery/bunbo.jpg?v=20260910')); ?>" alt="Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras" class="hub-news-img" loading="lazy">
             <span class="hub-news-badge">REZEPTE &amp; KULINARIK</span>
           </a>
@@ -292,12 +292,12 @@ get_header();
               <span>5 Min. Lesezeit &bull; Rezepte &amp; Suppen</span>
             </div>
             <h3 class="hub-news-title">
-              <a href="articles/bun-bo-hue-vegan-berlin">Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras</a>
+              <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>">Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras</a>
             </h3>
             <p class="hub-news-excerpt">
               Eine unverwechselbare Spezialität aus Zentralvietnam: Kräftige Zitronengras-Brühe, samtiger Tofu, dicke Reisnudeln und frische Gartenkräuter für ein wohltuendes Geschmackserlebnis.
             </p>
-            <a href="articles/bun-bo-hue-vegan-berlin" class="hub-news-more">
+            <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>" class="hub-news-more">
               <span>Artikel lesen</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>

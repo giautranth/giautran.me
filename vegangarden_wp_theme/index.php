@@ -372,15 +372,15 @@ get_header();
         <div class="news-card-grid" id="newsGrid" style="text-align: left;">
           <!-- Article 1: Speisekarte -->
           <article class="news-card" data-category="speisekarte">
-            <a href="articles/vegan-garden-berlin-speisekarte" target="_blank" class="news-card__img-wrap">
+            <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>" class="news-card__img-wrap">
               <img src="<?php echo esc_url(home_url('/images/article_speisekarte.jpg')); ?>" alt="Die Speisekarte 2026 im Überblick" class="news-card__img">
               <span class="news-card__cat">SPEISEKARTE</span>
             </a>
             <div class="news-card__body">
               <h3 class="news-card__title">
-                <a href="articles/vegan-garden-berlin-speisekarte" target="_blank">Die Speisekarte 2026 im Überblick – Gerichte, Preise & Vielfalt</a>
+                <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>">Die Speisekarte 2026 im Überblick – Gerichte, Preise & Vielfalt</a>
               </h3>
-              <a href="articles/vegan-garden-berlin-speisekarte" target="_blank" class="news-card__more">
+              <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>" class="news-card__more">
                 <span class="more-txt">Artikel lesen</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -389,15 +389,15 @@ get_header();
 
           <!-- Article 2: Bánh Mì -->
           <article class="news-card" data-category="rezepte">
-            <a href="articles/banh-mi-vegan-berlin" target="_blank" class="news-card__img-wrap">
+            <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="news-card__img-wrap">
               <img src="<?php echo esc_url(home_url('/images/article_banh_mi.jpg')); ?>" alt="Bánh Mì Vegan in Berlin" class="news-card__img">
               <span class="news-card__cat">REZEPTE</span>
             </a>
             <div class="news-card__body">
               <h3 class="news-card__title">
-                <a href="articles/banh-mi-vegan-berlin" target="_blank">Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam</a>
+                <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>">Bánh Mì Vegan in Berlin – Das vegane Sandwich aus Vietnam</a>
               </h3>
-              <a href="articles/banh-mi-vegan-berlin" target="_blank" class="news-card__more">
+              <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="news-card__more">
                 <span class="more-txt">Artikel lesen</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -406,15 +406,15 @@ get_header();
 
           <!-- Article 3: Bun Bo Hue -->
           <article class="news-card" data-category="rezepte">
-            <a href="articles/bun-bo-hue-vegan-berlin" target="_blank" class="news-card__img-wrap">
+            <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>" class="news-card__img-wrap">
               <img src="<?php echo esc_url(home_url('/images/gallery/bunbo.jpg?v=20260910')); ?>" alt="Bun Bo Hue vegan Berlin" class="news-card__img">
               <span class="news-card__cat">REZEPTE</span>
             </a>
             <div class="news-card__body">
               <h3 class="news-card__title">
-                <a href="articles/bun-bo-hue-vegan-berlin" target="_blank">Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras</a>
+                <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>">Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras</a>
               </h3>
-              <a href="articles/bun-bo-hue-vegan-berlin" target="_blank" class="news-card__more">
+              <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>" class="news-card__more">
                 <span class="more-txt">Artikel lesen</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>

@@ -258,7 +258,7 @@ get_header();
 
         <!-- Article 2: Veganer Feuertopf (Lẩu) -->
         <article class="hub-news-card" data-category="rezepte kultur">
-          <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="hub-news-img-link">
+          <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>" class="hub-news-img-link">
             <img src="<?php echo esc_url(home_url('/images/gallery/lau.jpg?v=20260918')); ?>" alt="Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis" class="hub-news-img" loading="lazy">
             <span class="hub-news-badge">SPEZIALITÄTEN &amp; KULINARIK</span>
           </a>
@@ -268,12 +268,12 @@ get_header();
               <span>6 Min. Lesezeit &bull; Tradition &amp; Gemeinschaft</span>
             </div>
             <h3 class="hub-news-title">
-              <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>">Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis</a>
+              <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>">Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis</a>
             </h3>
             <p class="hub-news-excerpt">
               Reichhaltige Kräuterbrühe, frisches asiatisches Gartengemüse, zarter Bio-Tofu und edle Waldpilze: Erleben Sie unser traditionelles vietnamesisches Lẩu zum Teilen.
             </p>
-            <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="hub-news-more">
+            <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>" class="hub-news-more">
               <span>Artikel lesen</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>

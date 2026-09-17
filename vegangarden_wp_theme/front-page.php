@@ -435,15 +435,15 @@ get_header();
 
           <!-- Article 2: Lẩu (Feuertopf) -->
           <article class="news-card" data-category="rezepte">
-            <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="news-card__img-wrap">
+            <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>" class="news-card__img-wrap">
               <img src="<?php echo esc_url(home_url('/images/gallery/lau.jpg?v=20260918')); ?>" alt="Veganer Feuertopf (Lẩu) in Berlin" class="news-card__img">
               <span class="news-card__cat">SPEZIALITÄTEN</span>
             </a>
             <div class="news-card__body">
               <h3 class="news-card__title">
-                <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>">Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis</a>
+                <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>">Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis</a>
               </h3>
-              <a href="<?php echo esc_url(home_url('/articles/banh-mi-vegan-berlin.html')); ?>" class="news-card__more">
+              <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>" class="news-card__more">
                 <span class="more-txt">Artikel lesen</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>

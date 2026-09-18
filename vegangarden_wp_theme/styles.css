@@ -193,12 +193,13 @@ img {
   gap: 12px;
 }
 
-.nav-actions .btn-primary {
+.nav-actions .btn-primary,
+.desktop-reserve-btn {
   padding: 8px 18px;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  border-radius: 50px;
+  border-radius: 8px !important;
   white-space: nowrap;
 }
 

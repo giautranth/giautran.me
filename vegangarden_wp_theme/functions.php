@@ -949,7 +949,7 @@ function vg_handle_reservation() {
             }
             
             $guest_str = $guests === 1 ? '1 Person' : $guests . ' Personen';
-            $logo_url  = esc_url(home_url('/logo/VN-03.png?v=20260909_padded'));
+            $logo_url  = esc_url(home_url('/logo/VN-02.png?v=20260918_noborder'));
 
             $cust_html = '<!DOCTYPE html>
 <html>
@@ -966,15 +966,15 @@ function vg_handle_reservation() {
           
           <!-- BRAND HEADER -->
           <tr>
-            <td style="background-color:#2A160F; padding:28px 24px; text-align:center; border-bottom:3px solid #A98224;">
+            <td style="background-color:#2A160F; padding:32px 24px 26px; text-align:center; border-bottom:3px solid #A98224;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tr>
                   <td align="center">
-                    <img src="' . $logo_url . '" alt="Vegan Garden Berlin Logo" width="155" style="display:block; max-width:155px; height:auto; border-radius:8px; background:#FAF8F5; padding:5px 10px; border:1px solid rgba(169, 130, 36, 0.45); box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+                    <img src="' . $logo_url . '" alt="Vegan Garden Berlin" width="220" style="display:block; max-width:220px; width:100%; height:auto; border:none; outline:none; text-decoration:none; margin:0 auto;">
                   </td>
                 </tr>
                 <tr>
-                  <td align="center" style="padding-top:12px;">
+                  <td align="center" style="padding-top:14px;">
                     <p style="color:#C79A4A; font-size:11px; text-transform:uppercase; letter-spacing:2px; margin:0; font-weight:600;">100 % Vegane Vietnamesische Küche</p>
                   </td>
                 </tr>
@@ -1022,15 +1022,13 @@ function vg_handle_reservation() {
               </table>
 
               <!-- NOTICE BOX -->
-              <div style="background-color:#FAF4E8; border:1px solid rgba(169, 130, 36, 0.3); border-left:4px solid #A98224; padding:14px 16px; border-radius:6px; font-size:13px; line-height:1.5; color:#523C12; margin:22px 0;">
-                <strong>Wichtiger Hinweis:</strong> Sollten sich Ihre Pläne ändern oder möchten Sie die Reservierung anpassen, kontaktieren Sie uns bitte rechtzeitig telefonisch unter <a href="tel:+493021237260" style="color:#A98224; font-weight:700; text-decoration:none;">+49 30 21237260</a> oder antworten Sie einfach direkt auf diese E-Mail.
+              <div style="background-color:#FAF4E8; border:1px solid rgba(169, 130, 36, 0.3); border-left:4px solid #A98224; padding:14px 16px; border-radius:6px; font-size:13px; line-height:1.6; color:#523C12; margin:22px 0;">
+                <strong>Wichtiger Hinweis:</strong> Sollten sich Ihre Pläne ändern oder möchten Sie die Reservierung anpassen, kontaktieren Sie uns bitte rechtzeitig telefonisch unter <a href="tel:+493021237260" style="color:#A98224; font-weight:700; text-decoration:none;">+49 30 2123 7260</a> oder per WhatsApp unter <a href="https://wa.me/491624649999" target="_blank" rel="noopener" style="color:#A98224; font-weight:700; text-decoration:none;">+49 16 2464 9999</a>.
               </div>
 
-              <div style="text-align:center; margin:24px 0 10px;">
-                <a href="' . esc_url(home_url('/#speisekarte')) . '" target="_blank" style="background-color:#A98224; color:#ffffff; font-size:13px; font-weight:700; text-decoration:none; padding:11px 20px; border-radius:8px; display:inline-block; letter-spacing:0.5px; box-shadow:0 3px 10px rgba(169, 130, 36, 0.25); margin:4px;">
-                  SPEISEKARTE ANSEHEN
-                </a>
-                <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="background-color:#2A160F; color:#C79A4A; font-size:13px; font-weight:700; text-decoration:none; padding:11px 20px; border-radius:8px; display:inline-block; letter-spacing:0.5px; border:1px solid rgba(169, 130, 36, 0.5); margin:4px;">
+              <!-- ROUTE BUTTON -->
+              <div style="text-align:center; margin:26px 0 12px;">
+                <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="background-color:#A98224; color:#ffffff; font-size:13px; font-weight:700; text-decoration:none; padding:13px 28px; border-radius:8px; display:inline-block; letter-spacing:0.5px; box-shadow:0 4px 12px rgba(169, 130, 36, 0.3);">
                   📍 ROUTE / GOOGLE MAPS
                 </a>
               </div>
@@ -1048,7 +1046,7 @@ function vg_handle_reservation() {
             <td style="background-color:#2A160F; padding:22px 24px; text-align:center; font-size:12px; color:#C4BBB3; line-height:1.7;">
               <strong style="color:#C79A4A; font-size:14px;">Vegan Garden Berlin</strong><br>
               <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="color:#C4BBB3; text-decoration:underline;">📍 Frankfurter Allee 21, 10247 Berlin, Germany</a><br>
-              Telefon: <a href="tel:+493021237260" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 30 21237260</a> &bull; E-Mail: <a href="mailto:booking@vegan-garden.berlin" style="color:#C79A4A; text-decoration:none;">booking@vegan-garden.berlin</a><br>
+              Telefon: <a href="tel:+493021237260" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 30 2123 7260</a> &bull; WhatsApp: <a href="https://wa.me/491624649999" target="_blank" rel="noopener" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 16 2464 9999</a><br>
               Website: <a href="' . esc_url(home_url('/')) . '" target="_blank" style="color:#ffffff; text-decoration:underline; font-weight:600;">vegan-garden.berlin</a>
             </td>
           </tr>

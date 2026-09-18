@@ -64,16 +64,16 @@ get_header(); ?>
           </div>
 
           <div style="display: flex; align-items: center; gap: 12px; font-size: 0.98rem; color: #334155;">
-            <svg width="18" height="18" fill="none" stroke="#27AAE1" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            <svg width="18" height="18" fill="none" stroke="#27AAE1" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             <div>
-              <strong style="color: #0f172a;">Website:</strong> <a href="https://hiephoibenhvientu.com.vn/" target="_blank" rel="noopener noreferrer" style="color: #2C3691; font-weight: 600; text-decoration: none;">https://hiephoibenhvientu.com.vn/</a>
+              <strong style="color: #0f172a;">Điện thoại:</strong> <a href="tel:02373711166" style="color: #2C3691; font-weight: 600; text-decoration: none;">02373 711 166</a>
             </div>
           </div>
 
           <div style="display: flex; align-items: center; gap: 12px; font-size: 0.98rem; color: #334155;">
-            <svg width="18" height="18" fill="none" stroke="#27AAE1" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <svg width="18" height="18" fill="none" stroke="#27AAE1" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
             <div>
-              <strong style="color: #0f172a;">Điện thoại:</strong> <a href="tel:02373711166" style="color: #2C3691; font-weight: 600; text-decoration: none;">02373 711 166</a>
+              <strong style="color: #0f172a;">Website:</strong> <a href="https://hiephoibenhvientu.com.vn/" target="_blank" rel="noopener noreferrer" style="color: #2C3691; font-weight: 600; text-decoration: none;">https://hiephoibenhvientu.com.vn/</a>
             </div>
           </div>
 

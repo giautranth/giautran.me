@@ -313,6 +313,26 @@
         </button>
 
         <div class="news-cards-grid" id="news-cards-grid">
+        <!-- Card 0: Lễ Bế giảng Khóa đào tạo Giám đốc doanh nghiệp y tế tư nhân tại TP.HCM -->
+        <div class="news-article-card" data-category="su-kien">
+          <a href="<?php echo esc_url(home_url('/tin-tuc/le-be-giang-giam-doc-doanh-nghiep-y-te-tu-nhan-tphcm/')); ?>" class="news-card-thumbnail-wrap" style="display:block;">
+            <img src="/photo/news/news-be-giang-ceo-1.webp" alt="Kiến tạo đội ngũ lãnh đạo y tế trong kỷ nguyên mới – Thúc đẩy y tế tư nhân phát triển bền vững" class="news-thumbnail-img" />
+          </a>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>05/09/2026</div>
+              <h3 class="news-card-title">
+                <a href="<?php echo esc_url(home_url('/tin-tuc/le-be-giang-giam-doc-doanh-nghiep-y-te-tu-nhan-tphcm/')); ?>" style="color:inherit;text-decoration:none;">
+                  Kiến tạo đội ngũ lãnh đạo y tế trong kỷ nguyên mới – Thúc đẩy y tế tư nhân phát triển bền vững
+                </a>
+              </h3>
+            </div>
+            <div class="news-card-footer">
+              <a href="<?php echo esc_url(home_url('/tin-tuc/le-be-giang-giam-doc-doanh-nghiep-y-te-tu-nhan-tphcm/')); ?>" class="link-read-more">Xem thêm →</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Card 1: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội -->
         <div class="news-article-card" data-category="chi-hoi">
           <a href="/tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" class="news-card-thumbnail-wrap" style="display:block;">

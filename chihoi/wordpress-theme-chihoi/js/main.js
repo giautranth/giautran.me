@@ -1067,6 +1067,13 @@ const siteSearchData = [
   */
   // Tin tức
   {
+    title: "Kiến tạo đội ngũ lãnh đạo y tế trong kỷ nguyên mới – Thúc đẩy y tế tư nhân phát triển bền vững",
+    category: "Tin tức",
+    badge: "badge-tin-tuc",
+    desc: "Lễ Bế giảng Khóa đào tạo Giám đốc doanh nghiệp y tế tư nhân tại TP.HCM diễn ra tại Tòa nhà Vinmec Central Park.",
+    url: "tin-tuc/le-be-giang-giam-doc-doanh-nghiep-y-te-tu-nhan-tphcm"
+  },
+  {
     title: "Ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam",
     category: "Tin tức",
     badge: "badge-tin-tuc",

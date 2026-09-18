@@ -161,7 +161,7 @@
           <div class="direction-item-card">
             <div class="direction-item-num">07</div>
             <div>
-              <div class="direction-item-title">Hợp tác công - Tư</div>
+              <div class="direction-item-title">Hợp tác công - tư</div>
               <p class="direction-item-desc">Chuyển giao kỹ thuật, đào tạo, nghiên cứu, y tế dự phòng.</p>
             </div>
           </div>
@@ -170,7 +170,7 @@
             <div class="direction-item-num">08</div>
             <div>
               <div class="direction-item-title">Hệ sinh thái mua sắm & Nguồn lực</div>
-              <p class="direction-item-desc">Liên kết tự nguyện - Minh bạch, giảm chi phí.</p>
+              <p class="direction-item-desc">Liên kết tự nguyện - minh bạch, giảm chi phí.</p>
             </div>
           </div>
 
@@ -186,7 +186,7 @@
             <div class="direction-item-num">10</div>
             <div>
               <div class="direction-item-title">Hình ảnh & Thương hiệu chung</div>
-              <p class="direction-item-desc">Chuyên nghiệp - Minh bạch - Trách nhiệm - Nhân văn.</p>
+              <p class="direction-item-desc">Chuyên nghiệp - minh bạch - trách nhiệm - nhân văn.</p>
             </div>
           </div>
       </div>

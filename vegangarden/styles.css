@@ -2350,65 +2350,231 @@ body.about-page,
   text-justify: inter-word !important;
 }
 
-/* FOODAMIGOS RESERVATION MODAL */
+/* RESERVATION MODAL - LUXURY BRAND REFINEMENT */
 .modal-content--reserve {
-  max-width: 680px;
-  padding: 24px 20px 20px;
-  border-radius: 16px;
-  overflow: hidden;
+  max-width: 520px;
+  width: 100%;
+  padding: 26px 28px 22px;
+  border-radius: 20px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #ffffff;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.modal-content--reserve .modal-close {
+  top: 16px;
+  right: 20px;
+  font-size: 26px;
+  color: #8A887F;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+}
+.modal-content--reserve .modal-close:hover {
+  color: #2A160F;
 }
 
 .reserve-modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
-  padding-right: 36px;
+  margin-bottom: 16px;
+  padding-right: 32px;
   flex-wrap: wrap;
   gap: 8px;
 }
+.reserve-modal-header h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #2A160F;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
 
-.reserve-ext-link {
-  font-size: 0.82rem;
-  color: #34A853;
-  text-decoration: none;
-  display: inline-flex;
+/* FORM GRID & STYLING MATCHING REFERENCE */
+.vg-form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.vg-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.vg-field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.vg-field-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #6C6259;
+  margin-bottom: 5px;
+  display: flex;
   align-items: center;
+  gap: 2px;
+}
+.vg-field-label .req {
+  color: #8F6D1E;
+  font-weight: 700;
+}
+.vg-field-label .opt {
+  color: #9E9486;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 10.5px;
+  margin-left: 4px;
+  letter-spacing: 0;
+}
+
+.vg-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.vg-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #A3998C;
+  font-size: 13.5px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vg-field-input {
+  width: 100%;
+  padding: 11px 14px 11px 38px !important;
+  background-color: #EAE4D8 !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  color: #2A160F !important;
+  font-family: inherit !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+.vg-field-input::placeholder {
+  color: #9E9486 !important;
+}
+.vg-field-input:focus {
+  background-color: #F0EAE0 !important;
+  border-color: #8F6D1E !important;
+  box-shadow: 0 0 0 3px rgba(143, 109, 30, 0.12) !important;
+}
+
+.vg-field-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%238F6D1E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  padding-right: 36px !important;
+  cursor: pointer;
+}
+
+.vg-textarea-wrap {
+  align-items: flex-start;
+}
+.vg-textarea-wrap .vg-input-icon {
+  top: 13px;
+  transform: none;
+}
+.vg-field-textarea {
+  resize: vertical !important;
+  min-height: 64px !important;
+  line-height: 1.4 !important;
+}
+
+.vg-helper-text {
+  font-size: 11px;
+  color: #8A887F;
+  margin-top: 4px;
+  line-height: 1.35;
+}
+
+/* SUBMIT BUTTON - PILL SHAPED */
+#reserveSubmitBtn {
+  background: #8F6D1E !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 30px !important;
+  padding: 13px 26px !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 14px rgba(143, 109, 30, 0.25) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin-top: 6px !important;
+  font-family: inherit !important;
+}
+#reserveSubmitBtn:hover {
+  background: #7A5C17 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(143, 109, 30, 0.32) !important;
+}
+#reserveSubmitBtn:active {
+  transform: translateY(0) !important;
+}
+#reserveSubmitBtn:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+
+.vg-confirmation-hint {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 11.5px;
+  color: #8A887F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
-  font-weight: 600;
-  transition: color 0.2s ease;
 }
-
-.reserve-ext-link:hover {
-  color: #1e7e34;
-  text-decoration: underline;
-}
-
-.foodamigos-iframe-wrap {
-  width: 100%;
-  height: 620px;
-  max-height: 72vh;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #fafafa;
-  border: 1px solid #e5e7eb;
-}
-
-.foodamigos-iframe-wrap iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
+.vg-confirmation-hint i {
+  color: #8F6D1E;
+  font-size: 12px;
 }
 
 @media (max-width: 640px) {
   .modal-content--reserve {
-    padding: 20px 12px 12px !important;
+    padding: 20px 16px 18px !important;
     max-height: 94vh !important;
+    border-radius: 16px !important;
   }
-  .foodamigos-iframe-wrap {
-    height: 580px !important;
-    max-height: 76vh !important;
+  .modal-content--reserve .modal-close {
+    top: 12px;
+    right: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vg-row-2col {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 }
 

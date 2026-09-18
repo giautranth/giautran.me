@@ -87,66 +87,121 @@
     </div>
   </footer>
     <!-- MODAL: TABLE RESERVATION -->
+  <!-- RESERVATION MODAL -->
   <div class="modal-overlay" id="reservationModal">
     <div class="modal-content modal-content--reserve">
       <button class="modal-close" aria-label="Schließen">&times;</button>
       
-      <div class="reserve-modal-header" style="margin-bottom: 6px; padding-right: 28px;">
-        <div>
-          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0; font-size: 1.25rem;">Tisch reservieren</h2>
-        </div>
+      <div class="reserve-modal-header">
+        <h2>Tisch reservieren</h2>
       </div>
 
-      <form id="reserveForm" style="padding: 4px 0 0;">
+      <form id="reserveForm" class="vg-form-grid" style="padding: 4px 0 0;">
         <?php wp_nonce_field('vg_reserve_form', 'vg_reserve_nonce'); ?>
         
-        <div style="display: flex; flex-direction: column; gap: 7px;">
-          <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Name *</label>
-            <input type="text" name="res_name" id="resName" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
+        <!-- ROW 1: DATE & TIME -->
+        <div class="vg-row-2col">
+          <div class="vg-field-group">
+            <label class="vg-field-label">DATUM <span class="req">*</span></label>
+            <div class="vg-input-wrap">
+              <i class="fa-regular fa-calendar vg-input-icon"></i>
+              <input type="date" name="res_date" id="resDate" required class="vg-field-input" min="<?php echo date('Y-m-d'); ?>">
+            </div>
           </div>
-          
-          <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Datum *</label>
-            <input type="date" name="res_date" id="resDate" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
+
+          <div class="vg-field-group">
+            <label class="vg-field-label">UHRZEIT <span class="req">*</span></label>
+            <div class="vg-input-wrap">
+              <i class="fa-regular fa-clock vg-input-icon"></i>
+              <select name="res_time" id="resTime" required class="vg-field-input vg-field-select">
+                <option value="12:00">12:00 Uhr</option>
+                <option value="12:30">12:30 Uhr</option>
+                <option value="13:00">13:00 Uhr</option>
+                <option value="13:30">13:30 Uhr</option>
+                <option value="14:00">14:00 Uhr</option>
+                <option value="14:30">14:30 Uhr</option>
+                <option value="15:00">15:00 Uhr</option>
+                <option value="15:30">15:30 Uhr</option>
+                <option value="16:00">16:00 Uhr</option>
+                <option value="16:30">16:30 Uhr</option>
+                <option value="17:00">17:00 Uhr</option>
+                <option value="17:30">17:30 Uhr</option>
+                <option value="18:00">18:00 Uhr</option>
+                <option value="18:30" selected>18:30 Uhr</option>
+                <option value="19:00">19:00 Uhr</option>
+                <option value="19:30">19:30 Uhr</option>
+                <option value="20:00">20:00 Uhr</option>
+                <option value="20:30">20:30 Uhr</option>
+                <option value="21:00">21:00 Uhr</option>
+                <option value="21:30">21:30 Uhr</option>
+              </select>
+            </div>
           </div>
-          
-          <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Uhrzeit *</label>
-            <input type="time" name="res_time" id="resTime" required value="18:30" min="12:00" max="22:00" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
-          </div>
-          
-          <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Personen *</label>
-            <select name="res_guests" id="resGuests" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
+        </div>
+
+        <!-- ROW 2: NUMBER OF GUESTS -->
+        <div class="vg-field-group">
+          <label class="vg-field-label">ANZAHL DER GÄSTE <span class="req">*</span></label>
+          <div class="vg-input-wrap">
+            <i class="fa-solid fa-user-group vg-input-icon"></i>
+            <select name="res_guests" id="resGuests" required class="vg-field-input vg-field-select">
               <?php for ($i = 1; $i <= 20; $i++): ?>
-                <option value="<?php echo $i; ?>" <?php echo $i === 2 ? 'selected' : ''; ?>><?php echo $i; ?> <?php echo $i === 1 ? 'Person' : 'Personen'; ?></option>
+                <option value="<?php echo $i; ?>" <?php echo $i === 2 ? 'selected' : ''; ?>><?php echo $i; ?> <?php echo $i === 1 ? 'Gast' : 'Gäste'; ?></option>
               <?php endfor; ?>
             </select>
           </div>
-          
-          <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Telefon *</label>
-            <input type="tel" name="res_phone" id="resPhone" required style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
-          </div>
-          
-          <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">E-Mail *</label>
-            <input type="email" name="res_email" id="resEmail" required placeholder="beispiel@domain.de" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
-          </div>
-          
-          <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">Anmerkung <span style="color:#999; font-weight:400;">(optional)</span></label>
-            <textarea name="res_note" id="resNote" rows="1" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; resize:vertical; box-sizing:border-box; min-height:38px; height:38px; line-height:1.2;"></textarea>
+          <div class="vg-helper-text">Mehr als 12 Gäste? Bitte rufen Sie uns rechtzeitig an.</div>
+        </div>
+
+        <!-- ROW 3: YOUR NAME -->
+        <div class="vg-field-group">
+          <label class="vg-field-label">IHR NAME <span class="req">*</span></label>
+          <div class="vg-input-wrap">
+            <i class="fa-regular fa-user vg-input-icon"></i>
+            <input type="text" name="res_name" id="resName" required placeholder="Vor- und Nachname" class="vg-field-input">
           </div>
         </div>
 
-        <div id="reserveStatus" style="margin-top:8px; padding:8px 12px; border-radius:6px; display:none; font-size:0.85rem;"></div>
+        <!-- ROW 4: EMAIL & PHONE -->
+        <div class="vg-row-2col vg-row-2col--contact">
+          <div class="vg-field-group">
+            <label class="vg-field-label">E-MAIL-ADRESSE <span class="req">*</span></label>
+            <div class="vg-input-wrap">
+              <i class="fa-regular fa-envelope vg-input-icon"></i>
+              <input type="email" name="res_email" id="resEmail" required placeholder="name@beispiel.de" class="vg-field-input">
+            </div>
+          </div>
 
-        <button type="submit" id="reserveSubmitBtn" class="btn btn-primary" style="width:100%; margin-top:10px; padding:10px 14px; font-size:0.95rem; font-weight:700; border-radius:6px; display:flex; align-items:center; justify-content:center; gap:8px;">
-          <i class="fa-regular fa-calendar-check"></i>
+          <div class="vg-field-group">
+            <label class="vg-field-label">TELEFONNUMMER <span class="req">*</span></label>
+            <div class="vg-input-wrap">
+              <i class="fa-solid fa-phone vg-input-icon"></i>
+              <input type="tel" name="res_phone" id="resPhone" required placeholder="+49 ..." class="vg-field-input">
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 5: SPECIAL REQUEST / ANMERKUNG -->
+        <div class="vg-field-group">
+          <label class="vg-field-label">BESONDERE WÜNSCHE / ALLERGIEN <span class="opt">(optional)</span></label>
+          <div class="vg-input-wrap vg-textarea-wrap">
+            <i class="fa-regular fa-comment-dots vg-input-icon"></i>
+            <textarea name="res_note" id="resNote" rows="2" placeholder="Fensterplatz, Allergien, Geburtstag, Hochstuhl..." class="vg-field-input vg-field-textarea"></textarea>
+          </div>
+        </div>
+
+        <div id="reserveStatus" style="margin-top:4px; padding:10px 14px; border-radius:8px; display:none; font-size:0.88rem;"></div>
+
+        <!-- SUBMIT BUTTON -->
+        <button type="submit" id="reserveSubmitBtn">
           <span>JETZT RESERVIEREN</span>
         </button>
+
+        <!-- FOOTER CONFIRMATION HINT -->
+        <div class="vg-confirmation-hint">
+          <i class="fa-solid fa-leaf"></i>
+          <span>Sie erhalten eine Bestätigung per E-Mail.</span>
+        </div>
       </form>
 
       <script>
@@ -192,7 +247,7 @@
               statusDiv.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> ' + data.data;
             }
             submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fa-regular fa-calendar-check"></i> <span>JETZT RESERVIEREN</span>';
+            submitBtn.innerHTML = '<span>JETZT RESERVIEREN</span>';
           })
           .catch(() => {
             statusDiv.style.display = 'block';
@@ -200,7 +255,7 @@
             statusDiv.style.color = '#c62828';
             statusDiv.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Netzwerkfehler. Bitte versuchen Sie es erneut.';
             submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fa-regular fa-calendar-check"></i> <span>JETZT RESERVIEREN</span>';
+            submitBtn.innerHTML = '<span>JETZT RESERVIEREN</span>';
           });
         });
       })();

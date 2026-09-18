@@ -25,7 +25,7 @@ function vegangarden_scripts() {
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), '6.5.1');
     
     // Main Stylesheet
-    wp_enqueue_style('vegangarden-main', get_template_directory_uri() . '/styles.css', array(), '20260918_17');
+    wp_enqueue_style('vegangarden-main', get_template_directory_uri() . '/styles.css', array(), '20260918_18');
     wp_enqueue_style('vegangarden-theme', get_stylesheet_uri(), array('vegangarden-main'), '1.1.1');
 
     // Main Script

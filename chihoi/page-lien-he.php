@@ -208,7 +208,7 @@ get_header(); ?>
 
 <?php
 $c_address = chihoi_get_option('footer_address', 'Số 5 Đường 17A, P. An Lạc, TP. HCM');
-$c_phone = chihoi_get_option('footer_phone', '1900 8146');
+$c_phone = chihoi_get_option('footer_phone', '1800 9045');
 $c_email = chihoi_get_option('footer_email', 'info@chihoibenhvientu.com.vn');
 ?>
 

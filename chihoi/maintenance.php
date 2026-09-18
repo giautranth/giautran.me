@@ -10,7 +10,7 @@ $options = get_option('chihoi_theme_options', array());
 $title = !empty($options['maintenance_title']) ? $options['maintenance_title'] : 'WEBSITE ĐANG TRONG QUÁ TRÌNH XÂY DỰNG';
 $desc = !empty($options['maintenance_desc']) ? $options['maintenance_desc'] : "Website của Chi hội Bệnh viện Tư nhân TP. HCM và các tỉnh, thành phía Nam đang được hoàn thiện và sẽ sớm chính thức đi vào hoạt động.\n\nTrân trọng cảm ơn.";
 $logo = chihoi_get_option('header_logo', get_template_directory_uri() . '/photo/logo/chihoi_2.png');
-$hotline = chihoi_get_option('footer_phone', '1900 8146');
+$hotline = chihoi_get_option('footer_phone', '1800 9045');
 $email = chihoi_get_option('footer_email', 'info@chihoibenhvien.com');
 $address = chihoi_get_option('footer_address', 'Số 5 Đường 17A, P. An Lạc, TP. HCM');
 ?>

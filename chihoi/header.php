@@ -52,7 +52,7 @@
     "alternateName": "Chi hội Bệnh viện Tư nhân TP.HCM",
     "url": "<?php echo esc_url(home_url('/')); ?>",
     "logo": "<?php echo esc_url(home_url('/photo/logo/chihoi_2.png')); ?>",
-    "telephone": "1900 8146",
+    "telephone": "1800 9045",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Số 3 Đường 17A, Khu Y tế Kỹ thuật cao, Phường An Lạc",

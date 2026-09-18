@@ -7,7 +7,7 @@
       "label": "Hotline Cấp Cứu 24/7",
       "name": "chihoi_hotline",
       "type": "text",
-      "default_value": "1900 8146"
+      "default_value": "1800 9045"
     },
     {
       "key": "field_chihoi_slogan",

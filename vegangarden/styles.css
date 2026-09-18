@@ -371,6 +371,7 @@ img {
   color: #ffffff;
   font-size: 0.88rem;
   font-weight: 600;
+  text-transform: capitalize !important;
 }
 
 /* HERO BANNER SLIDER (MATCHING CIH BANNER DIMENSIONS) */
@@ -1171,6 +1172,11 @@ img {
   transition: color 0.2s ease;
   font-weight: 500;
   cursor: pointer;
+  display: inline-block !important;
+}
+
+.footer-legal-links a::first-letter {
+  text-transform: uppercase !important;
 }
 
 .footer-legal-links a:hover {

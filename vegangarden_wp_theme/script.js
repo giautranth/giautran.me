@@ -351,24 +351,62 @@ document.addEventListener('DOMContentLoaded', () => {
       if (langCurrent) langCurrent.setAttribute('aria-expanded', 'false');
     }
 
-    // Update Article "Read more" links & filter tab labels based on active language
-    const moreTxts = document.querySelectorAll('.more-txt');
-    const newsTabsList = document.querySelectorAll('.news-tab');
-    const allArticlesBtn = document.getElementById('allArticlesBtn');
+    // Update UI texts & ensure capitalization for all languages
+    function updateLanguageTexts(tLang) {
+      const moreTxts = document.querySelectorAll('.more-txt');
+      const newsTabsList = document.querySelectorAll('.news-tab');
+      const allArticlesBtn = document.getElementById('allArticlesBtn');
+      const deOpt = document.querySelector('.lang-opt[data-lang="de"] .lng');
+      const enOpt = document.querySelector('.lang-opt[data-lang="en"] .lng');
+      const viOpt = document.querySelector('.lang-opt[data-lang="vi"] .lng');
+      const legalLinks = document.querySelectorAll('.footer-legal-links a');
 
-    if (targetLang === 'en') {
-      moreTxts.forEach(el => el.textContent = 'Read article');
-      newsTabsList.forEach(tab => { if (tab.dataset.en) tab.textContent = tab.dataset.en; });
-      if (allArticlesBtn) allArticlesBtn.textContent = 'VIEW ALL ARTICLES';
-    } else if (targetLang === 'vi') {
-      moreTxts.forEach(el => el.textContent = 'Xem thêm');
-      newsTabsList.forEach(tab => { if (tab.dataset.vi) tab.textContent = tab.dataset.vi; });
-      if (allArticlesBtn) allArticlesBtn.textContent = 'XEM TẤT CẢ BÀI VIẾT';
-    } else {
-      moreTxts.forEach(el => el.textContent = 'Artikel lesen');
-      newsTabsList.forEach(tab => { if (tab.dataset.de) tab.textContent = tab.dataset.de; });
-      if (allArticlesBtn) allArticlesBtn.textContent = 'ALLE ARTIKEL ANSEHEN';
+      if (tLang === 'en') {
+        moreTxts.forEach(el => el.textContent = 'Read article');
+        newsTabsList.forEach(tab => { if (tab.dataset.en) tab.textContent = tab.dataset.en; });
+        if (allArticlesBtn) allArticlesBtn.textContent = 'VIEW ALL ARTICLES';
+        if (deOpt) deOpt.textContent = 'German';
+        if (enOpt) enOpt.textContent = 'English';
+        if (viOpt) viOpt.textContent = 'Vietnamese';
+        if (legalLinks.length >= 3) {
+          legalLinks[0].textContent = 'Imprint';
+          legalLinks[1].textContent = 'Privacy Policy';
+          legalLinks[2].textContent = 'Cookie Settings';
+        }
+      } else if (tLang === 'vi') {
+        moreTxts.forEach(el => el.textContent = 'Xem thêm');
+        newsTabsList.forEach(tab => { if (tab.dataset.vi) tab.textContent = tab.dataset.vi; });
+        if (allArticlesBtn) allArticlesBtn.textContent = 'XEM TẤT CẢ BÀI VIẾT';
+        if (deOpt) deOpt.textContent = 'Tiếng Đức';
+        if (enOpt) enOpt.textContent = 'Tiếng Anh';
+        if (viOpt) viOpt.textContent = 'Tiếng Việt';
+        if (legalLinks.length >= 3) {
+          legalLinks[0].textContent = 'Dấu ấn';
+          legalLinks[1].textContent = 'Bảo vệ dữ liệu';
+          legalLinks[2].textContent = 'Cài đặt cookie';
+        }
+      } else {
+        moreTxts.forEach(el => el.textContent = 'Artikel lesen');
+        newsTabsList.forEach(tab => { if (tab.dataset.de) tab.textContent = tab.dataset.de; });
+        if (allArticlesBtn) allArticlesBtn.textContent = 'ALLE ARTIKEL ANSEHEN';
+        if (deOpt) deOpt.textContent = 'Deutsch';
+        if (enOpt) enOpt.textContent = 'English';
+        if (viOpt) viOpt.textContent = 'Tiếng Việt';
+        if (legalLinks.length >= 3) {
+          legalLinks[0].textContent = 'Impressum';
+          legalLinks[1].textContent = 'Datenschutz';
+          legalLinks[2].textContent = 'Cookie-Einstellungen';
+        }
+      }
     }
+
+    updateLanguageTexts(targetLang);
+    let checkCount = 0;
+    const langTimer = setInterval(() => {
+      checkCount++;
+      updateLanguageTexts(targetLang);
+      if (checkCount >= 10) clearInterval(langTimer);
+    }, 300);
 
     function triggerCombo(target) {
       const combo = document.querySelector('.goog-te-combo');
@@ -439,6 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize UI with active language
     const currentLang = getActiveLang();
+    updateLanguageTexts(currentLang);
     if (currentLang !== 'de') {
       const flagMap = { en: 'us', vi: 'vn' };
       const flag = flagMap[currentLang] || 'de';
@@ -451,6 +490,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const optLang = o.dataset.lang || (o.dataset.code === 'EN' ? 'en' : o.dataset.code === 'VI' ? 'vi' : 'de');
         o.classList.toggle('active', optLang === currentLang);
       });
+
+      let initCount = 0;
+      const initTimer = setInterval(() => {
+        initCount++;
+        updateLanguageTexts(currentLang);
+        if (initCount >= 10) clearInterval(initTimer);
+      }, 300);
     }
   }
 

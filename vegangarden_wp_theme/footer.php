@@ -76,8 +76,8 @@
 
       <div class="footer-bottom">
         <div>© 2026 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
-                        <div class="footer-legal-links">
-          <a href="<?php echo esc_url(home_url('/impressum.html')); ?>" target="_blank">Impressum</a>
+        <div class="footer-legal-links">
+          <a href="<?php echo esc_url(home_url('/impressum.html')); ?>" target="_blank" style="display: inline-block; text-transform: capitalize;">Impressum</a>
           <span class="footer-legal-sep">&bull;</span>
           <a href="<?php echo esc_url(home_url('/datenschutz.html')); ?>" target="_blank">Datenschutz</a>
           <span class="footer-legal-sep">&bull;</span>

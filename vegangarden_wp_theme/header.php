@@ -47,15 +47,15 @@
           <ul class="lang-dropdown" id="langDropdown" role="listbox">
             <li class="lang-opt active" data-lang="de" data-flag="de" data-code="DE" role="option">
               <span class="flag"><img src="https://flagcdn.com/w20/de.png" alt="de" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
-              <span class="lng">Deutsch</span>
+              <span class="lng" style="text-transform: capitalize;">Deutsch</span>
             </li>
             <li class="lang-opt" data-lang="en" data-flag="us" data-code="EN" role="option">
               <span class="flag"><img src="https://flagcdn.com/w20/us.png" alt="us" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
-              <span class="lng">English</span>
+              <span class="lng" style="text-transform: capitalize;">English</span>
             </li>
             <li class="lang-opt" data-lang="vi" data-flag="vn" data-code="VI" role="option">
               <span class="flag"><img src="https://flagcdn.com/w20/vn.png" alt="vn" width="20" style="vertical-align: middle; border-radius: 2px;" /></span>
-              <span class="lng">Tiếng Việt</span>
+              <span class="lng" style="text-transform: capitalize;">Tiếng Việt</span>
             </li>
           </ul>
         </div>

@@ -190,6 +190,12 @@ body.admin-bar .aih-header {
   position: relative;
   transition: color 0.2s ease;
   white-space: nowrap;
+  outline: none !important;
+}
+
+.aih-menu-link:focus,
+.aih-menu-link:focus-visible {
+  outline: none !important;
 }
 
 .aih-menu-link .arrow-icon {

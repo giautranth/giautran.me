@@ -45,12 +45,37 @@ function initMobileNav() {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+
+        // Đóng các dropdown khác đang mở
+        dropdownParents.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('open');
+            const otherSub = otherItem.querySelector('.dropdown-menu-list');
+            if (otherSub) otherSub.classList.remove('show-mobile-sub');
+          }
+        });
+
         const isOpen = item.classList.toggle('open');
         submenu.classList.toggle('show-mobile-sub', isOpen);
+      });
+
+      // Đóng dropdown khi chuột rời menu trên màn hình desktop
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('open');
+        submenu.classList.remove('show-mobile-sub');
+      });
+
+      // Đóng dropdown khi click vào link bên trong submenu
+      submenu.querySelectorAll('a').forEach(subLink => {
+        subLink.addEventListener('click', () => {
+          item.classList.remove('open');
+          submenu.classList.remove('show-mobile-sub');
+        });
       });
     }
   });
 
+  // Đóng dropdown khi click ra ngoài
   document.addEventListener('click', (e) => {
     dropdownParents.forEach(item => {
       if (!item.contains(e.target)) {
@@ -59,6 +84,17 @@ function initMobileNav() {
         if (submenu) submenu.classList.remove('show-mobile-sub');
       }
     });
+  });
+
+  // Đóng dropdown khi nhấn phím Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropdownParents.forEach(item => {
+        item.classList.remove('open');
+        const submenu = item.querySelector('.dropdown-menu-list');
+        if (submenu) submenu.classList.remove('show-mobile-sub');
+      });
+    }
   });
 }
 

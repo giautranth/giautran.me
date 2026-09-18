@@ -9,7 +9,7 @@ get_header(); ?>
   <div class="container">
     
     <div class="section-header-row" style="margin-bottom: 28px;">
-      <h1 class="section-main-title">GIỚI THIỆU HIỆP HỘI BỆNH VIỆN TƯ NHÂN VIỆT NAM</h1>
+      <h1 class="section-main-title">VỀ HIỆP HỘI BỆNH VIỆN TƯ NHÂN VIỆT NAM</h1>
     </div>
 
     <div class="white-box-card" style="margin-top: 24px; padding: 40px; border-radius: 16px;">

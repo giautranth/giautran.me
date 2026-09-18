@@ -1772,17 +1772,7 @@ input[type="date"]::-webkit-date-and-time-value {
   margin-bottom: 16px;
   line-height: 1.35 !important;
   font-family: 'Plus Jakarta Sans', sans-serif;
-  height: 2.7em !important;
-  min-height: 2.7em !important;
-  max-height: 2.7em !important;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-align: justify !important;
-  text-justify: inter-word !important;
-}  text-align: justify;
-  text-justify: inter-word;
+  text-align: left !important;
 }
 
 .news-card__title a {
@@ -2308,7 +2298,7 @@ body.about-page,
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
 }
 
-/* ARTICLE CARD TITLES: JUSTIFIED ALIGNMENT & NO BOLD */
+/* ARTICLE CARD TITLES: CLEAN LEFT ALIGNMENT & NO BOLD */
 .news-card__title,
 .news-card__title a,
 .hub-news-title,
@@ -2316,8 +2306,9 @@ body.about-page,
 .news-card h3,
 .news-card h3 a {
   font-weight: 500 !important;
-  text-align: justify !important;
-  text-justify: inter-word !important;
+  text-align: left !important;
+  text-align-last: left !important;
+  text-justify: auto !important;
 }
 
 /* MENU DISH CARD DESCRIPTION: JUSTIFIED TEXT ALIGNMENT */

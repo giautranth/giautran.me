@@ -940,8 +940,6 @@ function vg_handle_reservation() {
             $wa_link_html = ' &bull; <a href="https://wa.me/' . esc_attr($phone_wa) . '" target="_blank" rel="noopener" class="vg-res-link-wa" style="color:#A98224; font-size:12px; font-weight:700; text-decoration:none;">💬 WhatsApp</a>';
         }
 
-        $admin_manage_url = esc_url(admin_url('post.php?post=' . $post_id . '&action=edit'));
-
         // ============================================
         // 1. BRANDED HTML EMAIL NOTIFICATION TO ADMIN
         // ============================================
@@ -1058,7 +1056,7 @@ function vg_handle_reservation() {
 
           <!-- BODY CONTENT -->
           <tr>
-            <td class="vg-body-cell" style="padding:32px 28px 24px; background-color:#ffffff;">
+            <td class="vg-body-cell" style="padding:32px 28px 30px; background-color:#ffffff;">
               <h2 class="vg-text-h2" style="color:#2A160F; font-size:21px; font-weight:700; margin:0 0 10px 0; font-family:Georgia, serif;">Neue Tischreservierung eingegangen!</h2>
               <p class="vg-text-intro" style="font-size:15px; line-height:1.6; color:#4A4036; margin:0 0 20px 0;">
                 Hallo <strong>Admin</strong>,<br>
@@ -1102,44 +1100,6 @@ function vg_handle_reservation() {
                 </tr>
                 ' . $admin_note_row . '
               </table>
-
-              <!-- QUICK ACTION BUTTONS -->
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:26px 0 10px;">
-                <tr>
-                  <td align="center">
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                      <tr>
-                        <td align="center" style="padding:5px 6px;">
-                          <a href="' . $admin_manage_url . '" target="_blank" rel="noopener" style="background-color:#8F6D1E; background-image:linear-gradient(#8F6D1E, #8F6D1E); color:#ffffff !important; font-size:13px; font-weight:700; text-decoration:none; padding:12px 24px; border-radius:24px; display:inline-block; letter-spacing:0.5px; box-shadow:0 4px 14px rgba(143, 109, 30, 0.3);">
-                            ⚙️ IN WORDPRESS VERWALTEN
-                          </a>
-                        </td>
-                        ' . (!empty($phone_tel) ? '
-                        <td align="center" style="padding:5px 6px;">
-                          <a href="tel:' . esc_attr($phone_tel) . '" style="background-color:#2A160F; background-image:linear-gradient(#2A160F, #2A160F); color:#FAF4E8 !important; font-size:13px; font-weight:600; text-decoration:none; padding:12px 20px; border-radius:24px; display:inline-block; letter-spacing:0.3px; border:1px solid rgba(169, 130, 36, 0.4);">
-                            📞 KUNDE ANRUFEN
-                          </a>
-                        </td>' : '') . '
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- META FOOTNOTE -->
-              <p class="vg-meta-row" style="font-size:12px; color:#8C8074; margin:22px 0 0 0; text-align:center; border-top:1px solid #ECE4D8; padding-top:14px;">
-                Eingegangen über Website: ' . esc_html($created_at) . ' &bull; IP: ' . esc_html($ip) . '
-              </p>
-            </td>
-          </tr>
-
-          <!-- BRAND FOOTER -->
-          <tr>
-            <td class="vg-footer-cell" style="background-color:#2A160F; background-image:linear-gradient(#2A160F, #2A160F); padding:22px 24px; text-align:center; font-size:12px; color:#C4BBB3; line-height:1.7;">
-              <strong style="color:#C79A4A; font-size:14px;">Vegan Garden Berlin — Reservierungssystem</strong><br>
-              Frankfurter Allee 21, 10247 Berlin, Germany<br>
-              Telefon: <a href="tel:+493021237260" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 30 2123 7260</a> &bull; WhatsApp: <a href="https://wa.me/491624649999" target="_blank" rel="noopener" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 16 2464 9999</a><br>
-              Website: <a href="' . esc_url(home_url('/')) . '" target="_blank" style="color:#ffffff; text-decoration:underline; font-weight:600;">vegan-garden.berlin</a>
             </td>
           </tr>
         </table>

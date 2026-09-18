@@ -857,8 +857,8 @@ function vg_handle_reservation() {
     $note   = sanitize_textarea_field($_POST['res_note'] ?? '');
 
     // Validate required
-    if (empty($name) || empty($phone) || empty($date) || empty($time) || $guests < 1) {
-        wp_send_json_error('Bitte füllen Sie alle Pflichtfelder aus.');
+    if (empty($name) || empty($phone) || empty($email) || !is_email($email) || empty($date) || empty($time) || $guests < 1) {
+        wp_send_json_error('Bitte füllen Sie alle Pflichtfelder mit einer gültigen E-Mail-Adresse aus.');
         return;
     }
 
@@ -938,6 +938,98 @@ function vg_handle_reservation() {
             'Reply-To: ' . ($email ?: 'booking@vegan-garden.berlin')
         );
         wp_mail($to, $subject, $body, $headers);
+
+        // Send branded confirmation email to customer
+        if (!empty($email) && is_email($email)) {
+            $cust_subject = 'Bestätigung Ihrer Reservierungsanfrage — Vegan Garden Berlin';
+            
+            $note_row = '';
+            if (!empty($note)) {
+                $note_row = '<tr><td style="padding:8px 16px; font-size:14px; color:#6A625A;">Anmerkung:</td><td style="padding:8px 16px; font-size:14px; color:#2A160F;">' . esc_html($note) . '</td></tr>';
+            }
+            
+            $guest_str = $guests === 1 ? '1 Person' : $guests . ' Personen';
+
+            $cust_html = '<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0; padding:0; background-color:#F6F1E7; font-family:-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; color:#2A160F;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#F6F1E7; padding:30px 10px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" style="max-width:580px; background-color:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.06); border:1px solid #E8E2D8;" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td style="background-color:#2E5A36; padding:28px 24px; text-align:center;">
+              <h1 style="color:#ffffff; margin:0; font-size:24px; font-weight:700; letter-spacing:1px; font-family:Georgia, serif;">VEGAN GARDEN BERLIN</h1>
+              <p style="color:#d0e6cf; margin:6px 0 0 0; font-size:13px; text-transform:uppercase; letter-spacing:1.5px;">100 % Vegane Vietnamesische Küche</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:32px 28px;">
+              <h2 style="color:#2E5A36; font-size:20px; margin-top:0; margin-bottom:12px; font-family:Georgia, serif;">Ihre Reservierungsanfrage ist eingegangen!</h2>
+              <p style="font-size:15px; line-height:1.6; color:#4a423b; margin:0 0 20px 0;">
+                Hallo <strong>' . esc_html($name) . '</strong>,<br><br>
+                vielen Dank für Ihre Tischreservierung im <strong>Vegan Garden Berlin</strong>. Wir haben Ihre Anfrage erfolgreich erhalten und freuen uns sehr darauf, Sie bei uns begrüßen zu dürfen!
+              </p>
+              <table role="presentation" width="100%" style="background-color:#FAF7F2; border:1px solid #E8E0D4; border-radius:8px; margin:20px 0;" cellspacing="0" cellpadding="10">
+                <tr>
+                  <td colspan="2" style="border-bottom:1px solid #E8E0D4; padding:12px 16px; font-weight:700; font-size:13px; color:#A98224; text-transform:uppercase; letter-spacing:0.5px;">
+                    📅 Details Ihrer Reservierung
+                  </td>
+                </tr>
+                <tr>
+                  <td width="35%" style="padding:8px 16px; font-size:14px; color:#6A625A;">Datum:</td>
+                  <td style="padding:8px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($date_formatted) . '</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 16px; font-size:14px; color:#6A625A;">Uhrzeit:</td>
+                  <td style="padding:8px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($time) . ' Uhr</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 16px; font-size:14px; color:#6A625A;">Personen:</td>
+                  <td style="padding:8px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($guest_str) . '</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 16px; font-size:14px; color:#6A625A;">Telefon:</td>
+                  <td style="padding:8px 16px; font-size:14px; color:#2A160F;">' . esc_html($phone) . '</td>
+                </tr>
+                ' . $note_row . '
+              </table>
+              <div style="background-color:#F0F7F2; border-left:4px solid #2E5A36; padding:12px 16px; border-radius:4px; font-size:13px; line-height:1.5; color:#2E5A36; margin:20px 0;">
+                <strong>Hinweis:</strong> Falls Sie Ihre Reservierung ändern oder stornieren möchten, rufen Sie uns bitte rechtzeitig unter <strong>+49 30 21237260</strong> an oder antworten Sie einfach auf diese E-Mail.
+              </div>
+              <p style="font-size:14px; line-height:1.6; color:#4a423b; margin:24px 0 0 0;">
+                Wir freuen uns auf Ihren Besuch!<br><br>
+                Herzliche Grüße,<br>
+                <strong>Ihr Vegan Garden Berlin Team</strong>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color:#FAF7F2; border-top:1px solid #E8E0D4; padding:20px 24px; text-align:center; font-size:12px; color:#8C827A; line-height:1.6;">
+              <strong>Vegan Garden Berlin</strong><br>
+              Gärtnerstraße 15, 10245 Berlin (Friedrichshain)<br>
+              Telefon: <a href="tel:+493021237260" style="color:#A98224; text-decoration:none;">+49 30 21237260</a> &bull; E-Mail: <a href="mailto:booking@vegan-garden.berlin" style="color:#A98224; text-decoration:none;">booking@vegan-garden.berlin</a><br>
+              Web: <a href="https://vegan-garden.berlin" style="color:#2E5A36; text-decoration:none; font-weight:600;">vegan-garden.berlin</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>';
+
+            $cust_headers = array(
+                'Content-Type: text/html; charset=UTF-8',
+                'From: Vegan Garden Berlin <booking@vegan-garden.berlin>',
+                'Reply-To: Vegan Garden Berlin <booking@vegan-garden.berlin>'
+            );
+            wp_mail($email, $cust_subject, $cust_html, $cust_headers);
+        }
     }
 
     wp_send_json_success('Vielen Dank! Ihre Reservierung wurde erfolgreich gesendet. Wir bestätigen in Kürze.');

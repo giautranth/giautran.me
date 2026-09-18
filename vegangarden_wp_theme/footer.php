@@ -131,8 +131,8 @@
           </div>
           
           <div>
-            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">E-Mail <span style="color:#999; font-weight:400;">(optional)</span></label>
-            <input type="email" name="res_email" id="resEmail" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
+            <label style="font-weight:600; font-size:0.8rem; color:#2A160F; display:block; margin-bottom:2px;">E-Mail *</label>
+            <input type="email" name="res_email" id="resEmail" required placeholder="beispiel@domain.de" style="width:100%; padding:6px 10px; border:1px solid #d4d0cb; border-radius:6px; font-size:15px; background:#faf9f7; box-sizing:border-box; line-height:1.2;">
           </div>
           
           <div>

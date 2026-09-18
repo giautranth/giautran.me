@@ -774,10 +774,17 @@ function scrollSectionCards(gridId, direction) {
     const card = grid.querySelector('.cme-training-card, .news-article-card, .video-card-item');
     scrollAmount = card ? (card.offsetWidth + 24) : 380;
   }
-  grid.scrollBy({
-    left: direction * scrollAmount,
-    behavior: 'smooth'
-  });
+  const maxScroll = grid.scrollWidth - grid.clientWidth;
+  if (direction === 1 && grid.scrollLeft >= maxScroll - 15) {
+    grid.scrollTo({ left: 0, behavior: 'smooth' });
+  } else if (direction === -1 && grid.scrollLeft <= 15) {
+    grid.scrollTo({ left: maxScroll, behavior: 'smooth' });
+  } else {
+    grid.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
 }
 window.scrollSectionCards = scrollSectionCards;
 

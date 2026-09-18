@@ -322,6 +322,58 @@
 
   <!-- ========== 5. TIN TỨC SECTION (Chuẩn Tin Tức AIH) ========== -->
   <section class="site-section">
+    <style>
+      /* Cố định phần tin tức hiển thị đúng 1 dòng 3 bài, trượt ngang mượt mà */
+      .section-slider-container {
+        position: relative;
+        width: 100%;
+      }
+      .section-slider-container .news-cards-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-behavior: smooth !important;
+        gap: 24px !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        padding: 10px 4px !important;
+        margin: 0 !important;
+      }
+      .section-slider-container .news-cards-grid::-webkit-scrollbar {
+        display: none !important;
+        height: 0 !important;
+      }
+      .section-slider-container .news-cards-grid .news-article-card {
+        flex: 0 0 calc((100% - 48px) / 3) !important;
+        width: calc((100% - 48px) / 3) !important;
+        min-width: calc((100% - 48px) / 3) !important;
+        max-width: calc((100% - 48px) / 3) !important;
+        box-sizing: border-box !important;
+      }
+      @media (max-width: 1024px) {
+        .section-slider-container .news-cards-grid .news-article-card {
+          flex: 0 0 calc((100% - 24px) / 2) !important;
+          width: calc((100% - 24px) / 2) !important;
+          min-width: calc((100% - 24px) / 2) !important;
+          max-width: calc((100% - 24px) / 2) !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .section-slider-container .news-cards-grid {
+          scroll-snap-type: x mandatory !important;
+          gap: 0 !important;
+          padding: 6px 0 !important;
+        }
+        .section-slider-container .news-cards-grid .news-article-card {
+          flex: 0 0 100% !important;
+          width: 100% !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
+          scroll-snap-align: center !important;
+        }
+      }
+    </style>
     <div class="container">
       <div class="section-header-row">
         <div class="section-main-title">TIN TỨC</div>

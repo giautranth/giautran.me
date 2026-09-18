@@ -204,6 +204,7 @@
     </div>
   </section>
 
+  <?php /* Tạm ẩn Section 4 Đào Tạo
   <!-- ========== 4. CHƯƠNG TRÌNH ĐÀO TẠO SECTION (Nền Trắng AIH) ========== -->
   <section class="site-section">
     <div class="container">
@@ -317,9 +318,62 @@
       </div>
     </div>
   </section>
+  */ ?>
 
   <!-- ========== 5. TIN TỨC SECTION (Chuẩn Tin Tức AIH) ========== -->
-  <section class="site-section bg-subtle">
+  <section class="site-section">
+    <style>
+      /* Cố định phần tin tức hiển thị đúng 1 dòng 3 bài, trượt ngang mượt mà */
+      .section-slider-container {
+        position: relative;
+        width: 100%;
+      }
+      .section-slider-container .news-cards-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-behavior: smooth !important;
+        gap: 24px !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+        padding: 10px 4px !important;
+        margin: 0 !important;
+      }
+      .section-slider-container .news-cards-grid::-webkit-scrollbar {
+        display: none !important;
+        height: 0 !important;
+      }
+      .section-slider-container .news-cards-grid .news-article-card {
+        flex: 0 0 calc((100% - 48px) / 3) !important;
+        width: calc((100% - 48px) / 3) !important;
+        min-width: calc((100% - 48px) / 3) !important;
+        max-width: calc((100% - 48px) / 3) !important;
+        box-sizing: border-box !important;
+      }
+      @media (max-width: 1024px) {
+        .section-slider-container .news-cards-grid .news-article-card {
+          flex: 0 0 calc((100% - 24px) / 2) !important;
+          width: calc((100% - 24px) / 2) !important;
+          min-width: calc((100% - 24px) / 2) !important;
+          max-width: calc((100% - 24px) / 2) !important;
+        }
+      }
+      @media (max-width: 768px) {
+        .section-slider-container .news-cards-grid {
+          scroll-snap-type: x mandatory !important;
+          gap: 0 !important;
+          padding: 6px 0 !important;
+        }
+        .section-slider-container .news-cards-grid .news-article-card {
+          flex: 0 0 100% !important;
+          width: 100% !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
+          scroll-snap-align: center !important;
+        }
+      }
+    </style>
     <div class="container">
       <div class="section-header-row">
         <div class="section-main-title">TIN TỨC</div>
@@ -342,6 +396,26 @@
         </button>
 
         <div class="news-cards-grid" id="news-cards-grid">
+        <!-- Card 0: Lễ Bế giảng Khóa đào tạo Giám đốc doanh nghiệp y tế tư nhân tại TP.HCM -->
+        <div class="news-article-card" data-category="su-kien">
+          <a href="<?php echo esc_url(home_url('/tin-tuc/le-be-giang-giam-doc-doanh-nghiep-y-te-tu-nhan-tphcm/')); ?>" class="news-card-thumbnail-wrap" style="display:block;">
+            <img src="/photo/news/news-be-giang-ceo-1.webp" alt="Kiến tạo đội ngũ lãnh đạo y tế trong kỷ nguyên mới – Thúc đẩy y tế tư nhân phát triển bền vững" class="news-thumbnail-img" />
+          </a>
+          <div class="news-card-body">
+            <div>
+              <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>05/09/2026</div>
+              <h3 class="news-card-title">
+                <a href="<?php echo esc_url(home_url('/tin-tuc/le-be-giang-giam-doc-doanh-nghiep-y-te-tu-nhan-tphcm/')); ?>" style="color:inherit;text-decoration:none;">
+                  Kiến tạo đội ngũ lãnh đạo y tế trong kỷ nguyên mới – Thúc đẩy y tế tư nhân phát triển bền vững
+                </a>
+              </h3>
+            </div>
+            <div class="news-card-footer">
+              <a href="<?php echo esc_url(home_url('/tin-tuc/le-be-giang-giam-doc-doanh-nghiep-y-te-tu-nhan-tphcm/')); ?>" class="link-read-more">Xem thêm →</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Card 1: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội -->
         <div class="news-article-card" data-category="chi-hoi">
           <a href="/tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" class="news-card-thumbnail-wrap" style="display:block;">

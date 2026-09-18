@@ -39,9 +39,9 @@ add_action('init', 'chihoi_register_patterns');
 // Enqueue Styles & Scripts
 function chihoi_enqueue_scripts() {
     wp_enqueue_style('chihoi-google-fonts', 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap', array(), null);
-    wp_enqueue_style('chihoi-main-style', get_template_directory_uri() . '/css/style.css', array(), '3.0.0');
-    wp_enqueue_style('chihoi-theme-style', get_stylesheet_uri(), array('chihoi-main-style'), '3.0.0');
-    wp_enqueue_script('chihoi-main-script', get_template_directory_uri() . '/js/main.js', array(), '3.0.0', true);
+    wp_enqueue_style('chihoi-main-style', get_template_directory_uri() . '/css/style.css', array(), '3.2.0');
+    wp_enqueue_style('chihoi-theme-style', get_stylesheet_uri(), array('chihoi-main-style'), '3.2.0');
+    wp_enqueue_script('chihoi-main-script', get_template_directory_uri() . '/js/main.js', array(), '3.2.0', true);
 }
 add_action('wp_enqueue_scripts', 'chihoi_enqueue_scripts');
 
@@ -1288,6 +1288,15 @@ add_filter('rest_endpoints', function($endpoints) {
 add_action('template_redirect', function() {
     if (is_author()) {
         wp_redirect(home_url('/'), 301);
+        exit;
+    }
+});
+
+// 5. Tạm ẩn trang Đào Tạo CME & toàn bộ nội dung liên quan (chuyển hướng 302 về trang chủ)
+add_action('template_redirect', function() {
+    $request_uri = $_SERVER['REQUEST_URI'] ?? '';
+    if (is_page('dao-tao') || is_singular('cme_training') || is_post_type_archive('cme_training') || preg_match('#^/dao-tao(/.*)?$#i', $request_uri)) {
+        wp_redirect(home_url('/'), 302);
         exit;
     }
 });

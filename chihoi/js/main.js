@@ -966,69 +966,24 @@ window.nudgeMarquee = nudgeMarquee;
 
 
 /* ════════════════════════════════════════════════════════════════
-   HÌNH ẢNH - VIDEO SPLIT MEDIA VIEWER (VIDEO + PHOTOS)
+   HÌNH ẢNH NỔI BẬT (MEDIA VIEWER - KHÔNG VIDEO, KHÔNG TỰ ĐỘNG CHUYỂN)
 ════════════════════════════════════════════════════════════════ */
-let facilityAutoPlayInterval = null;
-let currentFacilityIdx = 1; // Start on first photo
-
-function switchFacilityByIndex(idx) {
-  const cards = document.querySelectorAll('.facility-side-card');
-  if (!cards.length) return;
-  
-  currentFacilityIdx = (idx + cards.length) % cards.length;
-  const targetCard = cards[currentFacilityIdx];
-  switchFacilityMedia(targetCard, false);
-}
-
-window.switchFacilityMedia = function(cardEl, userAction = true) {
-  const cards = Array.from(document.querySelectorAll('.facility-side-card'));
+window.switchFacilityMedia = function(cardEl) {
   if (!cardEl) return;
-  
-  const idx = cards.indexOf(cardEl);
-  if (idx !== -1) currentFacilityIdx = idx;
-
-  const type = cardEl.getAttribute('data-type');
+  const cards = Array.from(document.querySelectorAll('.facility-side-card'));
   const mainImg = document.getElementById('facility-main-img');
-  const videoWrap = document.getElementById('facility-main-video-wrap');
-  const videoIframe = document.getElementById('facility-main-video-iframe');
 
   cards.forEach(c => c.classList.remove('active'));
   cardEl.classList.add('active');
 
-  if (type === 'video') {
-    // Stop autoplay when user is viewing video
-    if (facilityAutoPlayInterval) {
-      clearInterval(facilityAutoPlayInterval);
-      facilityAutoPlayInterval = null;
-    }
-    
-    if (mainImg) mainImg.style.display = 'none';
-    if (videoWrap) videoWrap.style.display = 'block';
-    
-    const videoSrc = cardEl.getAttribute('data-video');
-    if (videoIframe && (!videoIframe.src || !videoIframe.src.includes('_3A7urkzB6I'))) {
-      videoIframe.src = videoSrc + (userAction ? '?autoplay=1' : '');
-    }
-  } else {
-    // Stop video playback if active
-    if (videoIframe) videoIframe.src = '';
-    if (videoWrap) videoWrap.style.display = 'none';
-    
-    const imgSrc = cardEl.getAttribute('data-src') || cardEl.querySelector('img')?.getAttribute('src');
-    if (mainImg && imgSrc) {
-      mainImg.style.display = 'block';
-      if (!mainImg.src.includes(imgSrc)) {
-        mainImg.classList.add('fade-out');
-        setTimeout(() => {
-          mainImg.src = imgSrc;
-          mainImg.classList.remove('fade-out');
-        }, 160);
-      }
-    }
-    
-    // Resume autoplay if user is viewing photos
-    if (userAction && !facilityAutoPlayInterval) {
-      startFacilityAutoPlay();
+  const imgSrc = cardEl.getAttribute('data-src') || cardEl.querySelector('img')?.getAttribute('src');
+  if (mainImg && imgSrc) {
+    if (!mainImg.src.includes(imgSrc)) {
+      mainImg.classList.add('fade-out');
+      setTimeout(() => {
+        mainImg.src = imgSrc;
+        mainImg.classList.remove('fade-out');
+      }, 160);
     }
   }
 
@@ -1050,36 +1005,6 @@ window.switchFacilityMedia = function(cardEl, userAction = true) {
     }
   }
 };
-
-function startFacilityAutoPlay() {
-  if (facilityAutoPlayInterval) clearInterval(facilityAutoPlayInterval);
-  facilityAutoPlayInterval = setInterval(() => {
-    // Rotate through photo slides (skip video in auto cycle so it doesn't interrupt)
-    const cards = document.querySelectorAll('.facility-side-card');
-    if (!cards.length) return;
-    let nextIdx = (currentFacilityIdx + 1) % cards.length;
-    if (cards[nextIdx].getAttribute('data-type') === 'video') {
-      nextIdx = (nextIdx + 1) % cards.length;
-    }
-    switchFacilityByIndex(nextIdx);
-  }, 4000);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const sideGrid = document.querySelector('.facilities-side-grid');
-  if (sideGrid) {
-    startFacilityAutoPlay();
-    sideGrid.addEventListener('mouseenter', () => {
-      if (facilityAutoPlayInterval) clearInterval(facilityAutoPlayInterval);
-    });
-    sideGrid.addEventListener('mouseleave', () => {
-      const activeCard = document.querySelector('.facility-side-card.active');
-      if (activeCard && activeCard.getAttribute('data-type') !== 'video') {
-        startFacilityAutoPlay();
-      }
-    });
-  }
-});
 
 /* ════════════════════════════════════════════════════════════════
    SITE SEARCH MODAL & INSTANT SEARCH ENGINE

@@ -576,27 +576,14 @@
         
         <!-- Left Big Featured Media View -->
         <div class="facilities-split__left">
-                    <div class="facilities-main-view">
+          <div class="facilities-main-view">
             <img id="facility-main-img" src="/photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội Bệnh viện Tư nhân" class="facility-main-image" style="display:block;" />
-            <div id="facility-main-video-wrap" class="facility-main-video-wrap" style="display:none;width:100%;height:100%;">
-              <iframe id="facility-main-video-iframe" src="" title="Video Chi hội Bệnh viện Tư nhân" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:none;border-radius:20px;"></iframe>
-            </div>
           </div>
         </div>
 
         <!-- Right Side Photos Grid -->
         <div class="facilities-split__right">
           <div class="facilities-side-grid">
-            
-            <!-- Video Item -->
-            <div class="facility-side-card card-video" data-type="video" data-video="https://www.youtube.com/embed/_3A7urkzB6I" onclick="switchFacilityMedia(this)">
-              <img src="/photo/hinh-anh-video/video-thumb.jpg" alt="Video Lễ Ra Mắt Chi Hội" loading="lazy" />
-              <div class="video-play-overlay">
-                <span class="video-play-icon">▶</span>
-                <span class="video-card-badge">VIDEO SỰ KIỆN</span>
-              </div>
-            </div>
-
             <div class="facility-side-card active" data-type="image" data-src="/photo/hinh-anh-video/1.jpg" onclick="switchFacilityMedia(this)">
               <img src="/photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội 1" loading="lazy" />
             </div>

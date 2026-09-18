@@ -157,7 +157,79 @@
     </div>
   </footer>
 
-  <!-- Nút cuộn về đầu trang (Scroll to top AIH style) -->
+  <!-- ========== NÚT CUỘN VỀ ĐẦU TRANG (CHUẨN AIH) ========== -->
+  <style>
+    #backToTop.back-to-top {
+      position: fixed !important;
+      right: 25px !important;
+      bottom: 35px !important;
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 9999px !important;
+      background-color: #818181 !important;
+      color: #ffffff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border: none !important;
+      outline: none !important;
+      cursor: pointer !important;
+      z-index: 99999 !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      transform: translateY(16px) !important;
+      transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  background-color 0.2s ease,
+                  box-shadow 0.2s ease !important;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16) !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+      user-select: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+    #backToTop.back-to-top svg {
+      width: 20px !important;
+      height: 20px !important;
+      display: block !important;
+      stroke: currentColor !important;
+      transition: transform 0.2s ease !important;
+      pointer-events: none !important;
+    }
+    #backToTop.back-to-top:hover {
+      background-color: #525252 !important;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important;
+      transform: translateY(-2px) !important;
+    }
+    #backToTop.back-to-top:hover svg {
+      transform: translateY(-2px) !important;
+    }
+    #backToTop.back-to-top.active {
+      opacity: 1 !important;
+      visibility: visible !important;
+      pointer-events: auto !important;
+      transform: translateY(0) !important;
+    }
+    #backToTop.back-to-top.active:hover {
+      transform: translateY(-2px) !important;
+    }
+    @media (max-width: 768px) {
+      #backToTop.back-to-top {
+        right: 18px !important;
+        bottom: 22px !important;
+        width: 40px !important;
+        height: 40px !important;
+      }
+      #backToTop.back-to-top svg {
+        width: 18px !important;
+        height: 18px !important;
+      }
+    }
+  </style>
+
   <button id="backToTop" class="back-to-top" type="button" aria-label="Về đầu trang" title="Về đầu trang">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
       <line x1="5" y1="4" x2="19" y2="4"></line>
@@ -165,6 +237,33 @@
       <line x1="12" y1="7" x2="12" y2="20"></line>
     </svg>
   </button>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('backToTop');
+      if (!btn) return;
+      var getThreshold = function() {
+        var banner = document.querySelector('.hero-banner, .hero-slider, .aih-hero-banner-section, .page-header, .page-banner, .about-hero');
+        if (banner && banner.offsetHeight > 150) {
+          return Math.max(250, banner.offsetHeight * 0.7);
+        }
+        return 300;
+      };
+      var onScroll = function() {
+        if (window.scrollY > getThreshold()) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      onScroll();
+    })();
+  </script>
 
   <?php wp_footer(); ?>
 </body>

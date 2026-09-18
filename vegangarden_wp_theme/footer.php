@@ -28,7 +28,7 @@
           <h3 class="footer-col-title">KONTAKT</h3>
           <div class="footer-contact-item">
             <i class="fa-solid fa-location-dot"></i>
-            <span><?php echo nl2br(esc_html(function_exists('vg_get_option') ? vg_get_option('address', "Frankfurter Allee 21\n10247 Berlin (Friedrichshain)") : "Frankfurter Allee 21\n10247 Berlin (Friedrichshain)")); ?></span>
+            <span><a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;" title="Auf Google Maps ansehen">Frankfurter Allee 21<br>10247 Berlin, Germany</a></span>
           </div>
           <div class="footer-contact-item">
             <i class="fa-solid fa-phone"></i>

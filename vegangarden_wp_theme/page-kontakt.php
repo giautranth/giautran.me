@@ -214,13 +214,13 @@ get_header();
 
           <div class="contact-cards-grid">
             <!-- Adresse -->
-            <div class="contact-info-card">
+            <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" class="contact-info-card" style="text-decoration: none; color: inherit;">
               <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
               <div>
                 <div class="contact-card-title">ADRESSE</div>
-                <div class="contact-card-text"><?php echo nl2br(esc_html(function_exists('vg_get_option') ? vg_get_option('address', "Frankfurter Allee 21\n10247 Berlin-Friedrichshain") : "Frankfurter Allee 21\n10247 Berlin-Friedrichshain")); ?></div>
+                <div class="contact-card-text">Frankfurter Allee 21<br>10247 Berlin, Germany</div>
               </div>
-            </div>
+            </a>
 
             <!-- Öffnungszeiten -->
             <div class="contact-info-card">

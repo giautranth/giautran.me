@@ -1026,9 +1026,12 @@ function vg_handle_reservation() {
                 <strong>Wichtiger Hinweis:</strong> Sollten sich Ihre Pläne ändern oder möchten Sie die Reservierung anpassen, kontaktieren Sie uns bitte rechtzeitig telefonisch unter <a href="tel:+493021237260" style="color:#A98224; font-weight:700; text-decoration:none;">+49 30 21237260</a> oder antworten Sie einfach direkt auf diese E-Mail.
               </div>
 
-              <div style="text-align:center; margin:26px 0 10px;">
-                <a href="' . esc_url(home_url('/#speisekarte')) . '" target="_blank" style="background-color:#A98224; color:#ffffff; font-size:13px; font-weight:700; text-decoration:none; padding:12px 24px; border-radius:8px; display:inline-block; letter-spacing:0.5px; box-shadow:0 3px 10px rgba(169, 130, 36, 0.25);">
+              <div style="text-align:center; margin:24px 0 10px;">
+                <a href="' . esc_url(home_url('/#speisekarte')) . '" target="_blank" style="background-color:#A98224; color:#ffffff; font-size:13px; font-weight:700; text-decoration:none; padding:11px 20px; border-radius:8px; display:inline-block; letter-spacing:0.5px; box-shadow:0 3px 10px rgba(169, 130, 36, 0.25); margin:4px;">
                   SPEISEKARTE ANSEHEN
+                </a>
+                <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="background-color:#2A160F; color:#C79A4A; font-size:13px; font-weight:700; text-decoration:none; padding:11px 20px; border-radius:8px; display:inline-block; letter-spacing:0.5px; border:1px solid rgba(169, 130, 36, 0.5); margin:4px;">
+                  📍 ROUTE / GOOGLE MAPS
                 </a>
               </div>
 
@@ -1044,7 +1047,7 @@ function vg_handle_reservation() {
           <tr>
             <td style="background-color:#2A160F; padding:22px 24px; text-align:center; font-size:12px; color:#C4BBB3; line-height:1.7;">
               <strong style="color:#C79A4A; font-size:14px;">Vegan Garden Berlin</strong><br>
-              Gärtnerstraße 15, 10245 Berlin (Friedrichshain)<br>
+              <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="color:#C4BBB3; text-decoration:underline;">📍 Frankfurter Allee 21, 10247 Berlin, Germany</a><br>
               Telefon: <a href="tel:+493021237260" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 30 21237260</a> &bull; E-Mail: <a href="mailto:booking@vegan-garden.berlin" style="color:#C79A4A; text-decoration:none;">booking@vegan-garden.berlin</a><br>
               Website: <a href="' . esc_url(home_url('/')) . '" target="_blank" style="color:#ffffff; text-decoration:underline; font-weight:600;">vegan-garden.berlin</a>
             </td>

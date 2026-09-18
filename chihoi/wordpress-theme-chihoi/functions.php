@@ -1292,6 +1292,15 @@ add_action('template_redirect', function() {
     }
 });
 
+// 5. Tạm ẩn trang Đào Tạo CME & toàn bộ nội dung liên quan (chuyển hướng 302 về trang chủ)
+add_action('template_redirect', function() {
+    $request_uri = $_SERVER['REQUEST_URI'] ?? '';
+    if (is_page('dao-tao') || is_singular('cme_training') || is_post_type_archive('cme_training') || preg_match('#^/dao-tao(/.*)?$#i', $request_uri)) {
+        wp_redirect(home_url('/'), 302);
+        exit;
+    }
+});
+
 // 5. Xóa các header nhạy cảm và thông tin phiên bản
 function chihoi_remove_version_strings($src) {
     global $wp_version;

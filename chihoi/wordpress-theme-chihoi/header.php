@@ -107,9 +107,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="aih-menu-item <?php echo is_page('hoi-vien') ? 'active' : ''; ?>">
             <a href="<?php echo esc_url(home_url('/hoi-vien/')); ?>" class="aih-menu-link">HỘI VIÊN</a>
           </li>
+          <?php /* Tạm ẩn menu Đào Tạo
           <li class="aih-menu-item <?php echo is_page('dao-tao') ? 'active' : ''; ?>">
             <a href="<?php echo esc_url(home_url('/dao-tao/')); ?>" class="aih-menu-link">CHƯƠNG TRÌNH ĐÀO TẠO</a>
           </li>
+          */ ?>
           <li class="aih-menu-item <?php echo is_page('tin-tuc') ? 'active' : ''; ?>">
             <a href="<?php echo esc_url(home_url('/tin-tuc/')); ?>" class="aih-menu-link">TIN TỨC</a>
           </li>

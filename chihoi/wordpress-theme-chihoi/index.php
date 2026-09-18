@@ -173,6 +173,7 @@
     </div>
   </section>
 
+  <?php /* Tạm ẩn Section 4 Đào Tạo
   <!-- ========== 4. CHƯƠNG TRÌNH ĐÀO TẠO SECTION (Nền Trắng AIH) ========== -->
   <section class="site-section">
     <div class="container">
@@ -286,9 +287,10 @@
       </div>
     </div>
   </section>
+  */ ?>
 
   <!-- ========== 5. TIN TỨC SECTION (Chuẩn Tin Tức AIH) ========== -->
-  <section class="site-section bg-subtle">
+  <section class="site-section">
     <div class="container">
       <div class="section-header-row">
         <div class="section-main-title">TIN TỨC</div>

@@ -1041,6 +1041,7 @@ document.addEventListener('DOMContentLoaded', () => {
    SITE SEARCH MODAL & INSTANT SEARCH ENGINE
 ════════════════════════════════════════════════════════════════ */
 const siteSearchData = [
+  /* Tạm ẩn đào tạo CME trong tìm kiếm
   // Đào tạo
   {
     title: "Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2",
@@ -1063,6 +1064,7 @@ const siteSearchData = [
     desc: "Chuẩn hóa kỹ năng cấp cứu ngưng tuần hoàn hô hấp cơ bản theo phác đồ quốc tế.",
     url: "dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3"
   },
+  */
   // Tin tức
   {
     title: "Ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam",

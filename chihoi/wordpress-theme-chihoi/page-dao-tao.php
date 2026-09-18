@@ -2,6 +2,9 @@
 /**
  * Template Name: Template Đào Tạo CME
  */
+// Tạm ẩn trang Đào Tạo - Chuyển hướng về trang chủ
+wp_redirect(home_url('/'), 302);
+exit;
 get_header(); ?>
 
 

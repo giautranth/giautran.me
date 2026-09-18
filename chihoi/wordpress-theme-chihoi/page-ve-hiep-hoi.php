@@ -42,6 +42,13 @@ get_header(); ?>
           Từ những ngày đầu thành lập, dưới sự dẫn dắt đầy tâm huyết của <strong>Giáo sư, Viện sĩ Danh dự Nguyễn Văn Đệ – Chủ tịch Hiệp hội Bệnh viện Tư nhân Việt Nam</strong>, Hiệp hội không ngừng khẳng định vai trò là cầu nối giữa cộng đồng y tế tư nhân với các cơ quan quản lý nhà nước; đồng hành cùng hội viên trong việc bảo vệ quyền và lợi ích hợp pháp, tham gia phản biện chính sách, thúc đẩy môi trường phát triển công bằng, minh bạch và bền vững cho y tế tư nhân Việt Nam.
         </p>
 
+        <div style="margin: 28px 0 32px; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.07); border: 1px solid #e2e8f0;">
+          <img src="/photo/hinh-anh-video/gs-nguyen-van-de.jpg" alt="Giáo sư, Viện sĩ Danh dự Nguyễn Văn Đệ – Chủ tịch Hiệp hội Bệnh viện Tư nhân Việt Nam" style="width: 100%; height: auto; display: block;" />
+          <p style="font-size: 0.92rem; color: #475569; font-style: italic; text-align: center; padding: 12px 18px; background: #f8fafc; margin: 0; border-top: 1px solid #e2e8f0; line-height: 1.5; font-weight: 500;">
+            Giáo sư, Viện sĩ Danh dự Nguyễn Văn Đệ – Chủ tịch Hiệp hội Bệnh viện Tư nhân Việt Nam
+          </p>
+        </div>
+
         <p>
           Với sự tín nhiệm của Ban Chấp hành Hiệp hội, <strong>Madam Trần Thị Lâm – Chủ tịch Sáng lập Tập đoàn Hoa Lâm</strong> được tín nhiệm giữ vai trò <strong>Phó Chủ tịch Thường trực Hiệp hội</strong>. Đây là sự ghi nhận đối với những đóng góp, tâm huyết và dấu ấn của bà trong hành trình đầu tư, phát triển y tế tư nhân, đồng thời thể hiện kỳ vọng về một tiếng nói mạnh mẽ, kết nối và đồng hành cùng cộng đồng bệnh viện tư nhân trên cả nước.
         </p>

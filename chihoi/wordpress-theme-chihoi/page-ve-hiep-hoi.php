@@ -16,7 +16,20 @@ get_header(); ?>
       
       <!-- Article Body Content -->
       <div class="ve-hiep-hoi-content">
-        
+        <?php
+        $has_custom_content = false;
+        if (have_posts()) {
+          while (have_posts()) {
+            the_post();
+            $raw_content = get_the_content();
+            if (!empty(trim(strip_tags($raw_content)))) {
+              $has_custom_content = true;
+              the_content();
+            }
+          }
+        }
+        if (!$has_custom_content) :
+        ?>
         <p>
           Sự phát triển mạnh mẽ của hệ thống y tế tư nhân trong hơn hai thập kỷ qua là kết quả từ chủ trương xã hội hóa y tế của Đảng và Nhà nước, góp phần đa dạng hóa dịch vụ khám chữa bệnh, giảm tải cho hệ thống y tế công lập và nâng cao chất lượng chăm sóc sức khỏe nhân dân.
         </p>
@@ -44,7 +57,7 @@ get_header(); ?>
         <p>
           Từ tâm huyết của những người đặt nền móng đến sự chung sức của cộng đồng hội viên, Hiệp hội đang tiếp tục viết nên hành trình kết nối – đồng hành – kiến tạo, góp phần xây dựng một nền y tế Việt Nam hiện đại, nhân văn và phát triển bền vững.
         </p>
-
+        <?php endif; ?>
       </div>
 
       <!-- ========== THÔNG TIN LIÊN HỆ HIỆP HỘI ========== -->

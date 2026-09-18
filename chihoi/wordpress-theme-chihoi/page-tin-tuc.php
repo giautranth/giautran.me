@@ -5,14 +5,17 @@
 get_header(); ?>
 
 
-<main class="site-section" style="padding: 40px 0 70px; background: #f8fafc;">
+<main class="site-section news-main-section" style="padding: 40px 0 28px; background: #f8fafc;">
   <style>
+    .news-main-section {
+      padding-bottom: 28px !important;
+    }
     /* News Archive Grid Layout: 9 articles per page (3 columns x 3 rows) */
     .news-archive-grid {
       display: grid !important;
       grid-template-columns: repeat(3, 1fr) !important;
       gap: 28px !important;
-      margin-bottom: 40px !important;
+      margin-bottom: 0 !important;
       width: 100% !important;
       box-sizing: border-box !important;
       overflow: visible !important;
@@ -186,6 +189,9 @@ get_header(); ?>
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 22px !important;
       }
+      .news-main-section {
+        padding-bottom: 22px !important;
+      }
     }
 
     @media (max-width: 680px) {
@@ -201,6 +207,9 @@ get_header(); ?>
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
+      }
+      .news-main-section {
+        padding-bottom: 18px !important;
       }
     }
   </style>

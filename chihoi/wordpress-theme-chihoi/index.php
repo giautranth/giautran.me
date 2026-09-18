@@ -11,7 +11,7 @@
           <div class="image img-cover">
             <picture>
               <source media="(max-width: 767.98px)" srcset="photo/banner/2.png">
-              <img src="photo/banner/1.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Lễ ra mắt Ban Chấp hành" class="banner-img" fetchpriority="high">
+              <img src="/photo/banner/1.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Lễ ra mắt Ban Chấp hành" class="banner-img" fetchpriority="high">
             </picture>
           </div>
         </div>
@@ -21,7 +21,7 @@
           <div class="image img-cover">
             <picture>
               <source media="(max-width: 767.98px)" srcset="photo/banner/3.png">
-              <img src="photo/banner/5.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Đoàn kết Hợp tác Phát triển" class="banner-img">
+              <img src="/photo/banner/5.png" alt="Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam - Đoàn kết Hợp tác Phát triển" class="banner-img">
             </picture>
           </div>
         </div>
@@ -65,102 +65,102 @@
           <div class="infinite-marquee-track" id="marqueeTrackLane1">
             <!-- Set 1: Tất cả 16 Logo Bệnh viện Hội viên -->
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Bệnh viện FV">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
+              <img src="/photo/logo/fv.png" alt="Bệnh viện FV" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Phương Nam">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
+              <img src="/photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
+              <img src="/photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Vinmec Central Park">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
+              <img src="/photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Columbia Asia">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
+              <img src="/photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
             </div>
             <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ">
-              <img src="photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
+              <img src="/photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Minh Anh">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
+              <img src="/photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Hoàn Mỹ">
-              <img src="photo/logo/hoanmy.webp" alt="Bệnh viện Hoàn Mỹ" />
+              <img src="/photo/logo/hoanmy.webp" alt="Bệnh viện Hoàn Mỹ" />
             </div>
             <div class="member-partner-card" title="Đại học Quốc tế Hồng Bàng">
-              <img src="photo/logo/hongbang.png" alt="Đại học Quốc tế Hồng Bàng" />
+              <img src="/photo/logo/hongbang.png" alt="Đại học Quốc tế Hồng Bàng" />
             </div>
             <div class="member-partner-card" title="Trung tâm Y khoa Medic - Hòa Hảo">
-              <img src="photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
+              <img src="/photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Sài Gòn ITO">
-              <img src="photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
+              <img src="/photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Đa khoa Tân Hưng">
-              <img src="photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
+              <img src="/photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Triều An">
-              <img src="photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
+              <img src="/photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Việt Mỹ">
-              <img src="photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
+              <img src="/photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
             </div>
 
             <!-- Set 2: Duplicate lặp vô tận (32 thẻ liên tục) -->
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Bệnh viện FV" aria-hidden="true">
-              <img src="photo/logo/fv.png" alt="Bệnh viện FV" />
+              <img src="/photo/logo/fv.png" alt="Bệnh viện FV" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Phương Nam" aria-hidden="true">
-              <img src="photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
+              <img src="/photo/logo/phuongnam.png" alt="Bệnh viện Phương Nam" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Nam Sài Gòn" aria-hidden="true">
-              <img src="photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
+              <img src="/photo/logo/namsaigon.jpg" alt="Bệnh viện Nam Sài Gòn" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Vinmec Central Park" aria-hidden="true">
-              <img src="photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
+              <img src="/photo/logo/vinmec.png" alt="Bệnh viện Vinmec Central Park" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Columbia Asia" aria-hidden="true">
-              <img src="photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
+              <img src="/photo/logo/colombia.png" alt="Bệnh viện Columbia Asia" />
             </div>
             <div class="member-partner-card" title="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" aria-hidden="true">
-              <img src="photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
+              <img src="/photo/logo/sis.png" alt="Bệnh viện ĐK Quốc tế S.I.S Cần Thơ" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Minh Anh" aria-hidden="true">
-              <img src="photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
+              <img src="/photo/logo/minhanh.png" alt="Bệnh viện Minh Anh" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Hoàn Mỹ" aria-hidden="true">
-              <img src="photo/logo/hoanmy.webp" alt="Bệnh viện Hoàn Mỹ" />
+              <img src="/photo/logo/hoanmy.webp" alt="Bệnh viện Hoàn Mỹ" />
             </div>
             <div class="member-partner-card" title="Đại học Quốc tế Hồng Bàng" aria-hidden="true">
-              <img src="photo/logo/hongbang.png" alt="Đại học Quốc tế Hồng Bàng" />
+              <img src="/photo/logo/hongbang.png" alt="Đại học Quốc tế Hồng Bàng" />
             </div>
             <div class="member-partner-card" title="Trung tâm Y khoa Medic - Hòa Hảo" aria-hidden="true">
-              <img src="photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
+              <img src="/photo/logo/medic.webp" alt="Trung tâm Y khoa Medic - Hòa Hảo" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Sài Gòn ITO" aria-hidden="true">
-              <img src="photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
+              <img src="/photo/logo/saigon-iot.jpg" alt="Bệnh viện Sài Gòn ITO" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Đa khoa Tân Hưng" aria-hidden="true">
-              <img src="photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
+              <img src="/photo/logo/tanhung.png" alt="Bệnh viện Đa khoa Tân Hưng" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Triều An" aria-hidden="true">
-              <img src="photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
+              <img src="/photo/logo/trieuan.png" alt="Bệnh viện Triều An" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Việt Mỹ" aria-hidden="true">
-              <img src="photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
+              <img src="/photo/logo/vietmy.png" alt="Bệnh viện Việt Mỹ" />
             </div>
           </div>
         </div>
@@ -199,9 +199,9 @@
         <div class="training-cards-grid" id="training-cards-grid">
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2 -->
         <div class="cme-training-card" data-category="chieu-sinh">
-          <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
+          <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
             <div class="cme-card-thumb-wrap">
-              <img src="photo/dao-tao/13.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2" class="cme-card-thumb-img" />
+              <img src="/photo/dao-tao/13.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2" class="cme-card-thumb-img" />
             </div>
           </a>
           <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
@@ -213,20 +213,20 @@
                 </span>
               </div>
               <h3 class="cme-card-title" style="font-size:1.04rem;font-weight:700;color:#111827;line-height:1.6;text-align:justify;margin-bottom:0;">
-                <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2</a>
+                <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Tăng cường năng lực quản lý điều dưỡng – Khóa 2</a>
               </h3>
             </div>
             <div class="cme-card-footer">
-              <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
+              <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-tang-cuong-nang-luc-quan-ly-dieu-duong-khoa-2" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
             </div>
           </div>
         </div>
 
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4 -->
         <div class="cme-training-card" data-category="chieu-sinh">
-          <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
+          <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
             <div class="cme-card-thumb-wrap">
-              <img src="photo/dao-tao/11.png" alt="Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4" class="cme-card-thumb-img" />
+              <img src="/photo/dao-tao/11.png" alt="Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4" class="cme-card-thumb-img" />
             </div>
           </a>
           <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
@@ -238,20 +238,20 @@
                 </span>
               </div>
               <h3 class="cme-card-title" style="font-size:1.04rem;font-weight:700;color:#111827;line-height:1.6;text-align:justify;margin-bottom:0;">
-                <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4</a>
+                <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo cập nhật kiến thức y khoa liên tục (CME) – An toàn người bệnh – Khóa 4</a>
               </h3>
             </div>
             <div class="cme-card-footer">
-              <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
+              <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-cap-nhat-kien-thuc-y-khoa-lien-tuc-cme-an-toan-nguoi-benh-khoa-4" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
             </div>
           </div>
         </div>
 
         <!-- Card: Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3 -->
         <div class="cme-training-card" data-category="chieu-sinh">
-          <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
+          <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" class="cme-card-thumb-link" style="display:block;text-decoration:none;">
             <div class="cme-card-thumb-wrap">
-              <img src="photo/dao-tao/12.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3" class="cme-card-thumb-img" />
+              <img src="/photo/dao-tao/12.png" alt="Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3" class="cme-card-thumb-img" />
             </div>
           </a>
           <div class="cme-card-body" style="padding:16px 18px 14px;display:flex;flex-direction:column;justify-content:space-between;background:#ffffff;">
@@ -263,11 +263,11 @@
                 </span>
               </div>
               <h3 class="cme-card-title" style="font-size:1.04rem;font-weight:700;color:#111827;line-height:1.6;text-align:justify;margin-bottom:0;">
-                <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3</a>
+                <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" style="color:#111827;text-decoration:none;transition:color 0.2s;">Thông báo chiêu sinh khóa Đào tạo liên tục (CME) – Hồi sinh tim phổi cơ bản – Khóa 3</a>
               </h3>
             </div>
             <div class="cme-card-footer">
-              <a href="dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
+              <a href="/dao-tao/thong-bao-chieu-sinh-khoa-dao-tao-lien-tuc-cme-hoi-sinh-tim-phoi-co-ban-khoa-3" class="link-read-more" style="font-weight:700;color:#2C3691;text-decoration:none;">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -313,60 +313,60 @@
         <div class="news-cards-grid" id="news-cards-grid">
         <!-- Card 1: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội -->
         <div class="news-article-card" data-category="chi-hoi">
-          <a href="tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" class="news-card-thumbnail-wrap" style="display:block;">
-            <img src="photo/news/news-cih-madam-lam.webp" alt="Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội" class="news-thumbnail-img" />
+          <a href="/tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" class="news-card-thumbnail-wrap" style="display:block;">
+            <img src="/photo/news/news-cih-madam-lam.webp" alt="Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội" class="news-thumbnail-img" />
           </a>
           <div class="news-card-body">
             <div>
               <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>21/07/2026</div>
               <h3 class="news-card-title">
-                <a href="tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" style="color:inherit;text-decoration:none;">
+                <a href="/tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" style="color:inherit;text-decoration:none;">
                   Kết nối sức mạnh y tế tư nhân phía Nam: Madam Trần Thị Lâm giữ vai trò Chủ tịch Chi hội
                 </a>
               </h3>
             </div>
             <div class="news-card-footer">
-              <a href="tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" class="link-read-more">Xem thêm →</a>
+              <a href="/tin-tuc/ket-noi-suc-manh-y-te-tu-nhan-phia-nam/" class="link-read-more">Xem thêm →</a>
             </div>
           </div>
         </div>
 
         <!-- Card 2: Ra mắt Ban Chấp hành Chi hội -->
         <div class="news-article-card" data-category="su-kien">
-          <a href="tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" class="news-card-thumbnail-wrap" style="display:block;">
-            <img src="photo/news/news-cih-ra-mat-bch.webp" alt="Ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM" class="news-thumbnail-img" />
+          <a href="/tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" class="news-card-thumbnail-wrap" style="display:block;">
+            <img src="/photo/news/news-cih-ra-mat-bch.webp" alt="Ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM" class="news-thumbnail-img" />
           </a>
           <div class="news-card-body">
             <div>
               <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>19/08/2026</div>
               <h3 class="news-card-title">
-                <a href="tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" style="color:inherit;text-decoration:none;">
+                <a href="/tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" style="color:inherit;text-decoration:none;">
                   Ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam
                 </a>
               </h3>
             </div>
             <div class="news-card-footer">
-              <a href="tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" class="link-read-more">Xem thêm →</a>
+              <a href="/tin-tuc/ra-mat-ban-chap-hanh-chi-hoi-benh-vien-tu-nhan-tp-hcm/" class="link-read-more">Xem thêm →</a>
             </div>
           </div>
         </div>
 
         <!-- Card 3: Diễn đàn Phát triển Y tế tư nhân Việt Nam năm 2026 -->
         <div class="news-article-card" data-category="su-kien">
-          <a href="tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" class="news-card-thumbnail-wrap" style="display:block;">
-            <img src="photo/news/news-dien-dan-y-te-2026.jpg" alt="Diễn đàn Phát triển Y tế tư nhân Việt Nam năm 2026" class="news-thumbnail-img" />
+          <a href="/tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" class="news-card-thumbnail-wrap" style="display:block;">
+            <img src="/photo/news/news-dien-dan-y-te-2026.jpg" alt="Diễn đàn Phát triển Y tế tư nhân Việt Nam năm 2026" class="news-thumbnail-img" />
           </a>
           <div class="news-card-body">
             <div>
               <div class="news-publish-date"><svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>21/08/2026</div>
               <h3 class="news-card-title">
-                <a href="tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" style="color:inherit;text-decoration:none;">
+                <a href="/tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" style="color:inherit;text-decoration:none;">
                   Diễn đàn phát triển y tế tư nhân Việt Nam năm 2026 (lần thứ II) thành công tốt đẹp
                 </a>
               </h3>
             </div>
             <div class="news-card-footer">
-              <a href="tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" class="link-read-more">Xem thêm →</a>
+              <a href="/tin-tuc/dien-dan-phat-trien-y-te-tu-nhan-viet-nam-2026/" class="link-read-more">Xem thêm →</a>
             </div>
           </div>
         </div>
@@ -399,7 +399,7 @@
         <!-- Left Big Featured Media View -->
         <div class="facilities-split__left">
           <div class="facilities-main-view">
-            <img id="facility-main-img" src="photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội Bệnh viện Tư nhân" class="facility-main-image" style="display:block;" />
+            <img id="facility-main-img" src="/photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội Bệnh viện Tư nhân" class="facility-main-image" style="display:block;" />
             <div id="facility-main-video-wrap" class="facility-main-video-wrap" style="display:none;width:100%;height:100%;">
               <iframe id="facility-main-video-iframe" src="" title="Video Chi hội Bệnh viện Tư nhân" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:none;border-radius:20px;"></iframe>
             </div>
@@ -412,59 +412,59 @@
             
             <!-- Video Item -->
             <div class="facility-side-card card-video" data-type="video" data-video="https://www.youtube.com/embed/_3A7urkzB6I" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/video-thumb.jpg" alt="Video Lễ Ra Mắt Chi Hội" loading="lazy" />
+              <img src="/photo/hinh-anh-video/video-thumb.jpg" alt="Video Lễ Ra Mắt Chi Hội" loading="lazy" />
               <div class="video-play-overlay">
                 <span class="video-play-icon">▶</span>
                 <span class="video-card-badge">VIDEO SỰ KIỆN</span>
               </div>
             </div>
 
-            <div class="facility-side-card active" data-type="image" data-src="photo/hinh-anh-video/1.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội 1" loading="lazy" />
+            <div class="facility-side-card active" data-type="image" data-src="/photo/hinh-anh-video/1.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/1.jpg" alt="Hình ảnh Chi hội 1" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/2.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/2.jpg" alt="Hình ảnh Chi hội 2" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/2.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/2.jpg" alt="Hình ảnh Chi hội 2" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/3.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/3.jpg" alt="Hình ảnh Chi hội 3" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/3.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/3.jpg" alt="Hình ảnh Chi hội 3" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/4.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/4.jpg" alt="Hình ảnh Chi hội 4" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/4.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/4.jpg" alt="Hình ảnh Chi hội 4" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/5.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/5.jpg" alt="Hình ảnh Chi hội 5" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/5.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/5.jpg" alt="Hình ảnh Chi hội 5" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/6.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/6.jpg" alt="Hình ảnh Chi hội 6" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/6.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/6.jpg" alt="Hình ảnh Chi hội 6" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/7.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/7.jpg" alt="Hình ảnh Chi hội 7" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/7.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/7.jpg" alt="Hình ảnh Chi hội 7" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/8.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/8.jpg" alt="Hình ảnh Chi hội 8" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/8.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/8.jpg" alt="Hình ảnh Chi hội 8" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/9.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/9.jpg" alt="Hình ảnh Chi hội 9" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/9.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/9.jpg" alt="Hình ảnh Chi hội 9" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/10.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/10.jpg" alt="Hình ảnh Chi hội 10" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/10.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/10.jpg" alt="Hình ảnh Chi hội 10" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/11.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/11.jpg" alt="Hình ảnh Chi hội 11" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/11.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/11.jpg" alt="Hình ảnh Chi hội 11" loading="lazy" />
             </div>
 
-            <div class="facility-side-card" data-type="image" data-src="photo/hinh-anh-video/12.jpg" onclick="switchFacilityMedia(this)">
-              <img src="photo/hinh-anh-video/12.jpg" alt="Hình ảnh Chi hội 12" loading="lazy" />
+            <div class="facility-side-card" data-type="image" data-src="/photo/hinh-anh-video/12.jpg" onclick="switchFacilityMedia(this)">
+              <img src="/photo/hinh-anh-video/12.jpg" alt="Hình ảnh Chi hội 12" loading="lazy" />
             </div>
 
           </div>
@@ -491,102 +491,102 @@
           <div class="infinite-marquee-track" id="marqueeTrackPartner">
             <!-- Set 1 (Continuous Seamless Stream) -->
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
 
             <!-- Set 2 (Seamless Loop Duplicate) -->
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm" aria-hidden="true">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm" aria-hidden="true">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm" aria-hidden="true">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
             <div class="member-partner-card" title="Tập đoàn Hoa Lâm" aria-hidden="true">
-              <img src="photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
+              <img src="/photo/doitac/logo_hoalam.png" alt="Tập đoàn Hoa Lâm" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Gia An 115" aria-hidden="true">
-              <img src="photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
+              <img src="/photo/logo/giaan115-.jpg" alt="Bệnh viện Gia An 115" />
             </div>
             <div class="member-partner-card" title="Bệnh viện Quốc tế City" aria-hidden="true">
-              <img src="photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
+              <img src="/photo/logo/CIH.png" alt="Bệnh viện Quốc tế City" />
             </div>
             <div class="member-partner-card" title="Ngân hàng Vietbank" aria-hidden="true">
-              <img src="photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
+              <img src="/photo/doitac/logo_vietbank.jpg" alt="Ngân hàng Vietbank" />
             </div>
           </div>
         </div>

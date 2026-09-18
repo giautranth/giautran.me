@@ -50,8 +50,8 @@
     "@type": "MedicalOrganization",
     "name": "Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh phía Nam",
     "alternateName": "Chi hội Bệnh viện Tư nhân TP.HCM",
-    "url": "https://chihoibenhvien.com/",
-    "logo": "https://chihoibenhvien.com/photo/logo/chihoi_2.png",
+    "url": "<?php echo esc_url(home_url('/')); ?>",
+    "logo": "<?php echo esc_url(home_url('/photo/logo/chihoi_2.png')); ?>",
     "telephone": "1900 8146",
     "address": {
       "@type": "PostalAddress",

@@ -14,7 +14,7 @@ get_header(); ?>
         <!-- Cột trái: Hình ảnh flycam & các thẻ thông tin -->
         <div class="contact-left-col">
           <!-- 1. Hình ảnh flycam bệnh viện Gia An 115 & Khu Y tế kỹ thuật cao -->
-          <img src="photo/giaan/flycam.jpg" alt="Văn phòng Chi hội Bệnh viện Tư nhân Phía Nam" class="contact-banner-img" loading="lazy" />
+          <img src="/photo/giaan/flycam.jpg" alt="Văn phòng Chi hội Bệnh viện Tư nhân Phía Nam" class="contact-banner-img" loading="lazy" />
           
           <!-- 2. Thẻ Địa chỉ -->
           <div class="contact-card-white">

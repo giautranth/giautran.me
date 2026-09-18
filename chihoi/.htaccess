@@ -64,6 +64,13 @@ Options -Indexes
 # ==============================================================================
 # CHUYỂN HƯỚNG HTTPS & CLEAN URLS
 # ==============================================================================
+# 1. Chuyển hướng 301 toàn bộ tên miền cũ sang tên miền mới (HTTP & HTTPS)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^(www\.)?chihoibenhvien\.com$ [NC]
+    RewriteRule ^(.*)$ https://chihoibenhvientu.com.vn/$1 [R=301,L]
+</IfModule>
+
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -73,18 +80,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-# BEGIN cPanel-generated php ini directives, do not edit
-<IfModule php7_module>
-   php_value error_log "/home/chihoibe6a98/logs/php.error.log"
-   php_flag log_errors On
-</IfModule>
-<IfModule lsapi_module>
-   php_value error_log "/home/chihoibe6a98/logs/php.error.log"
-   php_flag log_errors On
-</IfModule>
-# END cPanel-generated php ini directives, do not edit
 
 # BEGIN WordPress
+# Các nội dung nằm giữa "BEGIN WordPress" và "END WordPress" được tạo ra tự động, và chỉ nên được thay đổi thông qua các filter của WordPress. Mọi thay đổi tới thành phần này có thể sẽ bị mất và ghi đè.
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -94,4 +92,19 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
+
 # END WordPress
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_value error_log "/home/chihoibe6a98/logs/php.error.log"
+   php_flag log_errors On
+</IfModule>
+<IfModule lsapi_module>
+   php_value error_log "/home/chihoibe6a98/logs/php.error.log"
+   php_flag log_errors On
+</IfModule>
+# END cPanel-generated php ini directives, do not edit

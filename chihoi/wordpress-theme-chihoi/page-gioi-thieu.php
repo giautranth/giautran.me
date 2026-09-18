@@ -93,7 +93,7 @@
         <div>
           <div class="about-photo-card">
             <div class="photo-img-wrapper">
-              <img src="photo/news/event-photo-1.webp" alt="Lễ ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân phía Nam" />
+              <img src="/photo/news/event-photo-1.webp" alt="Lễ ra mắt Ban Chấp hành Chi hội Bệnh viện Tư nhân phía Nam" />
             </div>
             <div class="about-photo-caption">
               <strong>Lễ ra mắt Ban Chấp hành Chi hội Nhiệm kỳ 2026 – 2029</strong>

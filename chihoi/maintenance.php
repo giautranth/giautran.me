@@ -4,6 +4,7 @@
  * Chi hội Bệnh viện Tư nhân TP.HCM và các tỉnh, thành phía Nam
  */
 if (!defined('ABSPATH')) exit;
+header('X-Robots-Tag: noindex, nofollow, noarchive', true);
 
 $options = get_option('chihoi_theme_options', array());
 $title = !empty($options['maintenance_title']) ? $options['maintenance_title'] : 'WEBSITE ĐANG TRONG QUÁ TRÌNH XÂY DỰNG';
@@ -18,6 +19,10 @@ $address = chihoi_get_option('footer_address', 'Số 5 Đường 17A, P. An Lạ
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Chặn triệt để Google Index -->
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="googlebot" content="noindex, nofollow, noarchive" />
+
   <title><?php echo esc_html($title); ?> - Chi hội Bệnh viện Tư nhân TP.HCM</title>
   
   <!-- Favicon -->

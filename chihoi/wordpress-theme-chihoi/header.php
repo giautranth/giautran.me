@@ -97,13 +97,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li class="aih-menu-item <?php echo is_front_page() ? 'active' : ''; ?>">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="aih-menu-link <?php echo is_front_page() ? 'active' : ''; ?>">TRANG CHỦ</a>
           </li>
-          <li class="aih-menu-item has-dropdown <?php echo is_page(array('ve-hiep-hoi', 've-chi-hoi', 'ban-chap-hanh', 'gioi-thieu')) ? 'active' : ''; ?>">
+          <li class="aih-menu-item has-dropdown <?php echo is_page(array('ve-hiep-hoi', 've-chi-hoi', 'gioi-thieu')) ? 'active' : ''; ?>">
             <a href="javascript:void(0)" class="aih-menu-link">GIỚI THIỆU</a>
             <ul class="dropdown-menu-list">
               <li class="dropdown-item"><a href="<?php echo esc_url(home_url('/ve-hiep-hoi/')); ?>">VỀ HIỆP HỘI</a></li>
               <li class="dropdown-item"><a href="<?php echo esc_url(home_url('/ve-chi-hoi/')); ?>">VỀ CHI HỘI</a></li>
-              <li class="dropdown-item"><a href="<?php echo esc_url(home_url('/ban-chap-hanh/')); ?>">BAN CHẤP HÀNH</a></li>
             </ul>
+          </li>
+          <li class="aih-menu-item <?php echo is_page('ban-chap-hanh') ? 'active' : ''; ?>">
+            <a href="<?php echo esc_url(home_url('/ban-chap-hanh/')); ?>" class="aih-menu-link <?php echo is_page('ban-chap-hanh') ? 'active' : ''; ?>">BAN CHẤP HÀNH</a>
           </li>
           <li class="aih-menu-item <?php echo is_page('hoi-vien') ? 'active' : ''; ?>">
             <a href="<?php echo esc_url(home_url('/hoi-vien/')); ?>" class="aih-menu-link">HỘI VIÊN</a>

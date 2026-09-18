@@ -439,11 +439,11 @@
         }
         .section-slider-container.news-slider-container .section-slider-arrow.prev,
         .section-news-home .section-slider-arrow.prev {
-          left: -10px !important;
+          left: -19px !important;
         }
         .section-slider-container.news-slider-container .section-slider-arrow.next,
         .section-news-home .section-slider-arrow.next {
-          right: -10px !important;
+          right: -19px !important;
         }
       }
     </style>

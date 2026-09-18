@@ -2631,11 +2631,11 @@ body {
   }
   .section-slider-container.news-slider-container .section-slider-arrow.prev,
   .section-news-home .section-slider-arrow.prev {
-    left: -10px !important;
+    left: -19px !important;
   }
   .section-slider-container.news-slider-container .section-slider-arrow.next,
   .section-news-home .section-slider-arrow.next {
-    right: -10px !important;
+    right: -19px !important;
   }
 }
 
@@ -2670,6 +2670,8 @@ body {
 
 @media (max-width: 768px) {
   /* Single Box Slider on Mobile for Training, News, and Video */
+  .section-slider-container .training-cards-grid,
+  .section-slider-container .news-cards-grid,
   .training-cards-grid,
   .news-cards-grid,
   .video-grid-2col {

@@ -914,32 +914,254 @@ function vg_handle_reservation() {
         update_post_meta($post_id, '_res_ip', $ip);
         update_post_meta($post_id, '_res_created', current_time('mysql'));
 
-        // Send email notification to restaurant admin
-        $to      = 'giautranth@gmail.com';
-        $subject = sprintf('[Vegan Garden] Neue Reservierung: %s, %s %s (%d Pers.)', $name, $date_formatted, $time, $guests);
-        $body    = sprintf(
-            "Neue Tischreservierung im Vegan Garden Berlin:\n\n" .
-            "Name: %s\n" .
-            "Telefon: %s\n" .
-            "E-Mail: %s\n" .
-            "Datum: %s\n" .
-            "Uhrzeit: %s Uhr\n" .
-            "Personen: %d\n" .
-            "Anmerkung: %s\n\n" .
-            "---\n" .
-            "Reservierung im WordPress-Admin verwalten: %s",
-            $name, $phone, ($email ?: '—'), $date_formatted, $time, $guests,
-            ($note ?: '—'),
-            admin_url('edit.php?post_type=vg_reservation')
-        );
-        $headers = array(
-            'Content-Type: text/plain; charset=UTF-8',
-            'From: Vegan Garden Berlin <booking@vegan-garden.berlin>',
-            'Reply-To: ' . ($email ?: 'booking@vegan-garden.berlin')
-        );
-        wp_mail($to, $subject, $body, $headers);
+        // Common email assets
+        $guest_str = $guests === 1 ? '1 Person' : $guests . ' Personen';
+        $logo_url  = esc_url(home_url('/logo/VN-02.png?v=20260918_noborder'));
+        $created_at = current_time('d.m.Y, H:i') . ' Uhr';
 
-        // Send branded confirmation email to customer
+        // Clean phone for tel: and WhatsApp
+        $phone_digits = preg_replace('/[^0-9]/', '', $phone);
+        $phone_tel    = preg_replace('/[^0-9\+]/', '', $phone);
+        if (strpos($phone_digits, '0') === 0 && strlen($phone_digits) >= 10) {
+            $phone_wa = '49' . substr($phone_digits, 1);
+        } else {
+            $phone_wa = $phone_digits;
+        }
+
+        $admin_note_row = '';
+        if (!empty($note)) {
+            $admin_note_row = '<tr><td style="padding:8px 16px 10px; font-size:14px; color:#6A625A; vertical-align:top; border-top:1px solid #ECE4D8;">Anmerkung:</td><td class="vg-res-val" style="padding:8px 16px 10px; font-size:14px; color:#211A16; border-top:1px solid #ECE4D8; font-style:italic;">' . esc_html($note) . '</td></tr>';
+        } else {
+            $admin_note_row = '<tr><td style="padding:8px 16px 10px; font-size:14px; color:#6A625A; vertical-align:top; border-top:1px solid #ECE4D8;">Anmerkung:</td><td class="vg-res-val" style="padding:8px 16px 10px; font-size:14px; color:#8C8074; border-top:1px solid #ECE4D8; font-style:italic;">Keine besonderen Anmerkungen angegeben.</td></tr>';
+        }
+
+        $wa_link_html = '';
+        if (!empty($phone_wa)) {
+            $wa_link_html = ' &bull; <a href="https://wa.me/' . esc_attr($phone_wa) . '" target="_blank" rel="noopener" class="vg-res-link-wa" style="color:#A98224; font-size:12px; font-weight:700; text-decoration:none;">💬 WhatsApp</a>';
+        }
+
+        $admin_manage_url = esc_url(admin_url('post.php?post=' . $post_id . '&action=edit'));
+
+        // ============================================
+        // 1. BRANDED HTML EMAIL NOTIFICATION TO ADMIN
+        // ============================================
+        $admin_to      = 'giautranth@gmail.com';
+        $admin_subject = sprintf('🔔 [Vegan Garden] Neue Reservierung: %s — %s um %s Uhr (%s)', $name, $date_formatted, $time, $guest_str);
+
+        $admin_html = '<!DOCTYPE html>
+<html lang="de" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>' . esc_html($admin_subject) . '</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    supported-color-schemes: light dark;
+  }
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  u + #body a, #MessageViewBody a {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+  @media (prefers-color-scheme: dark) {
+    .vg-email-wrapper { background-color: #160E0A !important; }
+    .vg-card-container {
+      background-color: #221711 !important;
+      border-color: rgba(169, 130, 36, 0.4) !important;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+    }
+    .vg-body-cell { background-color: #221711 !important; }
+    .vg-text-h2 { color: #FAF4E8 !important; }
+    .vg-text-intro { color: #E2DACD !important; }
+    .vg-text-intro strong { color: #FFFFFF !important; }
+    .vg-res-card {
+      background-color: #2A1D16 !important;
+      border-color: #3D2D22 !important;
+      border-left-color: #A98224 !important;
+    }
+    .vg-res-card-title {
+      border-bottom-color: #3D2D22 !important;
+      color: #C79A4A !important;
+    }
+    .vg-res-label { color: #A89D92 !important; }
+    .vg-res-val { color: #FAF4E8 !important; }
+    .vg-res-link { color: #FAF4E8 !important; text-decoration: none !important; }
+    .vg-res-link-wa { color: #C79A4A !important; }
+    .vg-footer-cell { background-color: #1A110D !important; }
+    .vg-meta-row { color: #8C8074 !important; border-top-color: #3D2D22 !important; }
+  }
+  [data-ogsc] .vg-email-wrapper { background-color: #160E0A !important; }
+  [data-ogsc] .vg-card-container { background-color: #221711 !important; border-color: rgba(169, 130, 36, 0.4) !important; }
+  [data-ogsc] .vg-body-cell { background-color: #221711 !important; }
+  [data-ogsc] .vg-text-h2 { color: #FAF4E8 !important; }
+  [data-ogsc] .vg-text-intro { color: #E2DACD !important; }
+  [data-ogsc] .vg-text-intro strong { color: #FFFFFF !important; }
+  [data-ogsc] .vg-res-card { background-color: #2A1D16 !important; border-color: #3D2D22 !important; }
+  [data-ogsc] .vg-res-card-title { color: #C79A4A !important; }
+  [data-ogsc] .vg-res-label { color: #A89D92 !important; }
+  [data-ogsc] .vg-res-val { color: #FAF4E8 !important; }
+  [data-ogsc] .vg-res-link { color: #FAF4E8 !important; }
+  [data-ogsc] .vg-res-link-wa { color: #C79A4A !important; }
+  [data-ogsc] .vg-footer-cell { background-color: #1A110D !important; }
+  [data-ogsc] .vg-meta-row { color: #8C8074 !important; border-top-color: #3D2D22 !important; }
+</style>
+</head>
+<body id="body" class="vg-email-wrapper" style="margin:0; padding:0; background-color:#F6F1E7; font-family:-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; color:#211A16;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="vg-email-wrapper" style="background-color:#F6F1E7; padding:30px 12px;">
+    <tr>
+      <td align="center">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="580"><tr><td align="center" valign="top">
+        <![endif]-->
+        <table role="presentation" width="100%" class="vg-card-container" style="max-width:580px; background-color:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 8px 30px rgba(42, 22, 15, 0.12); border:1px solid rgba(169, 130, 36, 0.28);" cellspacing="0" cellpadding="0" border="0">
+          
+          <!-- BRAND HEADER -->
+          <tr>
+            <td class="vg-header-cell" style="background-color:#2A160F; background-image:linear-gradient(#2A160F, #2A160F); padding:30px 24px 24px; text-align:center; border-bottom:3px solid #A98224;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center">
+                    <img src="' . $logo_url . '" alt="Vegan Garden Berlin" width="220" style="display:block; max-width:220px; width:100%; height:auto; border:none; outline:none; text-decoration:none; margin:0 auto;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-top:14px;">
+                    <div style="display:inline-block; background-color:#A98224; background-image:linear-gradient(#A98224, #A98224); color:#ffffff; font-size:11px; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; padding:4px 14px; border-radius:20px;">
+                      🔔 NEUE RESERVIERUNGSANFRAGE
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- BODY CONTENT -->
+          <tr>
+            <td class="vg-body-cell" style="padding:32px 28px 24px; background-color:#ffffff;">
+              <h2 class="vg-text-h2" style="color:#2A160F; font-size:21px; font-weight:700; margin:0 0 10px 0; font-family:Georgia, serif;">Neue Tischreservierung eingegangen!</h2>
+              <p class="vg-text-intro" style="font-size:15px; line-height:1.6; color:#4A4036; margin:0 0 20px 0;">
+                Hallo <strong>Admin</strong>,<br>
+                soeben ist eine neue Tischreservierungsanfrage über die Website eingegangen. Bitte prüfen Sie die Angaben und reservieren Sie rechtzeitig den Tisch:
+              </p>
+
+              <!-- RESERVATION CARD -->
+              <table role="presentation" width="100%" class="vg-res-card" style="background-color:#FBF9F5; border:1px solid #ECE4D8; border-left:4px solid #A98224; border-radius:8px; margin:22px 0;" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td colspan="2" class="vg-res-card-title" style="border-bottom:1px solid #ECE4D8; padding:12px 16px; font-weight:700; font-size:13px; color:#A98224; text-transform:uppercase; letter-spacing:1px;">
+                    📋 Kundendaten &amp; Buchungsdetails
+                  </td>
+                </tr>
+                <tr>
+                  <td width="36%" class="vg-res-label" style="padding:11px 16px 6px; font-size:14px; color:#6A625A;">Kunde:</td>
+                  <td class="vg-res-val" style="padding:11px 16px 6px; font-size:15px; font-weight:700; color:#2A160F;">' . esc_html($name) . '</td>
+                </tr>
+                <tr>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">Datum:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($date_formatted) . '</td>
+                </tr>
+                <tr>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">Uhrzeit:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; font-weight:700; color:#8F6D1E;">' . esc_html($time) . ' Uhr</td>
+                </tr>
+                <tr>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">Personen:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($guest_str) . '</td>
+                </tr>
+                <tr>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">Telefon:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; color:#211A16;">
+                    <a href="tel:' . esc_attr($phone_tel) . '" class="vg-res-link" style="color:#211A16; text-decoration:none; font-weight:600;">' . esc_html($phone) . '</a>' . $wa_link_html . '
+                  </td>
+                </tr>
+                <tr>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">E-Mail:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; color:#211A16;">
+                    ' . (!empty($email) ? '<a href="mailto:' . esc_attr($email) . '" class="vg-res-link" style="color:#211A16; text-decoration:none;">' . esc_html($email) . '</a>' : '<span style="color:#8C8074;">—</span>') . '
+                  </td>
+                </tr>
+                ' . $admin_note_row . '
+              </table>
+
+              <!-- QUICK ACTION BUTTONS -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:26px 0 10px;">
+                <tr>
+                  <td align="center">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td align="center" style="padding:5px 6px;">
+                          <a href="' . $admin_manage_url . '" target="_blank" rel="noopener" style="background-color:#8F6D1E; background-image:linear-gradient(#8F6D1E, #8F6D1E); color:#ffffff !important; font-size:13px; font-weight:700; text-decoration:none; padding:12px 24px; border-radius:24px; display:inline-block; letter-spacing:0.5px; box-shadow:0 4px 14px rgba(143, 109, 30, 0.3);">
+                            ⚙️ IN WORDPRESS VERWALTEN
+                          </a>
+                        </td>
+                        ' . (!empty($phone_tel) ? '
+                        <td align="center" style="padding:5px 6px;">
+                          <a href="tel:' . esc_attr($phone_tel) . '" style="background-color:#2A160F; background-image:linear-gradient(#2A160F, #2A160F); color:#FAF4E8 !important; font-size:13px; font-weight:600; text-decoration:none; padding:12px 20px; border-radius:24px; display:inline-block; letter-spacing:0.3px; border:1px solid rgba(169, 130, 36, 0.4);">
+                            📞 KUNDE ANRUFEN
+                          </a>
+                        </td>' : '') . '
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- META FOOTNOTE -->
+              <p class="vg-meta-row" style="font-size:12px; color:#8C8074; margin:22px 0 0 0; text-align:center; border-top:1px solid #ECE4D8; padding-top:14px;">
+                Eingegangen über Website: ' . esc_html($created_at) . ' &bull; IP: ' . esc_html($ip) . '
+              </p>
+            </td>
+          </tr>
+
+          <!-- BRAND FOOTER -->
+          <tr>
+            <td class="vg-footer-cell" style="background-color:#2A160F; background-image:linear-gradient(#2A160F, #2A160F); padding:22px 24px; text-align:center; font-size:12px; color:#C4BBB3; line-height:1.7;">
+              <strong style="color:#C79A4A; font-size:14px;">Vegan Garden Berlin — Reservierungssystem</strong><br>
+              Frankfurter Allee 21, 10247 Berlin, Germany<br>
+              Telefon: <a href="tel:+493021237260" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 30 2123 7260</a> &bull; WhatsApp: <a href="https://wa.me/491624649999" target="_blank" rel="noopener" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 16 2464 9999</a><br>
+              Website: <a href="' . esc_url(home_url('/')) . '" target="_blank" style="color:#ffffff; text-decoration:underline; font-weight:600;">vegan-garden.berlin</a>
+            </td>
+          </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td></tr></table>
+        <![endif]-->
+      </td>
+    </tr>
+  </table>
+</body>
+</html>';
+
+        $admin_headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'From: Vegan Garden Berlin <booking@vegan-garden.berlin>',
+            'Reply-To: ' . (!empty($email) ? esc_html($name) . ' <' . $email . '>' : 'booking@vegan-garden.berlin')
+        );
+        wp_mail($admin_to, $admin_subject, $admin_html, $admin_headers);
+
+        // ============================================
+        // 2. BRANDED HTML CONFIRMATION EMAIL TO CUSTOMER
+        // ============================================
         if (!empty($email) && is_email($email)) {
             $cust_subject = 'Bestätigung Ihrer Reservierungsanfrage — Vegan Garden Berlin';
             
@@ -947,9 +1169,6 @@ function vg_handle_reservation() {
             if (!empty($note)) {
                 $note_row = '<tr><td style="padding:6px 16px 10px; font-size:14px; color:#6A625A; vertical-align:top; border-top:1px solid #ECE4D8;">Anmerkung:</td><td style="padding:6px 16px 10px; font-size:14px; color:#211A16; border-top:1px solid #ECE4D8; font-style:italic;">' . esc_html($note) . '</td></tr>';
             }
-            
-            $guest_str = $guests === 1 ? '1 Person' : $guests . ' Personen';
-            $logo_url  = esc_url(home_url('/logo/VN-02.png?v=20260918_noborder'));
 
             $cust_html = '<!DOCTYPE html>
 <html lang="de" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">

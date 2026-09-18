@@ -239,10 +239,6 @@ get_header();
             <span class="hub-news-badge">SPEISEKARTE &amp; GERICHTE</span>
           </a>
           <div class="hub-news-body">
-            <div class="hub-news-meta">
-              <i class="fa-regular fa-clock"></i>
-              <span>5 Min. Lesezeit &bull; Speisekarte &amp; Vielfalt</span>
-            </div>
             <h3 class="hub-news-title">
               <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>">Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt</a>
             </h3>
@@ -263,10 +259,6 @@ get_header();
             <span class="hub-news-badge">SPEZIALITÄTEN &amp; KULINARIK</span>
           </a>
           <div class="hub-news-body">
-            <div class="hub-news-meta">
-              <i class="fa-regular fa-clock"></i>
-              <span>6 Min. Lesezeit &bull; Tradition &amp; Gemeinschaft</span>
-            </div>
             <h3 class="hub-news-title">
               <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>">Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis</a>
             </h3>
@@ -287,10 +279,6 @@ get_header();
             <span class="hub-news-badge">REZEPTE &amp; KULINARIK</span>
           </a>
           <div class="hub-news-body">
-            <div class="hub-news-meta">
-              <i class="fa-regular fa-clock"></i>
-              <span>5 Min. Lesezeit &bull; Rezepte &amp; Suppen</span>
-            </div>
             <h3 class="hub-news-title">
               <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>">Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras</a>
             </h3>

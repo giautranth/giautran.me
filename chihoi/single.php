@@ -47,6 +47,82 @@
 
     <?php endwhile; endif; ?>
 
+    <!-- ========== TIN TỨC LIÊN QUAN (Layout 3 Box Chuẩn AIH) ========== -->
+    <?php
+    $current_id = get_the_ID();
+    $related_query = new WP_Query(array(
+        'post_type' => 'post',
+        'posts_per_page' => 3,
+        'post__not_in' => array($current_id),
+        'orderby' => 'date',
+        'order' => 'DESC',
+    ));
+
+    if ($related_query->have_posts()) :
+    ?>
+    <section class="related-news-section" style="margin-top: 48px; padding-top: 36px; border-top: 2px solid #e2e8f0;">
+      <div class="section-header-row" style="margin-bottom: 24px;">
+        <div class="section-main-title">TIN TỨC LIÊN QUAN</div>
+      </div>
+
+      <div class="section-slider-container">
+        <button type="button" class="section-slider-arrow prev" onclick="scrollSectionCards('related-news-grid', -1)" aria-label="Xem tin trước">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="news-cards-grid" id="related-news-grid">
+          <?php while ($related_query->have_posts()) : $related_query->the_post(); 
+            $rel_thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'medium_large');
+            if (!$rel_thumb_url) {
+                $slug = get_post_field('post_name', get_the_ID());
+                if (strpos($slug, 'be-giang') !== false) {
+                    $rel_thumb_url = home_url('/photo/news/news-be-giang-ceo-1.webp');
+                } elseif (strpos($slug, 'madam-lam') !== false || strpos($slug, 'ket-noi') !== false) {
+                    $rel_thumb_url = home_url('/photo/news/news-cih-madam-lam.webp');
+                } elseif (strpos($slug, 'ra-mat') !== false || strpos($slug, 'bch') !== false) {
+                    $rel_thumb_url = home_url('/photo/news/news-cih-ra-mat-bch.webp');
+                } elseif (strpos($slug, 'dien-dan') !== false) {
+                    $rel_thumb_url = home_url('/photo/news/news-dien-dan-y-te-2026.jpg');
+                } else {
+                    $rel_thumb_url = home_url('/photo/news/news-dien-dan-y-te-2026.jpg');
+                }
+            }
+          ?>
+            <div class="news-article-card" data-category="chi-hoi">
+              <a href="<?php the_permalink(); ?>" class="news-card-thumbnail-wrap" style="display:block;">
+                <img src="<?php echo esc_url($rel_thumb_url); ?>" alt="<?php the_title_attribute(); ?>" class="news-thumbnail-img" />
+              </a>
+              <div class="news-card-body">
+                <div>
+                  <div class="news-publish-date">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <?php the_time('d/m/Y'); ?>
+                  </div>
+                  <h3 class="news-card-title">
+                    <a href="<?php the_permalink(); ?>" style="color:inherit;text-decoration:none;">
+                      <?php the_title(); ?>
+                    </a>
+                  </h3>
+                </div>
+                <div class="news-card-footer">
+                  <a href="<?php the_permalink(); ?>" class="link-read-more">Xem thêm →</a>
+                </div>
+              </div>
+            </div>
+          <?php endwhile; wp_reset_postdata(); ?>
+        </div>
+
+        <button type="button" class="section-slider-arrow next" onclick="scrollSectionCards('related-news-grid', 1)" aria-label="Xem tin tiếp theo">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+    <?php endif; ?>
+
   </div>
 </main>
 

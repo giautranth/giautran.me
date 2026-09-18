@@ -5,6 +5,213 @@
 get_header(); ?>
 
 
+<style>
+/* CIH Contact Page Layout Standard */
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.contact-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-banner-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.9 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 4px 16px rgba(44, 54, 145, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.contact-card-white {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.15rem 1.25rem;
+  box-shadow: 0 2px 10px rgba(44, 54, 145, 0.04);
+  display: flex;
+  gap: 1.15rem;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card-white:hover {
+  border-color: #27AAE1;
+  box-shadow: 0 6px 20px rgba(39, 170, 225, 0.15);
+  transform: translateY(-2px);
+}
+
+.contact-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(39, 170, 225, 0.1);
+  border: 1px solid rgba(39, 170, 225, 0.2);
+  color: #27AAE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-card-white:hover .contact-icon-box {
+  background: #27AAE1;
+  color: #ffffff;
+  border-color: #27AAE1;
+}
+
+.contact-card-body h3 {
+  font-size: 0.775rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.contact-card-body p, 
+.contact-card-body a {
+  font-size: 0.95rem;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  line-height: 1.45;
+  text-decoration: none;
+  margin: 0;
+}
+
+.contact-card-body a:hover {
+  color: #e22b27 !important;
+  text-decoration: underline;
+}
+
+.contact-grid-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* Right column form */
+.contact-form-card {
+  background: #ffffff;
+  border: 1px solid #eaedf0;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(44, 54, 145, 0.06);
+}
+
+.contact-form-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #2C3691;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-form-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 44px;
+  height: 3px;
+  background: #e22b27;
+  border-radius: 2px;
+}
+
+.form-input-custom {
+  width: 100%;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-input-custom:focus {
+  outline: none;
+  border-color: #27AAE1;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(39, 170, 225, 0.12);
+}
+
+.form-error-msg {
+  color: #e22b27;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+  display: none;
+}
+
+.btn-submit-contact {
+  width: 100% !important;
+  padding: 0.9rem 2rem !important;
+  background: #071f46 !important;
+  background: linear-gradient(135deg, #071f46 0%, #0b326c 40%, #114894 75%, #0284c7 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 12px !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 20px rgba(7, 31, 70, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn-submit-contact:hover {
+  background: linear-gradient(135deg, #061938 0%, #08295a 40%, #0e3d7d 75%, #0274b3 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+.btn-submit-contact:active,
+.btn-submit-contact:focus {
+  background: linear-gradient(135deg, #041228 0%, #072248 100%) !important;
+  color: #ffffff !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.35) !important;
+}
+
+@media (max-width: 900px) {
+  .contact-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid-bottom {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+}
+</style>
+
+<?php
+$c_address = chihoi_get_option('footer_address', 'Số 5 Đường 17A, P. An Lạc, TP. HCM');
+$c_phone = chihoi_get_option('footer_phone', '1900 8146');
+$c_email = chihoi_get_option('footer_email', 'info@chihoibenhvientu.com.vn');
+?>
+
   <!-- ========== MAIN CONTENT: LIÊN HỆ (LAYOUT CIH STANDARD) ========== -->
   <main class="site-section" style="padding-top: 30px; padding-bottom: 60px;">
     <div class="container">
@@ -26,7 +233,7 @@ get_header(); ?>
             </div>
             <div class="contact-card-body">
               <h3>Địa chỉ</h3>
-              <p>Số 5 Đường 17A, P. An Lạc, TP. HCM</p>
+              <p><?php echo esc_html($c_address); ?></p>
             </div>
           </div>
           
@@ -41,7 +248,7 @@ get_header(); ?>
               </div>
               <div class="contact-card-body">
                 <h3>Điện thoại</h3>
-                <p><a href="tel:19008146">1900 8146</a></p>
+                <p><a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $c_phone)); ?>"><?php echo esc_html($c_phone); ?></a></p>
               </div>
             </div>
             
@@ -55,7 +262,7 @@ get_header(); ?>
               </div>
               <div class="contact-card-body">
                 <h3>Email</h3>
-                <p><a href="mailto:info@chihoibenhvien.com">info@chihoibenhvien.com</a></p>
+                <p><a href="mailto:<?php echo esc_attr($c_email); ?>"><?php echo esc_html($c_email); ?></a></p>
               </div>
             </div>
           </div>

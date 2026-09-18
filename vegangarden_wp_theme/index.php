@@ -256,7 +256,7 @@ get_header();
         </button>
       </div>
 
-      <a href="<?php echo esc_url(home_url('/menu/Druck_Speisekarte_VeganGarden.pdf')); ?>" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 32px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+      <a href="<?php echo esc_url(home_url('/menu/Druck_Speisekarte_VeganGarden.pdf')); ?>" target="_blank" rel="noopener" class="btn btn-primary menu-pdf-btn" style="margin-top: 32px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
         <i class="fa-solid fa-file-pdf"></i>
         <span>GESAMTE SPEISEKARTE ANSEHEN</span>
       </a>

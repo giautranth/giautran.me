@@ -1503,7 +1503,7 @@ input[type="date"]::-webkit-date-and-time-value {
     max-height: 40px !important;
     width: auto !important;
     max-width: 140px !important;
-    border-radius: 7px !important;
+    border-radius: 8px !important;
     object-fit: contain !important;
     box-shadow: 0 2px 8px rgba(42, 22, 15, 0.2) !important;
     border: 1px solid rgba(169, 130, 36, 0.28) !important;
@@ -1556,7 +1556,7 @@ input[type="date"]::-webkit-date-and-time-value {
     min-height: 30px !important;
     padding: 0 10px !important;
     font-size: 0.75rem !important;
-    border-radius: 20px !important;
+    border-radius: 8px !important;
     background: #f4f6f4 !important;
     border: 1px solid #e0e6e0 !important;
     display: flex !important;

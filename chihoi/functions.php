@@ -39,9 +39,9 @@ add_action('init', 'chihoi_register_patterns');
 // Enqueue Styles & Scripts
 function chihoi_enqueue_scripts() {
     wp_enqueue_style('chihoi-google-fonts', 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap', array(), null);
-    wp_enqueue_style('chihoi-main-style', get_template_directory_uri() . '/css/style.css', array(), '3.2.0');
-    wp_enqueue_style('chihoi-theme-style', get_stylesheet_uri(), array('chihoi-main-style'), '3.2.0');
-    wp_enqueue_script('chihoi-main-script', get_template_directory_uri() . '/js/main.js', array(), '3.2.0', true);
+    wp_enqueue_style('chihoi-main-style', get_template_directory_uri() . '/css/style.css', array(), '3.3.0');
+    wp_enqueue_style('chihoi-theme-style', get_stylesheet_uri(), array('chihoi-main-style'), '3.3.0');
+    wp_enqueue_script('chihoi-main-script', get_template_directory_uri() . '/js/main.js', array(), '3.3.0', true);
 }
 add_action('wp_enqueue_scripts', 'chihoi_enqueue_scripts');
 

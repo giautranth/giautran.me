@@ -474,7 +474,7 @@ $c_email = chihoi_get_option('footer_email', 'info@chihoibenhvientu.com.vn');
         statusBox.style.background = '#dcfce7';
         statusBox.style.color = '#15803d';
         statusBox.style.border = '1px solid #86efac';
-        statusBox.innerHTML = '✓ ' + (data.message || 'Cảm ơn bạn! Thông tin liên hệ đã được gửi thành công.');
+        statusBox.innerHTML = '✓ ' + (data.message || 'Thông tin của bạn đã được ghi nhận. Chúng tôi sẽ phản hồi lại trong thời gian sớm nhất. Xin cảm ơn.');
         document.getElementById('contact-custom-form').reset();
       } else {
         statusBox.style.display = 'block';

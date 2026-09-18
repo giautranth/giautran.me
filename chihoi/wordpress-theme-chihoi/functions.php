@@ -993,7 +993,7 @@ function chihoi_handle_contact_submission($request) {
     
     return array(
         'success' => true,
-        'message' => 'Cảm ơn bạn! Thông tin lịch hẹn / liên hệ đã được lưu thành công.',
+        'message' => 'Thông tin của bạn đã được ghi nhận. Chúng tôi sẽ phản hồi lại trong thời gian sớm nhất. Xin cảm ơn.',
         'post_id' => $post_id,
     );
 }

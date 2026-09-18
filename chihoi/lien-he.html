@@ -508,7 +508,21 @@
       }
 
       if (isValid) {
-        alert('Cảm ơn Quý đơn vị / Anh Chị! Thông tin liên hệ đã được gửi thành công đến Ban Thư ký Chi hội. Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.');
+        try {
+          fetch('/wp-json/chihoi/v1/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: name.value.trim(),
+              phone: phone.value.trim(),
+              email: email.value.trim(),
+              message: msg.value.trim(),
+              page: window.location.href
+            })
+          }).catch(() => {});
+        } catch(err) {}
+
+        alert('Thông tin của bạn đã được ghi nhận. Chúng tôi sẽ phản hồi lại trong thời gian sớm nhất. Xin cảm ơn.');
         document.getElementById('contact-custom-form').reset();
       }
     }

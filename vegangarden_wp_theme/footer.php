@@ -384,7 +384,6 @@
               <?php endfor; ?>
             </select>
           </div>
-          <div class="vg-helper-text">Mehr als 12 Gäste? Bitte rufen Sie uns rechtzeitig an.</div>
         </div>
 
         <!-- ROW 3: YOUR NAME -->

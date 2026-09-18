@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMemberTableSearch();
   initModalHandlers();
   initScrollRevealAnimations();
+  initBackToTop();
 });
 
 /* ==========================================================================
@@ -1410,3 +1411,66 @@ function initScrollRevealAnimations() {
     revealElements.forEach(el => el.classList.add('is-revealed'));
   }
 }
+
+/* ==========================================================================
+   SCROLL TO TOP (AIH Style)
+   ========================================================================== */
+function initBackToTop() {
+  let btn = document.getElementById('backToTop');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'backToTop';
+    btn.className = 'back-to-top';
+    btn.setAttribute('type', 'button');
+    btn.setAttribute('aria-label', 'Về đầu trang');
+    btn.setAttribute('title', 'Về đầu trang');
+    btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="4" x2="19" y2="4"></line>
+      <polyline points="7 12 12 7 17 12"></polyline>
+      <line x1="12" y1="7" x2="12" y2="20"></line>
+    </svg>`;
+    document.body.appendChild(btn);
+  }
+
+  const getScrollThreshold = () => {
+    const banner = document.querySelector(
+      '.hero-banner, .hero-slider, .hero-section, .about-hero, .page-header, .page-banner, .sub-banner, .intro-banner, .breadcrumb-section, .member-hero'
+    );
+    if (banner && banner.offsetHeight > 150) {
+      const rect = banner.getBoundingClientRect();
+      const bannerBottom = window.scrollY + rect.top + banner.offsetHeight;
+      return Math.max(250, bannerBottom - 100);
+    }
+    return 350;
+  };
+
+  let ticking = false;
+  const onScroll = () => {
+    const threshold = getScrollThreshold();
+    if (window.scrollY > threshold) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Run on initial load
+  onScroll();
+}
+

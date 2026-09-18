@@ -157,6 +157,15 @@
     </div>
   </footer>
 
+  <!-- Nút cuộn về đầu trang (Scroll to top AIH style) -->
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Về đầu trang" title="Về đầu trang">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="4" x2="19" y2="4"></line>
+      <polyline points="7 12 12 7 17 12"></polyline>
+      <line x1="12" y1="7" x2="12" y2="20"></line>
+    </svg>
+  </button>
+
   <?php wp_footer(); ?>
 </body>
 </html>

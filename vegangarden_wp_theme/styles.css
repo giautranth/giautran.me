@@ -1531,7 +1531,10 @@ input[type="date"]::-webkit-date-and-time-value {
     object-fit: contain !important;
     display: block !important;
   }
-  .desktop-reserve-btn {
+  .desktop-reserve-btn,
+  .nav-actions .btn,
+  .nav-actions .btn-primary,
+  .nav-actions > a {
     display: none !important;
   }
   .nav-actions {

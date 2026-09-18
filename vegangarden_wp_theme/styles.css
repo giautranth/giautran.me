@@ -2309,6 +2309,12 @@ body.about-page,
   text-align: left !important;
   text-align-last: left !important;
   text-justify: auto !important;
+  display: block !important;
+  -webkit-line-clamp: unset !important;
+  min-height: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 /* MENU DISH CARD DESCRIPTION: JUSTIFIED TEXT ALIGNMENT */

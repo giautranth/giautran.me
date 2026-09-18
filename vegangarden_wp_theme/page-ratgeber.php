@@ -152,7 +152,11 @@ get_header();
       color: #2A160F;
       line-height: 1.35;
       margin-bottom: 12px;
-      text-align: left;
+      text-align: left !important;
+      display: block !important;
+      -webkit-line-clamp: unset !important;
+      min-height: auto !important;
+      overflow: visible !important;
     }
     .hub-news-title a {
       color: inherit;

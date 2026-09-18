@@ -880,11 +880,11 @@ function vg_handle_reservation() {
         }
     }
 
-    // Rate limiting: max 5 reservations per IP per hour
+    // Rate limiting: max 20 reservations per IP per hour
     $ip = $_SERVER['REMOTE_ADDR'];
     $rate_key = 'vg_reserve_' . md5($ip);
     $submissions = get_transient($rate_key);
-    if ($submissions !== false && $submissions >= 5) {
+    if ($submissions !== false && $submissions >= 20) {
         wp_send_json_error('Zu viele Anfragen. Bitte versuchen Sie es später.');
         return;
     }
@@ -952,21 +952,145 @@ function vg_handle_reservation() {
             $logo_url  = esc_url(home_url('/logo/VN-02.png?v=20260918_noborder'));
 
             $cust_html = '<!DOCTYPE html>
-<html>
+<html lang="de" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
 <title>Bestätigung Ihrer Reservierungsanfrage — Vegan Garden Berlin</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    supported-color-schemes: light dark;
+  }
+  
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  /* Prevent auto blue links on iOS, Apple Mail, Gmail */
+  a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+  u + #body a {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+  #MessageViewBody a {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  /* DARK MODE OVERRIDES */
+  @media (prefers-color-scheme: dark) {
+    .vg-email-wrapper {
+      background-color: #160E0A !important;
+    }
+    .vg-card-container {
+      background-color: #221711 !important;
+      border-color: rgba(169, 130, 36, 0.4) !important;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+    }
+    .vg-body-cell {
+      background-color: #221711 !important;
+    }
+    .vg-text-h2 {
+      color: #FAF4E8 !important;
+    }
+    .vg-text-intro {
+      color: #E2DACD !important;
+    }
+    .vg-text-intro strong {
+      color: #FFFFFF !important;
+    }
+    .vg-res-card {
+      background-color: #2A1D16 !important;
+      border-color: #3D2D22 !important;
+      border-left-color: #A98224 !important;
+    }
+    .vg-res-card-title {
+      border-bottom-color: #3D2D22 !important;
+      color: #C79A4A !important;
+    }
+    .vg-res-label {
+      color: #A89D92 !important;
+    }
+    .vg-res-val {
+      color: #FAF4E8 !important;
+    }
+    .vg-res-link {
+      color: #FAF4E8 !important;
+      text-decoration: none !important;
+    }
+    .vg-notice-box {
+      background-color: #2D2015 !important;
+      border-color: rgba(169, 130, 36, 0.4) !important;
+      border-left-color: #A98224 !important;
+      color: #F0DFC0 !important;
+    }
+    .vg-notice-link {
+      color: #C79A4A !important;
+    }
+    .vg-sign-text {
+      color: #E2DACD !important;
+    }
+    .vg-sign-team {
+      color: #FAF4E8 !important;
+    }
+    .vg-footer-cell {
+      background-color: #1A110D !important;
+    }
+  }
+
+  /* OUTLOOK.COM DARK MODE */
+  [data-ogsc] .vg-email-wrapper { background-color: #160E0A !important; }
+  [data-ogsc] .vg-card-container { background-color: #221711 !important; border-color: rgba(169, 130, 36, 0.4) !important; }
+  [data-ogsc] .vg-body-cell { background-color: #221711 !important; }
+  [data-ogsc] .vg-text-h2 { color: #FAF4E8 !important; }
+  [data-ogsc] .vg-text-intro { color: #E2DACD !important; }
+  [data-ogsc] .vg-text-intro strong { color: #FFFFFF !important; }
+  [data-ogsc] .vg-res-card { background-color: #2A1D16 !important; border-color: #3D2D22 !important; }
+  [data-ogsc] .vg-res-card-title { color: #C79A4A !important; }
+  [data-ogsc] .vg-res-label { color: #A89D92 !important; }
+  [data-ogsc] .vg-res-val { color: #FAF4E8 !important; }
+  [data-ogsc] .vg-res-link { color: #FAF4E8 !important; }
+  [data-ogsc] .vg-notice-box { background-color: #2D2015 !important; color: #F0DFC0 !important; }
+  [data-ogsc] .vg-notice-link { color: #C79A4A !important; }
+  [data-ogsc] .vg-sign-text { color: #E2DACD !important; }
+  [data-ogsc] .vg-sign-team { color: #FAF4E8 !important; }
+  [data-ogsc] .vg-footer-cell { background-color: #1A110D !important; }
+</style>
 </head>
-<body style="margin:0; padding:0; background-color:#F6F1E7; font-family:-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; color:#211A16;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#F6F1E7; padding:30px 12px;">
+<body id="body" class="vg-email-wrapper" style="margin:0; padding:0; background-color:#F6F1E7; font-family:-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; color:#211A16;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="vg-email-wrapper" style="background-color:#F6F1E7; padding:30px 12px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" style="max-width:580px; background-color:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 8px 30px rgba(42, 22, 15, 0.12); border:1px solid rgba(169, 130, 36, 0.28);" cellspacing="0" cellpadding="0" border="0">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="580"><tr><td align="center" valign="top">
+        <![endif]-->
+        <table role="presentation" width="100%" class="vg-card-container" style="max-width:580px; background-color:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 8px 30px rgba(42, 22, 15, 0.12); border:1px solid rgba(169, 130, 36, 0.28);" cellspacing="0" cellpadding="0" border="0">
           
           <!-- BRAND HEADER -->
           <tr>
-            <td style="background-color:#2A160F; padding:32px 24px 26px; text-align:center; border-bottom:3px solid #A98224;">
+            <td class="vg-header-cell" style="background-color:#2A160F; background-image:linear-gradient(#2A160F, #2A160F); padding:32px 24px 26px; text-align:center; border-bottom:3px solid #A98224;">
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tr>
                   <td align="center">
@@ -984,66 +1108,70 @@ function vg_handle_reservation() {
 
           <!-- BODY CONTENT -->
           <tr>
-            <td style="padding:32px 28px 24px; background-color:#ffffff;">
-              <h2 style="color:#2A160F; font-size:20px; font-weight:700; margin:0 0 14px 0; font-family:Georgia, serif;">Ihre Reservierungsanfrage ist eingegangen!</h2>
-              <p style="font-size:15px; line-height:1.6; color:#4A4036; margin:0 0 20px 0;">
-                Hallo <strong>' . esc_html($name) . '</strong>,<br><br>
+            <td class="vg-body-cell" style="padding:32px 28px 24px; background-color:#ffffff;">
+              <h2 class="vg-text-h2" style="color:#2A160F; font-size:20px; font-weight:700; margin:0 0 14px 0; font-family:Georgia, serif;">Ihre Reservierungsanfrage ist eingegangen!</h2>
+              <p class="vg-text-intro" style="font-size:15px; line-height:1.6; color:#4A4036; margin:0 0 20px 0;">
+                Hallo <strong style="color:#2A160F;">' . esc_html($name) . '</strong>,<br><br>
                 vielen Dank für Ihre Tischreservierung im <strong>Vegan Garden Berlin</strong>. Wir haben Ihre Daten erfolgreich erhalten und freuen uns sehr darauf, Sie bei uns begrüßen zu dürfen!
               </p>
 
               <!-- RESERVATION CARD -->
-              <table role="presentation" width="100%" style="background-color:#FBF9F5; border:1px solid #ECE4D8; border-left:4px solid #A98224; border-radius:8px; margin:22px 0;" cellspacing="0" cellpadding="0">
+              <table role="presentation" width="100%" class="vg-res-card" style="background-color:#FBF9F5; border:1px solid #ECE4D8; border-left:4px solid #A98224; border-radius:8px; margin:22px 0;" cellspacing="0" cellpadding="0">
                 <tr>
-                  <td colspan="2" style="border-bottom:1px solid #ECE4D8; padding:12px 16px; font-weight:700; font-size:13px; color:#A98224; text-transform:uppercase; letter-spacing:1px;">
+                  <td colspan="2" class="vg-res-card-title" style="border-bottom:1px solid #ECE4D8; padding:12px 16px; font-weight:700; font-size:13px; color:#A98224; text-transform:uppercase; letter-spacing:1px;">
                     📅 Details Ihrer Reservierung
                   </td>
                 </tr>
                 <tr>
-                  <td width="36%" style="padding:10px 16px 6px; font-size:14px; color:#6A625A;">Datum:</td>
-                  <td style="padding:10px 16px 6px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($date_formatted) . '</td>
+                  <td width="36%" class="vg-res-label" style="padding:10px 16px 6px; font-size:14px; color:#6A625A;">Datum:</td>
+                  <td class="vg-res-val" style="padding:10px 16px 6px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($date_formatted) . '</td>
                 </tr>
                 <tr>
-                  <td style="padding:6px 16px; font-size:14px; color:#6A625A;">Uhrzeit:</td>
-                  <td style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($time) . ' Uhr</td>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">Uhrzeit:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($time) . ' Uhr</td>
                 </tr>
                 <tr>
-                  <td style="padding:6px 16px; font-size:14px; color:#6A625A;">Personen:</td>
-                  <td style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($guest_str) . '</td>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">Personen:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($guest_str) . '</td>
                 </tr>
                 <tr>
-                  <td style="padding:6px 16px; font-size:14px; color:#6A625A;">Telefon:</td>
-                  <td style="padding:6px 16px; font-size:14px; color:#211A16;">' . esc_html($phone) . '</td>
+                  <td class="vg-res-label" style="padding:6px 16px; font-size:14px; color:#6A625A;">Telefon:</td>
+                  <td class="vg-res-val" style="padding:6px 16px; font-size:14px; color:#211A16;">
+                    <a href="tel:' . esc_attr(preg_replace('/[^0-9\+]/', '', $phone)) . '" class="vg-res-link" style="color:#211A16; text-decoration:none; font-weight:500;">' . esc_html($phone) . '</a>
+                  </td>
                 </tr>
                 <tr>
-                  <td style="padding:6px 16px 10px; font-size:14px; color:#6A625A;">E-Mail:</td>
-                  <td style="padding:6px 16px 10px; font-size:14px; color:#211A16;">' . esc_html($email) . '</td>
+                  <td class="vg-res-label" style="padding:6px 16px 10px; font-size:14px; color:#6A625A;">E-Mail:</td>
+                  <td class="vg-res-val" style="padding:6px 16px 10px; font-size:14px; color:#211A16;">
+                    <a href="mailto:' . esc_attr($email) . '" class="vg-res-link" style="color:#211A16; text-decoration:none;">' . esc_html($email) . '</a>
+                  </td>
                 </tr>
                 ' . $note_row . '
               </table>
 
               <!-- NOTICE BOX -->
-              <div style="background-color:#FAF4E8; border:1px solid rgba(169, 130, 36, 0.3); border-left:4px solid #A98224; padding:14px 16px; border-radius:6px; font-size:13px; line-height:1.6; color:#523C12; margin:22px 0;">
-                <strong>Wichtiger Hinweis:</strong> Sollten sich Ihre Pläne ändern oder möchten Sie die Reservierung anpassen, kontaktieren Sie uns bitte rechtzeitig telefonisch unter <a href="tel:+493021237260" style="color:#A98224; font-weight:700; text-decoration:none;">+49 30 2123 7260</a> oder per WhatsApp unter <a href="https://wa.me/491624649999" target="_blank" rel="noopener" style="color:#A98224; font-weight:700; text-decoration:none;">+49 16 2464 9999</a>.
+              <div class="vg-notice-box" style="background-color:#FAF4E8; border:1px solid rgba(169, 130, 36, 0.3); border-left:4px solid #A98224; padding:14px 16px; border-radius:6px; font-size:13px; line-height:1.6; color:#523C12; margin:22px 0;">
+                <strong>Wichtiger Hinweis:</strong> Sollten sich Ihre Pläne ändern oder möchten Sie die Reservierung anpassen, kontaktieren Sie uns bitte rechtzeitig telefonisch unter <a href="tel:+493021237260" class="vg-notice-link" style="color:#A98224; font-weight:700; text-decoration:none;">+49 30 2123 7260</a> oder per WhatsApp unter <a href="https://wa.me/491624649999" target="_blank" rel="noopener" class="vg-notice-link" style="color:#A98224; font-weight:700; text-decoration:none;">+49 16 2464 9999</a>.
               </div>
 
               <!-- ROUTE BUTTON -->
               <div style="text-align:center; margin:26px 0 12px;">
-                <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="background-color:#A98224; color:#ffffff; font-size:13px; font-weight:700; text-decoration:none; padding:13px 28px; border-radius:8px; display:inline-block; letter-spacing:0.5px; box-shadow:0 4px 12px rgba(169, 130, 36, 0.3);">
+                <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="background-color:#A98224; background-image:linear-gradient(#A98224, #A98224); color:#ffffff !important; font-size:13px; font-weight:700; text-decoration:none; padding:13px 28px; border-radius:8px; display:inline-block; letter-spacing:0.5px; box-shadow:0 4px 12px rgba(169, 130, 36, 0.3);">
                   📍 ROUTE / GOOGLE MAPS
                 </a>
               </div>
 
-              <p style="font-size:14px; line-height:1.6; color:#4A4036; margin:24px 0 0 0;">
+              <p class="vg-sign-text" style="font-size:14px; line-height:1.6; color:#4A4036; margin:24px 0 0 0;">
                 Wir freuen uns auf Ihren Besuch!<br><br>
                 Herzliche Grüße,<br>
-                <strong style="color:#2A160F;">Ihr Vegan Garden Berlin Team</strong>
+                <strong class="vg-sign-team" style="color:#2A160F;">Ihr Vegan Garden Berlin Team</strong>
               </p>
             </td>
           </tr>
 
           <!-- BRAND FOOTER -->
           <tr>
-            <td style="background-color:#2A160F; padding:22px 24px; text-align:center; font-size:12px; color:#C4BBB3; line-height:1.7;">
+            <td class="vg-footer-cell" style="background-color:#2A160F; background-image:linear-gradient(#2A160F, #2A160F); padding:22px 24px; text-align:center; font-size:12px; color:#C4BBB3; line-height:1.7;">
               <strong style="color:#C79A4A; font-size:14px;">Vegan Garden Berlin</strong><br>
               <a href="https://maps.app.goo.gl/St5dH8yWhqsPBheCA" target="_blank" rel="noopener" style="color:#C4BBB3; text-decoration:underline;">📍 Frankfurter Allee 21, 10247 Berlin, Germany</a><br>
               Telefon: <a href="tel:+493021237260" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 30 2123 7260</a> &bull; WhatsApp: <a href="https://wa.me/491624649999" target="_blank" rel="noopener" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 16 2464 9999</a><br>
@@ -1051,6 +1179,9 @@ function vg_handle_reservation() {
             </td>
           </tr>
         </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td></tr></table>
+        <![endif]-->
       </td>
     </tr>
   </table>

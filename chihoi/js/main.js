@@ -1434,20 +1434,21 @@ function initBackToTop() {
 
   const getScrollThreshold = () => {
     const banner = document.querySelector(
-      '.hero-banner, .hero-slider, .hero-section, .about-hero, .page-header, .page-banner, .sub-banner, .intro-banner, .breadcrumb-section, .member-hero'
+      '.hero-banner, .hero-slider, .aih-hero-banner-section, .hero-section, .about-hero, .page-header, .page-banner, .sub-banner, .intro-banner, .breadcrumb-section, .member-hero, .site-header'
     );
     if (banner && banner.offsetHeight > 150) {
-      const rect = banner.getBoundingClientRect();
-      const bannerBottom = window.scrollY + rect.top + banner.offsetHeight;
-      return Math.max(250, bannerBottom - 100);
+      return Math.max(180, banner.offsetHeight * 0.6);
     }
-    return 350;
+    return 180;
   };
 
   let ticking = false;
   const onScroll = () => {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
     const threshold = getScrollThreshold();
-    if (window.scrollY > threshold) {
+    const isNearBottom = (window.innerHeight + scrollY) >= (document.documentElement.scrollHeight - 60);
+
+    if (scrollY > threshold || (scrollY > 50 && isNearBottom)) {
       btn.classList.add('active');
     } else {
       btn.classList.remove('active');

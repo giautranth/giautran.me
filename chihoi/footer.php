@@ -243,14 +243,17 @@
       var btn = document.getElementById('backToTop');
       if (!btn) return;
       var getThreshold = function() {
-        var banner = document.querySelector('.hero-banner, .hero-slider, .aih-hero-banner-section, .page-header, .page-banner, .about-hero');
+        var banner = document.querySelector('.hero-banner, .hero-slider, .aih-hero-banner-section, .hero-section, .about-hero, .page-header, .page-banner, .sub-banner, .intro-banner, .breadcrumb-section, .member-hero, .site-header');
         if (banner && banner.offsetHeight > 150) {
-          return Math.max(250, banner.offsetHeight * 0.7);
+          return Math.max(180, banner.offsetHeight * 0.6);
         }
-        return 300;
+        return 180;
       };
       var onScroll = function() {
-        if (window.scrollY > getThreshold()) {
+        var scrollY = window.scrollY || document.documentElement.scrollTop;
+        var threshold = getThreshold();
+        var isNearBottom = (window.innerHeight + scrollY) >= (document.documentElement.scrollHeight - 60);
+        if (scrollY > threshold || (scrollY > 50 && isNearBottom)) {
           btn.classList.add('active');
         } else {
           btn.classList.remove('active');

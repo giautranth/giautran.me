@@ -3896,6 +3896,33 @@ body {
   border-radius: 8px;
 }
 
+.article-body-text figure {
+  margin: 16px 0 !important;
+  line-height: 0 !important;
+}
+
+.article-body-text figure + figure {
+  margin-top: 14px !important;
+}
+
+.article-body-text figure img {
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+.article-body-text figure figcaption {
+  line-height: 1.6 !important;
+  margin-top: 8px !important;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+  text-align: center;
+}
+
+.article-body-text img + img {
+  margin-top: 14px !important;
+}
+
 @media (max-width: 991.98px) {
   .article-layout-grid {
   display: block;

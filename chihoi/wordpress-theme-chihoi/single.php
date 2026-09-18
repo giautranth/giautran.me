@@ -132,8 +132,30 @@
   height: auto !important;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-  margin: 20px 0;
+  margin: 16px auto !important;
   display: block;
+}
+.article-rich-body figure {
+  margin: 16px 0 !important;
+  line-height: 0 !important;
+}
+.article-rich-body figure + figure {
+  margin-top: 14px !important;
+}
+.article-rich-body figure img {
+  margin: 0 auto !important;
+  display: block !important;
+}
+.article-rich-body figure figcaption {
+  line-height: 1.6 !important;
+  margin-top: 8px !important;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+  text-align: center;
+}
+.article-rich-body img + img {
+  margin-top: 14px !important;
 }
 .article-rich-body p {
   margin-bottom: 18px;

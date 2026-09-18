@@ -121,7 +121,7 @@ get_header(); ?>
     font-size: 1.15rem !important;
   }
   .ve-hiep-hoi-content p {
-    text-align: left !important;
+    text-align: justify !important;
     font-size: 1rem !important;
     line-height: 1.75 !important;
     margin-bottom: 16px !important;

@@ -14,18 +14,10 @@ get_header(); ?>
 
     <div class="white-box-card" style="margin-top: 24px; padding: 40px; border-radius: 16px;">
       
-      <!-- Featured Image -->
-      <div style="margin-bottom: 28px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
-        <img src="<?php echo get_template_directory_uri(); ?>/photo/news/tienphong-photo-1.jpg" alt="Hiệp hội Bệnh viện Tư nhân Việt Nam" style="width:100%;height:auto;display:block;object-fit:cover;" onerror="this.src='<?php echo esc_url(home_url('/photo/news/tienphong-photo-1.jpg')); ?>'" />
-        <div style="background:#f8fafc;padding:10px 16px;font-size:0.88rem;color:#64748b;font-style:italic;text-align:center;border-top:1px solid #e2e8f0;">
-          Đại diện Lãnh đạo Hiệp hội Bệnh viện Tư nhân Việt Nam tại Diễn đàn Y tế Tư nhân
-        </div>
-      </div>
-
       <!-- Article Body Content -->
       <div style="line-height: 1.9; color: #334155; font-size: 1.05rem;">
         
-        <p style="font-size: 1.12rem; font-weight: 500; color: #1e293b; line-height: 1.85; margin-bottom: 20px;">
+        <p style="font-size: 1.12rem; font-weight: 500; color: #1e293b; line-height: 1.85; margin-bottom: 20px; text-align: justify;">
           Sự phát triển mạnh mẽ của hệ thống y tế tư nhân trong hơn hai thập kỷ qua là kết quả từ chủ trương xã hội hóa y tế của Đảng và Nhà nước, góp phần đa dạng hóa dịch vụ khám chữa bệnh, giảm tải cho hệ thống y tế công lập và nâng cao chất lượng chăm sóc sức khỏe nhân dân.
         </p>
 
@@ -49,11 +41,9 @@ get_header(); ?>
           Đến nay, Hiệp hội Bệnh viện Tư nhân Việt Nam đã trở thành mái nhà chung của cộng đồng y tế tư nhân, quy tụ các bệnh viện và cơ sở y tế trên cả nước; từng bước khẳng định vai trò kết nối, đại diện và đồng hành cùng sự phát triển của khu vực y tế tư nhân Việt Nam.
         </p>
 
-        <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-left: 4px solid #0284c7; border-radius: 0 12px 12px 0; padding: 18px 22px; margin: 24px 0 10px;">
-          <p style="margin: 0; font-size: 1.05rem; font-weight: 600; color: #071f46; line-height: 1.75; font-style: italic;">
-            “Từ tâm huyết của những người đặt nền móng đến sự chung sức của cộng đồng hội viên, Hiệp hội đang tiếp tục viết nên hành trình kết nối – đồng hành – kiến tạo, góp phần xây dựng một nền y tế Việt Nam hiện đại, nhân văn và phát triển bền vững.”
-          </p>
-        </div>
+        <p style="margin-bottom: 20px; text-align: justify; font-weight: 500; color: #071f46; font-style: italic;">
+          “Từ tâm huyết của những người đặt nền móng đến sự chung sức của cộng đồng hội viên, Hiệp hội đang tiếp tục viết nên hành trình kết nối – đồng hành – kiến tạo, góp phần xây dựng một nền y tế Việt Nam hiện đại, nhân văn và phát triển bền vững.”
+        </p>
 
       </div>
 

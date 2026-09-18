@@ -51,6 +51,45 @@
   ?>
   <!-- ========== AIH PANORAMIC HERO BANNER (Động CMS) ========== -->
   <section class="home-banner banner-slider aih-hero-banner-section">
+    <style>
+      @media (max-width: 991px) {
+        .banner-nav-arrows .button-prev,
+        .banner-nav-arrows .button-next {
+          opacity: 0.5 !important;
+          background: rgba(255, 255, 255, 0.5) !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+        }
+        .banner-nav-arrows .button-prev:active,
+        .banner-nav-arrows .button-next:active {
+          opacity: 0.9 !important;
+          background: rgba(255, 255, 255, 0.9) !important;
+        }
+      }
+      @media (max-width: 767.98px) {
+        .banner-nav-arrows .button-prev,
+        .banner-nav-arrows .button-next {
+          width: 36px !important;
+          height: 36px !important;
+          left: 10px !important;
+          opacity: 0.5 !important;
+          background: rgba(255, 255, 255, 0.5) !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+        }
+        .banner-nav-arrows .button-next {
+          left: auto !important;
+          right: 10px !important;
+        }
+        .banner-nav-arrows .button-prev:active,
+        .banner-nav-arrows .button-next:active {
+          opacity: 0.9 !important;
+          background: rgba(255, 255, 255, 0.9) !important;
+        }
+      }
+    </style>
     <div class="banner-carousel-wrapper">
       <div class="banner-slides-track">
         <?php foreach ($slides as $idx => $s): ?>

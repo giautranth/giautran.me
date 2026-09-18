@@ -3779,17 +3779,42 @@ body {
   box-shadow: 0 6px 20px rgba(44, 54, 145, 0.45) !important;
 }
 
+@media (max-width: 991px) {
+  .banner-nav-arrows .button-prev,
+  .banner-nav-arrows .button-next {
+    opacity: 0.5 !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+  }
+  .banner-nav-arrows .button-prev:active,
+  .banner-nav-arrows .button-next:active {
+    opacity: 0.9 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+}
+
 @media (max-width: 767.98px) {
   .banner-nav-arrows .button-prev,
   .banner-nav-arrows .button-next {
     width: 36px;
     height: 36px;
     left: 10px;
-    background: rgba(255, 255, 255, 0.75);
+    opacity: 0.5 !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
   }
   .banner-nav-arrows .button-next {
     left: auto;
     right: 10px;
+  }
+  .banner-nav-arrows .button-prev:active,
+  .banner-nav-arrows .button-next:active {
+    opacity: 0.9 !important;
+    background: rgba(255, 255, 255, 0.9) !important;
   }
 }
 

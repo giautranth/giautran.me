@@ -321,14 +321,16 @@
   */ ?>
 
   <!-- ========== 5. TIN TỨC SECTION (Chuẩn Tin Tức AIH) ========== -->
-  <section class="site-section">
+  <section class="site-section section-news-home">
     <style>
       /* Cố định phần tin tức hiển thị đúng 1 dòng 3 bài, trượt ngang mượt mà */
+      .section-slider-container.news-slider-container,
       .section-slider-container {
         position: relative;
         width: 100%;
       }
-      .section-slider-container .news-cards-grid {
+      .section-slider-container.news-slider-container .news-cards-grid,
+      .section-news-home .news-cards-grid {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
@@ -340,19 +342,37 @@
         padding: 10px 4px !important;
         margin: 0 !important;
       }
-      .section-slider-container .news-cards-grid::-webkit-scrollbar {
+      .section-slider-container.news-slider-container .news-cards-grid::-webkit-scrollbar,
+      .section-news-home .news-cards-grid::-webkit-scrollbar {
         display: none !important;
         height: 0 !important;
       }
-      .section-slider-container .news-cards-grid .news-article-card {
+      .section-slider-container.news-slider-container .news-cards-grid .news-article-card,
+      .section-news-home .news-cards-grid .news-article-card {
         flex: 0 0 calc((100% - 48px) / 3) !important;
         width: calc((100% - 48px) / 3) !important;
         min-width: calc((100% - 48px) / 3) !important;
         max-width: calc((100% - 48px) / 3) !important;
         box-sizing: border-box !important;
       }
+      /* Mũi tên slider tin tức: căn giữa đường viền đáy ảnh thumbnail và mép viền bài viết */
+      .section-slider-container.news-slider-container .section-slider-arrow,
+      .section-news-home .section-slider-arrow {
+        top: 206px !important;
+        transform: translateY(-50%) !important;
+        z-index: 30 !important;
+      }
+      .section-slider-container.news-slider-container .section-slider-arrow.prev,
+      .section-news-home .section-slider-arrow.prev {
+        left: -18px !important;
+      }
+      .section-slider-container.news-slider-container .section-slider-arrow.next,
+      .section-news-home .section-slider-arrow.next {
+        right: -18px !important;
+      }
       @media (max-width: 1024px) {
-        .section-slider-container .news-cards-grid .news-article-card {
+        .section-slider-container.news-slider-container .news-cards-grid .news-article-card,
+        .section-news-home .news-cards-grid .news-article-card {
           flex: 0 0 calc((100% - 24px) / 2) !important;
           width: calc((100% - 24px) / 2) !important;
           min-width: calc((100% - 24px) / 2) !important;
@@ -360,17 +380,31 @@
         }
       }
       @media (max-width: 768px) {
-        .section-slider-container .news-cards-grid {
+        .section-slider-container.news-slider-container .news-cards-grid,
+        .section-news-home .news-cards-grid {
           scroll-snap-type: x mandatory !important;
           gap: 0 !important;
           padding: 6px 0 !important;
         }
-        .section-slider-container .news-cards-grid .news-article-card {
+        .section-slider-container.news-slider-container .news-cards-grid .news-article-card,
+        .section-news-home .news-cards-grid .news-article-card {
           flex: 0 0 100% !important;
           width: 100% !important;
           min-width: 100% !important;
           max-width: 100% !important;
           scroll-snap-align: center !important;
+        }
+        .section-slider-container.news-slider-container .section-slider-arrow,
+        .section-news-home .section-slider-arrow {
+          top: 202px !important;
+        }
+        .section-slider-container.news-slider-container .section-slider-arrow.prev,
+        .section-news-home .section-slider-arrow.prev {
+          left: -10px !important;
+        }
+        .section-slider-container.news-slider-container .section-slider-arrow.next,
+        .section-news-home .section-slider-arrow.next {
+          right: -10px !important;
         }
       }
     </style>
@@ -387,8 +421,8 @@
       </div>
 
       <!-- News Cards Grid -->
-            <!-- News Slider Container with Left & Right Navigation Arrows -->
-      <div class="section-slider-container">
+      <!-- News Slider Container with Left & Right Navigation Arrows -->
+      <div class="section-slider-container news-slider-container">
         <button type="button" class="section-slider-arrow prev" onclick="scrollSectionCards('news-cards-grid', -1)" aria-label="Xem tin trước">
           <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
             <polyline points="15 18 9 12 15 6"></polyline>

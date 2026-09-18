@@ -2280,7 +2280,7 @@ html.translated-ltr .header__cta .btn {
 .mobile-slider-container {
   position: relative !important;
   width: 100% !important;
-  padding: 0 46px !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
@@ -2316,11 +2316,11 @@ html.translated-ltr .header__cta .btn {
 }
 
 .mobile-arrow--prev {
-  left: 0 !important;
+  left: -21px !important;
 }
 
 .mobile-arrow--next {
-  right: 0 !important;
+  right: -21px !important;
 }
 
 .mobile-slider-track-wrap {
@@ -2361,13 +2361,21 @@ html.translated-ltr .header__cta .btn {
 /* MOBILE (1 Card per row for homepage sliders) */
 @media (max-width: 768px) {
   .mobile-slider-container {
-    padding: 0 40px !important;
+    padding: 0 20px !important;
   }
 
   .mobile-arrow {
     width: 36px !important;
     height: 36px !important;
     font-size: 1.3rem !important;
+  }
+
+  .mobile-arrow--prev {
+    left: 2px !important;
+  }
+
+  .mobile-arrow--next {
+    right: 2px !important;
   }
 
   .mobile-slider-track-wrap #spec-grid,

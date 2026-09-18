@@ -654,11 +654,11 @@ add_action('phpmailer_init', function ($phpmailer) {
     $phpmailer->isSMTP();
     $phpmailer->Host       = 'server11.configcenter.info';
     $phpmailer->SMTPAuth   = true;
-    $phpmailer->Port       = 587;
-    $phpmailer->SMTPSecure = 'tls';
-    $phpmailer->Username   = 'info@vegan-garden.berlin';
-    $phpmailer->Password   = '';  // NEEDS PASSWORD
-    $phpmailer->From       = 'info@vegan-garden.berlin';
+    $phpmailer->Port       = 465;
+    $phpmailer->SMTPSecure = 'ssl';
+    $phpmailer->Username   = 'booking@vegan-garden.berlin';
+    $phpmailer->Password   = 'Rv2tL0{BS\81';
+    $phpmailer->From       = 'booking@vegan-garden.berlin';
     $phpmailer->FromName   = 'Vegan Garden Berlin';
 });
 
@@ -914,25 +914,29 @@ function vg_handle_reservation() {
         update_post_meta($post_id, '_res_ip', $ip);
         update_post_meta($post_id, '_res_created', current_time('mysql'));
 
-        // Try email notification
+        // Send email notification to restaurant admin
         $to      = 'giautranth@gmail.com';
-        $subject = sprintf('[Vegan Garden] Neue Reservierung: %s, %s %s', $name, $date_formatted, $time);
+        $subject = sprintf('[Vegan Garden] Neue Reservierung: %s, %s %s (%d Pers.)', $name, $date_formatted, $time, $guests);
         $body    = sprintf(
-            "Neue Tischreservierung:\n\n" .
+            "Neue Tischreservierung im Vegan Garden Berlin:\n\n" .
             "Name: %s\n" .
             "Telefon: %s\n" .
             "E-Mail: %s\n" .
             "Datum: %s\n" .
-            "Uhrzeit: %s\n" .
+            "Uhrzeit: %s Uhr\n" .
             "Personen: %d\n" .
             "Anmerkung: %s\n\n" .
             "---\n" .
-            "Reservierung verwalten: %s",
-            $name, $phone, $email, $date_formatted, $time, $guests,
+            "Reservierung im WordPress-Admin verwalten: %s",
+            $name, $phone, ($email ?: '—'), $date_formatted, $time, $guests,
             ($note ?: '—'),
             admin_url('edit.php?post_type=vg_reservation')
         );
-        $headers = array('Content-Type: text/plain; charset=UTF-8');
+        $headers = array(
+            'Content-Type: text/plain; charset=UTF-8',
+            'From: Vegan Garden Berlin <booking@vegan-garden.berlin>',
+            'Reply-To: ' . ($email ?: 'booking@vegan-garden.berlin')
+        );
         wp_mail($to, $subject, $body, $headers);
     }
 

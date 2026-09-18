@@ -945,75 +945,108 @@ function vg_handle_reservation() {
             
             $note_row = '';
             if (!empty($note)) {
-                $note_row = '<tr><td style="padding:8px 16px; font-size:14px; color:#6A625A;">Anmerkung:</td><td style="padding:8px 16px; font-size:14px; color:#2A160F;">' . esc_html($note) . '</td></tr>';
+                $note_row = '<tr><td style="padding:6px 16px 10px; font-size:14px; color:#6A625A; vertical-align:top; border-top:1px solid #ECE4D8;">Anmerkung:</td><td style="padding:6px 16px 10px; font-size:14px; color:#211A16; border-top:1px solid #ECE4D8; font-style:italic;">' . esc_html($note) . '</td></tr>';
             }
             
             $guest_str = $guests === 1 ? '1 Person' : $guests . ' Personen';
+            $logo_url  = esc_url(home_url('/logo/VN-03.png?v=20260909_padded'));
 
             $cust_html = '<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bestätigung Ihrer Reservierungsanfrage — Vegan Garden Berlin</title>
 </head>
-<body style="margin:0; padding:0; background-color:#F6F1E7; font-family:-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; color:#2A160F;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#F6F1E7; padding:30px 10px;">
+<body style="margin:0; padding:0; background-color:#F6F1E7; font-family:-apple-system, BlinkMacSystemFont, \'Segoe UI\', Roboto, Helvetica, Arial, sans-serif; color:#211A16;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#F6F1E7; padding:30px 12px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" style="max-width:580px; background-color:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.06); border:1px solid #E8E2D8;" cellspacing="0" cellpadding="0" border="0">
+        <table role="presentation" width="100%" style="max-width:580px; background-color:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 8px 30px rgba(42, 22, 15, 0.12); border:1px solid rgba(169, 130, 36, 0.28);" cellspacing="0" cellpadding="0" border="0">
+          
+          <!-- BRAND HEADER -->
           <tr>
-            <td style="background-color:#2E5A36; padding:28px 24px; text-align:center;">
-              <h1 style="color:#ffffff; margin:0; font-size:24px; font-weight:700; letter-spacing:1px; font-family:Georgia, serif;">VEGAN GARDEN BERLIN</h1>
-              <p style="color:#d0e6cf; margin:6px 0 0 0; font-size:13px; text-transform:uppercase; letter-spacing:1.5px;">100 % Vegane Vietnamesische Küche</p>
+            <td style="background-color:#2A160F; padding:28px 24px; text-align:center; border-bottom:3px solid #A98224;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center">
+                    <img src="' . $logo_url . '" alt="Vegan Garden Berlin Logo" width="155" style="display:block; max-width:155px; height:auto; border-radius:8px; background:#FAF8F5; padding:5px 10px; border:1px solid rgba(169, 130, 36, 0.45); box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-top:12px;">
+                    <p style="color:#C79A4A; font-size:11px; text-transform:uppercase; letter-spacing:2px; margin:0; font-weight:600;">100 % Vegane Vietnamesische Küche</p>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
+
+          <!-- BODY CONTENT -->
           <tr>
-            <td style="padding:32px 28px;">
-              <h2 style="color:#2E5A36; font-size:20px; margin-top:0; margin-bottom:12px; font-family:Georgia, serif;">Ihre Reservierungsanfrage ist eingegangen!</h2>
-              <p style="font-size:15px; line-height:1.6; color:#4a423b; margin:0 0 20px 0;">
+            <td style="padding:32px 28px 24px; background-color:#ffffff;">
+              <h2 style="color:#2A160F; font-size:20px; font-weight:700; margin:0 0 14px 0; font-family:Georgia, serif;">Ihre Reservierungsanfrage ist eingegangen!</h2>
+              <p style="font-size:15px; line-height:1.6; color:#4A4036; margin:0 0 20px 0;">
                 Hallo <strong>' . esc_html($name) . '</strong>,<br><br>
-                vielen Dank für Ihre Tischreservierung im <strong>Vegan Garden Berlin</strong>. Wir haben Ihre Anfrage erfolgreich erhalten und freuen uns sehr darauf, Sie bei uns begrüßen zu dürfen!
+                vielen Dank für Ihre Tischreservierung im <strong>Vegan Garden Berlin</strong>. Wir haben Ihre Daten erfolgreich erhalten und freuen uns sehr darauf, Sie bei uns begrüßen zu dürfen!
               </p>
-              <table role="presentation" width="100%" style="background-color:#FAF7F2; border:1px solid #E8E0D4; border-radius:8px; margin:20px 0;" cellspacing="0" cellpadding="10">
+
+              <!-- RESERVATION CARD -->
+              <table role="presentation" width="100%" style="background-color:#FBF9F5; border:1px solid #ECE4D8; border-left:4px solid #A98224; border-radius:8px; margin:22px 0;" cellspacing="0" cellpadding="0">
                 <tr>
-                  <td colspan="2" style="border-bottom:1px solid #E8E0D4; padding:12px 16px; font-weight:700; font-size:13px; color:#A98224; text-transform:uppercase; letter-spacing:0.5px;">
+                  <td colspan="2" style="border-bottom:1px solid #ECE4D8; padding:12px 16px; font-weight:700; font-size:13px; color:#A98224; text-transform:uppercase; letter-spacing:1px;">
                     📅 Details Ihrer Reservierung
                   </td>
                 </tr>
                 <tr>
-                  <td width="35%" style="padding:8px 16px; font-size:14px; color:#6A625A;">Datum:</td>
-                  <td style="padding:8px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($date_formatted) . '</td>
+                  <td width="36%" style="padding:10px 16px 6px; font-size:14px; color:#6A625A;">Datum:</td>
+                  <td style="padding:10px 16px 6px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($date_formatted) . '</td>
                 </tr>
                 <tr>
-                  <td style="padding:8px 16px; font-size:14px; color:#6A625A;">Uhrzeit:</td>
-                  <td style="padding:8px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($time) . ' Uhr</td>
+                  <td style="padding:6px 16px; font-size:14px; color:#6A625A;">Uhrzeit:</td>
+                  <td style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($time) . ' Uhr</td>
                 </tr>
                 <tr>
-                  <td style="padding:8px 16px; font-size:14px; color:#6A625A;">Personen:</td>
-                  <td style="padding:8px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($guest_str) . '</td>
+                  <td style="padding:6px 16px; font-size:14px; color:#6A625A;">Personen:</td>
+                  <td style="padding:6px 16px; font-size:14px; font-weight:700; color:#2A160F;">' . esc_html($guest_str) . '</td>
                 </tr>
                 <tr>
-                  <td style="padding:8px 16px; font-size:14px; color:#6A625A;">Telefon:</td>
-                  <td style="padding:8px 16px; font-size:14px; color:#2A160F;">' . esc_html($phone) . '</td>
+                  <td style="padding:6px 16px; font-size:14px; color:#6A625A;">Telefon:</td>
+                  <td style="padding:6px 16px; font-size:14px; color:#211A16;">' . esc_html($phone) . '</td>
+                </tr>
+                <tr>
+                  <td style="padding:6px 16px 10px; font-size:14px; color:#6A625A;">E-Mail:</td>
+                  <td style="padding:6px 16px 10px; font-size:14px; color:#211A16;">' . esc_html($email) . '</td>
                 </tr>
                 ' . $note_row . '
               </table>
-              <div style="background-color:#F0F7F2; border-left:4px solid #2E5A36; padding:12px 16px; border-radius:4px; font-size:13px; line-height:1.5; color:#2E5A36; margin:20px 0;">
-                <strong>Hinweis:</strong> Falls Sie Ihre Reservierung ändern oder stornieren möchten, rufen Sie uns bitte rechtzeitig unter <strong>+49 30 21237260</strong> an oder antworten Sie einfach auf diese E-Mail.
+
+              <!-- NOTICE BOX -->
+              <div style="background-color:#FAF4E8; border:1px solid rgba(169, 130, 36, 0.3); border-left:4px solid #A98224; padding:14px 16px; border-radius:6px; font-size:13px; line-height:1.5; color:#523C12; margin:22px 0;">
+                <strong>Wichtiger Hinweis:</strong> Sollten sich Ihre Pläne ändern oder möchten Sie die Reservierung anpassen, kontaktieren Sie uns bitte rechtzeitig telefonisch unter <a href="tel:+493021237260" style="color:#A98224; font-weight:700; text-decoration:none;">+49 30 21237260</a> oder antworten Sie einfach direkt auf diese E-Mail.
               </div>
-              <p style="font-size:14px; line-height:1.6; color:#4a423b; margin:24px 0 0 0;">
+
+              <div style="text-align:center; margin:26px 0 10px;">
+                <a href="' . esc_url(home_url('/#speisekarte')) . '" target="_blank" style="background-color:#A98224; color:#ffffff; font-size:13px; font-weight:700; text-decoration:none; padding:12px 24px; border-radius:8px; display:inline-block; letter-spacing:0.5px; box-shadow:0 3px 10px rgba(169, 130, 36, 0.25);">
+                  SPEISEKARTE ANSEHEN
+                </a>
+              </div>
+
+              <p style="font-size:14px; line-height:1.6; color:#4A4036; margin:24px 0 0 0;">
                 Wir freuen uns auf Ihren Besuch!<br><br>
                 Herzliche Grüße,<br>
-                <strong>Ihr Vegan Garden Berlin Team</strong>
+                <strong style="color:#2A160F;">Ihr Vegan Garden Berlin Team</strong>
               </p>
             </td>
           </tr>
+
+          <!-- BRAND FOOTER -->
           <tr>
-            <td style="background-color:#FAF7F2; border-top:1px solid #E8E0D4; padding:20px 24px; text-align:center; font-size:12px; color:#8C827A; line-height:1.6;">
-              <strong>Vegan Garden Berlin</strong><br>
+            <td style="background-color:#2A160F; padding:22px 24px; text-align:center; font-size:12px; color:#C4BBB3; line-height:1.7;">
+              <strong style="color:#C79A4A; font-size:14px;">Vegan Garden Berlin</strong><br>
               Gärtnerstraße 15, 10245 Berlin (Friedrichshain)<br>
-              Telefon: <a href="tel:+493021237260" style="color:#A98224; text-decoration:none;">+49 30 21237260</a> &bull; E-Mail: <a href="mailto:booking@vegan-garden.berlin" style="color:#A98224; text-decoration:none;">booking@vegan-garden.berlin</a><br>
-              Web: <a href="https://vegan-garden.berlin" style="color:#2E5A36; text-decoration:none; font-weight:600;">vegan-garden.berlin</a>
+              Telefon: <a href="tel:+493021237260" style="color:#C79A4A; text-decoration:none; font-weight:600;">+49 30 21237260</a> &bull; E-Mail: <a href="mailto:booking@vegan-garden.berlin" style="color:#C79A4A; text-decoration:none;">booking@vegan-garden.berlin</a><br>
+              Website: <a href="' . esc_url(home_url('/')) . '" target="_blank" style="color:#ffffff; text-decoration:underline; font-weight:600;">vegan-garden.berlin</a>
             </td>
           </tr>
         </table>

@@ -1384,15 +1384,15 @@ add_action('login_enqueue_scripts', function() {
             background-repeat: no-repeat !important;
             background-position: center !important;
             background-origin: content-box !important;
-            background-clip: content-box !important;
+            background-clip: border-box !important;
             width: 100% !important;
             max-width: 370px !important;
-            height: 68px !important;
+            height: 70px !important;
             margin: 0 auto !important;
             border-radius: 14px !important;
             background-color: #ffffff !important;
-            box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.85) !important;
-            padding: 14px 22px !important;
+            box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.9) !important;
+            padding: 13px 22px !important;
             box-sizing: border-box !important;
             border: none !important;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -1400,7 +1400,7 @@ add_action('login_enqueue_scripts', function() {
         }
         #login h1 a:hover {
             transform: translateY(-2px) scale(1.01) !important;
-            box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.55), 0 0 0 3px rgba(39, 170, 225, 0.75) !important;
+            box-shadow: 0 20px 40px -6px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(39, 170, 225, 0.75) !important;
         }
 
         /* Tiêu đề CỔNG QUẢN TRỊ WEBSITE */
@@ -1645,8 +1645,8 @@ add_action('login_enqueue_scripts', function() {
             }
             #login h1 a {
                 max-width: 320px !important;
-                height: 60px !important;
-                padding: 12px 16px !important;
+                height: 62px !important;
+                padding: 11px 16px !important;
                 border-radius: 12px !important;
                 margin-bottom: 14px !important;
             }

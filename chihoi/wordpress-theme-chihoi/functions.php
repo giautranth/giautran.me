@@ -1312,3 +1312,414 @@ function chihoi_remove_version_strings($src) {
 }
 add_filter('script_loader_src', 'chihoi_remove_version_strings');
 add_filter('style_loader_src', 'chihoi_remove_version_strings');
+
+/* ==========================================================================
+   TÙY BIẾN GIAO DIỆN ĐĂNG NHẬP (CUSTOM WP-LOGIN)
+   ========================================================================== */
+
+// 1. Thay đổi URL của logo trên trang đăng nhập trỏ về trang chủ website
+add_filter('login_headerurl', function() {
+    return home_url('/');
+});
+
+// 2. Thay đổi tiêu đề/tooltip của logo
+add_filter('login_headertext', function() {
+    return 'Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam';
+});
+
+// 3. Chèn khối tiêu đề nhận diện thương hiệu phía trên form đăng nhập
+add_filter('login_message', function($message) {
+    $custom_header = '<div class="chihoi-login-header-block">
+        <h2 class="chihoi-login-title">CHI HỘI BỆNH VIỆN TƯ NHÂN</h2>
+        <div class="chihoi-login-subtitle">TP. HỒ CHÍ MINH VÀ CÁC TỈNH PHÍA NAM</div>
+        <div class="chihoi-login-portal-tag">CỔNG QUẢN TRỊ VIÊN & HỘI VIÊN</div>
+    </div>';
+    return $custom_header . $message;
+});
+
+// 4. Chèn thông tin bản quyền và slogan phía dưới trang đăng nhập
+add_action('login_footer', function() {
+    echo '<div class="chihoi-login-footer-block">
+        <div class="chihoi-login-slogan">ĐOÀN KẾT - HỢP TÁC - PHÁT TRIỂN</div>
+        <div class="chihoi-login-copyright">© ' . date('Y') . ' Chi hội Bệnh viện Tư nhân TP. HCM & các tỉnh phía Nam.</div>
+    </div>';
+});
+
+// 5. Nạp CSS tùy biến giao diện đăng nhập hiện đại, sang trọng
+add_action('login_enqueue_scripts', function() {
+    $logo_url = home_url('/photo/logo/chihoi-login.webp');
+    $bg_url = home_url('/photo/bg/vietnamese_medical_bg.webp');
+    ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /* Reset & Toàn trang */
+        html, body.login {
+            min-height: 100% !important;
+        }
+        body.login {
+            background-color: #0b1727 !important;
+            background-image: linear-gradient(135deg, rgba(11, 23, 39, 0.92) 0%, rgba(26, 54, 93, 0.88) 100%), url('<?php echo esc_url($bg_url); ?>') !important;
+            background-position: center center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-attachment: fixed !important;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
+            padding: 50px 16px 40px !important;
+            box-sizing: border-box !important;
+            position: relative !important;
+        }
+
+        /* Khung đăng nhập chính */
+        #login {
+            width: 440px !important;
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin: 0 auto !important;
+            position: relative !important;
+            z-index: 10 !important;
+        }
+
+        /* Logo Chi Hội */
+        #login h1 {
+            margin: 0 0 16px 0 !important;
+            text-align: center !important;
+            line-height: 1 !important;
+        }
+        #login h1 a {
+            background-image: url('<?php echo esc_url($logo_url); ?>') !important;
+            background-size: 90px 90px !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            width: 108px !important;
+            height: 108px !important;
+            margin: 0 auto !important;
+            border-radius: 50% !important;
+            background-color: #ffffff !important;
+            box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(255, 255, 255, 0.85) !important;
+            padding: 0 !important;
+            border: none !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            display: block !important;
+        }
+        #login h1 a:hover {
+            transform: translateY(-2px) scale(1.03) !important;
+            box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.6), 0 0 0 4px rgba(39, 170, 225, 0.8) !important;
+        }
+
+        /* Khối tiêu đề thương hiệu phía trên form */
+        .chihoi-login-header-block {
+            text-align: center !important;
+            margin-bottom: 22px !important;
+        }
+        .chihoi-login-title {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 1.15rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            letter-spacing: 0.5px !important;
+            margin: 0 0 5px 0 !important;
+            text-transform: uppercase !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+        }
+        .chihoi-login-subtitle {
+            font-family: 'Noto Sans', sans-serif !important;
+            font-size: 0.84rem !important;
+            font-weight: 500 !important;
+            color: #93c5fd !important;
+            letter-spacing: 0.3px !important;
+            margin-bottom: 12px !important;
+            text-transform: uppercase !important;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4) !important;
+        }
+        .chihoi-login-portal-tag {
+            display: inline-block !important;
+            padding: 5px 14px !important;
+            font-size: 0.76rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 0.8px !important;
+            text-transform: uppercase !important;
+            background: rgba(39, 170, 225, 0.2) !important;
+            color: #38bdf8 !important;
+            border: 1px solid rgba(56, 189, 248, 0.4) !important;
+            border-radius: 20px !important;
+            backdrop-filter: blur(8px) !important;
+        }
+
+        /* Thẻ form đăng nhập (Card) */
+        #loginform, #lostpasswordform, #resetpassform {
+            background: #ffffff !important;
+            border-radius: 20px !important;
+            padding: 34px 32px 30px !important;
+            border: 1px solid rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(226, 232, 240, 0.6) !important;
+        }
+
+        /* Nhãn các trường nhập liệu */
+        #loginform label, #lostpasswordform label {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 0.88rem !important;
+            font-weight: 600 !important;
+            color: #1e293b !important;
+            margin-bottom: 6px !important;
+            display: block !important;
+        }
+
+        /* Ô nhập văn bản (Inputs) */
+        .login input[type="text"],
+        .login input[type="password"],
+        .login input[type="email"] {
+            height: 48px !important;
+            font-size: 0.98rem !important;
+            font-family: 'Noto Sans', sans-serif !important;
+            border: 1.5px solid #cbd5e1 !important;
+            border-radius: 12px !important;
+            background: #f8fafc !important;
+            padding: 0 16px !important;
+            color: #0f172a !important;
+            margin-top: 6px !important;
+            margin-bottom: 16px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            transition: all 0.2s ease !important;
+        }
+        .login input[type="text"]:focus,
+        .login input[type="password"]:focus,
+        .login input[type="email"]:focus {
+            background: #ffffff !important;
+            border-color: #2563eb !important;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15) !important;
+            outline: none !important;
+        }
+
+        /* Nút ẩn/hiện mật khẩu của WordPress */
+        .login .user-pass-wrap {
+            position: relative !important;
+            margin-bottom: 16px !important;
+        }
+        .login .user-pass-wrap .wp-pwd {
+            position: relative !important;
+        }
+        .wp-pwd .button.wp-hide-pw {
+            position: absolute !important;
+            right: 8px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            color: #64748b !important;
+            cursor: pointer !important;
+            padding: 0 6px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        .wp-pwd .button.wp-hide-pw:hover {
+            color: #1e293b !important;
+        }
+
+        /* Ghi nhớ đăng nhập (Checkbox) */
+        .login .forgetmenot {
+            margin: 4px 0 18px 0 !important;
+            float: none !important;
+        }
+        .login .forgetmenot label {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            font-family: 'Noto Sans', sans-serif !important;
+            font-size: 0.88rem !important;
+            font-weight: 500 !important;
+            color: #475569 !important;
+            cursor: pointer !important;
+        }
+        .login input[type="checkbox"] {
+            border-radius: 5px !important;
+            border: 1.5px solid #94a3b8 !important;
+            width: 17px !important;
+            height: 17px !important;
+            accent-color: #2563eb !important;
+            margin: 0 !important;
+            cursor: pointer !important;
+        }
+
+        /* Nút Đăng nhập chính */
+        .login p.submit {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .login .button.button-primary {
+            float: none !important;
+            width: 100% !important;
+            height: 48px !important;
+            line-height: 48px !important;
+            padding: 0 24px !important;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+            border: none !important;
+            border-radius: 12px !important;
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 1.02rem !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 10px 24px -4px rgba(37, 99, 235, 0.45) !important;
+            cursor: pointer !important;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            margin-top: 6px !important;
+            display: block !important;
+            text-align: center !important;
+            text-shadow: none !important;
+        }
+        .login .button.button-primary:hover,
+        .login .button.button-primary:focus {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%) !important;
+            box-shadow: 0 14px 28px -4px rgba(37, 99, 235, 0.6) !important;
+            transform: translateY(-2px) !important;
+            color: #ffffff !important;
+        }
+        .login .button.button-primary:active {
+            transform: translateY(0) !important;
+            box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.5) !important;
+        }
+
+        /* Thông báo lỗi & Thông điệp */
+        #login_error, .login .message, .login .notice {
+            border-radius: 12px !important;
+            border-left: none !important;
+            padding: 14px 18px !important;
+            margin-bottom: 20px !important;
+            font-size: 0.88rem !important;
+            box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.25) !important;
+            line-height: 1.5 !important;
+        }
+        #login_error {
+            background-color: #fef2f2 !important;
+            border: 1px solid #fecaca !important;
+            color: #991b1b !important;
+        }
+        #login_error a {
+            color: #dc2626 !important;
+            font-weight: 600 !important;
+        }
+        .login .message, .login .notice {
+            background-color: #eff6ff !important;
+            border: 1px solid #bfdbfe !important;
+            color: #1e40af !important;
+        }
+
+        /* Các liên kết bên dưới form (#nav & #backtoblog) */
+        #login #nav, #login #backtoblog {
+            padding: 0 !important;
+            margin: 18px 0 0 0 !important;
+            text-align: center !important;
+            font-size: 0.9rem !important;
+        }
+        #login #nav a, #login #backtoblog a {
+            color: #e2e8f0 !important;
+            text-decoration: none !important;
+            font-weight: 500 !important;
+            transition: color 0.2s ease !important;
+        }
+        #login #nav a:hover, #login #backtoblog a:hover {
+            color: #38bdf8 !important;
+            text-decoration: underline !important;
+        }
+        #login #backtoblog {
+            margin-top: 10px !important;
+        }
+        #login #backtoblog a {
+            color: #94a3b8 !important;
+            font-size: 0.86rem !important;
+        }
+
+        /* Chuyển đổi ngôn ngữ WordPress */
+        .language-switcher {
+            margin-top: 24px !important;
+            text-align: center !important;
+        }
+        .language-switcher label {
+            color: #94a3b8 !important;
+            font-size: 0.85rem !important;
+        }
+        .language-switcher select {
+            background: rgba(15, 23, 42, 0.6) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 8px !important;
+            padding: 6px 12px !important;
+            font-size: 0.85rem !important;
+        }
+        .language-switcher select option {
+            background: #1e293b !important;
+            color: #ffffff !important;
+        }
+        .language-switcher .button {
+            background: rgba(255, 255, 255, 0.15) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 8px !important;
+            padding: 4px 12px !important;
+            font-size: 0.82rem !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+        }
+        .language-switcher .button:hover {
+            background: rgba(255, 255, 255, 0.25) !important;
+            color: #ffffff !important;
+        }
+
+        /* Footer bản quyền & khẩu hiệu Chi Hội */
+        .chihoi-login-footer-block {
+            margin-top: 30px !important;
+            text-align: center !important;
+            position: relative !important;
+            z-index: 10 !important;
+        }
+        .chihoi-login-slogan {
+            font-size: 0.82rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 1.8px !important;
+            color: #38bdf8 !important;
+            margin-bottom: 6px !important;
+            text-transform: uppercase !important;
+        }
+        .chihoi-login-copyright {
+            font-size: 0.78rem !important;
+            color: #94a3b8 !important;
+            opacity: 0.85 !important;
+        }
+
+        /* Tối ưu hóa trên thiết bị di động */
+        @media (max-width: 480px) {
+            body.login {
+                padding: 30px 16px 30px !important;
+            }
+            #login {
+                width: 100% !important;
+            }
+            #loginform {
+                padding: 26px 20px 22px !important;
+                border-radius: 16px !important;
+            }
+            .chihoi-login-title {
+                font-size: 1rem !important;
+            }
+            .chihoi-login-subtitle {
+                font-size: 0.78rem !important;
+            }
+            #login h1 a {
+                width: 90px !important;
+                height: 90px !important;
+                background-size: 76px 76px !important;
+            }
+        }
+    </style>
+    <?php
+});
+

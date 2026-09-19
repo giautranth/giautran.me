@@ -1327,6 +1327,11 @@ add_filter('login_headertext', function() {
     return 'Chi hội Bệnh viện Tư nhân TP. Hồ Chí Minh và các tỉnh phía Nam';
 });
 
+// 2b. Thêm tiêu đề CỔNG QUẢN TRỊ WEBSITE bên dưới logo
+add_filter('login_message', function($message) {
+    return '<h2 class="chihoi-login-title">CỔNG QUẢN TRỊ WEBSITE</h2>' . $message;
+});
+
 // 3. Nạp CSS tùy biến giao diện đăng nhập hiện đại, sang trọng
 add_action('login_enqueue_scripts', function() {
     $logo_url = home_url('/wp-content/themes/chihoi/photo/logo/chihoi_2.png');
@@ -1369,7 +1374,7 @@ add_action('login_enqueue_scripts', function() {
 
         /* Logo Chi Hội (chihoi_2.png nằm trong thẻ trắng nổi bật) */
         #login h1 {
-            margin: 0 0 24px 0 !important;
+            margin: 0 0 16px 0 !important;
             text-align: center !important;
             line-height: 1 !important;
         }
@@ -1378,14 +1383,16 @@ add_action('login_enqueue_scripts', function() {
             background-size: contain !important;
             background-repeat: no-repeat !important;
             background-position: center !important;
+            background-origin: content-box !important;
+            background-clip: content-box !important;
             width: 100% !important;
-            max-width: 440px !important;
-            height: 76px !important;
+            max-width: 370px !important;
+            height: 68px !important;
             margin: 0 auto !important;
-            border-radius: 16px !important;
+            border-radius: 14px !important;
             background-color: #ffffff !important;
-            box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.85) !important;
-            padding: 12px 24px !important;
+            box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.85) !important;
+            padding: 14px 22px !important;
             box-sizing: border-box !important;
             border: none !important;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -1393,7 +1400,20 @@ add_action('login_enqueue_scripts', function() {
         }
         #login h1 a:hover {
             transform: translateY(-2px) scale(1.01) !important;
-            box-shadow: 0 20px 40px -6px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(39, 170, 225, 0.75) !important;
+            box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.55), 0 0 0 3px rgba(39, 170, 225, 0.75) !important;
+        }
+
+        /* Tiêu đề CỔNG QUẢN TRỊ WEBSITE */
+        .chihoi-login-title {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 1.15rem !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            letter-spacing: 1.2px !important;
+            text-align: center !important;
+            margin: 0 0 20px 0 !important;
+            text-transform: uppercase !important;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
         }
 
         /* Thẻ form đăng nhập (Card) */
@@ -1558,29 +1578,25 @@ add_action('login_enqueue_scripts', function() {
             color: #1e40af !important;
         }
 
-        /* Các liên kết bên dưới form (#nav & #backtoblog) */
-        #login #nav, #login #backtoblog {
+        /* Các liên kết bên dưới form (#nav & ẩn hoàn toàn #backtoblog theo yêu cầu) */
+        #login #nav {
             padding: 0 !important;
             margin: 18px 0 0 0 !important;
             text-align: center !important;
             font-size: 0.9rem !important;
         }
-        #login #nav a, #login #backtoblog a {
+        #login #nav a {
             color: #e2e8f0 !important;
             text-decoration: none !important;
             font-weight: 500 !important;
             transition: color 0.2s ease !important;
         }
-        #login #nav a:hover, #login #backtoblog a:hover {
+        #login #nav a:hover {
             color: #38bdf8 !important;
             text-decoration: underline !important;
         }
         #login #backtoblog {
-            margin-top: 10px !important;
-        }
-        #login #backtoblog a {
-            color: #94a3b8 !important;
-            font-size: 0.86rem !important;
+            display: none !important;
         }
 
         /* Chuyển đổi ngôn ngữ WordPress */
@@ -1628,10 +1644,15 @@ add_action('login_enqueue_scripts', function() {
                 width: 100% !important;
             }
             #login h1 a {
-                height: 64px !important;
-                padding: 10px 16px !important;
-                border-radius: 14px !important;
-                margin-bottom: 20px !important;
+                max-width: 320px !important;
+                height: 60px !important;
+                padding: 12px 16px !important;
+                border-radius: 12px !important;
+                margin-bottom: 14px !important;
+            }
+            .chihoi-login-title {
+                font-size: 1.02rem !important;
+                margin-bottom: 16px !important;
             }
             #loginform {
                 padding: 26px 20px 22px !important;

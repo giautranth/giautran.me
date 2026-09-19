@@ -26,11 +26,31 @@ CacheKeyModify -qs:_ga
     Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 
+# 1. Chặn hoàn toàn XML-RPC (Chống tấn công dò mật khẩu tự động & DDoS qua xmlrpc.php)
+<Files xmlrpc.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# 2. Chặn file cấu hình và thông tin nhạy cảm
 <FilesMatch "^.*(wp-config\.php|\.env|\.git|\.htaccess|debug\.log|readme\.html|license\.txt)">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
+
+# 3. Chặn tải các tệp sao lưu, nén, nhật ký hoặc cơ sở dữ liệu
+<FilesMatch "\.(zip|tar|gz|rar|7z|sql|bak|old|backup|log)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
 Options -Indexes
+
+# 4. Chống dò tìm tên tài khoản quản trị (Author Scan / Enumeration)
+<IfModule mod_rewrite.c>
+    RewriteCond %{QUERY_STRING} ^author=([0-9]*) [NC]
+    RewriteRule .* - [F,L]
+</IfModule>
 
 <IfModule mod_rewrite.c>
 RewriteEngine On

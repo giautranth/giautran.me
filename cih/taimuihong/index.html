@@ -101,17 +101,6 @@
         animation: headerBtnPulseGlow 2.5s infinite !important;
         transition: all 0.25s ease !important;
       }
-      #header-booking-btn::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 50%;
-        height: 200%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-        animation: headerBtnShimmer 2.8s infinite cubic-bezier(0.4, 0, 0.2, 1);
-        pointer-events: none;
-      }
       #header-booking-btn:hover {
         transform: translateY(-1px) scale(1.03) !important;
         box-shadow: 0 0 0 6px rgba(0, 125, 165, 0.2), 0 6px 18px rgba(0, 125, 165, 0.45) !important;
@@ -123,10 +112,41 @@
       }
     }
 
-    /* Keyframes for Shimmer & Pulse Glow */
+    /* Universal Shimmer & Pulse Glow (Desktop & Mobile) */
+    #header-booking-btn {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    #header-booking-btn::after {
+      content: '' !important;
+      position: absolute !important;
+      top: -50% !important;
+      bottom: -50% !important;
+      left: -80px !important;
+      width: 60px !important;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 25%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(255, 255, 255, 0.35) 75%,
+        rgba(255, 255, 255, 0) 100%
+      ) !important;
+      transform: rotate(25deg) !important;
+      animation: headerBtnShimmer 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite !important;
+      pointer-events: none !important;
+      z-index: 5 !important;
+    }
     @keyframes headerBtnShimmer {
-      0% { transform: translateX(-150%) rotate(25deg); }
-      30%, 100% { transform: translateX(250%) rotate(25deg); }
+      0% {
+        left: -90px;
+      }
+      40% {
+        left: 130%;
+      }
+      100% {
+        left: 130%;
+      }
     }
     @keyframes headerBtnPulseGlow {
       0%, 100% {

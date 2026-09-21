@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1789721813" />
+  <link rel="stylesheet" href="style.css?v=1789964165" />
   
   <script>
     function openImageLightbox(src, alt) {
@@ -1258,14 +1258,18 @@
     /* Footer 3-Column Balanced Layout for Tai Mui Hong */
     .footer__grid {
       display: grid !important;
-      grid-template-columns: 1.15fr 1fr 1fr !important;
-      gap: 3rem !important;
+      grid-template-columns: 1.1fr 1.25fr 0.95fr !important;
+      gap: 2.5rem !important;
       align-items: start !important;
     }
     .footer__col--contact {
-      justify-self: center !important;
-      max-width: 360px !important;
+      justify-self: start !important;
+      max-width: none !important;
       width: 100% !important;
+    }
+    .footer__contact li.footer__contact-address {
+      align-items: center !important;
+      white-space: nowrap !important;
     }
     @media (max-width: 991px) and (min-width: 601px) {
       .footer__grid {
@@ -1288,6 +1292,10 @@
       .footer__col--contact {
         justify-self: start !important;
         max-width: 100% !important;
+      }
+      .footer__contact li.footer__contact-address {
+        font-size: 0.78rem !important;
+        gap: 0.4rem !important;
       }
     }
     
@@ -1818,10 +1826,10 @@
         <h4 class="footer__heading">LIÊN HỆ</h4>
         <ul class="footer__contact">
           <li class="footer__contact-address">
-            <span class="footer__contact-icon" style="margin-top: 2px;">
+            <span class="footer__contact-icon">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </span>
-            <span>Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, <span style="white-space: nowrap;">TP. HCM</span></span>
+            <span style="white-space: nowrap;">Địa chỉ: &nbsp;Số 3 Đường 17A, P. An Lạc, TP. HCM</span>
           </li>
           <li>
             <span class="footer__contact-icon">
@@ -1944,7 +1952,7 @@
   </div>
 </div>
 
-<script src="script.js?v=1789721813"></script>
+<script src="script.js?v=1789964165"></script>
 <script>
   let activeModalList = [];
   let activeModalIndex = 0;

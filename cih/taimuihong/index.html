@@ -96,14 +96,18 @@
         overflow: hidden !important;
         background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
         color: #ffffff !important;
+        border: none !important;
+        outline: none !important;
         border-radius: 8px !important;
         padding: 8px 16px !important;
-        animation: headerBtnPulseGlow 2.2s infinite !important;
+        animation: headerBtnPulseGlow 3s infinite !important;
         transition: all 0.25s ease !important;
       }
       #header-booking-btn:hover {
         transform: translateY(-1px) scale(1.03) !important;
         box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.25), 0 6px 18px rgba(217, 119, 6, 0.5) !important;
+        border: none !important;
+        outline: none !important;
       }
       #header-booking-btn .btn-line-1,
       #header-booking-btn .btn-line-2 {
@@ -117,7 +121,9 @@
       position: relative !important;
       overflow: hidden !important;
       background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
-      animation: headerBtnPulseGlow 2.2s infinite !important;
+      border: none !important;
+      outline: none !important;
+      animation: headerBtnPulseGlow 3s infinite !important;
     }
     #header-booking-btn::after {
       content: '' !important;
@@ -135,7 +141,7 @@
         rgba(255, 255, 255, 0) 100%
       ) !important;
       transform: translateX(-120px) rotate(25deg);
-      animation: headerBtnShimmer 2.5s infinite ease-in-out !important;
+      animation: headerBtnShimmer 3.8s infinite ease-in-out !important;
       pointer-events: none !important;
       z-index: 5 !important;
     }
@@ -143,8 +149,8 @@
       0% {
         transform: translateX(-120px) rotate(25deg);
       }
-      35%, 100% {
-        transform: translateX(250px) rotate(25deg);
+      55%, 100% {
+        transform: translateX(260px) rotate(25deg);
       }
     }
     @keyframes headerBtnPulseGlow {
@@ -240,9 +246,10 @@
         padding: 5px 12px !important;
         border-radius: 8px !important;
         border: none !important;
+        outline: none !important;
         text-transform: uppercase !important;
         letter-spacing: 0.3px !important;
-        animation: headerBtnPulseGlow 2.2s infinite !important;
+        animation: headerBtnPulseGlow 3s infinite !important;
         text-decoration: none !important;
         text-align: center !important;
       }

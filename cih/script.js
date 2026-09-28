@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSectionSlider('case-prev', 'case-next', 'case-track-wrap');
   initSectionSlider('case-side-prev', 'case-side-next', 'case-track-wrap');
 
-  /* ── MOBILE INFINITE LOOP CAROUSEL SLIDER ── */
+  /* ── MOBILE & DESKTOP SLIDER CONTROLLER ── */
   function initMobileInfiniteSlider(trackId, prevBtnId, nextBtnId) {
     const track = document.getElementById(trackId);
     const prevBtn = document.getElementById(prevBtnId);
@@ -289,8 +289,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = 0;
 
+    function getItems() {
+      return Array.from(track.children).filter(el => {
+        return window.getComputedStyle(el).display !== 'none';
+      });
+    }
+
     function updateSlider() {
-      const items = track.children;
+      const items = getItems();
       const totalItems = items.length;
       if (totalItems === 0) return;
 
@@ -302,13 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentIndex > maxIndex) currentIndex = 0;
       if (currentIndex < 0) currentIndex = maxIndex;
 
-      if (isDesktop) {
-        // Shift percent for 3-column view: currentIndex * (33.333% + gap)
-        const shiftPercent = currentIndex * 35.666;
-        track.style.transform = `translateX(-${shiftPercent}%)`;
-      } else {
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
-      }
+      if (!items[currentIndex] || !items[0]) return;
+      const startOffset = items[0].offsetLeft;
+      const targetOffset = items[currentIndex].offsetLeft - startOffset;
+      track.style.transform = `translateX(-${targetOffset}px)`;
     }
 
     nextBtn.addEventListener('click', (e) => {
@@ -350,6 +353,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
       updateSlider();
     });
+
+    // Listen to custom reset event (e.g. from tab filter)
+    track.addEventListener('cih-slider-reset', () => {
+      currentIndex = 0;
+      updateSlider();
+    });
   }
 
   initMobileInfiniteSlider('spec-grid', 'spec-mob-prev', 'spec-mob-next');
@@ -366,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
 
       const filter = tab.getAttribute('data-filter');
-      const newsCards = document.querySelectorAll('#news-track .news-card');
+      const newsCards = document.querySelectorAll('#news-track .news-card, #news-grid-3 .news-card');
 
       newsCards.forEach(card => {
         const cat = card.getAttribute('data-category');
@@ -376,6 +385,11 @@ document.addEventListener('DOMContentLoaded', () => {
           card.style.display = 'none';
         }
       });
+
+      const newsTrack = document.getElementById('news-grid-3') || document.getElementById('news-track');
+      if (newsTrack) {
+        newsTrack.dispatchEvent(new CustomEvent('cih-slider-reset'));
+      }
     });
   });
 
@@ -816,6 +830,8 @@ window.googleTranslateElementInit = function() {
           changeLanguage(savedLang);
         }, 800);
       }
+    } catch(e) {}
+
     // Fix English menu overflow if Google Translate translates to extra long text
     const fixEnglishNav = () => {
       document.querySelectorAll('.nav__link').forEach(link => {

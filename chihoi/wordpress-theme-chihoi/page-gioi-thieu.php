@@ -3,12 +3,12 @@
   <!-- ========== HERO HEADER BANNER ========== -->
   <section class="about-hero-banner">
     <div class="container">
-      <div class="about-breadcrumb">
-        <a href="./">Trang chủ</a>
+      <div class="about-breadcrumb" style="text-transform:uppercase;">
+        <a href="./">TRANG CHỦ</a>
         <span>/</span>
-        <a href="ve-chi-hoi">Giới thiệu</a>
+        <a href="ve-chi-hoi">GIỚI THIỆU</a>
         <span>/</span>
-        <span style="color:#ffffff;font-weight:700;">Về Chi hội</span>
+        <span style="color:#ffffff;font-weight:700;">VỀ CHI HỘI</span>
       </div>
 
       <h1 class="about-hero-title">

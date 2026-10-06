@@ -2,10 +2,10 @@
 
 <!-- ========== BREADCRUMB ========== -->
 <div style="background:#f1f5f9;padding:14px 0;border-bottom:1px solid #e2e8f0;">
-  <div class="container" style="font-size:0.88rem;color:#64748b;">
-    <a href="<?php echo esc_url(home_url('/')); ?>" style="color:#2C3691;text-decoration:none;font-weight:600;">Trang chủ</a>
+  <div class="container" style="font-size:0.88rem;color:#64748b;text-transform:uppercase;">
+    <a href="<?php echo esc_url(home_url('/')); ?>" style="color:#2C3691;text-decoration:none;font-weight:600;">TRANG CHỦ</a>
     <span style="margin:0 8px;color:#94a3b8;">/</span>
-    <a href="<?php echo esc_url(home_url('/tin-tuc/')); ?>" style="color:#2C3691;text-decoration:none;font-weight:600;">Tin tức & Sự kiện</a>
+    <a href="<?php echo esc_url(home_url('/tin-tuc/')); ?>" style="color:#2C3691;text-decoration:none;font-weight:600;">TIN TỨC & SỰ KIỆN</a>
     <span style="margin:0 8px;color:#94a3b8;">/</span>
     <span style="color:#0f172a;font-weight:700;"><?php the_title(); ?></span>
   </div>

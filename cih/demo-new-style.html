@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bệnh Viện Quốc Tế City (CIH) - Chuẩn Mực Y Tế Quốc Tế</title>
+  <meta name="description" content="Bệnh viện Quốc tế City (CIH) - Đạt chuẩn an toàn y tế Hoa Kỳ AACI. Đội ngũ chuyên gia đầu ngành, trang thiết bị tối tân, dịch vụ chăm sóc toàn diện chuẩn 5 sao." />
+  <link rel="icon" type="image/png" href="images/logo_cih_acci.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <style>
+    :root {
+      --primary: #007DA5;
+      --primary-dark: #005F80;
+      --primary-deep: #061A29;
+      --primary-light: #EBF7FB;
+      --accent-gold: #D97706;
+      --accent-gold-light: #FEF3C7;
+      --accent-cyan: #06B6D4;
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --border-subtle: #E2E8F0;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 25px -4px rgba(0, 125, 165, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+      --shadow-lg: 0 20px 40px -8px rgba(0, 125, 165, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── TOP UTILITY BAR ── */
+    .top-bar {
+      background: var(--primary-deep);
+      color: #94A3B8;
+      font-size: 0.82rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .top-bar__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .top-bar__left, .top-bar__right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .top-bar__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #CBD5E1;
+    }
+    .top-bar__item strong {
+      color: #FFFFFF;
+    }
+    .top-bar__badge {
+      background: rgba(217, 119, 6, 0.2);
+      color: #FCD34D;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    /* ── MAIN HEADER ── */
+    .header {
+      background: #FFFFFF;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+    .header__brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .header__logo {
+      height: 48px;
+      display: block;
+    }
+    .header__logo img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+    .header__accreditation {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-left: 16px;
+      border-left: 1px solid var(--border-subtle);
+    }
+    .header__accreditation-icon {
+      font-size: 1.25rem;
+      color: #D97706;
+    }
+    .header__accreditation-text {
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--primary-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    .nav__list {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav__link {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: color 0.2s;
+    }
+    .nav__link:hover, .nav__link.active {
+      color: var(--primary);
+    }
+    .btn-booking {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #007DA5 0%, #005F80 100%);
+      color: #FFFFFF;
+      font-size: 0.92rem;
+      font-weight: 700;
+      border-radius: 999px;
+      box-shadow: 0 4px 14px rgba(0, 125, 165, 0.3);
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-booking:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 125, 165, 0.45);
+    }
+
+    /* ── BENTO HERO SECTION ── */
+    .hero-section {
+      padding: 32px 0 48px;
+    }
+    .bento-hero {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 24px;
+    }
+
+    /* Main Hero Banner Card */
+    .bento-card--hero {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      min-height: 540px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 48px;
+      background: linear-gradient(180deg, rgba(6, 26, 41, 0.1) 0%, rgba(6, 26, 41, 0.88) 85%), url('images/cih_building_hero.jpg') center/cover no-repeat;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero__floating-badge {
+      position: absolute;
+      top: 36px;
+      left: 36px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+    .badge-star {
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 900;
+    }
+    .badge-text {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-deep);
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      color: #FFFFFF;
+      max-width: 680px;
+    }
+    .hero__title {
+      font-size: 2.85rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+    .hero__title span {
+      background: linear-gradient(135deg, #38BDF8 0%, #BAE6FD 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero__subtitle {
+      font-size: 1.08rem;
+      color: #E2E8F0;
+      margin-bottom: 28px;
+      line-height: 1.55;
+    }
+    .hero__search-box {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border-radius: 999px;
+      padding: 6px 8px 6px 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      max-width: 540px;
+    }
+    .hero__search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-family: inherit;
+    }
+    .hero__search-btn {
+      padding: 12px 24px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .hero__search-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Side Bento Cards */
+    .bento-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .bento-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(0, 125, 165, 0.25);
+    }
+
+    /* Side Card 1: Stats */
+    .bento-card--stats {
+      background: linear-gradient(145deg, #061A29 0%, #003B5C 100%);
+      color: #FFFFFF;
+      border: none;
+    }
+    .stats-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .stats-header h3 {
+      font-size: 1.15rem;
+      color: #FFFFFF;
+    }
+    .stats-header span {
+      font-size: 0.8rem;
+      color: #38BDF8;
+      background: rgba(56, 189, 248, 0.12);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #FCD34D;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      color: #94A3B8;
+      font-weight: 500;
+    }
+
+    /* Side Card 2: Emergency & Booking */
+    .bento-card--emergency {
+      background: #FFFFFF;
+      border-left: 6px solid #EF4444;
+    }
+    .emergency-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .emergency-phone {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #DC2626;
+      display: inline-block;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .emergency-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 16px;
+    }
+    .emergency-actions {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-call {
+      flex: 1;
+      padding: 10px 14px;
+      background: #EF4444;
+      color: #fff;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .btn-call:hover {
+      background: #DC2626;
+    }
+    .btn-zalo {
+      flex: 1;
+      padding: 10px 14px;
+      background: #0068FF;
+      color: #fff;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: opacity 0.2s;
+    }
+    .btn-zalo:hover {
+      opacity: 0.9;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section {
+      padding: 48px 0;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 32px;
+    }
+    .section-tag {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+    }
+    .section-link {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .section-link:hover {
+      gap: 10px;
+    }
+
+    /* ── BENTO GRID: CHUYÊN KHOA MŨI NHỌN ── */
+    .bento-specialties {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .spec-bento-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .spec-bento-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    .spec-bento-card--featured {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #005F80 0%, #007DA5 100%);
+      color: #FFFFFF;
+      border: none;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      padding: 0;
+    }
+    .spec-bento-card--featured .spec-content {
+      padding: 40px;
+    }
+    .spec-bento-card--featured h3 {
+      font-size: 1.75rem;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+    .spec-bento-card--featured p {
+      color: #E0F2FE;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .spec-bento-card--featured .spec-img-wrap {
+      height: 100%;
+      min-height: 260px;
+    }
+    .spec-bento-card--featured .spec-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .spec-bento-card--featured .btn-spec {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: #FFFFFF;
+      color: var(--primary-dark);
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .spec-bento-card--featured .btn-spec:hover {
+      background: #F8FAFC;
+      transform: translateX(4px);
+    }
+
+    .spec-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+    .spec-bento-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+      margin-bottom: 10px;
+    }
+    .spec-bento-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .spec-link {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: auto;
+    }
+
+    /* ── DOCTORS SECTION (HIGH-TECH CARDS) ── */
+    .bento-doctors {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .doctor-bento-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .doctor-bento-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    .doctor-img-wrap {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(180deg, #F1F5F9 0%, #E2E8F0 100%);
+      overflow: hidden;
+      position: relative;
+    }
+    .doctor-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+    }
+    .doctor-bento-card:hover .doctor-img {
+      transform: scale(1.05);
+    }
+    .doctor-badge {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(6, 26, 41, 0.85);
+      backdrop-filter: blur(8px);
+      color: #38BDF8;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .doctor-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+    .doctor-name {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .doctor-role {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 16px;
+      min-height: 38px;
+    }
+    .doctor-btn-book {
+      width: 100%;
+      padding: 10px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 1px solid rgba(0, 125, 165, 0.2);
+      transition: all 0.2s;
+    }
+    .doctor-btn-book:hover {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+    }
+
+    /* ── ACCREDITATIONS LUXURY RIBBON ── */
+    .accreditation-bar {
+      background: linear-gradient(135deg, #061A29 0%, #003B5C 100%);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      color: #FFFFFF;
+      margin: 24px 0 48px;
+      box-shadow: var(--shadow-lg);
+    }
+    .accreditation-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: center;
+    }
+    .acc-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.25s;
+    }
+    .acc-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .acc-medal {
+      font-size: 2.2rem;
+    }
+    .acc-info h4 {
+      font-size: 1.05rem;
+      color: #FCD34D;
+      margin-bottom: 2px;
+    }
+    .acc-info p {
+      font-size: 0.8rem;
+      color: #CBD5E1;
+      line-height: 1.35;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--primary-deep);
+      color: #94A3B8;
+      padding: 60px 0 24px;
+      margin-top: 60px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-logo img {
+      height: 44px;
+      margin-bottom: 16px;
+      filter: brightness(0) invert(1);
+    }
+    .footer-desc {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #94A3B8;
+      margin-bottom: 16px;
+    }
+    .footer-col h4 {
+      font-size: 1.05rem;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+    .footer-links a:hover {
+      color: #38BDF8;
+    }
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .bento-hero {
+        grid-template-columns: 1fr;
+      }
+      .bento-card--hero {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        min-height: 440px;
+      }
+      .bento-specialties {
+        grid-template-columns: 1fr 1fr;
+      }
+      .spec-bento-card--featured {
+        grid-column: span 2;
+      }
+      .bento-doctors {
+        grid-template-columns: 1fr 1fr;
+      }
+      .accreditation-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        display: none;
+      }
+      .header__inner {
+        height: 64px;
+      }
+      .nav {
+        display: none;
+      }
+      .hero__title {
+        font-size: 1.65rem;
+        line-height: 1.25;
+      }
+      .bento-card--hero {
+        padding: 24px 20px;
+        min-height: auto;
+      }
+      .hero__floating-badge {
+        position: static;
+        margin-bottom: 16px;
+        display: inline-flex;
+        padding: 6px 14px;
+      }
+      .hero__search-box {
+        padding: 4px 6px 4px 14px;
+      }
+      .hero__search-input {
+        font-size: 0.85rem;
+      }
+      .hero__search-btn {
+        padding: 10px 16px;
+        font-size: 0.82rem;
+      }
+      .spec-bento-card--featured {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+      }
+      .spec-bento-card--featured .spec-content {
+        padding: 24px;
+      }
+      .bento-specialties {
+        grid-template-columns: 1fr;
+      }
+      .bento-doctors {
+        grid-template-columns: 1fr;
+      }
+      .accreditation-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <div class="top-bar__left">
+        <span class="top-bar__item">📍 Số 3 Đường 17A, P. Bình Trị Đông B, Q. Bình Tân, TP. HCM</span>
+        <span class="top-bar__item">⏰ Khám bệnh: Thứ 2 – Thứ 7 (7:30 – 16:30)</span>
+      </div>
+      <div class="top-bar__right">
+        <span class="top-bar__item">🚨 Cấp cứu 24/7: <strong>(028) 6290 1155</strong></span>
+        <span class="top-bar__badge">Chuẩn AACI Hoa Kỳ</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__brand">
+        <a href="index.html" class="header__logo">
+          <img src="images/logo_cih_acci.png" alt="Bệnh viện Quốc tế City" />
+        </a>
+        <div class="header__accreditation">
+          <span class="header__accreditation-icon">★</span>
+          <span class="header__accreditation-text">Chuẩn An Toàn<br>Y Tế Hoa Kỳ</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#chuyen-khoa" class="nav__link active">Chuyên Khoa</a></li>
+          <li><a href="#bac-si" class="nav__link">Bác Sĩ</a></li>
+          <li><a href="#chung-nhan" class="nav__link">Chứng Nhận</a></li>
+          <li><a href="goi-kham.html" class="nav__link">Gói Khám</a></li>
+          <li><a href="taimuihong.html" class="nav__link" style="color: #007DA5; font-weight: 700;">Tai Mũi Họng ↗</a></li>
+          <li><a href="lien-he.html" class="nav__link">Liên Hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__cta">
+        <a href="lien-he.html#dat-lich" class="btn-booking">
+          <span>📅</span> Đặt Lịch Khám
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── BENTO HERO SECTION ── -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="bento-hero">
+        
+        <!-- Large Main Hero Card -->
+        <div class="bento-card--hero">
+          <div class="hero__floating-badge">
+            <span class="badge-star">★</span>
+            <span class="badge-text">Bệnh viện Đạt Chuẩn Quốc Tế AACI V6.0</span>
+          </div>
+
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Y Tế Chuẩn Quốc Tế.<br />
+              <span>Chăm Sóc Từ Trái Tim.</span>
+            </h1>
+            <p class="hero__subtitle">
+              Bệnh viện Quốc tế City (CIH) quy tụ đội ngũ chuyên gia đầu ngành, trang thiết bị tối tân và phác đồ điều trị cá thể hóa chuẩn Hoa Kỳ.
+            </p>
+
+            <form class="hero__search-box" action="bac-si" method="get" onsubmit="event.preventDefault(); window.location.href='bac-si?search=' + encodeURIComponent(this.querySelector('input').value);">
+              <input type="text" class="hero__search-input" placeholder="Tìm kiếm chuyên khoa, bác sĩ, gói khám..." />
+              <button type="submit" class="hero__search-btn">Tìm Kiếm</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Side Card 1: Key Hospital Stats -->
+        <div class="bento-card bento-card--stats">
+          <div class="stats-header">
+            <h3>Quy Mô Quốc Tế</h3>
+            <span>Tiêu chuẩn 5★</span>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-num">320+</span>
+              <span class="stat-label">Giường bệnh nội trú</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">16+</span>
+              <span class="stat-label">Chuyên khoa chuyên sâu</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">500+</span>
+              <span class="stat-label">Chuyên gia & Y bác sĩ</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">98.6%</span>
+              <span class="stat-label">Mức độ hài lòng</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Card 2: 24/7 Emergency & Consultation -->
+        <div class="bento-card bento-card--emergency">
+          <div>
+            <div class="emergency-title">
+              <span>🚨</span> Cấp Cứu 24/7 Trực Tuyến
+            </div>
+            <a href="tel:02862901155" class="emergency-phone">(028) 6290 1155</a>
+            <p class="emergency-desc">
+              Đội phản ứng nhanh CIH sẵn sàng 24/7 với hệ thống xe cấp cứu hồi sức chuyên dụng, hỗ trợ bảo hiểm bảo lãnh viện phí.
+            </p>
+          </div>
+          <div class="emergency-actions">
+            <a href="tel:19008146" class="btn-call">📞 Hotline 1900 8146</a>
+            <a href="https://zalo.me/2430902570795156082" target="_blank" class="btn-zalo">💬 Zalo Tư Vấn</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SPECIALTIES BENTO GRID ── -->
+  <section class="section" id="chuyen-khoa">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-tag">Dịch Vụ Trọng Tâm</span>
+          <h2 class="section-title">Chuyên Khoa Mũi Nhọn</h2>
+        </div>
+        <a href="chuyen-khoa.html" class="section-link">Xem tất cả chuyên khoa →</a>
+      </div>
+
+      <div class="bento-specialties">
+        
+        <!-- Featured Card: IVF & Maternity (Double Width) -->
+        <div class="spec-bento-card spec-bento-card--featured">
+          <div class="spec-content">
+            <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Mũi Nhọn Số 1</span>
+            <h3 style="margin-top: 10px;">Khoa Phụ Sản & Hỗ Trợ Sinh Sản (IVF)</h3>
+            <p>Hệ thống phòng Lab sạch tiêu chuẩn Class 1000, ứng dụng công nghệ nuôi cấy phôi tiên tiến với tỷ lệ đậu thai vượt trội. Đồng hành trọn gói hành trình đón con yêu.</p>
+            <a href="chi-tiet-chuyen-khoa.html?slug=khoa-phu-san" class="btn-spec">Tìm hiểu chi tiết →</a>
+          </div>
+          <div class="spec-img-wrap">
+            <img src="https://cih.com.vn/wp-content/uploads/2024/10/SAN00365_Edit-1.png" alt="Hỗ Trợ Sinh Sản IVF CIH" class="spec-img" onerror="this.src='images/ivf.png'" />
+          </div>
+        </div>
+
+        <!-- Card: Tai Mui Hong -->
+        <div class="spec-bento-card">
+          <div class="spec-icon">👂</div>
+          <h3>Trung Tâm Tai Mũi Họng</h3>
+          <p>Thăm khám 1:1 cùng chuyên gia đầu ngành. Ứng dụng AI tầm soát và phẫu thuật đầu cổ ít xâm lấn, hồi phục nhanh.</p>
+          <a href="taimuihong.html" class="spec-link">Khám phá chuyên khoa →</a>
+        </div>
+
+        <!-- Card: Tim Mạch -->
+        <div class="spec-bento-card">
+          <div class="spec-icon">❤️</div>
+          <h3>Trung Tâm Tim Mạch & DSA</h3>
+          <p>Phòng Can thiệp Tim mạch DSA hiện đại bậc nhất, sẵn sàng cấp cứu nhồi máu cơ tim và can thiệp mạch máu 24/7.</p>
+          <a href="chuyen-khoa.html" class="spec-link">Xem chi tiết →</a>
+        </div>
+
+        <!-- Card: Ngoại Tổng Quát -->
+        <div class="spec-bento-card">
+          <div class="spec-icon">🔬</div>
+          <h3>Ngoại Khoa & Phẫu Thuật Nội Soi</h3>
+          <p>Đội ngũ bác sĩ phẫu thuật tay nghề cao, phẫu thuật nội soi ít đau, thẩm mỹ và rút ngắn tối đa thời gian nằm viện.</p>
+          <a href="chuyen-khoa.html" class="spec-link">Xem chi tiết →</a>
+        </div>
+
+        <!-- Card: Xét Nghiệm ISO -->
+        <div class="spec-bento-card">
+          <div class="spec-icon">🧪</div>
+          <h3>Khoa Xét Nghiệm ISO 15189</h3>
+          <p>Đạt chuẩn quốc tế ISO 15189:2022 với hệ thống máy tự động hóa hoàn toàn từ Roche và Abbott, cho kết quả chính xác tuyệt đối.</p>
+          <a href="chung-nhan-giai-thuong.html" class="spec-link">Xem chứng nhận →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DOCTOR EXPERTS ── -->
+  <section class="section" id="bac-si" style="background: #FFFFFF;">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-tag">Y Đức & Chuyên Môn</span>
+          <h2 class="section-title">Đội Ngũ Chuyên Gia Đầu Ngành</h2>
+        </div>
+        <a href="bac-si.html" class="section-link">Xem danh sách bác sĩ →</a>
+      </div>
+
+      <div class="bento-doctors">
+        
+        <!-- Doctor 1: ThS.BS Tran Quoc Thanh -->
+        <div class="doctor-bento-card">
+          <div class="doctor-img-wrap">
+            <img src="images/bac-si/bs-thanh.png" alt="ThS.BS. Trần Quốc Thành" class="doctor-img" />
+            <span class="doctor-badge">Giám Đốc Điều Hành</span>
+          </div>
+          <div class="doctor-body">
+            <div>
+              <h3 class="doctor-name">ThS.BS. Trần Quốc Thành</h3>
+              <p class="doctor-role">Giám đốc Điều hành Bệnh viện Quốc tế City & BV Gia An 115</p>
+            </div>
+            <a href="chi-tiet-bac-si.html?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doctor-btn-book">Xem Hồ Sơ Bác Sĩ</a>
+          </div>
+        </div>
+
+        <!-- Doctor 2: BS.CKII Phan Hoang Nguyen -->
+        <div class="doctor-bento-card">
+          <div class="doctor-img-wrap">
+            <img src="images/bac-si/bs-nguyen.png" alt="BS.CKII. Phan Hoàng Nguyên" class="doctor-img" />
+            <span class="doctor-badge">Cố Vấn Ban Giám Đốc</span>
+          </div>
+          <div class="doctor-body">
+            <div>
+              <h3 class="doctor-name">BS.CKII. Phan Hoàng Nguyên</h3>
+              <p class="doctor-role">Cố vấn Chuyên môn BGĐ BV Quốc tế City & Phó Giám đốc BV Gia An 115</p>
+            </div>
+            <a href="chi-tiet-bac-si.html?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doctor-btn-book">Xem Hồ Sơ Bác Sĩ</a>
+          </div>
+        </div>
+
+        <!-- Doctor 3: BS.CKII Nguyen Thi Hue -->
+        <div class="doctor-bento-card">
+          <div class="doctor-img-wrap">
+            <img src="images/bac-si/bs-hue.png" alt="BS.CKII. Nguyễn Thị Huệ" class="doctor-img" />
+            <span class="doctor-badge">Khoa Phụ Sản</span>
+          </div>
+          <div class="doctor-body">
+            <div>
+              <h3 class="doctor-name">BS.CKII. Nguyễn Thị Huệ</h3>
+              <p class="doctor-role">Bác sĩ chuyên khoa Phụ sản giàu kinh nghiệm quản lý thai kỳ nguy cơ cao</p>
+            </div>
+            <a href="bac-si.html" class="doctor-btn-book">Xem Hồ Sơ Bác Sĩ</a>
+          </div>
+        </div>
+
+        <!-- Doctor 4: BS.CKI Le Ngoc Hieu -->
+        <div class="doctor-bento-card">
+          <div class="doctor-img-wrap">
+            <img src="images/tmh/2.png" alt="BS.CKI. Lê Ngọc Hiếu" class="doctor-img" />
+            <span class="doctor-badge">Tai Mũi Họng</span>
+          </div>
+          <div class="doctor-body">
+            <div>
+              <h3 class="doctor-name">BS.CKI. Lê Ngọc Hiếu</h3>
+              <p class="doctor-role">Bác sĩ chuyên sâu nội soi Tai Mũi Họng và điều trị phẫu thuật đầu cổ</p>
+            </div>
+            <a href="taimuihong.html" class="doctor-btn-book">Xem Hồ Sơ Bác Sĩ</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACCREDITATION LUXURY BAR ── -->
+  <section class="section" id="chung-nhan" style="padding-top: 10px;">
+    <div class="container">
+      <div class="accreditation-bar">
+        <div class="accreditation-grid">
+          <div class="acc-item">
+            <div class="acc-medal">🏆</div>
+            <div class="acc-info">
+              <h4>Chuẩn AACI Hoa Kỳ</h4>
+              <p>Chứng nhận chất lượng & an toàn y tế quốc tế V6.0</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-medal">🔬</div>
+            <div class="acc-info">
+              <h4>ISO 15189:2022</h4>
+              <p>Chuẩn mực xét nghiệm khắt khe hàng đầu thế giới</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-medal">🌟</div>
+            <div class="acc-info">
+              <h4>Top 10 Châu Á 2025</h4>
+              <p>Thương hiệu xuất sắc Châu Á về chăm sóc sức khỏe</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <div class="acc-medal">👶</div>
+            <div class="acc-info">
+              <h4>Chứng Nhận RTAC</h4>
+              <p>Tiêu chuẩn kỹ thuật hỗ trợ sinh sản IVF quốc tế</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="images/logo_cih_acci.png" alt="Bệnh viện Quốc tế City" />
+          </div>
+          <p class="footer-desc">
+            Bệnh viện Quốc tế City là bệnh viện đa khoa cao cấp hàng đầu khu vực phía Tây TP.HCM, tiên phong đạt chuẩn chất lượng quốc tế AACI Hoa Kỳ.
+          </p>
+          <p style="font-size: 0.8rem; color: #64748B;">
+            Giấy phép hoạt động số: 106/BYT-GPHĐ cấp bởi Bộ Y Tế.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chuyên Khoa</h4>
+          <ul class="footer-links">
+            <li><a href="chi-tiet-chuyen-khoa.html?slug=khoa-phu-san">Sản Phụ Khoa & IVF</a></li>
+            <li><a href="taimuihong.html">Tai Mũi Họng Chuyên Sâu</a></li>
+            <li><a href="chuyen-khoa.html">Tim Mạch & Can Thiệp DSA</a></li>
+            <li><a href="chuyen-khoa.html">Ngoại Khoa Tổng Quát</a></li>
+            <li><a href="chuyen-khoa.html">Nhi Khoa & NICU</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Khách Hàng</h4>
+          <ul class="footer-links">
+            <li><a href="goi-kham.html">Gói khám sức khỏe</a></li>
+            <li><a href="bac-si.html">Đội ngũ bác sĩ</a></li>
+            <li><a href="tin-tuc.html">Tin tức y khoa</a></li>
+            <li><a href="the-thanh-vien.html">Thẻ thành viên CIH</a></li>
+            <li><a href="lien-he.html">Quy trình khám chữa bệnh</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Liên Hệ</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 8px;">📍 Số 3 Đường 17A, P. Bình Trị Đông B, Q. Bình Tân, TP. HCM</p>
+          <p style="font-size: 0.85rem; margin-bottom: 8px;">📞 Hotline tư vấn: <strong style="color: #FCD34D;">1900 8146</strong></p>
+          <p style="font-size: 0.85rem; margin-bottom: 8px;">🚨 Cấp cứu 24/7: <strong style="color: #EF4444;">(028) 6290 1155</strong></p>
+          <p style="font-size: 0.85rem;">✉️ Email: truyenthong@cih.com.vn</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Bệnh viện Quốc tế City (CIH). Tất cả quyền được bảo lưu.</p>
+        <p>Thiết kế giao diện Bento Grid High-Tech Medical Modern</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

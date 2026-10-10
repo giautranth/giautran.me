@@ -1,0 +1,383 @@
+<?php
+/**
+ * Module: Quản lý Form - CIH (Bệnh viện Quốc tế City)
+ * Tự động tạo menu "Quản lý Form" -> "Tai mũi họng"
+ * Tiếp nhận & quản lý Lead từ Landing Page https://cih.com.vn/taimuihong/
+ */
+
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+// ════════════════════════════════════════════════════════════════
+// 1. ĐĂNG KÝ POST TYPE "form_tmh" & MENU "QUẢN LÝ FORM"
+// ════════════════════════════════════════════════════════════════
+add_action('init', 'cih_register_form_manager_cpt');
+function cih_register_form_manager_cpt() {
+    $labels = array(
+        'name'               => 'Quản lý Form',
+        'singular_name'      => 'Khách đăng ký Tai mũi họng',
+        'menu_name'          => 'Quản lý Form',
+        'all_items'          => 'Tai mũi họng',
+        'add_new'            => 'Thêm khách hàng',
+        'add_new_item'       => 'Thêm khách hàng mới',
+        'edit_item'          => 'Chi tiết khách hàng',
+        'new_item'           => 'Khách hàng mới',
+        'view_item'          => 'Xem khách hàng',
+        'search_items'       => 'Tìm kiếm theo tên hoặc SĐT',
+        'not_found'          => 'Không có dữ liệu đăng ký nào',
+        'not_found_in_trash' => 'Thùng rác trống',
+    );
+
+    $args = array(
+        'labels'              => $labels,
+        'public'              => false,        // Không public ra frontend để bảo mật thông tin bệnh nhân
+        'publicly_queryable'  => false,
+        'show_ui'             => true,         // Hiển thị trong admin dashboard
+        'show_in_menu'        => true,         // Hiện trên sidebar menu
+        'menu_position'       => 6,            // Nằm ngay bên dưới mục Lịch hẹn
+        'menu_icon'           => 'dashicons-clipboard', // Icon bảng biểu kẹp hồ sơ
+        'supports'            => array('title'), // Tiêu đề là Họ tên khách hàng
+        'has_archive'         => false,
+        'rewrite'             => false,
+        'capability_type'     => 'post',
+        'show_in_rest'        => true,
+    );
+
+    register_post_type('form_tmh', $args);
+}
+
+// Đổi tên nhãn submenu đầu tiên thành "Tai mũi họng"
+add_action('admin_menu', 'cih_rename_form_manager_submenus', 99);
+function cih_rename_form_manager_submenus() {
+    global $submenu;
+    if (isset($submenu['edit.php?post_type=form_tmh'])) {
+        $submenu['edit.php?post_type=form_tmh'][0][0] = 'Tai mũi họng';
+    }
+}
+
+// ════════════════════════════════════════════════════════════════
+// 2. CẤU HÌNH CỘT HIỂN THỊ TRONG BẢNG QUẢN TRỊ ADMIN (COLUMNS)
+// ════════════════════════════════════════════════════════════════
+add_filter('manage_form_tmh_posts_columns', 'cih_form_tmh_columns');
+function cih_form_tmh_columns($columns) {
+    $new_cols = array();
+    $new_cols['cb']          = $columns['cb'];
+    $new_cols['title']       = 'Họ và tên';
+    $new_cols['lead_phone']  = 'Số điện thoại';
+    $new_cols['lead_service']= 'Dịch vụ cần khám';
+    $new_cols['lead_status'] = 'Trạng thái CSKH';
+    $new_cols['lead_note']   = 'Ghi chú CSKH';
+    $new_cols['lead_source'] = 'Nguồn đăng ký';
+    $new_cols['date']        = 'Thời gian gửi';
+    return $new_cols;
+}
+
+add_action('manage_form_tmh_posts_custom_column', 'cih_form_tmh_custom_column', 10, 2);
+function cih_form_tmh_custom_column($column, $post_id) {
+    switch ($column) {
+        case 'lead_phone':
+            $phone = get_post_meta($post_id, '_lead_phone', true);
+            if ($phone) {
+                echo '<a href="tel:' . esc_attr($phone) . '" style="font-weight:700; color:#007DA5; text-decoration:none;">📞 ' . esc_html($phone) . '</a>';
+            } else {
+                echo '<span style="color:#94a3b8;">--</span>';
+            }
+            break;
+
+        case 'lead_service':
+            $service = get_post_meta($post_id, '_lead_service', true);
+            if ($service) {
+                echo '<span style="display:inline-block; padding:3px 10px; background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; border-radius:6px; font-weight:600; font-size:12px;">' . esc_html($service) . '</span>';
+            } else {
+                echo '<span style="color:#94a3b8;">--</span>';
+            }
+            break;
+
+        case 'lead_status':
+            $status = get_post_meta($post_id, '_lead_status', true);
+            if (!$status) $status = 'pending';
+
+            $badges = array(
+                'pending'   => array('label' => '🟡 Chờ liên hệ', 'bg' => '#fef3c7', 'color' => '#92400e', 'border' => '#fde68a'),
+                'contacted' => array('label' => '🔵 Đã liên hệ',  'bg' => '#e0f2fe', 'color' => '#0369a1', 'border' => '#bae6fd'),
+                'booked'    => array('label' => '🟢 Đã đặt hẹn',  'bg' => '#dcfce7', 'color' => '#15803d', 'border' => '#bbf7d0'),
+                'cancelled' => array('label' => '⚪ Hủy / Bận',   'bg' => '#f1f5f9', 'color' => '#475569', 'border' => '#e2e8f0'),
+            );
+
+            $badge = isset($badges[$status]) ? $badges[$status] : $badges['pending'];
+            echo '<span style="display:inline-block; padding:4px 10px; border-radius:12px; font-weight:700; font-size:12px; background:' . $badge['bg'] . '; color:' . $badge['color'] . '; border:1px solid ' . $badge['border'] . ';">' . $badge['label'] . '</span>';
+            break;
+
+        case 'lead_note':
+            $note = get_post_meta($post_id, '_lead_note', true);
+            if ($note) {
+                echo '<span style="font-size:12px; color:#334155;">' . esc_html(wp_trim_words($note, 10)) . '</span>';
+            } else {
+                echo '<span style="color:#cbd5e1; font-style:italic; font-size:12px;">Chưa có ghi chú</span>';
+            }
+            break;
+
+        case 'lead_source':
+            $source = get_post_meta($post_id, '_lead_source', true);
+            echo '<span style="font-size:11px; color:#64748b;">' . esc_html($source ?: 'Landing Page TMH') . '</span>';
+            break;
+    }
+}
+
+// Cho phép sắp xếp theo cột
+add_filter('manage_edit-form_tmh_sortable_columns', 'cih_form_tmh_sortable_columns');
+function cih_form_tmh_sortable_columns($columns) {
+    $columns['lead_status'] = 'lead_status';
+    return $columns;
+}
+
+// ════════════════════════════════════════════════════════════════
+// 3. BỘ LỌC TRẠNG THÁI (FILTER DROPDOWN) TRÊN BẢNG QUẢN TRỊ
+// ════════════════════════════════════════════════════════════════
+add_action('restrict_manage_posts', 'cih_form_tmh_admin_filter');
+function cih_form_tmh_admin_filter() {
+    global $typenow;
+    if ($typenow === 'form_tmh') {
+        $selected = isset($_GET['lead_status_filter']) ? sanitize_text_field($_GET['lead_status_filter']) : '';
+        ?>
+        <select name="lead_status_filter">
+            <option value="">Tất cả trạng thái CSKH</option>
+            <option value="pending" <?php selected($selected, 'pending'); ?>>🟡 Chờ liên hệ</option>
+            <option value="contacted" <?php selected($selected, 'contacted'); ?>>🔵 Đã liên hệ</option>
+            <option value="booked" <?php selected($selected, 'booked'); ?>>🟢 Đã đặt hẹn</option>
+            <option value="cancelled" <?php selected($selected, 'cancelled'); ?>>⚪ Hủy / Bận</option>
+        </select>
+        <?php
+    }
+}
+
+add_filter('parse_query', 'cih_form_tmh_filter_query');
+function cih_form_tmh_filter_query($query) {
+    global $pagenow, $typenow;
+    if (is_admin() && $pagenow === 'edit.php' && $typenow === 'form_tmh' && !empty($_GET['lead_status_filter'])) {
+        $query->query_vars['meta_key']   = '_lead_status';
+        $query->query_vars['meta_value'] = sanitize_text_field($_GET['lead_status_filter']);
+    }
+}
+
+// ════════════════════════════════════════════════════════════════
+// 4. META BOX CHI TIẾT & CẬP NHẬT TRẠNG THÁI TRONG TRANG SỬA BÀI
+// ════════════════════════════════════════════════════════════════
+add_action('add_meta_boxes', 'cih_form_tmh_add_meta_box');
+function cih_form_tmh_add_meta_box() {
+    add_meta_box(
+        'cih_form_tmh_details',
+        '📋 Thông Tin Đăng Ký & Xử Lý CSKH',
+        'cih_form_tmh_render_meta_box',
+        'form_tmh',
+        'normal',
+        'high'
+    );
+}
+
+function cih_form_tmh_render_meta_box($post) {
+    wp_nonce_field('cih_form_tmh_nonce_action', 'cih_form_tmh_nonce');
+
+    $phone   = get_post_meta($post->ID, '_lead_phone', true);
+    $service = get_post_meta($post->ID, '_lead_service', true);
+    $status  = get_post_meta($post->ID, '_lead_status', true) ?: 'pending';
+    $note    = get_post_meta($post->ID, '_lead_note', true);
+    $source  = get_post_meta($post->ID, '_lead_source', true) ?: 'Landing Page Tai Mũi Họng';
+    $ip      = get_post_meta($post->ID, '_lead_ip', true);
+    $created = get_post_meta($post->ID, '_lead_created_at', true) ?: $post->post_date;
+    ?>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 10px 0;">
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+            <h4 style="margin:0 0 12px 0; color:#007DA5; font-size:14px; text-transform:uppercase;">👤 Thông Tin Khách Hàng</h4>
+            <p style="margin:6px 0;"><strong>Họ và tên:</strong> <?php echo esc_html($post->post_title); ?></p>
+            <p style="margin:6px 0;"><strong>Số điện thoại:</strong> 
+                <a href="tel:<?php echo esc_attr($phone); ?>" style="color:#0284c7; font-weight:700; font-size:15px; text-decoration:none;">📞 <?php echo esc_html($phone); ?></a>
+            </p>
+            <p style="margin:6px 0;"><strong>Dịch vụ cần khám:</strong> 
+                <span style="font-weight:700; color:#1e293b; background:#fef3c7; padding:2px 8px; border-radius:6px;"><?php echo esc_html($service); ?></span>
+            </p>
+            <p style="margin:6px 0;"><strong>Nguồn trang:</strong> <?php echo esc_html($source); ?></p>
+            <p style="margin:6px 0; font-size:12px; color:#64748b;"><strong>Thời gian gửi:</strong> <?php echo esc_html($created); ?> (IP: <?php echo esc_html($ip); ?>)</p>
+        </div>
+
+        <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+            <h4 style="margin:0 0 12px 0; color:#007DA5; font-size:14px; text-transform:uppercase;">🎯 Trạng Thái Xử Lý (Dành Cho CSKH)</h4>
+            <div style="margin-bottom:14px;">
+                <label for="cih_lead_status" style="display:block; font-weight:700; margin-bottom:6px; font-size:13px;">Cập nhật trạng thái:</label>
+                <select name="cih_lead_status" id="cih_lead_status" style="width:100%; padding:8px 12px; border-radius:8px; border:1.5px solid #cbd5e1; font-weight:600;">
+                    <option value="pending" <?php selected($status, 'pending'); ?>>🟡 Chờ liên hệ</option>
+                    <option value="contacted" <?php selected($status, 'contacted'); ?>>🔵 Đã liên hệ</option>
+                    <option value="booked" <?php selected($status, 'booked'); ?>>🟢 Đã đặt hẹn khám</option>
+                    <option value="cancelled" <?php selected($status, 'cancelled'); ?>>⚪ Hủy / Không nghe máy</option>
+                </select>
+            </div>
+            <div>
+                <label for="cih_lead_note" style="display:block; font-weight:700; margin-bottom:6px; font-size:13px;">Ghi chú tư vấn:</label>
+                <textarea name="cih_lead_note" id="cih_lead_note" rows="3" style="width:100%; padding:8px 12px; border-radius:8px; border:1.5px solid #cbd5e1;" placeholder="VD: Đã gọi khách lúc 10h, hẹn khám thứ 3 tuần sau..."><?php echo esc_textarea($note); ?></textarea>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+
+add_action('save_post_form_tmh', 'cih_form_tmh_save_meta');
+function cih_form_tmh_save_meta($post_id) {
+    if (!isset($_POST['cih_form_tmh_nonce']) || !wp_verify_nonce($_POST['cih_form_tmh_nonce'], 'cih_form_tmh_nonce_action')) {
+        return;
+    }
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+
+    if (isset($_POST['cih_lead_status'])) {
+        update_post_meta($post_id, '_lead_status', sanitize_text_field($_POST['cih_lead_status']));
+    }
+    if (isset($_POST['cih_lead_note'])) {
+        update_post_meta($post_id, '_lead_note', sanitize_textarea_field($_POST['cih_lead_note']));
+    }
+}
+
+// ════════════════════════════════════════════════════════════════
+// 5. REST API TIẾP NHẬN LEAD TỪ LANDING PAGE TAI MŨI HỌNG
+// ════════════════════════════════════════════════════════════════
+add_action('rest_api_init', function () {
+    register_rest_route('cih/v1', '/submit-tmh-lead', array(
+        'methods'             => 'POST',
+        'callback'            => 'cih_handle_tmh_lead_submission',
+        'permission_callback' => '__return_true', // Cho phép gửi từ form khách hàng
+    ));
+});
+
+function cih_handle_tmh_lead_submission($request) {
+    $params = $request->get_params();
+
+    $name    = isset($params['name']) ? sanitize_text_field($params['name']) : '';
+    $phone   = isset($params['phone']) ? sanitize_text_field($params['phone']) : '';
+    $service = isset($params['service']) ? sanitize_text_field($params['service']) : '';
+    $source  = isset($params['source']) ? sanitize_text_field($params['source']) : 'Landing Page Tai Mũi Họng';
+
+    // Kiểm tra dữ liệu bắt buộc
+    if (empty($phone)) {
+        return new WP_REST_Response(array(
+            'success' => false,
+            'message' => 'Vui lòng cung cấp số điện thoại.',
+        ), 400);
+    }
+
+    if (empty($name)) {
+        $name = 'Khách đăng ký ' . substr($phone, -4);
+    }
+
+    // Chèn dữ liệu vào CPT form_tmh
+    $post_data = array(
+        'post_title'   => $name,
+        'post_status'  => 'publish',
+        'post_type'    => 'form_tmh',
+    );
+
+    $post_id = wp_insert_post($post_data);
+
+    if ($post_id && !is_wp_error($post_id)) {
+        update_post_meta($post_id, '_lead_phone', $phone);
+        update_post_meta($post_id, '_lead_service', $service);
+        update_post_meta($post_id, '_lead_status', 'pending'); // Mặc định là Chờ liên hệ
+        update_post_meta($post_id, '_lead_source', $source);
+        update_post_meta($post_id, '_lead_ip', sanitize_text_field($_SERVER['REMOTE_ADDR'] ?? ''));
+        update_post_meta($post_id, '_lead_created_at', current_time('mysql'));
+
+        // Gửi email thông báo cho Admin (nếu cấu hình)
+        $admin_email = get_option('admin_email');
+        if ($admin_email) {
+            $subject = '[CIH Tai Mũi Họng] Có khách hàng mới đăng ký: ' . $name;
+            $body = "Chào bộ phận CSKH CIH,\n\n"
+                  . "Có khách hàng vừa đăng ký tư vấn từ trang Tai Mũi Họng:\n\n"
+                  . "• Họ và tên: " . $name . "\n"
+                  . "• Số điện thoại: " . $phone . "\n"
+                  . "• Dịch vụ cần khám: " . $service . "\n"
+                  . "• Nguồn: " . $source . "\n"
+                  . "• Thời gian: " . current_time('d/m/Y H:i:s') . "\n\n"
+                  . "Vui lòng đăng nhập vào CMS để xử lý: " . admin_url('edit.php?post_type=form_tmh') . "\n\n"
+                  . "Trân trọng,\nBệnh viện Quốc tế City";
+            wp_mail($admin_email, $subject, $body);
+        }
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'message' => 'Đăng ký thành công! Đội ngũ tư vấn Bệnh viện Quốc tế City sẽ liên hệ với bạn trong thời gian sớm nhất.',
+            'lead_id' => $post_id,
+        ), 200);
+    }
+
+    return new WP_REST_Response(array(
+        'success' => false,
+        'message' => 'Đã có lỗi xảy ra trong quá trình lưu thông tin. Vui lòng thử lại hoặc gọi hotline 1900 8146.',
+    ), 500);
+}
+
+// ════════════════════════════════════════════════════════════════
+// 6. XUẤT DỮ LIỆU EXCEL (CSV HỖ TRỢ TIẾNG VIỆT UTF-8 BOM)
+// ════════════════════════════════════════════════════════════════
+add_action('manage_posts_extra_tablenav', 'cih_form_tmh_export_button');
+function cih_form_tmh_export_button($which) {
+    global $typenow;
+    if ($typenow === 'form_tmh' && $which === 'top') {
+        $export_url = add_query_arg(array('action' => 'cih_export_tmh_leads'), admin_url('admin-post.php'));
+        echo '<a href="' . esc_url($export_url) . '" class="button button-secondary" style="margin-left:8px; border-color:#007DA5; color:#007DA5; font-weight:700;">📊 Xuất Excel (CSV)</a>';
+    }
+}
+
+add_action('admin_post_cih_export_tmh_leads', 'cih_handle_export_tmh_leads');
+function cih_handle_export_tmh_leads() {
+    if (!current_user_can('edit_posts')) {
+        wp_die('Bạn không có quyền xuất dữ liệu.');
+    }
+
+    $filename = 'cih-lead-tai-mui-hong-' . date('Y-m-d') . '.csv';
+    header('Content-Type: text/csv; charset=UTF-8');
+    header('Content-Disposition: attachment; filename="' . $filename . '"');
+    
+    // Xuất UTF-8 BOM để Excel hiển thị đúng dấu tiếng Việt
+    echo "\xEF\xBB\xBF";
+
+    $output = fopen('php://output', 'w');
+    fputcsv($output, array('Mã ID', 'Họ và tên', 'Số điện thoại', 'Dịch vụ cần khám', 'Trạng thái CSKH', 'Ghi chú tư vấn', 'Nguồn đăng ký', 'Thời gian gửi'));
+
+    $leads = get_posts(array(
+        'post_type'      => 'form_tmh',
+        'post_status'    => 'publish',
+        'posts_per_page' => -1,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    ));
+
+    $status_labels = array(
+        'pending'   => 'Chờ liên hệ',
+        'contacted' => 'Đã liên hệ',
+        'booked'    => 'Đã đặt hẹn',
+        'cancelled' => 'Hủy / Bận',
+    );
+
+    foreach ($leads as $lead) {
+        $phone   = get_post_meta($lead->ID, '_lead_phone', true);
+        $service = get_post_meta($lead->ID, '_lead_service', true);
+        $status  = get_post_meta($lead->ID, '_lead_status', true) ?: 'pending';
+        $note    = get_post_meta($lead->ID, '_lead_note', true);
+        $source  = get_post_meta($lead->ID, '_lead_source', true);
+        $status_text = isset($status_labels[$status]) ? $status_labels[$status] : $status;
+
+        fputcsv($output, array(
+            $lead->ID,
+            $lead->post_title,
+            "'" . $phone, // Thêm dấu ' để Excel không bị mất số 0 đầu tiên
+            $service,
+            $status_text,
+            $note,
+            $source,
+            $lead->post_date,
+        ));
+    }
+
+    fclose($output);
+    exit;
+}
+

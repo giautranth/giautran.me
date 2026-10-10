@@ -104,28 +104,45 @@ function cih_force_form_manager_menu_order($menu_order) {
 
 // ════════════════════════════════════════════════════════════════
 // 2. CẤU HÌNH CỘT HIỂN THỊ TRONG BẢNG QUẢN TRỊ ADMIN (COLUMNS)
+// Thứ tự: STT | Ngày | Họ tên | SDT | Dịch vụ cần khám
 // ════════════════════════════════════════════════════════════════
 add_filter('manage_form_tmh_posts_columns', 'cih_form_tmh_columns');
 function cih_form_tmh_columns($columns) {
     $new_cols = array();
-    $new_cols['cb']          = $columns['cb'];
-    $new_cols['title']       = 'Họ và tên';
-    $new_cols['lead_phone']  = 'Số điện thoại';
-    $new_cols['lead_service']= 'Dịch vụ cần khám';
-    $new_cols['lead_status'] = 'Trạng thái CSKH';
-    $new_cols['lead_note']   = 'Ghi chú CSKH';
-    $new_cols['lead_source'] = 'Nguồn đăng ký';
-    $new_cols['date']        = 'Thời gian gửi';
+    $new_cols['cb']           = $columns['cb'];
+    $new_cols['lead_stt']     = 'STT';
+    $new_cols['lead_date']    = 'Ngày';
+    $new_cols['title']        = 'Họ tên';
+    $new_cols['lead_phone']   = 'SDT';
+    $new_cols['lead_service'] = 'Dịch vụ cần khám';
     return $new_cols;
 }
 
 add_action('manage_form_tmh_posts_custom_column', 'cih_form_tmh_custom_column', 10, 2);
 function cih_form_tmh_custom_column($column, $post_id) {
+    global $wp_query;
+
     switch ($column) {
+        case 'lead_stt':
+            $paged = max(1, (int) get_query_var('paged'));
+            $per_page = (int) ($wp_query->query_vars['posts_per_page'] ?? 20);
+            if ($per_page <= 0) $per_page = 20;
+            $post_ids = wp_list_pluck($wp_query->posts, 'ID');
+            $idx = array_search($post_id, $post_ids);
+            $stt = ($paged - 1) * $per_page + ($idx !== false ? $idx + 1 : 1);
+            echo '<span style="font-weight:700; color:#475569; font-size:13px;">' . esc_html($stt) . '</span>';
+            break;
+
+        case 'lead_date':
+            $date = get_the_date('d/m/Y H:i', $post_id);
+            echo '<span style="color:#0f172a; font-weight:600; font-size:13px; white-space:nowrap;">' . esc_html($date) . '</span>';
+            break;
+
         case 'lead_phone':
             $phone = get_post_meta($post_id, '_lead_phone', true);
             if ($phone) {
-                echo '<a href="tel:' . esc_attr($phone) . '" style="font-weight:700; color:#007DA5; text-decoration:none;">📞 ' . esc_html($phone) . '</a>';
+                // Bỏ icon, hiển thị số điện thoại sạch, có thể click gọi
+                echo '<a href="tel:' . esc_attr($phone) . '" style="font-weight:700; color:#007DA5; text-decoration:none; font-size:14px; letter-spacing:0.3px;">' . esc_html($phone) . '</a>';
             } else {
                 echo '<span style="color:#94a3b8;">--</span>';
             }
@@ -134,78 +151,22 @@ function cih_form_tmh_custom_column($column, $post_id) {
         case 'lead_service':
             $service = get_post_meta($post_id, '_lead_service', true);
             if ($service) {
-                echo '<span style="display:inline-block; padding:3px 10px; background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; border-radius:6px; font-weight:600; font-size:12px;">' . esc_html($service) . '</span>';
+                echo '<span style="display:inline-block; padding:4px 12px; background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; border-radius:8px; font-weight:600; font-size:13px;">' . esc_html($service) . '</span>';
             } else {
                 echo '<span style="color:#94a3b8;">--</span>';
             }
             break;
-
-        case 'lead_status':
-            $status = get_post_meta($post_id, '_lead_status', true);
-            if (!$status) $status = 'pending';
-
-            $badges = array(
-                'pending'   => array('label' => '🟡 Chờ liên hệ', 'bg' => '#fef3c7', 'color' => '#92400e', 'border' => '#fde68a'),
-                'contacted' => array('label' => '🔵 Đã liên hệ',  'bg' => '#e0f2fe', 'color' => '#0369a1', 'border' => '#bae6fd'),
-                'booked'    => array('label' => '🟢 Đã đặt hẹn',  'bg' => '#dcfce7', 'color' => '#15803d', 'border' => '#bbf7d0'),
-                'cancelled' => array('label' => '⚪ Hủy / Bận',   'bg' => '#f1f5f9', 'color' => '#475569', 'border' => '#e2e8f0'),
-            );
-
-            $badge = isset($badges[$status]) ? $badges[$status] : $badges['pending'];
-            echo '<span style="display:inline-block; padding:4px 10px; border-radius:12px; font-weight:700; font-size:12px; background:' . $badge['bg'] . '; color:' . $badge['color'] . '; border:1px solid ' . $badge['border'] . ';">' . $badge['label'] . '</span>';
-            break;
-
-        case 'lead_note':
-            $note = get_post_meta($post_id, '_lead_note', true);
-            if ($note) {
-                echo '<span style="font-size:12px; color:#334155;">' . esc_html(wp_trim_words($note, 10)) . '</span>';
-            } else {
-                echo '<span style="color:#cbd5e1; font-style:italic; font-size:12px;">Chưa có ghi chú</span>';
-            }
-            break;
-
-        case 'lead_source':
-            $source = get_post_meta($post_id, '_lead_source', true);
-            echo '<span style="font-size:11px; color:#64748b;">' . esc_html($source ?: 'Landing Page TMH') . '</span>';
-            break;
     }
 }
 
-// Cho phép sắp xếp theo cột
+// Cho phép sắp xếp theo cột Ngày và Họ tên
 add_filter('manage_edit-form_tmh_sortable_columns', 'cih_form_tmh_sortable_columns');
 function cih_form_tmh_sortable_columns($columns) {
-    $columns['lead_status'] = 'lead_status';
+    $columns['lead_date'] = 'date';
+    $columns['title']     = 'title';
     return $columns;
 }
 
-// ════════════════════════════════════════════════════════════════
-// 3. BỘ LỌC TRẠNG THÁI (FILTER DROPDOWN) TRÊN BẢNG QUẢN TRỊ
-// ════════════════════════════════════════════════════════════════
-add_action('restrict_manage_posts', 'cih_form_tmh_admin_filter');
-function cih_form_tmh_admin_filter() {
-    global $typenow;
-    if ($typenow === 'form_tmh') {
-        $selected = isset($_GET['lead_status_filter']) ? sanitize_text_field($_GET['lead_status_filter']) : '';
-        ?>
-        <select name="lead_status_filter">
-            <option value="">Tất cả trạng thái CSKH</option>
-            <option value="pending" <?php selected($selected, 'pending'); ?>>🟡 Chờ liên hệ</option>
-            <option value="contacted" <?php selected($selected, 'contacted'); ?>>🔵 Đã liên hệ</option>
-            <option value="booked" <?php selected($selected, 'booked'); ?>>🟢 Đã đặt hẹn</option>
-            <option value="cancelled" <?php selected($selected, 'cancelled'); ?>>⚪ Hủy / Bận</option>
-        </select>
-        <?php
-    }
-}
-
-add_filter('parse_query', 'cih_form_tmh_filter_query');
-function cih_form_tmh_filter_query($query) {
-    global $pagenow, $typenow;
-    if (is_admin() && $pagenow === 'edit.php' && $typenow === 'form_tmh' && !empty($_GET['lead_status_filter'])) {
-        $query->query_vars['meta_key']   = '_lead_status';
-        $query->query_vars['meta_value'] = sanitize_text_field($_GET['lead_status_filter']);
-    }
-}
 
 // ════════════════════════════════════════════════════════════════
 // 4. META BOX CHI TIẾT & CẬP NHẬT TRẠNG THÁI TRONG TRANG SỬA BÀI
@@ -386,7 +347,7 @@ function cih_handle_export_tmh_leads() {
     echo "\xEF\xBB\xBF";
 
     $output = fopen('php://output', 'w');
-    fputcsv($output, array('Mã ID', 'Họ và tên', 'Số điện thoại', 'Dịch vụ cần khám', 'Trạng thái CSKH', 'Ghi chú tư vấn', 'Nguồn đăng ký', 'Thời gian gửi'));
+    fputcsv($output, array('STT', 'Ngày', 'Họ tên', 'SDT', 'Dịch vụ cần khám'));
 
     $leads = get_posts(array(
         'post_type'      => 'form_tmh',
@@ -396,30 +357,18 @@ function cih_handle_export_tmh_leads() {
         'order'          => 'DESC',
     ));
 
-    $status_labels = array(
-        'pending'   => 'Chờ liên hệ',
-        'contacted' => 'Đã liên hệ',
-        'booked'    => 'Đã đặt hẹn',
-        'cancelled' => 'Hủy / Bận',
-    );
-
+    $stt = 1;
     foreach ($leads as $lead) {
         $phone   = get_post_meta($lead->ID, '_lead_phone', true);
         $service = get_post_meta($lead->ID, '_lead_service', true);
-        $status  = get_post_meta($lead->ID, '_lead_status', true) ?: 'pending';
-        $note    = get_post_meta($lead->ID, '_lead_note', true);
-        $source  = get_post_meta($lead->ID, '_lead_source', true);
-        $status_text = isset($status_labels[$status]) ? $status_labels[$status] : $status;
+        $date    = get_the_date('d/m/Y H:i', $lead->ID);
 
         fputcsv($output, array(
-            $lead->ID,
+            $stt++,
+            $date,
             $lead->post_title,
             "'" . $phone, // Thêm dấu ' để Excel không bị mất số 0 đầu tiên
             $service,
-            $status_text,
-            $note,
-            $source,
-            $lead->post_date,
         ));
     }
 

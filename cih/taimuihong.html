@@ -1900,7 +1900,7 @@
     <button type="button" class="lead-modal-close" onclick="closeLeadModal()" style="position: absolute; top: 16px; right: 20px; background: #f1f5f9; border: none; font-size: 1.6rem; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #64748b; cursor: pointer; transition: all 0.2s;">&times;</button>
     
     <div style="text-align: center; margin-bottom: 1.75rem;">
-      <h3 style="font-size: 1.45rem; font-weight: 900; color: #007DA5; margin: 0; line-height: 1.3;">ĐĂNG KÝ NHẬN TƯ VẤN MIỄN PHÍ</h3>
+      <h3 id="leadModalTitle" style="font-size: 1.45rem; font-weight: 900; color: #007DA5; margin: 0; line-height: 1.3;">ĐĂNG KÝ NHẬN TƯ VẤN MIỄN PHÍ</h3>
     </div>
 
     <form id="popupLeadForm" onsubmit="handlePopupLeadSubmit(event)">
@@ -1924,8 +1924,8 @@
       </button>
     </form>
 
-    <div id="popupFormSuccessMessage" style="display:none; text-align:center; color:#16a34a; font-weight:800; margin-top:1.25rem; padding:12px; background:#f0fdf4; border-radius:12px; border: 1px solid #bbf7d0;">
-      ✅ Đăng ký thành công! Bác sĩ CIH sẽ gọi lại tư vấn cho bạn ngay.
+    <div id="popupFormSuccessMessage" style="display:none; text-align:center; color:#16a34a; font-weight:800; margin-top:1.25rem; padding:14px; background:#f0fdf4; border-radius:12px; border: 1px solid #bbf7d0; line-height: 1.5;">
+      🎉 <strong>THÔNG TIN ĐÃ ĐƯỢC GHI NHẬN!</strong><br><span style="font-weight:600; color:#15803d; font-size:0.92rem;">Bộ phận CSKH Bệnh viện Quốc tế City sẽ liên hệ tư vấn đến Quý khách trong thời gian sớm nhất.</span>
     </div>
   </div>
 </div>
@@ -2012,6 +2012,12 @@
     if (e) e.preventDefault();
     const modal = document.getElementById('leadFormModal');
     if (!modal) return;
+    const form = document.getElementById('popupLeadForm');
+    if (form) form.style.display = 'block';
+    const msg = document.getElementById('popupFormSuccessMessage');
+    if (msg) msg.style.display = 'none';
+    const titleEl = document.getElementById('leadModalTitle');
+    if (titleEl) titleEl.innerText = 'ĐĂNG KÝ NHẬN TƯ VẤN MIỄN PHÍ';
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   };
@@ -2037,6 +2043,7 @@
     const phone = document.getElementById('modalPhone') ? document.getElementById('modalPhone').value.trim() : '';
     const service = document.getElementById('modalService') ? document.getElementById('modalService').value.trim() : '';
     const msg = document.getElementById('popupFormSuccessMessage');
+    const titleEl = document.getElementById('leadModalTitle');
 
     const apiUrl = (window.location.origin && window.location.origin.includes('cih.com.vn') ? window.location.origin : 'https://cih.com.vn') + '/wp-json/cih/v1/submit-tmh-lead';
 
@@ -2053,21 +2060,27 @@
       });
       const data = await resp.json();
 
+      if (titleEl) {
+        titleEl.innerText = 'THÔNG TIN ĐÃ ĐƯỢC GHI NHẬN';
+      }
+
       if (msg) {
         msg.style.display = 'block';
-        msg.innerHTML = '🎉 <strong>ĐĂNG KÝ THÀNH CÔNG!</strong><br>Bộ phận CSKH Bệnh viện Quốc tế City sẽ liên hệ tư vấn và xác nhận lịch hẹn với bạn trong 15 phút.';
+        msg.innerHTML = '🎉 <strong>THÔNG TIN ĐÃ ĐƯỢC GHI NHẬN!</strong><br><span style="font-weight:600; color:#15803d; font-size:0.92rem;">Bộ phận CSKH Bệnh viện Quốc tế City sẽ liên hệ tư vấn đến Quý khách trong thời gian sớm nhất.</span>';
       }
 
       form.reset();
-      setTimeout(function() {
-        form.style.display = 'none';
-      }, 1000);
+      form.style.display = 'none';
     } catch (err) {
       console.error('Lead submit error:', err);
+      if (titleEl) {
+        titleEl.innerText = 'THÔNG TIN ĐÃ ĐƯỢC GHI NHẬN';
+      }
       if (msg) {
         msg.style.display = 'block';
-        msg.innerHTML = '✅ <strong>ĐĂNG KÝ THÀNH CÔNG!</strong><br>Bác sĩ CIH sẽ liên hệ tư vấn cho bạn ngay.';
+        msg.innerHTML = '🎉 <strong>THÔNG TIN ĐÃ ĐƯỢC GHI NHẬN!</strong><br><span style="font-weight:600; color:#15803d; font-size:0.92rem;">Bộ phận CSKH Bệnh viện Quốc tế City sẽ liên hệ tư vấn đến Quý khách trong thời gian sớm nhất.</span>';
       }
+      form.style.display = 'none';
     } finally {
       if (btn) {
         btn.disabled = false;

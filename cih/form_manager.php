@@ -349,7 +349,7 @@ function cih_handle_tmh_lead_submission($request) {
 
         return new WP_REST_Response(array(
             'success' => true,
-            'message' => 'Đăng ký thành công! Đội ngũ tư vấn Bệnh viện Quốc tế City sẽ liên hệ với bạn trong thời gian sớm nhất.',
+            'message' => 'Thông tin đã được ghi nhận! Bộ phận CSKH Bệnh viện Quốc tế City sẽ liên hệ tư vấn đến Quý khách trong thời gian sớm nhất.',
             'lead_id' => $post_id,
         ), 200);
     }

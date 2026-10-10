@@ -47,14 +47,60 @@ function cih_register_form_manager_cpt() {
     register_post_type('form_tmh', $args);
 }
 
-// Đổi tên nhãn submenu đầu tiên thành "Tai mũi họng"
-add_action('admin_menu', 'cih_rename_form_manager_submenus', 99);
+// Đổi tên nhãn submenu đầu tiên thành "Tai mũi họng" an toàn chuẩn WordPress
+add_action('admin_menu', 'cih_rename_form_manager_submenus', 999);
 function cih_rename_form_manager_submenus() {
     global $submenu;
-    if (isset($submenu['edit.php?post_type=form_tmh'])) {
-        $submenu['edit.php?post_type=form_tmh'][0][0] = 'Tai mũi họng';
+    if (isset($submenu['edit.php?post_type=form_tmh']) && is_array($submenu['edit.php?post_type=form_tmh'])) {
+        foreach ($submenu['edit.php?post_type=form_tmh'] as $key => $sub_item) {
+            if (isset($sub_item[2]) && $sub_item[2] === 'edit.php?post_type=form_tmh') {
+                $submenu['edit.php?post_type=form_tmh'][$key][0] = 'Tai mũi họng';
+                break;
+            }
+        }
     }
 }
+
+// Đảm bảo vị trí menu "Quản lý Form" luôn nằm NGAY DƯỚI mục "Lịch hẹn"
+add_filter('custom_menu_order', '__return_true');
+add_filter('menu_order', 'cih_force_form_manager_menu_order', 999);
+function cih_force_form_manager_menu_order($menu_order) {
+    if (!$menu_order) return $menu_order;
+
+    $target_item = 'edit.php?post_type=form_tmh';
+    $after_item  = 'edit.php?post_type=lich-hen';
+
+    // Xóa vị trí cũ của form_tmh nếu có
+    $menu_order = array_diff($menu_order, array($target_item));
+
+    $new_order = array();
+    $inserted = false;
+
+    foreach ($menu_order as $item) {
+        $new_order[] = $item;
+        if ($item === $after_item) {
+            $new_order[] = $target_item;
+            $inserted = true;
+        }
+    }
+
+    // Nếu không tìm thấy lich-hen thì chèn sau edit.php (Posts)
+    if (!$inserted) {
+        $final_order = array();
+        foreach ($new_order as $item) {
+            $final_order[] = $item;
+            if ($item === 'edit.php') {
+                $final_order[] = $target_item;
+                $inserted = true;
+            }
+        }
+        if ($inserted) return $final_order;
+        $new_order[] = $target_item;
+    }
+
+    return $new_order;
+}
+
 
 // ════════════════════════════════════════════════════════════════
 // 2. CẤU HÌNH CỘT HIỂN THỊ TRONG BẢNG QUẢN TRỊ ADMIN (COLUMNS)

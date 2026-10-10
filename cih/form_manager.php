@@ -134,7 +134,7 @@ function cih_form_tmh_custom_column($column, $post_id) {
             break;
 
         case 'lead_date':
-            $date = get_the_date('d/m/Y H:i', $post_id);
+            $date = get_the_date('d/m/Y', $post_id);
             echo '<span style="color:#0f172a; font-weight:600; font-size:13px; white-space:nowrap;">' . esc_html($date) . '</span>';
             break;
 
@@ -166,6 +166,56 @@ function cih_form_tmh_sortable_columns($columns) {
     $columns['title']     = 'title';
     return $columns;
 }
+
+// ════════════════════════════════════════════════════════════════
+// 3. TỐI ƯU GIAO DIỆN BẢNG: GOM CÁC CỘT QUA TRÁI, KHOẢNG CÁCH GỌN GÀNG
+// ════════════════════════════════════════════════════════════════
+add_action('admin_head', 'cih_form_tmh_admin_compact_css');
+function cih_form_tmh_admin_compact_css() {
+    global $typenow;
+    if ($typenow === 'form_tmh') {
+        ?>
+        <style>
+            /* Giới hạn độ rộng bảng và gom các cột về bên trái gọn gàng */
+            .post-type-form_tmh .wp-list-table {
+                table-layout: fixed !important;
+                max-width: 1050px !important;
+            }
+            .post-type-form_tmh .tablenav {
+                max-width: 1050px !important;
+            }
+            .post-type-form_tmh .wp-list-table th#cb,
+            .post-type-form_tmh .wp-list-table td.check-column {
+                width: 36px !important;
+                padding-left: 8px !important;
+                padding-right: 0 !important;
+            }
+            .post-type-form_tmh .wp-list-table th#lead_stt,
+            .post-type-form_tmh .wp-list-table td.column-lead_stt {
+                width: 60px !important;
+                text-align: center !important;
+            }
+            .post-type-form_tmh .wp-list-table th#lead_date,
+            .post-type-form_tmh .wp-list-table td.column-lead_date {
+                width: 120px !important;
+            }
+            .post-type-form_tmh .wp-list-table th#title,
+            .post-type-form_tmh .wp-list-table td.column-title {
+                width: 230px !important;
+            }
+            .post-type-form_tmh .wp-list-table th#lead_phone,
+            .post-type-form_tmh .wp-list-table td.column-lead_phone {
+                width: 160px !important;
+            }
+            .post-type-form_tmh .wp-list-table th#lead_service,
+            .post-type-form_tmh .wp-list-table td.column-lead_service {
+                width: 420px !important;
+            }
+        </style>
+        <?php
+    }
+}
+
 
 
 // ════════════════════════════════════════════════════════════════
@@ -361,7 +411,7 @@ function cih_handle_export_tmh_leads() {
     foreach ($leads as $lead) {
         $phone   = get_post_meta($lead->ID, '_lead_phone', true);
         $service = get_post_meta($lead->ID, '_lead_service', true);
-        $date    = get_the_date('d/m/Y H:i', $lead->ID);
+        $date    = get_the_date('d/m/Y', $lead->ID);
 
         fputcsv($output, array(
             $stt++,

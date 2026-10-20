@@ -41,7 +41,7 @@ function cih_register_form_manager_cpt() {
         'has_archive'         => false,
         'rewrite'             => false,
         'capability_type'     => 'post',
-        'show_in_rest'        => true,
+        'show_in_rest'        => false,        // Bảo mật: Không công khai danh sách khách hàng qua WP REST API
     );
 
     register_post_type('form_tmh', $args);
@@ -306,6 +306,17 @@ add_action('rest_api_init', function () {
 });
 
 function cih_handle_tmh_lead_submission($request) {
+    // 1. Kiểm tra Rate Limit theo IP (Tối đa 5 lần gửi / 10 phút trên mỗi IP)
+    $client_ip = sanitize_text_field($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0');
+    $rate_key  = 'cih_tmh_rl_' . md5($client_ip);
+    $attempts  = (int) get_transient($rate_key);
+    if ($attempts >= 5) {
+        return new WP_REST_Response(array(
+            'success' => false,
+            'message' => 'Bạn đã gửi yêu cầu quá nhiều lần. Vui lòng thử lại sau ít phút hoặc gọi hotline 1900 8146.',
+        ), 429);
+    }
+
     $params = $request->get_params();
 
     $name    = isset($params['name']) ? sanitize_text_field($params['name']) : '';
@@ -313,13 +324,16 @@ function cih_handle_tmh_lead_submission($request) {
     $service = isset($params['service']) ? sanitize_text_field($params['service']) : '';
     $source  = isset($params['source']) ? sanitize_text_field($params['source']) : 'Landing Page Tai Mũi Họng';
 
-    // Kiểm tra dữ liệu bắt buộc
-    if (empty($phone)) {
+    // 2. Kiểm tra dữ liệu bắt buộc và định dạng số điện thoại hợp lệ
+    if (empty($phone) || !preg_match('/^[0-9\+\-\s\.]{8,15}$/', $phone)) {
         return new WP_REST_Response(array(
             'success' => false,
-            'message' => 'Vui lòng cung cấp số điện thoại.',
+            'message' => 'Vui lòng cung cấp số điện thoại hợp lệ.',
         ), 400);
     }
+
+    // Tăng bộ đếm Rate Limit (lưu trong 10 phút)
+    set_transient($rate_key, $attempts + 1, 10 * MINUTE_IN_SECONDS);
 
     if (empty($name)) {
         $name = 'Khách đăng ký ' . substr($phone, -4);
@@ -339,7 +353,7 @@ function cih_handle_tmh_lead_submission($request) {
         update_post_meta($post_id, '_lead_service', $service);
         update_post_meta($post_id, '_lead_status', 'pending'); // Mặc định là Chờ liên hệ
         update_post_meta($post_id, '_lead_source', $source);
-        update_post_meta($post_id, '_lead_ip', sanitize_text_field($_SERVER['REMOTE_ADDR'] ?? ''));
+        update_post_meta($post_id, '_lead_ip', $client_ip);
         update_post_meta($post_id, '_lead_created_at', current_time('mysql'));
 
         // Gửi email thông báo cho Admin (nếu cấu hình)
@@ -426,3 +440,60 @@ function cih_handle_export_tmh_leads() {
     exit;
 }
 
+// ════════════════════════════════════════════════════════════════
+// 7. BẢO MẬT HỆ THỐNG (SECURITY HARDENING CHO CIH.COM.VN)
+// ════════════════════════════════════════════════════════════════
+
+// 7.1. Chặn truy cập công khai vào REST API của Lịch hẹn (lich-hen), Quản lý Form (form_tmh) và Danh sách User (users)
+add_filter('rest_pre_dispatch', 'cih_restrict_sensitive_rest_routes', 10, 3);
+function cih_restrict_sensitive_rest_routes($result, $server, $request) {
+    $route = $request->get_route();
+    $protected_prefixes = array(
+        '/wp/v2/lich-hen',
+        '/wp/v2/form_tmh',
+        '/wp/v2/users',
+    );
+
+    foreach ($protected_prefixes as $prefix) {
+        if (strpos($route, $prefix) === 0) {
+            if (!current_user_can('edit_posts')) {
+                return new WP_Error(
+                    'rest_forbidden',
+                    'Truy cập bị từ chối vì lý do bảo mật thông tin.',
+                    array('status' => 403)
+                );
+            }
+        }
+    }
+
+    return $result;
+}
+
+// 7.2. Chống Spam / Rate Limit cho form Đặt lịch hẹn chính (wp_ajax_nopriv_submit_lich_hen)
+add_action('wp_ajax_nopriv_submit_lich_hen', 'cih_rate_limit_booking_ajax', 1);
+function cih_rate_limit_booking_ajax() {
+    $client_ip = sanitize_text_field($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0');
+    $rate_key  = 'cih_bk_rl_' . md5($client_ip);
+    $attempts  = (int) get_transient($rate_key);
+    if ($attempts >= 5) {
+        wp_send_json_error('Bạn đã gửi yêu cầu đặt lịch quá nhiều lần. Vui lòng thử lại sau ít phút.');
+        wp_die();
+    }
+    set_transient($rate_key, $attempts + 1, 10 * MINUTE_IN_SECONDS);
+}
+
+// 7.3. Vô hiệu hóa XML-RPC để chống tấn công Brute-Force & Pingback DDoS
+add_filter('xmlrpc_enabled', '__return_false');
+
+// 7.4. Ẩn thông tin tài khoản quản trị trong oEmbed API & chặn dò tìm Author Archive
+add_filter('oembed_response_data', function ($data) {
+    unset($data['author_name']);
+    unset($data['author_url']);
+    return $data;
+}, 999);
+add_action('template_redirect', function () {
+    if (!is_admin() && (is_author() || isset($_REQUEST['author']))) {
+        wp_safe_redirect(home_url('/'), 301);
+        exit;
+    }
+});

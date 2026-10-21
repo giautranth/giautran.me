@@ -54,7 +54,7 @@ ul{list-style:none}
 .section__header{display:flex;align-items:flex-end;justify-content:space-between;text-align:left;margin-bottom:1.25rem;gap:1.5rem}
 .section__header-left{flex:1;max-width:720px}
 .section__badge{display:none!important}
-.section__title{font-size:clamp(1.35rem,2.2vw,1.65rem);font-weight:800;color:#007DA5;letter-spacing:-.3px;margin-bottom:.3rem;line-height:1.2}
+.section__title{font-size:clamp(1.35rem,2.2vw,1.65rem);font-weight:800;color:#023C69;letter-spacing:-.3px;margin-bottom:.3rem;line-height:1.2}
 .section__subtitle{font-size:.95rem;color:#475569;line-height:1.5;font-weight:400;margin-bottom:0}
 .section__header-btn{display:inline-flex;align-items:center;justify-content:center;gap:.3rem;background:#007DA5;color:#fff!important;padding:.45rem 1.15rem!important;border-radius:99px;font-weight:700;font-size:.8rem!important;text-decoration:none!important;white-space:nowrap;transition:all .25s ease;box-shadow:0 2px 8px rgba(0,125,165,.15)}
 .section__header-btn:hover{background:#0082a6;color:#fff!important;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,130,166,.3)}
@@ -2930,7 +2930,7 @@ body {
 
 /* Section Titles & Header Buttons styling on light backgrounds */
 .section__title {
-  color: #007DA5 !important;
+  color: #023C69 !important;
 }
 
 .section__header-btn {

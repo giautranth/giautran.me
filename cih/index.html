@@ -574,11 +574,14 @@
   #chuyen-khoa .spec-card {
     background: #ffffff !important;
     border-radius: 18px !important;
+    padding: 12px 12px 18px 12px !important;
     border: 1px solid #f5eedc !important;
     box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
     overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
+    width: 100% !important;
+    text-align: left !important;
     opacity: 1 !important;
     transform: translateY(0) !important;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
@@ -594,9 +597,10 @@
     width: 100% !important;
     aspect-ratio: 16 / 10 !important;
     height: auto !important;
-    border-radius: 18px 18px 0 0 !important;
+    border-radius: 12px !important;
     overflow: hidden !important;
     background: #f8fafc !important;
+    display: block !important;
   }
 
   #chuyen-khoa .spec-card__img img {
@@ -604,6 +608,7 @@
     height: 100% !important;
     aspect-ratio: 16 / 10 !important;
     object-fit: cover !important;
+    border-radius: 12px !important;
     transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
   }
 
@@ -612,22 +617,24 @@
   }
 
   #chuyen-khoa .spec-card__body {
-    padding: 22px 24px 18px 24px !important;
+    padding: 18px 8px 0 8px !important;
     background: #ffffff !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
+    align-items: flex-start !important;
     flex: 1 1 auto !important;
     text-align: left !important;
   }
 
   #chuyen-khoa .spec-card__body h3 {
-    font-size: 1.06rem !important;
+    font-size: 1.04rem !important;
     font-weight: 700 !important;
     color: #0f172a !important;
     line-height: 1.4 !important;
     margin: 0 0 22px 0 !important;
     text-align: left !important;
+    width: 100% !important;
     transition: color 0.2s ease !important;
   }
 

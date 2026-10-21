@@ -1938,62 +1938,52 @@
 </section>
 
 <!-- Equipment & Facility Detail Modal -->
-<div class="cih-equip-modal" id="cih-equip-modal" onclick="if(event.target===this) closeCihEquipModal()">
-  <div class="cih-equip-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="cih-equip-modal-title">
-    <button class="cih-equip-modal__close" onclick="closeCihEquipModal()" aria-label="Đóng">✕</button>
-    <div class="cih-equip-modal__img-col">
-      <img id="cih-equip-modal-img" src="" alt="" class="cih-equip-modal__img" />
+<div class="award-modal" id="cih-equip-modal" onclick="if(event.target===this) closeCihEquipModal()">
+  <div class="award-modal__content" role="dialog" aria-modal="true" aria-labelledby="cih-equip-modal-title">
+    <button class="award-modal__close" onclick="closeCihEquipModal()" aria-label="Đóng">✕</button>
+    <div class="award-modal__img-box">
+      <img id="cih-equip-modal-img" src="" alt="" />
     </div>
-    <div class="cih-equip-modal__body">
-      <div>
-        <h3 class="cih-equip-modal__title" id="cih-equip-modal-title"></h3>
-        <p class="cih-equip-modal__desc" id="cih-equip-modal-desc"></p>
-      </div>
-      <div class="cih-equip-modal__footer">
-        <span class="cih-equip-modal__counter" id="cih-equip-modal-counter">1 / 6</span>
-        <div class="cih-equip-modal__nav">
-          <button type="button" class="cih-equip-modal__nav-btn" onclick="stepCihEquipModal(-1)" aria-label="Trước">&lsaquo;</button>
-          <button type="button" class="cih-equip-modal__nav-btn" onclick="stepCihEquipModal(1)" aria-label="Tiếp">&rsaquo;</button>
-        </div>
-      </div>
-    </div>
+    <div id="cih-equip-modal-badge" class="award-modal__badge">🏥 Trang thiết bị hiện đại</div>
+    <h3 class="award-modal__title" id="cih-equip-modal-title"></h3>
+    <p class="award-modal__desc" id="cih-equip-modal-desc"></p>
   </div>
 </div>
 
 <script>
   const cihEquipData = [
     {
-      badge: 'MỚI NHẤT • BÁO TIỀN PHONG',
+      badge: 'Trang thiết bị hiện đại',
       title: 'Hệ thống Siêu âm Nội mạch IVUS (AI) & Chụp mạch Số hóa Xóa nền DSA Siemens',
       img: 'images/equip_ivus_dsa.png?v=1792597600',
       desc: 'Bệnh viện Quốc tế City tiên phong ứng dụng hệ thống Siêu âm trong lòng mạch IVUS thế hệ mới (VivoHeart tích hợp trí tuệ nhân tạo AI) đồng bộ trực tiếp trên hệ thống chụp mạch xóa nền DSA Artis zee nền tảng PURE® (Siemens, Đức). Sự kết hợp bộ ba chiến lược IVUS – FFR (Đo dự trữ lưu lượng vành) – IVL (Tán sỏi nội mạch bằng sóng xung kích) đóng vai trò như "đôi mắt thứ hai" giúp bác sĩ đánh giá chính xác mảng xơ vữa, vôi hóa nặng, tối ưu hóa kích thước stent mạch vành và can thiệp cấp cứu đột quỵ não trong "thời gian vàng".'
     },
     {
-      badge: 'CHẨN ĐOÁN HÌNH ẢNH',
+      badge: 'Chẩn đoán hình ảnh',
       title: 'Hệ thống MRI 1.5 Tesla Philips Ingenia & MSCT 128 Lát cắt',
       img: 'images/equipment.png?v=1792597500',
       desc: 'Khoa Chẩn đoán Hình ảnh được đầu tư đồng bộ hệ thống chụp Cộng hưởng từ MRI 1.5 Tesla Ingenia (Philips, Hà Lan), máy chụp cắt lớp điện toán MSCT 128 lát cắt Aquilion CXL (Toshiba/Canon, Nhật Bản), máy đo mật độ loãng xương Hologic DXA (Mỹ) và hệ thống Nhũ ảnh kỹ thuật số. Công nghệ tái tạo ảnh 3D độ phân giải cao giúp tầm soát chính xác các tổn thương thần kinh – sọ não, mạch máu, tim mạch, cột sống và ung bướu ở giai đoạn rất sớm với liều tia X tối thiểu.'
     },
     {
-      badge: 'CHUẨN AACI HOA KỲ',
+      badge: 'Cơ sở vật chất hiện đại',
       title: 'Hệ thống 10 Phòng mổ Áp lực dương & ICU Chuẩn AIA',
       img: 'images/equip_or_aaci.png?v=1792597700',
       desc: 'Sở hữu cụm 10 phòng mổ vô trùng một chiều đạt chuẩn kiểm soát nhiễm khuẩn khắt khe của AACI (Hoa Kỳ) với hệ thống lọc khí HEPA áp lực dương, trang bị dao mổ siêu âm Harmonic, dao cắt gan siêu âm Cusa, nội soi mật – tụy ngược dòng (ERCP) và công nghệ Laser điều trị. Liền kề là Khoa Hồi sức tích cực (ICU) thiết kế theo chuẩn Viện Kiến trúc sư Hoa Kỳ (AIA) với hệ thống phòng cách ly áp lực âm, monitor trung tâm 24/7, máy lọc máu liên tục (CRRT) và hệ thống hạ thân nhiệt chỉ huy.'
     },
     {
-      badge: 'CHỨNG NHẬN RTAC (ÚC)',
+      badge: 'Trung tâm Hỗ trợ sinh sản',
       title: 'Phòng Lab IVF Chuẩn RTAC & Tủ nuôi cấy phôi Time-Lapse AI',
       img: 'images/equip_ivf_rtac.webp',
       desc: 'Trung tâm Hỗ trợ Sinh sản CIH chính thức đạt chứng nhận quốc tế RTAC (Hiệp hội Sinh sản Úc và New Zealand). Phòng Lab nuôi cấy phôi đạt chuẩn phòng sạch ISO Class 5 nghiêm ngặt, trang bị hệ thống tủ nuôi cấy phôi Time-Lapse tích hợp camera và trí tuệ nhân tạo (AI) theo dõi sự phát triển của từng phôi liên tục 24/7 mà không cần đưa phôi ra ngoài, kết hợp hệ thống vi thao tác ICSI hiện đại giúp nâng cao vượt trội tỷ lệ đậu thai.'
     },
     {
-      badge: 'OLYMPUS NBI & ISO 15189:2022',
+      badge: 'Trang thiết bị hiện đại',
       title: 'Trung tâm Nội soi NBI Olympus & Xét nghiệm Tự động ISO 15189:2022',
       img: 'images/equip_endoscopy_olympus.jpg',
       desc: 'Trung tâm Tiêu hóa – Nội soi thế hệ mới ứng dụng hệ thống nội soi Olympus (Nhật Bản) tích hợp dải tần ánh sáng hẹp NBI phóng đại hình ảnh giúp phát hiện sớm polyp và ung thư đường tiêu hóa dưới quy trình nội soi êm ái không đau, kiểm soát nhiễm khuẩn áp lực âm và máy FibroScan đo xơ hóa gan không xâm lấn. Đồng hành là Khoa Xét nghiệm tự động đạt chuẩn quốc tế ISO 15189:2022 (VILAS MED 233) đảm bảo kết quả Hóa sinh, Huyết học, Miễn dịch và Sinh học phân tử nhanh chóng, chính xác toàn cầu.'
     },
     {
-      badge: 'TIÊU CHUẨN 5 SAO',
+      badge: 'Cơ sở vật chất hiện đại',
       title: 'Khu Khám Quốc tế, Thẩm mỹ Y học Tái tạo & Hệ thống 320 Giường Nội trú Chuẩn Khách sạn',
       img: 'images/Website/tham-my/CIH07314.JPG',
       desc: 'Hạ tầng bệnh viện quy mô 320 giường nội trú được thiết kế theo nguyên tắc của Viện Kiến trúc sư Hoa Kỳ (AIA) với hệ thống phòng tiêu chuẩn đến VIP/Suite ngập tràn ánh sáng tự nhiên, giường điều khiển điện tự động, khí y tế âm tường và chuông gọi điều dưỡng 24/7. Bên cạnh đó, Khu Phòng khám Quốc tế và Trung tâm Thẩm mỹ – Y học Tái tạo (phòng mổ chuẩn ISO 6) mang đến trải nghiệm thăm khám khép kín, riêng tư chuẩn 5 sao.'
@@ -2008,10 +1998,11 @@
     document.getElementById('cih-equip-modal-img').src = item.img;
     document.getElementById('cih-equip-modal-img').alt = item.title;
     const badgeEl = document.getElementById('cih-equip-modal-badge');
-    if (badgeEl) badgeEl.textContent = item.badge || 'TRANG THIẾT BỊ HIỆN ĐẠI';
+    if (badgeEl) badgeEl.textContent = '🏥 ' + (item.badge || 'Trang thiết bị hiện đại');
     document.getElementById('cih-equip-modal-title').textContent = item.title;
     document.getElementById('cih-equip-modal-desc').textContent = item.desc;
-    document.getElementById('cih-equip-modal-counter').textContent = (idx + 1) + ' / ' + cihEquipData.length;
+    const counterEl = document.getElementById('cih-equip-modal-counter');
+    if (counterEl) counterEl.textContent = (idx + 1) + ' / ' + cihEquipData.length;
   }
 
   function openCihEquipModal(idx) {

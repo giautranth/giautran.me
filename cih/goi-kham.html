@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1790565050" />
+  <link rel="stylesheet" href="style.css?v=1792586500" />
   <style>
     /* Filter Bar Styles */
     .filter-bar {
@@ -138,6 +138,123 @@
         display: block;
         overflow-x: auto;
       }
+    }
+
+    /* Luxury Package Card Styling matching Homepage #goi-kham */
+    #pkg-grid .pkg-home-card {
+      background: #ffffff !important;
+      border-radius: 18px !important;
+      padding: 12px 12px 18px 12px !important;
+      border: 1px solid #f5eedc !important;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      text-align: left !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+    }
+
+    #pkg-grid .pkg-home-card:hover {
+      transform: translateY(-5px) !important;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
+      border-color: #ead5a0 !important;
+    }
+
+    #pkg-grid .pkg-home-card .news-card__img-link {
+      width: 100% !important;
+      aspect-ratio: 16 / 10 !important;
+      height: auto !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      background: #f8fafc !important;
+      display: block !important;
+    }
+
+    #pkg-grid .pkg-home-card .news-card__img-link img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 12px !important;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    #pkg-grid .pkg-home-card:hover .news-card__img-link img {
+      transform: scale(1.04) !important;
+    }
+
+    #pkg-grid .pkg-home-card .news-card__body {
+      padding: 18px 8px 0 8px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      flex: 1 1 auto !important;
+    }
+
+    #pkg-grid .pkg-home-card .pkg-card__cat {
+      font-size: 0.7rem !important;
+      font-weight: 700 !important;
+      color: #C59A3F !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      margin: 0 0 4px 0 !important;
+      text-align: left !important;
+      width: 100% !important;
+    }
+
+    #pkg-grid .pkg-home-card .news-card__title {
+      font-size: 1.04rem !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.4 !important;
+      margin: 0 0 22px 0 !important;
+      text-align: left !important;
+      text-align-last: left !important;
+      width: 100% !important;
+    }
+
+    #pkg-grid .pkg-home-card .news-card__title a {
+      color: #0f172a !important;
+      text-decoration: none !important;
+      text-align: left !important;
+      text-align-last: left !important;
+      transition: color 0.2s ease !important;
+    }
+
+    #pkg-grid .pkg-home-card:hover .news-card__title,
+    #pkg-grid .pkg-home-card:hover .news-card__title a {
+      color: #007DA5 !important;
+    }
+
+    #pkg-grid .pkg-home-card .news-card__more,
+    #pkg-grid .pkg-home-card a.news-card__more {
+      border-top: 1px solid #f5f0e6 !important;
+      padding-top: 14px !important;
+      margin-top: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 5px !important;
+      text-align: right !important;
+      width: 100% !important;
+      color: #00688B !important;
+      font-weight: 700 !important;
+      font-size: 0.82rem !important;
+      text-decoration: none !important;
+    }
+
+    #pkg-grid .pkg-home-card .news-card__more .arrow {
+      color: #00688B !important;
+      font-weight: 700 !important;
+      transition: transform 0.2s ease !important;
+    }
+
+    #pkg-grid .pkg-home-card:hover .news-card__more .arrow {
+      transform: translateX(3px) !important;
     }
   </style>
 </head>
@@ -311,17 +428,20 @@
       const itemsPerPage = 9;
       let currentFilteredPackages = [];
 
-      function formatPkgTitle(title) {
-        if (!title) return '';
-        if (title.includes(' – ')) {
-          const parts = title.split(' – ');
-          return `${parts[0]}<br>${parts.slice(1).join(' – ')}`;
+      function getPkgCatAndTitle(pkg) {
+        const rawTitle = (pkg && pkg.title) ? pkg.title.trim() : '';
+        if (/^khám tổng quát\s*[–-]\s*/i.test(rawTitle)) {
+          const parts = rawTitle.split(/\s*[–-]\s*/);
+          return {
+            cat: parts[0],
+            title: parts.slice(1).join(' – ')
+          };
         }
-        if (title.includes(' - ')) {
-          const parts = title.split(' - ');
-          return `${parts[0]}<br>${parts.slice(1).join(' - ')}`;
-        }
-        return title;
+        const rawCat = (pkg && pkg.category) ? pkg.category.replace(/^Gói\s+/i, '').trim() : 'Gói dịch vụ';
+        return {
+          cat: rawCat || 'Gói dịch vụ',
+          title: rawTitle
+        };
       }
 
       function getPackageSpecialty(pkg) {
@@ -441,30 +561,25 @@
         currentSlice.forEach(pkg => {
           const card = document.createElement('div');
           card.className = 'news-card pkg-home-card';
-          card.style.background = '#fff';
-          card.style.borderRadius = '18px';
-          card.style.overflow = 'hidden';
-          card.style.border = '1px solid #e2e8f0';
-          card.style.boxShadow = '0 4px 15px rgba(0,0,0,0.04)';
-          card.style.display = 'flex';
-          card.style.flexDirection = 'column';
-          card.style.width = '100%';
-          card.style.textAlign = 'center';
-          card.style.cursor = 'pointer';
-          card.style.transition = 'transform 0.25s ease, box-shadow 0.25s ease';
+          const parts = getPkgCatAndTitle(pkg);
           
           card.innerHTML = `
-            <a href="chi-tiet-tin-tuc?id=${pkg.id}" class="news-card__img-link" style="height:170px; display:block; overflow:hidden; background:#f1f5f9; border-radius: 15px 15px 0 0;">
-              <img src="${pkg.image}" alt="${pkg.title}" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+            <a href="chi-tiet-tin-tuc?id=${pkg.id}" class="news-card__img-link">
+              <img src="${pkg.image}" alt="${pkg.title}" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
             </a>
-            <div class="news-card__body" style="padding:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center;">
-              <h3 class="news-card__title" style="font-size:1.05rem; font-weight:700; color:#000000; line-height:1.4; margin-bottom:1rem; text-align:center !important; text-align-last:center !important; width:100%;">${formatPkgTitle(pkg.title)}</h3>
-              <a href="chi-tiet-tin-tuc?id=${pkg.id}" class="news-card__more" style="align-self:flex-end; text-align:right; width:100%; display:block; margin-top:auto; color:#000000 !important; font-weight:400 !important; text-decoration:none;">Xem thêm <span class="arrow">→</span></a>
+            <div class="news-card__body">
+              <div style="width: 100%;">
+                <p class="pkg-card__cat">${parts.cat}</p>
+                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=${pkg.id}">${parts.title}</a></h3>
+              </div>
+              <a href="chi-tiet-tin-tuc?id=${pkg.id}" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           `;
           
           card.addEventListener('click', (e) => {
-            window.location.href = `chi-tiet-tin-tuc?id=${pkg.id}`;
+            if (!e.target.closest('a')) {
+              window.location.href = `chi-tiet-tin-tuc?id=${pkg.id}`;
+            }
           });
           
           grid.appendChild(card);

@@ -2970,6 +2970,12 @@ body {
   color: #007DA5 !important;
 }
 
+#header-booking-btn,
+.header__cta .btn--primary {
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+}
+
 .section__header-btn,
 #header-booking-btn,
 .header__cta .btn--primary {

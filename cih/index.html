@@ -2178,7 +2178,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) 410px;
     gap: 24px;
-    align-items: start;
+    align-items: stretch;
     margin-top: 1.25rem;
   }
 
@@ -2186,6 +2186,12 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
+  }
+
+  .cih-yt-sidebar-wrap {
+    position: relative;
+    height: 100%;
+    min-height: 0;
   }
 
   .cih-video-hero {
@@ -2281,12 +2287,15 @@
     margin: 14px 0 0 0;
   }
 
-  /* Right Sidebar: Vertical Scrollable Playlist */
+  /* Right Sidebar: Vertical Scrollable Playlist (Exact 4 items visible matching hero height) */
   .cih-yt-sidebar {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-height: 485px;
+    gap: 12px;
     overflow-y: auto;
     padding-right: 4px;
     scrollbar-width: thin;
@@ -2313,7 +2322,9 @@
     padding: 0;
     border-radius: 12px;
     overflow: hidden;
-    flex-shrink: 0;
+    flex: 0 0 calc((100% - 36px) / 4);
+    height: calc((100% - 36px) / 4);
+    box-sizing: border-box;
     background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(226, 232, 240, 0.9);
     cursor: pointer;
@@ -2334,8 +2345,9 @@
 
   .cih-yt-item__thumb {
     position: relative;
-    width: 164px;
+    height: 100%;
     aspect-ratio: 16 / 9;
+    width: auto;
     border-radius: 0;
     overflow: hidden;
     background: #0f172a;
@@ -2434,8 +2446,14 @@
       grid-template-columns: 1fr;
       gap: 20px;
     }
+    .cih-yt-sidebar-wrap {
+      position: static;
+      height: auto;
+    }
     .cih-yt-sidebar {
-      max-height: 380px;
+      position: static;
+      height: 390px;
+      max-height: 390px;
     }
   }
 
@@ -2484,7 +2502,8 @@
       </div>
 
       <!-- Right Column: YouTube-style Up Next Video List -->
-      <div class="cih-yt-sidebar" id="cih-video-track">
+      <div class="cih-yt-sidebar-wrap">
+        <div class="cih-yt-sidebar" id="cih-video-track">
         <!-- Video 1 (Active by default) -->
         <div class="cih-yt-item is-active" data-video-id="6urJxzmKR4s" data-title="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" onclick="selectCihVideoCard(this)">
           <div class="cih-yt-item__thumb">
@@ -2587,6 +2606,7 @@
           <div class="cih-yt-item__info">
             <h4 class="cih-yt-item__title">Những khoảnh khắc đáng nhớ tại Lễ tổng kết tháng 8 &amp; Trao quyết định bổ nhiệm nhân sự</h4>
           </div>
+        </div>
         </div>
       </div>
     </div>

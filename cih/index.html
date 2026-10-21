@@ -1679,6 +1679,259 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
+     VIDEO (@bvqtcity YOUTUBE CHANNEL)
+═══════════════════════════════════════════════ -->
+<style>
+  #video.cih-video-section {
+    background: #f8fafc !important;
+    padding: 2.75rem 0 !important;
+  }
+
+  .cih-video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 1.25rem;
+  }
+
+  .cih-video-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .cih-video-card:hover {
+    transform: translateY(-5px);
+    border-color: #007DA5;
+    box-shadow: 0 16px 34px rgba(0, 125, 165, 0.14);
+  }
+
+  .cih-video-card__thumb {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #0f172a;
+    overflow: hidden;
+  }
+
+  .cih-video-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+  }
+
+  .cih-video-card:hover .cih-video-card__thumb img {
+    transform: scale(1.06);
+    filter: brightness(0.9);
+  }
+
+  .cih-video-card__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: rgba(220, 38, 38, 0.92);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(220, 38, 38, 0.45), 0 0 0 6px rgba(255, 255, 255, 0.22);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+  }
+
+  .cih-video-card__play svg {
+    margin-left: 3px;
+  }
+
+  .cih-video-card:hover .cih-video-card__play {
+    transform: translate(-50%, -50%) scale(1.12);
+    background: #ef4444;
+    box-shadow: 0 10px 28px rgba(220, 38, 38, 0.6), 0 0 0 8px rgba(255, 255, 255, 0.32);
+  }
+
+  .cih-video-card__yt-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 6px;
+    z-index: 2;
+    letter-spacing: 0.3px;
+  }
+
+  .cih-video-card__body {
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .cih-video-card__title {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.45;
+    margin: 0 0 12px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s ease;
+  }
+
+  .cih-video-card:hover .cih-video-card__title {
+    color: #007DA5;
+  }
+
+  .cih-video-card__more {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #007DA5;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+  }
+
+  @media (max-width: 991px) {
+    .cih-video-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cih-video-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>
+
+<section class="section cih-video-section" id="video">
+  <div class="container">
+    <div class="section__header">
+      <div class="section__header-left">
+        <h2 class="section__title" style="margin-bottom: 0;">Video</h2>
+      </div>
+    </div>
+
+    <div class="cih-video-grid">
+      <!-- Video 1 -->
+      <a href="https://www.youtube.com/watch?v=6urJxzmKR4s" target="_blank" rel="noopener noreferrer" class="cih-video-card">
+        <div class="cih-video-card__thumb">
+          <img src="https://i.ytimg.com/vi/6urJxzmKR4s/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6urJxzmKR4s/hqdefault.jpg'" alt="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" loading="lazy" />
+          <span class="cih-video-card__play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </span>
+          <span class="cih-video-card__yt-tag">YouTube</span>
+        </div>
+        <div class="cih-video-card__body">
+          <h3 class="cih-video-card__title">Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác</h3>
+          <span class="cih-video-card__more">Xem video &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Video 2 -->
+      <a href="https://www.youtube.com/watch?v=HMp5_PuBNEk" target="_blank" rel="noopener noreferrer" class="cih-video-card">
+        <div class="cih-video-card__thumb">
+          <img src="https://i.ytimg.com/vi/HMp5_PuBNEk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HMp5_PuBNEk/hqdefault.jpg'" alt="Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa" loading="lazy" />
+          <span class="cih-video-card__play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </span>
+          <span class="cih-video-card__yt-tag">YouTube</span>
+        </div>
+        <div class="cih-video-card__body">
+          <h3 class="cih-video-card__title">Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa</h3>
+          <span class="cih-video-card__more">Xem video &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Video 3 -->
+      <a href="https://www.youtube.com/watch?v=TmJrwr7ey8o" target="_blank" rel="noopener noreferrer" class="cih-video-card">
+        <div class="cih-video-card__thumb">
+          <img src="https://i.ytimg.com/vi/TmJrwr7ey8o/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/TmJrwr7ey8o/hqdefault.jpg'" alt="Hội thảo Khoa học Kỹ thuật: Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn" loading="lazy" />
+          <span class="cih-video-card__play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </span>
+          <span class="cih-video-card__yt-tag">YouTube</span>
+        </div>
+        <div class="cih-video-card__body">
+          <h3 class="cih-video-card__title">Hội thảo Khoa học Kỹ thuật: “Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn”</h3>
+          <span class="cih-video-card__more">Xem video &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Video 4 -->
+      <a href="https://www.youtube.com/watch?v=RkiocaW2jIk" target="_blank" rel="noopener noreferrer" class="cih-video-card">
+        <div class="cih-video-card__thumb">
+          <img src="https://i.ytimg.com/vi/RkiocaW2jIk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/RkiocaW2jIk/hqdefault.jpg'" alt="Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh" loading="lazy" />
+          <span class="cih-video-card__play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </span>
+          <span class="cih-video-card__yt-tag">YouTube</span>
+        </div>
+        <div class="cih-video-card__body">
+          <h3 class="cih-video-card__title">Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh</h3>
+          <span class="cih-video-card__more">Xem video &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Video 5 -->
+      <a href="https://www.youtube.com/watch?v=my-TlEtQjQY" target="_blank" rel="noopener noreferrer" class="cih-video-card">
+        <div class="cih-video-card__thumb">
+          <img src="https://i.ytimg.com/vi/my-TlEtQjQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/my-TlEtQjQY/hqdefault.jpg'" alt="Bắt trọn khoảnh khắc một mùa trăng - Một lời tri ân" loading="lazy" />
+          <span class="cih-video-card__play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </span>
+          <span class="cih-video-card__yt-tag">YouTube</span>
+        </div>
+        <div class="cih-video-card__body">
+          <h3 class="cih-video-card__title">Bắt trọn khoảnh khắc một mùa trăng – Một lời tri ân</h3>
+          <span class="cih-video-card__more">Xem video &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Video 6 -->
+      <a href="https://www.youtube.com/watch?v=3hxQEwr3lY0" target="_blank" rel="noopener noreferrer" class="cih-video-card">
+        <div class="cih-video-card__thumb">
+          <img src="https://i.ytimg.com/vi/3hxQEwr3lY0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/3hxQEwr3lY0/hqdefault.jpg'" alt="Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội - Cần Thơ" loading="lazy" />
+          <span class="cih-video-card__play" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </span>
+          <span class="cih-video-card__yt-tag">YouTube</span>
+        </div>
+        <div class="cih-video-card__body">
+          <h3 class="cih-video-card__title">Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ</h3>
+          <span class="cih-video-card__more">Xem video &rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="https://www.youtube.com/@bvqtcity" target="_blank" rel="noopener noreferrer" class="section__header-btn">Xem tất cả &rsaquo;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
      ĐỐI TÁC BẢO HIỂM
 ═══════════════════════════════════════════════ -->
 <section class="section insurance-section" id="doi-tac-bao-hiem">

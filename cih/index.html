@@ -146,13 +146,48 @@
 <style>
   .cih-hero-overlap-wrapper {
     position: relative;
-    background-color: #fdfcf8;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 420' preserveAspectRatio='none'%3E%3Cpath fill='%23f3ebd6' fill-opacity='0.75' d='M0,180 C380,260 720,310 1440,220 L1440,420 L0,420 Z'/%3E%3Cpath fill='%23e8dec2' fill-opacity='0.7' d='M480,310 C820,210 1120,210 1440,275 L1440,420 L0,420 L0,350 Z'/%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-color: #FAFCFC;
     padding-top: 1px;
-    padding-bottom: 52px;
+    padding-bottom: 48px;
     z-index: 10;
+    overflow: hidden;
+  }
+
+  .cih-hero-glow-left {
+    position: absolute;
+    top: -160px;
+    left: -160px;
+    width: 600px;
+    height: 600px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, rgba(254, 243, 199, 0.5) 0%, rgba(255, 251, 235, 0.3) 50%, transparent 100%);
+    filter: blur(64px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .cih-hero-glow-right {
+    position: absolute;
+    top: -100px;
+    right: -160px;
+    width: 700px;
+    height: 700px;
+    border-radius: 9999px;
+    background: linear-gradient(225deg, rgba(254, 243, 199, 0.7) 0%, rgba(253, 248, 235, 0.5) 50%, transparent 100%);
+    filter: blur(64px);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .cih-hero-wave-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    pointer-events: none;
+    z-index: 2;
+    display: block;
   }
 
   /* 3 Standalone Floating Action Cards */
@@ -171,87 +206,103 @@
   }
 
   .cih-action-pill {
-    background: #ffffff !important;
-    border-radius: 18px !important;
-    padding: 18px 22px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 16px !important;
+    padding: 16px 24px !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 3px 10px rgba(15, 23, 42, 0.03) !important;
-    transition: all 0.25s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease;
   }
 
   .cih-action-pill:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
   }
 
   .cih-action-pill--teal,
   .cih-action-pill--gold {
-    border: 1.5px solid #ead5a0 !important;
+    border: 1px solid rgba(197, 154, 63, 0.6) !important;
+    box-shadow: 0 0 0 1px rgba(197, 154, 63, 0.2), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
   }
   .cih-action-pill--teal:hover,
   .cih-action-pill--gold:hover {
-    border-color: #d97706 !important;
-    box-shadow: 0 16px 34px rgba(217, 119, 6, 0.14) !important;
+    border-color: #C59A3F !important;
   }
 
   .cih-action-pill__left {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 16px;
   }
 
   .cih-action-pill__icon {
     width: 48px;
     height: 48px;
-    border-radius: 14px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .cih-action-pill:hover .cih-action-pill__icon {
+    transform: scale(1.05);
   }
 
   .cih-action-pill--teal .cih-action-pill__icon,
   .cih-action-pill--gold .cih-action-pill__icon {
-    background: linear-gradient(135deg, #fef9e7 0%, #fdefc2 100%);
-    border: 1px solid #f5dd98;
-    color: #c78d20;
+    background: linear-gradient(135deg, #fffbeb 0%, rgba(254, 243, 199, 0.7) 50%, #ffffff 100%);
+    box-shadow: 0 0 0 1px #fcd34d, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    color: #C59A3F;
   }
 
   .cih-action-pill__title {
-    font-size: 1.02rem;
-    font-weight: 800;
-    color: #1e293b;
-    letter-spacing: -0.1px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    transition: color 0.25s ease;
+  }
+
+  .cih-action-pill:hover .cih-action-pill__title {
+    color: #C59A3F;
   }
 
   .cih-action-pill__arrow {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     font-weight: 600;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
   }
 
   .cih-action-pill--teal .cih-action-pill__arrow,
   .cih-action-pill--gold .cih-action-pill__arrow {
-    color: #c78d20;
+    color: #C59A3F;
   }
 
   .cih-action-pill:hover .cih-action-pill__arrow {
     transform: translateX(4px);
+    color: #78350f;
   }
 
-  /* 3-Column Floating Stats Card */
+  /* 3-Column Floating Stats Card (Exact Demo Code Design & Colors) */
   .cih-floating-stats {
     max-width: 1120px;
-    margin: 36px auto 0;
-    background: #fffdf9 !important;
-    border: 1.5px solid #f0e4c3 !important;
-    border-radius: 22px !important;
-    padding: 36px 24px !important;
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07), 0 4px 12px rgba(180, 140, 60, 0.05) !important;
+    margin: 48px auto 0;
+    background: rgba(255, 255, 255, 0.80) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(253, 230, 138, 0.5) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
     align-items: center;
     position: relative;
     z-index: 20;
@@ -259,8 +310,17 @@
 
   .cih-stat-box {
     text-align: center;
-    padding: 4px 16px;
-    border-right: 1px solid #f1ece1;
+    padding: 12px;
+    border-right: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+  }
+
+  .cih-stat-box:hover {
+    transform: translateY(-4px);
   }
 
   .cih-stat-box:last-child {
@@ -268,38 +328,45 @@
   }
 
   .cih-stat-num {
-    font-size: 2.8rem;
-    font-weight: 800;
-    line-height: 1.05;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+    letter-spacing: -0.025em;
+    margin-bottom: 0;
   }
 
   .cih-stat-num--orange {
+    background: linear-gradient(to right, #C59A3F, #d97706);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: #d97706;
   }
 
   .cih-stat-num--gold {
-    color: #c78d20;
+    color: #C59A3F;
   }
 
   .cih-stat-num--teal {
-    color: #007da5;
+    color: #007A9E;
   }
 
   .cih-stat-title {
-    font-size: 0.85rem;
-    font-weight: 800;
+    margin-top: 4px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
     color: #334155;
     text-transform: uppercase;
-    letter-spacing: 0.4px;
-    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
   }
 
   .cih-stat-desc {
-    font-size: 0.78rem;
-    color: #94a3b8;
-    font-weight: 500;
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 2px;
+    margin-bottom: 0;
   }
 
   @media (max-width: 991px) {
@@ -317,13 +384,13 @@
   @media (max-width: 640px) {
     .cih-floating-stats {
       grid-template-columns: 1fr;
-      gap: 22px;
-      padding: 26px 16px !important;
+      gap: 16px;
+      padding: 20px 16px !important;
     }
     .cih-stat-box {
       border-right: none;
-      border-bottom: 1px solid #f1ece1;
-      padding-bottom: 18px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 16px;
     }
     .cih-stat-box:last-child {
       border-bottom: none;
@@ -346,19 +413,35 @@
     border-bottom: none !important;
   }
 
-  /* Same soft golden-beige layered band (#f3ebd6 / #e8dec2) on alternating lower sections */
-  #bac-si.doctors-section,
+  /* News section warm champagne tint from demo code */
   #tin-tuc.news-section {
-    background-color: #fdfcf8 !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 420' preserveAspectRatio='none'%3E%3Cpath fill='%23f3ebd6' fill-opacity='0.75' d='M0,180 C380,260 720,310 1440,220 L1440,420 L0,420 Z'/%3E%3Cpath fill='%23e8dec2' fill-opacity='0.7' d='M480,310 C820,210 1120,210 1440,275 L1440,420 L0,420 L0,350 Z'/%3E%3C/svg%3E") !important;
-    background-size: 100% 100% !important;
-    background-repeat: no-repeat !important;
-    border-top: none !important;
-    border-bottom: none !important;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(255, 251, 235, 0.45) 50%, #ffffff 100%) !important;
+    border-top: 1px solid rgba(254, 243, 199, 0.6) !important;
+    border-bottom: 1px solid rgba(254, 243, 199, 0.6) !important;
   }
 </style>
 
 <div class="cih-hero-overlap-wrapper">
+  <!-- AESTHETIC BACKGROUND WAVE 1: Exact Demo Code Gradient Mesh & Ribbon Wave SVG -->
+  <div class="cih-hero-glow-left" aria-hidden="true"></div>
+  <div class="cih-hero-glow-right" aria-hidden="true"></div>
+  <svg class="cih-hero-wave-svg" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,96L48,112C96,128,192,160,288,181.3C384,203,480,213,576,192C672,171,768,117,864,112C960,107,1056,149,1152,165.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#hero-wave-gold-primary)" opacity="0.4"></path>
+    <path d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,224C672,235,768,213,864,186.7C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#hero-wave-gold-accent)" opacity="0.6"></path>
+    <defs>
+      <linearGradient id="hero-wave-gold-primary" x1="0%" x2="100%" y1="0%" y2="0%">
+        <stop offset="0%" stop-color="#E5C07B" stop-opacity="0.3"></stop>
+        <stop offset="50%" stop-color="#D4AF37" stop-opacity="0.22"></stop>
+        <stop offset="100%" stop-color="#C59B27" stop-opacity="0.28"></stop>
+      </linearGradient>
+      <linearGradient id="hero-wave-gold-accent" x1="0%" x2="100%" y1="0%" y2="0%">
+        <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.45"></stop>
+        <stop offset="50%" stop-color="#E5C07B" stop-opacity="0.35"></stop>
+        <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.4"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <!-- 3 STANDALONE QUICK ACTION CARDS -->
   <div class="cih-standalone-actions" id="quick-actions">
     <a href="bac-si" class="cih-action-pill cih-action-pill--gold" id="qa-doctor">
@@ -424,7 +507,7 @@
     </div>
 
     <div class="cih-stat-box">
-      <div class="cih-stat-num cih-stat-num--orange" data-target="550" data-suffix="+" style="font-variant-numeric: tabular-nums;">0+</div>
+      <div class="cih-stat-num cih-stat-num--gold" data-target="550" data-suffix="+" style="font-variant-numeric: tabular-nums;">0+</div>
       <div class="cih-stat-title">NHÂN VIÊN Y TẾ</div>
     </div>
   </div>
@@ -764,9 +847,37 @@
 ═══════════════════════════════════════════════ -->
 <style>
   #bac-si.doctors-section {
-    background: #fbf6e9 !important;
-    background-image: none !important;
-    padding: 3.25rem 0 3.5rem !important;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgb(253, 249, 238) 0%, rgb(250, 240, 215) 50%, rgb(253, 249, 238) 100%) !important;
+    padding: 3.5rem 0 3.75rem !important;
+  }
+
+  #bac-si .doc-waves-backdrop {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #bac-si .doc-waves-backdrop-grad {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(254, 243, 199, 0.45) 50%, rgba(253, 248, 235, 0.7) 100%);
+  }
+
+  #bac-si .doc-waves-backdrop svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+  }
+
+  #bac-si > .container {
+    position: relative;
+    z-index: 2;
   }
 
   #bac-si .section__header {
@@ -919,6 +1030,25 @@
 </style>
 
 <section class="section doctors-section" id="bac-si">
+  <div class="doc-waves-backdrop" aria-hidden="true">
+    <div class="doc-waves-backdrop-grad"></div>
+    <svg fill="none" preserveAspectRatio="none" viewBox="0 0 1440 600">
+      <path d="M-100,100 C300,300 600,-50 1000,180 C1250,320 1400,200 1550,220 L1550,600 L-100,600 Z" fill="url(#doc-wave-teal)"></path>
+      <path d="M-50,250 C250,50 650,380 1100,120 C1300,-10 1450,160 1550,180 L1550,600 L-50,600 Z" fill="url(#doc-wave-gold)" opacity="0.45"></path>
+      <defs>
+        <linearGradient id="doc-wave-teal" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#0088A8" stop-opacity="0.15"></stop>
+          <stop offset="50%" stop-color="#005F73" stop-opacity="0.08"></stop>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"></stop>
+        </linearGradient>
+        <linearGradient id="doc-wave-gold" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#E5C07B" stop-opacity="0.35"></stop>
+          <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.18"></stop>
+          <stop offset="100%" stop-color="#FDF8EB" stop-opacity="0.6"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
   <div class="container">
     <div class="section__header">
       <div class="section__header-left">

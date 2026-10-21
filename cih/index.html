@@ -845,27 +845,33 @@
 
   .cih-equip-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 265px;
     gap: 18px;
     margin-top: 1.5rem;
   }
 
   .cih-equip-card {
     position: relative;
-    height: 270px;
+    grid-column: span 3;
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     background: #0f172a;
-    border: 1.5px solid rgba(226, 232, 240, 0.85);
-    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 28px rgba(2, 60, 105, 0.1);
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
   }
 
+  .cih-equip-card--wide {
+    grid-column: span 6;
+  }
+
   .cih-equip-card:hover {
-    transform: translateY(-5px);
-    border-color: #eab308;
-    box-shadow: 0 18px 38px rgba(0, 125, 165, 0.18), 0 0 0 1px rgba(234, 179, 8, 0.35);
+    transform: translateY(-4px);
+    border-color: #ffffff;
+    box-shadow: 0 18px 38px rgba(0, 125, 165, 0.22);
   }
 
   .cih-equip-card__img {
@@ -873,63 +879,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .cih-equip-card:hover .cih-equip-card__img {
-    transform: scale(1.08);
-    filter: brightness(0.92);
-  }
-
-  .cih-equip-card__badge {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    z-index: 3;
-    background: rgba(15, 23, 42, 0.62);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: #fde68a;
-    border: 1px solid rgba(253, 230, 138, 0.4);
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 4px 11px;
-    border-radius: 99px;
-    transition: all 0.3s ease;
-  }
-
-  .cih-equip-card:hover .cih-equip-card__badge {
-    background: linear-gradient(135deg, #d97706 0%, #eab308 100%);
-    color: #ffffff;
-    border-color: transparent;
-  }
-
-  .cih-equip-card__zoom-icon {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    z-index: 3;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-  }
-
-  .cih-equip-card:hover .cih-equip-card__zoom-icon {
-    background: #ffffff;
-    color: #007DA5;
-    transform: rotate(45deg) scale(1.06);
+    transform: scale(1.07);
   }
 
   .cih-equip-card__overlay {
@@ -939,25 +893,30 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 18px 18px 16px;
-    background: linear-gradient(180deg, rgba(2, 28, 52, 0) 28%, rgba(2, 42, 74, 0.72) 68%, rgba(2, 52, 92, 0.94) 100%);
-    transition: background 0.35s ease;
+    padding: 20px 22px 18px;
+    background: linear-gradient(180deg, rgba(2, 28, 52, 0) 42%, rgba(2, 38, 68, 0.68) 76%, rgba(2, 48, 86, 0.9) 100%);
+    transition: all 0.35s ease;
   }
 
   .cih-equip-card:hover .cih-equip-card__overlay {
-    background: linear-gradient(180deg, rgba(2, 48, 86, 0.68) 0%, rgba(0, 92, 128, 0.93) 50%, rgba(2, 52, 92, 0.98) 100%);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    justify-content: center;
+    background: linear-gradient(160deg, rgba(0, 102, 140, 0.88) 0%, rgba(2, 52, 92, 0.94) 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
   }
 
   .cih-equip-card__title {
     color: #ffffff;
-    font-size: 0.96rem;
+    font-size: 1rem;
     font-weight: 800;
     line-height: 1.38;
     margin: 0;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
+    transition: color 0.25s ease;
+  }
+
+  .cih-equip-card--wide .cih-equip-card__title {
+    font-size: 1.12rem;
   }
 
   .cih-equip-card:hover .cih-equip-card__title {
@@ -973,16 +932,16 @@
   }
 
   .cih-equip-card:hover .cih-equip-card__desc-wrap {
-    max-height: 135px;
+    max-height: 150px;
     opacity: 1;
-    margin-top: 8px;
+    margin-top: 10px;
   }
 
   .cih-equip-card__desc {
-    color: rgba(255, 255, 255, 0.92);
-    font-size: 0.8rem;
-    line-height: 1.5;
-    margin: 0 0 10px 0;
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 0.84rem;
+    line-height: 1.55;
+    margin: 0 0 12px 0;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -993,7 +952,7 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    font-size: 0.76rem;
+    font-size: 0.78rem;
     font-weight: 700;
     color: #fde047;
     text-transform: uppercase;
@@ -1162,6 +1121,10 @@
     .cih-equip-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+    .cih-equip-card,
+    .cih-equip-card--wide {
+      grid-column: span 1;
+    }
   }
 
   @media (max-width: 768px) {
@@ -1182,10 +1145,8 @@
   @media (max-width: 560px) {
     .cih-equip-grid {
       grid-template-columns: 1fr;
+      grid-auto-rows: 235px;
       gap: 14px;
-    }
-    .cih-equip-card {
-      height: 235px;
     }
     .cih-equip-card__desc-wrap {
       max-height: 90px;
@@ -1205,11 +1166,9 @@
     </div>
 
     <div class="cih-equip-grid" id="cih-equip-grid">
-      <!-- Item 1 -->
-      <div class="cih-equip-card" onclick="openCihEquipModal(0)">
+      <!-- Row 1: [ Wide 6 cols ] [ 3 cols ] [ 3 cols ] -->
+      <div class="cih-equip-card cih-equip-card--wide" onclick="openCihEquipModal(0)">
         <img src="images/Website/tham-my/CIH07314.JPG" alt="Hệ thống Cộng hưởng từ MRI 1.5 Tesla & CT Đa lát cắt" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Chẩn đoán hình ảnh</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Hệ thống MRI 1.5 Tesla &amp; CT Đa lát cắt (GE Healthcare, Mỹ)</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1219,11 +1178,8 @@
         </div>
       </div>
 
-      <!-- Item 2 -->
       <div class="cih-equip-card" onclick="openCihEquipModal(1)">
         <img src="images/Website/tham-my/CIH07308.JPG" alt="Hệ thống Chụp mạch Số hóa Xóa nền DSA" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Can thiệp mạch máu</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Hệ thống Chụp mạch Số hóa Xóa nền DSA Thế hệ mới</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1233,11 +1189,8 @@
         </div>
       </div>
 
-      <!-- Item 3 -->
       <div class="cih-equip-card" onclick="openCihEquipModal(2)">
         <img src="images/Website/tham-my/z7666498716680_2461a0f17e61d9416e7b547f3e1c08a6.jpg" alt="Hệ thống Phòng mổ Áp lực dương Chuẩn Quốc tế" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Phẫu thuật &amp; Gây mê</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Hệ thống Phòng mổ Áp lực dương Chuẩn Quốc tế AACI</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1247,11 +1200,9 @@
         </div>
       </div>
 
-      <!-- Item 4 -->
+      <!-- Row 2: [ 3 cols ] [ 3 cols ] [ Wide 6 cols ] -->
       <div class="cih-equip-card" onclick="openCihEquipModal(3)">
         <img src="images/ivf.png" alt="Trung tâm Hỗ trợ Sinh sản & Phòng Lab IVF Chuẩn RTAC" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Hỗ trợ sinh sản IVF</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Phòng Lab IVF Chuẩn Quốc tế RTAC &amp; Tủ cấy Time-Lapse</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1261,39 +1212,8 @@
         </div>
       </div>
 
-      <!-- Item 5 -->
       <div class="cih-equip-card" onclick="openCihEquipModal(4)">
-        <img src="images/Website/tham-my/7.png" alt="Trung tâm Thẩm mỹ - Y học Tái tạo Công nghệ cao" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Thẩm mỹ &amp; Tái tạo</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
-        <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Hệ thống Thiết bị Thẩm mỹ Nội khoa &amp; Y học Tái tạo</h3>
-          <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Trang bị đồng bộ công nghệ Laser, RF vi điểm và trẻ hóa tế bào chuẩn FDA Hoa Kỳ trong không gian điều trị sang trọng, biệt lập và an toàn chuẩn bệnh viện quốc tế.</p>
-            <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="cih-equip-card" onclick="openCihEquipModal(5)">
-        <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/z7072807155646_4d9f9f335aa1a8e707b959ecfb8a586e.jpg" alt="Khu Khám Quốc tế & Tầm soát Sức khỏe Chuyên sâu" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Khám tổng quát EHS</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
-        <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Khu Khám Quốc tế &amp; Tầm soát Sức khỏe Công nghệ cao</h3>
-          <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Quy trình thăm khám khép kín một chiều với hệ thống siêu âm màu 4D GE Voluson/Logiq, đo mật độ xương DXA và thăm dò chức năng tim phổi toàn diện.</p>
-            <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 7 -->
-      <div class="cih-equip-card" onclick="openCihEquipModal(6)">
         <img src="images/Website/phu-san/1784087162858_1272607247884588763_1272607247884588763_2506c5a618e59e8f9617bb3e4e001a65.jpg" alt="Khu Nội trú & Phòng Sinh Gia đình Chuẩn 5 Sao" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Nội trú 5 sao</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Khu Nội trú &amp; Phòng Sinh Gia đình Tiêu chuẩn Khách sạn</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1303,15 +1223,12 @@
         </div>
       </div>
 
-      <!-- Item 8 -->
-      <div class="cih-equip-card" onclick="openCihEquipModal(7)">
-        <img src="images/Website/campuchia/z7072807052179_b9122d3bc7d2ddac8d15f87a7522e345.jpg" alt="Trung tâm Xét nghiệm ISO 15189:2022 & Hồi sức Tích cực" class="cih-equip-card__img" loading="lazy" />
-        <span class="cih-equip-card__badge">Xét nghiệm &amp; Hồi sức</span>
-        <span class="cih-equip-card__zoom-icon" aria-hidden="true">↗</span>
+      <div class="cih-equip-card cih-equip-card--wide" onclick="openCihEquipModal(5)">
+        <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/z7072807155646_4d9f9f335aa1a8e707b959ecfb8a586e.jpg" alt="Khu Khám Quốc tế & Tầm soát Sức khỏe Chuyên sâu" class="cih-equip-card__img" loading="lazy" />
         <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Hệ thống Xét nghiệm Tự động ISO 15189:2022 &amp; Hồi sức ICU/NICU</h3>
+          <h3 class="cih-equip-card__title">Khu Khám Quốc tế &amp; Tầm soát Sức khỏe Công nghệ cao</h3>
           <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Hệ thống máy xét nghiệm sinh hóa – miễn dịch hoàn toàn tự động đạt chuẩn ISO 15189:2022 cùng khu Hồi sức tích cực ICU &amp; Sơ sinh NICU trang bị lồng ấp, máy thở cao tần hiện đại.</p>
+            <p class="cih-equip-card__desc">Quy trình thăm khám khép kín một chiều với hệ thống siêu âm màu 4D GE Voluson/Logiq, đo mật độ xương DXA và thăm dò chức năng tim phổi toàn diện.</p>
             <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
           </div>
         </div>
@@ -1329,12 +1246,11 @@
     </div>
     <div class="cih-equip-modal__body">
       <div>
-        <span class="cih-equip-modal__badge" id="cih-equip-modal-badge"></span>
         <h3 class="cih-equip-modal__title" id="cih-equip-modal-title"></h3>
         <p class="cih-equip-modal__desc" id="cih-equip-modal-desc"></p>
       </div>
       <div class="cih-equip-modal__footer">
-        <span class="cih-equip-modal__counter" id="cih-equip-modal-counter">1 / 8</span>
+        <span class="cih-equip-modal__counter" id="cih-equip-modal-counter">1 / 6</span>
         <div class="cih-equip-modal__nav">
           <button type="button" class="cih-equip-modal__nav-btn" onclick="stepCihEquipModal(-1)" aria-label="Trước">&lsaquo;</button>
           <button type="button" class="cih-equip-modal__nav-btn" onclick="stepCihEquipModal(1)" aria-label="Tiếp">&rsaquo;</button>
@@ -1347,52 +1263,34 @@
 <script>
   const cihEquipData = [
     {
-      badge: 'Chẩn đoán hình ảnh',
       title: 'Hệ thống MRI 1.5 Tesla & CT Đa lát cắt (GE Healthcare, Mỹ)',
       img: 'images/Website/tham-my/CIH07314.JPG',
       desc: 'Bệnh viện Quốc tế City trang bị đồng bộ hệ thống chụp Cộng hưởng từ MRI 1.5 Tesla và CT Scanner đa lát cắt của GE Healthcare (Hoa Kỳ). Công nghệ xử lý ảnh kỹ thuật số thế hệ mới giúp tái tạo hình ảnh 3D sắc nét các cơ quan não bộ, mạch máu, tim mạch, cột sống và cơ xương khớp, đồng thời giảm tới 80% liều tia X và rút ngắn tối đa thời gian chụp cho người bệnh.'
     },
     {
-      badge: 'Can thiệp mạch máu',
       title: 'Hệ thống Chụp mạch Số hóa Xóa nền DSA Thế hệ mới',
       img: 'images/Website/tham-my/CIH07308.JPG',
       desc: 'Đơn vị Can thiệp Mạch máu (DSA) sở hữu hệ thống chụp mạch máu số hóa xóa nền độ phân giải cao, cánh tay C-arm xoay linh hoạt đa góc độ. Hệ thống đóng vai trò quyết định trong cấp cứu và can thiệp nội mạch ít xâm lấn: lấy huyết khối điều trị đột quỵ nhồi máu não cấp, đặt stent mạch vành, nút mạch điều trị u gan (TACE) và các dị dạng mạch máu phức tạp.'
     },
     {
-      badge: 'Phẫu thuật & Gây mê',
       title: 'Hệ thống Phòng mổ Áp lực dương Chuẩn Quốc tế AACI',
       img: 'images/Website/tham-my/z7666498716680_2461a0f17e61d9416e7b547f3e1c08a6.jpg',
       desc: 'Cụm phòng mổ hiện đại được thiết kế theo quy chuẩn kiểm soát nhiễm khuẩn khắt khe của AACI (Hoa Kỳ) với hệ thống khí sạch áp lực dương màng lọc HEPA 99,99%. Trang bị đồng bộ dàn nội soi phẫu thuật độ phân giải cao, bàn mổ điều khiển điện đa năng, kính hiển vi vi phẫu và hệ thống gây mê kèm thở tự động giúp thực hiện an toàn các ca đại phẫu phức tạp.'
     },
     {
-      badge: 'Hỗ trợ sinh sản IVF',
       title: 'Phòng Lab IVF Chuẩn Quốc tế RTAC & Tủ cấy Time-Lapse',
       img: 'images/ivf.png',
       desc: 'Trung tâm Hỗ trợ Sinh sản CIH đạt chứng nhận quốc tế RTAC (Úc) danh giá. Phòng Lab nuôi cấy phôi được thiết kế chuẩn phòng sạch ISO Class 5 nghiêm ngặt, trang bị hệ thống tủ cấy phôi Time-Lapse tích hợp camera quan sát liên tục 24/7 và hệ thống vi thao tác tiêm tinh trùng vào bào tương noãn (ICSI) thế hệ mới, tối ưu hóa tỷ lệ thành công cho các cặp vợ chồng mong con.'
     },
     {
-      badge: 'Thẩm mỹ & Tái tạo',
-      title: 'Hệ thống Thiết bị Thẩm mỹ Nội khoa & Y học Tái tạo',
-      img: 'images/Website/tham-my/7.png',
-      desc: 'Trung tâm Thẩm mỹ – Y học Tái tạo quy tụ các thiết bị công nghệ cao đạt chứng nhận FDA (Hoa Kỳ) và CE (Châu Âu) phục vụ trẻ hóa da chuyên sâu, điều trị sắc tố và tạo hình thẩm mỹ. Mọi quy trình đều được thực hiện trực tiếp bởi đội ngũ bác sĩ chuyên khoa trong môi trường bệnh viện quốc tế an toàn tuyệt đối.'
-    },
-    {
-      badge: 'Khám tổng quát EHS',
-      title: 'Khu Khám Quốc tế & Tầm soát Sức khỏe Công nghệ cao',
-      img: 'images/HÌNH ẢNH/Phòng khám Quốc tế/z7072807155646_4d9f9f335aa1a8e707b959ecfb8a586e.jpg',
-      desc: 'Khu Khám Sức khỏe Tổng quát (EHS) và Phòng khám Quốc tế được bố trí tách biệt theo quy trình một chiều khép kín, tích hợp hệ thống siêu âm màu 4D GE Voluson/Logiq, máy đo loãng xương toàn thân bằng tia X năng lượng kép (DXA), điện tâm đồ gắng sức và hệ thống nội soi tiêu hóa êm ái không đau.'
-    },
-    {
-      badge: 'Nội trú 5 sao',
       title: 'Khu Nội trú & Phòng Sinh Gia đình Tiêu chuẩn Khách sạn',
       img: 'images/Website/phu-san/1784087162858_1272607247884588763_1272607247884588763_2506c5a618e59e8f9617bb3e4e001a65.jpg',
       desc: 'Hệ thống 320 giường nội trú từ phòng tiêu chuẩn đến phòng VIP/Suite được thiết kế theo tiêu chuẩn khách sạn 5 sao, ngập tràn ánh sáng tự nhiên và đảm bảo sự riêng tư. Mỗi phòng đều trang bị giường y tế điều khiển điện, hệ thống oxy – hút áp lực âm âm tường, chuông gọi điều dưỡng trực tiếp 24/7 và đầy đủ tiện nghi cao cấp cho người bệnh cùng gia đình.'
     },
     {
-      badge: 'Xét nghiệm & Hồi sức',
-      title: 'Hệ thống Xét nghiệm Tự động ISO 15189:2022 & Hồi sức ICU/NICU',
-      img: 'images/Website/campuchia/z7072807052179_b9122d3bc7d2ddac8d15f87a7522e345.jpg',
-      desc: 'Khoa Xét nghiệm đạt chuẩn quốc tế ISO 15189:2022 với dây chuyền phân tích sinh hóa, miễn dịch, huyết học hoàn toàn tự động cho kết quả nhanh và chính xác cao. Song hành là Khoa Hồi sức Tích cực (ICU) và Hồi sức Sơ sinh (NICU) trang bị hệ thống monitor trung tâm, máy thở cao tần và lồng ấp sơ sinh chuyên dụng bảo vệ sự sống toàn diện 24/7.'
+      title: 'Khu Khám Quốc tế & Tầm soát Sức khỏe Công nghệ cao',
+      img: 'images/HÌNH ẢNH/Phòng khám Quốc tế/z7072807155646_4d9f9f335aa1a8e707b959ecfb8a586e.jpg',
+      desc: 'Khu Khám Sức khỏe Tổng quát (EHS) và Phòng khám Quốc tế được bố trí tách biệt theo quy trình một chiều khép kín, tích hợp hệ thống siêu âm màu 4D GE Voluson/Logiq, máy đo loãng xương toàn thân bằng tia X năng lượng kép (DXA), điện tâm đồ gắng sức và hệ thống nội soi tiêu hóa êm ái không đau.'
     }
   ];
 
@@ -1403,7 +1301,6 @@
     if (!item) return;
     document.getElementById('cih-equip-modal-img').src = item.img;
     document.getElementById('cih-equip-modal-img').alt = item.title;
-    document.getElementById('cih-equip-modal-badge').textContent = item.badge;
     document.getElementById('cih-equip-modal-title').textContent = item.title;
     document.getElementById('cih-equip-modal-desc').textContent = item.desc;
     document.getElementById('cih-equip-modal-counter').textContent = (idx + 1) + ' / ' + cihEquipData.length;

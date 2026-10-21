@@ -1559,6 +1559,28 @@
     transform: scale(1.07);
   }
 
+  .cih-equip-card__badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 99px;
+    background: rgba(0, 95, 130, 0.88);
+    border: 1px solid rgba(252, 211, 77, 0.78);
+    color: #fef08a;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    pointer-events: none;
+  }
+
   .cih-equip-card__overlay {
     position: absolute;
     inset: 0;
@@ -1569,7 +1591,7 @@
     align-items: center;
     text-align: center;
     padding: 20px 22px 18px;
-    background: linear-gradient(180deg, rgba(2, 28, 52, 0) 52%, rgba(2, 38, 68, 0.51) 78%, rgba(2, 48, 86, 0.68) 100%);
+    background: linear-gradient(180deg, rgba(2, 28, 52, 0) 45%, rgba(2, 38, 68, 0.58) 76%, rgba(2, 48, 86, 0.84) 100%);
     transition: all 0.35s ease;
   }
 
@@ -1583,12 +1605,12 @@
   .cih-equip-card__title {
     color: #ffffff;
     font-size: 1rem;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
     line-height: 1.38;
     margin: 0;
     width: 100%;
     text-align: center !important;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
     transition: color 0.25s ease;
   }
 
@@ -1839,40 +1861,43 @@
     <div class="section__header" style="margin-bottom: 0.5rem;">
       <div class="section__header-left">
         <h2 class="section__title" style="margin-bottom: 0;">Cơ sở vật chất - Trang thiết bị hiện đại</h2>
-        <p class="cih-equip-subtitle">Bệnh viện sở hữu cơ sở vật chất hiện đại cùng hệ thống trang thiết bị y tế tiên tiến.</p>
+        <p class="cih-equip-subtitle">Bệnh viện sở hữu cơ sở vật chất hiện đại cùng hệ thống trang thiết bị y tế tiên tiến đạt chuẩn quốc tế AACI, RTAC &amp; ISO 15189:2022.</p>
       </div>
     </div>
 
     <div class="cih-equip-grid" id="cih-equip-grid">
       <!-- Row 1: [ Wide 6 cols ] [ 3 cols ] [ 3 cols ] -->
       <div class="cih-equip-card cih-equip-card--wide" onclick="openCihEquipModal(0)">
-        <img src="images/Website/tham-my/CIH07314.JPG" alt="Hệ thống Cộng hưởng từ MRI 1.5 Tesla & CT Đa lát cắt" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__badge">MỚI NHẤT • BÁO TIỀN PHONG</span>
+        <img src="images/equip_ivus_dsa.png" alt="Hệ thống Siêu âm Nội mạch IVUS (AI) & Chụp mạch Số hóa Xóa nền DSA Siemens" class="cih-equip-card__img" loading="lazy" />
         <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Hệ thống MRI 1.5 Tesla &amp; CT Đa lát cắt (GE Healthcare, Mỹ)</h3>
+          <h3 class="cih-equip-card__title">Hệ thống Siêu âm Nội mạch IVUS (AI) &amp; Chụp mạch Số hóa Xóa nền DSA Siemens</h3>
           <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Ứng dụng công nghệ chẩn đoán hình ảnh tiên tiến của Hoa Kỳ, tái tạo hình ảnh 3D sắc nét hỗ trợ tầm soát đột quỵ, ung thư, tim mạch và cơ xương khớp nhanh chóng, an toàn.</p>
+            <p class="cih-equip-card__desc">Ứng dụng công nghệ IVUS VivoHeart tích hợp AI kết hợp bộ ba IVUS – FFR – IVL đồng bộ trên hệ thống DSA Artis zee PURE® (Siemens, Đức) nâng cao độ chính xác trong can thiệp mạch vành và đột quỵ.</p>
             <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
           </div>
         </div>
       </div>
 
       <div class="cih-equip-card" onclick="openCihEquipModal(1)">
-        <img src="images/Website/tham-my/CIH07308.JPG" alt="Hệ thống Chụp mạch Số hóa Xóa nền DSA" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__badge">CHẨN ĐOÁN HÌNH ẢNH</span>
+        <img src="images/equipment.png" alt="Hệ thống MRI 1.5 Tesla Philips Ingenia & MSCT 128 Lát cắt" class="cih-equip-card__img" loading="lazy" />
         <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Hệ thống Chụp mạch Số hóa Xóa nền DSA Thế hệ mới</h3>
+          <h3 class="cih-equip-card__title">Hệ thống MRI 1.5 Tesla Philips Ingenia &amp; MSCT 128 Lát cắt</h3>
           <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Phòng Cathlab – DSA hiện đại bậc nhất cho phép thực hiện các thủ thuật can thiệp nội mạch ít xâm lấn, cấp cứu đột quỵ não và nhồi máu cơ tim cấp trong "thời gian vàng".</p>
+            <p class="cih-equip-card__desc">Tái tạo hình ảnh 3D độ phân giải cao hỗ trợ tầm soát sớm đột quỵ, tim mạch, ung bướu và cơ xương khớp nhanh chóng với liều tia X tối thiểu.</p>
             <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
           </div>
         </div>
       </div>
 
       <div class="cih-equip-card" onclick="openCihEquipModal(2)">
-        <img src="images/Website/tham-my/z7666498716680_2461a0f17e61d9416e7b547f3e1c08a6.jpg" alt="Hệ thống Phòng mổ Áp lực dương Chuẩn Quốc tế" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__badge">CHUẨN AACI HOA KỲ</span>
+        <img src="images/equip_or_aaci.png" alt="Hệ thống 10 Phòng mổ Áp lực dương & ICU Chuẩn AIA" class="cih-equip-card__img" loading="lazy" />
         <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Hệ thống Phòng mổ Áp lực dương Chuẩn Quốc tế AACI</h3>
+          <h3 class="cih-equip-card__title">Hệ thống 10 Phòng mổ Áp lực dương &amp; ICU Chuẩn AIA</h3>
           <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Cụm phòng mổ vô trùng một chiều tích hợp hệ thống lọc khí HEPA, tháp phẫu thuật nội soi độ phân giải cao và hệ thống gây mê kèm thở tự động an toàn tối đa.</p>
+            <p class="cih-equip-card__desc">Cụm 10 phòng mổ vô trùng HEPA chuẩn AACI trang bị dao siêu âm Harmonic, dao cắt gan Cusa cùng khu Hồi sức tích cực ICU chuẩn AIA (Hoa Kỳ) và lọc máu liên tục CRRT.</p>
             <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
           </div>
         </div>
@@ -1880,33 +1905,36 @@
 
       <!-- Row 2: [ 3 cols ] [ 3 cols ] [ Wide 6 cols ] -->
       <div class="cih-equip-card" onclick="openCihEquipModal(3)">
-        <img src="images/ivf.png" alt="Trung tâm Hỗ trợ Sinh sản & Phòng Lab IVF Chuẩn RTAC" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__badge">CHỨNG NHẬN RTAC (ÚC)</span>
+        <img src="images/equip_ivf_rtac.webp" alt="Phòng Lab IVF Chuẩn RTAC & Tủ nuôi cấy phôi Time-Lapse AI" class="cih-equip-card__img" loading="lazy" />
         <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Phòng Lab IVF Chuẩn Quốc tế RTAC &amp; Tủ cấy Time-Lapse</h3>
+          <h3 class="cih-equip-card__title">Phòng Lab IVF Chuẩn RTAC &amp; Tủ nuôi cấy phôi Time-Lapse AI</h3>
           <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Đạt chứng nhận RTAC (Úc) với hệ thống phòng sạch ISO Class 5, tủ nuôi cấy phôi Time-Lapse tích hợp AI theo dõi liên tục 24/7 giúp nâng cao tỷ lệ đậu thai.</p>
+            <p class="cih-equip-card__desc">Đạt chứng nhận quốc tế RTAC (Úc) với hệ thống phòng sạch ISO Class 5, tủ nuôi cấy phôi Time-Lapse tích hợp AI theo dõi phôi liên tục 24/7 giúp tối ưu tỷ lệ thành công.</p>
             <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
           </div>
         </div>
       </div>
 
       <div class="cih-equip-card" onclick="openCihEquipModal(4)">
-        <img src="images/Website/phu-san/1784087162858_1272607247884588763_1272607247884588763_2506c5a618e59e8f9617bb3e4e001a65.jpg" alt="Khu Nội trú & Phòng Sinh Gia đình Chuẩn 5 Sao" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__badge">OLYMPUS NBI &amp; ISO 15189:2022</span>
+        <img src="images/equip_endoscopy_olympus.jpg" alt="Trung tâm Nội soi NBI Olympus & Xét nghiệm Tự động ISO 15189:2022" class="cih-equip-card__img" loading="lazy" />
         <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Khu Nội trú &amp; Phòng Sinh Gia đình Tiêu chuẩn Khách sạn</h3>
+          <h3 class="cih-equip-card__title">Trung tâm Nội soi NBI Olympus &amp; Xét nghiệm Tự động ISO 15189:2022</h3>
           <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Không gian nghỉ dưỡng yên tĩnh, tràn ngập ánh sáng tự nhiên với giường bệnh điều khiển điện đa tư thế, hệ thống gọi điều dưỡng thông minh và theo dõi sinh hiệu trung tâm.</p>
+            <p class="cih-equip-card__desc">Hệ thống nội soi dải tần ánh sáng hẹp NBI Olympus (Nhật Bản) tầm soát sớm ung thư tiêu hóa êm ái, kết hợp Trung tâm Xét nghiệm tự động đạt chuẩn quốc tế ISO 15189:2022.</p>
             <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
           </div>
         </div>
       </div>
 
       <div class="cih-equip-card cih-equip-card--wide" onclick="openCihEquipModal(5)">
-        <img src="images/HÌNH ẢNH/Phòng khám Quốc tế/z7072807155646_4d9f9f335aa1a8e707b959ecfb8a586e.jpg" alt="Khu Khám Quốc tế & Tầm soát Sức khỏe Chuyên sâu" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__badge">TIÊU CHUẨN 5 SAO</span>
+        <img src="images/Website/tham-my/CIH07314.JPG" alt="Khu Khám Quốc tế, Thẩm mỹ Y học Tái tạo & Hệ thống 320 Giường Nội trú Chuẩn Khách sạn" class="cih-equip-card__img" loading="lazy" />
         <div class="cih-equip-card__overlay">
-          <h3 class="cih-equip-card__title">Khu Khám Quốc tế &amp; Tầm soát Sức khỏe Công nghệ cao</h3>
+          <h3 class="cih-equip-card__title">Khu Khám Quốc tế, Thẩm mỹ Y học Tái tạo &amp; Hệ thống 320 Giường Nội trú Chuẩn Khách sạn</h3>
           <div class="cih-equip-card__desc-wrap">
-            <p class="cih-equip-card__desc">Quy trình thăm khám khép kín một chiều với hệ thống siêu âm màu 4D GE Voluson/Logiq, đo mật độ xương DXA và thăm dò chức năng tim phổi toàn diện.</p>
+            <p class="cih-equip-card__desc">Hạ tầng 320 giường nội trú thiết kế theo chuẩn Viện Kiến trúc sư Hoa Kỳ (AIA), kết hợp Khu Khám Quốc tế và Trung tâm Thẩm mỹ – Y học Tái tạo công nghệ cao.</p>
             <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
           </div>
         </div>
@@ -1924,6 +1952,7 @@
     </div>
     <div class="cih-equip-modal__body">
       <div>
+        <span class="cih-equip-modal__badge" id="cih-equip-modal-badge">CÔNG NGHỆ MŨI NHỌN</span>
         <h3 class="cih-equip-modal__title" id="cih-equip-modal-title"></h3>
         <p class="cih-equip-modal__desc" id="cih-equip-modal-desc"></p>
       </div>
@@ -1941,34 +1970,40 @@
 <script>
   const cihEquipData = [
     {
-      title: 'Hệ thống MRI 1.5 Tesla & CT Đa lát cắt (GE Healthcare, Mỹ)',
+      badge: 'MỚI NHẤT • BÁO TIỀN PHONG',
+      title: 'Hệ thống Siêu âm Nội mạch IVUS (AI) & Chụp mạch Số hóa Xóa nền DSA Siemens',
+      img: 'images/equip_ivus_dsa.png',
+      desc: 'Bệnh viện Quốc tế City tiên phong ứng dụng hệ thống Siêu âm trong lòng mạch IVUS thế hệ mới (VivoHeart tích hợp trí tuệ nhân tạo AI) đồng bộ trực tiếp trên hệ thống chụp mạch xóa nền DSA Artis zee nền tảng PURE® (Siemens, Đức). Sự kết hợp bộ ba chiến lược IVUS – FFR (Đo dự trữ lưu lượng vành) – IVL (Tán sỏi nội mạch bằng sóng xung kích) đóng vai trò như "đôi mắt thứ hai" giúp bác sĩ đánh giá chính xác mảng xơ vữa, vôi hóa nặng, tối ưu hóa kích thước stent mạch vành và can thiệp cấp cứu đột quỵ não trong "thời gian vàng".'
+    },
+    {
+      badge: 'CHẨN ĐOÁN HÌNH ẢNH',
+      title: 'Hệ thống MRI 1.5 Tesla Philips Ingenia & MSCT 128 Lát cắt',
+      img: 'images/equipment.png',
+      desc: 'Khoa Chẩn đoán Hình ảnh được đầu tư đồng bộ hệ thống chụp Cộng hưởng từ MRI 1.5 Tesla Ingenia (Philips, Hà Lan), máy chụp cắt lớp điện toán MSCT 128 lát cắt Aquilion CXL (Toshiba/Canon, Nhật Bản), máy đo mật độ loãng xương Hologic DXA (Mỹ) và hệ thống Nhũ ảnh kỹ thuật số. Công nghệ tái tạo ảnh 3D độ phân giải cao giúp tầm soát chính xác các tổn thương thần kinh – sọ não, mạch máu, tim mạch, cột sống và ung bướu ở giai đoạn rất sớm với liều tia X tối thiểu.'
+    },
+    {
+      badge: 'CHUẨN AACI HOA KỲ',
+      title: 'Hệ thống 10 Phòng mổ Áp lực dương & ICU Chuẩn AIA',
+      img: 'images/equip_or_aaci.png',
+      desc: 'Sở hữu cụm 10 phòng mổ vô trùng một chiều đạt chuẩn kiểm soát nhiễm khuẩn khắt khe của AACI (Hoa Kỳ) với hệ thống lọc khí HEPA áp lực dương, trang bị dao mổ siêu âm Harmonic, dao cắt gan siêu âm Cusa, nội soi mật – tụy ngược dòng (ERCP) và công nghệ Laser điều trị. Liền kề là Khoa Hồi sức tích cực (ICU) thiết kế theo chuẩn Viện Kiến trúc sư Hoa Kỳ (AIA) với hệ thống phòng cách ly áp lực âm, monitor trung tâm 24/7, máy lọc máu liên tục (CRRT) và hệ thống hạ thân nhiệt chỉ huy.'
+    },
+    {
+      badge: 'CHỨNG NHẬN RTAC (ÚC)',
+      title: 'Phòng Lab IVF Chuẩn RTAC & Tủ nuôi cấy phôi Time-Lapse AI',
+      img: 'images/equip_ivf_rtac.webp',
+      desc: 'Trung tâm Hỗ trợ Sinh sản CIH chính thức đạt chứng nhận quốc tế RTAC (Hiệp hội Sinh sản Úc và New Zealand). Phòng Lab nuôi cấy phôi đạt chuẩn phòng sạch ISO Class 5 nghiêm ngặt, trang bị hệ thống tủ nuôi cấy phôi Time-Lapse tích hợp camera và trí tuệ nhân tạo (AI) theo dõi sự phát triển của từng phôi liên tục 24/7 mà không cần đưa phôi ra ngoài, kết hợp hệ thống vi thao tác ICSI hiện đại giúp nâng cao vượt trội tỷ lệ đậu thai.'
+    },
+    {
+      badge: 'OLYMPUS NBI & ISO 15189:2022',
+      title: 'Trung tâm Nội soi NBI Olympus & Xét nghiệm Tự động ISO 15189:2022',
+      img: 'images/equip_endoscopy_olympus.jpg',
+      desc: 'Trung tâm Tiêu hóa – Nội soi thế hệ mới ứng dụng hệ thống nội soi Olympus (Nhật Bản) tích hợp dải tần ánh sáng hẹp NBI phóng đại hình ảnh giúp phát hiện sớm polyp và ung thư đường tiêu hóa dưới quy trình nội soi êm ái không đau, kiểm soát nhiễm khuẩn áp lực âm và máy FibroScan đo xơ hóa gan không xâm lấn. Đồng hành là Khoa Xét nghiệm tự động đạt chuẩn quốc tế ISO 15189:2022 (VILAS MED 233) đảm bảo kết quả Hóa sinh, Huyết học, Miễn dịch và Sinh học phân tử nhanh chóng, chính xác toàn cầu.'
+    },
+    {
+      badge: 'TIÊU CHUẨN 5 SAO',
+      title: 'Khu Khám Quốc tế, Thẩm mỹ Y học Tái tạo & Hệ thống 320 Giường Nội trú Chuẩn Khách sạn',
       img: 'images/Website/tham-my/CIH07314.JPG',
-      desc: 'Bệnh viện Quốc tế City trang bị đồng bộ hệ thống chụp Cộng hưởng từ MRI 1.5 Tesla và CT Scanner đa lát cắt của GE Healthcare (Hoa Kỳ). Công nghệ xử lý ảnh kỹ thuật số thế hệ mới giúp tái tạo hình ảnh 3D sắc nét các cơ quan não bộ, mạch máu, tim mạch, cột sống và cơ xương khớp, đồng thời giảm tới 80% liều tia X và rút ngắn tối đa thời gian chụp cho người bệnh.'
-    },
-    {
-      title: 'Hệ thống Chụp mạch Số hóa Xóa nền DSA Thế hệ mới',
-      img: 'images/Website/tham-my/CIH07308.JPG',
-      desc: 'Đơn vị Can thiệp Mạch máu (DSA) sở hữu hệ thống chụp mạch máu số hóa xóa nền độ phân giải cao, cánh tay C-arm xoay linh hoạt đa góc độ. Hệ thống đóng vai trò quyết định trong cấp cứu và can thiệp nội mạch ít xâm lấn: lấy huyết khối điều trị đột quỵ nhồi máu não cấp, đặt stent mạch vành, nút mạch điều trị u gan (TACE) và các dị dạng mạch máu phức tạp.'
-    },
-    {
-      title: 'Hệ thống Phòng mổ Áp lực dương Chuẩn Quốc tế AACI',
-      img: 'images/Website/tham-my/z7666498716680_2461a0f17e61d9416e7b547f3e1c08a6.jpg',
-      desc: 'Cụm phòng mổ hiện đại được thiết kế theo quy chuẩn kiểm soát nhiễm khuẩn khắt khe của AACI (Hoa Kỳ) với hệ thống khí sạch áp lực dương màng lọc HEPA 99,99%. Trang bị đồng bộ dàn nội soi phẫu thuật độ phân giải cao, bàn mổ điều khiển điện đa năng, kính hiển vi vi phẫu và hệ thống gây mê kèm thở tự động giúp thực hiện an toàn các ca đại phẫu phức tạp.'
-    },
-    {
-      title: 'Phòng Lab IVF Chuẩn Quốc tế RTAC & Tủ cấy Time-Lapse',
-      img: 'images/ivf.png',
-      desc: 'Trung tâm Hỗ trợ Sinh sản CIH đạt chứng nhận quốc tế RTAC (Úc) danh giá. Phòng Lab nuôi cấy phôi được thiết kế chuẩn phòng sạch ISO Class 5 nghiêm ngặt, trang bị hệ thống tủ cấy phôi Time-Lapse tích hợp camera quan sát liên tục 24/7 và hệ thống vi thao tác tiêm tinh trùng vào bào tương noãn (ICSI) thế hệ mới, tối ưu hóa tỷ lệ thành công cho các cặp vợ chồng mong con.'
-    },
-    {
-      title: 'Khu Nội trú & Phòng Sinh Gia đình Tiêu chuẩn Khách sạn',
-      img: 'images/Website/phu-san/1784087162858_1272607247884588763_1272607247884588763_2506c5a618e59e8f9617bb3e4e001a65.jpg',
-      desc: 'Hệ thống 320 giường nội trú từ phòng tiêu chuẩn đến phòng VIP/Suite được thiết kế theo tiêu chuẩn khách sạn 5 sao, ngập tràn ánh sáng tự nhiên và đảm bảo sự riêng tư. Mỗi phòng đều trang bị giường y tế điều khiển điện, hệ thống oxy – hút áp lực âm âm tường, chuông gọi điều dưỡng trực tiếp 24/7 và đầy đủ tiện nghi cao cấp cho người bệnh cùng gia đình.'
-    },
-    {
-      title: 'Khu Khám Quốc tế & Tầm soát Sức khỏe Công nghệ cao',
-      img: 'images/HÌNH ẢNH/Phòng khám Quốc tế/z7072807155646_4d9f9f335aa1a8e707b959ecfb8a586e.jpg',
-      desc: 'Khu Khám Sức khỏe Tổng quát (EHS) và Phòng khám Quốc tế được bố trí tách biệt theo quy trình một chiều khép kín, tích hợp hệ thống siêu âm màu 4D GE Voluson/Logiq, máy đo loãng xương toàn thân bằng tia X năng lượng kép (DXA), điện tâm đồ gắng sức và hệ thống nội soi tiêu hóa êm ái không đau.'
+      desc: 'Hạ tầng bệnh viện quy mô 320 giường nội trú được thiết kế theo nguyên tắc của Viện Kiến trúc sư Hoa Kỳ (AIA) với hệ thống phòng tiêu chuẩn đến VIP/Suite ngập tràn ánh sáng tự nhiên, giường điều khiển điện tự động, khí y tế âm tường và chuông gọi điều dưỡng 24/7. Bên cạnh đó, Khu Phòng khám Quốc tế và Trung tâm Thẩm mỹ – Y học Tái tạo (phòng mổ chuẩn ISO 6) mang đến trải nghiệm thăm khám khép kín, riêng tư chuẩn 5 sao.'
     }
   ];
 
@@ -1979,6 +2014,8 @@
     if (!item) return;
     document.getElementById('cih-equip-modal-img').src = item.img;
     document.getElementById('cih-equip-modal-img').alt = item.title;
+    const badgeEl = document.getElementById('cih-equip-modal-badge');
+    if (badgeEl) badgeEl.textContent = item.badge || 'TRANG THIẾT BỊ HIỆN ĐẠI';
     document.getElementById('cih-equip-modal-title').textContent = item.title;
     document.getElementById('cih-equip-modal-desc').textContent = item.desc;
     document.getElementById('cih-equip-modal-counter').textContent = (idx + 1) + ' / ' + cihEquipData.length;

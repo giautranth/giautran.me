@@ -632,7 +632,7 @@ ul{list-style:none}
 /* ═══════════════════════════
    FOOTER
 ═══════════════════════════ */
-.footer{background:linear-gradient(135deg, #0098C9 0%, #007A9E 50%, #00526B 100%) !important;border-top:1px solid rgba(252, 211, 77, 0.5);color:#fff}
+.footer{background:linear-gradient(135deg, #0078A0 0%, #005B7A 50%, #003B52 100%) !important;border-top:1px solid rgba(252, 211, 77, 0.5);color:#fff}
 .footer .container{max-width:1160px}
 .footer__main{padding:1.5rem 0 0.4rem 0}
 .footer__grid{display:grid;grid-template-columns:1.15fr 0.65fr 1.45fr 1.15fr;gap:1.5rem}

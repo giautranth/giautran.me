@@ -639,8 +639,8 @@ ul{list-style:none}
 .footer__brand{flex:0 0 280px;max-width:280px}
 .footer__col{flex:0 0 auto}
 .footer__col:last-child{flex:0 0 285px;width:285px}
-.footer__logo{display:inline-flex;align-items:center;justify-content:center;background:#ffffff;padding:8px 16px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.08);margin-bottom:.85rem;max-width:100%;width:fit-content}
-.footer__logo-img{height:42px;max-height:42px;width:auto;max-width:100%;object-fit:contain;display:block;border-radius:0}
+.footer__logo{display:flex;align-items:center;justify-content:center;background:#ffffff;padding:10px 14px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.08);margin-bottom:.85rem;width:100%;max-width:100%;box-sizing:border-box}
+.footer__logo-img{width:100%;height:auto;max-height:50px;object-fit:contain;display:block;border-radius:0}
 .footer-name{font-weight:700;color:#fff;font-size:.95rem}
 .footer-sub{font-size:.7rem;color:#fff}
 .footer__company-info{margin-bottom:.75rem;font-size:.775rem;line-height:1.6;color:#fff}

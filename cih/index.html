@@ -406,6 +406,42 @@
     }
   }
 
+
+  @media (max-width: 768px) {
+    #quick-actions.cih-standalone-actions {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      gap: 6px !important;
+      margin: -14px 16px 0 !important;
+    }
+    #quick-actions .cih-action-pill {
+      padding: 8px 6px !important;
+      border-radius: 12px !important;
+      justify-content: center !important;
+    }
+    #quick-actions .cih-action-pill__left {
+      gap: 5px !important;
+      width: 100% !important;
+      justify-content: center !important;
+    }
+    #quick-actions .cih-action-pill__icon {
+      width: 24px !important;
+      height: 24px !important;
+      border-radius: 7px !important;
+    }
+    #quick-actions .cih-action-pill__icon svg {
+      width: 13px !important;
+      height: 13px !important;
+    }
+    #quick-actions .cih-action-pill__title {
+      font-size: 0.66rem !important;
+      line-height: 1.22 !important;
+      text-align: left !important;
+    }
+    #quick-actions .cih-action-pill__arrow {
+      display: none !important;
+    }
+  }
+
   .section__title {
     color: #007DA5 !important;
   }
@@ -3332,6 +3368,6 @@ document.addEventListener('DOMContentLoaded', () => {
 <script src="script.js?v=1790565050"></script>
 <script src="booking_modal.js?v=1790565050"></script>
 <div id="google_translate_element" style="display:none"></div>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

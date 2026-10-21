@@ -723,7 +723,8 @@ ul{list-style:none}
 }
 
 .float-btn--call-pill svg,
-.float-btn svg{animation:icon-shake 3.2s infinite ease-in-out}
+.float-btn svg,
+.float-btn .float-messenger-img{animation:icon-shake 3.2s infinite ease-in-out}
 
 /* ═══════════════════════════
    RESPONSIVE
@@ -1022,7 +1023,7 @@ html.translated-ltr .header__cta .btn {
   /* 8. Floating Action Buttons (Zalo, Messenger) */
   .float-actions { right: 0.75rem !important; bottom: 1rem !important; gap: 0.5rem !important; z-index: 99 !important; }
   .float-btn { width: 44px !important; height: 44px !important; }
-  .float-btn svg { width: 28px !important; height: 28px !important; }
+  .float-btn svg, .float-btn .float-messenger-img { width: 26px !important; height: 26px !important; }
 
   .section { padding: 1.75rem 0 !important; }
   .section__header { margin-bottom: 1rem !important; }

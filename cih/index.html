@@ -330,18 +330,86 @@
 
   .section__title {
     color: #007DA5 !important;
+    position: relative;
+    display: inline-block;
   }
 
+  /* Signature Golden Accent Bar under Section Titles */
+  .section__title::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin-top: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #d97706 0%, #f59e0b 55%, #fde047 100%);
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.28);
+  }
+
+  /* Clean white sections */
   #chuyen-khoa.specialties-section,
-  #bac-si.doctors-section,
   #goi-kham.packages-section,
-  #tin-tuc.news-section,
   #giai-thuong.awards-section,
   #doi-tac-bao-hiem.insurance-section {
     background: #ffffff !important;
     background-image: none !important;
-    border-top: none !important;
-    border-bottom: none !important;
+    position: relative;
+  }
+
+  /* Warm Golden-Cream Mesh Gradient Band Sections */
+  #bac-si.doctors-section,
+  #tin-tuc.news-section {
+    position: relative;
+    background-color: #FFFDF7 !important;
+    background-image:
+      radial-gradient(at 12% 18%, rgba(253, 224, 71, 0.34) 0px, transparent 52%),
+      radial-gradient(at 88% 82%, rgba(251, 191, 36, 0.28) 0px, transparent 52%),
+      linear-gradient(135deg, #FFFDF8 0%, #FEF5D4 50%, #FFFBEB 100%) !important;
+    border-top: 1px solid rgba(245, 158, 11, 0.22) !important;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.22) !important;
+  }
+
+  /* Sleek Golden Shimmer Band Dividers on Lower Sections */
+  #bac-si.doctors-section::before,
+  #goi-kham.packages-section::before,
+  #tin-tuc.news-section::before,
+  #giai-thuong.awards-section::before,
+  #video.cih-video-section::before,
+  #doi-tac-bao-hiem.insurance-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(86%, 1180px);
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      rgba(253, 224, 71, 0) 0%,
+      rgba(251, 191, 36, 0.55) 22%,
+      rgba(217, 119, 6, 0.85) 50%,
+      rgba(251, 191, 36, 0.55) 78%,
+      rgba(253, 224, 71, 0) 100%
+    );
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  /* Golden Card Accents in Lower Sections */
+  #giai-thuong .award-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%) !important;
+    border: 1.5px solid #fde68a !important;
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.08) !important;
+  }
+  #giai-thuong .award-card:hover {
+    border-color: #f59e0b !important;
+    box-shadow: 0 16px 34px rgba(217, 119, 6, 0.18) !important;
+  }
+  #goi-kham .pkg-card:hover,
+  #tin-tuc .news-card:hover {
+    border-color: #f59e0b !important;
+    box-shadow: 0 14px 32px rgba(217, 119, 6, 0.15) !important;
   }
 </style>
 
@@ -1622,7 +1690,14 @@
 ═══════════════════════════════════════════════ -->
 <style>
   #video.cih-video-section {
-    background: #f8fafc !important;
+    position: relative;
+    background-color: #FFFDF7 !important;
+    background-image:
+      radial-gradient(at 85% 15%, rgba(253, 224, 71, 0.35) 0px, transparent 55%),
+      radial-gradient(at 15% 85%, rgba(251, 191, 36, 0.26) 0px, transparent 55%),
+      linear-gradient(135deg, #FFFDF8 0%, #FEF4D1 50%, #FFFBEB 100%) !important;
+    border-top: 1px solid rgba(245, 158, 11, 0.22) !important;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.22) !important;
     padding: 2.75rem 0 !important;
   }
 

@@ -2061,11 +2061,34 @@ html.translated-ltr .header__cta .btn {
 }
 
 
-/* Breadcrumbs text color BLACK (#000000) */
-.subpage-hero__breadcrumbs,
-.subpage-hero__breadcrumbs a,
+/* Breadcrumbs - Gia An 115 style (Uppercase, / separator, gray parents, #007DA5 active) */
+.subpage-hero,
+.breadcrumbs-bar {
+  background: #f8f9fa !important;
+  border-top: 1px solid #eef0f3 !important;
+  border-bottom: 1px solid #eef0f3 !important;
+  padding: 0.6rem 0 !important;
+}
+.subpage-hero__breadcrumbs {
+  font-size: 0.8125rem !important;
+  color: #64748b !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+  margin-bottom: 0 !important;
+  line-height: 1.5 !important;
+}
+.subpage-hero__breadcrumbs a {
+  color: #555555 !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+.subpage-hero__breadcrumbs a:hover {
+  color: #007DA5 !important;
+}
 .subpage-hero__breadcrumbs span {
-  color: #000000 !important;
+  color: #007DA5 !important;
   font-weight: 700 !important;
 }
 

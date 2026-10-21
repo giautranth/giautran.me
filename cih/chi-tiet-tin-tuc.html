@@ -122,10 +122,10 @@
 </header>
 
 <!-- BREADCRUMBS BANNER -->
-<section class="subpage-hero" style="padding: 0.35rem 0; background: #ffffff; border-bottom: 1px solid #e2e8f0;">
-  <div class="container subpage-hero__inner" style="max-width: 960px;">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.875rem; color: #000000;">
-      <a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <span style="color: #000000; font-weight: 700;">Tin tức</span>
+<section class="subpage-hero" style="background: #f8f9fa; padding: 0.6rem 0; border-top: 1px solid #eef0f3; border-bottom: 1px solid #eef0f3;">
+  <div class="container subpage-hero__inner">
+    <div class="subpage-hero__breadcrumbs" style="font-size: 0.8125rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 0;">
+      <a href="./" style="color: #555555; font-weight: 600; text-decoration: none;">Trang chủ</a> &nbsp;/&nbsp; <span style="color: #007DA5; font-weight: 700;">Tin tức</span>
     </div>
   </div>
 </section>
@@ -380,7 +380,7 @@
     // Update breadcrumb
     const bcSpan = document.querySelector('.subpage-hero__breadcrumbs');
     if (bcSpan) {
-      bcSpan.innerHTML = `<a href="./" style="color: #000000; font-weight: 700; text-decoration: none;">Trang chủ</a> &nbsp;»&nbsp; <a href="goi-kham" style="color: #000000; font-weight: 700; text-decoration: none;">Gói dịch vụ</a> &nbsp;»&nbsp; <span style="color: #007DA5; font-weight: 700;">${formatTitleCase(pkg.title)}</span>`;
+      bcSpan.innerHTML = `<a href="./" style="color: #555555; font-weight: 600; text-decoration: none;">Trang chủ</a> &nbsp;/&nbsp; <a href="goi-kham" style="color: #555555; font-weight: 600; text-decoration: none;">Gói dịch vụ</a> &nbsp;/&nbsp; <span style="color: #007DA5; font-weight: 700;">${formatTitleCase(pkg.title)}</span>`;
     }
 
     const artWrap = document.querySelector('.article-detail-wrap');
@@ -466,6 +466,10 @@
 
     document.getElementById('page-head-title').innerText = formatTitleCase(article.title) + ' | Bệnh viện Quốc tế City';
     document.getElementById('art-title').innerText = formatTitleCase(article.title);
+    const bcNewsSpan = document.querySelector('.subpage-hero__breadcrumbs');
+    if (bcNewsSpan) {
+      bcNewsSpan.innerHTML = `<a href="./" style="color: #555555; font-weight: 600; text-decoration: none;">Trang chủ</a> &nbsp;/&nbsp; <a href="tin-tuc" style="color: #555555; font-weight: 600; text-decoration: none;">Tin tức</a> &nbsp;/&nbsp; <span style="color: #007DA5; font-weight: 700;">${formatTitleCase(article.title)}</span>`;
+    }
     document.getElementById('art-date-val').innerText = formatNewsDate(article.date) || '23/07/2026';
     document.getElementById('art-body').innerHTML = article.content;
 

@@ -6,102 +6,670 @@
   <link rel="icon" type="image/png" href="images/logo1x1.png" />
   <link rel="shortcut icon" type="image/png" href="images/logo1x1.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="page-head-title">Chi Tiết Chuyên Khoa | Bệnh viện Quốc tế City</title>
-  <meta name="description" content="Chuyên khoa lâm sàng và cận lâm sàng đạt tiêu chuẩn quốc tế JCI tại Bệnh viện Quốc tế City – City International Hospital." />
+  <title id="page-head-title">Khoa Phụ Sản | Bệnh viện Quốc tế City</title>
+  <meta name="description" content="Khoa Phụ Sản là chuyên khoa mũi nhọn đạt chuẩn quốc tế AACI tại Bệnh viện Quốc tế City – cung cấp dịch vụ Thai sản trọn gói, Sinh không đau và Tầm soát Phụ khoa – Tuyến vú." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1792589500" />
+  <link rel="stylesheet" href="style.css?v=1792603000" />
   <style>
-    /* STICKY SUB-NAV TAB BAR (LIKE NEWS CATEGORY BAR) */
-    .spec-tab-nav {
+    /* ════════════════════════════════════════════════════════════════════════
+       OPTION 1: SPECIALTY DETAIL PAGE (KHOA PHỤ SẢN & CHUYÊN KHOA CIH)
+    ════════════════════════════════════════════════════════════════════════ */
+    body {
+      background: #ffffff;
+    }
+
+    /* 1. HERO BANNER */
+    .opt1-hero {
+      position: relative;
+      width: 100%;
+      min-height: 460px;
+      background: #003452 url('images/banner_khoa_phu_san.jpg') right center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .opt1-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0, 52, 82, 0.98) 0%, rgba(0, 88, 124, 0.94) 44%, rgba(0, 125, 165, 0.25) 56%, rgba(0, 0, 0, 0) 68%);
+      z-index: 1;
+    }
+    .opt1-hero > .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .opt1-hero__content {
+      max-width: 520px;
+      padding: 3.5rem 0;
+      color: #ffffff;
+    }
+    .opt1-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(254, 243, 199, 0.18);
+      border: 1px solid rgba(253, 224, 71, 0.65);
+      color: #fde047;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(6px);
+    }
+    .opt1-hero__title {
+      font-size: 2.45rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin: 0 0 0.95rem 0;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      text-transform: uppercase;
+    }
+    .opt1-hero__desc {
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0 0 1.65rem 0;
+    }
+    .opt1-hero__actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .opt1-btn-gold {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff !important;
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 13px 24px;
+      border-radius: 99px;
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(217, 119, 6, 0.38);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .opt1-btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(217, 119, 6, 0.48);
+    }
+    .opt1-btn-outline {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1.5px solid rgba(255, 255, 255, 0.75);
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 22px;
+      border-radius: 99px;
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .opt1-btn-outline:hover {
+      background: rgba(255, 255, 255, 0.26);
+      transform: translateY(-2px);
+    }
+
+    /* 2. STICKY SUB-NAVIGATION BAR */
+    .opt1-subnav {
       position: sticky;
       top: 68px;
       z-index: 90;
-      background: #f8fafc;
-      padding: 1rem 0 0.5rem 0;
-      transition: all 0.25s ease;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+      padding: 0.75rem 0;
     }
-    .spec-tab-nav__list {
+    .opt1-subnav__inner {
       display: flex;
-      gap: 0.5rem;
-      list-style: none;
-      margin: 0;
-      background: #ffffff;
-      padding: 0.5rem 1rem;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .opt1-breadcrumbs {
+      font-size: 0.82rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .opt1-breadcrumbs a {
+      color: #64748b;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .opt1-breadcrumbs a:hover {
+      color: #007DA5;
+    }
+    .opt1-breadcrumbs span {
+      color: #007DA5;
+      font-weight: 700;
+    }
+    .opt1-pills {
+      display: flex;
+      gap: 8px;
       overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
       -ms-overflow-style: none;
     }
-    .spec-tab-nav__list::-webkit-scrollbar {
+    .opt1-pills::-webkit-scrollbar {
       display: none;
     }
-    .spec-tab-nav__link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: none;
-      border: none;
-      font-family: var(--font);
-      font-weight: 600;
-      color: var(--c-text3);
-      cursor: pointer;
-      font-size: 0.95rem;
-      padding: 0.75rem 1.25rem;
-      position: relative;
-      transition: all 0.25s ease;
-      border-bottom: 3px solid transparent;
-      outline: none;
-      flex-shrink: 0;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .spec-tab-nav__link:hover {
-      color: var(--c-primary);
-    }
-    .spec-tab-nav__link.active {
-      color: var(--c-primary);
-      border-bottom-color: var(--c-primary);
+    .opt1-pill {
+      padding: 8px 18px;
+      border-radius: 99px;
+      font-size: 0.84rem;
       font-weight: 700;
-    }
-    @media (max-width: 1250px) {
-      .spec-tab-nav { top: 64px; }
-    }
-    @media (max-width: 768px) {
-      .spec-tab-nav { top: 60px; padding: 0.5rem 0; }
-      .spec-tab-nav__list { padding: 0.35rem 0.5rem; gap: 0.25rem; }
-      .spec-tab-nav__link { font-size: 0.85rem; padding: 0.55rem 0.85rem; }
-      .spec-section-card { scroll-margin-top: 130px; padding: 1.5rem 1rem; }
-    }
-    .spec-section-card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 2.5rem;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      color: #334155;
+      text-decoration: none;
+      background: #f8fafc;
       border: 1px solid #e2e8f0;
-      scroll-margin-top: 140px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
     }
-    .spec-section-title {
-      font-size: 1.4rem;
+    .opt1-pill:hover {
+      color: #007DA5;
+      border-color: #bae6fd;
+      background: #f0f9ff;
+    }
+    .opt1-pill.active {
+      background: #007DA5;
+      color: #ffffff;
+      border-color: #007DA5;
+    }
+
+    /* 3. INTRO SECTION (2-COLUMN EXECUTIVE + REAL GALLERY) */
+    .opt1-intro {
+      padding: 3.75rem 0;
+      background: #ffffff;
+      scroll-margin-top: 130px;
+    }
+    .opt1-intro__grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .opt1-intro__tag {
+      display: inline-block;
+      font-size: 0.76rem;
       font-weight: 800;
-      color: var(--c-primary);
+      color: #C59A3F;
       text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 2px solid var(--c-primary);
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .opt1-intro__lead {
+      font-size: 1.01rem;
+      line-height: 1.75;
+      color: #334155;
+      margin-bottom: 1.1rem;
+      text-align: justify;
+    }
+    .opt1-features-2x2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 1.5rem;
+    }
+    .opt1-fcard {
+      background: #fdfcf8;
+      border: 1px solid #f3e8c8;
+      border-radius: 16px;
+      padding: 16px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .opt1-fcard:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(197, 154, 63, 0.12);
+    }
+    .opt1-fcard__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #007DA5, #005a78);
+      color: #ffffff;
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+    .opt1-fcard h4 {
+      font-size: 0.94rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 4px 0;
+    }
+    .opt1-fcard p {
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .opt1-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .opt1-gallery__main {
+      width: 100%;
+      height: 290px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 14px 32px rgba(0, 125, 165, 0.12);
+      border: 2px solid #f5eedc;
+    }
+    .opt1-gallery__main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .opt1-gallery__main:hover img {
+      transform: scale(1.04);
+    }
+    .opt1-gallery__sub {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .opt1-gallery__sub-item {
+      height: 165px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+    .opt1-gallery__sub-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .opt1-gallery__sub-item:hover img {
+      transform: scale(1.05);
+    }
+    .opt1-contact-strip {
+      margin-top: 4px;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .opt1-contact-strip__btn {
+      background: #007DA5;
+      color: #ffffff !important;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 99px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .opt1-contact-strip__btn:hover {
+      background: #005f80;
+      transform: translateY(-2px);
+    }
+
+    /* 4. DOCTORS SECTION (3-COLUMN HOMEPAGE SYNCHRONIZED) */
+    #bac-si.doctors-section {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(rgb(253, 249, 238) 0%, rgb(250, 240, 215) 50%, rgb(253, 249, 238) 100%) !important;
+      padding: 3.5rem 0 3.75rem !important;
+      scroll-margin-top: 120px;
+    }
+    #bac-si .doc-waves-backdrop {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    #bac-si .doc-waves-backdrop-grad {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(254, 243, 199, 0.45) 50%, rgba(253, 248, 235, 0.7) 100%);
+    }
+    #bac-si .doc-waves-backdrop svg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; opacity: 0.6;
+    }
+    #bac-si > .container {
+      position: relative;
+      z-index: 2;
+    }
+    #bac-si .section__header {
+      display: flex !important;
+      align-items: flex-end !important;
+      justify-content: space-between !important;
+      margin-bottom: 1.75rem !important;
+    }
+    #bac-si .doc-section-subtitle {
+      font-size: 0.96rem;
+      color: #475569;
+      margin-top: 6px;
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+    .doctors-grid-3 {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 1.75rem !important;
+    }
+    .doc-card-v2 {
+      background: #ffffff !important;
+      border-radius: 18px !important;
+      padding: 16px 16px 18px 16px !important;
+      border: 1px solid #f5eedc !important;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    .doc-card-v2:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09) !important;
+    }
+    .doc-card-v2__img-wrap {
+      width: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      background: #f8fafc !important;
+      display: block !important;
+    }
+    .doc-card-v2__img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: top center !important;
+      border-radius: 12px !important;
+      transition: transform 0.5s ease !important;
+    }
+    .doc-card-v2:hover .doc-card-v2__img {
+      transform: scale(1.04) !important;
+    }
+    .doc-card-v2__body {
+      padding: 20px 6px 0 6px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 1 auto !important;
+    }
+    .doc-card-v2__name {
+      font-size: 1.04rem !important;
+      font-weight: 800 !important;
+      color: #0f172a !important;
+      text-align: center !important;
+      margin: 0 0 8px 0 !important;
+      line-height: 1.4 !important;
+    }
+    .doc-card-v2__name a {
+      color: #0f172a !important;
+      text-decoration: none !important;
+    }
+    .doc-card-v2__name a:hover {
+      color: #007DA5 !important;
+    }
+    .doc-card-v2__position {
+      font-size: 0.84rem !important;
+      font-weight: 400 !important;
+      color: #64748b !important;
+      text-align: center !important;
+      line-height: 1.55 !important;
+      margin: 0 0 18px 0 !important;
+      flex: 1 !important;
+    }
+    .doc-card-v2__more-link {
+      border-top: 1px solid #f5f0e6 !important;
+      padding-top: 14px !important;
+      margin-top: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 5px !important;
+      width: 100% !important;
+      color: #00688B !important;
+      font-weight: 700 !important;
+      font-size: 0.82rem !important;
+      text-decoration: none !important;
+    }
+
+    /* 5. PACKAGES SECTION (3-COLUMN HOMEPAGE SYNCHRONIZED) */
+    #goi-kham.packages-section {
+      padding: 3.5rem 0 3.75rem !important;
+      background: #ffffff;
+      scroll-margin-top: 120px;
+    }
+    .packages-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 1.75rem !important;
+    }
+    #goi-kham .pkg-home-card {
+      background: #ffffff !important;
+      border-radius: 18px !important;
+      padding: 12px 12px 18px 12px !important;
+      border: 1px solid #f5eedc !important;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      text-align: left !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    #goi-kham .pkg-home-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09) !important;
+    }
+    #goi-kham .pkg-home-card .news-card__img-link {
+      width: 100% !important;
+      aspect-ratio: 16 / 10 !important;
+      height: auto !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      background: #f8fafc !important;
+      display: block !important;
+    }
+    #goi-kham .pkg-home-card .news-card__img-link img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 12px !important;
+    }
+    #goi-kham .pkg-home-card .news-card__body {
+      padding: 18px 8px 0 8px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      align-items: flex-start !important;
+      flex: 1 1 auto !important;
+    }
+    #goi-kham .pkg-home-card .pkg-card__cat {
+      font-size: 0.72rem !important;
+      font-weight: 700 !important;
+      color: #C59A3F !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      margin: 0 0 5px 0 !important;
+    }
+    #goi-kham .pkg-home-card .news-card__title {
+      font-size: 1.05rem !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.4 !important;
+      margin: 0 0 20px 0 !important;
+    }
+    #goi-kham .pkg-home-card .news-card__title a {
+      color: #0f172a !important;
+      text-decoration: none !important;
+    }
+    #goi-kham .pkg-home-card .news-card__title a:hover {
+      color: #007DA5 !important;
+    }
+    #goi-kham .pkg-home-card .news-card__more {
+      border-top: 1px solid #f5f0e6 !important;
+      padding-top: 14px !important;
+      margin-top: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 5px !important;
+      width: 100% !important;
+      color: #00688B !important;
+      font-weight: 700 !important;
+      font-size: 0.82rem !important;
+      text-decoration: none !important;
+    }
+
+    /* 6. NEWS SECTION (3-COLUMN HOMEPAGE SYNCHRONIZED) */
+    #tin-tuc.news-section {
+      padding: 3.5rem 0 4rem !important;
+      background: #f8fafc;
+      border-top: 1px solid #f1f5f9;
+      scroll-margin-top: 120px;
+    }
+    .news-grid-3 {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 1.75rem !important;
+    }
+    #tin-tuc .news-card {
+      background: #ffffff !important;
+      border-radius: 18px !important;
+      padding: 12px 12px 18px 12px !important;
+      border: 1px solid #f5eedc !important;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    }
+    #tin-tuc .news-card:hover {
+      transform: translateY(-6px) !important;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.09) !important;
+    }
+    #tin-tuc .news-card__img-link {
+      position: relative;
+      width: 100% !important;
+      aspect-ratio: 16 / 10 !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      display: block !important;
+    }
+    #tin-tuc .news-card__img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      border-radius: 12px !important;
+    }
+    #tin-tuc .news-card__body {
+      padding: 18px 8px 0 8px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 1 auto !important;
+    }
+    #tin-tuc .news-card__title {
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      line-height: 1.45 !important;
+      color: #0f172a !important;
+      margin: 0 0 18px 0 !important;
+    }
+    #tin-tuc .news-card__title a {
+      color: #0f172a !important;
+      text-decoration: none !important;
+    }
+    #tin-tuc .news-card__title a:hover {
+      color: #007DA5 !important;
+    }
+    #tin-tuc .news-card__more {
+      border-top: 1px solid #f5f0e6 !important;
+      padding-top: 14px !important;
+      margin-top: auto !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 5px !important;
+      width: 100% !important;
+      color: #00688B !important;
+      font-weight: 700 !important;
+      font-size: 0.82rem !important;
+      text-decoration: none !important;
+    }
+
+    /* 7. RESPONSIVE BREAKPOINTS */
+    @media (max-width: 991px) {
+      .opt1-intro__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .doctors-grid-3,
+      .packages-grid,
+      .news-grid-3 {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .opt1-hero {
+        min-height: 360px;
+        background-position: 75% center;
+      }
+      .opt1-hero::before {
+        background: linear-gradient(180deg, rgba(0, 52, 82, 0.86) 0%, rgba(0, 68, 102, 0.94) 100%);
+      }
+      .opt1-hero__content {
+        padding: 2.25rem 0;
+      }
+      .opt1-hero__title {
+        font-size: 1.65rem;
+      }
+      .opt1-subnav {
+        top: 60px;
+        padding: 0.55rem 0;
+      }
+      .opt1-breadcrumbs {
+        display: none;
+      }
+      .opt1-subnav__inner {
+        justify-content: center;
+      }
+      .opt1-features-2x2 {
+        grid-template-columns: 1fr;
+      }
+      .opt1-contact-strip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .opt1-contact-strip__btn {
+        width: 100%;
+        text-align: center;
+      }
+      .doctors-grid-3,
+      .packages-grid,
+      .news-grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
     }
   </style>
 </head>
-<body style="background: #f8fafc;">
+<body>
 
 <!-- TOP BAR -->
 <div class="top-bar" id="top-bar">
@@ -121,7 +689,7 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
         Dành cho khách hàng
       </a>
-                  <span class="top-bar__sep">|</span>
+      <span class="top-bar__sep">|</span>
       <div class="lang-switcher" id="lang-switcher">
         <button class="lang-switcher__btn" id="lang-switcher-btn" type="button" aria-label="Đổi ngôn ngữ">
           <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'><rect width='900' height='600' fill='%23da251d'/><polygon fill='%23ffff00' points='450,150 491,276 623,276 516,354 557,480 450,402 343,480 384,354 277,276 409,276'/></svg>" alt="Vietnam" class="lang-btn-flag" id="lang-btn-flag" />
@@ -148,11 +716,9 @@
           </li>
         </ul>
       </div>
+    </div>
   </div>
 </div>
-</div>
-
-
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -175,7 +741,7 @@
             <li><a href="chung-nhan-giai-thuong">CHỨNG NHẬN &amp; GIẢI THƯỞNG</a></li>
           </ul>
         </li>
-        <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
+        <li class="nav__item"><a href="chuyen-khoa" class="nav__link" style="color: #007DA5 !important;">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
         <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
@@ -209,72 +775,288 @@
   </div>
 </header>
 
-<!-- SUBPAGE BREADCRUMBS HERO BAR -->
-<section class="subpage-hero" style="background: #f8f9fa; padding: 0.6rem 0; border-top: 1px solid #eef0f3; border-bottom: 1px solid #eef0f3;">
-  <div class="container subpage-hero__inner">
-    <div class="subpage-hero__breadcrumbs" style="font-size: 0.8125rem; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 0;">
-      <a href="./" style="color: #555555; font-weight: 600; text-decoration: none;">Trang chủ</a> &nbsp;/&nbsp; <a href="chuyen-khoa" style="color: #555555; font-weight: 600; text-decoration: none;">Chuyên khoa</a> &nbsp;/&nbsp; <span id="spec-breadcrumb-title" style="color: #007DA5; font-weight: 700;">Chi Tiết Chuyên khoa</span>
+<!-- ═══════════════════════════════════════════════
+     1. BANNER WEBSITE CHUYÊN KHOA (OPTION 1)
+═══════════════════════════════════════════════ -->
+<section class="opt1-hero" id="spec-hero">
+  <div class="container">
+    <div class="opt1-hero__content">
+      <div class="opt1-hero__badge" id="spec-hero-badge">★ Chuyên Khoa Mũi Nhọn Chuẩn Quốc Tế AACI</div>
+      <h1 class="opt1-hero__title" id="spec-title">KHOA PHỤ SẢN<br/>BỆNH VIỆN QUỐC TẾ CITY</h1>
+      <p class="opt1-hero__desc" id="spec-hero-desc">Đồng hành trọn vẹn cùng mẹ bầu trong suốt thai kỳ với dịch vụ Thai sản trọn gói, kỹ thuật Sinh con không đau, Phòng sinh Gia đình ấm cúng và Tầm soát chuyên sâu bệnh lý Phụ khoa – Tuyến vú.</p>
+      <div class="opt1-hero__actions">
+        <a href="lien-he.html#dat-lich" class="opt1-btn-gold">📅 ĐẶT LỊCH KHÁM NGAY</a>
+        <a href="#goi-kham" class="opt1-btn-outline" id="spec-hero-pkg-btn">Xem Gói Thai Sản &rarr;</a>
+      </div>
     </div>
-    
   </div>
 </section>
 
-
-
-
-<!-- STICKY SUB-NAV TAB BAR FOR 5 SECTIONS -->
-<nav class="spec-tab-nav" aria-label="Menu các phần chuyên khoa">
-  <div class="container" style="max-width: 980px;">
-    <ul class="spec-tab-nav__list">
-      <li><a href="#sec-gioi-thieu" class="spec-tab-nav__link active">Giới Thiệu</a></li>
-      <li><a href="#sec-bac-si" class="spec-tab-nav__link">Bác Sĩ</a></li>
-      <li><a href="#sec-goi-dich-vu" class="spec-tab-nav__link">Gói Dịch Vụ</a></li>
-      <li><a href="#sec-co-so-vat-chat" class="spec-tab-nav__link">Cơ Sở Vật Chất</a></li>
-      <li><a href="#sec-tin-tuc" class="spec-tab-nav__link">Tin Tức</a></li>
-    </ul>
+<!-- ═══════════════════════════════════════════════
+     SUB-NAVIGATION BAR
+═══════════════════════════════════════════════ -->
+<nav class="opt1-subnav" aria-label="Menu điều hướng chuyên khoa">
+  <div class="container opt1-subnav__inner">
+    <div class="opt1-breadcrumbs">
+      <a href="./">Trang chủ</a> &nbsp;/&nbsp; <a href="chuyen-khoa">Chuyên khoa</a> &nbsp;/&nbsp; <span id="spec-breadcrumb-title">Khoa Phụ Sản</span>
+    </div>
+    <div class="opt1-pills">
+      <a href="#gioi-thieu" class="opt1-pill active">Giới thiệu</a>
+      <a href="#bac-si" class="opt1-pill">Đội ngũ Bác sĩ</a>
+      <a href="#goi-kham" class="opt1-pill">Gói dịch vụ</a>
+      <a href="#tin-tuc" class="opt1-pill">Tin tức</a>
+    </div>
   </div>
 </nav>
 
-<!-- MAIN SPECIALTY CONTENT (5 STRUCTURED SECTIONS) -->
-<main class="subpage-content" style="padding: 2.5rem 0;">
-  <div class="container" style="max-width: 980px;">
+<!-- ═══════════════════════════════════════════════
+     2. GIỚI THIỆU (2-COLUMN EXECUTIVE + REAL GALLERY)
+═══════════════════════════════════════════════ -->
+<section class="opt1-intro" id="gioi-thieu">
+  <div class="container">
+    <div class="opt1-intro__grid">
+      <div id="spec-intro-left">
+        <span class="opt1-intro__tag">Chuyên khoa mũi nhọn tại CIH</span>
+        <h2 class="section__title" id="spec-intro-heading" style="margin-bottom: 1rem;">Giới thiệu Khoa Phụ Sản</h2>
+        <div id="spec-body">
+          <p class="opt1-intro__lead"><strong>Khoa Phụ Sản</strong> là một trong 4 chuyên khoa mũi nhọn của Bệnh viện Quốc tế City (CIH), chuyên cung cấp dịch vụ chăm sóc sức khỏe toàn diện cho sản phụ trong suốt thai kỳ cũng như chẩn đoán, điều trị hiệu quả các bệnh lý thông thường đến chuyên sâu của cơ quan sinh dục nữ.</p>
+          <p class="opt1-intro__lead">Sở hữu đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm cùng hệ thống trang thiết bị hiện đại như <strong>Siêu âm 4D, Chụp nhũ ảnh kỹ thuật số (Mammography), Soi cổ tử cung, Xét nghiệm ThinPrep / Pap's smear &amp; định type HPV</strong>, Khoa giúp tầm soát và phát hiện sớm ung thư vú, ung thư cổ tử cung đạt độ chính xác trên 90%.</p>
+          <p class="opt1-intro__lead" style="margin-bottom: 0;">Đặc biệt, với kỹ thuật <strong>sinh con an toàn và không đau</strong>, chồng hoặc người thân được vào phòng sanh/phòng mổ đồng hành cùng sản phụ. Đội ngũ bác sĩ và điều dưỡng luôn túc trực 24/24 cùng các Lớp học tiền sản định kỳ giúp hành trình vượt cạn nhẹ nhàng, viên mãn.</p>
+        </div>
 
-    <h1 id="spec-title" class="subpage-heading" style="font-size: 2rem; font-weight: 800; color: #0f3775; margin-bottom: 2rem; line-height: 1.3;"></h1>
-
-    <!-- SECTION 1: GIỚI THIỆU -->
-    <section id="sec-gioi-thieu" class="spec-section-card">
-      <h2 class="spec-section-title">Giới Thiệu Chuyên Khoa</h2>
-      <div id="spec-body" style="font-size: 1.05rem; line-height: 1.85; color: #334155; text-align: justify; text-justify: inter-word;">
-        <p>Đang tải nội dung giới thiệu chuyên khoa...</p>
+        <div class="opt1-features-2x2" id="spec-features-grid">
+          <div class="opt1-fcard">
+            <div class="opt1-fcard__icon">🤰</div>
+            <div>
+              <h4>Thai sản trọn gói &amp; Sinh không đau</h4>
+              <p>Chăm sóc từ lúc mang thai đến khi lâm bồn, người thân đồng hành tại phòng sinh &amp; điều dưỡng hỗ trợ 24/24.</p>
+            </div>
+          </div>
+          <div class="opt1-fcard">
+            <div class="opt1-fcard__icon">🔬</div>
+            <div>
+              <h4>Tầm soát Ung thư Vú &amp; Cổ tử cung</h4>
+              <p>Chụp nhũ ảnh kỹ thuật số, ThinPrep, HPV DNA phát hiện sớm trên 90% và tiêm ngừa HPV.</p>
+            </div>
+          </div>
+          <div class="opt1-fcard">
+            <div class="opt1-fcard__icon">🩺</div>
+            <div>
+              <h4>Điều trị Phụ khoa &amp; Nội tiết nữ</h4>
+              <p>Điều trị u xơ tử cung, u nang buồng trứng, rối loạn nội tiết, tiền mãn kinh &amp; kế hoạch hóa gia đình.</p>
+            </div>
+          </div>
+          <div class="opt1-fcard">
+            <div class="opt1-fcard__icon">👶</div>
+            <div>
+              <h4>Lớp học Tiền sản miễn phí</h4>
+              <p>Hướng dẫn bài tập thể dục thai kỳ, kỹ năng thở rặn sinh, tắm bé và nuôi con bằng sữa mẹ đúng cách.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
 
-    <!-- SECTION 2: BÁC SĨ CHUYÊN KHOA -->
-    <section id="sec-bac-si" class="spec-section-card">
-      <h2 class="spec-section-title">Đội Ngũ Bác Sĩ Chuyên Khoa</h2>
-      <div id="spec-doctors-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;"></div>
-    </section>
-
-    <!-- SECTION 3: GÓI DỊCH VỤ -->
-    <section id="sec-goi-dich-vu" class="spec-section-card">
-      <h2 class="spec-section-title">Gói Dịch Vụ & Tầm Soát Sức Khỏe</h2>
-      <div id="spec-packages-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;"></div>
-    </section>
-
-    <!-- SECTION 4: CƠ Sở VẬT CHẤT -->
-    <section id="sec-co-so-vat-chat" class="spec-section-card">
-      <h2 class="spec-section-title">Cơ Sở Vật Chất & Trang Thiết Bị</h2>
-      <div id="spec-facilities-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;"></div>
-    </section>
-
-    <!-- SECTION 5: TIN TỨC LIÊN QUAN -->
-    <section id="sec-tin-tuc" class="spec-section-card">
-      <h2 class="spec-section-title">Tin Tức & Bài Viết Liên Quan</h2>
-      <div id="spec-news-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;"></div>
-    </section>
-
+      <div class="opt1-gallery" id="spec-gallery">
+        <div class="opt1-gallery__main">
+          <img id="spec-gallery-img-1" src="images/Website/phu-san/1784087000722_1931827352825428925_1272607247884588763_1f07dd511b5992b40035eeb66db4cce8.jpg" alt="Phòng nội trú Khoa Phụ Sản Bệnh viện Quốc tế City" loading="lazy" />
+        </div>
+        <div class="opt1-gallery__sub">
+          <div class="opt1-gallery__sub-item">
+            <img id="spec-gallery-img-2" src="images/Website/phu-san/thanh-hien/592913063_1188209793455779_493445984658358739_n.jpg" alt="Chăm sóc thai phụ tại CIH" loading="lazy" />
+          </div>
+          <div class="opt1-gallery__sub-item">
+            <img id="spec-gallery-img-3" src="images/Website/phu-san/1784087168303_1272607247884588763_1272607247884588763_bb81c268bd748520eee1d2b2fc2b9040.jpg" alt="Tiện nghi phòng lưu viện Phụ Sản CIH" loading="lazy" />
+          </div>
+        </div>
+        <div class="opt1-contact-strip">
+          <div>
+            <div style="font-size:0.78rem; font-weight:700; color:#0284c7; text-transform:uppercase;" id="spec-contact-label">Tư vấn Thai sản &amp; Đặt lịch khám</div>
+            <div style="font-size:1.02rem; font-weight:800; color:#0f172a; margin-top:2px;">Hotline: 1900 8146 • Cấp cứu Sản 24/7: (028) 6290 1155</div>
+          </div>
+          <a href="lien-he.html#dat-lich" class="opt1-contact-strip__btn">Đăng ký tư vấn</a>
+        </div>
+      </div>
+    </div>
   </div>
-</main>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     3. BÁC SĨ (BỐ CỤC NGANG 3 NHƯ TRANG CHỦ)
+═══════════════════════════════════════════════ -->
+<section class="section doctors-section" id="bac-si">
+  <div class="doc-waves-backdrop" aria-hidden="true">
+    <div class="doc-waves-backdrop-grad"></div>
+    <svg fill="none" preserveAspectRatio="none" viewBox="0 0 1440 600">
+      <path d="M-100,100 C300,300 600,-50 1000,180 C1250,320 1400,200 1550,220 L1550,600 L-100,600 Z" fill="url(#doc-wave-teal)"></path>
+      <path d="M-50,250 C250,50 650,380 1100,120 C1300,-10 1450,160 1550,180 L1550,600 L-50,600 Z" fill="url(#doc-wave-gold)" opacity="0.45"></path>
+      <defs>
+        <linearGradient id="doc-wave-teal" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.4"></stop>
+          <stop offset="50%" stop-color="#E5C07B" stop-opacity="0.22"></stop>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"></stop>
+        </linearGradient>
+        <linearGradient id="doc-wave-gold" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#E5C07B" stop-opacity="0.35"></stop>
+          <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.18"></stop>
+          <stop offset="100%" stop-color="#FDF8EB" stop-opacity="0.6"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="section__header">
+      <div class="section__header-left">
+        <h2 class="section__title" id="spec-doc-heading" style="margin-bottom: 0;">Đội ngũ Bác sĩ Khoa Phụ Sản</h2>
+        <p class="doc-section-subtitle" id="spec-doc-subtitle">Quy tụ đội ngũ chuyên gia, bác sĩ Sản Phụ khoa đầu ngành, giàu kinh nghiệm và tận tâm đồng hành cùng mẹ bầu.</p>
+      </div>
+    </div>
+    <div class="doctors-grid-3" id="spec-doctors-grid">
+      <div class="doc-card-v2">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" class="doc-card-v2__img-wrap">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/Bio-Doctor-template-for-website_2026-3.png" alt="BS.CKII. Nguyễn Vũ Mỹ Linh" class="doc-card-v2__img" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh">BS.CKII. Nguyễn Vũ Mỹ Linh</a></h3>
+          <div class="doc-card-v2__position">Phó Trưởng Khoa Phụ Sản – Bệnh viện Quốc tế City</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2">
+        <a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" class="doc-card-v2__img-wrap">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/5.png" alt="BS.CKII. Phạm Minh Khôi Nguyên" class="doc-card-v2__img" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen">BS.CKII. Phạm Minh Khôi Nguyên</a></h3>
+          <div class="doc-card-v2__position">Bác sĩ Chuyên khoa II Khoa Phụ Sản – Bệnh viện Quốc tế City</div>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="doc-card-v2">
+        <a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" class="doc-card-v2__img-wrap">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/09/9-1.png" alt="BS.CKII. Trần Thế Lộc" class="doc-card-v2__img" loading="lazy" />
+        </a>
+        <div class="doc-card-v2__body">
+          <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc">BS.CKII. Trần Thế Lộc</a></h3>
+          <div class="doc-card-v2__position">Bác sĩ Chuyên khoa II Khoa Phụ Sản – Bệnh viện Quốc tế City</div>
+          <a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="bac-si" class="section__header-btn" id="spec-doc-all-btn">Xem tất cả bác sĩ Khoa Phụ Sản</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     4. GÓI DỊCH VỤ (BỐ CỤC NGANG 3 NHƯ TRANG CHỦ)
+═══════════════════════════════════════════════ -->
+<section class="section packages-section" id="goi-kham">
+  <div class="container">
+    <div class="section__header" style="margin-bottom: 1.75rem;">
+      <div class="section__header-left">
+        <h2 class="section__title" id="spec-pkg-heading" style="margin-bottom: 0;">Gói dịch vụ Thai sản &amp; Phụ khoa</h2>
+        <p id="spec-pkg-subtitle" style="font-size: 0.96rem; color: #475569; margin-top: 6px; margin-bottom: 0; font-weight: 500;">Các gói khám thai, sinh con trọn gói và tầm soát phụ khoa thiết kế linh hoạt theo từng giai đoạn.</p>
+      </div>
+    </div>
+    <div class="packages-grid" id="spec-packages-grid">
+      <div class="news-card pkg-home-card">
+        <a href="chi-tiet-tin-tuc?id=24909" class="news-card__img-link">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/12/goi-thai-san-kham-thai-sinh-cat-tuong.webp" alt="Gói thai sản Cát Tường (khám thai + sinh)" loading="lazy" />
+        </a>
+        <div class="news-card__body">
+          <div style="width: 100%;">
+            <p class="pkg-card__cat">Thai sản &amp; Sinh sản</p>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=24909">Gói thai sản Cát Tường (khám thai + sinh)</a></h3>
+          </div>
+          <a href="chi-tiet-tin-tuc?id=24909" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="news-card pkg-home-card">
+        <a href="chi-tiet-tin-tuc?id=25488" class="news-card__img-link">
+          <img src="https://cih.com.vn/wp-content/uploads/2025/03/goi-sinh-yeu-thuong.webp" alt="Gói sinh Yêu Thương" loading="lazy" />
+        </a>
+        <div class="news-card__body">
+          <div style="width: 100%;">
+            <p class="pkg-card__cat">Thai sản &amp; Sinh sản</p>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=25488">Gói sinh Yêu Thương</a></h3>
+          </div>
+          <a href="chi-tiet-tin-tuc?id=25488" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="news-card pkg-home-card">
+        <a href="chi-tiet-tin-tuc?id=24894" class="news-card__img-link">
+          <img src="https://cih.com.vn/wp-content/uploads/2024/12/goi-tam-soat-ung-thu-co-tu-cung.webp" alt="Gói tầm soát ung thư cổ tử cung" loading="lazy" />
+        </a>
+        <div class="news-card__body">
+          <div style="width: 100%;">
+            <p class="pkg-card__cat">Tầm soát phụ khoa</p>
+            <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=24894">Gói tầm soát ung thư cổ tử cung</a></h3>
+          </div>
+          <a href="chi-tiet-tin-tuc?id=24894" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="goi-kham" class="section__header-btn">Xem tất cả gói dịch vụ</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     5. TIN TỨC (BỐ CỤC NGANG 3 NHƯ TRANG CHỦ)
+═══════════════════════════════════════════════ -->
+<section class="section news-section" id="tin-tuc">
+  <div class="container">
+    <div class="section__header" style="margin-bottom: 1.75rem;">
+      <div class="section__header-left">
+        <h2 class="section__title" id="spec-news-heading" style="margin-bottom: 0;">Tin tức &amp; Kiến thức Sản Phụ Khoa</h2>
+        <p id="spec-news-subtitle" style="font-size: 0.96rem; color: #475569; margin-top: 6px; margin-bottom: 0; font-weight: 500;">Cập nhật thông tin lớp học tiền sản, cẩm nang thai kỳ và kiến thức chăm sóc sức khỏe phụ nữ.</p>
+      </div>
+    </div>
+    <div class="news-grid-3" id="spec-news-grid">
+      <article class="news-card news-card--standard">
+        <a href="chi-tiet-tin-tuc?id=35" class="news-card__img-link">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB-2-1.webp" alt="Lớp học tiền sản quy mô lớn tháng 07: Theo dõi thai kỳ phát triển và nhận biết dấu hiệu chuyển dạ" class="news-card__img" loading="lazy" />
+          <span class="news-card__cat">Sự Kiện Thai Sản</span>
+        </a>
+        <div class="news-card__body">
+          <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=35">Lớp học tiền sản quy mô lớn tháng 07: Theo dõi thai kỳ phát triển và nhận biết dấu hiệu chuyển dạ</a></h3>
+          <a href="chi-tiet-tin-tuc?id=35" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="news-card news-card--standard">
+        <a href="chi-tiet-tin-tuc?id=46128" class="news-card__img-link">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3-768x515.webp" alt="Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị" class="news-card__img" loading="lazy" />
+          <span class="news-card__cat">Y Khoa Phụ Sản</span>
+        </a>
+        <div class="news-card__body">
+          <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46128">Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị</a></h3>
+          <a href="chi-tiet-tin-tuc?id=46128" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </article>
+
+      <article class="news-card news-card--standard">
+        <a href="chi-tiet-tin-tuc?id=47" class="news-card__img-link">
+          <img src="https://cih.com.vn/wp-content/uploads/2026/05/CIH05127-1024x683.webp" alt="Dấu ấn lớp học tiền sản quy mô kỷ lục tại Bệnh viện Quốc tế City thu hút gần 400 mẹ bầu" class="news-card__img" loading="lazy" />
+          <span class="news-card__cat">Hoạt Động Khoa</span>
+        </a>
+        <div class="news-card__body">
+          <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=47">Dấu ấn lớp học tiền sản quy mô kỷ lục tại Bệnh viện Quốc tế City thu hút gần 400 mẹ bầu</a></h3>
+          <a href="chi-tiet-tin-tuc?id=47" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+        </div>
+      </article>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <a href="tin-tuc" class="section__header-btn">Xem tất cả tin tức</a>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer class="footer" id="lien-he">
@@ -361,118 +1143,81 @@
 
 <script src="script.js?v=1790565050"></script>
 <script src="news_data.js?v=1790565050"></script>
-<script src="specialty_data.js?v=1790565050"></script>
+<script src="specialty_data.js?v=1792603000"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
     const slug = params.get('slug') || 'khoa-phu-san';
 
-    const spec = CIH_SPECIALTY_DATA.find(s => s.slug === slug) || CIH_SPECIALTY_DATA[0];
+    // If visiting another specialty (not khoa-phu-san), dynamically populate Option 1 layout
+    if (slug !== 'khoa-phu-san' && typeof CIH_SPECIALTY_DATA !== 'undefined') {
+      const spec = CIH_SPECIALTY_DATA.find(s => s.slug === slug);
+      if (spec) {
+        document.getElementById('page-head-title').innerText = spec.name + ' | Bệnh viện Quốc tế City';
+        document.getElementById('spec-title').innerHTML = (spec.title || spec.name).toUpperCase() + '<br/>BỆNH VIỆN QUỐC TẾ CITY';
+        document.getElementById('spec-breadcrumb-title').innerText = spec.name;
+        document.getElementById('spec-intro-heading').innerText = 'Giới thiệu ' + spec.name;
+        document.getElementById('spec-doc-heading').innerText = 'Đội ngũ Bác sĩ ' + spec.name;
+        document.getElementById('spec-doc-subtitle').innerText = 'Quy tụ đội ngũ chuyên gia, bác sĩ ' + spec.name + ' giàu kinh nghiệm và tận tâm tại Bệnh viện Quốc tế City.';
+        document.getElementById('spec-doc-all-btn').innerText = 'Xem tất cả bác sĩ ' + spec.name;
+        document.getElementById('spec-pkg-heading').innerText = 'Gói dịch vụ ' + spec.name;
+        document.getElementById('spec-hero-pkg-btn').innerHTML = 'Xem Gói Dịch Vụ &rarr;';
+        document.getElementById('spec-contact-label').innerText = 'Tư vấn ' + spec.name + ' & Đặt lịch khám';
 
-    document.getElementById('page-head-title').innerText = spec.name + ' | Bệnh viện Quốc tế City';
-    document.getElementById('spec-title').innerText = spec.title || spec.name;
-    
-    const bcTitle = document.getElementById('spec-breadcrumb-title');
-    if (bcTitle) {
-      bcTitle.innerText = spec.name;
+        if (spec.banner || spec.default_banner) {
+          document.getElementById('spec-hero').style.backgroundImage = `url('${spec.banner || spec.default_banner}')`;
+        }
+        if (spec.content) {
+          document.getElementById('spec-body').innerHTML = spec.content;
+        }
+        if (spec.facilities && spec.facilities.length > 0) {
+          const g1 = document.getElementById('spec-gallery-img-1');
+          if (g1 && spec.facilities[0].img) g1.src = spec.facilities[0].img;
+        }
+        if (spec.doctors && spec.doctors.length > 0) {
+          const docsGrid = document.getElementById('spec-doctors-grid');
+          docsGrid.innerHTML = spec.doctors.slice(0, 3).map(d => `
+            <div class="doc-card-v2">
+              <a href="bac-si" class="doc-card-v2__img-wrap">
+                <img src="${d.img}" alt="${d.name}" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              </a>
+              <div class="doc-card-v2__body">
+                <h3 class="doc-card-v2__name"><a href="bac-si">${d.name}</a></h3>
+                <div class="doc-card-v2__position">${d.title || d.degree || ''}</div>
+                <a href="bac-si" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
     }
-    
-    const bannerImg = document.getElementById('spec-banner-img');
-    if (bannerImg && (spec.banner || spec.default_banner)) {
-      bannerImg.src = spec.banner || spec.default_banner;
-    }
 
-    // 1. Giới thiệu Body Content
-    document.getElementById('spec-body').innerHTML = spec.content;
-
-    // 2. Bác sĩ chuyên khoa
-    const docsGrid = document.getElementById('spec-doctors-grid');
-    const docs = spec.doctors || [];
-    docsGrid.innerHTML = docs.map(d => `
-      <div style="background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; gap: 1.25rem; align-items: center;">
-        <img src="${d.img}" alt="${d.name}" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #0f3775;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
-        <div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #005f80; text-transform: uppercase;">${d.title}</span>
-          <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f3775; margin: 0.25rem 0;">${d.name}</h3>
-          <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0.75rem;">${d.degree}</p>
-          <a href="lien-he.html#dat-lich" class="btn btn--primary btn--sm" style="font-size: 0.8rem; padding: 0.35rem 0.85rem;">📅 ĐẶT LỊCH KHÁM</a>
-        </div>
-      </div>
-    `).join('');
-
-    // 3. Gói dịch vụ
-    const pkgsGrid = document.getElementById('spec-packages-grid');
-    const pkgs = spec.packages || [];
-    pkgsGrid.innerHTML = pkgs.map(p => `
-      <div style="background: linear-gradient(135deg, #ffffff, #f1f5f9); padding: 1.75rem; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
-        <span style="background: #dbeafe; color: #1e40af; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 99px; text-transform: uppercase;">GÓI KHÁM ƯU ĐÃI</span>
-        <h3 style="font-size: 1.15rem; font-weight: 800; color: #0f3775; margin: 0.75rem 0 0.5rem;">${p.name}</h3>
-        <div style="font-size: 1.2rem; font-weight: 900; color: #d97706; margin-bottom: 0.75rem;">${p.price}</div>
-        <p style="font-size: 0.9rem; color: #475569; line-height: 1.5; margin-bottom: 1.25rem;">${p.desc}</p>
-        <a href="lien-he.html#dat-lich" class="btn btn--accent btn--block" style="font-size: 0.85rem; text-align: center;">Đăng Ký Tư Vấn Gói</a>
-      </div>
-    `).join('');
-
-    // 4. Cơ sở vật chất
-    const facsGrid = document.getElementById('spec-facilities-grid');
-    const facs = spec.facilities || [];
-    facsGrid.innerHTML = facs.map(f => `
-      <div style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-        <img src="${f.img}" alt="${f.title}" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/28.png'" loading="lazy" />
-        <div style="padding: 1.25rem;">
-          <h4 style="font-size: 1rem; font-weight: 800; color: #0f3775; margin-bottom: 0.5rem;">${f.title}</h4>
-          <p style="font-size: 0.875rem; color: #64748b; line-height: 1.5; margin: 0;">${f.desc}</p>
-        </div>
-      </div>
-    `).join('');
-
-    // 5. Tin tức liên quan
-    const newsGrid = document.getElementById('spec-news-grid');
-    const newsItems = (typeof CIH_NEWS_DATA !== 'undefined') ? CIH_NEWS_DATA.slice(0, 3) : [];
-    newsGrid.innerHTML = newsItems.map(news => `
-      <div style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
-        <a href="chi-tiet-tin-tuc?id=${news.id}">
-          <img src="${news.img}" alt="${news.title}" style="width: 100%; height: 150px; object-fit: cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
-        </a>
-        <div style="padding: 1rem;">
-          <h4 style="font-size: 0.9rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.75rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
-            <a href="chi-tiet-tin-tuc?id=${news.id}" style="color: #0f3775; text-decoration: none;">${news.title}</a>
-          </h4>
-          <a href="chi-tiet-tin-tuc?id=${news.id}" style="font-size: 0.8rem; font-weight: 700; color: #005f80; text-decoration: none;">Xem thêm <span class="arrow">→</span></a>
-        </div>
-      </div>
-    `).join('');
-
-    // Active Tab Navigation Scroll Highlight & Smooth Scroll Click
-    const navLinks = document.querySelectorAll('.spec-tab-nav__link');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+    // Smooth Scroll & Active Pill Highlighting
+    const pills = document.querySelectorAll('.opt1-pill');
+    pills.forEach(pill => {
+      pill.addEventListener('click', function(e) {
         const hash = this.getAttribute('href');
         if (hash && hash.startsWith('#')) {
           const target = document.querySelector(hash);
           if (target) {
             e.preventDefault();
             target.scrollIntoView({ behavior: 'smooth' });
-            navLinks.forEach(l => l.classList.remove('active'));
+            pills.forEach(p => p.classList.remove('active'));
             this.classList.add('active');
-            if (history.pushState) {
-              history.pushState(null, null, hash);
-            }
           }
         }
       });
     });
 
     window.addEventListener('scroll', function() {
-      let fromTop = window.scrollY + 160;
-      navLinks.forEach(link => {
-        let hash = link.getAttribute('href');
+      const fromTop = window.scrollY + 180;
+      pills.forEach(pill => {
+        const hash = pill.getAttribute('href');
         if (hash && hash.startsWith('#')) {
-          let section = document.querySelector(hash);
+          const section = document.querySelector(hash);
           if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
           }
         }
       });

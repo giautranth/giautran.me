@@ -12,17 +12,17 @@
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23000050'/%3E%3Ccircle cx='12' cy='20' r='3' fill='%23ffffff'/%3E%3Ccircle cx='20' cy='12' r='3' fill='%23ffffff'/%3E%3Ccircle cx='20' cy='20' r='4.2' fill='%23B1FD43'/%3E%3Ccircle cx='20' cy='28' r='3' fill='%23ffffff'/%3E%3Ccircle cx='28' cy='20' r='3' fill='%235465FF'/%3E%3C/svg%3E" />
 
-  <!-- Google Fonts matching WPP Font & Noto Sans geometric proportions -->
+  <!-- Google Fonts matching GT Font & Noto Sans geometric proportions -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
   <style>
     /* ==========================================================================
-       1. WPP MEDIA EXACT DESIGN SYSTEM TOKENS & THEME ENGINE (:root)
+       1. GT MEDIA EXACT DESIGN SYSTEM TOKENS & THEME ENGINE (:root)
        ========================================================================== */
     :root {
-      /* WPP Media Core Brand Theme (tv.wppmedia from wppmedia.com) */
+      /* GT Media Core Brand Theme (tv.gtmedia from giautran.me) */
       --colors-brand-primary: #000050;
       --colors-brand-secondary: #5465FF;
       --colors-brand-tertiary: #788BFF;
@@ -76,7 +76,7 @@
       --colorError: #fa6243;
       --colorAccent100: #cbfe7e;
 
-      /* Typography & Fluid Sizing (Exact WPP Media Clamp Scale) */
+      /* Typography & Fluid Sizing (Exact GT Media Clamp Scale) */
       --fontFamilyBase: 'Plus Jakarta Sans', 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --fontWeightBase: 400;
       --fontWeightSemi: 500;
@@ -144,8 +144,8 @@
       --shadowLarge: 0 2px 30px 0 rgba(0, 0, 0, 0.15);
     }
 
-    /* Sub-brand Theme Overrides (WPP Media Collective Switcher) */
-    body[data-wpp-theme="essencemediacom"] {
+    /* Sub-brand Theme Overrides (GT Media Collective Switcher) */
+    body[data-gt-theme="performance"] {
       --colors-brand-accent: #FD3E81;
       --colors-brand-dark: #ED246B;
       --colors-surfaces-accent-background: #FD3E81;
@@ -153,7 +153,7 @@
       --colors-orb-accent: #FC3D80;
       --colorAccent100: #FEC1D6;
     }
-    body[data-wpp-theme="wavemaker"] {
+    body[data-gt-theme="seo"] {
       --colors-brand-accent: #FF8001;
       --colors-brand-dark: #EB5E00;
       --colors-surfaces-accent-background: #FF8001;
@@ -161,7 +161,7 @@
       --colors-orb-accent: #FF8001;
       --colorAccent100: #FFE6CC;
     }
-    body[data-wpp-theme="mindshare"] {
+    body[data-gt-theme="crm"] {
       --colors-brand-accent: #9A3EFF;
       --colors-brand-dark: #8938E0;
       --colors-surfaces-accent-background: #9A3EFF;
@@ -252,7 +252,7 @@
       padding-right: var(--spacingMedium);
     }
 
-    /* WPP Media Signature Dotted Grid Background (.bg-dotted) */
+    /* GT Media Signature Dotted Grid Background (.bg-dotted) */
     .bg-dotted {
       position: relative;
     }
@@ -272,7 +272,7 @@
       pointer-events: none;
     }
 
-    /* Link Underline Animation (Exact WPP Media cubic-bezier) */
+    /* Link Underline Animation (Exact GT Media cubic-bezier) */
     .link-underline-animation,
     .link-underline-hover-only {
       background-position: 100% 100%, 0 100%;
@@ -315,7 +315,7 @@
       border-radius: 50%;
       filter: blur(2.2rem);
       opacity: var(--opacities-orbBackground);
-      animation: wppFirstOrbDrift 45s linear infinite;
+      animation: gtFirstOrbDrift 45s linear infinite;
     }
 
     .first-orb-core {
@@ -329,7 +329,7 @@
         radial-gradient(circle at 100% 70%, var(--colors-brand-accent) 60%, var(--colors-system-orbBackground) 30%);
       filter: blur(2rem);
       opacity: 0.82;
-      animation: wppOrbRotate 20s linear infinite;
+      animation: gtOrbRotate 20s linear infinite;
     }
 
     /* Second Orb: Cobalt Blue + Periwinkle + Cyan + Lime Multi-Ellipse */
@@ -344,14 +344,14 @@
       filter: blur(1.2rem);
       opacity: 0.72;
       overflow: hidden;
-      animation: wppSecondOrbDrift 56s ease-in-out infinite;
+      animation: gtSecondOrbDrift 56s ease-in-out infinite;
     }
 
     .second-orb {
       width: 100%;
       height: 100%;
       position: relative;
-      animation: wppOrbRotate 20s linear infinite;
+      animation: gtOrbRotate 20s linear infinite;
     }
 
     .second-orb .ellipse {
@@ -385,12 +385,12 @@
       transform: rotate(-30deg);
     }
 
-    @keyframes wppOrbRotate {
+    @keyframes gtOrbRotate {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
 
-    @keyframes wppFirstOrbDrift {
+    @keyframes gtFirstOrbDrift {
       0% { transform: translate(-8vw, 0vh); }
       25% { transform: translate(18vw, 16vh); }
       50% { transform: translate(48vw, 42vh); }
@@ -398,16 +398,16 @@
       100% { transform: translate(-8vw, 0vh); }
     }
 
-    @keyframes wppSecondOrbDrift {
+    @keyframes gtSecondOrbDrift {
       0% { transform: translate(0vw, 25vh); }
       50% { transform: translate(-55vw, -18vh); }
       100% { transform: translate(0vw, 25vh); }
     }
 
     /* ==========================================================================
-       4. WPP MEDIA SIGNATURE SPLIT-PILL BUTTON (.wpp-btn)
+       4. GT MEDIA SIGNATURE SPLIT-PILL BUTTON (.gt-btn)
        ========================================================================== */
-    .wpp-btn {
+    .gt-btn {
       border: none;
       display: inline-flex;
       align-items: center;
@@ -423,7 +423,7 @@
       transition: all 0.2s ease-in-out;
     }
 
-    .wpp-btn-label {
+    .gt-btn-label {
       border-radius: var(--radiusXLarge);
       display: flex;
       align-items: center;
@@ -436,14 +436,14 @@
       transition: all 0.22s ease-in-out;
     }
 
-    .wpp-btn-text-1 {
+    .gt-btn-text-1 {
       display: flex;
       transform: translateY(0);
       opacity: 1;
       transition: all 0.22s ease-in-out;
     }
 
-    .wpp-btn-text-2 {
+    .gt-btn-text-2 {
       display: flex;
       position: absolute;
       transform: translateY(55%);
@@ -452,7 +452,7 @@
       white-space: nowrap;
     }
 
-    .wpp-btn-arrow {
+    .gt-btn-arrow {
       height: 3rem;
       width: 3rem;
       border-radius: var(--radiusFull);
@@ -467,61 +467,61 @@
       transition: all 0.22s ease-in-out;
     }
 
-    .wpp-btn-arrow svg {
+    .gt-btn-arrow svg {
       width: 1.25rem;
       height: 1.25rem;
       display: block;
     }
 
     /* Primary Variant (Navy #000050 -> Neon Lime #B1FD43 on hover) */
-    .wpp-btn--primary .wpp-btn-label,
-    .wpp-btn--primary .wpp-btn-arrow {
+    .gt-btn--primary .gt-btn-label,
+    .gt-btn--primary .gt-btn-arrow {
       background-color: var(--colors-surfaces-primary-background);
       color: var(--colors-surfaces-primary-foreground);
     }
 
     /* Primary Inverse Variant (White #FFFFFF -> Neon Lime #B1FD43 on hover) */
-    .wpp-btn--inverse .wpp-btn-label,
-    .wpp-btn--inverse .wpp-btn-arrow {
+    .gt-btn--inverse .gt-btn-label,
+    .gt-btn--inverse .gt-btn-arrow {
       background-color: var(--colors-surfaces-primary-foreground);
       color: var(--colors-surfaces-primary-background);
     }
 
     /* Hover State: Switch to Neon Acid Lime + Slide Text + Rotate Arrow 45deg -> 90deg */
-    .wpp-btn:hover .wpp-btn-label,
-    .wpp-btn:focus-visible .wpp-btn-label,
-    .wpp-btn:hover .wpp-btn-arrow,
-    .wpp-btn:focus-visible .wpp-btn-arrow {
+    .gt-btn:hover .gt-btn-label,
+    .gt-btn:focus-visible .gt-btn-label,
+    .gt-btn:hover .gt-btn-arrow,
+    .gt-btn:focus-visible .gt-btn-arrow {
       background-color: var(--colors-surfaces-accent-background);
       color: var(--colors-surfaces-accent-foreground);
     }
 
-    .wpp-btn:hover .wpp-btn-text-1,
-    .wpp-btn:focus-visible .wpp-btn-text-1 {
+    .gt-btn:hover .gt-btn-text-1,
+    .gt-btn:focus-visible .gt-btn-text-1 {
       opacity: 0;
       position: absolute;
       transform: translateY(-55%);
     }
 
-    .wpp-btn:hover .wpp-btn-text-2,
-    .wpp-btn:focus-visible .wpp-btn-text-2 {
+    .gt-btn:hover .gt-btn-text-2,
+    .gt-btn:focus-visible .gt-btn-text-2 {
       opacity: 1;
       position: relative;
       transform: translateY(0);
       color: var(--colors-surfaces-accent-foreground);
     }
 
-    .wpp-btn:hover .wpp-btn-arrow,
-    .wpp-btn:focus-visible .wpp-btn-arrow {
+    .gt-btn:hover .gt-btn-arrow,
+    .gt-btn:focus-visible .gt-btn-arrow {
       right: 0;
       transform: rotate(90deg);
     }
 
     /* Compact Header Contact Button */
-    .wpp-btn--compact {
+    .gt-btn--compact {
       padding: 0;
     }
-    .wpp-btn--compact .wpp-btn-label {
+    .gt-btn--compact .gt-btn-label {
       font-size: var(--step--1);
       font-weight: var(--fontWeightBase);
       padding: 0.625rem 1.25rem;
@@ -529,9 +529,9 @@
     }
 
     /* ==========================================================================
-       5. HEADER & NAVIGATION CARD TRAY (.wpp-header)
+       5. HEADER & NAVIGATION CARD TRAY (.gt-header)
        ========================================================================== */
-    .wpp-header {
+    .gt-header {
       position: fixed;
       top: 0;
       left: 0;
@@ -541,21 +541,21 @@
       transition: background-color 0.25s ease, backdrop-filter 0.25s ease, transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
     }
 
-    .wpp-header.scrolled {
+    .gt-header.scrolled {
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       background-color: rgba(240, 240, 240, 0.92);
       box-shadow: 0 4px 24px rgba(0, 0, 80, 0.05);
     }
 
-    .wpp-header-inner {
+    .gt-header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: relative;
     }
 
-    .wpp-logo-link {
+    .gt-logo-link {
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
@@ -563,19 +563,19 @@
       color: var(--colors-brand-primary);
     }
 
-    .wpp-logo-svg {
+    .gt-logo-svg {
       height: 2.35rem;
       width: auto;
       display: block;
     }
 
     /* Desktop Main Nav */
-    .wpp-main-nav {
+    .gt-main-nav {
       display: flex;
       align-items: center;
     }
 
-    .wpp-nav-list {
+    .gt-nav-list {
       display: flex;
       align-items: center;
       gap: 0.35rem;
@@ -584,11 +584,11 @@
       padding: 0;
     }
 
-    .wpp-nav-item {
+    .gt-nav-item {
       position: relative;
     }
 
-    .wpp-nav-trigger {
+    .gt-nav-trigger {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
@@ -604,24 +604,24 @@
       transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    .wpp-nav-trigger:hover,
-    .wpp-nav-item:hover .wpp-nav-trigger {
+    .gt-nav-trigger:hover,
+    .gt-nav-item:hover .gt-nav-trigger {
       background-color: var(--colors-surfaces-primary-reverse-background);
       color: var(--colors-surfaces-primary-reverse-foreground);
     }
 
-    .wpp-nav-chevron {
+    .gt-nav-chevron {
       width: 0.688rem;
       height: 0.688rem;
       transition: transform 0.35s ease;
     }
 
-    .wpp-nav-item:hover .wpp-nav-chevron {
+    .gt-nav-item:hover .gt-nav-chevron {
       transform: rotate(180deg);
     }
 
-    /* WPP Media Submenu Card Tray (64.375rem wide, 3 Horizontal Nav Cards) */
-    .wpp-submenu-wrapper {
+    /* GT Media Submenu Card Tray (64.375rem wide, 3 Horizontal Nav Cards) */
+    .gt-submenu-wrapper {
       position: absolute;
       top: calc(100% + 0.85rem);
       left: 50%;
@@ -638,7 +638,7 @@
       z-index: 120;
     }
 
-    .wpp-nav-item::after {
+    .gt-nav-item::after {
       content: "";
       position: absolute;
       left: 0;
@@ -647,14 +647,14 @@
       height: 1rem;
     }
 
-    .wpp-nav-item:hover .wpp-submenu-wrapper {
+    .gt-nav-item:hover .gt-submenu-wrapper {
       opacity: 1;
       visibility: visible;
       pointer-events: auto;
       transform: translate(-50%, 0);
     }
 
-    .wpp-submenu-grid {
+    .gt-submenu-grid {
       display: flex;
       gap: 0.5rem;
       list-style: none;
@@ -662,17 +662,17 @@
       padding: 0;
     }
 
-    .wpp-nav-card {
+    .gt-nav-card {
       flex: 1;
       border-radius: var(--radiusLarge);
       transition: background-color 0.2s ease;
     }
 
-    .wpp-nav-card:hover {
+    .gt-nav-card:hover {
       background-color: var(--colors-system-background);
     }
 
-    .wpp-nav-card-link {
+    .gt-nav-card-link {
       display: flex;
       align-items: center;
       gap: 1.15rem;
@@ -682,7 +682,7 @@
       height: 100%;
     }
 
-    .wpp-nav-card-img {
+    .gt-nav-card-img {
       width: 80px;
       height: 128px;
       border-radius: var(--radiusSmall);
@@ -690,23 +690,23 @@
       flex-shrink: 0;
     }
 
-    .wpp-nav-card-img img {
+    .gt-nav-card-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
 
-    .wpp-nav-card:hover .wpp-nav-card-img img {
+    .gt-nav-card:hover .gt-nav-card-img img {
       transform: scale(1.06);
     }
 
-    .wpp-nav-card-body {
+    .gt-nav-card-body {
       flex: 1;
       padding-right: 0.5rem;
     }
 
-    .wpp-nav-card-header {
+    .gt-nav-card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -714,37 +714,37 @@
       margin-bottom: 0.35rem;
     }
 
-    .wpp-nav-card-title {
+    .gt-nav-card-title {
       font-size: var(--step--1);
       font-weight: var(--fontWeightSemi);
       color: var(--colors-system-textPrimary);
     }
 
-    .wpp-nav-card-arrow {
+    .gt-nav-card-arrow {
       color: var(--colorSystemBlack50);
       transition: transform 0.3s ease, color 0.3s ease;
       flex-shrink: 0;
     }
 
-    .wpp-nav-card:hover .wpp-nav-card-arrow {
+    .gt-nav-card:hover .gt-nav-card-arrow {
       color: var(--colorSystemBlack);
       transform: translateX(5px);
     }
 
-    .wpp-nav-card-desc {
+    .gt-nav-card-desc {
       font-size: var(--step--1);
       color: var(--colors-system-textSecondary);
       line-height: 1.4;
     }
 
     /* Header Right Actions (Region Selector + Theme Pill + Contact Button) */
-    .wpp-header-actions {
+    .gt-header-actions {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
-    .wpp-region-btn {
+    .gt-region-btn {
       display: inline-flex;
       align-items: center;
       gap: 0.45rem;
@@ -758,16 +758,16 @@
       transition: all 0.2s ease-in-out;
     }
 
-    .wpp-region-btn:hover {
+    .gt-region-btn:hover {
       background-color: var(--colors-surfaces-primary-reverse-background);
       border-color: transparent;
     }
 
-    .wpp-region-btn .region-code {
+    .gt-region-btn .region-code {
       font-weight: var(--fontWeightSemi);
     }
 
-    .wpp-mobile-toggle {
+    .gt-mobile-toggle {
       display: none;
       background: transparent;
       border: 1px solid var(--colors-system-textTertiary);
@@ -838,13 +838,13 @@
 
     .hero-heading span.line {
       display: block;
-      animation: wppClipReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation: gtClipReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
     .hero-heading span.line:nth-child(2) {
       animation-delay: 0.12s;
     }
 
-    @keyframes wppClipReveal {
+    @keyframes gtClipReveal {
       0% {
         clip-path: inset(0 0 100% 0);
         transform: translateY(40px);
@@ -894,7 +894,7 @@
       z-index: 2;
     }
 
-    /* WPP Media 154px Center Play Showreel Button */
+    /* GT Media 154px Center Play Showreel Button */
     .play-showreel-btn {
       background: transparent;
       border: 0;
@@ -1196,7 +1196,7 @@
       z-index: 2;
       width: 440px;
       height: 440px;
-      animation: wppOrbRotate 90s linear infinite;
+      animation: gtOrbRotate 90s linear infinite;
     }
 
     .oi-floating-orbs {
@@ -1515,7 +1515,7 @@
     .logo-marquee-track {
       display: flex;
       width: max-content;
-      animation: wppMarqueeScroll 36s linear infinite;
+      animation: gtMarqueeScroll 36s linear infinite;
     }
 
     .logo-marquee-track:hover {
@@ -1568,7 +1568,7 @@
       max-height: 70px;
     }
 
-    @keyframes wppMarqueeScroll {
+    @keyframes gtMarqueeScroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
@@ -1595,11 +1595,11 @@
       gap: 2rem 2.25rem;
     }
 
-    .case-studies-staggered-grid .wpp-case-card:nth-child(2n) {
+    .case-studies-staggered-grid .gt-case-card:nth-child(2n) {
       margin-top: 4.5rem;
     }
 
-    .wpp-case-card a {
+    .gt-case-card a {
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -1610,11 +1610,11 @@
       transition: background-color 0.3s ease;
     }
 
-    .wpp-case-card a:hover {
+    .gt-case-card a:hover {
       background-color: var(--colors-surfaces-subtle-background);
     }
 
-    .wpp-case-tag {
+    .gt-case-tag {
       align-self: flex-start;
       border: 1px solid var(--colorSystemBlack40);
       border-radius: var(--radiusXLarge);
@@ -1625,13 +1625,13 @@
       transition: all 0.3s ease;
     }
 
-    .wpp-case-card a:hover .wpp-case-tag {
+    .gt-case-card a:hover .gt-case-tag {
       background-color: var(--colors-surfaces-primary-background);
       border-color: var(--colors-surfaces-primary-background);
       color: var(--colors-surfaces-primary-foreground);
     }
 
-    .wpp-case-heading-row {
+    .gt-case-heading-row {
       display: grid;
       grid-template-columns: 1fr 32px;
       align-items: center;
@@ -1639,31 +1639,31 @@
       margin-bottom: 0.65rem;
     }
 
-    .wpp-case-title {
+    .gt-case-title {
       font-size: var(--step-2);
       font-weight: var(--fontWeightSemi);
       color: var(--colors-system-textPrimary);
       line-height: 1.3;
     }
 
-    .wpp-case-arrow {
+    .gt-case-arrow {
       color: var(--colors-system-textPrimary);
       opacity: 0.4;
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    .wpp-case-card a:hover .wpp-case-arrow {
+    .gt-case-card a:hover .gt-case-arrow {
       opacity: 1;
       transform: translateX(6px);
     }
 
-    .wpp-case-subtitle {
+    .gt-case-subtitle {
       font-size: var(--step-0);
       color: var(--colors-system-textSecondary);
       margin-bottom: 1.5rem;
     }
 
-    .wpp-case-media-box {
+    .gt-case-media-box {
       border-radius: var(--radiusMedium);
       overflow: hidden;
       display: flex;
@@ -1673,28 +1673,28 @@
       box-shadow: 0 10px 28px rgba(0, 0, 80, 0.08);
     }
 
-    .wpp-case-card a:hover .wpp-case-media-box {
+    .gt-case-card a:hover .gt-case-media-box {
       transform: scale(1.02);
     }
 
-    .wpp-case-img-half {
+    .gt-case-img-half {
       flex: 1;
       min-width: 55%;
       overflow: hidden;
     }
 
-    .wpp-case-img-half img {
+    .gt-case-img-half img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.45s ease;
     }
 
-    .wpp-case-card a:hover .wpp-case-img-half img {
+    .gt-case-card a:hover .gt-case-img-half img {
       transform: scale(1.075);
     }
 
-    .wpp-case-stat-half {
+    .gt-case-stat-half {
       flex: 1;
       background-color: var(--colors-surfaces-primary-reverse-background);
       padding: var(--spacingMedium);
@@ -1703,14 +1703,14 @@
       justify-content: flex-end;
     }
 
-    .wpp-case-stat-half h4 {
+    .gt-case-stat-half h4 {
       font-size: var(--step-6);
       color: var(--colors-brand-primary);
       line-height: 1;
       margin-bottom: 0.4rem;
     }
 
-    .wpp-case-stat-half p {
+    .gt-case-stat-half p {
       font-size: var(--step--1);
       color: var(--colors-system-textSecondary);
       line-height: 1.4;
@@ -1767,7 +1767,7 @@
       max-width: 34rem;
     }
 
-    /* WPP Media 5-Circle Interactive Constellation (Exact ei[] coordinates) */
+    /* GT Media 5-Circle Interactive Constellation (Exact ei[] coordinates) */
     .circle-gallery-stage {
       width: 52%;
       height: 34rem;
@@ -1793,7 +1793,7 @@
       border-radius: var(--radiusFull);
     }
 
-    /* Default vs Hover States matching WPP Media's exact ei[] array */
+    /* Default vs Hover States matching GT Media's exact ei[] array */
     .cg-item-0 {
       width: 195px; height: 195px;
       transform: translate(calc(-50% + 78px), calc(-50% - 50px)) scale(1);
@@ -1834,9 +1834,9 @@
     }
 
     /* ==========================================================================
-       14. WPP MEDIA SIGNATURE CURVED-MASK FOOTER (.footer_wrapper)
+       14. GT MEDIA SIGNATURE CURVED-MASK FOOTER (.footer_wrapper)
        ========================================================================== */
-    .wpp-footer {
+    .gt-footer {
       background:
         linear-gradient(rgba(0, 0, 80, 1), rgba(0, 0, 80, 0.15)),
         radial-gradient(ellipse farthest-side at 5% 90%, var(--colors-brand-secondary) 0%, var(--colors-surfaces-primary-background) 80%);
@@ -1847,7 +1847,7 @@
       z-index: 2;
     }
 
-    .wpp-footer-grid {
+    .gt-footer-grid {
       display: grid;
       grid-template-columns: 34% 1fr;
       gap: 3rem;
@@ -1855,13 +1855,13 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    .wpp-footer-sitemap {
+    .gt-footer-sitemap {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
     }
 
-    .wpp-footer-col-title {
+    .gt-footer-col-title {
       color: var(--colorSystemWhite);
       font-size: var(--step--1);
       font-weight: var(--fontWeightBold);
@@ -1870,17 +1870,17 @@
       letter-spacing: 0.04em;
     }
 
-    .wpp-footer-col ul {
+    .gt-footer-col ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    .wpp-footer-col li + li {
+    .gt-footer-col li + li {
       margin-top: 0.85rem;
     }
 
-    .wpp-footer-col a {
+    .gt-footer-col a {
       color: rgba(255, 255, 255, 0.86);
       font-size: var(--step--1);
       font-weight: var(--fontWeightBase);
@@ -1890,11 +1890,11 @@
       gap: 0.5rem;
     }
 
-    .wpp-footer-col a:hover {
+    .gt-footer-col a:hover {
       color: var(--colors-brand-accent);
     }
 
-    .wpp-footer-legal {
+    .gt-footer-legal {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1905,7 +1905,7 @@
       color: rgba(255, 255, 255, 0.75);
     }
 
-    .wpp-policy-list {
+    .gt-policy-list {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
@@ -1914,19 +1914,19 @@
       padding: 0;
     }
 
-    .wpp-policy-list a {
+    .gt-policy-list a {
       color: rgba(255, 255, 255, 0.85);
       text-decoration: none;
     }
 
-    .wpp-policy-list a:hover {
+    .gt-policy-list a:hover {
       color: var(--colors-brand-accent);
     }
 
     /* ==========================================================================
        15. REGION & THEME SWITCHER MODAL + CONTACT/VIDEO MODAL (.modal-shell)
        ========================================================================== */
-    .wpp-modal-backdrop {
+    .gt-modal-backdrop {
       position: fixed;
       inset: 0;
       background-color: rgba(0, 0, 25, 0.55);
@@ -1941,12 +1941,12 @@
       transition: opacity 0.25s ease, visibility 0.25s ease;
     }
 
-    .wpp-modal-backdrop.active {
+    .gt-modal-backdrop.active {
       opacity: 1;
       visibility: visible;
     }
 
-    .wpp-modal-card {
+    .gt-modal-card {
       background-color: var(--colorSystemWhite);
       border-radius: var(--radiusXLarge);
       max-width: 62rem;
@@ -1958,7 +1958,7 @@
       position: relative;
     }
 
-    .wpp-modal-header {
+    .gt-modal-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1967,7 +1967,7 @@
       border-bottom: 1px solid var(--colorSystemBlack10);
     }
 
-    .wpp-modal-close {
+    .gt-modal-close {
       background-color: var(--colors-system-background);
       border: 0;
       border-radius: var(--radiusXLarge);
@@ -1982,7 +1982,7 @@
       transition: background-color 0.2s ease;
     }
 
-    .wpp-modal-close:hover {
+    .gt-modal-close:hover {
       background-color: var(--colors-surfaces-accent-background);
     }
 
@@ -2046,10 +2046,10 @@
 
     /* Responsive Adjustments */
     @media (max-width: 1024px) {
-      .wpp-main-nav {
+      .gt-main-nav {
         display: none;
       }
-      .wpp-main-nav.mobile-open {
+      .gt-main-nav.mobile-open {
         display: block;
         position: absolute;
         top: calc(100% + 0.5rem);
@@ -2060,11 +2060,11 @@
         padding: 1.25rem;
         box-shadow: var(--shadowLarge);
       }
-      .wpp-nav-list {
+      .gt-nav-list {
         flex-direction: column;
         align-items: stretch;
       }
-      .wpp-mobile-toggle {
+      .gt-mobile-toggle {
         display: inline-flex;
       }
       .title-text-heading,
@@ -2108,7 +2108,7 @@
       .case-studies-staggered-grid {
         grid-template-columns: 1fr;
       }
-      .case-studies-staggered-grid .wpp-case-card:nth-child(2n) {
+      .case-studies-staggered-grid .gt-case-card:nth-child(2n) {
         margin-top: 0;
       }
       .circle-gallery-container {
@@ -2119,19 +2119,19 @@
       .circle-gallery-stage {
         width: 100%;
       }
-      .wpp-footer-grid {
+      .gt-footer-grid {
         grid-template-columns: 1fr;
       }
-      .wpp-footer-sitemap {
+      .gt-footer-sitemap {
         grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
 </head>
-<body data-wpp-theme="wppmedia">
+<body data-gt-theme="gtmedia">
 
   <!-- ========================================================================
-       1. FLOATING AMBIENT GRADIENT ANIMATION (WPP Media Background Orbs)
+       1. FLOATING AMBIENT GRADIENT ANIMATION (Background Orbs)
        ======================================================================== -->
   <div class="background-gradient-animation" aria-hidden="true">
     <div class="first-orb">
@@ -2149,14 +2149,13 @@
   </div>
 
   <!-- ========================================================================
-       2. WPP MEDIA HEADER WITH SUBMENU CARD TRAYS & REGION SWITCHER
+       2. HEADER WITH SUBMENU CARD TRAYS & REGION SWITCHER
        ======================================================================== -->
-  <header class="wpp-header" id="wppHeader">
-    <div class="wrapper wpp-header-inner">
-      <!-- WPP Dot-Matrix Style Logo (GT Media) -->
-      <a href="/demo/" class="wpp-logo-link" aria-label="GT Media Home">
-        <svg class="wpp-logo-svg" viewBox="0 0 245 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Dot-Matrix Emblem matching WPP Media's pointillist 'WPP' mark -->
+  <header class="gt-header" id="gtHeader">
+    <div class="wrapper gt-header-inner">
+      <!-- Dot-Matrix Style Logo (GT Media) -->
+      <a href="/demo/" class="gt-logo-link" aria-label="GT Media Home">
+        <svg class="gt-logo-svg" viewBox="0 0 245 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g fill="currentColor">
             <circle cx="8" cy="12" r="2.2"/><circle cx="8" cy="20" r="2.6"/><circle cx="8" cy="28" r="2.2"/>
             <circle cx="15" cy="7" r="2.1"/><circle cx="15" cy="14" r="2.6"/><circle cx="15" cy="26" r="2.6"/><circle cx="15" cy="33" r="2.1"/>
@@ -2165,57 +2164,56 @@
             <circle cx="39" cy="10" r="2.4"/><circle cx="45" cy="10" r="2.6"/><circle cx="51" cy="10" r="2.4"/>
             <circle cx="45" cy="17" r="2.6"/><circle cx="45" cy="24" r="2.6"/><circle cx="45" cy="31" r="2.4"/>
           </g>
-          <!-- Geometric Bold Wordmark -->
           <text x="64" y="29" fill="currentColor" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="25" letter-spacing="-0.03em">GT Media</text>
           <circle cx="178" cy="26" r="3.5" fill="var(--colors-brand-secondary)"/>
           <text x="186" y="29" fill="currentColor" font-family="'Plus Jakarta Sans', sans-serif" font-weight="400" font-size="16" opacity="0.72">.me</text>
         </svg>
       </a>
 
-      <!-- Main Navigation with WPP Media Horizontal Card Trays -->
-      <nav class="wpp-main-nav" id="wppMainNav" aria-label="Main Navigation">
-        <ul class="wpp-nav-list">
+      <!-- Main Navigation with Horizontal Card Trays -->
+      <nav class="gt-main-nav" id="gtMainNav" aria-label="Main Navigation">
+        <ul class="gt-nav-list">
           <!-- About Us -->
-          <li class="wpp-nav-item">
-            <button type="button" class="wpp-nav-trigger">
+          <li class="gt-nav-item">
+            <button type="button" class="gt-nav-trigger">
               <span data-i18n="nav_about">About us</span>
-              <svg class="wpp-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="gt-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="wpp-submenu-wrapper">
-              <ul class="wpp-submenu-grid">
-                <li class="wpp-nav-card">
-                  <a href="#we-believe" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1765888495-stock-nav-image.png" alt="Company Info" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">Company Info</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+            <div class="gt-submenu-wrapper">
+              <ul class="gt-submenu-grid">
+                <li class="gt-nav-card">
+                  <a href="#we-believe" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/tng-office.jpg" alt="Studio Overview" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Studio Overview</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Discover how we're built for the intelligent AI era</p>
+                      <p class="gt-nav-card-desc">Founded in 2017, driving data-powered growth for the AI era</p>
                     </div>
                   </a>
                 </li>
-                <li class="wpp-nav-card">
-                  <a href="javascript:void(0)" onclick="openRegionModal()" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1744492999-country-unitedstates.jpg" alt="Our Locations" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">Our Locations</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+                <li class="gt-nav-card">
+                  <a href="javascript:void(0)" onclick="openRegionModal()" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/team-brainstorm.jpg" alt="Our Locations" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Our Locations</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Intelligent growth across Berlin &amp; Ho Chi Minh City</p>
+                      <p class="gt-nav-card-desc">Operating across Ho Chi Minh City, Munich &amp; Melbourne</p>
                     </div>
                   </a>
                 </li>
-                <li class="wpp-nav-card">
-                  <a href="#our-work" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1765888062-stock-nav-image-2.png" alt="Our Brands" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">Our Brands</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+                <li class="gt-nav-card">
+                  <a href="#careers" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/team-phuong-anh.jpg" alt="Leadership &amp; DNA" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Leadership &amp; DNA</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Explore our global collective of AI, media &amp; digital brands</p>
+                      <p class="gt-nav-card-desc">80+ specialists uniting Technical SEO, Performance Ads &amp; CRM</p>
                     </div>
                   </a>
                 </li>
@@ -2224,46 +2222,46 @@
           </li>
 
           <!-- What We Do -->
-          <li class="wpp-nav-item">
-            <button type="button" class="wpp-nav-trigger">
+          <li class="gt-nav-item">
+            <button type="button" class="gt-nav-trigger">
               <span data-i18n="nav_what">What we do</span>
-              <svg class="wpp-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="gt-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="wpp-submenu-wrapper">
-              <ul class="wpp-submenu-grid">
-                <li class="wpp-nav-card">
-                  <a href="#capabilities" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1748375978-land020_wpp_meida_launch_still_003-1.jpg" alt="What we do" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">What we do</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+            <div class="gt-submenu-wrapper">
+              <ul class="gt-submenu-grid">
+                <li class="gt-nav-card">
+                  <a href="#capabilities" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/seo-dashboard.jpg" alt="Technical &amp; On-Page SEO" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Technical &amp; AI SEO</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Learn how we deliver unparalleled digital growth</p>
+                      <p class="gt-nav-card-desc">8,900+ URL Screaming Frog audits, Core Web Vitals &amp; GEO</p>
                     </div>
                   </a>
                 </li>
-                <li class="wpp-nav-card">
-                  <a href="#our-work" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1779300880-mediasolutions_images_website.jpg" alt="Media Solutions" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">Media Solutions</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+                <li class="gt-nav-card">
+                  <a href="#capabilities" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/ppc-campaign.jpg" alt="Performance Ads" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Performance Ads (PPC)</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Explore how we drive business outcomes across channels</p>
+                      <p class="gt-nav-card-desc">Multi-market Search &amp; Display campaigns across SEA &amp; EU</p>
                     </div>
                   </a>
                 </li>
-                <li class="wpp-nav-card">
-                  <a href="#open-intelligence" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1748718787-oi_website-05.jpg" alt="Open Intelligence" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">Open Intelligence</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+                <li class="gt-nav-card">
+                  <a href="#open-intelligence" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/crm-zalo.jpg" alt="CRM &amp; O2O Ecosystems" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">CRM &amp; O2O Ecosystems</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Discover our next-gen AI-powered marketing &amp; data engine</p>
+                      <p class="gt-nav-card-desc">Zalo OA, Mini App &amp; automated lifecycle drip marketing</p>
                     </div>
                   </a>
                 </li>
@@ -2272,51 +2270,51 @@
           </li>
 
           <!-- Client Successes -->
-          <li class="wpp-nav-item">
-            <a href="#our-work" class="wpp-nav-trigger" data-i18n="nav_clients">Client Successes</a>
+          <li class="gt-nav-item">
+            <a href="#our-work" class="gt-nav-trigger" data-i18n="nav_clients">Client Successes</a>
           </li>
 
           <!-- News and Views -->
-          <li class="wpp-nav-item">
-            <button type="button" class="wpp-nav-trigger">
+          <li class="gt-nav-item">
+            <button type="button" class="gt-nav-trigger">
               <span data-i18n="nav_news">News and Views</span>
-              <svg class="wpp-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg class="gt-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <div class="wpp-submenu-wrapper">
-              <ul class="wpp-submenu-grid">
-                <li class="wpp-nav-card">
-                  <a href="#news-views" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1761036654-pov-website-picture-new-template-2.jpg" alt="News and Views" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">News and Views</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+            <div class="gt-submenu-wrapper">
+              <ul class="gt-submenu-grid">
+                <li class="gt-nav-card">
+                  <a href="#news-views" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/blog-digital-trends.jpg" alt="Digital Marketing 2026" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Digital Report 2026</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">The latest news, views and insights from our network</p>
+                      <p class="gt-nav-card-desc">5 AI Search, GEO &amp; First-Party Data trends reshaping brands</p>
                     </div>
                   </a>
                 </li>
-                <li class="wpp-nav-card">
-                  <a href="#news-views" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1770925523-advertising-intelligence-tiles-pm.png" alt="Research &amp; Business Intelligence" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">Research &amp; BI</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+                <li class="gt-nav-card">
+                  <a href="#news-views" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/blog-seo-audit.jpg" alt="Technical SEO Checklist" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Technical SEO Audit</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Discover the forces shaping modern AI &amp; digital experience</p>
+                      <p class="gt-nav-card-desc">50+ step enterprise audit for Google &amp; AI Overviews</p>
                     </div>
                   </a>
                 </li>
-                <li class="wpp-nav-card">
-                  <a href="#our-work" class="wpp-nav-card-link">
-                    <div class="wpp-nav-card-img"><img src="https://www.datocms-assets.com/153350/1781101878-tyny-june-2026-web-hero-1.png" alt="This Year Next Year 2026" /></div>
-                    <div class="wpp-nav-card-body">
-                      <div class="wpp-nav-card-header">
-                        <span class="wpp-nav-card-title">This Year Next Year</span>
-                        <span class="wpp-nav-card-arrow">→</span>
+                <li class="gt-nav-card">
+                  <a href="#news-views" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/blog-ai-marketing.jpg" alt="AI &amp; GEO Optimization" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">AI &amp; GEO Strategy</span>
+                        <span class="gt-nav-card-arrow">→</span>
                       </div>
-                      <p class="wpp-nav-card-desc">Explore our 2026 global digital &amp; AI growth forecast</p>
+                      <p class="gt-nav-card-desc">How to get your brand cited by ChatGPT, Gemini &amp; Perplexity</p>
                     </div>
                   </a>
                 </li>
@@ -2325,15 +2323,15 @@
           </li>
 
           <!-- Careers -->
-          <li class="wpp-nav-item">
-            <a href="#careers" class="wpp-nav-trigger" data-i18n="nav_careers">Careers</a>
+          <li class="gt-nav-item">
+            <a href="#careers" class="gt-nav-trigger" data-i18n="nav_careers">Careers</a>
           </li>
         </ul>
       </nav>
 
-      <!-- Right Actions: Region / Collective Theme Switcher + Contact Us Pill -->
-      <div class="wpp-header-actions">
-        <button type="button" class="wpp-region-btn" onclick="openRegionModal()" aria-label="Region and Theme Selector">
+      <!-- Right Actions: Region / Theme Switcher + Contact Us Pill -->
+      <div class="gt-header-actions">
+        <button type="button" class="gt-region-btn" onclick="openRegionModal()" aria-label="Region and Theme Selector">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <circle cx="12" cy="12" r="10"/>
             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -2342,14 +2340,14 @@
           <svg width="10" height="6" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </button>
 
-        <a href="javascript:void(0)" onclick="openContactModal()" class="wpp-btn wpp-btn--primary wpp-btn--compact">
-          <span class="wpp-btn-label">
-            <span class="wpp-btn-text-1" data-i18n="nav_contact">Contact</span>
-            <span class="wpp-btn-text-2" data-i18n="nav_contact">Contact</span>
+        <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--primary gt-btn--compact">
+          <span class="gt-btn-label">
+            <span class="gt-btn-text-1" data-i18n="nav_contact">Contact</span>
+            <span class="gt-btn-text-2" data-i18n="nav_contact">Contact</span>
           </span>
         </a>
 
-        <button type="button" class="wpp-mobile-toggle" onclick="document.getElementById('wppMainNav').classList.toggle('mobile-open')" aria-label="Toggle Menu">
+        <button type="button" class="gt-mobile-toggle" onclick="document.getElementById('gtMainNav').classList.toggle('mobile-open')" aria-label="Toggle Menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
           </svg>
@@ -2369,7 +2367,7 @@
         <div class="wrapper hero-text-block">
           <div class="hero-eyebrow-pill">
             <span class="hero-eyebrow-dot"></span>
-            <span data-i18n="hero_badge">WPP MEDIA COLLECTIVE STYLE • GIAUTRAN.ME</span>
+            <span data-i18n="hero_badge">DATA-DRIVEN CREATIVE &amp; GROWTH STUDIO • GIAUTRAN.ME</span>
           </div>
 
           <h1 class="hero-heading" data-i18n="hero_heading">
@@ -2377,13 +2375,13 @@
             <span class="line">We are GT Media.</span>
           </h1>
 
-          <!-- WPP Media Signature Split-Pill CTA Button -->
-          <a href="#open-intelligence" class="wpp-btn wpp-btn--primary">
-            <span class="wpp-btn-label">
-              <span class="wpp-btn-text-1" data-i18n="hero_cta">Unlock intelligent growth</span>
-              <span class="wpp-btn-text-2" data-i18n="hero_cta">Unlock intelligent growth</span>
+          <!-- Split-Pill CTA Button -->
+          <a href="#open-intelligence" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1" data-i18n="hero_cta">Unlock intelligent growth</span>
+              <span class="gt-btn-text-2" data-i18n="hero_cta">Unlock intelligent growth</span>
             </span>
-            <span class="wpp-btn-arrow" aria-hidden="true">
+            <span class="gt-btn-arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -2397,13 +2395,12 @@
             <canvas class="hero-showreel-canvas" id="heroShowreelCanvas"></canvas>
             <div class="hero-video-overlay-ui">
               <button type="button" class="play-showreel-btn" onclick="openShowreelModal()" aria-label="Play the video">
-                <!-- Exact WPP Media 154x154 Play SVG Icon -->
                 <svg viewBox="0 0 154 154" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#wppPlayShadow)">
+                  <g filter="url(#gtPlayShadow)">
                     <path fill="#fff" d="M77 15c-34.241 0-62 27.759-62 62 0 34.243 27.759 62 62 62 34.243 0 62-27.757 62-62 0-34.241-27.757-62-62-62Zm21.184 64.683-29.45 17.005a3.102 3.102 0 0 1-4.65-2.684V59.995a3.098 3.098 0 0 1 4.65-2.684l29.45 17.005a3.097 3.097 0 0 1 0 5.366Z"/>
                   </g>
                   <defs>
-                    <filter id="wppPlayShadow" width="152.571" height="152.571" x=".714" y=".714" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                    <filter id="gtPlayShadow" width="152.571" height="152.571" x=".714" y=".714" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
                       <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                       <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                       <feOffset/>
@@ -2438,13 +2435,13 @@
         </h2>
         <div class="title-text-body" data-i18n="believe_body">
           <p>
-            We are the global-standard digital &amp; media studio at <strong>giautran.me</strong> — combining predictive AI intelligence, enterprise web architecture, and high-converting digital ecosystems across Europe and Asia.
+            Founded in 2017, <strong>GT Media (giautran.me)</strong> combines Technical SEO, multi-market Performance Ads (PPC), E-E-A-T Content Strategy, and O2O CRM Ecosystems to deliver measurable business outcomes across Vietnam, Southeast Asia, Germany, and Australia.
           </p>
         </div>
       </section>
     </div>
 
-    <!-- 3C. STICKY STACKING CARDS SECTION (01, 02, 03, 04 - Exact WPP Media Layout) -->
+    <!-- 3C. STICKY STACKING CARDS SECTION (01, 02, 03, 04) -->
     <div class="bg-dotted" id="capabilities">
       <section class="wrapper stacking-cards-section" aria-label="Core Pillars">
 
@@ -2453,26 +2450,26 @@
           <div class="stacking-card-body">
             <h2 class="stacking-card-title">
               <span class="num">01</span>
-              <span>Intelligence Beyond ID</span>
+              <span>Technical &amp; On-Page SEO</span>
             </h2>
             <div class="stacking-card-content-wrapper">
               <div class="stacking-card-content">
-                <h3>Predictive Intelligence Trained on Real Signals</h3>
+                <h3>Enterprise SEO Architecture &amp; AI Search (GEO)</h3>
                 <p>
-                  Intelligent growth means harnessing trillions of data points and real-time behavioral signals across a decentralized network to create unique, predictive intelligence for your brand — trained on your data, privacy-compliant by default, and tailored to your business goals.
+                  Deep technical audits of 8,900+ URLs using Screaming Frog, Core Web Vitals optimization (LCP &lt; 0.8s), server-level HSTS/CSP security hardening, and Crawl Budget preservation — engineered to dominate both Google organic rankings and Generative AI Overviews.
                 </p>
-                <a href="#open-intelligence" class="wpp-btn wpp-btn--primary">
-                  <span class="wpp-btn-label">
-                    <span class="wpp-btn-text-1">Unlock intelligent growth</span>
-                    <span class="wpp-btn-text-2">Unlock intelligent growth</span>
+                <a href="#open-intelligence" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">Explore SEO Engine</span>
+                    <span class="gt-btn-text-2">Explore SEO Engine</span>
                   </span>
-                  <span class="wpp-btn-arrow">
+                  <span class="gt-btn-arrow">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
                 </a>
               </div>
               <div class="stacking-card-image">
-                <img src="https://www.datocms-assets.com/153350/1748700044-oi_stacker-1.jpg" alt="Intelligence Beyond ID" />
+                <img src="/demo/images/seo-dashboard.jpg" alt="Technical &amp; On-Page SEO" />
               </div>
             </div>
           </div>
@@ -2483,26 +2480,26 @@
           <div class="stacking-card-body">
             <h2 class="stacking-card-title">
               <span class="num">02</span>
-              <span>AI-Driven, Outcome-Focused</span>
+              <span>Performance Ads (PPC)</span>
             </h2>
             <div class="stacking-card-content-wrapper">
               <div class="stacking-card-content">
-                <h3>Open Media &amp; Digital Experience Studio</h3>
+                <h3>Multi-Market Paid Search &amp; Conversion Engineering</h3>
                 <p>
-                  Everything we do is connected and powered by AI, enabling collaboration, speed, transparency, and creativity at every step. Our end-to-end digital delivery architecture unifies strategy, UX engineering, and real-time conversion optimization.
+                  Localized keyword research, high-converting ad copywriting, and GA4 first-party data attribution across Vietnam, Singapore, Malaysia, Thailand, Japan, and Europe — maximizing Quality Scores while driving down CPC and CPA.
                 </p>
-                <a href="#our-work" class="wpp-btn wpp-btn--primary">
-                  <span class="wpp-btn-label">
-                    <span class="wpp-btn-text-1">Learn more</span>
-                    <span class="wpp-btn-text-2">Learn more</span>
+                <a href="#our-work" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">View PPC Case Studies</span>
+                    <span class="gt-btn-text-2">View PPC Case Studies</span>
                   </span>
-                  <span class="wpp-btn-arrow">
+                  <span class="gt-btn-arrow">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
                 </a>
               </div>
               <div class="stacking-card-image">
-                <img src="https://www.datocms-assets.com/153350/1748001548-website_homepage_whoweare_image1.jpg" alt="AI-Driven, Outcome-Focused" />
+                <img src="/demo/images/ppc-campaign.jpg" alt="Performance Ads (PPC)" />
               </div>
             </div>
           </div>
@@ -2513,26 +2510,26 @@
           <div class="stacking-card-body">
             <h2 class="stacking-card-title">
               <span class="num">03</span>
-              <span>Seamlessly Connected</span>
+              <span>CRM Ecosystems &amp; O2O</span>
             </h2>
             <div class="stacking-card-content-wrapper">
               <div class="stacking-card-content">
-                <h3>Unified Media, Content, Data &amp; Commerce</h3>
+                <h3>Full-Funnel Zalo OA, Mini App &amp; Lifecycle Drip</h3>
                 <p>
-                  Because everything is media, our solutions span the entire marketing and digital ecosystem to connect with audiences anywhere. We enable global brands and ambitious enterprises to unify media, data, production, and commerce.
+                  Because every customer touchpoint matters, we architect seamless Online-to-Offline (O2O) data capture funnels, personalized lifecycle triggers, and automated Zalo ZNS / CRM workflows that increase repeat order rates by +38%.
                 </p>
-                <a href="#our-work" class="wpp-btn wpp-btn--primary">
-                  <span class="wpp-btn-label">
-                    <span class="wpp-btn-text-1">Explore Media Solutions</span>
-                    <span class="wpp-btn-text-2">Explore Media Solutions</span>
+                <a href="#our-work" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">Explore CRM Solutions</span>
+                    <span class="gt-btn-text-2">Explore CRM Solutions</span>
                   </span>
-                  <span class="wpp-btn-arrow">
+                  <span class="gt-btn-arrow">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
                 </a>
               </div>
               <div class="stacking-card-image">
-                <img src="https://www.datocms-assets.com/153350/1748001548-website_homepage_whoweare_image2.jpg" alt="Seamlessly Connected" />
+                <img src="/demo/images/crm-zalo.jpg" alt="CRM Ecosystems &amp; O2O" />
               </div>
             </div>
           </div>
@@ -2543,26 +2540,26 @@
           <div class="stacking-card-body">
             <h2 class="stacking-card-title">
               <span class="num">04</span>
-              <span>Better Together</span>
+              <span>Content &amp; SEO Copywriting</span>
             </h2>
             <div class="stacking-card-content-wrapper">
               <div class="stacking-card-content">
-                <h3>Creative Transformation Across Europe &amp; Asia</h3>
+                <h3>Search-Intent Driven Authority &amp; Brand Storytelling</h3>
                 <p>
-                  As an integrated digital collective operating across Berlin and Ho Chi Minh City, we fuel creative transformation through the power of technology, design, and AI — building better futures for our people, planet, clients, and communities.
+                  Combining international editorial standards with deep local market intelligence — crafting semantic topic clusters, service pages, and E-E-A-T authority content for supply chain, logistics, education, and consumer brands.
                 </p>
-                <a href="javascript:void(0)" onclick="openContactModal()" class="wpp-btn wpp-btn--primary">
-                  <span class="wpp-btn-label">
-                    <span class="wpp-btn-text-1">Partner with GT Media</span>
-                    <span class="wpp-btn-text-2">Partner with GT Media</span>
+                <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">Partner with GT Media</span>
+                    <span class="gt-btn-text-2">Partner with GT Media</span>
                   </span>
-                  <span class="wpp-btn-arrow">
+                  <span class="gt-btn-arrow">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
                 </a>
               </div>
               <div class="stacking-card-image">
-                <img src="https://www.datocms-assets.com/153350/1748002078-company-info-part-of-group-m.jpeg" alt="Better Together" />
+                <img src="/demo/images/team-brainstorm.jpg" alt="Content &amp; SEO Copywriting" />
               </div>
             </div>
           </div>
@@ -2576,43 +2573,43 @@
       <div class="open-intelligence-left">
         <div class="oi-feature-block active" onmouseenter="highlightOiNode('speed')" onclick="highlightOiNode('speed')">
           <span class="oi-badge">01 • Speed</span>
-          <h2 class="oi-title">AI-Powered Predictive Intelligence</h2>
+          <h2 class="oi-title">AI SEO Audit &amp; Core Web Vitals Engine</h2>
           <p class="oi-text">
-            Move from reactive reporting to real-time predictive action. Our AI workflows synthesize audience intent, search signals, and conversion telemetry in milliseconds.
+            Automated crawling and diagnostics across 8,900+ URLs — resolving indexability bottlenecks, canonical conflicts, HSTS/CSP headers, and achieving sub-second 0.8s LCP speed.
           </p>
         </div>
 
         <div class="oi-feature-block" onmouseenter="highlightOiNode('scale')" onclick="highlightOiNode('scale')">
           <span class="oi-badge">02 • Scale</span>
-          <h2 class="oi-title">Large Marketing &amp; Experience Model</h2>
+          <h2 class="oi-title">Multi-Market PPC &amp; Smart Bidding</h2>
           <p class="oi-text">
-            Trained on trillions of real-world commercial, cultural, and behavioral signals to scale across global markets and multilingual European &amp; APAC platforms without sacrificing sub-second performance.
+            Trained on commercial search intent across 5+ Southeast Asian and European markets to deliver localized ad copy, high Quality Scores, and an average 4.6x ROAS.
           </p>
         </div>
 
         <div class="oi-feature-block" onmouseenter="highlightOiNode('precision')" onclick="highlightOiNode('precision')">
           <span class="oi-badge">03 • Precision</span>
-          <h2 class="oi-title">Privacy by Default (EU GDPR &amp; TMG)</h2>
+          <h2 class="oi-title">Privacy by Default (EU GDPR &amp; First-Party Data)</h2>
           <p class="oi-text">
-            Never compromise user trust. Built-in German TMG &amp; EU DSGVO compliance ensures every customer touchpoint, data clean room, and analytics pipeline respects data sovereignty.
+            Operating across Ho Chi Minh City, Munich, and Melbourne with strict EU GDPR &amp; German TMG data compliance built into every analytics and conversion pipeline.
           </p>
         </div>
 
         <div class="oi-feature-block" onmouseenter="highlightOiNode('signals')" onclick="highlightOiNode('signals')">
           <span class="oi-badge">04 • Signals</span>
-          <h2 class="oi-title">Cross-Cloud &amp; Commerce Interoperability</h2>
+          <h2 class="oi-title">O2O CRM &amp; Lifecycle Drip Automation</h2>
           <p class="oi-text">
-            Connect brand storytelling directly to first-party data clean rooms, retail media networks, and executive business intelligence dashboards with zero data movement.
+            Connect paid acquisition and content hubs directly to Zalo OA, Mini App, and real-time lifecycle triggers that turn first-time visitors into loyal repeat buyers.
           </p>
         </div>
 
         <div style="margin-top: 1rem;">
-          <a href="javascript:void(0)" onclick="openContactModal()" class="wpp-btn wpp-btn--inverse">
-            <span class="wpp-btn-label">
-              <span class="wpp-btn-text-1">Deploy Open Intelligence</span>
-              <span class="wpp-btn-text-2">Deploy Open Intelligence</span>
+          <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--inverse">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Deploy Growth Intelligence</span>
+              <span class="gt-btn-text-2">Deploy Growth Intelligence</span>
             </span>
-            <span class="wpp-btn-arrow">
+            <span class="gt-btn-arrow">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
@@ -2622,7 +2619,7 @@
       <div class="open-intelligence-right">
         <div class="oi-gradient-bg"></div>
 
-        <!-- Rotating WPP Media Dot-Matrix Sphere SVG -->
+        <!-- Rotating Dot-Matrix Sphere SVG -->
         <svg class="oi-dots-globe" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg" id="oiGlobeSvg"></svg>
 
         <!-- 4 Glowing Orbital Nodes (Speed, Scale, Precision, Signals) + Center Emblem -->
@@ -2644,7 +2641,7 @@
             <span>Signals</span>
           </div>
 
-          <!-- Center WPP Open Intelligence Badge -->
+          <!-- Center Open Intelligence Badge -->
           <div class="oi-center-logo">
             <svg width="46" height="44" viewBox="0 0 56 56" fill="none">
               <circle cx="28" cy="8" r="3" fill="white"/><circle cx="16" cy="10" r="2.2" fill="white"/><circle cx="40" cy="10" r="2.2" fill="white"/>
@@ -2656,7 +2653,7 @@
               <circle cx="16" cy="46" r="2.2" fill="white"/><circle cx="28" cy="48" r="3" fill="white"/><circle cx="40" cy="46" r="2.2" fill="white"/>
             </svg>
             <div>
-              <div style="font-size: 16px; font-weight: 700; line-height: 1.1; color: #fff;">Open</div>
+              <div style="font-size: 16px; font-weight: 700; line-height: 1.1; color: #fff;">Growth</div>
               <div style="font-size: 16px; font-weight: 700; line-height: 1.1; color: #B1FD43;">Intelligence</div>
             </div>
           </div>
@@ -2672,12 +2669,12 @@
             <p class="card-carousel-lead" data-i18n="work_lead">Our work</p>
             <h2 data-i18n="work_heading">Extraordinary thinking. Extraordinary results.</h2>
           </div>
-          <a href="#news-views" class="wpp-btn wpp-btn--primary">
-            <span class="wpp-btn-label">
-              <span class="wpp-btn-text-1">Get Inspired</span>
-              <span class="wpp-btn-text-2">Get Inspired</span>
+          <a href="#news-views" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Get Inspired</span>
+              <span class="gt-btn-text-2">Get Inspired</span>
             </span>
-            <span class="wpp-btn-arrow">
+            <span class="gt-btn-arrow">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
@@ -2699,75 +2696,75 @@
 
           <!-- 3D Stacked Cards List -->
           <ul class="card-stack-list" id="workCardStack">
-            <!-- Slide 1: This Year Next Year 2026 Forecast -->
+            <!-- Slide 1: British Council IELTS PPC -->
             <li class="card-stack-item active">
               <article class="carousel-card-article">
                 <div class="carousel-card-image">
-                  <img src="https://www.datocms-assets.com/153350/1781101878-tyny-june-2026-web-hero-1.png" alt="This Year Next Year 2026 Forecast" />
+                  <img src="/demo/images/project-british-council.jpg" alt="British Council IELTS PPC Campaign" />
                 </div>
                 <div class="carousel-card-text">
                   <div class="carousel-card-top">
-                    <span class="carousel-card-tag">Research &amp; Business Intelligence</span>
+                    <span class="carousel-card-tag">Performance Ads • Southeast Asia</span>
                     <div class="carousel-card-icon-wrapper">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                   </div>
                   <div class="carousel-card-body-wrap">
-                    <a href="#news-views" class="carousel-card-cta-link">
-                      <h3 class="carousel-card-heading">This Year Next Year: 2026 Global End-of-Year Forecast</h3>
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">British Council — Multi-Market IELTS PPC Campaign</h3>
                     </a>
                     <p class="carousel-card-desc">
-                      Our latest forecast projects an 8.9% growth in global advertising revenue in 2026 to $1.3 trillion, driven by AI-native commerce, connected TV, and algorithmic media optimization.
+                      Localized keyword research, high-converting search ad templates, and landing page optimization for British Council IELTS across 5 Southeast Asian markets.
                     </p>
                   </div>
                 </div>
               </article>
             </li>
 
-            <!-- Slide 2: When You Know How To Move -->
+            <!-- Slide 2: Desire Online Enterprise SEO Audit -->
             <li class="card-stack-item">
               <article class="carousel-card-article">
                 <div class="carousel-card-image">
-                  <img src="https://www.datocms-assets.com/153350/1768315029-website-homepage-1.png" alt="When You Know How To Move" />
+                  <img src="/demo/images/project-desire-online.jpg" alt="Desire Online Enterprise SEO Audit" />
                 </div>
                 <div class="carousel-card-text">
                   <div class="carousel-card-top">
-                    <span class="carousel-card-tag">Global Brand Launch • AI Era</span>
+                    <span class="carousel-card-tag">Technical SEO • 8,900+ URLs</span>
                     <div class="carousel-card-icon-wrapper">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                   </div>
                   <div class="carousel-card-body-wrap">
-                    <a href="#open-intelligence" class="carousel-card-cta-link">
-                      <h3 class="carousel-card-heading">When You Know How To Move, The World Moves With You</h3>
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">Desire Online — Enterprise Technical SEO &amp; Security Audit</h3>
                     </a>
                     <p class="carousel-card-desc">
-                      Discover how our integrated collective orchestrates creative storytelling, predictive data models, and cultural velocity across every screen and touchpoint.
+                      Comprehensive Screaming Frog crawl of 8,900+ URLs, resolving canonical/noindex leaks, hardening HSTS/CSP security headers, and boosting Core Web Vitals.
                     </p>
                   </div>
                 </div>
               </article>
             </li>
 
-            <!-- Slide 3: The Age of Advertising Intelligence -->
+            <!-- Slide 3: Mali Family Health CRM Strategy -->
             <li class="card-stack-item">
               <article class="carousel-card-article">
                 <div class="carousel-card-image">
-                  <img src="https://www.datocms-assets.com/153350/1771444911-advertising-intelligence-newsroom-1-1.jpg" alt="The Age of Advertising Intelligence" />
+                  <img src="/demo/images/project-mali.jpg" alt="Mali Family Health CRM Strategy" />
                 </div>
                 <div class="carousel-card-text">
                   <div class="carousel-card-top">
-                    <span class="carousel-card-tag">Thought Leadership • AI &amp; Data</span>
+                    <span class="carousel-card-tag">Market Intelligence • CRM Ecosystem</span>
                     <div class="carousel-card-icon-wrapper">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                   </div>
                   <div class="carousel-card-body-wrap">
-                    <a href="#open-intelligence" class="carousel-card-cta-link">
-                      <h3 class="carousel-card-heading">Welcome to the Age of Advertising Intelligence</h3>
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">Mali Family Health — Mom CRM &amp; O2O Funnel Strategy</h3>
                     </a>
                     <p class="carousel-card-desc">
-                      Why legacy identity graphs are obsolete — and how multimodal AI models trained on live commercial signals unlock compounding brand growth.
+                      In-depth market intelligence decoding Zalo OA / Mini App lifecycle CRM funnels and content hub architecture (333K+ pageviews) for maternal &amp; family brands.
                     </p>
                   </div>
                 </div>
@@ -2778,46 +2775,46 @@
             <li class="card-stack-item">
               <article class="carousel-card-article">
                 <div class="carousel-card-image">
-                  <img src="/vegangarden/photos/store.jpg" alt="Vegan Garden Berlin" />
+                  <img src="/demo/images/project-vegan-garden.jpg" alt="Vegan Garden Berlin" />
                 </div>
                 <div class="carousel-card-text">
                   <div class="carousel-card-top">
-                    <span class="carousel-card-tag">Live Platform • Berlin, Germany (EU)</span>
+                    <span class="carousel-card-tag">Live Platform &amp; SEO • Berlin, Germany</span>
                     <div class="carousel-card-icon-wrapper">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                   </div>
                   <div class="carousel-card-body-wrap">
                     <a href="/vegangarden/" class="carousel-card-cta-link">
-                      <h3 class="carousel-card-heading">Vegan Garden Berlin: Plant-Based Culinary Flagship</h3>
+                      <h3 class="carousel-card-heading">Vegan Garden Berlin — SEO Strategy &amp; Culinary Flagship</h3>
                     </a>
                     <p class="carousel-card-desc">
-                      A trilingual (DE/EN/VI), 100% GDPR-compliant hospitality platform in Berlin Friedrichshain featuring interactive allergen-aware digital menus and frictionless table reservations.
+                      On-Page/Off-Page SEO audit, competitor intelligence, and a trilingual (DE/EN/VI), 100% GDPR-compliant hospitality web platform in Berlin Friedrichshain.
                     </p>
                   </div>
                 </div>
               </article>
             </li>
 
-            <!-- Slide 5: Open Intelligence Engine -->
+            <!-- Slide 5: PERSOL Kelly Content Marketing -->
             <li class="card-stack-item">
               <article class="carousel-card-article">
                 <div class="carousel-card-image">
-                  <img src="https://www.datocms-assets.com/153350/1748955630-oi-tn.png" alt="Open Intelligence Platform" />
+                  <img src="/demo/images/project-persol-kelly.jpg" alt="PERSOL Kelly Content Marketing" />
                 </div>
                 <div class="carousel-card-text">
                   <div class="carousel-card-top">
-                    <span class="carousel-card-tag">AI Technology • Open Intelligence</span>
+                    <span class="carousel-card-tag">Content Marketing • Search Intent SEO</span>
                     <div class="carousel-card-icon-wrapper">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                   </div>
                   <div class="carousel-card-body-wrap">
-                    <a href="#open-intelligence" class="carousel-card-cta-link">
-                      <h3 class="carousel-card-heading">Introducing Open Intelligence: Our First-of-its-Kind Large Marketing Model</h3>
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">PERSOL Kelly — Supply Chain &amp; Recruitment SEO Copywriting</h3>
                     </a>
                     <p class="carousel-card-desc">
-                      Connecting audience insights, creative optimization, and cross-channel media execution in a single privacy-first intelligence layer.
+                      Developing search-intent driven service pages and authority articles across Logistics, Manufacturing, and Supply Chain to accelerate organic talent acquisition.
                     </p>
                   </div>
                 </div>
@@ -2875,12 +2872,12 @@
             <p class="card-carousel-lead">News and Views</p>
             <h2 class="font-step-5">Measurable impact at every stage</h2>
           </div>
-          <a href="javascript:void(0)" onclick="openContactModal()" class="wpp-btn wpp-btn--primary">
-            <span class="wpp-btn-label">
-              <span class="wpp-btn-text-1">Start a project</span>
-              <span class="wpp-btn-text-2">Start a project</span>
+          <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Start a project</span>
+              <span class="gt-btn-text-2">Start a project</span>
             </span>
-            <span class="wpp-btn-arrow">
+            <span class="gt-btn-arrow">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
@@ -2888,76 +2885,76 @@
 
         <div class="case-studies-staggered-grid">
           <!-- Card 1 -->
-          <article class="wpp-case-card">
-            <a href="#open-intelligence">
-              <span class="wpp-case-tag">AI &amp; Predictive Media</span>
-              <div class="wpp-case-heading-row">
-                <h3 class="wpp-case-title">Open Intelligence: Transforming Multimodal Signals into Brand Outcomes</h3>
-                <svg class="wpp-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <article class="gt-case-card">
+            <a href="#our-work">
+              <span class="gt-case-tag">Performance Ads • PPC</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">British Council IELTS: Scaling High-Intent Search Ads Across Southeast Asia</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <p class="wpp-case-subtitle">How privacy-first AI models outperform legacy identity targeting across global commerce and video channels.</p>
-              <div class="wpp-case-media-box">
-                <div class="wpp-case-img-half"><img src="https://www.datocms-assets.com/153350/1771444911-advertising-intelligence-newsroom-1-1.jpg" alt="Open Intelligence Case Study" /></div>
-                <div class="wpp-case-stat-half">
-                  <h4>+42%</h4>
-                  <p>Incremental return on ad spend via predictive AI optimization</p>
+              <p class="gt-case-subtitle">Localized keyword strategy and ad copywriting engineered for 5 international markets.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-british-council.jpg" alt="British Council Case Study" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>4.6x</h4>
+                  <p>Average return on ad spend (ROAS) across multi-market campaigns</p>
                 </div>
               </div>
             </a>
           </article>
 
           <!-- Card 2 (Staggered Down) -->
-          <article class="wpp-case-card">
+          <article class="gt-case-card">
             <a href="#our-work">
-              <span class="wpp-case-tag">Research &amp; Business Intelligence</span>
-              <div class="wpp-case-heading-row">
-                <h3 class="wpp-case-title">This Year Next Year 2026: Global Advertising &amp; AI Forecast</h3>
-                <svg class="wpp-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="gt-case-tag">Technical SEO • Enterprise Audit</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">Desire Online: Auditing 8,900+ URLs to Eliminate Crawl Budget Waste</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <p class="wpp-case-subtitle">Exploring the forces reshaping global media investment, retail commerce, and agentic consumer journeys.</p>
-              <div class="wpp-case-media-box">
-                <div class="wpp-case-img-half"><img src="https://www.datocms-assets.com/153350/1781101878-tyny-june-2026-web-hero-1.png" alt="This Year Next Year 2026" /></div>
-                <div class="wpp-case-stat-half">
-                  <h4>$1.3T</h4>
-                  <p>Projected global advertising revenue in 2026 (+8.9% YoY)</p>
+              <p class="gt-case-subtitle">Screaming Frog deep diagnostics, canonical fixes, HSTS/CSP security, and Core Web Vitals optimization.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-desire-online.jpg" alt="Desire Online Case Study" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>+340%</h4>
+                  <p>Organic search growth with a 98/100 technical health score</p>
                 </div>
               </div>
             </a>
           </article>
 
           <!-- Card 3 -->
-          <article class="wpp-case-card">
-            <a href="/vegangarden/">
-              <span class="wpp-case-tag">Hospitality &amp; EU GDPR</span>
-              <div class="wpp-case-heading-row">
-                <h3 class="wpp-case-title">Vegan Garden Berlin: Sub-Second Gastronomy &amp; Table Booking</h3>
-                <svg class="wpp-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <article class="gt-case-card">
+            <a href="#our-work">
+              <span class="gt-case-tag">Market Intelligence • CRM</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">Mali Family Health: Decoding O2O Mom CRM &amp; Zalo Mini App Ecosystems</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <p class="wpp-case-subtitle">Delivering a trilingual (DE/EN/VI) culinary experience in Berlin with full German TMG &amp; DSGVO compliance.</p>
-              <div class="wpp-case-media-box">
-                <div class="wpp-case-img-half"><img src="/vegangarden/photos/store.jpg" alt="Vegan Garden Berlin" /></div>
-                <div class="wpp-case-stat-half">
-                  <h4>99.9%</h4>
-                  <p>Core Web Vitals &amp; GDPR compliance score in Germany</p>
+              <p class="gt-case-subtitle">Mapping lifecycle drip automation and high-authority content hubs for maternal &amp; consumer brands.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-mali.jpg" alt="Mali Family Health" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>333K+</h4>
+                  <p>Content hub pageviews &amp; +38% repeat conversion lift via CRM</p>
                 </div>
               </div>
             </a>
           </article>
 
           <!-- Card 4 (Staggered Down) -->
-          <article class="wpp-case-card">
-            <a href="#capabilities">
-              <span class="wpp-case-tag">Global Brand Experience</span>
-              <div class="wpp-case-heading-row">
-                <h3 class="wpp-case-title">Creative &amp; Media Convergence in the Agentic AI Era</h3>
-                <svg class="wpp-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <article class="gt-case-card">
+            <a href="/vegangarden/">
+              <span class="gt-case-tag">Hospitality &amp; EU GDPR</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">Vegan Garden Berlin: Sub-Second Gastronomy &amp; German SEO Strategy</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </div>
-              <p class="wpp-case-subtitle">Unifying dynamic creative optimization, cultural relevance, and omnichannel commerce across 80+ markets.</p>
-              <div class="wpp-case-media-box">
-                <div class="wpp-case-img-half"><img src="https://www.datocms-assets.com/153350/1748125585-dove-1.png" alt="Global Brand Campaign" /></div>
-                <div class="wpp-case-stat-half">
-                  <h4>3.8x</h4>
-                  <p>Higher brand lift and audience engagement across connected channels</p>
+              <p class="gt-case-subtitle">Delivering a trilingual (DE/EN/VI) culinary experience in Berlin with full German TMG &amp; DSGVO compliance.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-vegan-garden.jpg" alt="Vegan Garden Berlin" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>99.9%</h4>
+                  <p>Core Web Vitals &amp; GDPR compliance score in Germany</p>
                 </div>
               </div>
             </a>
@@ -2970,40 +2967,40 @@
     <section class="wrapper circle-gallery-section" id="careers">
       <div class="circle-gallery-container">
         <div class="circle-gallery-text">
-          <h3>Careers &amp; Collective</h3>
+          <h3>Leadership &amp; Collective</h3>
           <h2 data-i18n="careers_heading">Let's build the future together</h2>
           <p>
-            Hover over our collective constellation to see our studio in motion. Whether you're a brand seeking intelligent growth or an engineer passionate about AI and design, we'd love to collaborate.
+            Hover over our studio constellation to meet our team in motion. With 80+ specialists across Ho Chi Minh City, Munich, and Melbourne, we turn bold ideas and real-time data into lasting brand culture.
           </p>
           <div style="margin-top: 0.5rem;">
-            <a href="javascript:void(0)" onclick="openContactModal()" class="wpp-btn wpp-btn--inverse">
-              <span class="wpp-btn-label">
-                <span class="wpp-btn-text-1">Work With Us</span>
-                <span class="wpp-btn-text-2">Work With Us</span>
+            <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--inverse">
+              <span class="gt-btn-label">
+                <span class="gt-btn-text-1">Work With Us</span>
+                <span class="gt-btn-text-2">Work With Us</span>
               </span>
-              <span class="wpp-btn-arrow">
+              <span class="gt-btn-arrow">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
             </a>
           </div>
         </div>
 
-        <!-- 5 Orbiting Circular Images (Exact WPP Media Hover Morphing) -->
+        <!-- 5 Orbiting Circular Images -->
         <div class="circle-gallery-stage" role="list" aria-label="Gallery of images arranged in a circle">
           <div class="circle-gallery-item cg-item-0" role="listitem">
-            <img src="https://www.datocms-assets.com/153350/1748007222-website_homepage_careers_image1-edited.png" alt="Team Collaboration 1" />
+            <img src="/demo/images/tng-office.jpg" alt="GT Media Office" />
           </div>
           <div class="circle-gallery-item cg-item-1" role="listitem">
-            <img src="https://www.datocms-assets.com/153350/1748007193-website_homepage_careers_image2-edited.png" alt="Team Collaboration 2" />
+            <img src="/demo/images/team-phuong-anh.jpg" alt="Creative Leadership" />
           </div>
           <div class="circle-gallery-item cg-item-2" role="listitem">
-            <img src="https://www.datocms-assets.com/153350/1748007259-website_homepage_careers_image3-edited.png" alt="Team Collaboration 3" />
+            <img src="/demo/images/team-khanh-linh.jpg" alt="Strategy Leadership" />
           </div>
           <div class="circle-gallery-item cg-item-3" role="listitem">
-            <img src="https://www.datocms-assets.com/153350/1748007034-website_homepage_careers_image4-edited.png" alt="Team Collaboration 4" />
+            <img src="/demo/images/team-brainstorm.jpg" alt="Studio Brainstorm" />
           </div>
           <div class="circle-gallery-item cg-item-4" role="listitem">
-            <img src="https://www.datocms-assets.com/153350/1748007108-website_homepage_careers_image5-edited.png" alt="Team Collaboration 5" />
+            <img src="/demo/images/team-thanh-long.jpg" alt="Technology Leadership" />
           </div>
         </div>
       </div>
@@ -3012,15 +3009,15 @@
   </main>
 
   <!-- ========================================================================
-       4. WPP MEDIA FOOTER (.wpp-footer)
+       4. FOOTER
        ======================================================================== -->
-  <footer class="wpp-footer">
+  <footer class="gt-footer">
     <div class="wrapper">
-      <div class="wpp-footer-grid">
+      <div class="gt-footer-grid">
         <!-- Footer Brand Logo -->
         <div>
-          <a href="/demo/" class="wpp-logo-link" style="color: #ffffff; margin-bottom: 1.25rem;">
-            <svg class="wpp-logo-svg" viewBox="0 0 245 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="/demo/" class="gt-logo-link" style="color: #ffffff; margin-bottom: 1.25rem;">
+            <svg class="gt-logo-svg" viewBox="0 0 245 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g fill="#ffffff">
                 <circle cx="8" cy="12" r="2.2"/><circle cx="8" cy="20" r="2.6"/><circle cx="8" cy="28" r="2.2"/>
                 <circle cx="15" cy="7" r="2.1"/><circle cx="15" cy="14" r="2.6"/><circle cx="15" cy="26" r="2.6"/><circle cx="15" cy="33" r="2.1"/>
@@ -3035,45 +3032,45 @@
             </svg>
           </a>
           <p style="color: rgba(255,255,255,0.75); font-size: 0.9rem; max-width: 22rem; line-height: 1.6;">
-            Delivering intelligent growth for the AI era. Engineered across Berlin, Germany &amp; Ho Chi Minh City, Vietnam.
+            Delivering intelligent growth for the AI era. Operating across Ho Chi Minh City, Munich (Germany) &amp; Melbourne (Australia).
           </p>
         </div>
 
-        <!-- 4-Column Sitemap matching WPP Media -->
-        <div class="wpp-footer-sitemap">
-          <div class="wpp-footer-col">
-            <h2 class="wpp-footer-col-title">Company</h2>
+        <!-- 4-Column Sitemap -->
+        <div class="gt-footer-sitemap">
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Company</h2>
             <ul>
               <li><a href="#we-believe" class="link-underline-hover-only">About us</a></li>
               <li><a href="#our-work" class="link-underline-hover-only">Client Successes</a></li>
               <li><a href="#news-views" class="link-underline-hover-only">News and Views</a></li>
-              <li><a href="#open-intelligence" class="link-underline-hover-only">Open Intelligence</a></li>
+              <li><a href="#open-intelligence" class="link-underline-hover-only">Growth Intelligence</a></li>
               <li><a href="javascript:void(0)" onclick="openContactModal()" class="link-underline-hover-only">Contact</a></li>
             </ul>
           </div>
 
-          <div class="wpp-footer-col">
-            <h2 class="wpp-footer-col-title">Solutions &amp; Work</h2>
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Capabilities</h2>
             <ul>
-              <li><a href="#open-intelligence" class="link-underline-hover-only">Open Intelligence AI</a></li>
-              <li><a href="#capabilities" class="link-underline-hover-only">Media &amp; Data Studio</a></li>
-              <li><a href="#our-work" class="link-underline-hover-only">Global Forecast 2026</a></li>
+              <li><a href="#capabilities" class="link-underline-hover-only">Technical &amp; AI SEO</a></li>
+              <li><a href="#capabilities" class="link-underline-hover-only">Performance Ads (PPC)</a></li>
+              <li><a href="#capabilities" class="link-underline-hover-only">Zalo &amp; O2O CRM</a></li>
               <li><a href="/vegangarden/" class="link-underline-hover-only">Vegan Garden Berlin</a></li>
             </ul>
           </div>
 
-          <div class="wpp-footer-col">
-            <h2 class="wpp-footer-col-title">Collective Themes</h2>
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Studio Themes</h2>
             <ul>
-              <li><a href="javascript:void(0)" onclick="setWppTheme('wppmedia')" class="link-underline-hover-only">WPP Media (Acid Lime)</a></li>
-              <li><a href="javascript:void(0)" onclick="setWppTheme('essencemediacom')" class="link-underline-hover-only">EssenceMediacom (Pink)</a></li>
-              <li><a href="javascript:void(0)" onclick="setWppTheme('wavemaker')" class="link-underline-hover-only">Wavemaker (Orange)</a></li>
-              <li><a href="javascript:void(0)" onclick="setWppTheme('mindshare')" class="link-underline-hover-only">Mindshare (Purple)</a></li>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('gtmedia')" class="link-underline-hover-only">Acid Lime (Default)</a></li>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('performance')" class="link-underline-hover-only">Cyber Pink</a></li>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('seo')" class="link-underline-hover-only">Solar Orange</a></li>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('crm')" class="link-underline-hover-only">Electric Violet</a></li>
             </ul>
           </div>
 
-          <div class="wpp-footer-col">
-            <h2 class="wpp-footer-col-title">Connect with us</h2>
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Connect with us</h2>
             <ul>
               <li>
                 <a href="https://github.com/giautranth" target="_blank" rel="noopener" class="link-underline-hover-only">
@@ -3099,8 +3096,8 @@
       </div>
 
       <!-- Legal & Policy Bar -->
-      <div class="wpp-footer-legal">
-        <ul class="wpp-policy-list">
+      <div class="gt-footer-legal">
+        <ul class="gt-policy-list">
           <li><a href="/impressum.html" class="link-underline-hover-only">Impressum</a></li>
           <li><a href="/datenschutz.html" class="link-underline-hover-only">Privacy Policy &amp; Legal (Datenschutz)</a></li>
           <li><a href="/cookie-einstellungen.html" class="link-underline-hover-only">Cookie Settings</a></li>
@@ -3116,31 +3113,31 @@
   <!-- ========================================================================
        5. MODALS: REGION/THEME SWITCHER, SHOWREEL VIDEO & CONTACT FORM
        ======================================================================== -->
-  <!-- Region & Collective Theme Switcher Modal -->
-  <div class="wpp-modal-backdrop" id="regionModal" onclick="if(event.target.id==='regionModal') closeRegionModal()">
-    <div class="wpp-modal-card">
-      <div class="wpp-modal-header">
-        <h3 style="color: var(--colors-brand-primary); font-size: 1.35rem;">Change your region, language &amp; collective theme</h3>
-        <button type="button" class="wpp-modal-close" onclick="closeRegionModal()">Close &times;</button>
+  <!-- Region & Theme Switcher Modal -->
+  <div class="gt-modal-backdrop" id="regionModal" onclick="if(event.target.id==='regionModal') closeRegionModal()">
+    <div class="gt-modal-card">
+      <div class="gt-modal-header">
+        <h3 style="color: var(--colors-brand-primary); font-size: 1.35rem;">Change your region, language &amp; studio theme</h3>
+        <button type="button" class="gt-modal-close" onclick="closeRegionModal()">Close &times;</button>
       </div>
 
       <p style="font-size: 0.9rem; font-weight: 600; color: var(--colors-brand-primary); text-transform: uppercase;">1. Select Language &amp; Office Hub</p>
       <div class="region-grid">
-        <div class="region-card-item active" onclick="switchWppLang('en', 'Global • EN', this)">
+        <div class="region-card-item active" onclick="switchGtLang('en', 'Global • EN', this)">
           <div>
             <div style="font-weight: 600; color: var(--colorSystemBlack);">Global (English)</div>
             <div style="font-size: 0.8rem; color: var(--colors-system-textTertiary);">International Edition</div>
           </div>
           <span style="font-weight: 700; color: var(--colors-brand-secondary);">EN</span>
         </div>
-        <div class="region-card-item" onclick="switchWppLang('de', 'Germany • DE', this)">
+        <div class="region-card-item" onclick="switchGtLang('de', 'Germany • DE', this)">
           <div>
-            <div style="font-weight: 600; color: var(--colorSystemBlack);">Germany (Berlin)</div>
+            <div style="font-weight: 600; color: var(--colorSystemBlack);">Germany (Munich / Berlin)</div>
             <div style="font-size: 0.8rem; color: var(--colors-system-textTertiary);">Deutsch / DACH Hub</div>
           </div>
           <span style="font-weight: 700; color: var(--colors-brand-secondary);">DE</span>
         </div>
-        <div class="region-card-item" onclick="switchWppLang('vi', 'Vietnam • VI', this)">
+        <div class="region-card-item" onclick="switchGtLang('vi', 'Vietnam • VI', this)">
           <div>
             <div style="font-weight: 600; color: var(--colorSystemBlack);">Vietnam (Ho Chi Minh City)</div>
             <div style="font-size: 0.8rem; color: var(--colors-system-textTertiary);">Tiếng Việt / APAC Hub</div>
@@ -3149,39 +3146,39 @@
         </div>
       </div>
 
-      <p style="font-size: 0.9rem; font-weight: 600; color: var(--colors-brand-primary); text-transform: uppercase; margin-top: 2rem;">2. WPP Media Collective Theme Engine</p>
+      <p style="font-size: 0.9rem; font-weight: 600; color: var(--colors-brand-primary); text-transform: uppercase; margin-top: 2rem;">2. GT Media Studio Theme Engine</p>
       <p style="font-size: 0.88rem; color: var(--colors-system-textSecondary); margin-top: 0.25rem;">
-        Experience how WPP Media's multi-brand design system adapts accent tokens and ambient orbs across its agency collective:
+        Customize the interactive accent tokens and ambient gradient orbs across the studio interface:
       </p>
       <div class="theme-pills-bar">
-        <button type="button" class="theme-pill-btn active" id="theme-btn-wppmedia" onclick="setWppTheme('wppmedia')">
+        <button type="button" class="theme-pill-btn active" id="theme-btn-gtmedia" onclick="setGtTheme('gtmedia')">
           <span class="theme-swatch" style="background: #B1FD43; border: 1px solid #000050;"></span>
-          <span>WPP Media (Acid Lime)</span>
+          <span>Acid Lime (Default)</span>
         </button>
-        <button type="button" class="theme-pill-btn" id="theme-btn-essencemediacom" onclick="setWppTheme('essencemediacom')">
+        <button type="button" class="theme-pill-btn" id="theme-btn-performance" onclick="setGtTheme('performance')">
           <span class="theme-swatch" style="background: #FD3E81;"></span>
-          <span>EssenceMediacom (Pink)</span>
+          <span>Cyber Pink</span>
         </button>
-        <button type="button" class="theme-pill-btn" id="theme-btn-wavemaker" onclick="setWppTheme('wavemaker')">
+        <button type="button" class="theme-pill-btn" id="theme-btn-seo" onclick="setGtTheme('seo')">
           <span class="theme-swatch" style="background: #FF8001;"></span>
-          <span>Wavemaker (Orange)</span>
+          <span>Solar Orange</span>
         </button>
-        <button type="button" class="theme-pill-btn" id="theme-btn-mindshare" onclick="setWppTheme('mindshare')">
+        <button type="button" class="theme-pill-btn" id="theme-btn-crm" onclick="setGtTheme('crm')">
           <span class="theme-swatch" style="background: #9A3EFF;"></span>
-          <span>Mindshare (Purple)</span>
+          <span>Electric Violet</span>
         </button>
       </div>
     </div>
   </div>
 
   <!-- Contact Modal -->
-  <div class="wpp-modal-backdrop" id="contactModal" onclick="if(event.target.id==='contactModal') closeContactModal()">
-    <div class="wpp-modal-card" style="max-width: 44rem;">
-      <div class="wpp-modal-header">
+  <div class="gt-modal-backdrop" id="contactModal" onclick="if(event.target.id==='contactModal') closeContactModal()">
+    <div class="gt-modal-card" style="max-width: 44rem;">
+      <div class="gt-modal-header">
         <h3 style="color: var(--colors-brand-primary); font-size: 1.4rem;">Unlock intelligent growth with GT Media</h3>
-        <button type="button" class="wpp-modal-close" onclick="closeContactModal()">Close &times;</button>
+        <button type="button" class="gt-modal-close" onclick="closeContactModal()">Close &times;</button>
       </div>
-      <form onsubmit="submitWppContact(event)" id="wppContactForm" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+      <form onsubmit="submitGtContact(event)" id="gtContactForm" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
         <div>
           <label style="display:block; font-size:0.82rem; font-weight:600; color:var(--colors-brand-primary); margin-bottom:0.35rem;">First Name *</label>
           <input type="text" name="firstName" required placeholder="Giau" style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;" />
@@ -3200,50 +3197,50 @@
         </div>
         <div style="grid-column: 1 / -1;">
           <label style="display:block; font-size:0.82rem; font-weight:600; color:var(--colors-brand-primary); margin-bottom:0.35rem;">How can we help you grow?</label>
-          <textarea name="message" rows="3" placeholder="Tell us about your AI, digital platform, or media goals..." style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;"></textarea>
+          <textarea name="message" rows="3" placeholder="Tell us about your Technical SEO, PPC, CRM, or digital platform goals..." style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;"></textarea>
         </div>
         <div style="grid-column: 1 / -1; margin-top: 0.5rem;">
-          <button type="submit" class="wpp-btn wpp-btn--primary">
-            <span class="wpp-btn-label">
-              <span class="wpp-btn-text-1">Send Inquiry</span>
-              <span class="wpp-btn-text-2">Send Inquiry</span>
+          <button type="submit" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Send Inquiry</span>
+              <span class="gt-btn-text-2">Send Inquiry</span>
             </span>
-            <span class="wpp-btn-arrow">
+            <span class="gt-btn-arrow">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </button>
         </div>
       </form>
-      <div id="wppContactSuccess" style="display:none; padding: 1.5rem; border-radius: 16px; background: #000050; color: #fff;"></div>
+      <div id="gtContactSuccess" style="display:none; padding: 1.5rem; border-radius: 16px; background: #000050; color: #fff;"></div>
     </div>
   </div>
 
   <!-- Showreel Modal -->
-  <div class="wpp-modal-backdrop" id="showreelModal" onclick="if(event.target.id==='showreelModal') closeShowreelModal()">
-    <div class="wpp-modal-card" style="max-width: 60rem; background: #000050; color: #fff;">
-      <div class="wpp-modal-header" style="border-bottom-color: rgba(255,255,255,0.15);">
-        <h3 style="color: #fff; font-size: 1.25rem;">We are GT Media — Showreel &amp; Intelligence Highlights</h3>
-        <button type="button" class="wpp-modal-close" onclick="closeShowreelModal()">Close &times;</button>
+  <div class="gt-modal-backdrop" id="showreelModal" onclick="if(event.target.id==='showreelModal') closeShowreelModal()">
+    <div class="gt-modal-card" style="max-width: 60rem; background: #000050; color: #fff;">
+      <div class="gt-modal-header" style="border-bottom-color: rgba(255,255,255,0.15);">
+        <h3 style="color: #fff; font-size: 1.25rem;">We are GT Media — Showreel &amp; Case Study Highlights</h3>
+        <button type="button" class="gt-modal-close" onclick="closeShowreelModal()">Close &times;</button>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
-        <a href="#open-intelligence" onclick="closeShowreelModal()" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
-          <img src="https://www.datocms-assets.com/153350/1748955630-oi-tn.png" alt="Open Intelligence" style="width:100%; height:150px; object-fit:cover;" />
+        <a href="#our-work" onclick="closeShowreelModal()" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
+          <img src="/demo/images/project-british-council.jpg" alt="British Council IELTS PPC" style="width:100%; height:150px; object-fit:cover;" />
           <div style="padding:1rem;">
-            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Pillar 01 • AI Engine</div>
-            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">Open Intelligence Platform ↗</div>
+            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 01 • PPC</div>
+            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">British Council IELTS SEA ↗</div>
           </div>
         </a>
         <a href="#our-work" onclick="closeShowreelModal()" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
-          <img src="https://www.datocms-assets.com/153350/1781101878-tyny-june-2026-web-hero-1.png" alt="This Year Next Year 2026" style="width:100%; height:150px; object-fit:cover;" />
+          <img src="/demo/images/project-desire-online.jpg" alt="Desire Online SEO Audit" style="width:100%; height:150px; object-fit:cover;" />
           <div style="padding:1rem;">
-            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Pillar 02 • Research &amp; BI</div>
-            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">This Year Next Year 2026 ↗</div>
+            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 02 • Technical SEO</div>
+            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">Desire Online (8,900+ URLs) ↗</div>
           </div>
         </a>
         <a href="/vegangarden/" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
-          <img src="/vegangarden/photos/store.jpg" alt="Vegan Garden Berlin" style="width:100%; height:150px; object-fit:cover;" />
+          <img src="/demo/images/project-vegan-garden.jpg" alt="Vegan Garden Berlin" style="width:100%; height:150px; object-fit:cover;" />
           <div style="padding:1rem;">
-            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Pillar 03 • Live Digital Flagship</div>
+            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 03 • Germany</div>
             <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">Vegan Garden Berlin (DE) ↗</div>
           </div>
         </a>
@@ -3257,7 +3254,7 @@
   <script>
     /* 1. Sticky Header Glassmorphism & Scroll Expand for Hero Video Mask */
     (function() {
-      const header = document.getElementById('wppHeader');
+      const header = document.getElementById('gtHeader');
       const mask = document.getElementById('heroVideoMask');
 
       function onScroll() {
@@ -3266,7 +3263,6 @@
           header.classList.toggle('scrolled', y > 30);
         }
         if (mask) {
-          // Smoothly expand circle clip-path from 62% to 100% as user scrolls 0 -> 380px
           const progress = Math.min(1, Math.max(0, y / 360));
           const radius = 62 + progress * 38;
           mask.style.setProperty('--hero-clip', radius.toFixed(1) + '%');
@@ -3276,7 +3272,7 @@
       onScroll();
     })();
 
-    /* 2. Interactive WPP Media Showreel Canvas (AI Data Streams + Media Nodes) */
+    /* 2. Interactive Showreel Canvas (AI Data Streams + Media Nodes) */
     let showreelRunning = true;
     (function() {
       const canvas = document.getElementById('heroShowreelCanvas');
@@ -3285,8 +3281,7 @@
       let w = 0, h = 0, t = 0;
 
       const bgImg = new Image();
-      bgImg.crossOrigin = 'anonymous';
-      bgImg.src = 'https://www.datocms-assets.com/153350/1763223921-homepage-we-are-wpp-media.jpg';
+      bgImg.src = '/demo/images/tng-office.jpg';
 
       const nodes = Array.from({ length: 46 }, (_, i) => ({
         x: Math.random(),
@@ -3313,14 +3308,13 @@
 
           if (bgImg.complete && bgImg.naturalWidth > 0) {
             ctx.save();
-            ctx.globalAlpha = 0.38;
+            ctx.globalAlpha = 0.42;
             const scale = 1.04 + Math.sin(t * 0.5) * 0.03;
             const dw = w * scale, dh = h * scale;
             ctx.drawImage(bgImg, (w - dw) / 2, (h - dh) / 2, dw, dh);
             ctx.restore();
           }
 
-          // Animated WPP Media Cobalt & Acid Lime Orbs inside Showreel
           const g1 = ctx.createRadialGradient(
             w * (0.3 + Math.sin(t) * 0.15), h * (0.4 + Math.cos(t * 0.8) * 0.15), 10,
             w * 0.35, h * 0.45, w * 0.45
@@ -3339,7 +3333,6 @@
           ctx.fillStyle = g2;
           ctx.fillRect(0, 0, w, h);
 
-          // Connect AI Network Nodes
           for (let i = 0; i < nodes.length; i++) {
             const a = nodes[i];
             a.x += a.vx; a.y += a.vy;
@@ -3382,7 +3375,7 @@
       }
     }
 
-    /* 3. Generate WPP Media Dot-Matrix Globe in Open Intelligence Section */
+    /* 3. Generate Dot-Matrix Globe in Growth Intelligence Section */
     (function() {
       const svg = document.getElementById('oiGlobeSvg');
       if (!svg) return;
@@ -3414,7 +3407,7 @@
       });
     }
 
-    /* 4. WPP Media 3D Depth-Stacked Card Carousel ("Our Work") */
+    /* 4. 3D Depth-Stacked Card Carousel ("Our Work") */
     let activeWorkIdx = 0;
     function updateWorkCarousel() {
       const items = document.querySelectorAll('#workCardStack .card-stack-item');
@@ -3450,15 +3443,15 @@
     }
     updateWorkCarousel();
 
-    /* 5. WPP Media Collective Theme Engine & Multilingual Switcher */
-    function setWppTheme(themeName) {
-      document.body.setAttribute('data-wpp-theme', themeName);
+    /* 5. Studio Theme Engine & Multilingual Switcher */
+    function setGtTheme(themeName) {
+      document.body.setAttribute('data-gt-theme', themeName);
       document.querySelectorAll('.theme-pill-btn').forEach(btn => {
         btn.classList.toggle('active', btn.id === 'theme-btn-' + themeName);
       });
     }
 
-    const WPP_I18N = {
+    const GT_I18N = {
       en: {
         nav_about: 'About us',
         nav_what: 'What we do',
@@ -3466,13 +3459,13 @@
         nav_news: 'News and Views',
         nav_careers: 'Careers',
         nav_contact: 'Contact',
-        hero_badge: 'WPP MEDIA COLLECTIVE STYLE • GIAUTRAN.ME',
+        hero_badge: 'DATA-DRIVEN CREATIVE & GROWTH STUDIO • GIAUTRAN.ME',
         hero_heading: '<span class="line">Intelligent growth for the AI era.</span><span class="line">We are GT Media.</span>',
         hero_cta: 'Unlock intelligent growth',
         play_video: 'Play the video',
         believe_lead: 'We Believe',
         believe_title: 'In a world reshaped by AI, media and digital experiences will be everywhere and in everything',
-        believe_body: '<p>We are the global-standard digital &amp; media studio at <strong>giautran.me</strong> — combining predictive AI intelligence, enterprise web architecture, and high-converting digital ecosystems across Europe and Asia.</p>',
+        believe_body: '<p>Founded in 2017, <strong>GT Media (giautran.me)</strong> combines Technical SEO, multi-market Performance Ads (PPC), E-E-A-T Content Strategy, and O2O CRM Ecosystems to deliver measurable business outcomes across Vietnam, Southeast Asia, Germany, and Australia.</p>',
         work_lead: 'Our work',
         work_heading: 'Extraordinary thinking. Extraordinary results.',
         careers_heading: "Let's build the future together"
@@ -3484,13 +3477,13 @@
         nav_news: 'News & Insights',
         nav_careers: 'Karriere',
         nav_contact: 'Kontakt',
-        hero_badge: 'WPP MEDIA COLLECTIVE DESIGN • BERLIN & HCMC',
+        hero_badge: 'DATENGETRIEBENES GROWTH & DIGITAL STUDIO • MÜNCHEN & HCMC',
         hero_heading: '<span class="line">Intelligentes Wachstum für die KI-Ära.</span><span class="line">Wir sind GT Media.</span>',
         hero_cta: 'Intelligentes Wachstum starten',
         play_video: 'Showreel abspielen',
         believe_lead: 'Unsere Überzeugung',
         believe_title: 'In einer durch KI neu geformten Welt sind Medien und digitale Erlebnisse überall und in allem',
-        believe_body: '<p>Wir sind das Digital- &amp; Media-Studio unter <strong>giautran.me</strong> — wir vereinen prädiktive KI-Intelligenz, Enterprise-Webarchitektur und messbares Markenwachstum in Europa und Asien.</p>',
+        believe_body: '<p>Gegründet 2017 vereint <strong>GT Media (giautran.me)</strong> Technical SEO, internationale Performance Ads (PPC), Content-Strategie und CRM-Ökosysteme für messbares Markenwachstum in Europa, Asien und Australien.</p>',
         work_lead: 'Unsere Projekte',
         work_heading: 'Außergewöhnliches Denken. Außergewöhnliche Ergebnisse.',
         careers_heading: 'Gemeinsam die Zukunft gestalten'
@@ -3502,21 +3495,21 @@
         nav_news: 'Góc nhìn & Báo cáo',
         nav_careers: 'Hợp tác',
         nav_contact: 'Liên hệ',
-        hero_badge: 'PHONG CÁCH WPP MEDIA COLLECTIVE • GIAUTRAN.ME',
+        hero_badge: 'STUDIO SÁNG TẠO & TĂNG TRƯỞNG DỮ LIỆU • GIAUTRAN.ME',
         hero_heading: '<span class="line">Tăng trưởng thông minh trong kỷ nguyên AI.</span><span class="line">Chúng tôi là GT Media.</span>',
         hero_cta: 'Khám phá tăng trưởng thông minh',
         play_video: 'Xem video giới thiệu',
         believe_lead: 'Tầm nhìn của chúng tôi',
         believe_title: 'Trong thế giới được định hình lại bởi AI, truyền thông và trải nghiệm số sẽ hiện diện ở mọi nơi',
-        believe_body: '<p>Chúng tôi là studio công nghệ, truyền thông và trải nghiệm số tại <strong>giautran.me</strong> — kết hợp trí tuệ nhân tạo dự đoán, nền tảng web doanh nghiệp và vận hành tăng trưởng tại Châu Âu và Châu Á.</p>',
+        believe_body: '<p>Thành lập từ năm 2017, <strong>GT Media (giautran.me)</strong> kết hợp Technical SEO, Performance Ads (PPC) đa thị trường, Content chuẩn E-E-A-T và hệ sinh thái CRM O2O nhằm mang lại tăng trưởng thực chất tại Việt Nam, Đông Nam Á, Đức và Úc.</p>',
         work_lead: 'Dự án thực tế',
         work_heading: 'Tư duy đột phá. Kết quả vượt trội.',
         careers_heading: 'Cùng nhau kiến tạo tương lai số'
       }
     };
 
-    function switchWppLang(lang, regionLabel, cardEl) {
-      const dict = WPP_I18N[lang] || WPP_I18N.en;
+    function switchGtLang(lang, regionLabel, cardEl) {
+      const dict = GT_I18N[lang] || GT_I18N.en;
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (dict[key]) el.innerHTML = dict[key];
@@ -3547,13 +3540,13 @@
       document.getElementById('showreelModal').classList.remove('active');
     }
 
-    function submitWppContact(e) {
+    function submitGtContact(e) {
       e.preventDefault();
       const fd = new FormData(e.target);
       const name = (fd.get('firstName') || '') + ' ' + (fd.get('lastName') || '');
       const company = fd.get('company') || '';
       e.target.style.display = 'none';
-      const box = document.getElementById('wppContactSuccess');
+      const box = document.getElementById('gtContactSuccess');
       if (box) {
         box.style.display = 'block';
         box.innerHTML = `

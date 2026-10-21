@@ -690,27 +690,21 @@ ul{list-style:none}
 
 /* Gia An 115 Pulsing Ring Wave Animation */
 .float-btn__icon-ring{position:relative}
-.float-btn__icon-ring::before,
-.float-btn__icon-ring::after{content:'';position:absolute;top:-6px;left:-6px;right:-6px;bottom:-6px;border-radius:50%;border:2px solid currentColor;animation:ring-pulse-wave 2s infinite ease-out;pointer-events:none;opacity:0}
-.float-btn__icon-ring::after{animation-delay:1s}
+.float-btn__icon-ring::before{content:'';position:absolute;top:-3px;left:-3px;right:-3px;bottom:-3px;border-radius:50%;border:1.5px solid currentColor;animation:ring-pulse-wave 3.6s infinite ease-out;pointer-events:none;opacity:0}
+.float-btn__icon-ring::after{display:none}
 
-.float-btn--call-pill .float-btn__icon-ring::before,
-.float-btn--call-pill .float-btn__icon-ring::after{border-color:#ef4444}
+.float-btn--call-pill .float-btn__icon-ring::before{border-color:#ef4444}
 
 .float-btn--zalo::before,
-.float-btn--zalo::after,
-.float-btn--zalo .float-btn__icon-ring::before,
-.float-btn--zalo .float-btn__icon-ring::after{border-color:#0068FF}
+.float-btn--zalo .float-btn__icon-ring::before{border-color:#0068FF}
 
 .float-btn--messenger::before,
-.float-btn--messenger::after,
-.float-btn--messenger .float-btn__icon-ring::before,
-.float-btn--messenger .float-btn__icon-ring::after{border-color:#0084FF}
+.float-btn--messenger .float-btn__icon-ring::before{border-color:#0084FF;animation-delay:1.8s}
 
 @keyframes ring-pulse-wave{
-  0%{transform:scale(.9);opacity:.85}
-  60%{transform:scale(1.45);opacity:.3}
-  100%{transform:scale(1.9);opacity:0}
+  0%{transform:scale(.95);opacity:.55}
+  45%{transform:scale(1.38);opacity:0}
+  100%{transform:scale(1.38);opacity:0}
 }
 
 @keyframes icon-shake{

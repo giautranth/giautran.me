@@ -401,21 +401,63 @@
   <!-- FLOATING 3-COLUMN STATS CARD -->
   <div class="cih-floating-stats" id="stats-card">
     <div class="cih-stat-box">
-      <div class="cih-stat-num cih-stat-num--orange">16</div>
+      <div class="cih-stat-num cih-stat-num--orange" data-target="16" data-suffix="" style="font-variant-numeric: tabular-nums;">0</div>
       <div class="cih-stat-title">CHUYÊN KHOA</div>
     </div>
 
     <div class="cih-stat-box">
-      <div class="cih-stat-num cih-stat-num--orange">320</div>
-      <div class="cih-stat-title">GIƯỜNG BỆNH</div>
+      <div class="cih-stat-num cih-stat-num--orange" data-target="320" data-suffix="" style="font-variant-numeric: tabular-nums;">0</div>
+      <div class="cih-stat-title">GIƯỜNG</div>
     </div>
 
     <div class="cih-stat-box">
-      <div class="cih-stat-num cih-stat-num--orange">550+</div>
+      <div class="cih-stat-num cih-stat-num--orange" data-target="550" data-suffix="+" style="font-variant-numeric: tabular-nums;">0+</div>
       <div class="cih-stat-title">NHÂN VIÊN Y TẾ</div>
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    const statEls = document.querySelectorAll('#stats-card .cih-stat-num[data-target]');
+    if (!statEls.length) return;
+
+    function runCounter(el) {
+      const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1800;
+      const startTime = performance.now();
+
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // cubic ease-out
+        const current = Math.floor(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+      requestAnimationFrame(step);
+    }
+
+    const statsCard = document.getElementById('stats-card');
+    if ('IntersectionObserver' in window && statsCard) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            statEls.forEach(runCounter);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.25 });
+      obs.observe(statsCard);
+    } else {
+      statEls.forEach(runCounter);
+    }
+  })();
+</script>
 
 <!-- Section Về Chúng Tôi (Tiên Phong Chăm Sóc Sức Khỏe) hidden as requested -->
 

@@ -76,76 +76,78 @@
     }
 
     .doc-card-v2 {
-      background: var(--c-white);
-      border-radius: 18px;
-      padding: 0;
-      overflow: hidden;
-      border: 1px solid var(--c-border);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      background: #ffffff !important;
+      border-radius: 18px !important;
+      padding: 16px 16px 18px 16px !important;
+      overflow: hidden !important;
+      border: 1px solid #f5eedc !important;
+      box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      height: 100% !important;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
     .doc-card-v2:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.09);
-      border-color: rgba(0, 125, 165, 0.3);
+      transform: translateY(-6px) !important;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
+      border-color: #ead5a0 !important;
     }
     
     .doc-card-v2__img-wrap {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      margin-bottom: 0;
-      background: #f8f9fa;
-      position: relative;
-      border-radius: 18px 18px 0 0;
+      width: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+      overflow: hidden !important;
+      margin-bottom: 0 !important;
+      background: #f8fafc !important;
+      position: relative !important;
+      border-radius: 12px !important;
     }
     .doc-card-v2__img {
-      width: 100%;
-      height: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      object-position: top;
-      transition: transform 0.4s ease;
+      width: 100% !important;
+      height: 100% !important;
+      aspect-ratio: 1 / 1 !important;
+      object-fit: cover !important;
+      object-position: top center !important;
+      border-radius: 12px !important;
+      transition: transform 0.4s ease !important;
     }
     .doc-card-v2:hover .doc-card-v2__img {
-      transform: scale(1.04);
+      transform: scale(1.04) !important;
     }
     
     .doc-card-v2__body {
-      padding: 1.25rem 1.35rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1 1 auto;
-      justify-content: space-between;
+      padding: 20px 6px 0 6px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 1 auto !important;
+      justify-content: space-between !important;
     }
     
     .doc-card-v2__name {
-      font-size: 1.1rem !important;
-      font-weight: 700;
-      color: #0f172a;
-      margin-bottom: 0.35rem;
-      line-height: 1.4;
-      transition: color 0.2s ease;
+      font-size: 1.02rem !important;
+      font-weight: 800 !important;
+      color: #0f172a !important;
+      margin-bottom: 8px !important;
+      line-height: 1.4 !important;
+      transition: color 0.2s ease !important;
       text-align: center !important;
     }
-    .doc-card-v2:hover .doc-card-v2__name {
-      color: var(--c-primary);
+    .doc-card-v2:hover .doc-card-v2__name,
+    .doc-card-v2:hover .doc-card-v2__name a {
+      color: #007DA5 !important;
     }
     
     .doc-card-v2__position {
-      font-size: 0.88rem;
-      color: #64748b;
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-      line-height: 1.5;
-      min-height: 2.6rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      font-size: 0.82rem !important;
+      color: #64748b !important;
+      font-weight: 400 !important;
+      margin-bottom: 18px !important;
+      line-height: 1.55 !important;
+      min-height: 2.5rem !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
       text-align: center !important;
     }
     
@@ -167,31 +169,37 @@
       letter-spacing: 0.5px;
     }
     
-    .doc-card-v2__more-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #1e293b;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      width: fit-content;
-      margin-top: auto;
-      align-self: flex-start;
-      cursor: pointer;
+    .doc-card-v2__more-link,
+    a.doc-card-v2__more-link {
+      border-top: 1px solid #f5f0e6 !important;
+      padding-top: 14px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-end !important;
+      gap: 5px !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      color: #00688B !important;
+      text-decoration: none !important;
+      transition: all 0.25s ease !important;
+      width: 100% !important;
+      margin-top: auto !important;
+      text-align: right !important;
+      cursor: pointer !important;
     }
     
     .doc-card-v2__more-link .arrow {
-      transition: transform 0.25s ease;
+      color: #00688B !important;
+      font-weight: 700 !important;
+      transition: transform 0.25s ease !important;
     }
     
     .doc-card-v2__more-link:hover {
-      color: #007DA5;
+      color: #007DA5 !important;
     }
     
     .doc-card-v2__more-link:hover .arrow {
-      transform: translateX(4px);
+      transform: translateX(4px) !important;
     }
     
     @media(max-width: 992px) {
@@ -386,7 +394,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" style="color: inherit; text-decoration: none;">ThS.BS. Trần Quốc Thành</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Giám đốc Điều hành Bệnh viện Quốc tế City và Bệnh viện Gia An 115</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -397,7 +405,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" style="color: inherit; text-decoration: none;">BS.CKII. Phan Hoàng Nguyên</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Cố vấn Chuyên môn BGĐ BV Quốc tế City và Phó Giám đốc Điều hành BV Gia An 115</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -408,7 +416,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" style="color: inherit; text-decoration: none;">BS.CKII. Đặng Quang Thuyết</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Phó Giám đốc Y Khoa</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -419,7 +427,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" style="color: inherit; text-decoration: none;">ThS.BS. Trần Như Hải</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên khoa Nội tổng quát  - Trưởng phòng khám Quốc tế - Cố vấn cấp cao</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -430,7 +438,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" style="color: inherit; text-decoration: none;">PGS.TS. BS. Trần Minh Hoàng</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng Đơn vị Can thiệp mạch máu (DSA) và Chẩn đoán hình ảnh</div>
-          <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -441,7 +449,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Thị Ngọc Sương</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng Trung tâm Hỗ trợ sinh sản</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -452,7 +460,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" style="color: inherit; text-decoration: none;">BS.CKII. Trần Thanh Bình</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Khám bệnh</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -463,7 +471,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Bạch Huệ</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng khoa Nhi & Hồi sức Tích cực Sơ sinh</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -474,7 +482,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ts-bs-pham-chi-lang" style="color: inherit; text-decoration: none;">TS.BS. Phạm Chí Lăng</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng khoa Chấn Thương Chỉnh Hình</div>
-          <a href="chi-tiet-bac-si?slug=ts-bs-pham-chi-lang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ts-bs-pham-chi-lang" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -485,7 +493,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-le-kim-sang" style="color: inherit; text-decoration: none;">BS.CKII. Lê Kim Sang</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Tiêu Hóa & Nội Soi Tiêu Hóa</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-le-kim-sang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-le-kim-sang" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -496,7 +504,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-nhom" style="color: inherit; text-decoration: none;">ThS.BS.CKII. Nguyễn Văn Nhôm</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Cấp Cứu - Hồi sức Tích cực</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-nhom" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-nhom" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -507,7 +515,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-xuan-thanh" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Bảo Xuân Thanh</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Ngoại Tổng Quát</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-xuan-thanh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-xuan-thanh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -518,7 +526,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-ngan-ha" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Ngân Hà</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Phụ Sản</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-ngan-ha" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-ngan-ha" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -529,7 +537,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" style="color: inherit; text-decoration: none;">BS.CKII. Phạm Minh Khôi Nguyên</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Phụ Sản</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -540,7 +548,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" style="color: inherit; text-decoration: none;">BS.CKII. Trần Thế Lộc</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Phụ Sản</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -551,7 +559,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=thac-si-dang-truong-son" style="color: inherit; text-decoration: none;">Thạc sĩ Đặng Trường Sơn</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Phó trưởng Trung tâm Hỗ trợ sinh sản</div>
-          <a href="chi-tiet-bac-si?slug=thac-si-dang-truong-son" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=thac-si-dang-truong-son" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -562,7 +570,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-xuan-cong" style="color: inherit; text-decoration: none;">ThS.BS. Nguyễn Xuân Công</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Siêu Âm khoa Phụ Sản</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-xuan-cong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-xuan-cong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -573,7 +581,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Vũ Mỹ Linh</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">BS.CKII. Nguyễn Vũ Mỹ Linh - Phó Trưởng Khoa Phụ Sản</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -584,7 +592,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bscki-nguyen-xuan-tai" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Xuân Tài</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nhi</div>
-          <a href="chi-tiet-bac-si?slug=bscki-nguyen-xuan-tai" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bscki-nguyen-xuan-tai" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -595,7 +603,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-tra" style="color: inherit; text-decoration: none;">ThS.BS.CKI. Trần Thế Vinh</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Tim Mạch</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-tra" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-tra" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -606,7 +614,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-le-van-tuyen" style="color: inherit; text-decoration: none;">BS.CKI. Lê Văn Tuyến</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Tim Mạch</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-le-van-tuyen" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-le-van-tuyen" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -617,7 +625,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bscki-nguyen-thi-le-lieu" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Thị Lệ Liễu</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nhi</div>
-          <a href="chi-tiet-bac-si?slug=bscki-nguyen-thi-le-lieu" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bscki-nguyen-thi-le-lieu" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -628,7 +636,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-le-thi-ngoc-tran" style="color: inherit; text-decoration: none;">BS.CKI. Lê Thị Ngọc Trân</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Chuyên Khoa Dinh Dưỡng</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-le-thi-ngoc-tran" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-le-thi-ngoc-tran" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -639,7 +647,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-do-duc-tin" style="color: inherit; text-decoration: none;">ThS.BS. Đỗ Đức Tín</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Khám sức khỏe Tổng quát</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-do-duc-tin" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-do-duc-tin" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -650,7 +658,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-dinh-duc-minh" style="color: inherit; text-decoration: none;">BS.CKII. Đinh Đức Minh</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nội soi</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-dinh-duc-minh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-dinh-duc-minh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -661,7 +669,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-bui-thi-xuan-nga" style="color: inherit; text-decoration: none;">ThS.BS. Bùi Thị Xuân Nga</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Tim Mạch</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-bui-thi-xuan-nga" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-bui-thi-xuan-nga" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -672,7 +680,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-khoa" style="color: inherit; text-decoration: none;">ThS.BS. Nguyễn Văn Khoa</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Tổng Quát</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-khoa" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-khoa" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -683,7 +691,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-ong-kien-huy" style="color: inherit; text-decoration: none;">BS.CKI. Ông Kiến Huy</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Chẩn Đoán Hình Ảnh</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-ong-kien-huy" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-ong-kien-huy" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -694,7 +702,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-van-be-bay" style="color: inherit; text-decoration: none;">ThS.BS. Trần Văn Bé Bảy</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chấn Thương Chỉnh Hình & Cơ Xương Khớp</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-tran-van-be-bay" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-van-be-bay" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -705,7 +713,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-van-tinh" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Văn Tịnh</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ điều trị Chấn thương Chỉnh hình</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-van-tinh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-van-tinh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -716,7 +724,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-ckii-tran-trong-tam" style="color: inherit; text-decoration: none;">ThS.BS.CKII. Trần Trọng Tâm</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Thần kinh</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-ckii-tran-trong-tam" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-ckii-tran-trong-tam" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -727,7 +735,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-quoc-giang" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Quốc Giang</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Thần kinh</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-quoc-giang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-quoc-giang" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -738,7 +746,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ts-bs-huynh-hong-chau" style="color: inherit; text-decoration: none;">TS.BS. Huỳnh Hồng Châu</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Ngoại Thần kinh</div>
-          <a href="chi-tiet-bac-si?slug=ts-bs-huynh-hong-chau" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ts-bs-huynh-hong-chau" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -749,7 +757,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-thi-mai-thy" style="color: inherit; text-decoration: none;">ThS.BS. Trần Thị Mai Thy</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên Khoa Nội Thần Kinh</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-tran-thi-mai-thy" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-tran-thi-mai-thy" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -760,7 +768,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bsckii-duong-anh-phuong" style="color: inherit; text-decoration: none;">BS. CKII. Dương Anh Phượng</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Trưởng khoa Nội Tổng Quát</div>
-          <a href="chi-tiet-bac-si?slug=bsckii-duong-anh-phuong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bsckii-duong-anh-phuong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -771,7 +779,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-ckii-hoang-chan-phuong" style="color: inherit; text-decoration: none;">ThS. BS. CKII. Hoàng Chân Phương</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Nội Tổng Quát</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-ckii-hoang-chan-phuong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-ckii-hoang-chan-phuong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -782,7 +790,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-minh-tuan-b" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Minh Tuấn B</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Gây mê Hồi sức</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-minh-tuan-b" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-minh-tuan-b" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -793,7 +801,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-thi-hong-cam" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Thị Hồng Cẩm</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Chuyên khoa Tim mạch Nhi</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-thi-hong-cam" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-thi-hong-cam" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -804,7 +812,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-phuoc-loc" style="color: inherit; text-decoration: none;">ThS.BS. Nguyễn Phước Lộc</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Hồi Sức Tích Cực</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-phuoc-loc" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-phuoc-loc" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -815,7 +823,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-hoa" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Bảo Hòa</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Da liễu & Nội cơ xương khớp</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-hoa" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-hoa" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -826,7 +834,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-mai-thi-huong-thao" style="color: inherit; text-decoration: none;">BS.CKI. Mai Thị Hương Thảo</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Mắt</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-mai-thi-huong-thao" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-mai-thi-huong-thao" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -837,7 +845,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-thai-ha" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Thị Thái Hà</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Tiết Niệu</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-thai-ha" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-thai-ha" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -848,7 +856,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-le-duc-tho" style="color: inherit; text-decoration: none;">BS. Lê Đức Thọ</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Da liễu</div>
-          <a href="chi-tiet-bac-si?slug=bs-le-duc-tho" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-le-duc-tho" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -859,7 +867,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-duong-thi-kim-cuc" style="color: inherit; text-decoration: none;">BS.CKII. Dương Thị Kim Cúc</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Nhi, Tiết Niệu</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-duong-thi-kim-cuc" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-duong-thi-kim-cuc" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -870,7 +878,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-cu-thi-kim-loan" style="color: inherit; text-decoration: none;">BS.CKII. Cù Thị Kim Loan</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Trung tâm Hỗ trợ sinh sản</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-cu-thi-kim-loan" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-cu-thi-kim-loan" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -881,7 +889,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-manh-hung" style="color: inherit; text-decoration: none;">BS.CKI. NGUYỄN MẠNH HÙNG</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Ngoại Thần kinh - Cố vấn Chuyên môn Cấp cao Ban Giám đốc</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-manh-hung" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-manh-hung" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -892,7 +900,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-ngoc-quynh-dung" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Ngọc Quỳnh Dung</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Nội Tim mạch</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-ngoc-quynh-dung" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-ngoc-quynh-dung" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -903,7 +911,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-pham-tran-thien-nhan" style="color: inherit; text-decoration: none;">ThS.BS. Phạm Trần Thiên Nhân</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Dinh dưỡng</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-pham-tran-thien-nhan" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-pham-tran-thien-nhan" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -914,7 +922,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-khuc-thua-minh" style="color: inherit; text-decoration: none;">BS. CKI. Khúc Thừa Minh</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Nội Thần kinh</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-khuc-thua-minh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-khuc-thua-minh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -925,7 +933,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-cki-ha-phu-xuan" style="color: inherit; text-decoration: none;">ThS.BS.CKI. Hà Phú Xuân</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Ngoại Tổng Quát</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-cki-ha-phu-xuan" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-cki-ha-phu-xuan" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -936,7 +944,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-le-quoc-khanh" style="color: inherit; text-decoration: none;">BS.CKI. Lê Quốc Khánh</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Cấp cứu</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-le-quoc-khanh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-le-quoc-khanh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -947,7 +955,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-truong-thanh-phuong" style="color: inherit; text-decoration: none;">BS. CKI. Trương Thanh Phương</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Cấp cứu</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-truong-thanh-phuong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-truong-thanh-phuong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -958,7 +966,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-trinh-bach-tuyet" style="color: inherit; text-decoration: none;">BS.CKII. Trịnh Bạch Tuyết</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Trưởng khoa Mắt</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-trinh-bach-tuyet" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-trinh-bach-tuyet" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -969,7 +977,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=cki-le-ngoc-hieu" style="color: inherit; text-decoration: none;">BS. CKI. Lê Ngọc Hiếu</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Tai Mũi Họng</div>
-          <a href="chi-tiet-bac-si?slug=cki-le-ngoc-hieu" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=cki-le-ngoc-hieu" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -980,7 +988,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-tran-hieu" style="color: inherit; text-decoration: none;">BS. Trần Hiếu</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khoa Cấp cứu</div>
-          <a href="chi-tiet-bac-si?slug=bs-tran-hieu" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-tran-hieu" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -991,7 +999,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-nguyen-le-nhan-van" style="color: inherit; text-decoration: none;">ThS. BS. Nguyễn Lê Nhân Văn</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ chuyên khoa Tai Mũi Họng</div>
-          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-le-nhan-van" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-le-nhan-van" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -1002,7 +1010,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-ho-thanh-phong" style="color: inherit; text-decoration: none;">BS.CKI. Hồ Thanh Phong</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Phẫu thuật tạo hình thẩm mỹ</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-ho-thanh-phong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-ho-thanh-phong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -1013,7 +1021,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-ha-thi-kim-hong" style="color: inherit; text-decoration: none;">BS.CKII. Hà Thị Kim Hồng</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Khám Tổng Quát & Nội Tiết</div>
-          <a href="chi-tiet-bac-si?slug=bs-ckii-ha-thi-kim-hong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-ckii-ha-thi-kim-hong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 
@@ -1024,7 +1032,7 @@
         <div class="doc-card-v2__body">
           <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-tran-phuong-thao" style="color: inherit; text-decoration: none;">BS.CKI. Trần Phương Thảo</a></h3>
           <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Phục hồi Chức năng</div>
-          <a href="chi-tiet-bac-si?slug=bs-cki-tran-phuong-thao" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; text-decoration: none; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+          <a href="chi-tiet-bac-si?slug=bs-cki-tran-phuong-thao" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
         </div>
       </div>
 

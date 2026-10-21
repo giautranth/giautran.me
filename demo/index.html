@@ -1523,38 +1523,49 @@
     }
 
     .logo-slide-tile {
-      width: 156px;
-      height: 84px;
-      background-color: var(--colors-brand-primary);
+      width: 176px;
+      height: 88px;
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 0, 80, 0.08);
       border-radius: var(--radiusSmall);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-right: var(--spacingMedium);
-      padding: 1rem 1.5rem;
-      color: #ffffff;
+      padding: 0.85rem 1.35rem;
+      color: var(--colors-brand-primary);
       font-weight: var(--fontWeightBold);
       font-size: 0.95rem;
       letter-spacing: 0.03em;
       text-align: center;
       flex-shrink: 0;
-      box-shadow: 0 6px 18px rgba(0, 0, 80, 0.12);
-      transition: transform 0.25s ease, background-color 0.25s ease;
+      box-shadow: 0 6px 18px rgba(0, 0, 80, 0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
       text-decoration: none;
+    }
+
+    .logo-slide-tile--dark {
+      background-color: #301403;
+      border-color: rgba(212, 175, 55, 0.3);
+      padding: 0.4rem 1rem;
     }
 
     .logo-slide-tile:hover {
       transform: translateY(-3px);
-      background-color: var(--colors-brand-secondary);
+      border-color: var(--colors-brand-secondary);
+      box-shadow: 0 10px 26px rgba(84, 101, 255, 0.16);
     }
 
     .logo-slide-tile img {
-      max-height: 44px;
-      max-width: 112px;
+      max-height: 54px;
+      max-width: 136px;
       width: auto;
       height: auto;
       object-fit: contain;
-      filter: brightness(0) invert(1);
+    }
+
+    .logo-slide-tile--dark img {
+      max-height: 70px;
     }
 
     @keyframes wppMarqueeScroll {
@@ -2817,39 +2828,41 @@
       </section>
     </div>
 
-    <!-- 3F. INFINITE NAVY TILE LOGO MARQUEE (bg-dotted) -->
+    <!-- 3F. INFINITE CLIENT LOGO MARQUEE (bg-dotted) -->
     <div class="bg-dotted">
       <section class="logo-carousel-section" aria-label="Partner Brands">
         <h2 class="logo-carousel-title">A proud partner to leading brands</h2>
         <div class="logo-marquee-track">
-          <!-- Set 1 (Exact WPP Media Global Partner Logos) -->
-          <div class="logo-slide-tile" title="Airbnb"><img src="https://www.datocms-assets.com/153350/1747223027-airbnb.png" alt="Airbnb" /></div>
-          <div class="logo-slide-tile" title="Coca-Cola"><img src="https://www.datocms-assets.com/153350/1748274712-white-cocacola_logo_png13.png" alt="Coca-Cola" /></div>
-          <div class="logo-slide-tile" title="Colgate-Palmolive"><img src="https://www.datocms-assets.com/153350/1748276050-stacked-colgate_palmolive.png" alt="Colgate-Palmolive" /></div>
-          <div class="logo-slide-tile" title="DoorDash"><img src="https://www.datocms-assets.com/153350/1748275577-stacked-door-dash-logo-png-images-hd.png" alt="DoorDash" /></div>
-          <div class="logo-slide-tile" title="Ford"><img src="https://www.datocms-assets.com/153350/1748274891-ford-logo-transparent-png.png" alt="Ford" /></div>
-          <div class="logo-slide-tile" title="Google"><img src="https://www.datocms-assets.com/153350/1748274928-google-white-logo.png" alt="Google" /></div>
-          <div class="logo-slide-tile" title="L'Oréal"><img src="https://www.datocms-assets.com/153350/1748274969-loreal-group-logo.png" alt="L'Oréal" /></div>
-          <div class="logo-slide-tile" title="LVMH"><img src="https://www.datocms-assets.com/153350/1748275020-lvmh-logo.png" alt="LVMH" /></div>
-          <div class="logo-slide-tile" title="Mastercard"><img src="https://www.datocms-assets.com/153350/1755852676-logo-mastercard-white.png" alt="Mastercard" /></div>
-          <div class="logo-slide-tile" title="NBCUniversal"><img src="https://www.datocms-assets.com/153350/1748275058-nbcuniversal-logo-white-01.png" alt="NBCUniversal" /></div>
-          <div class="logo-slide-tile" title="Nestlé"><img src="https://www.datocms-assets.com/153350/1748275100-nestle-logo-background-png.png" alt="Nestlé" /></div>
-          <div class="logo-slide-tile" title="Richemont"><img src="https://www.datocms-assets.com/153350/1748275650-richemont-stacked-r-icon.png" alt="Richemont" /></div>
-          <div class="logo-slide-tile" title="Unilever"><img src="https://www.datocms-assets.com/153350/1748275240-unilever-logo-white.png" alt="Unilever" /></div>
-          <!-- Set 2 (Duplicate for seamless infinite loop) -->
-          <div class="logo-slide-tile" title="Airbnb"><img src="https://www.datocms-assets.com/153350/1747223027-airbnb.png" alt="Airbnb" /></div>
-          <div class="logo-slide-tile" title="Coca-Cola"><img src="https://www.datocms-assets.com/153350/1748274712-white-cocacola_logo_png13.png" alt="Coca-Cola" /></div>
-          <div class="logo-slide-tile" title="Colgate-Palmolive"><img src="https://www.datocms-assets.com/153350/1748276050-stacked-colgate_palmolive.png" alt="Colgate-Palmolive" /></div>
-          <div class="logo-slide-tile" title="DoorDash"><img src="https://www.datocms-assets.com/153350/1748275577-stacked-door-dash-logo-png-images-hd.png" alt="DoorDash" /></div>
-          <div class="logo-slide-tile" title="Ford"><img src="https://www.datocms-assets.com/153350/1748274891-ford-logo-transparent-png.png" alt="Ford" /></div>
-          <div class="logo-slide-tile" title="Google"><img src="https://www.datocms-assets.com/153350/1748274928-google-white-logo.png" alt="Google" /></div>
-          <div class="logo-slide-tile" title="L'Oréal"><img src="https://www.datocms-assets.com/153350/1748274969-loreal-group-logo.png" alt="L'Oréal" /></div>
-          <div class="logo-slide-tile" title="LVMH"><img src="https://www.datocms-assets.com/153350/1748275020-lvmh-logo.png" alt="LVMH" /></div>
-          <div class="logo-slide-tile" title="Mastercard"><img src="https://www.datocms-assets.com/153350/1755852676-logo-mastercard-white.png" alt="Mastercard" /></div>
-          <div class="logo-slide-tile" title="NBCUniversal"><img src="https://www.datocms-assets.com/153350/1748275058-nbcuniversal-logo-white-01.png" alt="NBCUniversal" /></div>
-          <div class="logo-slide-tile" title="Nestlé"><img src="https://www.datocms-assets.com/153350/1748275100-nestle-logo-background-png.png" alt="Nestlé" /></div>
-          <div class="logo-slide-tile" title="Richemont"><img src="https://www.datocms-assets.com/153350/1748275650-richemont-stacked-r-icon.png" alt="Richemont" /></div>
-          <div class="logo-slide-tile" title="Unilever"><img src="https://www.datocms-assets.com/153350/1748275240-unilever-logo-white.png" alt="Unilever" /></div>
+          <!-- Half 1 (2x7 Client Logos from khach-hang) -->
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
+          <!-- Half 2 (Exact Duplicate for seamless -50% infinite loop) -->
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
         </div>
       </section>
     </div>

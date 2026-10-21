@@ -1581,6 +1581,80 @@
     pointer-events: none;
   }
 
+  /* Interactive Click Hint Icon on Each Card */
+  .cih-equip-card__hint {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    min-width: 38px;
+    padding: 0 10px;
+    border-radius: 99px;
+    background: rgba(0, 105, 142, 0.88);
+    border: 1.5px solid rgba(254, 240, 138, 0.92);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: cihHintPulse 2.2s infinite;
+  }
+
+  @keyframes cihHintPulse {
+    0% {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28), 0 0 0 0 rgba(254, 240, 138, 0.65);
+    }
+    70% {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28), 0 0 0 10px rgba(254, 240, 138, 0);
+    }
+    100% {
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28), 0 0 0 0 rgba(254, 240, 138, 0);
+    }
+  }
+
+  .cih-equip-card__hint svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    color: #fef08a;
+    transition: transform 0.35s ease;
+  }
+
+  .cih-equip-card__hint-text {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fef08a;
+    letter-spacing: 0.2px;
+    margin-left: 0;
+    transition: max-width 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease, margin-left 0.3s ease;
+  }
+
+  .cih-equip-card:hover .cih-equip-card__hint {
+    padding: 0 14px;
+    background: rgba(0, 90, 125, 0.96);
+    border-color: #fde047;
+    transform: translateY(-2px);
+  }
+
+  .cih-equip-card:hover .cih-equip-card__hint svg {
+    transform: scale(1.1);
+  }
+
+  .cih-equip-card:hover .cih-equip-card__hint-text {
+    max-width: 110px;
+    opacity: 1;
+    margin-left: 7px;
+  }
+
   .cih-equip-card__overlay {
     position: absolute;
     inset: 0;
@@ -1869,6 +1943,10 @@
       <!-- Row 1: [ Wide 6 cols ] [ 3 cols ] [ 3 cols ] -->
       <div class="cih-equip-card cih-equip-card--wide" onclick="openCihEquipModal(0)">
         <img src="images/equip_ivus_dsa.png?v=1792597600" alt="Hệ thống Siêu âm Nội mạch IVUS (AI) & Chụp mạch Số hóa Xóa nền DSA Siemens" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <span class="cih-equip-card__hint-text">Xem chi tiết</span>
+        </span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Hệ thống Siêu âm Nội mạch IVUS (AI) &amp; Chụp mạch Số hóa Xóa nền DSA Siemens</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1880,6 +1958,10 @@
 
       <div class="cih-equip-card" onclick="openCihEquipModal(1)">
         <img src="images/equipment.png?v=1792597500" alt="Hệ thống MRI 1.5 Tesla Philips Ingenia & MSCT 128 Lát cắt" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <span class="cih-equip-card__hint-text">Xem chi tiết</span>
+        </span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Hệ thống MRI 1.5 Tesla Philips Ingenia &amp; MSCT 128 Lát cắt</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1891,6 +1973,10 @@
 
       <div class="cih-equip-card" onclick="openCihEquipModal(2)">
         <img src="images/equip_or_aaci.png?v=1792597700" alt="Hệ thống 10 Phòng mổ Áp lực dương & ICU Chuẩn AIA" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <span class="cih-equip-card__hint-text">Xem chi tiết</span>
+        </span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Hệ thống 10 Phòng mổ Áp lực dương &amp; ICU Chuẩn AIA</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1903,6 +1989,10 @@
       <!-- Row 2: [ 3 cols ] [ 3 cols ] [ Wide 6 cols ] -->
       <div class="cih-equip-card" onclick="openCihEquipModal(3)">
         <img src="images/equip_ivf_rtac.webp" alt="Phòng Lab IVF Chuẩn RTAC & Tủ nuôi cấy phôi Time-Lapse AI" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <span class="cih-equip-card__hint-text">Xem chi tiết</span>
+        </span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Phòng Lab IVF Chuẩn RTAC &amp; Tủ nuôi cấy phôi Time-Lapse AI</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1914,6 +2004,10 @@
 
       <div class="cih-equip-card" onclick="openCihEquipModal(4)">
         <img src="images/equip_endoscopy_olympus.jpg" alt="Trung tâm Nội soi NBI Olympus & Xét nghiệm Tự động ISO 15189:2022" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <span class="cih-equip-card__hint-text">Xem chi tiết</span>
+        </span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Trung tâm Nội soi NBI Olympus &amp; Xét nghiệm Tự động ISO 15189:2022</h3>
           <div class="cih-equip-card__desc-wrap">
@@ -1925,6 +2019,10 @@
 
       <div class="cih-equip-card cih-equip-card--wide" onclick="openCihEquipModal(5)">
         <img src="images/Website/tham-my/CIH07314.JPG" alt="Khu Khám Quốc tế, Thẩm mỹ Y học Tái tạo & Hệ thống 320 Giường Nội trú Chuẩn Khách sạn" class="cih-equip-card__img" loading="lazy" />
+        <span class="cih-equip-card__hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <span class="cih-equip-card__hint-text">Xem chi tiết</span>
+        </span>
         <div class="cih-equip-card__overlay">
           <h3 class="cih-equip-card__title">Khu Khám Quốc tế, Thẩm mỹ Y học Tái tạo &amp; Hệ thống 320 Giường Nội trú Chuẩn Khách sạn</h3>
           <div class="cih-equip-card__desc-wrap">

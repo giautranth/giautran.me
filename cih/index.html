@@ -141,203 +141,127 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     QUICK ACTIONS + SEARCH BAR & STATS (LUXURY FLOATING CARD LAYOUT)
+     QUICK ACTIONS (3 STANDALONE PILL CARDS) & 3-COLUMN STATS
 ═══════════════════════════════════════════════ -->
 <style>
   .cih-hero-overlap-wrapper {
     position: relative;
-    background-color: #fdfcf7;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 420' preserveAspectRatio='none'%3E%3Cpath fill='%23d7ebf2' fill-opacity='0.65' d='M0,40 L480,190 L0,340 Z'/%3E%3Cpath fill='%23efe9d8' fill-opacity='0.7' d='M520,210 C760,90 980,90 1440,200 L1440,390 L0,390 L0,230 Z'/%3E%3Cpath fill='%23e2dec9' fill-opacity='0.65' d='M960,160 C1150,110 1320,130 1440,175 L1440,390 L680,390 Z'/%3E%3C/svg%3E");
+    background-color: #fdfcf8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 420' preserveAspectRatio='none'%3E%3Cpath fill='%23f3ebd6' fill-opacity='0.75' d='M0,180 C380,260 720,310 1440,220 L1440,420 L0,420 Z'/%3E%3Cpath fill='%23e8dec2' fill-opacity='0.7' d='M480,310 C820,210 1120,210 1440,275 L1440,420 L0,420 L0,350 Z'/%3E%3C/svg%3E");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding-top: 22px;
-    padding-bottom: 48px;
+    padding-top: 1px;
+    padding-bottom: 52px;
     z-index: 10;
   }
 
-  /* Floating Action + Search Card */
-  .cih-floating-hub {
+  /* 3 Standalone Floating Action Cards */
+  .cih-standalone-actions {
     max-width: 1120px;
-    margin: -36px auto 0;
+    margin: -34px auto 0;
     position: relative;
     z-index: 25;
-    background: #fffefb !important;
-    border: 1.5px solid #f0e4c3 !important;
-    border-radius: 22px !important;
-    padding: 24px 28px !important;
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09), 0 4px 14px rgba(180, 140, 60, 0.07) !important;
-  }
-
-  .cih-hub-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f3efe6;
+    gap: 22px;
   }
 
-  .cih-hub-card {
+  .cih-action-pill {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 18px 22px !important;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 14px;
-    padding: 18px 20px;
-    border-radius: 14px;
+    justify-content: space-between;
     text-decoration: none;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08), 0 3px 10px rgba(15, 23, 42, 0.03) !important;
     transition: all 0.25s ease;
   }
 
-  .cih-hub-card:hover {
+  .cih-action-pill:hover {
     transform: translateY(-3px);
   }
 
-  .cih-hub-card--teal {
-    background: linear-gradient(135deg, #f0fdfa 0%, #f7feff 55%, #ffffff 100%);
-    border: 1.2px solid #cdebf2;
-    box-shadow: 0 4px 14px rgba(0, 125, 165, 0.04);
+  .cih-action-pill--teal {
+    border: 1.5px solid #d5ecea !important;
   }
-  .cih-hub-card--teal:hover {
-    border-color: #007da5;
-    box-shadow: 0 10px 24px rgba(0, 125, 165, 0.12);
+  .cih-action-pill--teal:hover {
+    border-color: #007da5 !important;
+    box-shadow: 0 16px 34px rgba(0, 125, 165, 0.13) !important;
   }
 
-  .cih-hub-card--gold {
-    background: linear-gradient(135deg, #fffcf0 0%, #fffdf7 60%, #ffffff 100%);
-    border: 1.2px solid #f2d78c;
-    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.05);
+  .cih-action-pill--gold {
+    border: 1.5px solid #ead5a0 !important;
   }
-  .cih-hub-card--gold:hover {
-    border-color: #d97706;
-    box-shadow: 0 10px 24px rgba(217, 119, 6, 0.14);
+  .cih-action-pill--gold:hover {
+    border-color: #d97706 !important;
+    box-shadow: 0 16px 34px rgba(217, 119, 6, 0.14) !important;
   }
 
-  .cih-hub-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+  .cih-action-pill__left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cih-action-pill__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    font-size: 1.2rem;
   }
 
-  .cih-hub-card--teal .cih-hub-icon {
-    background: linear-gradient(135deg, #007da5 0%, #005a78 100%);
-    color: #ffffff;
-    box-shadow: 0 6px 14px rgba(0, 125, 165, 0.28);
+  .cih-action-pill--teal .cih-action-pill__icon {
+    background: linear-gradient(135deg, #e3f8f7 0%, #cef2f0 100%);
+    border: 1px solid #b8ebe8;
+    color: #007da5;
   }
 
-  .cih-hub-card--gold .cih-hub-icon {
-    background: linear-gradient(135deg, #e5a918 0%, #ca8a04 100%);
-    color: #ffffff;
-    box-shadow: 0 6px 14px rgba(202, 138, 4, 0.30);
+  .cih-action-pill--gold .cih-action-pill__icon {
+    background: linear-gradient(135deg, #fef9e7 0%, #fdefc2 100%);
+    border: 1px solid #f5dd98;
+    color: #c78d20;
   }
 
-  .cih-hub-text {
-    text-align: left;
-  }
-
-  .cih-hub-title {
+  .cih-action-pill__title {
     font-size: 1.02rem;
     font-weight: 800;
-    line-height: 1.25;
-    margin: 0 0 3px 0;
+    color: #1e293b;
+    letter-spacing: -0.1px;
   }
 
-  .cih-hub-card--teal .cih-hub-title {
-    color: #005f7f;
+  .cih-action-pill__arrow {
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: transform 0.2s ease;
   }
 
-  .cih-hub-card--gold .cih-hub-title {
-    color: #854d0e;
+  .cih-action-pill--teal .cih-action-pill__arrow {
+    color: #007da5;
   }
 
-  .cih-hub-sub {
-    font-size: 0.78rem;
-    color: #64748b;
-    font-weight: 500;
-    margin: 0;
-    line-height: 1.2;
+  .cih-action-pill--gold .cih-action-pill__arrow {
+    color: #c78d20;
   }
 
-  /* Search Row */
-  .cih-hub-search {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-top: 18px;
+  .cih-action-pill:hover .cih-action-pill__arrow {
+    transform: translateX(4px);
   }
 
-  .cih-hub-search-input-wrap {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #f8fafc;
-    border: 1.2px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 12px 18px;
-    transition: all 0.2s ease;
-  }
-
-  .cih-hub-search-input-wrap:focus-within {
-    background: #ffffff;
-    border-color: #007da5;
-    box-shadow: 0 0 0 3px rgba(0, 125, 165, 0.1);
-  }
-
-  .cih-hub-search-icon {
-    font-size: 1rem;
-    line-height: 1;
-    flex-shrink: 0;
-  }
-
-  .cih-hub-search-input {
-    width: 100%;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 0.92rem;
-    font-family: inherit;
-    color: #334155;
-  }
-
-  .cih-hub-search-input::placeholder {
-    color: #64748b;
-  }
-
-  .cih-hub-search-btn {
-    background: linear-gradient(135deg, #006a88 0%, #00526a 100%);
-    color: #ffffff;
-    border: none;
-    border-radius: 12px;
-    padding: 13px 28px;
-    font-size: 0.92rem;
-    font-weight: 700;
-    font-family: inherit;
-    cursor: pointer;
-    white-space: nowrap;
-    box-shadow: 0 6px 16px rgba(0, 90, 120, 0.25);
-    transition: all 0.2s ease;
-  }
-
-  .cih-hub-search-btn:hover {
-    background: linear-gradient(135deg, #007da5 0%, #00607c 100%);
-    transform: translateY(-1px);
-  }
-
-  /* 4-Column Floating Stats Card */
+  /* 3-Column Floating Stats Card */
   .cih-floating-stats {
     max-width: 1120px;
-    margin: 34px auto 0;
+    margin: 36px auto 0;
     background: #fffdf9 !important;
     border: 1.5px solid #f0e4c3 !important;
     border-radius: 22px !important;
-    padding: 34px 20px !important;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07), 0 4px 12px rgba(180, 140, 60, 0.05) !important;
+    padding: 36px 24px !important;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07), 0 4px 12px rgba(180, 140, 60, 0.05) !important;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     position: relative;
     z-index: 20;
@@ -354,7 +278,7 @@
   }
 
   .cih-stat-num {
-    font-size: 2.75rem;
+    font-size: 2.8rem;
     font-weight: 800;
     line-height: 1.05;
     margin-bottom: 8px;
@@ -383,83 +307,95 @@
   }
 
   .cih-stat-desc {
-    font-size: 0.77rem;
+    font-size: 0.78rem;
     color: #94a3b8;
     font-weight: 500;
   }
 
   @media (max-width: 991px) {
-    .cih-floating-hub,
+    .cih-standalone-actions,
     .cih-floating-stats {
       margin-left: 16px;
       margin-right: 16px;
     }
-    .cih-hub-cards {
+    .cih-standalone-actions {
       grid-template-columns: 1fr;
-    }
-    .cih-floating-stats {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px 0;
-    }
-    .cih-stat-box:nth-child(2) {
-      border-right: none;
+      gap: 14px;
     }
   }
 
-  @media (max-width: 600px) {
-    .cih-hub-search {
-      flex-direction: column;
-      align-items: stretch;
-    }
+  @media (max-width: 640px) {
     .cih-floating-stats {
-      grid-template-columns: 1fr 1fr;
-      padding: 24px 12px !important;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 26px 16px !important;
     }
-    .cih-stat-num {
-      font-size: 2.1rem;
+    .cih-stat-box {
+      border-right: none;
+      border-bottom: 1px solid #f1ece1;
+      padding-bottom: 18px;
+    }
+    .cih-stat-box:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
   }
 </style>
 
 <div class="cih-hero-overlap-wrapper">
-  <!-- FLOATING QUICK ACTIONS & SEARCH BAR -->
-  <div class="cih-floating-hub" id="quick-actions">
-    <div class="cih-hub-cards">
-      <a href="bac-si" class="cih-hub-card cih-hub-card--teal" id="qa-doctor">
-        <div class="cih-hub-icon">🔍</div>
-        <div class="cih-hub-text">
-          <div class="cih-hub-title">Tìm bác sĩ</div>
-          <div class="cih-hub-sub">Chuyên gia đầu ngành</div>
+  <!-- 3 STANDALONE QUICK ACTION CARDS -->
+  <div class="cih-standalone-actions" id="quick-actions">
+    <a href="bac-si" class="cih-action-pill cih-action-pill--teal" id="qa-doctor">
+      <div class="cih-action-pill__left">
+        <div class="cih-action-pill__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <line x1="11" y1="8" x2="11" y2="14"></line>
+            <line x1="8" y1="11" x2="14" y2="11"></line>
+          </svg>
         </div>
-      </a>
-
-      <a href="chuyen-khoa" class="cih-hub-card cih-hub-card--teal" id="qa-specialty">
-        <div class="cih-hub-icon">🏥</div>
-        <div class="cih-hub-text">
-          <div class="cih-hub-title">Tra cứu chuyên khoa</div>
-          <div class="cih-hub-sub">16 Khoa tiêu chuẩn quốc tế</div>
-        </div>
-      </a>
-
-      <a href="lien-he#dat-lich" class="cih-hub-card cih-hub-card--gold" id="qa-booking">
-        <div class="cih-hub-icon">📅</div>
-        <div class="cih-hub-text">
-          <div class="cih-hub-title">Đặt lịch khám nhanh</div>
-          <div class="cih-hub-sub">Xác nhận trong 15 phút</div>
-        </div>
-      </a>
-    </div>
-
-    <form class="cih-hub-search" onsubmit="event.preventDefault(); var q=this.querySelector('input').value.trim(); if(q) window.location.href='bac-si?s='+encodeURIComponent(q); else window.location.href='bac-si';">
-      <div class="cih-hub-search-input-wrap">
-        <span class="cih-hub-search-icon">🔎</span>
-        <input type="text" class="cih-hub-search-input" placeholder="Tìm kiếm triệu chứng, bác sĩ chuyên khoa hoặc gói khám sức khỏe..." />
+        <span class="cih-action-pill__title">Tìm bác sĩ</span>
       </div>
-      <button type="submit" class="cih-hub-search-btn">Tìm Kiếm Nhanh &rarr;</button>
-    </form>
+      <span class="cih-action-pill__arrow">&rarr;</span>
+    </a>
+
+    <a href="chuyen-khoa" class="cih-action-pill cih-action-pill--teal" id="qa-specialty">
+      <div class="cih-action-pill__left">
+        <div class="cih-action-pill__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="3" width="16" height="18" rx="2"></rect>
+            <line x1="2" y1="21" x2="22" y2="21"></line>
+            <line x1="12" y1="7" x2="12" y2="11"></line>
+            <line x1="10" y1="9" x2="14" y2="9"></line>
+            <line x1="9" y1="14" x2="9.01" y2="14"></line>
+            <line x1="15" y1="14" x2="15.01" y2="14"></line>
+            <line x1="9" y1="17" x2="9.01" y2="17"></line>
+            <line x1="15" y1="17" x2="15.01" y2="17"></line>
+          </svg>
+        </div>
+        <span class="cih-action-pill__title">Tra cứu chuyên khoa</span>
+      </div>
+      <span class="cih-action-pill__arrow">&rarr;</span>
+    </a>
+
+    <a href="lien-he#dat-lich" class="cih-action-pill cih-action-pill--gold" id="qa-booking">
+      <div class="cih-action-pill__left">
+        <div class="cih-action-pill__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="3"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </div>
+        <span class="cih-action-pill__title">Đặt lịch khám nhanh</span>
+      </div>
+      <span class="cih-action-pill__arrow">&rarr;</span>
+    </a>
   </div>
 
-  <!-- FLOATING 4-COLUMN STATS CARD -->
+  <!-- FLOATING 3-COLUMN STATS CARD -->
   <div class="cih-floating-stats" id="stats-card">
     <div class="cih-stat-box">
       <div class="cih-stat-num cih-stat-num--orange">16</div>
@@ -477,12 +413,6 @@
       <div class="cih-stat-num"><span class="cih-stat-num--gold">550</span><span class="cih-stat-num--teal">+</span></div>
       <div class="cih-stat-title">NHÂN VIÊN Y TẾ</div>
       <div class="cih-stat-desc">Bác sĩ &amp; Điều dưỡng</div>
-    </div>
-
-    <div class="cih-stat-box">
-      <div class="cih-stat-num"><span class="cih-stat-num--teal">100</span><span class="cih-stat-num--gold">%</span></div>
-      <div class="cih-stat-title">CHUẨN AACI HOA KỲ</div>
-      <div class="cih-stat-desc">Kiểm định quốc tế</div>
     </div>
   </div>
 </div>

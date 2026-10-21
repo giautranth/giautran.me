@@ -1920,7 +1920,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     VIDEO (@bvqtcity YOUTUBE CHANNEL)
+     VIDEO (@bvqtcity YOUTUBE CHANNEL - YOUTUBE 2-COLUMN LAYOUT)
 ═══════════════════════════════════════════════ -->
 <style>
   #video.cih-video-section {
@@ -1928,24 +1928,34 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 420' preserveAspectRatio='none'%3E%3Cpath fill='%23f3ebd6' fill-opacity='0.75' d='M0,180 C380,260 720,310 1440,220 L1440,420 L0,420 Z'/%3E%3Cpath fill='%23e8dec2' fill-opacity='0.7' d='M480,310 C820,210 1120,210 1440,275 L1440,420 L0,420 L0,350 Z'/%3E%3C/svg%3E") !important;
     background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
-    padding: 2.75rem 0 !important;
+    padding: 2.75rem 0 3.25rem !important;
   }
 
-  /* Top 16:9 Inline Video Player */
+  /* YouTube 2-Column Layout: Left Main Player + Right Vertical Video List */
+  .cih-yt-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 410px;
+    gap: 24px;
+    align-items: start;
+    margin-top: 1.25rem;
+  }
+
+  .cih-yt-main {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
   .cih-video-hero {
     position: relative;
     width: 100%;
-    max-width: 860px;
     aspect-ratio: 16 / 9;
-    height: auto;
-    border-radius: 22px;
+    border-radius: 16px;
     overflow: hidden;
     background: #0f172a;
-    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14);
-    margin: 1.25rem auto 24px auto;
-    display: block;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.14);
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(15, 23, 42, 0.08);
   }
 
   .cih-video-hero__iframe {
@@ -1990,26 +2000,15 @@
   .cih-video-hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(10, 25, 47, 0.05) 0%,
-      rgba(10, 25, 47, 0.20) 50%,
-      rgba(7, 22, 44, 0.82) 84%,
-      rgba(5, 16, 34, 0.94) 100%
-    );
+    background: radial-gradient(circle at center, rgba(15, 23, 42, 0.12) 0%, rgba(15, 23, 42, 0.38) 100%);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 32px 36px;
+    align-items: center;
+    justify-content: center;
   }
 
   .cih-video-hero__play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
+    width: 74px;
+    height: 74px;
     border-radius: 50%;
     background: rgba(220, 38, 38, 0.94);
     color: #ffffff;
@@ -2026,168 +2025,131 @@
   }
 
   .cih-video-hero:hover .cih-video-hero__play {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
     background: #ef4444;
     box-shadow: 0 14px 36px rgba(220, 38, 38, 0.65), 0 0 0 12px rgba(255, 255, 255, 0.3);
   }
 
-  .cih-video-hero__title {
-    color: #ffffff;
-    font-size: 1.48rem;
+  /* Title directly underneath the 16:9 player (YouTube watch style) */
+  .cih-yt-main__title {
+    color: #0f172a;
+    font-size: 1.22rem;
     font-weight: 800;
-    line-height: 1.35;
-    max-width: 920px;
-    margin: 0;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
-    transition: color 0.25s ease;
+    line-height: 1.4;
+    margin: 14px 0 0 0;
   }
 
-  .cih-video-hero:hover .cih-video-hero__title {
-    color: #fef08a;
-  }
-
-  /* Bottom Video Carousel Wrapper with 2 Side Circular Arrow Buttons */
-  .cih-video-slider-wrap {
-    position: relative;
-    padding: 4px 0;
-  }
-
-  .cih-video-nav-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid #cbd5e1;
-    background: rgba(255, 255, 255, 0.96);
-    color: #007DA5;
-    font-size: 1.55rem;
-    font-weight: 700;
-    line-height: 1;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.14);
-    backdrop-filter: blur(4px);
-    transition: all 0.25s ease;
-  }
-
-  .cih-video-nav-btn:hover {
-    background: #007DA5;
-    color: #ffffff;
-    border-color: #007DA5;
-    box-shadow: 0 8px 22px rgba(0, 125, 165, 0.32);
-  }
-
-  .cih-video-nav-btn--prev {
-    left: -18px;
-  }
-
-  .cih-video-nav-btn--next {
-    right: -18px;
-  }
-
-  .cih-video-track {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding: 4px 2px 8px;
-  }
-
-  .cih-video-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .cih-video-card {
-    flex: 0 0 calc((100% - 48px) / 4);
-    min-width: calc((100% - 48px) / 4);
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1.5px solid #e2e8f0;
-    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  /* Right Sidebar: Vertical Scrollable Playlist */
+  .cih-yt-sidebar {
     display: flex;
     flex-direction: column;
-    text-decoration: none;
+    gap: 10px;
+    max-height: 485px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+  }
+
+  .cih-yt-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .cih-yt-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .cih-yt-sidebar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 99px;
+  }
+
+  .cih-yt-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(226, 232, 240, 0.85);
     cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: all 0.22s ease;
   }
 
-  .cih-video-card:hover,
-  .cih-video-card.is-active {
-    transform: translateY(-4px);
+  .cih-yt-item:hover {
+    background: #ffffff;
+    border-color: #94a3b8;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  }
+
+  .cih-yt-item.is-active {
+    background: #f0f9ff;
     border-color: #007DA5;
-    box-shadow: 0 14px 28px rgba(0, 125, 165, 0.15);
+    box-shadow: 0 6px 18px rgba(0, 125, 165, 0.12);
   }
 
-  .cih-video-card__thumb {
+  .cih-yt-item__thumb {
     position: relative;
-    width: 100%;
+    width: 160px;
     aspect-ratio: 16 / 9;
-    background: #0f172a;
+    border-radius: 9px;
     overflow: hidden;
+    background: #0f172a;
+    flex-shrink: 0;
   }
 
-  .cih-video-card__thumb img {
+  .cih-yt-item__thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+    transition: transform 0.4s ease;
   }
 
-  .cih-video-card:hover .cih-video-card__thumb img {
-    transform: scale(1.06);
-    filter: brightness(0.9);
+  .cih-yt-item:hover .cih-yt-item__thumb img {
+    transform: scale(1.05);
   }
 
-  .cih-video-card__play {
+  .cih-yt-item__play {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 42px;
-    height: 42px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background: rgba(220, 38, 38, 0.92);
+    background: rgba(220, 38, 38, 0.9);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.24);
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, background 0.25s ease;
   }
 
-  .cih-video-card__play svg {
-    margin-left: 2px;
+  .cih-yt-item__play svg {
+    margin-left: 1.5px;
   }
 
-  .cih-video-card:hover .cih-video-card__play {
-    transform: translate(-50%, -50%) scale(1.12);
+  .cih-yt-item:hover .cih-yt-item__play {
+    transform: translate(-50%, -50%) scale(1.1);
     background: #ef4444;
-    box-shadow: 0 8px 22px rgba(220, 38, 38, 0.6), 0 0 0 6px rgba(255, 255, 255, 0.32);
   }
 
-  .cih-video-card__body {
-    padding: 12px 14px 14px;
+  .cih-yt-item__info {
     display: flex;
     flex-direction: column;
+    min-width: 0;
     flex: 1;
+    padding-top: 2px;
   }
 
-  .cih-video-card__title {
-    font-size: 0.85rem;
+  .cih-yt-item__title {
+    font-size: 0.86rem;
     font-weight: 700;
-    color: #1e293b;
-    line-height: 1.44;
-    margin: 0;
+    color: #0f172a;
+    line-height: 1.4;
+    margin: 0 0 6px 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -2195,48 +2157,60 @@
     transition: color 0.2s ease;
   }
 
-  .cih-video-card:hover .cih-video-card__title,
-  .cih-video-card.is-active .cih-video-card__title {
+  .cih-yt-item:hover .cih-yt-item__title,
+  .cih-yt-item.is-active .cih-yt-item__title {
     color: #007DA5;
   }
 
+  .cih-yt-item__channel {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .cih-yt-item__verified {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #64748b;
+    color: #ffffff;
+    font-size: 8px;
+    line-height: 1;
+  }
+
   @media (max-width: 1024px) {
-    .cih-video-card {
-      flex: 0 0 calc((100% - 32px) / 3);
-      min-width: calc((100% - 32px) / 3);
+    .cih-yt-layout {
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
-    .cih-video-nav-btn--prev { left: -10px; }
-    .cih-video-nav-btn--next { right: -10px; }
+    .cih-yt-sidebar {
+      max-height: 380px;
+    }
   }
 
   @media (max-width: 640px) {
     .cih-video-hero {
-      border-radius: 16px;
-    }
-    .cih-video-hero__overlay {
-      padding: 16px 18px;
+      border-radius: 12px;
     }
     .cih-video-hero__play {
       width: 56px;
       height: 56px;
     }
-    .cih-video-hero__title {
-      font-size: 1rem;
+    .cih-yt-main__title {
+      font-size: 1.02rem;
     }
-    .cih-video-card {
-      flex: 0 0 calc((100% - 12px) / 2);
-      min-width: calc((100% - 12px) / 2);
+    .cih-yt-item__thumb {
+      width: 128px;
     }
-    .cih-video-track {
-      gap: 12px;
+    .cih-yt-item__title {
+      font-size: 0.82rem;
     }
-    .cih-video-nav-btn {
-      width: 38px;
-      height: 38px;
-      font-size: 1.3rem;
-    }
-    .cih-video-nav-btn--prev { left: -6px; }
-    .cih-video-nav-btn--next { right: -6px; }
   }
 </style>
 
@@ -2248,131 +2222,137 @@
       </div>
     </div>
 
-    <!-- Top 16:9 Featured Video (Plays directly in browser) -->
-    <div class="cih-video-hero" id="cih-video-hero" data-video-id="6urJxzmKR4s" onclick="playCihHeroVideo()">
-      <iframe id="cih-video-hero-iframe" class="cih-video-hero__iframe" src="" title="Video Bệnh viện Quốc tế City" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <div class="cih-video-hero__poster-wrap">
-        <img id="cih-video-hero-img" src="https://i.ytimg.com/vi/6urJxzmKR4s/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6urJxzmKR4s/hqdefault.jpg'" alt="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" class="cih-video-hero__img" loading="lazy" />
-        <div class="cih-video-hero__overlay">
-          <span class="cih-video-hero__play" aria-hidden="true">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-          </span>
-          <h3 class="cih-video-hero__title" id="cih-video-hero-title">Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác</h3>
+    <div class="cih-yt-layout">
+      <!-- Left Column: Main 16:9 Player + Title Below -->
+      <div class="cih-yt-main">
+        <div class="cih-video-hero" id="cih-video-hero" data-video-id="6urJxzmKR4s" onclick="playCihHeroVideo()">
+          <iframe id="cih-video-hero-iframe" class="cih-video-hero__iframe" src="" title="Video Bệnh viện Quốc tế City" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="cih-video-hero__poster-wrap">
+            <img id="cih-video-hero-img" src="https://i.ytimg.com/vi/6urJxzmKR4s/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6urJxzmKR4s/hqdefault.jpg'" alt="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" class="cih-video-hero__img" loading="lazy" />
+            <div class="cih-video-hero__overlay">
+              <span class="cih-video-hero__play" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </span>
+            </div>
+          </div>
         </div>
+        <h3 class="cih-yt-main__title" id="cih-video-hero-title">Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác</h3>
       </div>
-    </div>
 
-    <!-- Bottom Row of Small Videos with Left & Right Circular Arrow Buttons -->
-    <div class="cih-video-slider-wrap">
-      <button type="button" class="cih-video-nav-btn cih-video-nav-btn--prev" id="cih-video-prev" aria-label="Video trước">‹</button>
-
-      <div class="cih-video-track" id="cih-video-track">
-        <!-- Video 1 -->
-        <div class="cih-video-card" data-video-id="HMp5_PuBNEk" data-title="Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/HMp5_PuBNEk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HMp5_PuBNEk/hqdefault.jpg'" alt="Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+      <!-- Right Column: YouTube-style Up Next Video List -->
+      <div class="cih-yt-sidebar" id="cih-video-track">
+        <!-- Video 1 (Active by default) -->
+        <div class="cih-yt-item is-active" data-video-id="6urJxzmKR4s" data-title="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/6urJxzmKR4s/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6urJxzmKR4s/hqdefault.jpg'" alt="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
 
         <!-- Video 2 -->
-        <div class="cih-video-card" data-video-id="TmJrwr7ey8o" data-title="Hội thảo Khoa học Kỹ thuật: “Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn”" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/TmJrwr7ey8o/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/TmJrwr7ey8o/hqdefault.jpg'" alt="Hội thảo Khoa học Kỹ thuật: Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <div class="cih-yt-item" data-video-id="HMp5_PuBNEk" data-title="Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/HMp5_PuBNEk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/HMp5_PuBNEk/hqdefault.jpg'" alt="Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Hội thảo Khoa học Kỹ thuật: “Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn”</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
 
         <!-- Video 3 -->
-        <div class="cih-video-card" data-video-id="RkiocaW2jIk" data-title="Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/RkiocaW2jIk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/RkiocaW2jIk/hqdefault.jpg'" alt="Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <div class="cih-yt-item" data-video-id="TmJrwr7ey8o" data-title="Hội thảo Khoa học Kỹ thuật: “Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn”" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/TmJrwr7ey8o/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/TmJrwr7ey8o/hqdefault.jpg'" alt="Hội thảo Khoa học Kỹ thuật: Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Hội thảo Khoa học Kỹ thuật: “Cập nhật điều trị nhiễm khuẩn Gram âm đa kháng và nhiễm nấm xâm lấn”</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
 
         <!-- Video 4 -->
-        <div class="cih-video-card" data-video-id="my-TlEtQjQY" data-title="Bắt trọn khoảnh khắc một mùa trăng – Một lời tri ân" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/my-TlEtQjQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/my-TlEtQjQY/hqdefault.jpg'" alt="Bắt trọn khoảnh khắc một mùa trăng - Một lời tri ân" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <div class="cih-yt-item" data-video-id="RkiocaW2jIk" data-title="Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/RkiocaW2jIk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/RkiocaW2jIk/hqdefault.jpg'" alt="Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Bắt trọn khoảnh khắc một mùa trăng – Một lời tri ân</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Rung Chuông Vàng – Chung một cam kết, vì an toàn người bệnh</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
 
         <!-- Video 5 -->
-        <div class="cih-video-card" data-video-id="3hxQEwr3lY0" data-title="Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/3hxQEwr3lY0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/3hxQEwr3lY0/hqdefault.jpg'" alt="Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội - Cần Thơ" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <div class="cih-yt-item" data-video-id="my-TlEtQjQY" data-title="Bắt trọn khoảnh khắc một mùa trăng – Một lời tri ân" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/my-TlEtQjQY/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/my-TlEtQjQY/hqdefault.jpg'" alt="Bắt trọn khoảnh khắc một mùa trăng - Một lời tri ân" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Bắt trọn khoảnh khắc một mùa trăng – Một lời tri ân</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
 
         <!-- Video 6 -->
-        <div class="cih-video-card" data-video-id="cR25Dyn3gJs" data-title="Nhìn lại những khoảnh khắc trao gửi yêu thương tại phường Cát Lái" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/cR25Dyn3gJs/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/cR25Dyn3gJs/hqdefault.jpg'" alt="Nhìn lại những khoảnh khắc trao gửi yêu thương tại phường Cát Lái" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <div class="cih-yt-item" data-video-id="3hxQEwr3lY0" data-title="Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/3hxQEwr3lY0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/3hxQEwr3lY0/hqdefault.jpg'" alt="Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội - Cần Thơ" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Nhìn lại những khoảnh khắc trao gửi yêu thương tại phường Cát Lái</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Bệnh viện Gia An 115, Bệnh viện Quốc tế City tham dự Hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
 
         <!-- Video 7 -->
-        <div class="cih-video-card" data-video-id="hal24GIaUhA" data-title="Những khoảnh khắc đáng nhớ tại Lễ tổng kết tháng 8 & Trao quyết định bổ nhiệm nhân sự" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/hal24GIaUhA/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/hal24GIaUhA/hqdefault.jpg'" alt="Những khoảnh khắc đáng nhớ tại Lễ tổng kết tháng 8 & Trao quyết định bổ nhiệm nhân sự" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <div class="cih-yt-item" data-video-id="cR25Dyn3gJs" data-title="Nhìn lại những khoảnh khắc trao gửi yêu thương tại phường Cát Lái" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/cR25Dyn3gJs/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/cR25Dyn3gJs/hqdefault.jpg'" alt="Nhìn lại những khoảnh khắc trao gửi yêu thương tại phường Cát Lái" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Những khoảnh khắc đáng nhớ tại Lễ tổng kết tháng 8 &amp; Trao quyết định bổ nhiệm nhân sự</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Nhìn lại những khoảnh khắc trao gửi yêu thương tại phường Cát Lái</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
 
-        <!-- Video 8 (Main Featured Video also in carousel for switching back) -->
-        <div class="cih-video-card" data-video-id="6urJxzmKR4s" data-title="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" onclick="selectCihVideoCard(this)">
-          <div class="cih-video-card__thumb">
-            <img src="https://i.ytimg.com/vi/6urJxzmKR4s/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/6urJxzmKR4s/hqdefault.jpg'" alt="Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác" loading="lazy" />
-            <span class="cih-video-card__play" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <!-- Video 8 -->
+        <div class="cih-yt-item" data-video-id="hal24GIaUhA" data-title="Những khoảnh khắc đáng nhớ tại Lễ tổng kết tháng 8 & Trao quyết định bổ nhiệm nhân sự" onclick="selectCihVideoCard(this)">
+          <div class="cih-yt-item__thumb">
+            <img src="https://i.ytimg.com/vi/hal24GIaUhA/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/hal24GIaUhA/hqdefault.jpg'" alt="Những khoảnh khắc đáng nhớ tại Lễ tổng kết tháng 8 & Trao quyết định bổ nhiệm nhân sự" loading="lazy" />
+            <span class="cih-yt-item__play" aria-hidden="true">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
             </span>
           </div>
-          <div class="cih-video-card__body">
-            <h4 class="cih-video-card__title">Dấu ấn Khu Y tế Kỹ thuật cao TP.HCM tham dự Hội thi: Tự hào Trí thức Thành phố mang tên Bác</h4>
+          <div class="cih-yt-item__info">
+            <h4 class="cih-yt-item__title">Những khoảnh khắc đáng nhớ tại Lễ tổng kết tháng 8 &amp; Trao quyết định bổ nhiệm nhân sự</h4>
+            <div class="cih-yt-item__channel">Bệnh viện Quốc tế City <span class="cih-yt-item__verified">✓</span></div>
           </div>
         </div>
       </div>
-
-      <button type="button" class="cih-video-nav-btn cih-video-nav-btn--next" id="cih-video-next" aria-label="Video tiếp theo">›</button>
     </div>
   </div>
 </section>
@@ -2394,7 +2374,7 @@
     const title = cardEl.getAttribute('data-title');
     if (!vid) return;
 
-    document.querySelectorAll('#cih-video-track .cih-video-card').forEach(c => c.classList.remove('is-active'));
+    document.querySelectorAll('#cih-video-track .cih-yt-item').forEach(c => c.classList.remove('is-active'));
     cardEl.classList.add('is-active');
 
     const titleEl = document.getElementById('cih-video-hero-title');
@@ -2404,39 +2384,6 @@
 
     playCihHeroVideo(vid);
   }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const track = document.getElementById('cih-video-track');
-    const prevBtn = document.getElementById('cih-video-prev');
-    const nextBtn = document.getElementById('cih-video-next');
-    if (!track) return;
-
-    function getStep() {
-      const card = track.querySelector('.cih-video-card');
-      return card ? (card.offsetWidth + 16) : 250;
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', function() {
-        const maxScroll = track.scrollWidth - track.clientWidth;
-        if (track.scrollLeft >= maxScroll - 10) {
-          track.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          track.scrollBy({ left: getStep(), behavior: 'smooth' });
-        }
-      });
-    }
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', function() {
-        if (track.scrollLeft <= 10) {
-          track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
-        } else {
-          track.scrollBy({ left: -getStep(), behavior: 'smooth' });
-        }
-      });
-    }
-  });
 </script>
 
 <!-- ═══════════════════════════════════════════════

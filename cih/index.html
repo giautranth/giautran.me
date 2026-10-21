@@ -2195,9 +2195,9 @@
     border-radius: 16px;
     overflow: hidden;
     background: #0f172a;
-    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.14);
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.14), 0 0 0 1px rgba(197, 154, 63, 0.25);
     cursor: pointer;
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border: 2px solid #C59A3F;
   }
 
   .cih-video-hero__iframe {
@@ -2308,19 +2308,21 @@
 
   .cih-yt-item {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 12px;
-    padding: 8px;
+    padding: 0;
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.78);
-    border: 1px solid rgba(226, 232, 240, 0.85);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(226, 232, 240, 0.9);
     cursor: pointer;
     transition: all 0.22s ease;
   }
 
   .cih-yt-item:hover {
     background: #ffffff;
-    border-color: #94a3b8;
+    border-color: #C59A3F;
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
   }
 
@@ -2332,9 +2334,9 @@
 
   .cih-yt-item__thumb {
     position: relative;
-    width: 160px;
+    width: 164px;
     aspect-ratio: 16 / 9;
-    border-radius: 9px;
+    border-radius: 0;
     overflow: hidden;
     background: #0f172a;
     flex-shrink: 0;
@@ -2381,9 +2383,10 @@
   .cih-yt-item__info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-width: 0;
     flex: 1;
-    padding-top: 2px;
+    padding: 10px 12px 10px 0;
   }
 
   .cih-yt-item__title {

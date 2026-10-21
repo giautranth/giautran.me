@@ -570,6 +570,98 @@
 <!-- ═══════════════════════════════════════════════
      CHUYÊN KHOA
 ═══════════════════════════════════════════════ -->
+<style>
+  #chuyen-khoa .spec-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    border: 1px solid #f5eedc !important;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  }
+
+  #chuyen-khoa .spec-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
+    border-color: #ead5a0 !important;
+  }
+
+  #chuyen-khoa .spec-card__img {
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    height: auto !important;
+    border-radius: 18px 18px 0 0 !important;
+    overflow: hidden !important;
+    background: #f8fafc !important;
+  }
+
+  #chuyen-khoa .spec-card__img img {
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  #chuyen-khoa .spec-card:hover .spec-card__img img {
+    transform: scale(1.04) !important;
+  }
+
+  #chuyen-khoa .spec-card__body {
+    padding: 22px 24px 18px 24px !important;
+    background: #ffffff !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex: 1 1 auto !important;
+    text-align: left !important;
+  }
+
+  #chuyen-khoa .spec-card__body h3 {
+    font-size: 1.06rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.4 !important;
+    margin: 0 0 22px 0 !important;
+    text-align: left !important;
+    transition: color 0.2s ease !important;
+  }
+
+  #chuyen-khoa .spec-card:hover .spec-card__body h3 {
+    color: #007DA5 !important;
+  }
+
+  #chuyen-khoa .spec-card__link,
+  #chuyen-khoa a.spec-card .spec-card__link {
+    border-top: 1px solid #f5f0e6 !important;
+    padding-top: 14px !important;
+    margin-top: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    text-align: right !important;
+    width: 100% !important;
+    color: #00688B !important;
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    text-decoration: none !important;
+  }
+
+  #chuyen-khoa .spec-card__link .arrow {
+    color: #00688B !important;
+    font-weight: 700 !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  #chuyen-khoa .spec-card:hover .spec-card__link .arrow {
+    transform: translateX(3px) !important;
+  }
+</style>
 <section class="section specialties-section" id="chuyen-khoa">
   <div class="container">
     <div class="section__header">
@@ -584,7 +676,7 @@
         <div class="specialties-grid" id="spec-grid">
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-phu-san" class="spec-card" id="spec-khoa-phu-san">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/12-2.webp" alt="Khoa Phụ Sản" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -594,7 +686,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-ho-tro-sinh-san-ivf" class="spec-card" id="spec-khoa-ho-tro-sinh-san-ivf">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/SAN00365_Edit-1.png" alt="Trung tâm Hỗ Trợ Sinh Sản (IVF)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -604,7 +696,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-nhi" class="spec-card" id="spec-khoa-nhi">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="images/Website/nhi-khoa/1784087275401_1272607247884588763_1272607247884588763_cb03d6466e89cc5d61965640d8b7f443.jpg" alt="Khoa Nhi" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -614,7 +706,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-hoi-suc-tich-cuc-so-sinh-nicu" class="spec-card" id="spec-khoa-hoi-suc-tich-cuc-so-sinh-nicu">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/mau-moi-1.jpg" alt="Khoa Hồi sức tích cực sơ sinh (NICU)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -624,7 +716,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-kham-tong-quat-ehs" class="spec-card" id="spec-khoa-kham-tong-quat-ehs">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/mau-moi-.jpg" alt="Khoa Khám Tổng Quát (EHS)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -634,7 +726,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-noi-tong-hop" class="spec-card" id="spec-khoa-noi-tong-hop">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-noi-tong-hop-fn-png.avif" alt="Khoa Nội Tổng Hợp" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -644,7 +736,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-noi-than-kinh" class="spec-card" id="spec-khoa-noi-than-kinh">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-than-kinh.png" alt="Khoa Thần Kinh" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -654,7 +746,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-tim-mach" class="spec-card" id="spec-khoa-tim-mach">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/mau-moi-2.jpg" alt="Khoa Tim mạch" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -664,7 +756,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-tieu-hoa-noi-soi" class="spec-card" id="spec-khoa-tieu-hoa-noi-soi">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-noi-soi-1-1.png" alt="Trung Tâm Tiêu hóa &#8211; Nội soi" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -674,7 +766,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-da-lieu" class="spec-card" id="spec-khoa-da-lieu">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/10.png" alt="Khoa Da Liễu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -684,7 +776,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-ngoai-tong-quat" class="spec-card" id="spec-khoa-ngoai-tong-quat">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-Ngoai-3.png" alt="Khoa Ngoại Tổng quát" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -694,7 +786,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-hoi-suc-tich-cuc-icu" class="spec-card" id="spec-khoa-hoi-suc-tich-cuc-icu">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/z6097136890244_118f2afe02d12f3d52f5a9a3f26e7b0b.webp" alt="Khoa Hồi sức tích cực (ICU)" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -704,7 +796,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-chan-thuong-chinh-hinh" class="spec-card" id="spec-khoa-chan-thuong-chinh-hinh">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/CTCT-fn-png.avif" alt="Khoa Chấn Thương Chỉnh Hình" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -714,7 +806,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-can-thiep-mach-mau" class="spec-card" id="spec-khoa-can-thiep-mach-mau">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Can-thiep-mach-mau-fn-png.avif" alt="Khoa Can Thiệp Mạch Máu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -724,7 +816,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-tiet-nieu" class="spec-card" id="spec-khoa-tiet-nieu">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Tiet-nieu-1.png" alt="Khoa Tiết Niệu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -734,7 +826,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=trung-tam-tai-mui-hong-va-phau-thuat-dau-co" class="spec-card" id="spec-trung-tam-tai-mui-hong-va-phau-thuat-dau-co">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/d6ca5e4e-9286-47e4-b567-e0e6bab2fa6a.webp" alt="Trung tâm Tai Mũi Họng chuyên sâu &#038; Phẫu thuật đầu cổ" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -744,7 +836,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-mat" class="spec-card" id="spec-khoa-mat">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-mat-1.png" alt="Khoa Mắt" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -754,7 +846,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-rang-ham-mat" class="spec-card" id="spec-khoa-rang-ham-mat">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/RHM-jpg.avif" alt="Khoa Răng Hàm Mặt" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -764,7 +856,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-cap-cuu" class="spec-card" id="spec-khoa-cap-cuu">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/2560x1441_anh-bai-web-1.webp" alt="Khoa Cấp Cứu" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -774,7 +866,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-tham-my" class="spec-card" id="spec-khoa-tham-my">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/44-scaled.webp" alt="Trung tâm Thẩm mỹ &#8211; Y học tái tạo" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -784,7 +876,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-xet-nghiem" class="spec-card" id="spec-khoa-xet-nghiem">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/9.png" alt="Khoa Xét Nghiệm" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -794,7 +886,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-chan-doan-hinh-anh" class="spec-card" id="spec-khoa-chan-doan-hinh-anh">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-chan-doan-hinh-anh-png.avif" alt="Khoa Chẩn Đoán Hình Ảnh" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -804,7 +896,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=trung-tam-tiem-chung" class="spec-card" id="spec-trung-tam-tiem-chung">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Trung-tam-tiem-chung-1-png.avif" alt="Trung Tâm Tiêm Chủng" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -814,7 +906,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-duoc" class="spec-card" id="spec-khoa-duoc">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/KHOA-DUOC-jpg.avif" alt="Khoa Dược" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -824,7 +916,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-phuc-hoi-chuc-nang" class="spec-card" id="spec-khoa-phuc-hoi-chuc-nang">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/Khoa-PHCN-fn-png.avif" alt="Khoa Phục Hồi Chức Năng" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -834,7 +926,7 @@
           </a>
 
           <a href="chi-tiet-chuyen-khoa?slug=khoa-gay-me-hoi-suc" class="spec-card" id="spec-khoa-gay-me-hoi-suc">
-            <div class="spec-card__img" style="background:linear-gradient(135deg,#005f80,#007da5)">
+            <div class="spec-card__img">
               <img src="https://cih.com.vn/wp-content/uploads/2024/10/GMHS-fn-png.avif" alt="Khoa Gây Mê Hồi Sức" onerror="this.onerror=null; this.style.display='none'" loading="lazy" />
             </div>
             <div class="spec-card__body">
@@ -1175,6 +1267,123 @@
 <!-- ═══════════════════════════════════════════════
      GÓI DỊCH VỤ
 ═══════════════════════════════════════════════ -->
+<style>
+  #goi-kham .pkg-home-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 12px 12px 18px 12px !important;
+    border: 1px solid #f5eedc !important;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    text-align: left !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  }
+
+  #goi-kham .pkg-home-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
+    border-color: #ead5a0 !important;
+  }
+
+  #goi-kham .pkg-home-card .news-card__img-link {
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: #f8fafc !important;
+    display: block !important;
+  }
+
+  #goi-kham .pkg-home-card .news-card__img-link img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  #goi-kham .pkg-home-card:hover .news-card__img-link img {
+    transform: scale(1.04) !important;
+  }
+
+  #goi-kham .pkg-home-card .news-card__body {
+    padding: 18px 8px 0 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex: 1 1 auto !important;
+  }
+
+  #goi-kham .pkg-home-card .pkg-card__cat {
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    color: #C59A3F !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    margin: 0 0 4px 0 !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  #goi-kham .pkg-home-card .news-card__title {
+    font-size: 1.04rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.4 !important;
+    margin: 0 0 22px 0 !important;
+    text-align: left !important;
+    text-align-last: left !important;
+    width: 100% !important;
+  }
+
+  #goi-kham .pkg-home-card .news-card__title a {
+    color: #0f172a !important;
+    text-decoration: none !important;
+    text-align: left !important;
+    text-align-last: left !important;
+    transition: color 0.2s ease !important;
+  }
+
+  #goi-kham .pkg-home-card:hover .news-card__title,
+  #goi-kham .pkg-home-card:hover .news-card__title a {
+    color: #007DA5 !important;
+  }
+
+  #goi-kham .pkg-home-card .news-card__more,
+  #goi-kham .pkg-home-card a.news-card__more {
+    border-top: 1px solid #f5f0e6 !important;
+    padding-top: 14px !important;
+    margin-top: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    text-align: right !important;
+    width: 100% !important;
+    color: #00688B !important;
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    text-decoration: none !important;
+  }
+
+  #goi-kham .pkg-home-card .news-card__more .arrow {
+    color: #00688B !important;
+    font-weight: 700 !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  #goi-kham .pkg-home-card:hover .news-card__more .arrow {
+    transform: translateX(3px) !important;
+  }
+</style>
+
 <section class="section packages-section" id="goi-kham">
   <div class="container">
     <div class="section__header">
@@ -1188,63 +1397,81 @@
       <div class="mobile-slider-track-wrap" id="pkg-mob-wrap">
         <div class="packages-grid" id="pkg-grid">
 
-          <div class="news-card pkg-home-card" style="background:#fff; border-radius:18px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 15px rgba(0,0,0,0.04); display:flex; flex-direction:column; width:100%; text-align:center;">
-            <a href="chi-tiet-tin-tuc?id=44499" class="news-card__img-link" style="height:170px; display:block; overflow:hidden; background:#f1f5f9; border-radius: 15px 15px 0 0;">
-              <img src="images/goikham/ehs/1.png" alt="Khám tổng quát – Gói tiêu chuẩn" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.src='images/goikham/ehs/1.png'" loading="lazy" />
+          <div class="news-card pkg-home-card">
+            <a href="chi-tiet-tin-tuc?id=44499" class="news-card__img-link">
+              <img src="images/goikham/ehs/1.png" alt="Khám tổng quát – Gói tiêu chuẩn" onerror="this.onerror=null; this.src='images/goikham/ehs/1.png'" loading="lazy" />
             </a>
-            <div class="news-card__body" style="padding:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center;">
-              <h3 class="news-card__title" style="font-size:1.05rem; font-weight:700; color:#000000; line-height:1.4; margin-bottom:1rem; text-align:center !important; text-align-last:center !important; width:100%;">Khám tổng quát<br>Gói tiêu chuẩn</h3>
-              <a href="chi-tiet-tin-tuc?id=44499" class="news-card__more" style="align-self:flex-end; text-align:right; width:100%; display:block; margin-top:auto;">Xem thêm <span class="arrow">→</span></a>
+            <div class="news-card__body">
+              <div style="width: 100%;">
+                <p class="pkg-card__cat">Khám tổng quát</p>
+                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44499">Gói tiêu chuẩn</a></h3>
+              </div>
+              <a href="chi-tiet-tin-tuc?id=44499" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
-          <div class="news-card pkg-home-card" style="background:#fff; border-radius:18px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 15px rgba(0,0,0,0.04); display:flex; flex-direction:column; width:100%; text-align:center;">
-            <a href="chi-tiet-tin-tuc?id=44472" class="news-card__img-link" style="height:170px; display:block; overflow:hidden; background:#f1f5f9; border-radius: 15px 15px 0 0;">
-              <img src="images/goikham/ehs/nam-kc.png" alt="Khám tổng quát – Gói Kim cương (nam)" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.src='images/goikham/ehs/nam-kc.png'" loading="lazy" />
+          <div class="news-card pkg-home-card">
+            <a href="chi-tiet-tin-tuc?id=44472" class="news-card__img-link">
+              <img src="images/goikham/ehs/nam-kc.png" alt="Khám tổng quát – Gói Kim cương (nam)" onerror="this.onerror=null; this.src='images/goikham/ehs/nam-kc.png'" loading="lazy" />
             </a>
-            <div class="news-card__body" style="padding:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center;">
-              <h3 class="news-card__title" style="font-size:1.05rem; font-weight:700; color:#000000; line-height:1.4; margin-bottom:1rem; text-align:center !important; text-align-last:center !important; width:100%;">Khám tổng quát<br>Gói Kim cương (nam)</h3>
-              <a href="chi-tiet-tin-tuc?id=44472" class="news-card__more" style="align-self:flex-end; text-align:right; width:100%; display:block; margin-top:auto;">Xem thêm <span class="arrow">→</span></a>
+            <div class="news-card__body">
+              <div style="width: 100%;">
+                <p class="pkg-card__cat">Khám tổng quát</p>
+                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44472">Gói Kim cương (nam)</a></h3>
+              </div>
+              <a href="chi-tiet-tin-tuc?id=44472" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
-          <div class="news-card pkg-home-card" style="background:#fff; border-radius:18px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 15px rgba(0,0,0,0.04); display:flex; flex-direction:column; width:100%; text-align:center;">
-            <a href="chi-tiet-tin-tuc?id=44470" class="news-card__img-link" style="height:170px; display:block; overflow:hidden; background:#f1f5f9; border-radius: 15px 15px 0 0;">
-              <img src="images/goikham/ehs/nu-kc-gd.png" alt="Khám tổng quát – Gói Kim cương (nữ có gia đình)" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.src='images/goikham/ehs/nu-kc-gd.png'" loading="lazy" />
+          <div class="news-card pkg-home-card">
+            <a href="chi-tiet-tin-tuc?id=44470" class="news-card__img-link">
+              <img src="images/goikham/ehs/nu-kc-gd.png" alt="Khám tổng quát – Gói Kim cương (nữ có gia đình)" onerror="this.onerror=null; this.src='images/goikham/ehs/nu-kc-gd.png'" loading="lazy" />
             </a>
-            <div class="news-card__body" style="padding:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center;">
-              <h3 class="news-card__title" style="font-size:1.05rem; font-weight:700; color:#000000; line-height:1.4; margin-bottom:1rem; text-align:center !important; text-align-last:center !important; width:100%;">Khám tổng quát<br>Gói Kim cương (nữ có gia đình)</h3>
-              <a href="chi-tiet-tin-tuc?id=44470" class="news-card__more" style="align-self:flex-end; text-align:right; width:100%; display:block; margin-top:auto;">Xem thêm <span class="arrow">→</span></a>
+            <div class="news-card__body">
+              <div style="width: 100%;">
+                <p class="pkg-card__cat">Khám tổng quát</p>
+                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44470">Gói Kim cương (nữ có gia đình)</a></h3>
+              </div>
+              <a href="chi-tiet-tin-tuc?id=44470" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
-          <div class="news-card pkg-home-card" style="background:#fff; border-radius:18px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 15px rgba(0,0,0,0.04); display:flex; flex-direction:column; width:100%; text-align:center;">
-            <a href="chi-tiet-tin-tuc?id=44468" class="news-card__img-link" style="height:170px; display:block; overflow:hidden; background:#f1f5f9; border-radius: 15px 15px 0 0;">
-              <img src="images/goikham/ehs/nu-kc-docthan.png" alt="Khám tổng quát – Gói Kim cương (nữ độc thân)" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.src='images/goikham/ehs/nu-kc-docthan.png'" loading="lazy" />
+          <div class="news-card pkg-home-card">
+            <a href="chi-tiet-tin-tuc?id=44468" class="news-card__img-link">
+              <img src="images/goikham/ehs/nu-kc-docthan.png" alt="Khám tổng quát – Gói Kim cương (nữ độc thân)" onerror="this.onerror=null; this.src='images/goikham/ehs/nu-kc-docthan.png'" loading="lazy" />
             </a>
-            <div class="news-card__body" style="padding:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center;">
-              <h3 class="news-card__title" style="font-size:1.05rem; font-weight:700; color:#000000; line-height:1.4; margin-bottom:1rem; text-align:center !important; text-align-last:center !important; width:100%;">Khám tổng quát<br>Gói Kim cương (nữ độc thân)</h3>
-              <a href="chi-tiet-tin-tuc?id=44468" class="news-card__more" style="align-self:flex-end; text-align:right; width:100%; display:block; margin-top:auto;">Xem thêm <span class="arrow">→</span></a>
+            <div class="news-card__body">
+              <div style="width: 100%;">
+                <p class="pkg-card__cat">Khám tổng quát</p>
+                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44468">Gói Kim cương (nữ độc thân)</a></h3>
+              </div>
+              <a href="chi-tiet-tin-tuc?id=44468" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
-          <div class="news-card pkg-home-card" style="background:#fff; border-radius:18px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 15px rgba(0,0,0,0.04); display:flex; flex-direction:column; width:100%; text-align:center;">
-            <a href="chi-tiet-tin-tuc?id=44466" class="news-card__img-link" style="height:170px; display:block; overflow:hidden; background:#f1f5f9; border-radius: 15px 15px 0 0;">
-              <img src="images/goikham/ehs/nam-bachkim.png" alt="Khám tổng quát – Gói Bạch kim (nam)" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.src='images/goikham/ehs/nam-bachkim.png'" loading="lazy" />
+          <div class="news-card pkg-home-card">
+            <a href="chi-tiet-tin-tuc?id=44466" class="news-card__img-link">
+              <img src="images/goikham/ehs/nam-bachkim.png" alt="Khám tổng quát – Gói Bạch kim (nam)" onerror="this.onerror=null; this.src='images/goikham/ehs/nam-bachkim.png'" loading="lazy" />
             </a>
-            <div class="news-card__body" style="padding:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center;">
-              <h3 class="news-card__title" style="font-size:1.05rem; font-weight:700; color:#000000; line-height:1.4; margin-bottom:1rem; text-align:center !important; text-align-last:center !important; width:100%;">Khám tổng quát<br>Gói Bạch kim (nam)</h3>
-              <a href="chi-tiet-tin-tuc?id=44466" class="news-card__more" style="align-self:flex-end; text-align:right; width:100%; display:block; margin-top:auto;">Xem thêm <span class="arrow">→</span></a>
+            <div class="news-card__body">
+              <div style="width: 100%;">
+                <p class="pkg-card__cat">Khám tổng quát</p>
+                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44466">Gói Bạch kim (nam)</a></h3>
+              </div>
+              <a href="chi-tiet-tin-tuc?id=44466" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
-          <div class="news-card pkg-home-card" style="background:#fff; border-radius:18px; overflow:hidden; border:1px solid #e2e8f0; box-shadow:0 4px 15px rgba(0,0,0,0.04); display:flex; flex-direction:column; width:100%; text-align:center;">
-            <a href="chi-tiet-tin-tuc?id=44463" class="news-card__img-link" style="height:170px; display:block; overflow:hidden; background:#f1f5f9; border-radius: 15px 15px 0 0;">
-              <img src="https://cih.com.vn/wp-content/uploads/2026/03/7.webp" alt="Khám tổng quát – Gói Bạch kim (nữ có gia đình)" style="width:100%; height:100%; object-fit:cover;" onerror="this.onerror=null; this.src='https://cih.com.vn/wp-content/uploads/2024/09/1-1.webp'" loading="lazy" />
+          <div class="news-card pkg-home-card">
+            <a href="chi-tiet-tin-tuc?id=44463" class="news-card__img-link">
+              <img src="https://cih.com.vn/wp-content/uploads/2026/03/7.webp" alt="Khám tổng quát – Gói Bạch kim (nữ có gia đình)" onerror="this.onerror=null; this.src='https://cih.com.vn/wp-content/uploads/2024/09/1-1.webp'" loading="lazy" />
             </a>
-            <div class="news-card__body" style="padding:1.25rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; align-items:center; text-align:center;">
-              <h3 class="news-card__title" style="font-size:1.05rem; font-weight:700; color:#000000; line-height:1.4; margin-bottom:1rem; text-align:center !important; text-align-last:center !important; width:100%;">Khám tổng quát<br>Gói Bạch kim (nữ có gia đình)</h3>
-              <a href="chi-tiet-tin-tuc?id=44463" class="news-card__more" style="align-self:flex-end; text-align:right; width:100%; display:block; margin-top:auto;">Xem thêm <span class="arrow">→</span></a>
+            <div class="news-card__body">
+              <div style="width: 100%;">
+                <p class="pkg-card__cat">Khám tổng quát</p>
+                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44463">Gói Bạch kim (nữ có gia đình)</a></h3>
+              </div>
+              <a href="chi-tiet-tin-tuc?id=44463" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 

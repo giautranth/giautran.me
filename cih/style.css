@@ -2961,7 +2961,9 @@ body {
   color: #007DA5 !important;
 }
 
-.section__header-btn {
+.section__header-btn,
+#header-booking-btn,
+.header__cta .btn--primary {
   background: linear-gradient(135deg, #0098C9 0%, #007A9E 50%, #00526B 100%) !important;
   color: #ffffff !important;
   border: 1px solid rgba(252, 211, 77, 0.5) !important;
@@ -2969,10 +2971,13 @@ body {
   box-shadow: 0 6px 18px rgba(0, 122, 158, 0.28) !important;
 }
 
-.section__header-btn:hover {
+.section__header-btn:hover,
+#header-booking-btn:hover,
+.header__cta .btn--primary:hover {
   background: linear-gradient(135deg, #00526B 0%, #007A9E 50%, #0098C9 100%) !important;
   border-color: rgba(252, 211, 77, 0.75) !important;
   color: #ffffff !important;
+  transform: translateY(-2px) !important;
   box-shadow: 0 8px 22px rgba(0, 122, 158, 0.36) !important;
 }
 

@@ -2526,10 +2526,10 @@
     <div class="cih-yt-layout">
       <!-- Left Column: Main 16:9 Player + Title Below -->
       <div class="cih-yt-main">
-        <div class="cih-video-hero" id="cih-video-hero" data-video-id="knG1SyVVyus" onclick="playCihHeroVideo()">
+        <div class="cih-video-hero" id="cih-video-hero" data-video-id="PIY6k81DRgc" onclick="playCihHeroVideo()">
           <iframe id="cih-video-hero-iframe" class="cih-video-hero__iframe" src="" title="Video Bệnh viện Quốc tế City" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <div class="cih-video-hero__poster-wrap">
-            <img id="cih-video-hero-img" src="https://i.ytimg.com/vi/knG1SyVVyus/sddefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/knG1SyVVyus/hqdefault.jpg'" alt="Bệnh viện Quốc tế City – Mỗi điểm chạm là trải nghiệm hạnh phúc" class="cih-video-hero__img" loading="lazy" />
+            <img id="cih-video-hero-img" src="https://i.ytimg.com/vi/PIY6k81DRgc/sddefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/PIY6k81DRgc/hqdefault.jpg'" alt="Trung tâm Hỗ trợ sinh sản (IVF Center) – Bệnh viện Quốc tế City" class="cih-video-hero__img" loading="lazy" />
             <div class="cih-video-hero__overlay">
               <span class="cih-video-hero__play" aria-hidden="true">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
@@ -2942,7 +2942,7 @@
     const hero = document.getElementById('cih-video-hero');
     const iframe = document.getElementById('cih-video-hero-iframe');
     if (!hero || !iframe) return;
-    const vid = videoId || hero.getAttribute('data-video-id') || 'knG1SyVVyus';
+    const vid = videoId || hero.getAttribute('data-video-id') || 'PIY6k81DRgc';
     hero.setAttribute('data-video-id', vid);
     iframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
     hero.classList.add('is-playing');

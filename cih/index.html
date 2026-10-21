@@ -762,109 +762,259 @@
 <!-- ═══════════════════════════════════════════════
      BÁC SĨ
 ═══════════════════════════════════════════════ -->
+<style>
+  #bac-si.doctors-section {
+    background: #fbf6e9 !important;
+    background-image: none !important;
+    padding: 3.25rem 0 3.5rem !important;
+  }
+
+  #bac-si .section__header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .doc-header-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .doc-header-arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1.5px solid #f2dfb3;
+    color: #c78d20;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(199, 141, 32, 0.08);
+    transition: all 0.25s ease;
+    padding: 0;
+  }
+
+  .doc-header-arrow:hover {
+    background: #d97706;
+    color: #ffffff;
+    border-color: #d97706;
+    box-shadow: 0 6px 14px rgba(217, 119, 6, 0.22);
+  }
+
+  #bac-si .doc-card-v2 {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 16px 16px 18px 16px !important;
+    border: 1px solid #f5eedc !important;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+  }
+
+  #bac-si .doc-card-v2:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  #bac-si .doc-card-v2__img-wrap {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: #f8fafc !important;
+    display: block !important;
+  }
+
+  #bac-si .doc-card-v2__img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    border-radius: 12px !important;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  #bac-si .doc-card-v2:hover .doc-card-v2__img {
+    transform: scale(1.04) !important;
+  }
+
+  #bac-si .doc-card-v2__body {
+    padding: 20px 6px 0 6px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 auto !important;
+  }
+
+  #bac-si .doc-card-v2__name {
+    font-size: 1.02rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    text-align: center !important;
+    margin: 0 0 8px 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  #bac-si .doc-card-v2__name a {
+    color: #0f172a !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+  }
+
+  #bac-si .doc-card-v2:hover .doc-card-v2__name a {
+    color: #007DA5 !important;
+  }
+
+  #bac-si .doc-card-v2__position {
+    font-size: 0.82rem !important;
+    font-weight: 400 !important;
+    color: #64748b !important;
+    text-align: center !important;
+    line-height: 1.55 !important;
+    margin: 0 0 18px 0 !important;
+    flex: 1 !important;
+  }
+
+  #bac-si .doc-card-v2__more-link,
+  #bac-si a.doc-card-v2__more-link {
+    border-top: 1px solid #f5f0e6 !important;
+    padding-top: 14px !important;
+    margin-top: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 5px !important;
+    text-align: right !important;
+    width: 100% !important;
+    color: #00688B !important;
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    text-decoration: none !important;
+  }
+
+  #bac-si .doc-card-v2__more-link .arrow {
+    color: #00688B !important;
+    font-weight: 700 !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  #bac-si .doc-card-v2__more-link:hover .arrow {
+    transform: translateX(3px) !important;
+  }
+</style>
+
 <section class="section doctors-section" id="bac-si">
   <div class="container">
     <div class="section__header">
       <div class="section__header-left">
         <h2 class="section__title" style="margin-bottom: 0;">Bác sĩ</h2>
       </div>
+      <div class="doc-header-nav">
+        <button type="button" class="doc-header-arrow" id="doc-mob-prev" aria-label="Bác sĩ trước">&lsaquo;</button>
+        <button type="button" class="doc-header-arrow" id="doc-mob-next" aria-label="Bác sĩ tiếp">&rsaquo;</button>
+      </div>
     </div>
     <div class="mobile-slider-container">
-      <button class="mobile-arrow mobile-arrow--prev" id="doc-mob-prev" aria-label="Bác sĩ trước">&lsaquo;</button>
       <div class="mobile-slider-track-wrap" id="doc-mob-wrap">
         <div class="doctors-grid-3" id="doc-grid-3">
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-thanh.png" alt="ThS.BS. Trần Quốc Thành" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" style="color: inherit; text-decoration: none;">ThS.BS. Trần Quốc Thành</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Giám đốc Điều hành Bệnh viện Quốc tế City và Bệnh viện Gia An 115</div>
-              <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city">ThS.BS. Trần Quốc Thành</a></h3>
+              <div class="doc-card-v2__position">Giám đốc Điều hành Bệnh viện Quốc tế City và Bệnh viện Gia An 115</div>
+              <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-nguyen.png" alt="BS.CKII. Phan Hoàng Nguyên" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" style="color: inherit; text-decoration: none;">BS.CKII. Phan Hoàng Nguyên</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Cố vấn Chuyên môn BGĐ BV Quốc tế City và Phó Giám đốc Điều hành BV Gia An 115</div>
-              <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa">BS.CKII. Phan Hoàng Nguyên</a></h3>
+              <div class="doc-card-v2__position">Cố vấn Chuyên môn BGĐ BV Quốc tế City &amp; Phó Giám đốc Điều hành BV Gia An 115</div>
+              <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-thuyet.png" alt="BS.CKII. Đặng Quang Thuyết" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" style="color: inherit; text-decoration: none;">BS.CKII. Đặng Quang Thuyết</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Phó Giám đốc Y Khoa</div>
-              <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet">BS.CKII. Đặng Quang Thuyết</a></h3>
+              <div class="doc-card-v2__position">Phó Giám đốc Y Khoa Bệnh viện Quốc tế City</div>
+              <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-hai.png" alt="ThS.BS. Trần Như Hải" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" style="color: inherit; text-decoration: none;">ThS.BS. Trần Như Hải</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Bác sĩ Chuyên khoa Nội tổng quát  - Trưởng phòng khám Quốc tế - Cố vấn cấp cao</div>
-              <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai">ThS.BS. Trần Như Hải</a></h3>
+              <div class="doc-card-v2__position">Bác sĩ Chuyên khoa Nội tổng quát - Trưởng phòng khám Quốc tế - Cố vấn cấp cao</div>
+              <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-hoang.png" alt="PGS.TS. BS. Trần Minh Hoàng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" style="color: inherit; text-decoration: none;">PGS.TS. BS. Trần Minh Hoàng</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Trưởng Đơn vị Can thiệp mạch máu (DSA) và Chẩn đoán hình ảnh</div>
-              <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang">PGS.TS. BS. Trần Minh Hoàng</a></h3>
+              <div class="doc-card-v2__position">Trưởng Đơn vị Can thiệp mạch máu (DSA) và Chẩn đoán hình ảnh</div>
+              <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-suong.png" alt="BS.CKI. Nguyễn Thị Ngọc Sương" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" style="color: inherit; text-decoration: none;">BS.CKI. Nguyễn Thị Ngọc Sương</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Trưởng Trung tâm Hỗ trợ sinh sản</div>
-              <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong">BS.CKI. Nguyễn Thị Ngọc Sương</a></h3>
+              <div class="doc-card-v2__position">Trưởng Trung tâm Hỗ trợ sinh sản</div>
+              <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-binh.png" alt="BS.CKII. Trần Thanh Bình" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" style="color: inherit; text-decoration: none;">BS.CKII. Trần Thanh Bình</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Trưởng Khoa Khám bệnh</div>
-              <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh">BS.CKII. Trần Thanh Bình</a></h3>
+              <div class="doc-card-v2__position">Trưởng Khoa Khám bệnh</div>
+              <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
           <div class="doc-card-v2" style="width: 100%;">
-            <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__img-wrap" style="display: block; cursor: pointer; text-decoration: none;">
+            <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__img-wrap">
               <img src="images/bac-si/bs-hue.png" alt="BS.CKII. Nguyễn Bạch Huệ" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.png'" loading="lazy" />
             </a>
             <div class="doc-card-v2__body">
-              <h3 class="doc-card-v2__name" style="text-align: center;"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" style="color: inherit; text-decoration: none;">BS.CKII. Nguyễn Bạch Huệ</a></h3>
-              <div class="doc-card-v2__position" style="text-align: center;">Trưởng khoa Nhi & Hồi sức Tích cực Sơ sinh</div>
-              <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__more-link" style="text-align: center; width: 100%; display: block; margin-top: auto;">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="doc-card-v2__name"><a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue">BS.CKII. Nguyễn Bạch Huệ</a></h3>
+              <div class="doc-card-v2__position">Trưởng khoa Nhi &amp; Hồi sức Tích cực Sơ sinh</div>
+              <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
             </div>
           </div>
 
         </div>
       </div>
-      <button class="mobile-arrow mobile-arrow--next" id="doc-mob-next" aria-label="Bác sĩ tiếp">&rsaquo;</button>
     </div>
     <div style="text-align: center; margin-top: 2rem;">
       <a href="bac-si" class="section__header-btn">Xem tất cả &rsaquo;</a>

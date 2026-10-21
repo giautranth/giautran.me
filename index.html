@@ -1,503 +1,3570 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>giautran.me | Website Wird Aktualisiert</title>
-  <meta name="description" content="Website giautran.me wird derzeit umfassend aktualisiert und modernisiert." />
-  <link rel="icon" type="image/png" href="https://api.iconify.design/lucide:sparkles.svg?color=%2338bdf8" />
-  
-  <!-- Google Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Intelligent growth for the AI era. We are GT Media | giautran.me</title>
+  <meta name="description" content="In a world reshaped by AI, media and digital experiences will be everywhere and in everything. Delivering intelligent growth for the AI era at giautran.me." />
+  <link rel="canonical" href="https://giautran.me/" />
+  <meta property="og:title" content="Intelligent growth for the AI era. We are GT Media" />
+  <meta property="og:description" content="In a world reshaped by AI, media and digital experiences will be everywhere and in everything. Delivering intelligent growth for the AI era." />
+  <meta property="og:url" content="https://giautran.me/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23000050'/%3E%3Ccircle cx='12' cy='20' r='3' fill='%23ffffff'/%3E%3Ccircle cx='20' cy='12' r='3' fill='%23ffffff'/%3E%3Ccircle cx='20' cy='20' r='4.2' fill='%23B1FD43'/%3E%3Ccircle cx='20' cy='28' r='3' fill='%23ffffff'/%3E%3Ccircle cx='28' cy='20' r='3' fill='%235465FF'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts matching GT Font & Noto Sans geometric proportions -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
 
   <style>
+    /* ==========================================================================
+       1. GT MEDIA EXACT DESIGN SYSTEM TOKENS & THEME ENGINE (:root)
+       ========================================================================== */
     :root {
-      --bg: #070a13;
-      --text-primary: #f8fafc;
-      --text-secondary: #94a3b8;
-      --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+      /* GT Media Core Brand Theme (tv.gtmedia from giautran.me) */
+      --colors-brand-primary: #000050;
+      --colors-brand-secondary: #5465FF;
+      --colors-brand-tertiary: #788BFF;
+      --colors-brand-accent: #B1FD43;
+      --colors-brand-tint: #FFFFFF;
+      --colors-brand-dark: #9CF026;
+
+      --colors-system-background: #F0F0F0;
+      --colors-system-orbBackground: rgba(177, 253, 67, 0.08);
+      --colors-system-textPrimary: #000050;
+      --colors-system-textSecondary: #242433;
+      --colors-system-textAccent: #5465FF;
+      --colors-system-textTertiary: #45454D;
+
+      --colors-surfaces-primary-background: #000050;
+      --colors-surfaces-primary-foreground: #FFFFFF;
+      --colors-surfaces-primary-reverse-background: #FFFFFF;
+      --colors-surfaces-primary-reverse-foreground: #000050;
+      --colors-surfaces-secondary-background: #5465FF;
+      --colors-surfaces-secondary-foreground: #FFFFFF;
+      --colors-surfaces-tertiary-background: #798BFF;
+      --colors-surfaces-tertiary-foreground: #000050;
+      --colors-surfaces-accent-background: #B1FD43;
+      --colors-surfaces-accent-foreground: #000050;
+      --colors-surfaces-tint-background: #FFFFFF;
+      --colors-surfaces-tint-foreground: #000050;
+      --colors-surfaces-subtle-background: rgba(255, 255, 255, 0.55);
+      --colors-surfaces-subtle-foreground: #000050;
+      --colors-surfaces-subtle-hoverBackground: #E0E0E0;
+      --colors-surfaces-subtle-activeBackground: #C8C8CC;
+      --colors-surfaces-strong-background: #000050;
+      --colors-surfaces-strong-foreground: #FFFFFF;
+      --colors-surfaces-strong-hoverBackground: #000033;
+
+      --colors-orb-background: #798BFF;
+      --colors-orb-primary: #5465FF;
+      --colors-orb-secondary: #94EBF2;
+      --colors-orb-accent: #B1FD43;
+      --opacities-orbBackground: 0.75;
+
+      --colorSystemBlack: #0a0f0d;
+      --colorSystemBlack10: rgba(10, 15, 13, 0.1);
+      --colorSystemBlack20: rgba(10, 15, 13, 0.2);
+      --colorSystemBlack40: rgba(10, 15, 13, 0.4);
+      --colorSystemBlack50: rgba(10, 15, 13, 0.5);
+      --colorSystemBlack60: rgba(10, 15, 13, 0.6);
+      --colorSystemWhite: #ffffff;
+      --colorSystemWhite30: rgba(255, 255, 255, 0.3);
+      --colorSystemWhite60: rgba(255, 255, 255, 0.6);
+      --colorSystemWhite80: rgba(255, 255, 255, 0.8);
+      --colorError: #fa6243;
+      --colorAccent100: #cbfe7e;
+
+      /* Typography & Fluid Sizing (Exact GT Media Clamp Scale) */
+      --fontFamilyBase: 'Plus Jakarta Sans', 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --fontWeightBase: 400;
+      --fontWeightSemi: 500;
+      --fontWeightBold: 700;
+
+      --step--2: 0.75rem;
+      --step--1: 0.875rem;
+      --step-0: 1rem;
+      --step-1: 1.25rem;
+      --step-2: 1.5rem;
+      --step-3: clamp(1.25rem, 1.163rem + 0.435vw, 1.5rem);
+      --step-4: clamp(1.5rem, 1.326rem + 0.87vw, 2rem);
+      --step-5: clamp(2rem, 1.652rem + 1.739vw, 3rem);
+      --step-6: clamp(2.375rem, 1.636rem + 3.696vw, 4.5rem);
+      --step-7: clamp(2.625rem, 1.408rem + 6.087vw, 6.125rem);
+
+      --lineHeightXSmall: 1.1;
+      --lineHeightSmall: 1.2;
+      --lineHeightMedium: 1.4;
+      --lineHeightLarge: 1.6;
+
+      --letterSpacingTiny: -0.04em;
+      --letterSpacingXSmall: -0.02em;
+      --letterSpacingSmall: -0.01em;
+      --letterSpacingBase: 0;
+
+      /* Spacing & Radii */
+      --spacingXXSmall: 0.25rem;
+      --spacingXSmall: 0.6rem;
+      --spacingSmall: 0.8rem;
+      --spacingBase: 1rem;
+      --spacingSMedium: 1.25rem;
+      --spacingMedium: 1.5rem;
+      --spacingLMedium: 2rem;
+      --spacingXLMedium: 2.5rem;
+      --spacingLarge: 3rem;
+      --spacingMLarge: 4rem;
+      --spacingLLarge: 5rem;
+      --spacingXLarge: 6rem;
+      --spacingXXLarge: 8rem;
+
+      --space-2xs: clamp(0.25rem, calc(0.16rem + 0.45vw), 0.5rem);
+      --space-xs: clamp(0.38rem, calc(0.24rem + 0.68vw), 0.75rem);
+      --space-s: clamp(0.5rem, calc(0.32rem + 0.91vw), 1rem);
+      --space-m: clamp(0.75rem, calc(0.48rem + 1.36vw), 1.5rem);
+      --space-l: clamp(1rem, calc(0.64rem + 1.82vw), 2rem);
+      --space-xl: clamp(1.5rem, calc(0.95rem + 2.73vw), 3rem);
+      --space-2xl: clamp(2rem, calc(1.27rem + 3.64vw), 4rem);
+      --space-4xl-3xl: clamp(4rem, calc(3.27rem + 3.64vw), 6rem);
+      --space-5xl-4xl: clamp(4.5rem, calc(3.23rem + 6.36vw), 8rem);
+      --space-7xl-6xl: clamp(6rem, calc(4.55rem + 7.27vw), 10rem);
+
+      --radiusXSmall: 4px;
+      --radiusSmall: 8px;
+      --radiusMedium: 12px;
+      --radiusLarge: 16px;
+      --radiusXLarge: 24px;
+      --radiusXXLarge: 32px;
+      --radiusSection: 40px;
+      --radiusFull: 50%;
+      --radiusPill: 999px;
+
+      --contentWidth: 90rem;
+      --shadowBase: 0 0 14px rgba(0, 0, 0, 0.12);
+      --shadowLarge: 0 2px 30px 0 rgba(0, 0, 0, 0.15);
     }
 
-    * {
+    /* Sub-brand Theme Overrides (GT Media Collective Switcher) */
+    body[data-gt-theme="performance"] {
+      --colors-brand-accent: #FD3E81;
+      --colors-brand-dark: #ED246B;
+      --colors-surfaces-accent-background: #FD3E81;
+      --colors-surfaces-accent-foreground: #000050;
+      --colors-orb-accent: #FC3D80;
+      --colorAccent100: #FEC1D6;
+    }
+    body[data-gt-theme="seo"] {
+      --colors-brand-accent: #FF8001;
+      --colors-brand-dark: #EB5E00;
+      --colors-surfaces-accent-background: #FF8001;
+      --colors-surfaces-accent-foreground: #000050;
+      --colors-orb-accent: #FF8001;
+      --colorAccent100: #FFE6CC;
+    }
+    body[data-gt-theme="crm"] {
+      --colors-brand-accent: #9A3EFF;
+      --colors-brand-dark: #8938E0;
+      --colors-surfaces-accent-background: #9A3EFF;
+      --colors-surfaces-accent-foreground: #FFFFFF;
+      --colors-orb-accent: #9A3EFF;
+      --colorAccent100: #EBD8FF;
+    }
+
+    /* ==========================================================================
+       2. BASE RESET & GLOBAL UTILITIES
+       ========================================================================== */
+    *, *::before, *::after {
       box-sizing: border-box;
+      background-color: transparent;
+    }
+
+    blockquote, body, dd, dl, figure, h1, h2, h3, h4, p, ul {
+      margin: 0;
+    }
+
+    ul[role="list"], ol[role="list"] {
+      list-style: none;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--colors-system-background);
+    }
+
+    body {
+      background-color: var(--colors-system-background);
+      color: var(--colors-system-textSecondary);
+      font-family: var(--fontFamilyBase);
+      font-weight: var(--fontWeightBase);
+      letter-spacing: var(--letterSpacingBase);
+      line-height: var(--lineHeightLarge);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      transition: background-color 0.35s ease;
+    }
+
+    h1, h2, h4, h5, h6 {
+      color: var(--colors-system-textPrimary);
+      font-weight: var(--fontWeightSemi);
+      line-height: var(--lineHeightSmall);
+    }
+
+    h3 {
+      color: var(--colors-system-textSecondary);
+      font-size: var(--step-4);
+      font-weight: var(--fontWeightSemi);
+      line-height: var(--lineHeightMedium);
+      letter-spacing: var(--letterSpacingSmall);
+    }
+
+    h1, .font-step-6 {
+      font-size: var(--step-6);
+      letter-spacing: var(--letterSpacingBase);
+    }
+
+    h2, .font-step-5 {
+      font-size: var(--step-5);
+      letter-spacing: var(--letterSpacingXSmall);
+    }
+
+    h4, .font-step-3 {
+      font-size: var(--step-3);
+      line-height: var(--lineHeightLarge);
+      letter-spacing: var(--letterSpacingSmall);
+    }
+
+    img, picture, video {
+      display: block;
+      max-width: 100%;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .wrapper {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--container, var(--contentWidth));
+      padding-left: var(--spacingMedium);
+      padding-right: var(--spacingMedium);
+    }
+
+    /* GT Media Signature Dotted Grid Background (.bg-dotted) */
+    .bg-dotted {
+      position: relative;
+    }
+
+    .bg-dotted::before {
+      background-image: radial-gradient(#a6a6a6 0.055rem, transparent 0);
+      background-size: 1.5rem 1.5rem;
+      content: " ";
+      display: block;
+      height: 100%;
+      width: 100%;
+      opacity: 0.32;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -5;
+      pointer-events: none;
+    }
+
+    /* Link Underline Animation (Exact GT Media cubic-bezier) */
+    .link-underline-animation,
+    .link-underline-hover-only {
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 1px, 0 1px;
+      padding-bottom: 2px;
+      text-decoration: none;
+      transition: background-size 0.6s cubic-bezier(0.75, 0, 0.25, 1);
+    }
+
+    .link-underline-hover-only {
+      background-image: linear-gradient(transparent, transparent), linear-gradient(currentColor, currentColor);
+    }
+
+    .link-underline-hover-only:hover,
+    .link-underline-hover-only:focus-visible {
+      background-size: 0 1px, 100% 1px;
+    }
+
+    /* ==========================================================================
+       3. FLOATING AMBIENT GRADIENT ANIMATION (BackgroundGradientAnimation)
+       ========================================================================== */
+    .background-gradient-animation {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -10;
+      overflow: hidden;
+    }
+
+    /* First Orb: Neon Acid Lime + Soft White Core */
+    .first-orb {
+      position: absolute;
+      left: 5%;
+      top: 2vh;
+      width: 44.25rem;
+      height: 44.25rem;
+      border-radius: 50%;
+      filter: blur(2.2rem);
+      opacity: var(--opacities-orbBackground);
+      animation: gtFirstOrbDrift 45s linear infinite;
+    }
+
+    .first-orb-core {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 0% 20%, var(--colors-brand-accent) 35%, var(--colors-system-orbBackground) 0%),
+        radial-gradient(circle at 60% 10%, var(--colorSystemWhite) 30%, var(--colors-system-orbBackground) 35%),
+        radial-gradient(circle at 50% 20%, var(--colors-brand-accent) 50%, var(--colors-system-orbBackground) 50%),
+        radial-gradient(circle at 100% 70%, var(--colors-brand-accent) 60%, var(--colors-system-orbBackground) 30%);
+      filter: blur(2rem);
+      opacity: 0.82;
+      animation: gtOrbRotate 20s linear infinite;
+    }
+
+    /* Second Orb: Cobalt Blue + Periwinkle + Cyan + Lime Multi-Ellipse */
+    .second-orb-container {
+      position: absolute;
+      left: 68vw;
+      top: 8vh;
+      width: 28.75rem;
+      height: 28.75rem;
+      border-radius: 50%;
+      background-color: var(--colors-orb-background);
+      filter: blur(1.2rem);
+      opacity: 0.72;
+      overflow: hidden;
+      animation: gtSecondOrbDrift 56s ease-in-out infinite;
+    }
+
+    .second-orb {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      animation: gtOrbRotate 20s linear infinite;
+    }
+
+    .second-orb .ellipse {
+      position: absolute;
+      inset: 0;
+      filter: blur(2.6rem);
+      transform-origin: 50% 50%;
+    }
+
+    .second-orb .ellipse-1 {
+      background: radial-gradient(ellipse 35% 75% at 62% 50%, var(--colors-orb-secondary) 35%, transparent 0%);
+      transform: rotate(50deg);
+    }
+
+    .second-orb .ellipse-2 {
+      background: radial-gradient(ellipse 30% 70% at 90% 80%, var(--colors-orb-accent) 100%, transparent 60%);
+      transform: rotate(110deg);
+    }
+
+    .second-orb .ellipse-3 {
+      background: radial-gradient(ellipse 30% 60% at 0% 30%, var(--colors-orb-accent) 35%, transparent 60%);
+    }
+
+    .second-orb .ellipse-4 {
+      background: radial-gradient(ellipse 100% 45% at 70% 5%, var(--colors-orb-primary) 80%, transparent 60%);
+      transform: rotate(100deg);
+    }
+
+    .second-orb .ellipse-5 {
+      background: radial-gradient(ellipse 25% 60% at 100% 45%, var(--colors-orb-primary) 55%, transparent 50%);
+      transform: rotate(-30deg);
+    }
+
+    @keyframes gtOrbRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes gtFirstOrbDrift {
+      0% { transform: translate(-8vw, 0vh); }
+      25% { transform: translate(18vw, 16vh); }
+      50% { transform: translate(48vw, 42vh); }
+      75% { transform: translate(20vw, 18vh); }
+      100% { transform: translate(-8vw, 0vh); }
+    }
+
+    @keyframes gtSecondOrbDrift {
+      0% { transform: translate(0vw, 25vh); }
+      50% { transform: translate(-55vw, -18vh); }
+      100% { transform: translate(0vw, 25vh); }
+    }
+
+    /* ==========================================================================
+       4. GT MEDIA SIGNATURE SPLIT-PILL BUTTON (.gt-btn)
+       ========================================================================== */
+    .gt-btn {
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      font-size: var(--step-0);
+      font-weight: var(--fontWeightSemi);
+      width: fit-content;
+      line-height: var(--lineHeightMedium);
+      padding: 0 calc(var(--spacingLarge) + 0.6rem) 0 0;
+      position: relative;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: var(--radiusXXLarge);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .gt-btn-label {
+      border-radius: var(--radiusXLarge);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacingSmall) var(--spacingMedium);
+      margin: 0.375rem 0 0.375rem 0.375rem;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.22s ease-in-out;
+    }
+
+    .gt-btn-text-1 {
+      display: flex;
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 0.22s ease-in-out;
+    }
+
+    .gt-btn-text-2 {
+      display: flex;
+      position: absolute;
+      transform: translateY(55%);
+      opacity: 0;
+      transition: all 0.22s ease-in-out;
+      white-space: nowrap;
+    }
+
+    .gt-btn-arrow {
+      height: 3rem;
+      width: 3rem;
+      border-radius: var(--radiusFull);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 0.375rem;
+      margin: 0.375rem 0.375rem 0.375rem 0;
+      padding: 0.75rem;
+      transform: rotate(45deg);
+      transition: all 0.22s ease-in-out;
+    }
+
+    .gt-btn-arrow svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: block;
+    }
+
+    /* Primary Variant (Navy #000050 -> Neon Lime #B1FD43 on hover) */
+    .gt-btn--primary .gt-btn-label,
+    .gt-btn--primary .gt-btn-arrow {
+      background-color: var(--colors-surfaces-primary-background);
+      color: var(--colors-surfaces-primary-foreground);
+    }
+
+    /* Primary Inverse Variant (White #FFFFFF -> Neon Lime #B1FD43 on hover) */
+    .gt-btn--inverse .gt-btn-label,
+    .gt-btn--inverse .gt-btn-arrow {
+      background-color: var(--colors-surfaces-primary-foreground);
+      color: var(--colors-surfaces-primary-background);
+    }
+
+    /* Hover State: Switch to Neon Acid Lime + Slide Text + Rotate Arrow 45deg -> 90deg */
+    .gt-btn:hover .gt-btn-label,
+    .gt-btn:focus-visible .gt-btn-label,
+    .gt-btn:hover .gt-btn-arrow,
+    .gt-btn:focus-visible .gt-btn-arrow {
+      background-color: var(--colors-surfaces-accent-background);
+      color: var(--colors-surfaces-accent-foreground);
+    }
+
+    .gt-btn:hover .gt-btn-text-1,
+    .gt-btn:focus-visible .gt-btn-text-1 {
+      opacity: 0;
+      position: absolute;
+      transform: translateY(-55%);
+    }
+
+    .gt-btn:hover .gt-btn-text-2,
+    .gt-btn:focus-visible .gt-btn-text-2 {
+      opacity: 1;
+      position: relative;
+      transform: translateY(0);
+      color: var(--colors-surfaces-accent-foreground);
+    }
+
+    .gt-btn:hover .gt-btn-arrow,
+    .gt-btn:focus-visible .gt-btn-arrow {
+      right: 0;
+      transform: rotate(90deg);
+    }
+
+    /* Compact Header Contact Button */
+    .gt-btn--compact {
+      padding: 0;
+    }
+    .gt-btn--compact .gt-btn-label {
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightBase);
+      padding: 0.625rem 1.25rem;
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       5. HEADER & NAVIGATION CARD TRAY (.gt-header)
+       ========================================================================== */
+    .gt-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 1.15rem 0;
+      transition: background-color 0.25s ease, backdrop-filter 0.25s ease, transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+    }
+
+    .gt-header.scrolled {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background-color: rgba(240, 240, 240, 0.92);
+      box-shadow: 0 4px 24px rgba(0, 0, 80, 0.05);
+    }
+
+    .gt-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .gt-logo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--colors-brand-primary);
+    }
+
+    .gt-logo-svg {
+      height: 2.35rem;
+      width: auto;
+      display: block;
+    }
+
+    /* Desktop Main Nav */
+    .gt-main-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .gt-nav-list {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-primary);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+    .gt-nav-item {
       position: relative;
-      overflow-x: hidden;
-      padding: 2.5rem 2rem 2rem 2rem;
     }
 
-    /* Ambient background lighting */
-    .ambient-glow {
-      position: fixed;
-      top: -20%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 800px;
-      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(99, 102, 241, 0.06) 40%, transparent 70%);
-      filter: blur(90px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .ambient-glow-bottom {
-      position: fixed;
-      bottom: -25%;
-      right: -10%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
-      filter: blur(100px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Subtle grid overlay */
-    .grid-pattern {
-      position: fixed;
-      inset: 0;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Top brand header */
-    header {
-      width: 100%;
-      max-width: 1000px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-    }
-
-    .brand-logo {
+    .gt-nav-trigger {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      border-radius: var(--radiusXLarge);
+      border: 0;
+      background: transparent;
+      color: var(--colors-system-textPrimary);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightBase);
       text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    .brand-badge {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
-      border: 1px solid rgba(56, 189, 248, 0.3);
+    .gt-nav-trigger:hover,
+    .gt-nav-item:hover .gt-nav-trigger {
+      background-color: var(--colors-surfaces-primary-reverse-background);
+      color: var(--colors-surfaces-primary-reverse-foreground);
+    }
+
+    .gt-nav-chevron {
+      width: 0.688rem;
+      height: 0.688rem;
+      transition: transform 0.35s ease;
+    }
+
+    .gt-nav-item:hover .gt-nav-chevron {
+      transform: rotate(180deg);
+    }
+
+    /* GT Media Submenu Card Tray (64.375rem wide, 3 Horizontal Nav Cards) */
+    .gt-submenu-wrapper {
+      position: absolute;
+      top: calc(100% + 0.85rem);
+      left: 50%;
+      transform: translate(-50%, -10px);
+      width: min(64.375rem, 92vw);
+      background-color: var(--colorSystemWhite);
+      border-radius: var(--radiusXLarge);
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05), 0 20px 32px rgba(0, 0, 0, 0.1);
+      padding: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+      z-index: 120;
+    }
+
+    .gt-nav-item::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1rem;
+      height: 1rem;
+    }
+
+    .gt-nav-item:hover .gt-submenu-wrapper {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translate(-50%, 0);
+    }
+
+    .gt-submenu-grid {
       display: flex;
+      gap: 0.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gt-nav-card {
+      flex: 1;
+      border-radius: var(--radiusLarge);
+      transition: background-color 0.2s ease;
+    }
+
+    .gt-nav-card:hover {
+      background-color: var(--colors-system-background);
+    }
+
+    .gt-nav-card-link {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      padding: 0.65rem;
+      text-decoration: none;
+      color: inherit;
+      height: 100%;
+    }
+
+    .gt-nav-card-img {
+      width: 80px;
+      height: 128px;
+      border-radius: var(--radiusSmall);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .gt-nav-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gt-nav-card:hover .gt-nav-card-img img {
+      transform: scale(1.06);
+    }
+
+    .gt-nav-card-body {
+      flex: 1;
+      padding-right: 0.5rem;
+    }
+
+    .gt-nav-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .gt-nav-card-title {
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      color: var(--colors-system-textPrimary);
+    }
+
+    .gt-nav-card-arrow {
+      color: var(--colorSystemBlack50);
+      transition: transform 0.3s ease, color 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .gt-nav-card:hover .gt-nav-card-arrow {
+      color: var(--colorSystemBlack);
+      transform: translateX(5px);
+    }
+
+    .gt-nav-card-desc {
+      font-size: var(--step--1);
+      color: var(--colors-system-textSecondary);
+      line-height: 1.4;
+    }
+
+    /* Header Right Actions (Region Selector + Theme Pill + Contact Button) */
+    .gt-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .gt-region-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background-color: transparent;
+      border: 1px solid var(--colors-system-textTertiary);
+      border-radius: var(--radiusXXLarge);
+      padding: 0.55rem 0.9rem;
+      font-size: var(--step--1);
+      color: var(--colors-system-textPrimary);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .gt-region-btn:hover {
+      background-color: var(--colors-surfaces-primary-reverse-background);
+      border-color: transparent;
+    }
+
+    .gt-region-btn .region-code {
+      font-weight: var(--fontWeightSemi);
+    }
+
+    .gt-mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--colors-system-textTertiary);
+      border-radius: var(--radiusSmall);
+      width: 2.6rem;
+      height: 2.6rem;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 0.95rem;
-      color: #38bdf8;
+      cursor: pointer;
+      color: var(--colors-system-textPrimary);
     }
 
-    .live-status {
+    /* ==========================================================================
+       6. HERO SECTION WITH SCROLL-EXPANDING SHOWREEL VIDEO (AnimatedHeroVideo)
+       ========================================================================== */
+    main#main-content {
+      padding-top: 96px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .animated-hero-video {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+
+    .hero-text-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2.25rem;
+      padding: 4.5rem 1rem 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #34d399;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(0, 0, 80, 0.12);
+      border-radius: var(--radiusPill);
+      padding: 0.4rem 1rem;
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      color: var(--colors-brand-primary);
+      backdrop-filter: blur(8px);
     }
 
-    .pulse-dot {
+    .hero-eyebrow-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #10b981;
-      position: relative;
+      background: var(--colors-brand-accent);
+      box-shadow: 0 0 0 3px rgba(177, 253, 67, 0.35);
     }
 
-    .pulse-dot::after {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 50%;
-      background: #10b981;
-      opacity: 0.6;
-      animation: pulse 2s infinite ease-out;
+    .hero-heading {
+      max-width: 64rem;
+      font-size: var(--step-7);
+      font-weight: var(--fontWeightSemi);
+      line-height: var(--lineHeightXSmall);
+      letter-spacing: var(--letterSpacingTiny);
+      color: var(--colors-system-textPrimary);
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(2.5); opacity: 0; }
+    .hero-heading span.line {
+      display: block;
+      animation: gtClipReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .hero-heading span.line:nth-child(2) {
+      animation-delay: 0.12s;
     }
 
-    /* Main Container */
-    main {
-      width: 100%;
-      max-width: 900px;
-      text-align: center;
-      margin: auto;
-      padding: 3rem 1rem;
-      position: relative;
-      z-index: 10;
-    }
-
-    .maintenance-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 18px;
-      border-radius: 9999px;
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #7dd3fc;
-      margin-bottom: 2rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: clamp(1.9rem, 4.2vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.25;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 640px) {
-      h1 {
-        white-space: normal;
-        font-size: 2rem;
+    @keyframes gtClipReveal {
+      0% {
+        clip-path: inset(0 0 100% 0);
+        transform: translateY(40px);
+      }
+      100% {
+        clip-path: inset(0 0 0 0);
+        transform: translateY(0);
       }
     }
 
-    h1 span {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .description {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      color: var(--text-secondary);
-      line-height: 1.75;
-      max-width: 640px;
+    /* Hero Showreel Video Container with Scroll-Expanding Circular Clip-Path */
+    .hero-video-block {
+      position: relative;
+      width: 100%;
+      max-width: var(--contentWidth);
       margin: 0 auto;
-      font-weight: 400;
+      padding: 0 var(--spacingMedium);
     }
 
-    .desktop-br {
-      display: inline;
-    }
-
-    @media (max-width: 640px) {
-      .desktop-br {
-        display: none;
-      }
-    }
-
-    /* Footer */
-    footer {
+    .hero-video-mask {
+      position: relative;
       width: 100%;
-      max-width: 1000px;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radiusXLarge);
+      overflow: hidden;
+      clip-path: circle(var(--hero-clip, 68%) at 50% 50%);
+      transition: clip-path 0.25s ease-out;
+      box-shadow: 0 24px 60px rgba(0, 0, 80, 0.14);
+      background: #000050;
+    }
+
+    .hero-showreel-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .hero-video-overlay-ui {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 80, 0.15) 0%, rgba(0, 0, 50, 0.45) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    /* GT Media 154px Center Play Showreel Button */
+    .play-showreel-btn {
+      background: transparent;
+      border: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 0.84rem;
-      color: #64748b;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .play-showreel-btn svg {
+      width: 128px;
+      height: 128px;
+      opacity: 0.9;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .play-showreel-btn:hover svg {
+      opacity: 1;
+      transform: scale(1.06);
+    }
+
+    .play-showreel-btn span.pill {
+      background-color: var(--colorSystemWhite);
+      color: var(--colorSystemBlack);
+      border-radius: var(--radiusXLarge);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      padding: 0.45rem 1.35rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+      transition: background-color 0.2s ease;
+    }
+
+    .play-showreel-btn:hover span.pill {
+      background-color: var(--colors-surfaces-accent-background);
+      color: var(--colors-surfaces-accent-foreground);
+    }
+
+    /* Bottom-right Play/Pause Toggle */
+    .play-pause-corner-btn {
+      position: absolute;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 3;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 50%;
+      background-color: var(--colorSystemWhite);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: var(--colors-brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .play-pause-corner-btn:hover {
+      background-color: var(--colors-surfaces-accent-background);
+      color: var(--colors-surfaces-accent-foreground);
+    }
+
+    /* ==========================================================================
+       7. "WE BELIEVE" TITLE-TEXT MANIFESTO SECTION (.title-text_wrapper)
+       ========================================================================== */
+    .title-text-section {
+      padding-top: var(--spacingLLarge);
+      padding-bottom: var(--spacingMLarge);
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+    }
+
+    .title-text-lead {
+      color: var(--colors-brand-primary);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .title-text-heading {
+      font-size: var(--step-6);
+      line-height: var(--lineHeightSmall);
+      color: var(--colors-system-textPrimary);
+      max-width: 78%;
+    }
+
+    .title-text-body {
+      margin-left: auto;
+      max-width: 48%;
+      color: var(--colorSystemBlack);
+      font-size: var(--step-1);
+      line-height: var(--lineHeightLarge);
+    }
+
+    /* ==========================================================================
+       8. STICKY STACKING CARDS SECTION (01, 02, 03, 04 - .stacking-cards_wrapper)
+       ========================================================================== */
+    .stacking-cards-section {
+      padding-top: var(--spacingMLarge);
+      padding-bottom: var(--spacingMLarge);
       position: relative;
+    }
+
+    .stacking-card {
+      position: sticky;
+      margin-bottom: var(--spacingMedium);
+      overflow: hidden;
+    }
+
+    .stacking-card:nth-child(1) { top: 5.5rem; z-index: 1; }
+    .stacking-card:nth-child(2) { top: 7.75rem; z-index: 2; }
+    .stacking-card:nth-child(3) { top: 10rem; z-index: 3; }
+    .stacking-card:nth-child(4) { top: 12.25rem; z-index: 4; margin-bottom: 0; }
+
+    .stacking-card-body {
+      background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(90deg, rgba(220, 220, 225, 0.6), rgba(195, 195, 205, 0.6) 50%, rgba(220, 220, 225, 0.6)) border-box;
+      border: 1px solid transparent;
+      border-radius: 0.75rem;
+      box-shadow: 0 -8px 30px rgba(0, 0, 80, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 29rem;
+      padding: var(--spacingLMedium) var(--spacingXLMedium);
+      transition: transform 0.3s ease;
+    }
+
+    .stacking-card-title {
+      display: flex;
+      align-items: center;
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      line-height: var(--lineHeightMedium);
+      text-transform: uppercase;
+      color: var(--colors-system-textPrimary);
+      margin-bottom: var(--spacingSMedium);
+      letter-spacing: 0.03em;
+    }
+
+    .stacking-card-title span.num {
+      display: inline-block;
+      width: 3rem;
+      color: var(--colors-brand-secondary);
+      font-weight: var(--fontWeightBold);
+    }
+
+    .stacking-card-content-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: var(--spacingXXLarge);
+      flex: 1;
+    }
+
+    .stacking-card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: var(--spacingLMedium);
+      max-width: 42rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .stacking-card-content h3 {
+      font-size: var(--step-5);
+      color: var(--colors-system-textPrimary);
+      line-height: 1.15;
+      margin-bottom: -0.5rem;
+    }
+
+    .stacking-card-content p {
+      font-size: var(--step-0);
+      color: var(--colors-system-textSecondary);
+      line-height: var(--lineHeightLarge);
+    }
+
+    .stacking-card-image {
+      width: 22.5rem;
+      height: 22.5rem;
+      flex-shrink: 0;
+      border-radius: var(--radiusFull);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 16px 40px rgba(0, 0, 80, 0.12);
+    }
+
+    .stacking-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radiusFull);
+      transition: transform 0.5s ease;
+    }
+
+    .stacking-card-body:hover .stacking-card-image img {
+      transform: scale(1.06);
+    }
+
+    /* ==========================================================================
+       9. OPEN INTELLIGENCE STICKY DOT-GLOBE SECTION (.open-intelligence_container)
+       ========================================================================== */
+    .open-intelligence-section {
+      background: #04055b;
+      color: var(--colorSystemWhite);
+      display: flex;
+      flex-direction: row;
+      margin: var(--spacingXLarge) 0;
+      min-height: 100vh;
+      position: relative;
+      overflow: clip;
+    }
+
+    .open-intelligence-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      padding: 7rem 3rem 7rem 6vw;
+      position: relative;
+      z-index: 3;
+    }
+
+    .oi-feature-block {
+      max-width: 30rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      padding: 1.75rem;
+      border-radius: var(--radiusLarge);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: all 0.35s ease;
+    }
+
+    .oi-feature-block:hover,
+    .oi-feature-block.active {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: var(--colors-brand-accent);
+      transform: translateX(6px);
+    }
+
+    .oi-badge {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radiusMedium);
+      color: var(--colors-brand-accent);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      padding: 0.65rem 1.1rem;
+      text-transform: uppercase;
+      width: fit-content;
+      letter-spacing: 0.05em;
+    }
+
+    .oi-title {
+      color: var(--colorSystemWhite);
+      font-size: var(--step-2);
+      font-weight: var(--fontWeightSemi);
+      line-height: var(--lineHeightSmall);
+    }
+
+    .oi-text {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: var(--step-0);
+      line-height: var(--lineHeightLarge);
+    }
+
+    .open-intelligence-right {
+      flex: 1;
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 2;
+    }
+
+    .oi-gradient-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 110% 110%, rgba(177, 253, 67, 0.85) 0%, rgba(4, 5, 91, 0) 52%),
+        radial-gradient(circle at 15% 15%, rgba(0, 219, 238, 0.65) 0%, rgba(4, 5, 91, 0) 48%),
+        radial-gradient(circle at 50% 50%, rgba(84, 101, 255, 0.35) 0%, rgba(4, 5, 91, 1) 60%);
+      z-index: 1;
+    }
+
+    .oi-dots-globe {
+      position: relative;
+      z-index: 2;
+      width: 440px;
+      height: 440px;
+      animation: gtOrbRotate 90s linear infinite;
+    }
+
+    .oi-floating-orbs {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .oi-orb-node {
+      position: absolute;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, rgba(177, 253, 67, 0.9), rgba(0, 219, 238, 0.75) 55%, rgba(84, 101, 255, 0.85));
+      box-shadow: 0 12px 36px rgba(0, 219, 238, 0.35), inset 0 0 18px rgba(255, 255, 255, 0.65);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+    }
+
+    .oi-orb-node.active {
+      transform: scale(1.22);
+      box-shadow: 0 0 0 6px rgba(177, 253, 67, 0.35), 0 16px 44px rgba(177, 253, 67, 0.55);
+    }
+
+    .oi-orb-speed { left: 16%; top: 20%; }
+    .oi-orb-scale { right: 16%; top: 20%; }
+    .oi-orb-precision { left: 16%; bottom: 20%; }
+    .oi-orb-signals { right: 16%; bottom: 20%; }
+
+    .oi-center-logo {
+      position: relative;
+      z-index: 5;
+      background: rgba(4, 5, 91, 0.82);
+      backdrop-filter: blur(10px);
+      padding: 1.1rem 1.6rem;
+      border-radius: var(--radiusXLarge);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    /* ==========================================================================
+       10. "OUR WORK" 3D DEPTH-STACKED CARD CAROUSEL (.card-carousel_wrapper)
+       ========================================================================== */
+    .card-carousel-section {
+      padding-top: var(--spacingLLarge);
+      padding-bottom: calc(80px + var(--spacingLLarge));
+      position: relative;
+    }
+
+    .card-carousel-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: var(--spacingXLarge);
+    }
+
+    .card-carousel-title-group {
+      max-width: 70%;
+    }
+
+    .card-carousel-lead {
+      color: var(--colors-brand-primary);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      text-transform: uppercase;
+      margin-bottom: var(--spacingMedium);
+      letter-spacing: 0.04em;
+    }
+
+    .card-carousel-title-group h2 {
+      font-size: clamp(2.25rem, 4vw, 4rem);
+      font-weight: var(--fontWeightBase);
+      line-height: var(--lineHeightSmall);
+      color: var(--colors-system-textPrimary);
+    }
+
+    .card-stack-container {
+      height: 620px;
+      perspective: 1000px;
+      position: relative;
+      width: 100%;
+    }
+
+    .card-stack-list {
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 100%;
+    }
+
+    .card-stack-item {
+      backface-visibility: hidden;
+      background-color: var(--colorSystemWhite);
+      border-radius: var(--radiusSmall);
+      box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: absolute;
+      inset: 0;
+      transform-origin: center bottom;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease;
+      width: 100%;
+    }
+
+    /* Dark Depth Overlay on Inactive Cards Behind Active Card */
+    .card-stack-item::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      inset: 0;
+      background-color: #03091a;
+      opacity: var(--afterOpacity, 0);
+      pointer-events: none;
+      transition: opacity 0.5s ease-in-out;
       z-index: 10;
     }
 
-    @media (min-width: 640px) {
-      footer {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+    .card-stack-item.active {
+      z-index: 40;
+      --afterOpacity: 0;
     }
 
-    .footer-legal-links {
+    .carousel-card-article {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      width: 100%;
+    }
+
+    .carousel-card-image {
+      flex: 0 0 50%;
+      position: relative;
+      overflow: hidden;
+      background: #000050;
+    }
+
+    .carousel-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s ease;
+    }
+
+    .carousel-card-article:hover .carousel-card-image img {
+      transform: scale(1.04);
+    }
+
+    .carousel-card-text {
+      flex: 0 0 50%;
+      background-color: var(--colorSystemWhite);
+      padding: var(--spacingMLarge);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .carousel-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .carousel-card-tag {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 0.4rem;
+      border: 1px solid var(--colorSystemBlack20);
+      border-radius: var(--radiusXLarge);
+      padding: 0.35rem 0.9rem;
+      font-size: var(--step--1);
+      color: var(--colors-system-textPrimary);
+      font-weight: var(--fontWeightSemi);
     }
 
-    .footer-legal-links a {
-      color: #94a3b8;
+    /* 48px Neon Acid Lime Arrow Circle on Carousel Card */
+    .carousel-card-icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radiusFull);
+      background-color: var(--colors-surfaces-accent-background);
+      color: var(--colors-surfaces-accent-foreground);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-card-icon-wrapper svg {
+      transform: rotate(45deg);
+      width: 22px;
+      height: 22px;
+    }
+
+    .carousel-card-article:hover .carousel-card-icon-wrapper {
+      transform: rotate(45deg);
+    }
+
+    .carousel-card-body-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-top: auto;
+      padding-bottom: 3rem;
+    }
+
+    .carousel-card-cta-link {
+      color: var(--colors-brand-primary);
       text-decoration: none;
-      transition: color 0.2s ease;
-      font-weight: 500;
+    }
+
+    .carousel-card-cta-link::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .carousel-card-heading {
+      font-size: var(--step-5);
+      color: var(--colors-system-textPrimary);
+      margin-bottom: var(--spacingSMedium);
+      line-height: 1.2;
+    }
+
+    .carousel-card-desc {
+      font-size: var(--step-0);
+      color: var(--colors-system-textSecondary);
+      line-height: var(--lineHeightLarge);
+    }
+
+    /* Frosted Pill Controller at Bottom-Left of Card Stack */
+    .card-carousel-controls {
+      position: absolute;
+      bottom: var(--spacingXLMedium);
+      left: calc(50% + var(--spacingMLarge));
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      gap: var(--spacingBase);
+      background-color: rgba(209, 209, 209, 0.9);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radiusMedium);
+      padding: 0.5rem 0.85rem;
+    }
+
+    .card-carousel-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .card-carousel-btn {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 1px solid var(--colors-brand-primary);
+      background-color: rgba(255, 255, 255, 0.85);
+      color: var(--colors-brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.25s ease, transform 0.2s ease;
+    }
+
+    .card-carousel-btn:hover {
+      background-color: var(--colors-surfaces-accent-background);
+      border-color: transparent;
+    }
+
+    .card-carousel-indicator {
+      color: var(--colors-brand-primary);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      padding: 0 0.4rem;
+    }
+
+    /* ==========================================================================
+       11. INFINITE NAVY TILE LOGO MARQUEE (.scroll-image-carousel)
+       ========================================================================== */
+    .logo-carousel-section {
+      padding-top: var(--spacingMLarge);
+      padding-bottom: var(--spacingMLarge);
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .logo-carousel-title {
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--colors-system-textPrimary);
+      letter-spacing: 0.04em;
+      margin-bottom: var(--spacingLMedium);
+    }
+
+    .logo-marquee-track {
+      display: flex;
+      width: max-content;
+      animation: gtMarqueeScroll 80s linear infinite;
+    }
+
+    .logo-marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    .logo-slide-tile {
+      width: 176px;
+      height: 88px;
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 0, 80, 0.08);
+      border-radius: var(--radiusSmall);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: var(--spacingMedium);
+      padding: 0.85rem 1.35rem;
+      color: var(--colors-brand-primary);
+      font-weight: var(--fontWeightBold);
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+      text-align: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 80, 0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      text-decoration: none;
+    }
+
+    .logo-slide-tile--dark {
+      background-color: #301403;
+      border-color: rgba(212, 175, 55, 0.3);
+      padding: 0.4rem 1rem;
+    }
+
+    .logo-slide-tile:hover {
+      transform: translateY(-3px);
+      border-color: var(--colors-brand-secondary);
+      box-shadow: 0 10px 26px rgba(84, 101, 255, 0.16);
+    }
+
+    .logo-slide-tile img {
+      max-height: 54px;
+      max-width: 136px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .logo-slide-tile--dark img {
+      max-height: 70px;
+    }
+
+    @keyframes gtMarqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==========================================================================
+       12. STAGGERED CASE STUDIES & NEWS/VIEWS GRID (.case-studies_base)
+       ========================================================================== */
+    .case-studies-section {
+      padding-top: var(--spacingXLarge);
+      padding-bottom: var(--spacingXLarge);
+    }
+
+    .section-title-bar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-bottom: var(--space-2xl);
+    }
+
+    .case-studies-staggered-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 2.25rem;
+    }
+
+    .case-studies-staggered-grid .gt-case-card:nth-child(2n) {
+      margin-top: 4.5rem;
+    }
+
+    .gt-case-card a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: var(--radiusLarge);
+      padding: var(--spacingMedium);
+      text-decoration: none;
+      color: inherit;
+      transition: background-color 0.3s ease;
+    }
+
+    .gt-case-card a:hover {
+      background-color: var(--colors-surfaces-subtle-background);
+    }
+
+    .gt-case-tag {
+      align-self: flex-start;
+      border: 1px solid var(--colorSystemBlack40);
+      border-radius: var(--radiusXLarge);
+      color: var(--colors-system-textSecondary);
+      font-size: var(--step--1);
+      padding: 0.25rem 0.85rem;
+      margin-bottom: 0.85rem;
+      transition: all 0.3s ease;
+    }
+
+    .gt-case-card a:hover .gt-case-tag {
+      background-color: var(--colors-surfaces-primary-background);
+      border-color: var(--colors-surfaces-primary-background);
+      color: var(--colors-surfaces-primary-foreground);
+    }
+
+    .gt-case-heading-row {
+      display: grid;
+      grid-template-columns: 1fr 32px;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .gt-case-title {
+      font-size: var(--step-2);
+      font-weight: var(--fontWeightSemi);
+      color: var(--colors-system-textPrimary);
+      line-height: 1.3;
+    }
+
+    .gt-case-arrow {
+      color: var(--colors-system-textPrimary);
+      opacity: 0.4;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .gt-case-card a:hover .gt-case-arrow {
+      opacity: 1;
+      transform: translateX(6px);
+    }
+
+    .gt-case-subtitle {
+      font-size: var(--step-0);
+      color: var(--colors-system-textSecondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .gt-case-media-box {
+      border-radius: var(--radiusMedium);
+      overflow: hidden;
+      display: flex;
+      min-height: 270px;
+      margin-top: auto;
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 28px rgba(0, 0, 80, 0.08);
+    }
+
+    .gt-case-card a:hover .gt-case-media-box {
+      transform: scale(1.02);
+    }
+
+    .gt-case-img-half {
+      flex: 1;
+      min-width: 55%;
+      overflow: hidden;
+    }
+
+    .gt-case-img-half img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .gt-case-card a:hover .gt-case-img-half img {
+      transform: scale(1.075);
+    }
+
+    .gt-case-stat-half {
+      flex: 1;
+      background-color: var(--colors-surfaces-primary-reverse-background);
+      padding: var(--spacingMedium);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .gt-case-stat-half h4 {
+      font-size: var(--step-6);
+      color: var(--colors-brand-primary);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .gt-case-stat-half p {
+      font-size: var(--step--1);
+      color: var(--colors-system-textSecondary);
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       13. INTERACTIVE ORBITAL CIRCLE GALLERY (.circle-gallery_container)
+       ========================================================================== */
+    .circle-gallery-section {
+      padding-top: var(--spacingLarge);
+      padding-bottom: var(--spacingXXLarge);
+    }
+
+    .circle-gallery-container {
+      background-color: var(--colors-surfaces-strong-background);
+      border-radius: var(--radiusSection);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--spacingLarge) var(--spacingMLarge);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 24px 60px rgba(0, 0, 80, 0.18);
+    }
+
+    .circle-gallery-text {
+      width: 48%;
+      color: var(--colors-surfaces-strong-foreground);
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+      z-index: 2;
+    }
+
+    .circle-gallery-text h3 {
+      color: var(--colors-brand-accent);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .circle-gallery-text h2 {
+      color: var(--colors-surfaces-strong-foreground);
+      font-size: var(--step-5);
+      font-weight: var(--fontWeightBase);
+      line-height: var(--lineHeightSmall);
+    }
+
+    .circle-gallery-text p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: var(--step-0);
+      max-width: 34rem;
+    }
+
+    /* GT Media 5-Circle Interactive Constellation (Exact ei[] coordinates) */
+    .circle-gallery-stage {
+      width: 52%;
+      height: 34rem;
+      position: relative;
       cursor: pointer;
     }
 
-    .footer-legal-links a:hover {
-      color: #38bdf8;
-      text-decoration: underline;
+    .circle-gallery-item {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: var(--radiusFull);
+      padding: 2px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0) 100%);
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
     }
 
-    .footer-legal-sep {
-      color: rgba(255, 255, 255, 0.15);
-      font-size: 0.75rem;
+    .circle-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radiusFull);
     }
 
-    /* Legal Modal */
-    .legal-modal-backdrop {
+    /* Default vs Hover States matching GT Media's exact ei[] array */
+    .cg-item-0 {
+      width: 195px; height: 195px;
+      transform: translate(calc(-50% + 78px), calc(-50% - 50px)) scale(1);
+    }
+    .cg-item-1 {
+      width: 172px; height: 172px;
+      transform: translate(calc(-50% - 78px), calc(-50% + 82px)) scale(1);
+    }
+    .cg-item-2 {
+      width: 125px; height: 125px;
+      transform: translate(calc(-50% - 210px), calc(-50% + 70px)) scale(1);
+    }
+    .cg-item-3 {
+      width: 245px; height: 245px;
+      transform: translate(calc(-50% - 185px), calc(-50% - 140px)) scale(1);
+    }
+    .cg-item-4 {
+      width: 96px; height: 96px;
+      transform: translate(calc(-50% + 85px), calc(-50% - 155px)) scale(1);
+    }
+
+    .circle-gallery-stage:hover .cg-item-0 {
+      transform: translate(calc(-50% + 105px), calc(-50% - 50px)) scale(0.55);
+    }
+    .circle-gallery-stage:hover .cg-item-1 {
+      transform: translate(calc(-50% - 16px), calc(-50% + 82px)) scale(1.12);
+    }
+    .circle-gallery-stage:hover .cg-item-2 {
+      transform: translate(calc(-50% - 220px), calc(-50% + 92px)) scale(1.75);
+      z-index: 5;
+    }
+    .circle-gallery-stage:hover .cg-item-3 {
+      transform: translate(calc(-50% - 290px), calc(-50% - 125px)) scale(0.45);
+    }
+    .circle-gallery-stage:hover .cg-item-4 {
+      transform: translate(calc(-50% - 40px), calc(-50% - 135px)) scale(2.65);
+      z-index: 6;
+    }
+
+    /* ==========================================================================
+       14. GT MEDIA SIGNATURE CURVED-MASK FOOTER (.footer_wrapper)
+       ========================================================================== */
+    .gt-footer {
+      background:
+        linear-gradient(rgba(0, 0, 80, 1), rgba(0, 0, 80, 0.15)),
+        radial-gradient(ellipse farthest-side at 5% 90%, var(--colors-brand-secondary) 0%, var(--colors-surfaces-primary-background) 80%);
+      border-radius: 2.5rem 2.5rem 0 0;
+      padding: var(--spacingXXLarge) 0 var(--spacingLMedium);
+      color: var(--colorSystemWhite);
+      position: relative;
+      z-index: 2;
+    }
+
+    .gt-footer-grid {
+      display: grid;
+      grid-template-columns: 34% 1fr;
+      gap: 3rem;
+      padding-bottom: var(--spacingXLarge);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .gt-footer-sitemap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .gt-footer-col-title {
+      color: var(--colorSystemWhite);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightBold);
+      text-transform: uppercase;
+      margin-bottom: var(--spacingMedium);
+      letter-spacing: 0.04em;
+    }
+
+    .gt-footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gt-footer-col li + li {
+      margin-top: 0.85rem;
+    }
+
+    .gt-footer-col a {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightBase);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .gt-footer-col a:hover {
+      color: var(--colors-brand-accent);
+    }
+
+    .gt-footer-legal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: var(--spacingLMedium);
+      font-size: var(--step--2);
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .gt-policy-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gt-policy-list a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+    }
+
+    .gt-policy-list a:hover {
+      color: var(--colors-brand-accent);
+    }
+
+    /* ==========================================================================
+       15. REGION & THEME SWITCHER MODAL + CONTACT/VIDEO MODAL (.modal-shell)
+       ========================================================================== */
+    .gt-modal-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 25, 0.55);
       backdrop-filter: blur(8px);
-      z-index: 1000;
-      display: none;
+      display: flex;
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
+      z-index: 500;
       opacity: 0;
-      transition: opacity 0.3s ease;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
     }
 
-    .legal-modal-backdrop.active {
-      display: flex;
+    .gt-modal-backdrop.active {
       opacity: 1;
+      visibility: visible;
     }
 
-    .legal-modal-box {
-      background: #0f172a;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 20px;
-      max-width: 620px;
+    .gt-modal-card {
+      background-color: var(--colorSystemWhite);
+      border-radius: var(--radiusXLarge);
+      max-width: 62rem;
       width: 100%;
-      max-height: 85vh;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-      overflow: hidden;
-      animation: modalPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    @keyframes modalPop {
-      0% { transform: scale(0.94); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .legal-modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .legal-modal-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .legal-modal-close {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      color: #94a3b8;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 1.2rem;
-      transition: all 0.2s;
-    }
-
-    .legal-modal-close:hover {
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-    }
-
-    .legal-modal-body {
-      padding: 1.5rem;
+      max-height: 88vh;
       overflow-y: auto;
-      font-size: 0.9rem;
-      line-height: 1.65;
-      color: #cbd5e1;
-      text-align: left;
+      padding: 2.25rem;
+      box-shadow: 0 32px 80px rgba(0, 0, 50, 0.28);
+      position: relative;
     }
 
-    .legal-modal-body h3 {
+    .gt-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--colorSystemBlack10);
+    }
+
+    .gt-modal-close {
+      background-color: var(--colors-system-background);
+      border: 0;
+      border-radius: var(--radiusXLarge);
+      padding: 0.5rem 1.1rem;
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      color: var(--colors-system-textPrimary);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .gt-modal-close:hover {
+      background-color: var(--colors-surfaces-accent-background);
+    }
+
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .region-card-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1rem;
+      border-radius: var(--radiusLarge);
+      border: 1px solid var(--colorSystemBlack10);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .region-card-item:hover,
+    .region-card-item.active {
+      background-color: var(--colors-system-background);
+      border-color: var(--colors-brand-primary);
+    }
+
+    .theme-pills-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.75rem;
+    }
+
+    .theme-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radiusPill);
+      border: 1px solid var(--colorSystemBlack20);
+      background: #fff;
+      font-size: var(--step--1);
+      font-weight: var(--fontWeightSemi);
+      color: var(--colors-system-textPrimary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .theme-pill-btn.active {
+      background: var(--colors-brand-primary);
       color: #fff;
-      font-size: 1rem;
-      margin: 1rem 0 0.5rem 0;
+      border-color: var(--colors-brand-primary);
     }
 
-    .legal-modal-body h3:first-child {
-      margin-top: 0;
+    .theme-swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
     }
 
-    .legal-modal-body p {
-      margin-bottom: 0.8rem;
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+      .gt-main-nav {
+        display: none;
+      }
+      .gt-main-nav.mobile-open {
+        display: block;
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 1rem;
+        right: 1rem;
+        background: #fff;
+        border-radius: var(--radiusLarge);
+        padding: 1.25rem;
+        box-shadow: var(--shadowLarge);
+      }
+      .gt-nav-list {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .gt-mobile-toggle {
+        display: inline-flex;
+      }
+      .title-text-heading,
+      .title-text-body {
+        max-width: 100%;
+        margin-left: 0;
+      }
+      .stacking-card {
+        position: relative;
+        top: auto !important;
+      }
+      .stacking-card-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+      }
+      .stacking-card-image {
+        width: 15rem;
+        height: 15rem;
+        align-self: center;
+      }
+      .open-intelligence-section {
+        flex-direction: column;
+      }
+      .open-intelligence-right {
+        position: relative;
+        height: 440px;
+        order: -1;
+      }
+      .carousel-card-article {
+        flex-direction: column;
+      }
+      .carousel-card-image,
+      .carousel-card-text {
+        flex: 1 1 50%;
+      }
+      .card-carousel-controls {
+        left: 1.5rem;
+        bottom: 1.25rem;
+      }
+      .case-studies-staggered-grid {
+        grid-template-columns: 1fr;
+      }
+      .case-studies-staggered-grid .gt-case-card:nth-child(2n) {
+        margin-top: 0;
+      }
+      .circle-gallery-container {
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+      }
+      .circle-gallery-text,
+      .circle-gallery-stage {
+        width: 100%;
+      }
+      .gt-footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .gt-footer-sitemap {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
-<body>
+<body data-gt-theme="gtmedia">
 
-  <div class="ambient-glow"></div>
-  <div class="ambient-glow-bottom"></div>
-  <div class="grid-pattern"></div>
-
-  <!-- Header -->
-  <header>
-    <a href="/" class="brand-logo">
-      <div class="brand-badge">GT</div>
-      <span>giautran.me</span>
-    </a>
-
-    <div class="live-status">
-      <span class="pulse-dot"></span>
-      <span>System Online</span>
+  <!-- ========================================================================
+       1. FLOATING AMBIENT GRADIENT ANIMATION (Background Orbs)
+       ======================================================================== -->
+  <div class="background-gradient-animation" aria-hidden="true">
+    <div class="first-orb">
+      <div class="first-orb-core"></div>
     </div>
-  </header>
-
-  <!-- Main Content -->
-  <main>
-    <div class="maintenance-tag">
-      <span>🚀 System-Upgrade &amp; Neues Design</span>
-    </div>
-
-    <h1>Website Wird Derzeit <span>Aktualisiert &amp; Erneuert</span></h1>
-
-    <p class="description">
-      Unser Webauftritt wird derzeit umfassend überarbeitet und steht Ihnen in Kürze in neuem Glanz zur Verfügung.<br class="desktop-br" />
-      Vielen Dank für Ihre Geduld und Ihr Verständnis!
-    </p>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div>&copy; 2026 giautran.me &bull; Alle Rechte vorbehalten</div>
-    <div class="footer-legal-links">
-      <a href="/impressum.html" onclick="if(window.openLegal){openLegal('impressum');return false;}">Impressum</a>
-      <span class="footer-legal-sep">&bull;</span>
-      <a href="/datenschutz.html" onclick="if(window.openLegal){openLegal('datenschutz');return false;}">Datenschutz</a>
-      <span class="footer-legal-sep">&bull;</span>
-      <a href="/cookie-einstellungen.html" onclick="if(window.openLegal){openLegal('cookies');return false;}">Cookie-Einstellungen</a>
-    </div>
-  </footer>
-
-  <!-- Modal -->
-  <div class="legal-modal-backdrop" id="legalModal" onclick="handleBackdropClick(event)">
-    <div class="legal-modal-box">
-      <div class="legal-modal-header">
-        <div class="legal-modal-title" id="legalModalTitle">Rechtliche Hinweise</div>
-        <div style="display: flex; align-items: center; gap: 14px;">
-          <a id="legalPageLink" href="/impressum.html" target="_blank" style="font-size: 0.82rem; color: #38bdf8; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
-            <span>In neuem Tab öffnen</span>
-            <span>↗</span>
-          </a>
-          <button class="legal-modal-close" onclick="closeLegal()">&times;</button>
-        </div>
+    <div class="second-orb-container">
+      <div class="second-orb">
+        <div class="ellipse ellipse-1"></div>
+        <div class="ellipse ellipse-2"></div>
+        <div class="ellipse ellipse-3"></div>
+        <div class="ellipse ellipse-4"></div>
+        <div class="ellipse ellipse-5"></div>
       </div>
-      <div class="legal-modal-body" id="legalModalBody"></div>
     </div>
   </div>
 
-  <script>
-    const legalContents = {
-      impressum: {
-        title: "Impressum",
-        body: `
-          <h3>Angaben gemäß § 5 TMG</h3>
-          <p><strong>giautran.me</strong><br />Inhaber: Giau Tran<br />E-Mail: contact@giautran.me<br />Website: https://giautran.me</p>
-          <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
-          <p>Giau Tran<br />Berlin, Deutschland</p>
-          <h3>Haftung für Inhalte</h3>
-          <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-          <h3>Urheberrecht</h3>
-          <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung bedürfen der schriftlichen Zustimmung.</p>
-        `
-      },
-      datenschutz: {
-        title: "Datenschutzerklärung",
-        body: `
-          <h3>1. Datenschutz auf einen Blick</h3>
-          <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
-          <h3>2. Datenerfassung auf unserer Website</h3>
-          <p><strong>Hosting durch GitHub Pages:</strong><br />Wir hosten unsere Website bei GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Besuch der Website erfasst GitHub Server-Logfiles (u.a. IP-Adresse, Datum und Uhrzeit des Zugriffs).</p>
-          <h3>3. Ihre Rechte</h3>
-          <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
-        `
-      },
-      cookies: {
-        title: "Cookie-Einstellungen",
-        body: `
-          <h3>Hinweise zu Cookies</h3>
-          <p>Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den sicheren und ordnungsgemäßen Betrieb der Website unerlässlich sind (z. B. Lastverteilung und Sicherheitseinstellungen).</p>
-          <div style="background: rgba(255,255,255,0.05); padding: 14px; border-radius: 10px; margin: 12px 0; border: 1px solid rgba(255,255,255,0.1);">
-            <p style="margin: 0; font-weight: 600; color: #38bdf8;">✓ Technisch notwendige Cookies (Immer aktiv)</p>
-            <p style="margin: 4px 0 0 0; font-size: 0.85rem; color: #94a3b8;">Erforderlich für grundlegende Funktionen und Sicherheit.</p>
+  <!-- ========================================================================
+       2. HEADER WITH SUBMENU CARD TRAYS & REGION SWITCHER
+       ======================================================================== -->
+  <header class="gt-header" id="gtHeader">
+    <div class="wrapper gt-header-inner">
+      <!-- Dot-Matrix Style Logo (GT Media) -->
+      <a href="/" class="gt-logo-link" aria-label="GT Media Home">
+        <svg class="gt-logo-svg" viewBox="0 0 245 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g fill="currentColor">
+            <circle cx="8" cy="12" r="2.2"/><circle cx="8" cy="20" r="2.6"/><circle cx="8" cy="28" r="2.2"/>
+            <circle cx="15" cy="7" r="2.1"/><circle cx="15" cy="14" r="2.6"/><circle cx="15" cy="26" r="2.6"/><circle cx="15" cy="33" r="2.1"/>
+            <circle cx="23" cy="6" r="2.5"/><circle cx="23" cy="20" r="3.1" fill="var(--colors-brand-accent)"/><circle cx="23" cy="34" r="2.5"/>
+            <circle cx="31" cy="7" r="2.1"/><circle cx="31" cy="14" r="2.6"/><circle cx="31" cy="22" r="2.8"/><circle cx="31" cy="28" r="2.6"/><circle cx="31" cy="33" r="2.1"/>
+            <circle cx="39" cy="10" r="2.4"/><circle cx="45" cy="10" r="2.6"/><circle cx="51" cy="10" r="2.4"/>
+            <circle cx="45" cy="17" r="2.6"/><circle cx="45" cy="24" r="2.6"/><circle cx="45" cy="31" r="2.4"/>
+          </g>
+          <text x="64" y="29" fill="currentColor" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="25" letter-spacing="-0.03em">GT Media</text>
+          <circle cx="178" cy="26" r="3.5" fill="var(--colors-brand-secondary)"/>
+          <text x="186" y="29" fill="currentColor" font-family="'Plus Jakarta Sans', sans-serif" font-weight="400" font-size="16" opacity="0.72">.me</text>
+        </svg>
+      </a>
+
+      <!-- Main Navigation with Horizontal Card Trays -->
+      <nav class="gt-main-nav" id="gtMainNav" aria-label="Main Navigation">
+        <ul class="gt-nav-list">
+          <!-- About Us -->
+          <li class="gt-nav-item">
+            <button type="button" class="gt-nav-trigger">
+              <span data-i18n="nav_about">About us</span>
+              <svg class="gt-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="gt-submenu-wrapper">
+              <ul class="gt-submenu-grid">
+                <li class="gt-nav-card">
+                  <a href="#we-believe" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/tng-office.jpg" alt="Studio Overview" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Studio Overview</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">Founded in 2017, driving data-powered growth for the AI era</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="gt-nav-card">
+                  <a href="javascript:void(0)" onclick="openRegionModal()" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/team-brainstorm.jpg" alt="Our Locations" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Our Locations</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">Operating across Ho Chi Minh City, Munich &amp; Melbourne</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="gt-nav-card">
+                  <a href="#careers" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/team-phuong-anh.jpg" alt="Leadership &amp; DNA" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Leadership &amp; DNA</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">80+ specialists uniting Technical SEO, Performance Ads &amp; CRM</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- What We Do -->
+          <li class="gt-nav-item">
+            <button type="button" class="gt-nav-trigger">
+              <span data-i18n="nav_what">What we do</span>
+              <svg class="gt-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="gt-submenu-wrapper">
+              <ul class="gt-submenu-grid">
+                <li class="gt-nav-card">
+                  <a href="#capabilities" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/seo-dashboard.jpg" alt="Technical &amp; On-Page SEO" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Technical &amp; AI SEO</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">8,900+ URL Screaming Frog audits, Core Web Vitals &amp; GEO</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="gt-nav-card">
+                  <a href="#capabilities" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/ppc-campaign.jpg" alt="Performance Ads" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Performance Ads (PPC)</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">Multi-market Search &amp; Display campaigns across SEA &amp; EU</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="gt-nav-card">
+                  <a href="#open-intelligence" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/crm-zalo.jpg" alt="CRM &amp; O2O Ecosystems" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">CRM &amp; O2O Ecosystems</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">Zalo OA, Mini App &amp; automated lifecycle drip marketing</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Client Successes -->
+          <li class="gt-nav-item">
+            <a href="#our-work" class="gt-nav-trigger" data-i18n="nav_clients">Client Successes</a>
+          </li>
+
+          <!-- News and Views -->
+          <li class="gt-nav-item">
+            <button type="button" class="gt-nav-trigger">
+              <span data-i18n="nav_news">News and Views</span>
+              <svg class="gt-nav-chevron" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="gt-submenu-wrapper">
+              <ul class="gt-submenu-grid">
+                <li class="gt-nav-card">
+                  <a href="#news-views" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/blog-digital-trends.jpg" alt="Digital Marketing 2026" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Digital Report 2026</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">5 AI Search, GEO &amp; First-Party Data trends reshaping brands</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="gt-nav-card">
+                  <a href="#news-views" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/blog-seo-audit.jpg" alt="Technical SEO Checklist" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">Technical SEO Audit</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">50+ step enterprise audit for Google &amp; AI Overviews</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="gt-nav-card">
+                  <a href="#news-views" class="gt-nav-card-link">
+                    <div class="gt-nav-card-img"><img src="/demo/images/blog-ai-marketing.jpg" alt="AI &amp; GEO Optimization" /></div>
+                    <div class="gt-nav-card-body">
+                      <div class="gt-nav-card-header">
+                        <span class="gt-nav-card-title">AI &amp; GEO Strategy</span>
+                        <span class="gt-nav-card-arrow">→</span>
+                      </div>
+                      <p class="gt-nav-card-desc">How to get your brand cited by ChatGPT, Gemini &amp; Perplexity</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Careers -->
+          <li class="gt-nav-item">
+            <a href="#careers" class="gt-nav-trigger" data-i18n="nav_careers">Careers</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Actions: Region / Theme Switcher + Contact Us Pill -->
+      <div class="gt-header-actions">
+        <button type="button" class="gt-region-btn" onclick="openRegionModal()" aria-label="Region and Theme Selector">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <span class="region-code" id="currentRegionLabel">Global • EN</span>
+          <svg width="10" height="6" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+
+        <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--primary gt-btn--compact">
+          <span class="gt-btn-label">
+            <span class="gt-btn-text-1" data-i18n="nav_contact">Contact</span>
+            <span class="gt-btn-text-2" data-i18n="nav_contact">Contact</span>
+          </span>
+        </a>
+
+        <button type="button" class="gt-mobile-toggle" onclick="document.getElementById('gtMainNav').classList.toggle('mobile-open')" aria-label="Toggle Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       3. MAIN CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- 3A. HERO SECTION WITH SCROLL-EXPANDING SHOWREEL VIDEO (bg-dotted) -->
+    <div class="bg-dotted">
+      <section class="animated-hero-video">
+        <div class="wrapper hero-text-block">
+          <div class="hero-eyebrow-pill">
+            <span class="hero-eyebrow-dot"></span>
+            <span data-i18n="hero_badge">DATA-DRIVEN CREATIVE &amp; GROWTH STUDIO • GIAUTRAN.ME</span>
           </div>
-          <p style="margin-top: 12px;">Es werden keine Tracking-, Marketing- oder Analyse-Cookies von Drittanbietern ohne Ihre ausdrückliche Zustimmung gesetzt.</p>
-        `
+
+          <h1 class="hero-heading" data-i18n="hero_heading">
+            <span class="line">Intelligent growth for the AI era.</span>
+            <span class="line">We are GT Media.</span>
+          </h1>
+
+          <!-- Split-Pill CTA Button -->
+          <a href="#open-intelligence" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1" data-i18n="hero_cta">Unlock intelligent growth</span>
+              <span class="gt-btn-text-2" data-i18n="hero_cta">Unlock intelligent growth</span>
+            </span>
+            <span class="gt-btn-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Showreel Video Block with Scroll-Driven Circular Mask Expansion -->
+        <div class="hero-video-block">
+          <div class="hero-video-mask" id="heroVideoMask">
+            <canvas class="hero-showreel-canvas" id="heroShowreelCanvas"></canvas>
+            <div class="hero-video-overlay-ui">
+              <button type="button" class="play-showreel-btn" onclick="openShowreelModal()" aria-label="Play the video">
+                <svg viewBox="0 0 154 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#gtPlayShadow)">
+                    <path fill="#fff" d="M77 15c-34.241 0-62 27.759-62 62 0 34.243 27.759 62 62 62 34.243 0 62-27.757 62-62 0-34.241-27.757-62-62-62Zm21.184 64.683-29.45 17.005a3.102 3.102 0 0 1-4.65-2.684V59.995a3.098 3.098 0 0 1 4.65-2.684l29.45 17.005a3.097 3.097 0 0 1 0 5.366Z"/>
+                  </g>
+                  <defs>
+                    <filter id="gtPlayShadow" width="152.571" height="152.571" x=".714" y=".714" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                      <feOffset/>
+                      <feGaussianBlur stdDeviation="7.143"/>
+                      <feComposite in2="hardAlpha" operator="out"/>
+                      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+                      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                  </defs>
+                </svg>
+                <span class="pill" data-i18n="play_video">Play the video</span>
+              </button>
+            </div>
+
+            <button type="button" class="play-pause-corner-btn" id="showreelToggleBtn" onclick="toggleShowreelCanvas()" aria-label="Pause animation">
+              <svg id="showreelPauseIcon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.25 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3.375a1.5 1.5 0 0 1-1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h3.375a1.5 1.5 0 0 1 1.5 1.5ZM8.625 3H5.25a1.5 1.5 0 0 0-1.5 1.5v15a1.5 1.5 0 0 0 1.5 1.5h3.375a1.5 1.5 0 0 0 1.5-1.5v-15a1.5 1.5 0 0 0-1.5-1.5Z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 3B. "WE BELIEVE" MANIFESTO SECTION (.title-text_wrapper) -->
+    <div class="bg-dotted" id="we-believe">
+      <section class="wrapper title-text-section">
+        <span class="title-text-lead" data-i18n="believe_lead">We Believe</span>
+        <h2 class="title-text-heading" data-i18n="believe_title">
+          In a world reshaped by AI, media and digital experiences will be everywhere and in everything
+        </h2>
+        <div class="title-text-body" data-i18n="believe_body">
+          <p>
+            Founded in 2017, <strong>GT Media (giautran.me)</strong> combines Technical SEO, multi-market Performance Ads (PPC), E-E-A-T Content Strategy, and O2O CRM Ecosystems to deliver measurable business outcomes across Vietnam, Southeast Asia, Germany, and Australia.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- 3C. STICKY STACKING CARDS SECTION (01, 02, 03, 04) -->
+    <div class="bg-dotted" id="capabilities">
+      <section class="wrapper stacking-cards-section" aria-label="Core Pillars">
+
+        <!-- Card 01 -->
+        <div class="stacking-card">
+          <div class="stacking-card-body">
+            <h2 class="stacking-card-title">
+              <span class="num">01</span>
+              <span>Technical &amp; On-Page SEO</span>
+            </h2>
+            <div class="stacking-card-content-wrapper">
+              <div class="stacking-card-content">
+                <h3>Enterprise SEO Architecture &amp; AI Search (GEO)</h3>
+                <p>
+                  Deep technical audits of 8,900+ URLs using Screaming Frog, Core Web Vitals optimization (LCP &lt; 0.8s), server-level HSTS/CSP security hardening, and Crawl Budget preservation — engineered to dominate both Google organic rankings and Generative AI Overviews.
+                </p>
+                <a href="#open-intelligence" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">Explore SEO Engine</span>
+                    <span class="gt-btn-text-2">Explore SEO Engine</span>
+                  </span>
+                  <span class="gt-btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+              <div class="stacking-card-image">
+                <img src="/demo/images/seo-dashboard.jpg" alt="Technical &amp; On-Page SEO" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="stacking-card">
+          <div class="stacking-card-body">
+            <h2 class="stacking-card-title">
+              <span class="num">02</span>
+              <span>Performance Ads (PPC)</span>
+            </h2>
+            <div class="stacking-card-content-wrapper">
+              <div class="stacking-card-content">
+                <h3>Multi-Market Paid Search &amp; Conversion Engineering</h3>
+                <p>
+                  Localized keyword research, high-converting ad copywriting, and GA4 first-party data attribution across Vietnam, Singapore, Malaysia, Thailand, Japan, and Europe — maximizing Quality Scores while driving down CPC and CPA.
+                </p>
+                <a href="#our-work" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">View PPC Case Studies</span>
+                    <span class="gt-btn-text-2">View PPC Case Studies</span>
+                  </span>
+                  <span class="gt-btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+              <div class="stacking-card-image">
+                <img src="/demo/images/ppc-campaign.jpg" alt="Performance Ads (PPC)" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="stacking-card">
+          <div class="stacking-card-body">
+            <h2 class="stacking-card-title">
+              <span class="num">03</span>
+              <span>CRM Ecosystems &amp; O2O</span>
+            </h2>
+            <div class="stacking-card-content-wrapper">
+              <div class="stacking-card-content">
+                <h3>Full-Funnel Zalo OA, Mini App &amp; Lifecycle Drip</h3>
+                <p>
+                  Because every customer touchpoint matters, we architect seamless Online-to-Offline (O2O) data capture funnels, personalized lifecycle triggers, and automated Zalo ZNS / CRM workflows that increase repeat order rates by +38%.
+                </p>
+                <a href="#our-work" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">Explore CRM Solutions</span>
+                    <span class="gt-btn-text-2">Explore CRM Solutions</span>
+                  </span>
+                  <span class="gt-btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+              <div class="stacking-card-image">
+                <img src="/demo/images/crm-zalo.jpg" alt="CRM Ecosystems &amp; O2O" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 04 -->
+        <div class="stacking-card">
+          <div class="stacking-card-body">
+            <h2 class="stacking-card-title">
+              <span class="num">04</span>
+              <span>Content &amp; SEO Copywriting</span>
+            </h2>
+            <div class="stacking-card-content-wrapper">
+              <div class="stacking-card-content">
+                <h3>Search-Intent Driven Authority &amp; Brand Storytelling</h3>
+                <p>
+                  Combining international editorial standards with deep local market intelligence — crafting semantic topic clusters, service pages, and E-E-A-T authority content for supply chain, logistics, education, and consumer brands.
+                </p>
+                <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--primary">
+                  <span class="gt-btn-label">
+                    <span class="gt-btn-text-1">Partner with GT Media</span>
+                    <span class="gt-btn-text-2">Partner with GT Media</span>
+                  </span>
+                  <span class="gt-btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                </a>
+              </div>
+              <div class="stacking-card-image">
+                <img src="/demo/images/team-brainstorm.jpg" alt="Content &amp; SEO Copywriting" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- 3D. OPEN INTELLIGENCE STICKY DOT-MATRIX GLOBE SECTION (#04055b) -->
+    <section class="open-intelligence-section" id="open-intelligence">
+      <div class="open-intelligence-left">
+        <div class="oi-feature-block active" onmouseenter="highlightOiNode('speed')" onclick="highlightOiNode('speed')">
+          <span class="oi-badge">01 • Speed</span>
+          <h2 class="oi-title">AI SEO Audit &amp; Core Web Vitals Engine</h2>
+          <p class="oi-text">
+            Automated crawling and diagnostics across 8,900+ URLs — resolving indexability bottlenecks, canonical conflicts, HSTS/CSP headers, and achieving sub-second 0.8s LCP speed.
+          </p>
+        </div>
+
+        <div class="oi-feature-block" onmouseenter="highlightOiNode('scale')" onclick="highlightOiNode('scale')">
+          <span class="oi-badge">02 • Scale</span>
+          <h2 class="oi-title">Multi-Market PPC &amp; Smart Bidding</h2>
+          <p class="oi-text">
+            Trained on commercial search intent across 5+ Southeast Asian and European markets to deliver localized ad copy, high Quality Scores, and an average 4.6x ROAS.
+          </p>
+        </div>
+
+        <div class="oi-feature-block" onmouseenter="highlightOiNode('precision')" onclick="highlightOiNode('precision')">
+          <span class="oi-badge">03 • Precision</span>
+          <h2 class="oi-title">Privacy by Default (EU GDPR &amp; First-Party Data)</h2>
+          <p class="oi-text">
+            Operating across Ho Chi Minh City, Munich, and Melbourne with strict EU GDPR &amp; German TMG data compliance built into every analytics and conversion pipeline.
+          </p>
+        </div>
+
+        <div class="oi-feature-block" onmouseenter="highlightOiNode('signals')" onclick="highlightOiNode('signals')">
+          <span class="oi-badge">04 • Signals</span>
+          <h2 class="oi-title">O2O CRM &amp; Lifecycle Drip Automation</h2>
+          <p class="oi-text">
+            Connect paid acquisition and content hubs directly to Zalo OA, Mini App, and real-time lifecycle triggers that turn first-time visitors into loyal repeat buyers.
+          </p>
+        </div>
+
+        <div style="margin-top: 1rem;">
+          <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--inverse">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Deploy Growth Intelligence</span>
+              <span class="gt-btn-text-2">Deploy Growth Intelligence</span>
+            </span>
+            <span class="gt-btn-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="open-intelligence-right">
+        <div class="oi-gradient-bg"></div>
+
+        <!-- Rotating Dot-Matrix Sphere SVG -->
+        <svg class="oi-dots-globe" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg" id="oiGlobeSvg"></svg>
+
+        <!-- 4 Glowing Orbital Nodes (Speed, Scale, Precision, Signals) + Center Emblem -->
+        <div class="oi-floating-orbs">
+          <div class="oi-orb-node oi-orb-speed active" id="oi-node-speed">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Speed</span>
+          </div>
+          <div class="oi-orb-node oi-orb-scale" id="oi-node-scale">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>Scale</span>
+          </div>
+          <div class="oi-orb-node oi-orb-precision" id="oi-node-precision">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke-linecap="round"/></svg>
+            <span>Precision</span>
+          </div>
+          <div class="oi-orb-node oi-orb-signals" id="oi-node-signals">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Signals</span>
+          </div>
+
+          <!-- Center Open Intelligence Badge -->
+          <div class="oi-center-logo">
+            <svg width="46" height="44" viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="8" r="3" fill="white"/><circle cx="16" cy="10" r="2.2" fill="white"/><circle cx="40" cy="10" r="2.2" fill="white"/>
+              <circle cx="8" cy="18" r="2.2" fill="white"/><circle cx="28" cy="18" r="4" fill="white"/><circle cx="48" cy="18" r="2.2" fill="white"/>
+              <circle cx="6" cy="28" r="3" fill="white"/><circle cx="17" cy="28" r="4.2" fill="white"/>
+              <circle cx="28" cy="28" r="5" fill="#B1FD43"/>
+              <circle cx="39" cy="28" r="4.2" fill="white"/><circle cx="50" cy="28" r="3" fill="white"/>
+              <circle cx="8" cy="38" r="2.2" fill="white"/><circle cx="28" cy="38" r="4" fill="white"/><circle cx="48" cy="38" r="2.2" fill="white"/>
+              <circle cx="16" cy="46" r="2.2" fill="white"/><circle cx="28" cy="48" r="3" fill="white"/><circle cx="40" cy="46" r="2.2" fill="white"/>
+            </svg>
+            <div>
+              <div style="font-size: 16px; font-weight: 700; line-height: 1.1; color: #fff;">Growth</div>
+              <div style="font-size: 16px; font-weight: 700; line-height: 1.1; color: #B1FD43;">Intelligence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3E. "OUR WORK" 3D DEPTH-STACKED CARD CAROUSEL (bg-dotted) -->
+    <div class="bg-dotted" id="our-work">
+      <section class="wrapper card-carousel-section" aria-label="Our Work">
+        <div class="card-carousel-header">
+          <div class="card-carousel-title-group">
+            <p class="card-carousel-lead" data-i18n="work_lead">Our work</p>
+            <h2 data-i18n="work_heading">Extraordinary thinking. Extraordinary results.</h2>
+          </div>
+          <a href="#news-views" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Get Inspired</span>
+              <span class="gt-btn-text-2">Get Inspired</span>
+            </span>
+            <span class="gt-btn-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="card-stack-container">
+          <!-- Frosted Pill Pagination Controls -->
+          <div class="card-carousel-controls">
+            <div class="card-carousel-buttons">
+              <button type="button" class="card-carousel-btn" onclick="stepWorkCarousel(-1)" aria-label="Previous card">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button type="button" class="card-carousel-btn" onclick="stepWorkCarousel(1)" aria-label="Next card">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <div class="card-carousel-indicator" id="workCarouselCounter">1 / 5</div>
+          </div>
+
+          <!-- 3D Stacked Cards List -->
+          <ul class="card-stack-list" id="workCardStack">
+            <!-- Slide 1: British Council IELTS PPC -->
+            <li class="card-stack-item active">
+              <article class="carousel-card-article">
+                <div class="carousel-card-image">
+                  <img src="/demo/images/project-british-council.jpg" alt="British Council IELTS PPC Campaign" />
+                </div>
+                <div class="carousel-card-text">
+                  <div class="carousel-card-top">
+                    <span class="carousel-card-tag">Performance Ads • Southeast Asia</span>
+                    <div class="carousel-card-icon-wrapper">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                  </div>
+                  <div class="carousel-card-body-wrap">
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">British Council — Multi-Market IELTS PPC Campaign</h3>
+                    </a>
+                    <p class="carousel-card-desc">
+                      Localized keyword research, high-converting search ad templates, and landing page optimization for British Council IELTS across 5 Southeast Asian markets.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Slide 2: Desire Online Enterprise SEO Audit -->
+            <li class="card-stack-item">
+              <article class="carousel-card-article">
+                <div class="carousel-card-image">
+                  <img src="/demo/images/project-desire-online.jpg" alt="Desire Online Enterprise SEO Audit" />
+                </div>
+                <div class="carousel-card-text">
+                  <div class="carousel-card-top">
+                    <span class="carousel-card-tag">Technical SEO • 8,900+ URLs</span>
+                    <div class="carousel-card-icon-wrapper">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                  </div>
+                  <div class="carousel-card-body-wrap">
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">Desire Online — Enterprise Technical SEO &amp; Security Audit</h3>
+                    </a>
+                    <p class="carousel-card-desc">
+                      Comprehensive Screaming Frog crawl of 8,900+ URLs, resolving canonical/noindex leaks, hardening HSTS/CSP security headers, and boosting Core Web Vitals.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Slide 3: Mali Family Health CRM Strategy -->
+            <li class="card-stack-item">
+              <article class="carousel-card-article">
+                <div class="carousel-card-image">
+                  <img src="/demo/images/project-mali.jpg" alt="Mali Family Health CRM Strategy" />
+                </div>
+                <div class="carousel-card-text">
+                  <div class="carousel-card-top">
+                    <span class="carousel-card-tag">Market Intelligence • CRM Ecosystem</span>
+                    <div class="carousel-card-icon-wrapper">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                  </div>
+                  <div class="carousel-card-body-wrap">
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">Mali Family Health — Mom CRM &amp; O2O Funnel Strategy</h3>
+                    </a>
+                    <p class="carousel-card-desc">
+                      In-depth market intelligence decoding Zalo OA / Mini App lifecycle CRM funnels and content hub architecture (333K+ pageviews) for maternal &amp; family brands.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Slide 4: Vegan Garden Berlin -->
+            <li class="card-stack-item">
+              <article class="carousel-card-article">
+                <div class="carousel-card-image">
+                  <img src="/demo/images/project-vegan-garden.jpg" alt="Vegan Garden Berlin" />
+                </div>
+                <div class="carousel-card-text">
+                  <div class="carousel-card-top">
+                    <span class="carousel-card-tag">Live Platform &amp; SEO • Berlin, Germany</span>
+                    <div class="carousel-card-icon-wrapper">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                  </div>
+                  <div class="carousel-card-body-wrap">
+                    <a href="/vegangarden/" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">Vegan Garden Berlin — SEO Strategy &amp; Culinary Flagship</h3>
+                    </a>
+                    <p class="carousel-card-desc">
+                      On-Page/Off-Page SEO audit, competitor intelligence, and a trilingual (DE/EN/VI), 100% GDPR-compliant hospitality web platform in Berlin Friedrichshain.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Slide 5: PERSOL Kelly Content Marketing -->
+            <li class="card-stack-item">
+              <article class="carousel-card-article">
+                <div class="carousel-card-image">
+                  <img src="/demo/images/project-persol-kelly.jpg" alt="PERSOL Kelly Content Marketing" />
+                </div>
+                <div class="carousel-card-text">
+                  <div class="carousel-card-top">
+                    <span class="carousel-card-tag">Content Marketing • Search Intent SEO</span>
+                    <div class="carousel-card-icon-wrapper">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                  </div>
+                  <div class="carousel-card-body-wrap">
+                    <a href="javascript:void(0)" onclick="openContactModal()" class="carousel-card-cta-link">
+                      <h3 class="carousel-card-heading">PERSOL Kelly — Supply Chain &amp; Recruitment SEO Copywriting</h3>
+                    </a>
+                    <p class="carousel-card-desc">
+                      Developing search-intent driven service pages and authority articles across Logistics, Manufacturing, and Supply Chain to accelerate organic talent acquisition.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- 3F. INFINITE CLIENT LOGO MARQUEE (bg-dotted) -->
+    <div class="bg-dotted">
+      <section class="logo-carousel-section" aria-label="Partner Brands">
+        <h2 class="logo-carousel-title">A proud partner to leading brands</h2>
+        <div class="logo-marquee-track">
+          <!-- Half 1 (2x7 Client Logos from khach-hang) -->
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
+          <!-- Half 2 (Exact Duplicate for seamless -50% infinite loop) -->
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
+          <div class="logo-slide-tile" title="British Council"><img src="/demo/khach-hang/british-council.png" alt="British Council" /></div>
+          <div class="logo-slide-tile" title="PERSOL"><img src="/demo/khach-hang/persol.png" alt="PERSOL" /></div>
+          <div class="logo-slide-tile" title="Content Nation"><img src="/demo/khach-hang/content-nation.png" alt="Content Nation" /></div>
+          <div class="logo-slide-tile" title="Mali Family Health"><img src="/demo/khach-hang/mali.png" alt="Mali Family Health" /></div>
+          <div class="logo-slide-tile" title="Yamada Research Co.Ltd."><img src="/demo/khach-hang/yamaha.png" alt="Yamada Research" /></div>
+          <div class="logo-slide-tile" title="Tržiště Práce"><img src="/demo/khach-hang/cropped-wp_logo.png" alt="Tržiště Práce" /></div>
+          <a href="/vegangarden/" class="logo-slide-tile logo-slide-tile--dark" title="Vegan Garden"><img src="/demo/khach-hang/vegan-garden.jpg" alt="Vegan Garden" /></a>
+        </div>
+      </section>
+    </div>
+
+    <!-- 3G. STAGGERED CASE STUDIES & NEWS/VIEWS SECTION (bg-dotted) -->
+    <div class="bg-dotted" id="news-views">
+      <section class="wrapper case-studies-section">
+        <div class="section-title-bar">
+          <div>
+            <p class="card-carousel-lead">News and Views</p>
+            <h2 class="font-step-5">Measurable impact at every stage</h2>
+          </div>
+          <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Start a project</span>
+              <span class="gt-btn-text-2">Start a project</span>
+            </span>
+            <span class="gt-btn-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <div class="case-studies-staggered-grid">
+          <!-- Card 1 -->
+          <article class="gt-case-card">
+            <a href="#our-work">
+              <span class="gt-case-tag">Performance Ads • PPC</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">British Council IELTS: Scaling High-Intent Search Ads Across Southeast Asia</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="gt-case-subtitle">Localized keyword strategy and ad copywriting engineered for 5 international markets.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-british-council.jpg" alt="British Council Case Study" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>4.6x</h4>
+                  <p>Average return on ad spend (ROAS) across multi-market campaigns</p>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 2 (Staggered Down) -->
+          <article class="gt-case-card">
+            <a href="#our-work">
+              <span class="gt-case-tag">Technical SEO • Enterprise Audit</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">Desire Online: Auditing 8,900+ URLs to Eliminate Crawl Budget Waste</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="gt-case-subtitle">Screaming Frog deep diagnostics, canonical fixes, HSTS/CSP security, and Core Web Vitals optimization.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-desire-online.jpg" alt="Desire Online Case Study" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>+340%</h4>
+                  <p>Organic search growth with a 98/100 technical health score</p>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="gt-case-card">
+            <a href="#our-work">
+              <span class="gt-case-tag">Market Intelligence • CRM</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">Mali Family Health: Decoding O2O Mom CRM &amp; Zalo Mini App Ecosystems</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="gt-case-subtitle">Mapping lifecycle drip automation and high-authority content hubs for maternal &amp; consumer brands.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-mali.jpg" alt="Mali Family Health" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>333K+</h4>
+                  <p>Content hub pageviews &amp; +38% repeat conversion lift via CRM</p>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Card 4 (Staggered Down) -->
+          <article class="gt-case-card">
+            <a href="/vegangarden/">
+              <span class="gt-case-tag">Hospitality &amp; EU GDPR</span>
+              <div class="gt-case-heading-row">
+                <h3 class="gt-case-title">Vegan Garden Berlin: Sub-Second Gastronomy &amp; German SEO Strategy</h3>
+                <svg class="gt-case-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="gt-case-subtitle">Delivering a trilingual (DE/EN/VI) culinary experience in Berlin with full German TMG &amp; DSGVO compliance.</p>
+              <div class="gt-case-media-box">
+                <div class="gt-case-img-half"><img src="/demo/images/project-vegan-garden.jpg" alt="Vegan Garden Berlin" /></div>
+                <div class="gt-case-stat-half">
+                  <h4>99.9%</h4>
+                  <p>Core Web Vitals &amp; GDPR compliance score in Germany</p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- 3H. CAREERS / COLLABORATION INTERACTIVE CIRCLE GALLERY (.circle-gallery_container) -->
+    <section class="wrapper circle-gallery-section" id="careers">
+      <div class="circle-gallery-container">
+        <div class="circle-gallery-text">
+          <h3>Leadership &amp; Collective</h3>
+          <h2 data-i18n="careers_heading">Let's build the future together</h2>
+          <p>
+            Hover over our studio constellation to meet our team in motion. With 80+ specialists across Ho Chi Minh City, Munich, and Melbourne, we turn bold ideas and real-time data into lasting brand culture.
+          </p>
+          <div style="margin-top: 0.5rem;">
+            <a href="javascript:void(0)" onclick="openContactModal()" class="gt-btn gt-btn--inverse">
+              <span class="gt-btn-label">
+                <span class="gt-btn-text-1">Work With Us</span>
+                <span class="gt-btn-text-2">Work With Us</span>
+              </span>
+              <span class="gt-btn-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5 Orbiting Circular Images -->
+        <div class="circle-gallery-stage" role="list" aria-label="Gallery of images arranged in a circle">
+          <div class="circle-gallery-item cg-item-0" role="listitem">
+            <img src="/demo/images/tng-office.jpg" alt="GT Media Office" />
+          </div>
+          <div class="circle-gallery-item cg-item-1" role="listitem">
+            <img src="/demo/images/team-phuong-anh.jpg" alt="Creative Leadership" />
+          </div>
+          <div class="circle-gallery-item cg-item-2" role="listitem">
+            <img src="/demo/images/team-khanh-linh.jpg" alt="Strategy Leadership" />
+          </div>
+          <div class="circle-gallery-item cg-item-3" role="listitem">
+            <img src="/demo/images/team-brainstorm.jpg" alt="Studio Brainstorm" />
+          </div>
+          <div class="circle-gallery-item cg-item-4" role="listitem">
+            <img src="/demo/images/team-thanh-long.jpg" alt="Technology Leadership" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       4. FOOTER
+       ======================================================================== -->
+  <footer class="gt-footer">
+    <div class="wrapper">
+      <div class="gt-footer-grid">
+        <!-- Footer Brand Logo -->
+        <div>
+          <a href="/" class="gt-logo-link" style="color: #ffffff; margin-bottom: 1.25rem;">
+            <svg class="gt-logo-svg" viewBox="0 0 245 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#ffffff">
+                <circle cx="8" cy="12" r="2.2"/><circle cx="8" cy="20" r="2.6"/><circle cx="8" cy="28" r="2.2"/>
+                <circle cx="15" cy="7" r="2.1"/><circle cx="15" cy="14" r="2.6"/><circle cx="15" cy="26" r="2.6"/><circle cx="15" cy="33" r="2.1"/>
+                <circle cx="23" cy="6" r="2.5"/><circle cx="23" cy="20" r="3.1" fill="var(--colors-brand-accent)"/><circle cx="23" cy="34" r="2.5"/>
+                <circle cx="31" cy="7" r="2.1"/><circle cx="31" cy="14" r="2.6"/><circle cx="31" cy="22" r="2.8"/><circle cx="31" cy="28" r="2.6"/><circle cx="31" cy="33" r="2.1"/>
+                <circle cx="39" cy="10" r="2.4"/><circle cx="45" cy="10" r="2.6"/><circle cx="51" cy="10" r="2.4"/>
+                <circle cx="45" cy="17" r="2.6"/><circle cx="45" cy="24" r="2.6"/><circle cx="45" cy="31" r="2.4"/>
+              </g>
+              <text x="64" y="29" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="25" letter-spacing="-0.03em">GT Media</text>
+              <circle cx="178" cy="26" r="3.5" fill="var(--colors-brand-accent)"/>
+              <text x="186" y="29" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-weight="400" font-size="16" opacity="0.75">.me</text>
+            </svg>
+          </a>
+          <p style="color: rgba(255,255,255,0.75); font-size: 0.9rem; max-width: 22rem; line-height: 1.6;">
+            Delivering intelligent growth for the AI era. Operating across Ho Chi Minh City, Munich (Germany) &amp; Melbourne (Australia).
+          </p>
+        </div>
+
+        <!-- 4-Column Sitemap -->
+        <div class="gt-footer-sitemap">
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Company</h2>
+            <ul>
+              <li><a href="#we-believe" class="link-underline-hover-only">About us</a></li>
+              <li><a href="#our-work" class="link-underline-hover-only">Client Successes</a></li>
+              <li><a href="#news-views" class="link-underline-hover-only">News and Views</a></li>
+              <li><a href="#open-intelligence" class="link-underline-hover-only">Growth Intelligence</a></li>
+              <li><a href="javascript:void(0)" onclick="openContactModal()" class="link-underline-hover-only">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Capabilities</h2>
+            <ul>
+              <li><a href="#capabilities" class="link-underline-hover-only">Technical &amp; AI SEO</a></li>
+              <li><a href="#capabilities" class="link-underline-hover-only">Performance Ads (PPC)</a></li>
+              <li><a href="#capabilities" class="link-underline-hover-only">Zalo &amp; O2O CRM</a></li>
+              <li><a href="/vegangarden/" class="link-underline-hover-only">Vegan Garden Berlin</a></li>
+            </ul>
+          </div>
+
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Studio Themes</h2>
+            <ul>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('gtmedia')" class="link-underline-hover-only">Acid Lime (Default)</a></li>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('performance')" class="link-underline-hover-only">Cyber Pink</a></li>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('seo')" class="link-underline-hover-only">Solar Orange</a></li>
+              <li><a href="javascript:void(0)" onclick="setGtTheme('crm')" class="link-underline-hover-only">Electric Violet</a></li>
+            </ul>
+          </div>
+
+          <div class="gt-footer-col">
+            <h2 class="gt-footer-col-title">Connect with us</h2>
+            <ul>
+              <li>
+                <a href="https://github.com/giautranth" target="_blank" rel="noopener" class="link-underline-hover-only">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contact@giautran.me" class="link-underline-hover-only">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span>contact@giautran.me</span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" onclick="openRegionModal()" class="link-underline-hover-only">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+                  <span>Change Region / Language</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal & Policy Bar -->
+      <div class="gt-footer-legal">
+        <ul class="gt-policy-list">
+          <li><a href="/impressum.html" class="link-underline-hover-only">Impressum</a></li>
+          <li><a href="/datenschutz.html" class="link-underline-hover-only">Privacy Policy &amp; Legal (Datenschutz)</a></li>
+          <li><a href="/cookie-einstellungen.html" class="link-underline-hover-only">Cookie Settings</a></li>
+          <li><a href="javascript:void(0)" onclick="openContactModal()" class="link-underline-hover-only">Terms &amp; Conditions</a></li>
+        </ul>
+        <div>
+          Copyright &copy; 2026 giautran.me (GT Media Studio). All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       5. MODALS: REGION/THEME SWITCHER, SHOWREEL VIDEO & CONTACT FORM
+       ======================================================================== -->
+  <!-- Region & Theme Switcher Modal -->
+  <div class="gt-modal-backdrop" id="regionModal" onclick="if(event.target.id==='regionModal') closeRegionModal()">
+    <div class="gt-modal-card">
+      <div class="gt-modal-header">
+        <h3 style="color: var(--colors-brand-primary); font-size: 1.35rem;">Change your region, language &amp; studio theme</h3>
+        <button type="button" class="gt-modal-close" onclick="closeRegionModal()">Close &times;</button>
+      </div>
+
+      <p style="font-size: 0.9rem; font-weight: 600; color: var(--colors-brand-primary); text-transform: uppercase;">1. Select Language &amp; Office Hub</p>
+      <div class="region-grid">
+        <div class="region-card-item active" onclick="switchGtLang('en', 'Global • EN', this)">
+          <div>
+            <div style="font-weight: 600; color: var(--colorSystemBlack);">Global (English)</div>
+            <div style="font-size: 0.8rem; color: var(--colors-system-textTertiary);">International Edition</div>
+          </div>
+          <span style="font-weight: 700; color: var(--colors-brand-secondary);">EN</span>
+        </div>
+        <div class="region-card-item" onclick="switchGtLang('de', 'Germany • DE', this)">
+          <div>
+            <div style="font-weight: 600; color: var(--colorSystemBlack);">Germany (Munich / Berlin)</div>
+            <div style="font-size: 0.8rem; color: var(--colors-system-textTertiary);">Deutsch / DACH Hub</div>
+          </div>
+          <span style="font-weight: 700; color: var(--colors-brand-secondary);">DE</span>
+        </div>
+        <div class="region-card-item" onclick="switchGtLang('vi', 'Vietnam • VI', this)">
+          <div>
+            <div style="font-weight: 600; color: var(--colorSystemBlack);">Vietnam (Ho Chi Minh City)</div>
+            <div style="font-size: 0.8rem; color: var(--colors-system-textTertiary);">Tiếng Việt / APAC Hub</div>
+          </div>
+          <span style="font-weight: 700; color: var(--colors-brand-secondary);">VI</span>
+        </div>
+      </div>
+
+      <p style="font-size: 0.9rem; font-weight: 600; color: var(--colors-brand-primary); text-transform: uppercase; margin-top: 2rem;">2. GT Media Studio Theme Engine</p>
+      <p style="font-size: 0.88rem; color: var(--colors-system-textSecondary); margin-top: 0.25rem;">
+        Customize the interactive accent tokens and ambient gradient orbs across the studio interface:
+      </p>
+      <div class="theme-pills-bar">
+        <button type="button" class="theme-pill-btn active" id="theme-btn-gtmedia" onclick="setGtTheme('gtmedia')">
+          <span class="theme-swatch" style="background: #B1FD43; border: 1px solid #000050;"></span>
+          <span>Acid Lime (Default)</span>
+        </button>
+        <button type="button" class="theme-pill-btn" id="theme-btn-performance" onclick="setGtTheme('performance')">
+          <span class="theme-swatch" style="background: #FD3E81;"></span>
+          <span>Cyber Pink</span>
+        </button>
+        <button type="button" class="theme-pill-btn" id="theme-btn-seo" onclick="setGtTheme('seo')">
+          <span class="theme-swatch" style="background: #FF8001;"></span>
+          <span>Solar Orange</span>
+        </button>
+        <button type="button" class="theme-pill-btn" id="theme-btn-crm" onclick="setGtTheme('crm')">
+          <span class="theme-swatch" style="background: #9A3EFF;"></span>
+          <span>Electric Violet</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="gt-modal-backdrop" id="contactModal" onclick="if(event.target.id==='contactModal') closeContactModal()">
+    <div class="gt-modal-card" style="max-width: 44rem;">
+      <div class="gt-modal-header">
+        <h3 style="color: var(--colors-brand-primary); font-size: 1.4rem;">Unlock intelligent growth with GT Media</h3>
+        <button type="button" class="gt-modal-close" onclick="closeContactModal()">Close &times;</button>
+      </div>
+      <form onsubmit="submitGtContact(event)" id="gtContactForm" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div>
+          <label style="display:block; font-size:0.82rem; font-weight:600; color:var(--colors-brand-primary); margin-bottom:0.35rem;">First Name *</label>
+          <input type="text" name="firstName" required placeholder="Giau" style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.82rem; font-weight:600; color:var(--colors-brand-primary); margin-bottom:0.35rem;">Last Name *</label>
+          <input type="text" name="lastName" required placeholder="Tran" style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.82rem; font-weight:600; color:var(--colors-brand-primary); margin-bottom:0.35rem;">Business Email *</label>
+          <input type="email" name="email" required placeholder="name@company.com" style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:0.82rem; font-weight:600; color:var(--colors-brand-primary); margin-bottom:0.35rem;">Company / Organization *</label>
+          <input type="text" name="company" required placeholder="Your Brand" style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;" />
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label style="display:block; font-size:0.82rem; font-weight:600; color:var(--colors-brand-primary); margin-bottom:0.35rem;">How can we help you grow?</label>
+          <textarea name="message" rows="3" placeholder="Tell us about your Technical SEO, PPC, CRM, or digital platform goals..." style="width:100%; padding:0.75rem 1rem; border-radius:12px; border:1px solid var(--colorSystemBlack20); background:#f8f8fa;"></textarea>
+        </div>
+        <div style="grid-column: 1 / -1; margin-top: 0.5rem;">
+          <button type="submit" class="gt-btn gt-btn--primary">
+            <span class="gt-btn-label">
+              <span class="gt-btn-text-1">Send Inquiry</span>
+              <span class="gt-btn-text-2">Send Inquiry</span>
+            </span>
+            <span class="gt-btn-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+        </div>
+      </form>
+      <div id="gtContactSuccess" style="display:none; padding: 1.5rem; border-radius: 16px; background: #000050; color: #fff;"></div>
+    </div>
+  </div>
+
+  <!-- Showreel Modal -->
+  <div class="gt-modal-backdrop" id="showreelModal" onclick="if(event.target.id==='showreelModal') closeShowreelModal()">
+    <div class="gt-modal-card" style="max-width: 60rem; background: #000050; color: #fff;">
+      <div class="gt-modal-header" style="border-bottom-color: rgba(255,255,255,0.15);">
+        <h3 style="color: #fff; font-size: 1.25rem;">We are GT Media — Showreel &amp; Case Study Highlights</h3>
+        <button type="button" class="gt-modal-close" onclick="closeShowreelModal()">Close &times;</button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+        <a href="#our-work" onclick="closeShowreelModal()" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
+          <img src="/demo/images/project-british-council.jpg" alt="British Council IELTS PPC" style="width:100%; height:150px; object-fit:cover;" />
+          <div style="padding:1rem;">
+            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 01 • PPC</div>
+            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">British Council IELTS SEA ↗</div>
+          </div>
+        </a>
+        <a href="#our-work" onclick="closeShowreelModal()" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
+          <img src="/demo/images/project-desire-online.jpg" alt="Desire Online SEO Audit" style="width:100%; height:150px; object-fit:cover;" />
+          <div style="padding:1rem;">
+            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 02 • Technical SEO</div>
+            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">Desire Online (8,900+ URLs) ↗</div>
+          </div>
+        </a>
+        <a href="/vegangarden/" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
+          <img src="/demo/images/project-vegan-garden.jpg" alt="Vegan Garden Berlin" style="width:100%; height:150px; object-fit:cover;" />
+          <div style="padding:1rem;">
+            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 03 • Germany</div>
+            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">Vegan Garden Berlin (DE) ↗</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       6. INTERACTIVE SCRIPTS: HERO SHOWREEL, SCROLL CLIP-PATH, 3D STACK, GLOBE
+       ======================================================================== -->
+  <script>
+    /* 1. Sticky Header Glassmorphism & Scroll Expand for Hero Video Mask */
+    (function() {
+      const header = document.getElementById('gtHeader');
+      const mask = document.getElementById('heroVideoMask');
+
+      function onScroll() {
+        const y = window.scrollY || window.pageYOffset;
+        if (header) {
+          header.classList.toggle('scrolled', y > 30);
+        }
+        if (mask) {
+          const progress = Math.min(1, Math.max(0, y / 360));
+          const radius = 62 + progress * 38;
+          mask.style.setProperty('--hero-clip', radius.toFixed(1) + '%');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* 2. Interactive Showreel Canvas (AI Data Streams + Media Nodes) */
+    let showreelRunning = true;
+    (function() {
+      const canvas = document.getElementById('heroShowreelCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w = 0, h = 0, t = 0;
+
+      const bgImg = new Image();
+      bgImg.src = '/demo/images/tng-office.jpg';
+
+      const nodes = Array.from({ length: 46 }, (_, i) => ({
+        x: Math.random(),
+        y: Math.random(),
+        vx: (Math.random() - 0.5) * 0.0012,
+        vy: (Math.random() - 0.5) * 0.0012,
+        r: 2.5 + (i % 4) * 1.4,
+        accent: i % 5 === 0
+      }));
+
+      function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        w = canvas.width = rect.width || 1200;
+        h = canvas.height = rect.height || 675;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function render() {
+        if (showreelRunning) {
+          t += 0.012;
+          ctx.fillStyle = '#000050';
+          ctx.fillRect(0, 0, w, h);
+
+          if (bgImg.complete && bgImg.naturalWidth > 0) {
+            ctx.save();
+            ctx.globalAlpha = 0.42;
+            const scale = 1.04 + Math.sin(t * 0.5) * 0.03;
+            const dw = w * scale, dh = h * scale;
+            ctx.drawImage(bgImg, (w - dw) / 2, (h - dh) / 2, dw, dh);
+            ctx.restore();
+          }
+
+          const g1 = ctx.createRadialGradient(
+            w * (0.3 + Math.sin(t) * 0.15), h * (0.4 + Math.cos(t * 0.8) * 0.15), 10,
+            w * 0.35, h * 0.45, w * 0.45
+          );
+          g1.addColorStop(0, 'rgba(84, 101, 255, 0.55)');
+          g1.addColorStop(1, 'rgba(0, 0, 80, 0)');
+          ctx.fillStyle = g1;
+          ctx.fillRect(0, 0, w, h);
+
+          const g2 = ctx.createRadialGradient(
+            w * (0.72 + Math.cos(t * 1.1) * 0.14), h * (0.58 + Math.sin(t * 0.9) * 0.14), 10,
+            w * 0.7, h * 0.55, w * 0.35
+          );
+          g2.addColorStop(0, 'rgba(177, 253, 67, 0.35)');
+          g2.addColorStop(1, 'rgba(0, 0, 80, 0)');
+          ctx.fillStyle = g2;
+          ctx.fillRect(0, 0, w, h);
+
+          for (let i = 0; i < nodes.length; i++) {
+            const a = nodes[i];
+            a.x += a.vx; a.y += a.vy;
+            if (a.x < 0.05 || a.x > 0.95) a.vx *= -1;
+            if (a.y < 0.08 || a.y > 0.92) a.vy *= -1;
+
+            for (let j = i + 1; j < nodes.length; j++) {
+              const b = nodes[j];
+              const dx = (a.x - b.x) * w;
+              const dy = (a.y - b.y) * h;
+              const dist = Math.hypot(dx, dy);
+              if (dist < 150) {
+                ctx.strokeStyle = `rgba(148, 235, 242, ${(1 - dist / 150) * 0.28})`;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(a.x * w, a.y * h);
+                ctx.lineTo(b.x * w, b.y * h);
+                ctx.stroke();
+              }
+            }
+
+            ctx.fillStyle = a.accent ? '#B1FD43' : '#FFFFFF';
+            ctx.beginPath();
+            ctx.arc(a.x * w, a.y * h, a.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+        requestAnimationFrame(render);
+      }
+      render();
+    })();
+
+    function toggleShowreelCanvas() {
+      showreelRunning = !showreelRunning;
+      const icon = document.getElementById('showreelPauseIcon');
+      if (icon) {
+        icon.innerHTML = showreelRunning
+          ? '<path d="M20.25 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3.375a1.5 1.5 0 0 1-1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h3.375a1.5 1.5 0 0 1 1.5 1.5ZM8.625 3H5.25a1.5 1.5 0 0 0-1.5 1.5v15a1.5 1.5 0 0 0 1.5 1.5h3.375a1.5 1.5 0 0 0 1.5-1.5v-15a1.5 1.5 0 0 0-1.5-1.5Z"/>'
+          : '<path d="m21.778 10.716-13.5-8.24a1.453 1.453 0 0 0-1.51-.028A1.481 1.481 0 0 0 6 3.75v16.5a1.481 1.481 0 0 0 .769 1.303 1.453 1.453 0 0 0 1.51-.028l13.5-8.24a1.5 1.5 0 0 0 0-2.57Z"/>';
+      }
+    }
+
+    /* 3. Generate Dot-Matrix Globe in Growth Intelligence Section */
+    (function() {
+      const svg = document.getElementById('oiGlobeSvg');
+      if (!svg) return;
+      const cx = 220, cy = 220, maxR = 195;
+      let circles = '';
+      for (let ring = 1; ring <= 9; ring++) {
+        const r = (ring / 9) * maxR;
+        const count = ring * 10;
+        for (let i = 0; i < count; i++) {
+          const angle = (i / count) * Math.PI * 2 + ring * 0.2;
+          const x = (cx + Math.cos(angle) * r).toFixed(1);
+          const y = (cy + Math.sin(angle) * r).toFixed(1);
+          const dotR = ((i + ring) % 5 === 0) ? 2.6 : 1.4;
+          const fill = ((i + ring) % 11 === 0) ? '#B1FD43' : 'rgba(255,255,255,0.65)';
+          circles += `<circle cx="${x}" cy="${y}" r="${dotR}" fill="${fill}"/>`;
+        }
+      }
+      svg.innerHTML = circles;
+    })();
+
+    function highlightOiNode(key) {
+      document.querySelectorAll('.oi-orb-node').forEach(el => {
+        el.classList.toggle('active', el.id === 'oi-node-' + key);
+      });
+      const keys = ['speed', 'scale', 'precision', 'signals'];
+      const idx = keys.indexOf(key);
+      document.querySelectorAll('.oi-feature-block').forEach((el, i) => {
+        el.classList.toggle('active', i === idx);
+      });
+    }
+
+    /* 4. 3D Depth-Stacked Card Carousel ("Our Work") */
+    let activeWorkIdx = 0;
+    function updateWorkCarousel() {
+      const items = document.querySelectorAll('#workCardStack .card-stack-item');
+      const total = items.length;
+      const offsetStep = window.innerWidth <= 1024 ? 14 : 20;
+
+      items.forEach((item, i) => {
+        const n = (i - activeWorkIdx + total) % total;
+        const isActive = n === 0;
+        item.classList.toggle('active', isActive);
+        item.style.zIndex = String(total - n);
+        if (isActive) {
+          item.style.transform = 'none';
+          item.style.setProperty('--afterOpacity', '0');
+        } else {
+          const translateY = n * offsetStep;
+          const scale = (1 - 0.055 * n).toFixed(3);
+          const darkness = Math.min(0.65, 0.16 + 0.12 * n).toFixed(2);
+          item.style.transform = `translateY(${translateY}px) scale(${scale})`;
+          item.style.setProperty('--afterOpacity', darkness);
+        }
+      });
+
+      const counter = document.getElementById('workCarouselCounter');
+      if (counter) counter.textContent = `${activeWorkIdx + 1} / ${total}`;
+    }
+
+    function stepWorkCarousel(dir) {
+      const items = document.querySelectorAll('#workCardStack .card-stack-item');
+      const total = items.length;
+      activeWorkIdx = (activeWorkIdx + dir + total) % total;
+      updateWorkCarousel();
+    }
+    updateWorkCarousel();
+
+    /* 5. Studio Theme Engine & Multilingual Switcher */
+    function setGtTheme(themeName) {
+      document.body.setAttribute('data-gt-theme', themeName);
+      document.querySelectorAll('.theme-pill-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.id === 'theme-btn-' + themeName);
+      });
+    }
+
+    const GT_I18N = {
+      en: {
+        nav_about: 'About us',
+        nav_what: 'What we do',
+        nav_clients: 'Client Successes',
+        nav_news: 'News and Views',
+        nav_careers: 'Careers',
+        nav_contact: 'Contact',
+        hero_badge: 'DATA-DRIVEN CREATIVE & GROWTH STUDIO • GIAUTRAN.ME',
+        hero_heading: '<span class="line">Intelligent growth for the AI era.</span><span class="line">We are GT Media.</span>',
+        hero_cta: 'Unlock intelligent growth',
+        play_video: 'Play the video',
+        believe_lead: 'We Believe',
+        believe_title: 'In a world reshaped by AI, media and digital experiences will be everywhere and in everything',
+        believe_body: '<p>Founded in 2017, <strong>GT Media (giautran.me)</strong> combines Technical SEO, multi-market Performance Ads (PPC), E-E-A-T Content Strategy, and O2O CRM Ecosystems to deliver measurable business outcomes across Vietnam, Southeast Asia, Germany, and Australia.</p>',
+        work_lead: 'Our work',
+        work_heading: 'Extraordinary thinking. Extraordinary results.',
+        careers_heading: "Let's build the future together"
+      },
+      de: {
+        nav_about: 'Über uns',
+        nav_what: 'Leistungen',
+        nav_clients: 'Referenzen',
+        nav_news: 'News & Insights',
+        nav_careers: 'Karriere',
+        nav_contact: 'Kontakt',
+        hero_badge: 'DATENGETRIEBENES GROWTH & DIGITAL STUDIO • MÜNCHEN & HCMC',
+        hero_heading: '<span class="line">Intelligentes Wachstum für die KI-Ära.</span><span class="line">Wir sind GT Media.</span>',
+        hero_cta: 'Intelligentes Wachstum starten',
+        play_video: 'Showreel abspielen',
+        believe_lead: 'Unsere Überzeugung',
+        believe_title: 'In einer durch KI neu geformten Welt sind Medien und digitale Erlebnisse überall und in allem',
+        believe_body: '<p>Gegründet 2017 vereint <strong>GT Media (giautran.me)</strong> Technical SEO, internationale Performance Ads (PPC), Content-Strategie und CRM-Ökosysteme für messbares Markenwachstum in Europa, Asien und Australien.</p>',
+        work_lead: 'Unsere Projekte',
+        work_heading: 'Außergewöhnliches Denken. Außergewöhnliche Ergebnisse.',
+        careers_heading: 'Gemeinsam die Zukunft gestalten'
+      },
+      vi: {
+        nav_about: 'Về chúng tôi',
+        nav_what: 'Giải pháp',
+        nav_clients: 'Dự án tiêu biểu',
+        nav_news: 'Góc nhìn & Báo cáo',
+        nav_careers: 'Hợp tác',
+        nav_contact: 'Liên hệ',
+        hero_badge: 'STUDIO SÁNG TẠO & TĂNG TRƯỞNG DỮ LIỆU • GIAUTRAN.ME',
+        hero_heading: '<span class="line">Tăng trưởng thông minh trong kỷ nguyên AI.</span><span class="line">Chúng tôi là GT Media.</span>',
+        hero_cta: 'Khám phá tăng trưởng thông minh',
+        play_video: 'Xem video giới thiệu',
+        believe_lead: 'Tầm nhìn của chúng tôi',
+        believe_title: 'Trong thế giới được định hình lại bởi AI, truyền thông và trải nghiệm số sẽ hiện diện ở mọi nơi',
+        believe_body: '<p>Thành lập từ năm 2017, <strong>GT Media (giautran.me)</strong> kết hợp Technical SEO, Performance Ads (PPC) đa thị trường, Content chuẩn E-E-A-T và hệ sinh thái CRM O2O nhằm mang lại tăng trưởng thực chất tại Việt Nam, Đông Nam Á, Đức và Úc.</p>',
+        work_lead: 'Dự án thực tế',
+        work_heading: 'Tư duy đột phá. Kết quả vượt trội.',
+        careers_heading: 'Cùng nhau kiến tạo tương lai số'
       }
     };
 
-    function openLegal(type) {
-      const data = legalContents[type];
-      if (!data) return;
-      document.getElementById('legalModalTitle').innerText = data.title;
-      document.getElementById('legalModalBody').innerHTML = data.body;
-      const linkMap = {
-        impressum: '/impressum.html',
-        datenschutz: '/datenschutz.html',
-        cookies: '/cookie-einstellungen.html'
-      };
-      const pageLink = document.getElementById('legalPageLink');
-      if (pageLink && linkMap[type]) {
-        pageLink.href = linkMap[type];
-      }
-      const modal = document.getElementById('legalModal');
-      modal.classList.add('active');
+    function switchGtLang(lang, regionLabel, cardEl) {
+      const dict = GT_I18N[lang] || GT_I18N.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+      const lbl = document.getElementById('currentRegionLabel');
+      if (lbl && regionLabel) lbl.textContent = regionLabel;
+      document.querySelectorAll('.region-card-item').forEach(el => el.classList.remove('active'));
+      if (cardEl) cardEl.classList.add('active');
+      document.documentElement.lang = lang;
     }
 
-    function closeLegal() {
-      document.getElementById('legalModal').classList.remove('active');
+    function openRegionModal() {
+      document.getElementById('regionModal').classList.add('active');
+    }
+    function closeRegionModal() {
+      document.getElementById('regionModal').classList.remove('active');
+    }
+    function openContactModal() {
+      document.getElementById('contactModal').classList.add('active');
+    }
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.remove('active');
+    }
+    function openShowreelModal() {
+      document.getElementById('showreelModal').classList.add('active');
+    }
+    function closeShowreelModal() {
+      document.getElementById('showreelModal').classList.remove('active');
     }
 
-    function handleBackdropClick(e) {
-      if (e.target.id === 'legalModal') {
-        closeLegal();
+    function submitGtContact(e) {
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const name = (fd.get('firstName') || '') + ' ' + (fd.get('lastName') || '');
+      const company = fd.get('company') || '';
+      e.target.style.display = 'none';
+      const box = document.getElementById('gtContactSuccess');
+      if (box) {
+        box.style.display = 'block';
+        box.innerHTML = `
+          <h4 style="color: #B1FD43; font-size: 1.25rem; margin-bottom: 0.5rem;">✓ Thank you, ${name.trim()}!</h4>
+          <p style="margin: 0; font-size: 0.95rem; color: rgba(255,255,255,0.88);">
+            We have received your inquiry for <strong>${company}</strong>. Our team at <strong>giautran.me</strong> will get back to you within 24 hours.
+          </p>
+        `;
       }
     }
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLegal();
+      if (e.key === 'Escape') {
+        closeRegionModal();
+        closeContactModal();
+        closeShowreelModal();
+      }
     });
   </script>
-
 </body>
 </html>

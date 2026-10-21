@@ -2062,129 +2062,6 @@
 <!-- ═══════════════════════════════════════════════
      TIN TỨC
 ═══════════════════════════════════════════════ -->
-<style>
-  #tin-tuc .news-card {
-    background: #ffffff !important;
-    border-radius: 18px !important;
-    padding: 12px 12px 18px 12px !important;
-    border: 1px solid #f5eedc !important;
-    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
-    display: flex;
-    flex-direction: column !important;
-    width: 100% !important;
-    text-align: left !important;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
-  }
-
-  #tin-tuc .news-card[style*="display: none"] {
-    display: none !important;
-  }
-
-  #tin-tuc .news-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
-    border-color: #ead5a0 !important;
-  }
-
-  #tin-tuc .news-card .news-card__img-link {
-    width: 100% !important;
-    aspect-ratio: 16 / 10 !important;
-    height: auto !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-    background: #f8fafc !important;
-    display: block !important;
-    position: relative !important;
-  }
-
-  #tin-tuc .news-card .news-card__img-link img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    border-radius: 12px !important;
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-
-  #tin-tuc .news-card:hover .news-card__img-link img {
-    transform: scale(1.04) !important;
-  }
-
-  #tin-tuc .news-card .news-card__body {
-    padding: 18px 8px 0 8px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
-    text-align: left !important;
-    flex: 1 1 auto !important;
-  }
-
-  #tin-tuc .news-card .news-card__cat-text {
-    font-size: 0.7rem !important;
-    font-weight: 700 !important;
-    color: #C59A3F !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
-    margin: 0 0 4px 0 !important;
-    text-align: left !important;
-    width: 100% !important;
-  }
-
-  #tin-tuc .news-card .news-card__title {
-    font-size: 1rem !important;
-    font-weight: 700 !important;
-    color: #0f172a !important;
-    line-height: 1.42 !important;
-    margin: 0 0 22px 0 !important;
-    text-align: left !important;
-    text-align-last: left !important;
-    width: 100% !important;
-    text-transform: none !important;
-  }
-
-  #tin-tuc .news-card .news-card__title a {
-    color: #0f172a !important;
-    text-decoration: none !important;
-    text-align: left !important;
-    text-align-last: left !important;
-    transition: color 0.2s ease !important;
-  }
-
-  #tin-tuc .news-card:hover .news-card__title,
-  #tin-tuc .news-card:hover .news-card__title a {
-    color: #007DA5 !important;
-  }
-
-  #tin-tuc .news-card .news-card__more,
-  #tin-tuc .news-card a.news-card__more {
-    border-top: 1px solid #f5f0e6 !important;
-    padding-top: 14px !important;
-    margin-top: auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    gap: 5px !important;
-    text-align: right !important;
-    width: 100% !important;
-    color: #00688B !important;
-    font-weight: 700 !important;
-    font-size: 0.82rem !important;
-    text-decoration: none !important;
-  }
-
-  #tin-tuc .news-card .news-card__more .arrow {
-    color: #00688B !important;
-    font-weight: 700 !important;
-    transition: transform 0.2s ease !important;
-  }
-
-  #tin-tuc .news-card:hover .news-card__more .arrow {
-    transform: translateX(3px) !important;
-  }
-</style>
-
 <section class="section news-section" id="tin-tuc">
   <div class="container">
     <div class="section__header" style="margin-bottom: 1.25rem;">
@@ -2209,12 +2086,10 @@
           <article class="news-card news-card--standard" id="news-1" data-category="su-kien" style="width: 100%;">
             <a href="chi-tiet-tin-tuc?id=46565" class="news-card__img-link">
               <img src="https://cih.com.vn/wp-content/uploads/2026/08/1-19-1-768x512.webp" alt="Ra mắt ban chấp hành chi hội bệnh viện tư nhân TP.HCM và các tỉnh, thành phía nam" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              <span class="news-card__cat">Sự Kiện</span>
             </a>
             <div class="news-card__body">
-              <div style="width: 100%;">
-                <p class="news-card__cat-text">Sự Kiện</p>
-                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46565">Ra mắt ban chấp hành chi hội bệnh viện tư nhân TP.HCM và các tỉnh, thành phía nam</a></h3>
-              </div>
+              <h3 class="news-card__title" style="text-transform: none; font-size: 1rem;"><a href="chi-tiet-tin-tuc?id=46565">Ra mắt ban chấp hành chi hội bệnh viện tư nhân TP.HCM và các tỉnh, thành phía nam</a></h3>
               <a href="chi-tiet-tin-tuc?id=46565" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </article>
@@ -2222,12 +2097,10 @@
           <article class="news-card news-card--standard" id="news-2" data-category="suc-khoe" style="width: 100%;">
             <a href="chi-tiet-tin-tuc?id=46556" class="news-card__img-link">
               <img src="https://cih.com.vn/wp-content/uploads/2026/08/My_Uu-dai-Khoa-Ngoai-tong-quat-1-768x432.webp" alt="Ưu đãi 20% phí gói phẫu thuật tại khoa ngoại tổng quát" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              <span class="news-card__cat">Ưu Đãi</span>
             </a>
             <div class="news-card__body">
-              <div style="width: 100%;">
-                <p class="news-card__cat-text">Ưu Đãi</p>
-                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46556">Ưu đãi 20% phí gói phẫu thuật tại khoa ngoại tổng quát</a></h3>
-              </div>
+              <h3 class="news-card__title" style="text-transform: none; font-size: 1rem;"><a href="chi-tiet-tin-tuc?id=46556">Ưu đãi 20% phí gói phẫu thuật tại khoa ngoại tổng quát</a></h3>
               <a href="chi-tiet-tin-tuc?id=46556" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </article>
@@ -2235,12 +2108,10 @@
           <article class="news-card news-card--standard" id="news-3" data-category="y-khoa" style="width: 100%;">
             <a href="chi-tiet-tin-tuc?id=46532" class="news-card__img-link">
               <img src="https://cih.com.vn/wp-content/uploads/2026/08/34-768x432.webp" alt="Đau bụng dữ dội, phát hiện nhiều sỏi mật kích thước “khủng”" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              <span class="news-card__cat">Y Khoa</span>
             </a>
             <div class="news-card__body">
-              <div style="width: 100%;">
-                <p class="news-card__cat-text">Y Khoa</p>
-                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46532">Đau bụng dữ dội, phát hiện nhiều sỏi mật kích thước “khủng”</a></h3>
-              </div>
+              <h3 class="news-card__title" style="text-transform: none; font-size: 1rem;"><a href="chi-tiet-tin-tuc?id=46532">Đau bụng dữ dội, phát hiện nhiều sỏi mật kích thước “khủng”</a></h3>
               <a href="chi-tiet-tin-tuc?id=46532" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </article>
@@ -2248,12 +2119,10 @@
           <article class="news-card news-card--standard" id="news-4" data-category="su-kien" style="width: 100%;">
             <a href="chi-tiet-tin-tuc?id=46421" class="news-card__img-link">
               <img src="https://cih.com.vn/wp-content/uploads/2026/08/4-768x512.webp" alt="Bệnh viện Gia An 115 và Bệnh viện Quốc tế City tham dự hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              <span class="news-card__cat">Sự Kiện</span>
             </a>
             <div class="news-card__body">
-              <div style="width: 100%;">
-                <p class="news-card__cat-text">Sự Kiện</p>
-                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46421">Bệnh viện Gia An 115 và Bệnh viện Quốc tế City tham dự hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ</a></h3>
-              </div>
+              <h3 class="news-card__title" style="text-transform: none; font-size: 1rem;"><a href="chi-tiet-tin-tuc?id=46421">Bệnh viện Gia An 115 và Bệnh viện Quốc tế City tham dự hội thảo kết nối doanh nghiệp Hà Nội – Cần Thơ</a></h3>
               <a href="chi-tiet-tin-tuc?id=46421" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </article>
@@ -2261,12 +2130,10 @@
           <article class="news-card news-card--standard" id="news-5" data-category="suc-khoe" style="width: 100%;">
             <a href="chi-tiet-tin-tuc?id=46415" class="news-card__img-link">
               <img src="https://cih.com.vn/wp-content/uploads/2026/08/1-1-768x432.webp" alt="Nhồi máu thận: Tái thông khẩn cấp động mạch thận khẩn cấp từ một cơn đau hông lưng" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              <span class="news-card__cat">Sức Khỏe</span>
             </a>
             <div class="news-card__body">
-              <div style="width: 100%;">
-                <p class="news-card__cat-text">Sức Khỏe</p>
-                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46415">Nhồi máu thận: Tái thông khẩn cấp động mạch thận khẩn cấp từ một cơn đau hông lưng</a></h3>
-              </div>
+              <h3 class="news-card__title" style="text-transform: none; font-size: 1rem;"><a href="chi-tiet-tin-tuc?id=46415">Nhồi máu thận: Tái thông khẩn cấp động mạch thận khẩn cấp từ một cơn đau hông lưng</a></h3>
               <a href="chi-tiet-tin-tuc?id=46415" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </article>
@@ -2274,12 +2141,10 @@
           <article class="news-card news-card--standard" id="news-6" data-category="y-khoa" style="width: 100%;">
             <a href="chi-tiet-tin-tuc?id=46342" class="news-card__img-link">
               <img src="https://cih.com.vn/wp-content/uploads/2026/07/1785381492383_1858338027095774142_8704828691385398713_46c59b609b69f10af14f5145afdfdd78-768x576.webp" alt="Phối hợp can thiệp hai hệ mạch não và tim trong cùng một đợt nằm viện" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+              <span class="news-card__cat">Y Khoa</span>
             </a>
             <div class="news-card__body">
-              <div style="width: 100%;">
-                <p class="news-card__cat-text">Y Khoa</p>
-                <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46342">Phối hợp can thiệp hai hệ mạch não và tim trong cùng một đợt nằm viện</a></h3>
-              </div>
+              <h3 class="news-card__title" style="text-transform: none; font-size: 1rem;"><a href="chi-tiet-tin-tuc?id=46342">Phối hợp can thiệp hai hệ mạch não và tim trong cùng một đợt nằm viện</a></h3>
               <a href="chi-tiet-tin-tuc?id=46342" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </article>

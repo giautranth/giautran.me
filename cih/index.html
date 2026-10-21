@@ -141,60 +141,351 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     QUICK ACTIONS (FV INSPIRED 4-CARD COMPACT LAYOUT)
+     QUICK ACTIONS + SEARCH BAR & STATS (LUXURY FLOATING CARD LAYOUT)
 ═══════════════════════════════════════════════ -->
-<section class="quick-actions" id="quick-actions" style="background: #ffffff !important;">
-  <div class="container container--compact">
-    <div class="quick-actions__grid">
-      <a href="bac-si" class="qa-card qa-card--blue" id="qa-doctor">
-        <div class="qa-card__icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-        </div>
-        <div class="qa-card__body"><h3>Tìm bác sĩ</h3></div>
-      </a>
-      <a href="chuyen-khoa" class="qa-card qa-card--green" id="qa-specialty">
-        <div class="qa-card__icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path><path d="M3 21h18"></path><path d="M12 7v6"></path><path d="M9 10h6"></path><path d="M9 17h2"></path><path d="M13 17h2"></path></svg>
-        </div>
-        <div class="qa-card__body"><h3>Chuyên khoa</h3></div>
-      </a>
-      <a href="lien-he#dat-lich" class="qa-card qa-card--purple" id="qa-booking">
-        <div class="qa-card__icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M12 14v4M10 16h4"></path></svg>
-        </div>
-        <div class="qa-card__body"><h3>Đặt lịch khám</h3></div>
-      </a>
-    </div>
-  </div>
-</section>
+<style>
+  .cih-hero-overlap-wrapper {
+    position: relative;
+    background-color: #fdfcf7;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 420' preserveAspectRatio='none'%3E%3Cpath fill='%23d7ebf2' fill-opacity='0.65' d='M0,40 L480,190 L0,340 Z'/%3E%3Cpath fill='%23efe9d8' fill-opacity='0.7' d='M520,210 C760,90 980,90 1440,200 L1440,390 L0,390 L0,230 Z'/%3E%3Cpath fill='%23e2dec9' fill-opacity='0.65' d='M960,160 C1150,110 1320,130 1440,175 L1440,390 L680,390 Z'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 22px;
+    padding-bottom: 48px;
+    z-index: 10;
+  }
 
-<!-- ═══════════════════════════════════════════════
-     STATS
-═══════════════════════════════════════════════ -->
-<section class="stats-section" id="stats" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-item__value">
-          <span class="stat-item__number" data-count="16">16</span>
+  /* Floating Action + Search Card */
+  .cih-floating-hub {
+    max-width: 1120px;
+    margin: -36px auto 0;
+    position: relative;
+    z-index: 25;
+    background: #fffefb !important;
+    border: 1.5px solid #f0e4c3 !important;
+    border-radius: 22px !important;
+    padding: 24px 28px !important;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09), 0 4px 14px rgba(180, 140, 60, 0.07) !important;
+  }
+
+  .cih-hub-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f3efe6;
+  }
+
+  .cih-hub-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .cih-hub-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .cih-hub-card--teal {
+    background: linear-gradient(135deg, #f0fdfa 0%, #f7feff 55%, #ffffff 100%);
+    border: 1.2px solid #cdebf2;
+    box-shadow: 0 4px 14px rgba(0, 125, 165, 0.04);
+  }
+  .cih-hub-card--teal:hover {
+    border-color: #007da5;
+    box-shadow: 0 10px 24px rgba(0, 125, 165, 0.12);
+  }
+
+  .cih-hub-card--gold {
+    background: linear-gradient(135deg, #fffcf0 0%, #fffdf7 60%, #ffffff 100%);
+    border: 1.2px solid #f2d78c;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.05);
+  }
+  .cih-hub-card--gold:hover {
+    border-color: #d97706;
+    box-shadow: 0 10px 24px rgba(217, 119, 6, 0.14);
+  }
+
+  .cih-hub-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+  }
+
+  .cih-hub-card--teal .cih-hub-icon {
+    background: linear-gradient(135deg, #007da5 0%, #005a78 100%);
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(0, 125, 165, 0.28);
+  }
+
+  .cih-hub-card--gold .cih-hub-icon {
+    background: linear-gradient(135deg, #e5a918 0%, #ca8a04 100%);
+    color: #ffffff;
+    box-shadow: 0 6px 14px rgba(202, 138, 4, 0.30);
+  }
+
+  .cih-hub-text {
+    text-align: left;
+  }
+
+  .cih-hub-title {
+    font-size: 1.02rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 3px 0;
+  }
+
+  .cih-hub-card--teal .cih-hub-title {
+    color: #005f7f;
+  }
+
+  .cih-hub-card--gold .cih-hub-title {
+    color: #854d0e;
+  }
+
+  .cih-hub-sub {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  /* Search Row */
+  .cih-hub-search {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 18px;
+  }
+
+  .cih-hub-search-input-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8fafc;
+    border: 1.2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+  }
+
+  .cih-hub-search-input-wrap:focus-within {
+    background: #ffffff;
+    border-color: #007da5;
+    box-shadow: 0 0 0 3px rgba(0, 125, 165, 0.1);
+  }
+
+  .cih-hub-search-icon {
+    font-size: 1rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .cih-hub-search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 0.92rem;
+    font-family: inherit;
+    color: #334155;
+  }
+
+  .cih-hub-search-input::placeholder {
+    color: #64748b;
+  }
+
+  .cih-hub-search-btn {
+    background: linear-gradient(135deg, #006a88 0%, #00526a 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 13px 28px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 6px 16px rgba(0, 90, 120, 0.25);
+    transition: all 0.2s ease;
+  }
+
+  .cih-hub-search-btn:hover {
+    background: linear-gradient(135deg, #007da5 0%, #00607c 100%);
+    transform: translateY(-1px);
+  }
+
+  /* 4-Column Floating Stats Card */
+  .cih-floating-stats {
+    max-width: 1120px;
+    margin: 34px auto 0;
+    background: #fffdf9 !important;
+    border: 1.5px solid #f0e4c3 !important;
+    border-radius: 22px !important;
+    padding: 34px 20px !important;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.07), 0 4px 12px rgba(180, 140, 60, 0.05) !important;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    position: relative;
+    z-index: 20;
+  }
+
+  .cih-stat-box {
+    text-align: center;
+    padding: 4px 16px;
+    border-right: 1px solid #f1ece1;
+  }
+
+  .cih-stat-box:last-child {
+    border-right: none;
+  }
+
+  .cih-stat-num {
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .cih-stat-num--orange {
+    color: #d97706;
+  }
+
+  .cih-stat-num--gold {
+    color: #c78d20;
+  }
+
+  .cih-stat-num--teal {
+    color: #007da5;
+  }
+
+  .cih-stat-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+  }
+
+  .cih-stat-desc {
+    font-size: 0.77rem;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  @media (max-width: 991px) {
+    .cih-floating-hub,
+    .cih-floating-stats {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    .cih-hub-cards {
+      grid-template-columns: 1fr;
+    }
+    .cih-floating-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px 0;
+    }
+    .cih-stat-box:nth-child(2) {
+      border-right: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cih-hub-search {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .cih-floating-stats {
+      grid-template-columns: 1fr 1fr;
+      padding: 24px 12px !important;
+    }
+    .cih-stat-num {
+      font-size: 2.1rem;
+    }
+  }
+</style>
+
+<div class="cih-hero-overlap-wrapper">
+  <!-- FLOATING QUICK ACTIONS & SEARCH BAR -->
+  <div class="cih-floating-hub" id="quick-actions">
+    <div class="cih-hub-cards">
+      <a href="bac-si" class="cih-hub-card cih-hub-card--teal" id="qa-doctor">
+        <div class="cih-hub-icon">🔍</div>
+        <div class="cih-hub-text">
+          <div class="cih-hub-title">Tìm bác sĩ</div>
+          <div class="cih-hub-sub">Chuyên gia đầu ngành</div>
         </div>
-        <div class="stat-item__label">Chuyên khoa</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-item__value">
-          <span class="stat-item__number" data-count="320">320</span>
+      </a>
+
+      <a href="chuyen-khoa" class="cih-hub-card cih-hub-card--teal" id="qa-specialty">
+        <div class="cih-hub-icon">🏥</div>
+        <div class="cih-hub-text">
+          <div class="cih-hub-title">Tra cứu chuyên khoa</div>
+          <div class="cih-hub-sub">16 Khoa tiêu chuẩn quốc tế</div>
         </div>
-        <div class="stat-item__label">Giường</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-item__value">
-          <span class="stat-item__number" data-count="550">550</span><sup class="stat-item__unit">+</sup>
+      </a>
+
+      <a href="lien-he#dat-lich" class="cih-hub-card cih-hub-card--gold" id="qa-booking">
+        <div class="cih-hub-icon">📅</div>
+        <div class="cih-hub-text">
+          <div class="cih-hub-title">Đặt lịch khám nhanh</div>
+          <div class="cih-hub-sub">Xác nhận trong 15 phút</div>
         </div>
-        <div class="stat-item__label">Nhân viên y tế</div>
+      </a>
+    </div>
+
+    <form class="cih-hub-search" onsubmit="event.preventDefault(); var q=this.querySelector('input').value.trim(); if(q) window.location.href='bac-si?s='+encodeURIComponent(q); else window.location.href='bac-si';">
+      <div class="cih-hub-search-input-wrap">
+        <span class="cih-hub-search-icon">🔎</span>
+        <input type="text" class="cih-hub-search-input" placeholder="Tìm kiếm triệu chứng, bác sĩ chuyên khoa hoặc gói khám sức khỏe..." />
       </div>
+      <button type="submit" class="cih-hub-search-btn">Tìm Kiếm Nhanh &rarr;</button>
+    </form>
+  </div>
+
+  <!-- FLOATING 4-COLUMN STATS CARD -->
+  <div class="cih-floating-stats" id="stats-card">
+    <div class="cih-stat-box">
+      <div class="cih-stat-num cih-stat-num--orange">16</div>
+      <div class="cih-stat-title">CHUYÊN KHOA</div>
+      <div class="cih-stat-desc">Đa khoa chuyên sâu</div>
+    </div>
+
+    <div class="cih-stat-box">
+      <div class="cih-stat-num cih-stat-num--orange">320</div>
+      <div class="cih-stat-title">GIƯỜNG BỆNH</div>
+      <div class="cih-stat-desc">Tiêu chuẩn khách sạn</div>
+    </div>
+
+    <div class="cih-stat-box">
+      <div class="cih-stat-num"><span class="cih-stat-num--gold">550</span><span class="cih-stat-num--teal">+</span></div>
+      <div class="cih-stat-title">NHÂN VIÊN Y TẾ</div>
+      <div class="cih-stat-desc">Bác sĩ &amp; Điều dưỡng</div>
+    </div>
+
+    <div class="cih-stat-box">
+      <div class="cih-stat-num"><span class="cih-stat-num--teal">100</span><span class="cih-stat-num--gold">%</span></div>
+      <div class="cih-stat-title">CHUẨN AACI HOA KỲ</div>
+      <div class="cih-stat-desc">Kiểm định quốc tế</div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- Section Về Chúng Tôi (Tiên Phong Chăm Sóc Sức Khỏe) hidden as requested -->
 

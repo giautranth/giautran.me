@@ -783,7 +783,7 @@
 <section class="opt1-hero" id="spec-hero">
   <div class="container">
     <div class="opt1-hero__content">
-      <h1 class="opt1-hero__title" id="spec-title">KHOA PHỤ SẢN<br/>BỆNH VIỆN QUỐC TẾ CITY</h1>
+      <h1 class="opt1-hero__title" id="spec-title">KHOA PHỤ SẢN</h1>
       <p class="opt1-hero__desc" id="spec-hero-desc">Đồng hành trọn vẹn cùng mẹ bầu trong suốt thai kỳ với dịch vụ Thai sản trọn gói, kỹ thuật Sinh con không đau, Phòng sinh Gia đình ấm cúng và Tầm soát chuyên sâu bệnh lý Phụ khoa – Tuyến vú.</p>
       <div class="opt1-hero__actions">
         <a href="lien-he.html#dat-lich" class="opt1-btn-gold">📅 ĐẶT LỊCH KHÁM NGAY</a>
@@ -993,7 +993,6 @@
     <div class="section__header" style="margin-bottom: 1.75rem;">
       <div class="section__header-left">
         <h2 class="section__title" id="spec-news-heading" style="margin-bottom: 0;">Tin tức</h2>
-        <p id="spec-news-subtitle" style="font-size: 0.96rem; color: #475569; margin-top: 6px; margin-bottom: 0; font-weight: 500;">Cập nhật thông tin lớp học tiền sản, cẩm nang thai kỳ và kiến thức chăm sóc sức khỏe phụ nữ.</p>
       </div>
     </div>
     <div class="mobile-slider-container">
@@ -1138,7 +1137,7 @@
       const spec = CIH_SPECIALTY_DATA.find(s => s.slug === slug);
       if (spec) {
         document.getElementById('page-head-title').innerText = spec.name + ' | Bệnh viện Quốc tế City';
-        document.getElementById('spec-title').innerHTML = (spec.title || spec.name).toUpperCase() + '<br/>BỆNH VIỆN QUỐC TẾ CITY';
+        document.getElementById('spec-title').innerHTML = (spec.title || spec.name).toUpperCase();
         document.getElementById('spec-breadcrumb-title').innerText = spec.name;
         document.getElementById('spec-intro-heading').innerText = 'Giới thiệu';
         document.getElementById('spec-hero-pkg-btn').innerHTML = 'Xem Gói Dịch Vụ &rarr;';

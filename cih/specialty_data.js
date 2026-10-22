@@ -1,4 +1,4 @@
-﻿const CIH_SPECIALTY_DATA = [
+const CIH_SPECIALTY_DATA = [
   {
     "slug": "khoa-phu-san",
     "name": "Khoa Phụ Sản",
@@ -60,7 +60,7 @@
         "name": "BS.CKII. Nguyễn Bạch Huệ",
         "title": "Trưởng Khoa Nhi & Thầy Thuốc Ưu Tú",
         "degree": "Bác sĩ Chuyên khoa II Nhi Khoa",
-        "img": "images/bac-si/bs-hue.png",
+        "img": "images/bac-si/new/bs-hue.png",
         "exp": "Hơn 30 năm kinh nghiệm điều trị Nhi khoa tổng quát & Hồi sức cấp cứu nhi."
       }
     ],

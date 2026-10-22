@@ -11,7 +11,7 @@
         "name": "BS.CKII. Nguyễn Vũ Mỹ Linh",
         "title": "Trưởng khoa Phụ Sản",
         "degree": "Bác sĩ Chuyên khoa II - Phụ Sản",
-        "img": "images/HÌNH ẢNH/Phụ sản/1784087168303_1272607247884588763_1272607247884588763_bb81c268bd748520eee1d2b2fc2b9040.jpg",
+        "img": "images/bac-si/new/bs-linh.png",
         "exp": "Hơn 25 năm kinh nghiệm quản lý & điều trị Phụ Sản tại các BV lớn."
       },
       {
@@ -37,7 +37,7 @@
     "facilities": [
       {
         "title": "Hệ thống Siêu âm 4D & Chụp Nhũ Ảnh Kỹ Thuật Số",
-        "img": "images/HÌNH ẢNH/Phụ sản/1784087168303_1272607247884588763_1272607247884588763_bb81c268bd748520eee1d2b2fc2b9040.jpg",
+        "img": "images/bac-si/new/bs-linh.png",
         "desc": "Trang thiết bị chẩn đoán hình ảnh thế hệ mới giúp phát hiện sớm ung thư vú và theo dõi dị tật thai nhi."
       },
       {

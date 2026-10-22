@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ============================================================
    CIH – City International Hospital | Design v3.0 (Full Demo)
@@ -660,7 +660,7 @@ ul{list-style:none}
 .footer__contact li{display:flex;align-items:center;gap:.6rem;font-size:.85rem;white-space:nowrap}
 .footer__contact li.footer__contact-address{align-items:center;white-space:nowrap}
 .footer__contact a{color:#fff;transition:color .15s}
-.footer__contact a:hover{color:#fff}
+.footer__contact a:hover{color:#facc15 !important}
 .footer__map{margin-top:0;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.2);box-shadow:0 4px 12px rgba(0,0,0,.15);height:155px;width:100%}
 .footer__map iframe{display:block;width:100%;height:155px;border:none}
 .footer__bottom{border-top:1px solid rgba(255,255,255,.22);padding:.75rem 0 .85rem 0;margin-top:.6rem}

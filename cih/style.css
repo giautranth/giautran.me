@@ -442,14 +442,14 @@ ul{list-style:none}
   box-shadow: 0 4px 12px rgba(0, 59, 92, 0.2);
 }
 
-/* ── NEWS CARD (MATCHING CHUYÊN KHOA LAYOUT & 16:9 IMAGES) ── */
-.news-card,
+/* ── NEWS CARD (FULL-BLEED IMAGE TO GOLD BORDER & JUSTIFIED TITLE) ── */
+.news-card:not(.pkg-home-card),
 .news-card--standard {
   background: #ffffff !important;
   border: 1.5px solid #E2C784 !important;
   border-radius: 18px !important;
-  padding: 12px 12px 18px 12px !important;
-  overflow: hidden;
+  padding: 0 !important;
+  overflow: hidden !important;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -457,29 +457,31 @@ ul{list-style:none}
   box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
 }
 
-.news-card:hover,
+.news-card:not(.pkg-home-card):hover,
 .news-card--standard:hover {
   box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
   transform: translateY(-5px) !important;
   border-color: #ead5a0 !important;
 }
 
-.news-card__img-link,
+.news-card:not(.pkg-home-card) .news-card__img-link,
 .news-card--standard .news-card__img-link {
   width: 100% !important;
   aspect-ratio: 16 / 9 !important;
   height: auto !important;
+  border-radius: 0 !important;
   position: relative !important;
   display: block !important;
   overflow: hidden !important;
 }
 
-.news-card__img-link img,
-.news-card__img,
+.news-card:not(.pkg-home-card) .news-card__img-link img,
+.news-card:not(.pkg-home-card) .news-card__img,
 .news-card--standard .news-card__img {
   width: 100% !important;
   height: 100% !important;
   aspect-ratio: 16 / 9 !important;
+  border-radius: 0 !important;
   object-fit: cover !important;
   object-position: center !important;
   transition: transform 0.4s ease !important;

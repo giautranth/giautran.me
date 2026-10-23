@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1792726000" />
+  <link rel="stylesheet" href="style.css?v=1792729500" />
   <style>
     /* Footer long divider line before Copyright */
     .footer__bottom {
@@ -565,7 +565,8 @@
     #tin-tuc .news-card {
       background: #ffffff !important;
       border-radius: 18px !important;
-      padding: 12px 12px 18px 12px !important;
+      padding: 0 !important;
+      overflow: hidden !important;
       border: 1.5px solid #E2C784 !important;
       box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
       display: flex !important;
@@ -579,8 +580,8 @@
     #tin-tuc .news-card__img-link {
       position: relative;
       width: 100% !important;
-      aspect-ratio: 16 / 10 !important;
-      border-radius: 12px !important;
+      aspect-ratio: 16 / 9 !important;
+      border-radius: 0 !important;
       overflow: hidden !important;
       display: block !important;
     }
@@ -588,10 +589,10 @@
       width: 100% !important;
       height: 100% !important;
       object-fit: cover !important;
-      border-radius: 12px !important;
+      border-radius: 0 !important;
     }
     #tin-tuc .news-card__body {
-      padding: 18px 8px 0 8px !important;
+      padding: 18px 20px 18px 20px !important;
       display: flex !important;
       flex-direction: column !important;
       flex: 1 1 auto !important;
@@ -602,10 +603,15 @@
       line-height: 1.45 !important;
       color: #0f172a !important;
       margin: 0 0 18px 0 !important;
+      text-align: justify !important;
+      text-justify: inter-word !important;
     }
     #tin-tuc .news-card__title a {
       color: #0f172a !important;
       text-decoration: none !important;
+      text-align: justify !important;
+      text-justify: inter-word !important;
+      display: block !important;
     }
     #tin-tuc .news-card__title a:hover {
       color: #007DA5 !important;

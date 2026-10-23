@@ -1089,6 +1089,303 @@
   </div>
 </main>
 
+<!-- ĐỐI TÁC BẢO HIỂM -->
+<section class="section insurance-section" id="doi-tac-bao-hiem">
+
+  <div class="container">
+
+    <div class="section__header" style="margin-bottom: 1.25rem;">
+
+      <h2 class="section__title" style="margin-bottom: 0;">Đối tác bảo hiểm</h2>
+
+    </div>
+
+
+
+    <!-- Insurance 1-Row Carousel Track with Vertically Centered Side Arrow Buttons -->
+
+    <div class="insurance-slider-wrap" style="position: relative; padding: 0.5rem 10px;">
+
+      
+
+      <!-- Left Arrow (Centered vertically on left) -->
+
+      <button class="mobile-arrow mobile-arrow--prev" id="insurance-prev" aria-label="Trước"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+
+      
+
+      <div class="insurance-track" id="insurance-track">
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_baoviet.webp" alt="Bảo hiểm Bảo Việt" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_baominh.webp" alt="Bảo hiểm Bảo Minh" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_liberty.png" alt="Bảo hiểm Liberty" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_dai-chi.webp" alt="Bảo hiểm Dai-ichi Life" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_aia.jpg" alt="Bảo hiểm AIA" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_generali.jpg" alt="Bảo hiểm Generali" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_bao_long.png" alt="Bảo hiểm Bảo Long" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_mic.png" alt="Bảo hiểm MIC" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_pti.png" alt="Bảo hiểm PTI" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_vietinbank.jpg" alt="Bảo hiểm VietinBank (VBI)" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_allianz.webp" alt="Allianz Insurance" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_april.png" alt="April International" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_cigna.png" alt="Cigna Healthcare" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_groupama.png" alt="Groupama Assurance" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_hanwha.png" alt="Hanwha Life" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_henner.png" alt="Henner International" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_hungvuon.jpg" alt="Bảo hiểm Hùng Vương" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_manulife.png" alt="Manulife Vietnam" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_mb_ageas.png" alt="MB Ageas Life" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+        <div class="insurance-card">
+
+          <img src="images/bao-hiem/bh_unitedhealthcare.png" alt="United Healthcare" class="insurance-card__img" loading="lazy" />
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Right Arrow (Centered vertically on right) -->
+
+      <button class="mobile-arrow mobile-arrow--next" id="insurance-next" aria-label="Tiếp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const track = document.getElementById('insurance-track');
+
+  const prevBtn = document.getElementById('insurance-prev');
+
+  const nextBtn = document.getElementById('insurance-next');
+
+
+
+  if (!track) return;
+
+
+
+  // Clone cards once for seamless infinite loop
+
+  const initialCards = Array.from(track.children);
+
+  initialCards.forEach(card => {
+
+    track.appendChild(card.cloneNode(true));
+
+  });
+
+
+
+  let isHovered = false;
+
+  let animId = null;
+
+  const speed = 0.8; // 60fps smooth gliding speed
+
+
+
+  const getHalfWidth = () => track.scrollWidth / 2;
+
+
+
+  function infiniteScrollLoop() {
+
+    if (!isHovered && track) {
+
+      track.scrollLeft += speed;
+
+      const halfWidth = getHalfWidth();
+
+      if (halfWidth > 0 && track.scrollLeft >= halfWidth) {
+
+        track.scrollLeft -= halfWidth;
+
+      }
+
+    }
+
+    animId = requestAnimationFrame(infiniteScrollLoop);
+
+  }
+
+
+
+  animId = requestAnimationFrame(infiniteScrollLoop);
+
+
+
+  track.addEventListener('mouseenter', () => { isHovered = true; });
+
+  track.addEventListener('mouseleave', () => { isHovered = false; });
+
+
+
+  const getCardStep = () => {
+
+    const card = track.querySelector('.insurance-card');
+
+    return card ? card.offsetWidth + 20 : 180;
+
+  };
+
+
+
+  if (nextBtn) {
+
+    nextBtn.addEventListener('click', () => {
+
+      isHovered = true;
+
+      const halfWidth = getHalfWidth();
+
+      if (halfWidth > 0 && track.scrollLeft >= halfWidth - getCardStep()) {
+
+        track.scrollLeft -= halfWidth;
+
+      }
+
+      track.scrollBy({ left: getCardStep(), behavior: 'smooth' });
+
+      setTimeout(() => { isHovered = false; }, 2000);
+
+    });
+
+  }
+
+
+
+  if (prevBtn) {
+
+    prevBtn.addEventListener('click', () => {
+
+      isHovered = true;
+
+      const halfWidth = getHalfWidth();
+
+      if (halfWidth > 0 && track.scrollLeft <= 5) {
+
+        track.scrollLeft += halfWidth;
+
+      }
+
+      track.scrollBy({ left: -getCardStep(), behavior: 'smooth' });
+
+      setTimeout(() => { isHovered = false; }, 2000);
+
+    });
+
+  }
+
+});
+
+</script>
+
 <!-- FOOTER -->
 <footer class="footer" id="lien-he">
   <div class="footer__main">

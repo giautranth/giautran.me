@@ -446,7 +446,7 @@
 
       function getPackageSpecialty(pkg) {
         const t = ((pkg.title || '') + ' ' + (pkg.category || '') + ' ' + (pkg.excerpt || '')).toLowerCase();
-        if (t.includes('thai sản') || t.includes('sinh ') || t.includes('khám thai') || t.includes('mang thai') || t.includes('sinh sản') || t.includes('cát tường') || t.includes('như ý') || t.includes('yêu thương')) {
+        if (t.includes('thai sản') || t.includes('sinh ') || t.includes('khám thai') || t.includes('mang thai') || t.includes('sinh sản') || t.includes('cát tường') || t.includes('như ý') || t.includes('hoa khai phú quý') || t.includes('khởi nguyên hưng thịnh')) {
           return 'phu-san';
         }
         if (t.includes('tiêm chủng') || t.includes('trẻ em') || t.includes('nhi')) {
@@ -503,7 +503,7 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-        fetch('real_45_packages.json')
+        fetch('real_45_packages.json?v=20261023')
           .then(res => res.json())
           .then(data => {
             window.allPackages = data;

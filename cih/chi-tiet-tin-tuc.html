@@ -360,7 +360,7 @@
     const params = new URLSearchParams(window.location.search);
     const artId = parseInt(params.get('id')) || 9;
 
-    fetch('real_45_packages.json')
+    fetch('real_45_packages.json?v=20261023')
       .then(res => res.json())
       .then(packagesData => {
         const foundPackage = packagesData.find(p => p.id === artId);

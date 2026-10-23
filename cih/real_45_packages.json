@@ -314,32 +314,62 @@
     ]
   },
   {
-    "id": 25488,
-    "title": "Gói sinh Yêu Thương",
-    "slug": "goi-sinh-yeu-thuong",
-    "link": "https://cih.com.vn/goi-kham/goi-sinh-yeu-thuong/",
+    "id": 47390,
+    "title": "Gói sinh Hoa Khai Phú Quý",
+    "slug": "goi-sinh-hoa-khai-phu-quy",
+    "link": "https://cih.com.vn/goi-kham/goi-sinh-hoa-khai-phu-quy/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
-    "image": "https://cih.com.vn/wp-content/uploads/2025/03/goi-sinh-yeu-thuong.webp",
-    "price": "Liên hệ báo giá",
+    "image": "https://cih.com.vn/wp-content/uploads/2026/10/goi-sinh-hoa-khai-phu-quy-1024x576.webp",
+    "price": "29.990.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói sinh Yêu Thương tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói sinh Hoa Khai Phú Quý tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Gói sinh thường — Giá: 29.900.000 đ"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Gói sinh mổ đơn thai lần đầu — Giá: 40.100.000 đ"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 1 — Giá: 47.230.000 đ"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 2,3 — Giá: 53.050.000 đ"
+      }
+    ]
+  },
+  {
+    "id": 47389,
+    "title": "Gói sinh Khởi Nguyên Hưng Thịnh",
+    "slug": "goi-sinh-khoi-nguyen-hung-thinh",
+    "link": "https://cih.com.vn/goi-kham/goi-sinh-khoi-nguyen-hung-thinh/",
+    "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
+    "image": "https://cih.com.vn/wp-content/uploads/2026/10/khoi-nguyen-hung-thinh-1024x576.webp",
+    "price": "29.990.000 đ",
+    "category": "Gói thai sản & Sinh sản",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói sinh Khởi Nguyên Hưng Thịnh tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "table": [
+      {
+        "stt": "1",
+        "item": "Gói sinh thường — Giá: 29.900.000 đ"
+      },
+      {
+        "stt": "2",
+        "item": "Gói sinh mổ đơn thai lần đầu — Giá: 43.100.000 đ"
+      },
+      {
+        "stt": "3",
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 1 — Giá: 50.400.000 đ"
+      },
+      {
+        "stt": "4",
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 2,3 — Giá: 56.050.000 đ"
       }
     ]
   },
@@ -380,26 +410,74 @@
     "link": "https://cih.com.vn/goi-kham/goi-thai-san-cat-tuong/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/12/goi-thai-san-kham-thai-sinh-cat-tuong.webp",
-    "price": "Liên hệ báo giá",
+    "price": "54.150.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói thai sản Cát Tường (khám thai + sinh) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói thai sản Cát Tường (khám thai + sinh) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Trọn gói sinh thường (Tuần 7-40) — Giá: 54.150.000 đ"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Trọn gói sinh thường (Tuần 13-40) — Giá: 46.550.000 đ"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Trọn gói sinh thường (Tuần 28-40) — Giá: 42.650.000 đ"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Trọn gói sinh thường (Tuần 36-40) — Giá: 38.350.000 đ"
+      },
+      {
+        "stt": "5",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 7-40) — Giá: 64.030.000 đ"
+      },
+      {
+        "stt": "6",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 13-40) — Giá: 56.430.000 đ"
+      },
+      {
+        "stt": "7",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 28-40) — Giá: 52.530.000 đ"
+      },
+      {
+        "stt": "8",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 36-40) — Giá: 48.230.000 đ"
+      },
+      {
+        "stt": "9",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 7-40) — Giá: 69.740.000 đ"
+      },
+      {
+        "stt": "10",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 13-40) — Giá: 62.140.000 đ"
+      },
+      {
+        "stt": "11",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 28-40) — Giá: 58.240.000 đ"
+      },
+      {
+        "stt": "12",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 36-40) — Giá: 53.940.000 đ"
+      },
+      {
+        "stt": "13",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 7-40) — Giá: 76.260.000 đ"
+      },
+      {
+        "stt": "14",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 13-40) — Giá: 68.660.000 đ"
+      },
+      {
+        "stt": "15",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 28-40) — Giá: 64.760.000 đ"
+      },
+      {
+        "stt": "16",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 36-40) — Giá: 60.460.000 đ"
       }
     ]
   },
@@ -410,26 +488,74 @@
     "link": "https://cih.com.vn/goi-kham/goi-thai-san-nhu-y/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/33.png",
-    "price": "Liên hệ báo giá",
+    "price": "48.200.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói thai sản Như Ý (khám thai + sinh) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói thai sản Như Ý (khám thai + sinh) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Trọn gói sinh thường (Tuần 7-40) — Giá: 48.200.000 đ"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Trọn gói sinh thường (Tuần 13-40) — Giá: 40.600.000 đ"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Trọn gói sinh thường (Tuần 28-40) — Giá: 36.700.000 đ"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Trọn gói sinh thường (Tuần 36-40) — Giá: 32.400.000 đ"
+      },
+      {
+        "stt": "5",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 7-40) — Giá: 58.280.000 đ"
+      },
+      {
+        "stt": "6",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 13-40) — Giá: 50.680.000 đ"
+      },
+      {
+        "stt": "7",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 28-40) — Giá: 46.780.000 đ"
+      },
+      {
+        "stt": "8",
+        "item": "Trọn gói sinh mổ đơn thai lần đầu (Tuần 36-40) — Giá: 42.480.000 đ"
+      },
+      {
+        "stt": "9",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 7-40) — Giá: 62.840.000 đ"
+      },
+      {
+        "stt": "10",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 13-40) — Giá: 55.240.000 đ"
+      },
+      {
+        "stt": "11",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 28-40) — Giá: 51.340.000 đ"
+      },
+      {
+        "stt": "12",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 1 (Tuần 36-40) — Giá: 47.040.000 đ"
+      },
+      {
+        "stt": "13",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 7-40) — Giá: 67.760.000 đ"
+      },
+      {
+        "stt": "14",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 13-40) — Giá: 60.160.000 đ"
+      },
+      {
+        "stt": "15",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 28-40) — Giá: 56.260.000 đ"
+      },
+      {
+        "stt": "16",
+        "item": "Trọn gói sinh mổ đơn thai có vết mổ lần 2,3 (Tuần 36-40) — Giá: 51.960.000 đ"
       }
     ]
   },
@@ -620,26 +746,26 @@
     "link": "https://cih.com.vn/goi-kham/goi-sinh-cat-tuong/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/goi-sinh-cat-tuong.webp",
-    "price": "Liên hệ báo giá",
+    "price": "39.500.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói sinh Cát tường tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói sinh Cát tường tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Gói sinh thường — Giá: 39.500.000 đ"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Gói sinh mổ đơn thai lần đầu — Giá: 54.350.000 đ"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 1 — Giá: 59.750.000 đ"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 2,3 — Giá: 63.350.000 đ"
       }
     ]
   },
@@ -650,26 +776,26 @@
     "link": "https://cih.com.vn/goi-kham/goi-sinh-nhu-y/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/goi-sinh-nhu-y.webp",
-    "price": "Liên hệ báo giá",
+    "price": "25.100.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói sinh Như ý tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói sinh Như ý tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Gói sinh thường — Giá: 25.100.000 đ"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Gói sinh mổ đơn thai lần đầu — Giá: 36.180.000 đ"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 1 — Giá: 41.040.000 đ"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Gói sinh mổ đơn thai có vết mổ lần 2,3 — Giá: 46.360.000 đ"
       }
     ]
   },
@@ -680,26 +806,106 @@
     "link": "https://cih.com.vn/goi-kham/goi-kham-thai-tuan-36-40/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/goi-kham-thai-tuan-36-40.webp",
-    "price": "Liên hệ báo giá",
+    "price": "9.100.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám thai (tuần 36-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói khám thai (tuần 36-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Điện tâm đồ (Electrocardiogram) (1 lần)"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Siêu âm tim (Echocardiogram) (1 lần)"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Khám chuyên khoa – Sản Khoa (5 lần)"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Khám tiền mê (4 lần)"
+      },
+      {
+        "stt": "5",
+        "item": "Creatinine, máu (1 lần)"
+      },
+      {
+        "stt": "6",
+        "item": "BUN (1 lần)"
+      },
+      {
+        "stt": "7",
+        "item": "ALT (Alanine aminotransferase) (1 lần)"
+      },
+      {
+        "stt": "8",
+        "item": "AST (Aspartate aminotransferase) (1 lần)"
+      },
+      {
+        "stt": "9",
+        "item": "Glucose-máu đói (1 lần)"
+      },
+      {
+        "stt": "10",
+        "item": "Tổng phân tích tế bào máu bằng máy đếm laser (1 lần)"
+      },
+      {
+        "stt": "11",
+        "item": "Fibrinogen (1 lần)"
+      },
+      {
+        "stt": "12",
+        "item": "PT/INR (1 lần)"
+      },
+      {
+        "stt": "13",
+        "item": "APTT (1 lần)"
+      },
+      {
+        "stt": "14",
+        "item": "HBs Ag (ELISA) (1 lần)"
+      },
+      {
+        "stt": "15",
+        "item": "Sàng lọc kháng thể kháng HIV-1/2 (1 lần)"
+      },
+      {
+        "stt": "16",
+        "item": "VDRL, chẩn đoán giang mai (test nhanh) (1 lần)"
+      },
+      {
+        "stt": "17",
+        "item": "Nước tiểu 10 thông số /Urinalysis (10 analytes) (5 lần)"
+      },
+      {
+        "stt": "18",
+        "item": "Uric acid, máu (1 lần)"
+      },
+      {
+        "stt": "19",
+        "item": "Đo tim thai, cơn gò (5 lần)"
+      },
+      {
+        "stt": "20",
+        "item": "Siêu âm Sản Khoa 3 tháng giữa ngả bụng (màu) (5 lần)"
+      },
+      {
+        "stt": "21",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (trắng đen) (1 lần)"
+      },
+      {
+        "stt": "22",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (màu) (1 lần)"
+      },
+      {
+        "stt": "23",
+        "item": "Siêu âm thai (1 lần)"
+      },
+      {
+        "stt": "24",
+        "item": "Giá — Giá: 9.100.000 đ"
       }
     ]
   },
@@ -710,26 +916,106 @@
     "link": "https://cih.com.vn/goi-kham/goi-kham-thai-tuan-28-40/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/4-1.png",
-    "price": "Liên hệ báo giá",
+    "price": "13.400.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám thai (tuần 28-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói khám thai (tuần 28-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Điện tâm đồ (Electrocardiogram) (1 lần)"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Siêu âm tim (Echocardiogram) (1 lần)"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Khám chuyên khoa – Sản Khoa (9 lần)"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Khám tiền mê (4 lần)"
+      },
+      {
+        "stt": "5",
+        "item": "Creatinine, máu (1 lần)"
+      },
+      {
+        "stt": "6",
+        "item": "BUN (1 lần)"
+      },
+      {
+        "stt": "7",
+        "item": "ALT (Alanine aminotransferase) (1 lần)"
+      },
+      {
+        "stt": "8",
+        "item": "AST (Aspartate aminotransferase) (1 lần)"
+      },
+      {
+        "stt": "9",
+        "item": "Glucose-máu đói (1 lần)"
+      },
+      {
+        "stt": "10",
+        "item": "Tổng phân tích tế bào máu bằng máy đếm laser (1 lần)"
+      },
+      {
+        "stt": "11",
+        "item": "Fibrinogen (1 lần)"
+      },
+      {
+        "stt": "12",
+        "item": "PT/INR (1 lần)"
+      },
+      {
+        "stt": "13",
+        "item": "APTT (1 lần)"
+      },
+      {
+        "stt": "14",
+        "item": "HBs Ag (ELISA) (1 lần)"
+      },
+      {
+        "stt": "15",
+        "item": "Sàng lọc kháng thể kháng HIV-1/2 (1 lần)"
+      },
+      {
+        "stt": "16",
+        "item": "VDRL, chẩn đoán giang mai (test nhanh) (1 lần)"
+      },
+      {
+        "stt": "17",
+        "item": "Nước tiểu 10 thông số /Urinalysis (10 analytes) (7 lần)"
+      },
+      {
+        "stt": "18",
+        "item": "Uric acid, máu (1 lần)"
+      },
+      {
+        "stt": "19",
+        "item": "Đo tim thai, cơn gò (7 lần)"
+      },
+      {
+        "stt": "20",
+        "item": "Siêu âm Sản Khoa 3 tháng giữa ngả bụng (màu) (5 lần)"
+      },
+      {
+        "stt": "21",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (trắng đen) (1 lần)"
+      },
+      {
+        "stt": "22",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (màu) (1 lần)"
+      },
+      {
+        "stt": "23",
+        "item": "Siêu âm thai (1 lần)"
+      },
+      {
+        "stt": "24",
+        "item": "Giá — Giá: 13.400.000 đ"
       }
     ]
   },
@@ -740,26 +1026,118 @@
     "link": "https://cih.com.vn/goi-kham/goi-kham-thai-tuan-13-40/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/3-4.png",
-    "price": "Liên hệ báo giá",
+    "price": "17.300.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám thai (tuần 13-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói khám thai (tuần 13-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Điện tâm đồ (Electrocardiogram) (1 lần)"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Siêu âm tim (Echocardiogram) (1 lần)"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Khám chuyên khoa – Sản Khoa (11 lần)"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Khám tiền mê (1 lần)"
+      },
+      {
+        "stt": "5",
+        "item": "Creatinine, máu (1 lần)"
+      },
+      {
+        "stt": "6",
+        "item": "BUN (1 lần)"
+      },
+      {
+        "stt": "7",
+        "item": "ALT (Alanine aminotransferase) (1 lần)"
+      },
+      {
+        "stt": "8",
+        "item": "AST (Aspartate aminotransferase) (1 lần)"
+      },
+      {
+        "stt": "9",
+        "item": "Glucose-máu đói (1 lần)"
+      },
+      {
+        "stt": "10",
+        "item": "Test dung nạp glucose_Thai phụ (1 lần)"
+      },
+      {
+        "stt": "11",
+        "item": "Tổng phân tích tế bào máu bằng máy đếm laser (1 lần)"
+      },
+      {
+        "stt": "12",
+        "item": "Fibrinogen (1 lần)"
+      },
+      {
+        "stt": "13",
+        "item": "PT/INR (1 lần)"
+      },
+      {
+        "stt": "14",
+        "item": "APTT (1 lần)"
+      },
+      {
+        "stt": "15",
+        "item": "HBs Ag (ELISA) (1 lần)"
+      },
+      {
+        "stt": "16",
+        "item": "Sàng lọc kháng thể kháng HIV-1/2 (1 lần)"
+      },
+      {
+        "stt": "17",
+        "item": "VDRL, chẩn đoán giang mai (test nhanh) (1 lần)"
+      },
+      {
+        "stt": "18",
+        "item": "Nước tiểu 10 thông số /Urinalysis (10 analytes) (9 lần)"
+      },
+      {
+        "stt": "19",
+        "item": "Uric acid, máu (1 lần)"
+      },
+      {
+        "stt": "20",
+        "item": "Đo tim thai, cơn gò (7 lần)"
+      },
+      {
+        "stt": "21",
+        "item": "Siêu âm Sản Khoa 3 tháng giữa ngả bụng (trắng đen) (2 lần)"
+      },
+      {
+        "stt": "22",
+        "item": "Siêu âm Soft marker (1 lần)"
+      },
+      {
+        "stt": "23",
+        "item": "Siêu âm Sản Khoa 3 tháng giữa ngả bụng (màu) (8 lần)"
+      },
+      {
+        "stt": "24",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (trắng đen) (1 lần)"
+      },
+      {
+        "stt": "25",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (màu) (1 lần)"
+      },
+      {
+        "stt": "26",
+        "item": "Siêu âm thai (1 lần)"
+      },
+      {
+        "stt": "27",
+        "item": "Giá — Giá: 17.300.000 đ"
       }
     ]
   },
@@ -1206,26 +1584,138 @@
     "link": "https://cih.com.vn/goi-kham/goi-kham-truoc-mang-thai/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/12-1.png",
-    "price": "Liên hệ báo giá",
+    "price": "5.894.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám trước mang thai tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói khám trước mang thai tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Khám chuyên khoa – lần đầu – Phụ Khoa – Ngạch 4"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Khám chuyên khoa – Khoa tiết niệu – Ngạch 4"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Tổng phân tích tế bào máu bằng máy đếm laser"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Nhóm máu ABO lần 1(PP Gel card)"
+      },
+      {
+        "stt": "5",
+        "item": "Phí lấy máu – OP"
+      },
+      {
+        "stt": "6",
+        "item": "Glucose-máu đói"
+      },
+      {
+        "stt": "7",
+        "item": "HbA1C"
+      },
+      {
+        "stt": "8",
+        "item": "BUN,máu"
+      },
+      {
+        "stt": "9",
+        "item": "Creatinine, máu"
+      },
+      {
+        "stt": "10",
+        "item": "AST (Aspartate aminotransferase)"
+      },
+      {
+        "stt": "11",
+        "item": "ALT (Alanine aminotransferase)"
+      },
+      {
+        "stt": "12",
+        "item": "GGT (Gamma Glutamyl transferase)"
+      },
+      {
+        "stt": "13",
+        "item": "Nước tiểu 10 thông số (máy)"
+      },
+      {
+        "stt": "14",
+        "item": "Cholesterol Total"
+      },
+      {
+        "stt": "15",
+        "item": "HDL-Cholesterol"
+      },
+      {
+        "stt": "16",
+        "item": "LDL-Cholesterol"
+      },
+      {
+        "stt": "17",
+        "item": "Triglyceride"
+      },
+      {
+        "stt": "18",
+        "item": "HBs Ab (EIA)"
+      },
+      {
+        "stt": "19",
+        "item": "HBs Ag (EIA)"
+      },
+      {
+        "stt": "20",
+        "item": "HBc Ab toàn phần"
+      },
+      {
+        "stt": "21",
+        "item": "HCV, AB (EIA)"
+      },
+      {
+        "stt": "22",
+        "item": "Sàng lọc kháng thể kháng HIV-1/2"
+      },
+      {
+        "stt": "23",
+        "item": "HSV 1,2 IgM (ELISA)"
+      },
+      {
+        "stt": "24",
+        "item": "Chẩn đoán giang mai bằng KT RPR"
+      },
+      {
+        "stt": "25",
+        "item": "Tinh dịch đồ/Tinh trùng đồ"
+      },
+      {
+        "stt": "26",
+        "item": "Rubella IgG (EIA)"
+      },
+      {
+        "stt": "27",
+        "item": "Rubella IgM (EIA)"
+      },
+      {
+        "stt": "28",
+        "item": "Siêu âm Bụng"
+      },
+      {
+        "stt": "29",
+        "item": "Siêu âm Bìu"
+      },
+      {
+        "stt": "30",
+        "item": "Siêu âm Phụ khoa ngả âm đạo"
+      },
+      {
+        "stt": "31",
+        "item": "HPV định type,PCR-ELSA"
+      },
+      {
+        "stt": "32",
+        "item": "Pap’s smear-Thin prep"
       }
     ]
   },
@@ -1330,26 +1820,186 @@
     "link": "https://cih.com.vn/goi-kham/goi-kham-thai-7-40/",
     "excerpt": "<p>Giá có thể được điều chỉnh theo thực tế.</p>\n",
     "image": "https://cih.com.vn/wp-content/uploads/2024/10/6-2.png",
-    "price": "Liên hệ báo giá",
+    "price": "24.900.000 đ",
     "category": "Gói thai sản & Sinh sản",
-    "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám thai (tuần 7-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
+    "intro": "Dịch vụ Gói khám thai (tuần 7-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
     "table": [
       {
         "stt": "1",
-        "item": "Khám Chuyên khoa & Tư vấn bác sĩ chính"
+        "item": "Điện tâm đồ (Electrocardiogram) (2 lần)"
       },
       {
         "stt": "2",
-        "item": "Xét nghiệm kiểm tra các chỉ số sinh hóa máu cơ bản"
+        "item": "Siêu âm tim (Echocardiogram) (1 lần)"
       },
       {
         "stt": "3",
-        "item": "Chẩn đoán hình ảnh & Chẩn đoán chức năng liên quan"
+        "item": "Khám chuyên khoa – Sản Khoa (13 lần)"
       },
       {
         "stt": "4",
-        "item": "Đánh giá kết quả & Lập hồ sơ theo dõi sức khỏe"
+        "item": "Khám tiền mê (1 lần)"
+      },
+      {
+        "stt": "5",
+        "item": "Creatinine, máu (2 lần)"
+      },
+      {
+        "stt": "6",
+        "item": "BUN (2 lần)"
+      },
+      {
+        "stt": "7",
+        "item": "ALT (Alanine aminotransferase) (2 lần)"
+      },
+      {
+        "stt": "8",
+        "item": "AST (Aspartate aminotransferase) (2 lần)"
+      },
+      {
+        "stt": "9",
+        "item": "Glucose-máu đói (2 lần)"
+      },
+      {
+        "stt": "10",
+        "item": "Test dung nạp glucose_Thai phụ (1 lần)"
+      },
+      {
+        "stt": "11",
+        "item": "Nhóm máu ABO, Rh; lần 1 (PP Gel card) (1 lần)"
+      },
+      {
+        "stt": "12",
+        "item": "Tổng phân tích tế bào máu bằng máy đếm laser (2 lần)"
+      },
+      {
+        "stt": "13",
+        "item": "Fibrinogen (2 lần)"
+      },
+      {
+        "stt": "14",
+        "item": "PT/INR (2 lần)"
+      },
+      {
+        "stt": "15",
+        "item": "APTT (2 lần)"
+      },
+      {
+        "stt": "16",
+        "item": "CMV IgG (ELISA) (1 lần)"
+      },
+      {
+        "stt": "17",
+        "item": "CMV IgM (ELISA) (1 lần)"
+      },
+      {
+        "stt": "18",
+        "item": "HBs Ag (ELISA) (2 lần)"
+      },
+      {
+        "stt": "19",
+        "item": "FT3 (1 lần)"
+      },
+      {
+        "stt": "20",
+        "item": "FT4 (1 lần)"
+      },
+      {
+        "stt": "21",
+        "item": "TSH (1 lần)"
+      },
+      {
+        "stt": "22",
+        "item": "Sàng lọc kháng thể kháng HIV-1/2 (2 lần)"
+      },
+      {
+        "stt": "23",
+        "item": "Rubella IgG (ELISA) (1 lần)"
+      },
+      {
+        "stt": "24",
+        "item": "Rubella IgM (ELISA) (1 lần)"
+      },
+      {
+        "stt": "25",
+        "item": "VDRL, chẩn đoán giang mai (test nhanh) (2 lần)"
+      },
+      {
+        "stt": "26",
+        "item": "Toxoplasma gondii IgG, EIA (1 lần)"
+      },
+      {
+        "stt": "27",
+        "item": "Toxoplasma gondii IgM EIA (1 lần)"
+      },
+      {
+        "stt": "28",
+        "item": "Nước tiểu 10 thông số /Urinalysis (10 analytes) (12 lần)"
+      },
+      {
+        "stt": "29",
+        "item": "Uric acid, máu (2 lần)"
+      },
+      {
+        "stt": "30",
+        "item": "Albumin (1 lần)"
+      },
+      {
+        "stt": "31",
+        "item": "Protein, toàn phần, máu (1 lần)"
+      },
+      {
+        "stt": "32",
+        "item": "Sắt, huyết thanh (1 lần)"
+      },
+      {
+        "stt": "33",
+        "item": "Ferritine (1 lần)"
+      },
+      {
+        "stt": "34",
+        "item": "Đo tim thai, cơn gò (7 lần)"
+      },
+      {
+        "stt": "35",
+        "item": "Siêu âm Sản Khoa 3 tháng đầu ngả âm đạo (trắng đen) (2 lần)"
+      },
+      {
+        "stt": "36",
+        "item": "Siêu âm đo độ mờ da gáy (trắng đen) (1 lần)"
+      },
+      {
+        "stt": "37",
+        "item": "Siêu âm Sản Khoa 3 tháng đầu ngả bụng (3D/4D) (1 lần)"
+      },
+      {
+        "stt": "38",
+        "item": "Siêu âm Sản Khoa 3 tháng giữa ngả bụng (trắng đen) (2 lần)"
+      },
+      {
+        "stt": "39",
+        "item": "Siêu âm Soft marker (1 lần)"
+      },
+      {
+        "stt": "40",
+        "item": "Siêu âm Sản Khoa 3 tháng giữa ngả bụng (màu) (8 lần)"
+      },
+      {
+        "stt": "41",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (trắng đen) (1 lần)"
+      },
+      {
+        "stt": "42",
+        "item": "Siêu âm Sản Khoa 3 tháng cuối ngả bụng (màu) (1 lần)"
+      },
+      {
+        "stt": "43",
+        "item": "Siêu âm thai (1 lần)"
+      },
+      {
+        "stt": "44",
+        "item": "Giá — Giá: 24.900.000 đ"
       }
     ]
   },

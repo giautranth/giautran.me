@@ -3228,3 +3228,26 @@ body {
 .news-card__more {
   margin-top: auto !important;
 }
+
+/* ── TIGHTEN SPACING BEFORE INSURANCE PARTNERS ACROSS ALL PAGES ── */
+main.subpage-content {
+  padding-bottom: 1rem !important;
+}
+.subpage-card:last-child,
+.apply-form-card:last-child {
+  margin-bottom: 0 !important;
+}
+.pagination-bar,
+.doctor-pagination,
+#doctor-pagination,
+#specialties-pagination,
+#pkg-pagination,
+#news-pagination {
+  margin-top: 1.75rem !important;
+  margin-bottom: 0 !important;
+}
+#doi-tac-bao-hiem,
+section#doi-tac-bao-hiem.section.insurance-section {
+  padding-top: 1.25rem !important;
+  padding-bottom: 2.25rem !important;
+}

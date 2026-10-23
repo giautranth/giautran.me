@@ -358,10 +358,15 @@
 
     /* 3.5. CHƯƠNG TRÌNH KHÁM & ĐIỀU TRỊ (MẪU 2: 6 Ô VUÔNG 1:1 TRÀN ẢNH + TIÊU ĐỀ NỔI CHÂN ẢNH MÀU VÀNG) */
     #chuong-trinh-kham.programs-section {
+      position: relative;
+      overflow: hidden;
       padding: 3.5rem 0 4rem !important;
-      background: linear-gradient(180deg, #ffffff 0%, #fdfbf5 50%, #ffffff 100%);
-      border-top: 1px solid #f5eedc;
+      background: linear-gradient(rgb(253, 249, 238) 0%, rgb(250, 240, 215) 50%, rgb(253, 249, 238) 100%) !important;
       scroll-margin-top: 120px;
+    }
+    #chuong-trinh-kham > .container {
+      position: relative;
+      z-index: 2;
     }
     .spec-prog-grid {
       display: grid;
@@ -556,22 +561,22 @@
     #bac-si.doctors-section {
       position: relative;
       overflow: hidden;
-      background: linear-gradient(rgb(253, 249, 238) 0%, rgb(250, 240, 215) 50%, rgb(253, 249, 238) 100%) !important;
+      background: #ffffff !important;
       padding: 3.5rem 0 3.75rem !important;
       scroll-margin-top: 120px;
     }
-    #bac-si .doc-waves-backdrop {
+    .doc-waves-backdrop {
       position: absolute;
       inset: 0;
       pointer-events: none;
       z-index: 0;
     }
-    #bac-si .doc-waves-backdrop-grad {
+    .doc-waves-backdrop-grad {
       position: absolute;
       inset: 0;
       background: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(254, 243, 199, 0.45) 50%, rgba(253, 248, 235, 0.7) 100%);
     }
-    #bac-si .doc-waves-backdrop svg {
+    .doc-waves-backdrop svg {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%; opacity: 0.6;
     }
@@ -673,9 +678,15 @@
 
     /* 5. PACKAGES SECTION (3-COLUMN HOMEPAGE SYNCHRONIZED) */
     #goi-kham.packages-section {
+      position: relative;
+      overflow: hidden;
       padding: 3.5rem 0 3.75rem !important;
-      background: #ffffff;
+      background: linear-gradient(rgb(253, 249, 238) 0%, rgb(250, 240, 215) 50%, rgb(253, 249, 238) 100%) !important;
       scroll-margin-top: 120px;
+    }
+    #goi-kham > .container {
+      position: relative;
+      z-index: 2;
     }
 
     #goi-kham .pkg-home-card {
@@ -1088,6 +1099,25 @@
      2.5. CHƯƠNG TRÌNH KHÁM & ĐIỀU TRỊ (6 Ô HÌNH VUÔNG + POPUP)
 ═══════════════════════════════════════════════ -->
 <section class="section programs-section" id="chuong-trinh-kham">
+  <div class="doc-waves-backdrop" aria-hidden="true">
+    <div class="doc-waves-backdrop-grad"></div>
+    <svg fill="none" preserveAspectRatio="none" viewBox="0 0 1440 600">
+      <path d="M-100,100 C300,300 600,-50 1000,180 C1250,320 1400,200 1550,220 L1550,600 L-100,600 Z" fill="url(#doc-wave-teal)"></path>
+      <path d="M-50,250 C250,50 650,380 1100,120 C1300,-10 1450,160 1550,180 L1550,600 L-50,600 Z" fill="url(#doc-wave-gold)" opacity="0.45"></path>
+      <defs>
+        <linearGradient id="doc-wave-teal" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.4"></stop>
+          <stop offset="50%" stop-color="#E5C07B" stop-opacity="0.22"></stop>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"></stop>
+        </linearGradient>
+        <linearGradient id="doc-wave-gold" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#E5C07B" stop-opacity="0.35"></stop>
+          <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.18"></stop>
+          <stop offset="100%" stop-color="#FDF8EB" stop-opacity="0.6"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
   <div class="container">
     <div class="section__header" style="margin-bottom: 1.5rem;">
       <div class="section__header-left">
@@ -1280,25 +1310,6 @@
      3. BÁC SĨ (BỐ CỤC NGANG 3 NHƯ TRANG CHỦ)
 ═══════════════════════════════════════════════ -->
 <section class="section doctors-section" id="bac-si">
-  <div class="doc-waves-backdrop" aria-hidden="true">
-    <div class="doc-waves-backdrop-grad"></div>
-    <svg fill="none" preserveAspectRatio="none" viewBox="0 0 1440 600">
-      <path d="M-100,100 C300,300 600,-50 1000,180 C1250,320 1400,200 1550,220 L1550,600 L-100,600 Z" fill="url(#doc-wave-teal)"></path>
-      <path d="M-50,250 C250,50 650,380 1100,120 C1300,-10 1450,160 1550,180 L1550,600 L-50,600 Z" fill="url(#doc-wave-gold)" opacity="0.45"></path>
-      <defs>
-        <linearGradient id="doc-wave-teal" x1="0%" x2="100%" y1="0%" y2="100%">
-          <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.4"></stop>
-          <stop offset="50%" stop-color="#E5C07B" stop-opacity="0.22"></stop>
-          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"></stop>
-        </linearGradient>
-        <linearGradient id="doc-wave-gold" x1="0%" x2="100%" y1="0%" y2="100%">
-          <stop offset="0%" stop-color="#E5C07B" stop-opacity="0.35"></stop>
-          <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.18"></stop>
-          <stop offset="100%" stop-color="#FDF8EB" stop-opacity="0.6"></stop>
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
   <div class="container">
     <div class="section__header">
       <div class="section__header-left">
@@ -1377,6 +1388,25 @@
      4. GÓI DỊCH VỤ (BỐ CỤC NGANG 3 NHƯ TRANG CHỦ)
 ═══════════════════════════════════════════════ -->
 <section class="section packages-section" id="goi-kham">
+  <div class="doc-waves-backdrop" aria-hidden="true">
+    <div class="doc-waves-backdrop-grad"></div>
+    <svg fill="none" preserveAspectRatio="none" viewBox="0 0 1440 600">
+      <path d="M-100,100 C300,300 600,-50 1000,180 C1250,320 1400,200 1550,220 L1550,600 L-100,600 Z" fill="url(#pkg-wave-teal)"></path>
+      <path d="M-50,250 C250,50 650,380 1100,120 C1300,-10 1450,160 1550,180 L1550,600 L-50,600 Z" fill="url(#pkg-wave-gold)" opacity="0.45"></path>
+      <defs>
+        <linearGradient id="pkg-wave-teal" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.4"></stop>
+          <stop offset="50%" stop-color="#E5C07B" stop-opacity="0.22"></stop>
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.9"></stop>
+        </linearGradient>
+        <linearGradient id="pkg-wave-gold" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#E5C07B" stop-opacity="0.35"></stop>
+          <stop offset="60%" stop-color="#D4AF37" stop-opacity="0.18"></stop>
+          <stop offset="100%" stop-color="#FDF8EB" stop-opacity="0.6"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
   <div class="container">
     <div class="section__header" style="margin-bottom: 1.75rem;">
       <div class="section__header-left">

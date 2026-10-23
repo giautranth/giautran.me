@@ -1479,8 +1479,8 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 }
 
 .award-card:hover .award-card__logo-wrap {
-  background: linear-gradient(135deg, rgba(238, 246, 250, 0.85) 0%, rgba(255, 255, 255, 0.95) 100%);
-  box-shadow: 0 6px 16px rgba(0, 125, 165, 0.12);
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .award-card__img {
@@ -1504,7 +1504,7 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 
 .award-card:hover .award-card__img {
   transform: scale(1.12) translateY(-4px);
-  filter: drop-shadow(0 8px 16px rgba(0, 125, 165, 0.35)) !important;
+  filter: none !important;
   animation: none;
 }
 

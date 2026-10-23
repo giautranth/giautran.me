@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KHCWLLSR');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8EYRNLCSN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y8EYRNLCSN');
+  </script>
   <meta charset="UTF-8">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -8,12 +25,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookie-Einstellungen | Vegan Garden Berlin</title>
   <meta name="description" content="Cookie-Einstellungen und Datenschutz-Präferenzen für Vegan Garden Berlin verwalten.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=20260923_circle">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png?v=20260923_circle">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=20260923_circle">
+  <link rel="shortcut icon" href="favicon.ico?v=20260923_circle">
   <link rel="stylesheet" href="styles.css?v=20260918_17">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+    .mobile-only-nav-item { display: none !important; }
+    @media (max-width: 768px) {
+      .mobile-only-nav-item { display: block !important; }
+    }
     .legal-page {
       background-color: #F6F1E7;
       color: #211A16;
@@ -61,6 +86,13 @@
       max-width: 900px;
       margin: 0 auto;
       line-height: 1.7;
+    }
+    .legal-card p, .cookie-category p {
+      text-align: justify !important;
+      text-justify: inter-word !important;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
     }
     .cookie-category {
       background: #FAF7F2;
@@ -168,6 +200,10 @@
   </style>
 </head>
 <body class="legal-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHCWLLSR"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- HEADER & NAVIGATION -->
   <header class="navbar">
@@ -187,6 +223,7 @@
           <li><a href="about" class="nav-link">ÜBER UNS</a></li>
           <li><a href="ratgeber" class="nav-link">JOURNAL</a></li>
           <li><a href="kontakt" class="nav-link">KONTAKT</a></li>
+          <li class="mobile-only-nav-item"><a href="/impressum/" class="nav-link">IMPRESSUM</a></li>
         </ul>
       </nav>
 
@@ -257,8 +294,8 @@
         <div class="cookie-category">
           <div class="cookie-header">
             <div class="cookie-title">
-              <i class="fa-solid fa-utensils" style="color: #34A853;"></i>
-              <span>Funktionale Medien &amp; Reservierung</span>
+              <i class="fa-solid fa-map-location-dot" style="color: #34A853;"></i>
+              <span>Externe Medien &amp; Google Maps</span>
             </div>
             <label class="cookie-switch">
               <input type="checkbox" id="cookieFunctional" checked>
@@ -266,7 +303,7 @@
             </label>
           </div>
           <p style="font-size: 0.9rem; color: #554e47; margin: 0;">
-            Ermöglicht die interaktive Einbindung von Drittanbieter-Diensten, wie dem Online-Tischreservierungssystem von <strong>Foodamigos</strong> und der interaktiven <strong>Google Maps</strong> Anfahrtskarte.
+            Ermöglicht das direkte Laden und die interaktive Nutzung externer Medien, insbesondere der interaktiven <strong>Google Maps</strong> Anfahrtskarte.
           </p>
         </div>
 
@@ -360,47 +397,21 @@
       <div class="footer-bottom">
         <div>&copy; 2026 Vegan Garden Berlin &ndash; Alle Rechte vorbehalten</div>
         <div class="footer-legal-links">
-          <a href="impressum.html">Impressum</a>
+          <a href="/impressum/">Impressum</a>
           <span class="footer-legal-sep">&bull;</span>
-          <a href="datenschutz.html">Datenschutz</a>
+          <a href="/datenschutz/">Datenschutz</a>
           <span class="footer-legal-sep">&bull;</span>
-          <a href="cookie-einstellungen.html">Cookie-Einstellungen</a>
+          <a href="/cookie-einstellungen/">Cookie-Einstellungen</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- FLOATING RESERVATION FAB BUTTON -->
-  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch jetzt reservieren" title="Tisch jetzt reservieren">
+  <a href="/#kontakt" class="floating-reserve-btn" aria-label="Tisch jetzt reservieren" title="Tisch jetzt reservieren">
     <div class="floating-reserve-pulse"></div>
     <i class="fa-regular fa-calendar-check"></i>
-  </button>
-
-  <!-- MODAL: TABLE RESERVATION (FOODAMIGOS) -->
-  <div class="modal-overlay" id="reservationModal">
-    <div class="modal-content modal-content--reserve">
-      <button class="modal-close" aria-label="Schließen">&times;</button>
-      
-      <div class="reserve-modal-header">
-        <div>
-          <h2 class="serif-font" style="color: var(--primary-green-dark); margin: 0 0 4px 0; font-size: 1.35rem;">Tisch reservieren</h2>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Online-Reservierung via Foodamigos &bull; Sofortige Bestätigung</p>
-        </div>
-        <a href="https://vegangarden.tischreservieren.com" target="_blank" rel="noopener" class="reserve-ext-link">
-          <span>In neuem Tab öffnen</span>
-          <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
-
-      <div class="foodamigos-iframe-wrap">
-        <iframe 
-          src="https://vegangarden.tischreservieren.com" 
-          title="Tisch reservieren über Foodamigos" 
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </div>
+  </a>
 
   <script src="script.js?v=20260918_16"></script>
   <script>

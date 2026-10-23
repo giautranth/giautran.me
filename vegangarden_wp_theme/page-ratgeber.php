@@ -221,9 +221,9 @@ get_header();
   <section class="hub-main">
     <div class="container">
 
-      <!-- Category Tabs Bar (CIH Style) -->
+            <!-- Category Tabs Bar (CIH Style) -->
       <div class="hub-cat-tabs">
-        <button class="hub-cat-btn active" data-filter="all">Alle Artikel (3)</button>
+        <button class="hub-cat-btn active" data-filter="all">Alle Artikel</button>
         <button class="hub-cat-btn" data-filter="kultur">Kultur &amp; Tipps</button>
         <button class="hub-cat-btn" data-filter="rezepte">Rezepte &amp; Kulinarik</button>
         <button class="hub-cat-btn" data-filter="speisekarte">Speisekarte &amp; Gerichte</button>
@@ -231,68 +231,48 @@ get_header();
 
       <!-- 3-Column Articles Grid -->
       <div class="hub-news-grid" id="hubNewsGrid">
-        
-        <!-- Article 1: Speisekarte & Gerichte -->
-        <article class="hub-news-card" data-category="speisekarte">
-          <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>" class="hub-news-img-link">
-            <img src="<?php echo esc_url(home_url('/images/article_speisekarte.jpg')); ?>" alt="Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt" class="hub-news-img" loading="lazy">
-            <span class="hub-news-badge">SPEISEKARTE &amp; GERICHTE</span>
+        <?php
+        $posts_query = new WP_Query(array(
+            'post_type'      => 'post',
+            'post_status'    => 'publish',
+            'posts_per_page' => -1,
+            'orderby'        => 'date',
+            'order'          => 'DESC'
+        ));
+
+        if ($posts_query->have_posts()) :
+            while ($posts_query->have_posts()) : $posts_query->the_post();
+                $thumb = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                if (!$thumb) $thumb = get_post_meta(get_the_ID(), '_article_custom_img', true) ?: home_url('/images/article_speisekarte.jpg');
+                $post_cats = get_the_category();
+                $cat_name = !empty($post_cats) ? $post_cats[0]->name : 'JOURNAL';
+                $cat_filters = implode(' ', wp_list_pluck($post_cats, 'slug'));
+        ?>
+        <article class="hub-news-card" data-category="<?php echo esc_attr($cat_filters); ?>">
+          <a href="<?php the_permalink(); ?>" class="hub-news-img-link">
+            <img src="<?php echo esc_url($thumb); ?>" alt="<?php the_title_attribute(); ?>" class="hub-news-img" loading="lazy">
+            <span class="hub-news-badge"><?php echo esc_html(mb_strtoupper(wp_specialchars_decode($cat_name, ENT_QUOTES))); ?></span>
           </a>
           <div class="hub-news-body">
             <h3 class="hub-news-title">
-              <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>">Die Speisekarte 2026 im Überblick – Gerichte, Preise &amp; Vielfalt</a>
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h3>
             <p class="hub-news-excerpt">
-              Entdecken Sie unsere 100 % pflanzliche Speisekarte 2026: Von knusprigen Frühlingsrollen über aromatische Suppen bis hin zu traditionellen Feuertöpfen.
+              <?php echo esc_html(get_the_excerpt()); ?>
             </p>
-            <a href="<?php echo esc_url(home_url('/articles/vegan-garden-berlin-speisekarte.html')); ?>" class="hub-news-more">
+            <a href="<?php the_permalink(); ?>" class="hub-news-more">
               <span>Artikel lesen</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </article>
-
-        <!-- Article 2: Veganer Feuertopf (Lẩu) -->
-        <article class="hub-news-card" data-category="rezepte kultur">
-          <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>" class="hub-news-img-link">
-            <img src="<?php echo esc_url(home_url('/images/gallery/lau.jpg?v=20260918')); ?>" alt="Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis" class="hub-news-img" loading="lazy">
-            <span class="hub-news-badge">SPEZIALITÄTEN &amp; KULINARIK</span>
-          </a>
-          <div class="hub-news-body">
-            <h3 class="hub-news-title">
-              <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>">Veganer Feuertopf (Lẩu) in Berlin – Das wärmende Geschmackserlebnis</a>
-            </h3>
-            <p class="hub-news-excerpt">
-              Reichhaltige Kräuterbrühe, frisches asiatisches Gartengemüse, zarter Bio-Tofu und edle Waldpilze: Erleben Sie unser traditionelles vietnamesisches Lẩu zum Teilen.
-            </p>
-            <a href="<?php echo esc_url(home_url('/articles/veganer-feuertopf-lau-berlin.html')); ?>" class="hub-news-more">
-              <span>Artikel lesen</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Article 3: Speisekarte & Bún Bò Huế -->
-        <article class="hub-news-card" data-category="speisekarte rezepte">
-          <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>" class="hub-news-img-link">
-            <img src="<?php echo esc_url(home_url('/images/gallery/bunbo.jpg?v=20260910')); ?>" alt="Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras" class="hub-news-img" loading="lazy">
-            <span class="hub-news-badge">REZEPTE &amp; KULINARIK</span>
-          </a>
-          <div class="hub-news-body">
-            <h3 class="hub-news-title">
-              <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>">Bun Bo Hue vegan Berlin: Feurige Suppe mit Zitronengras</a>
-            </h3>
-            <p class="hub-news-excerpt">
-              Eine unverwechselbare Spezialität aus Zentralvietnam: Kräftige Zitronengras-Brühe, samtiger Tofu, dicke Reisnudeln und frische Gartenkräuter für ein wohltuendes Geschmackserlebnis.
-            </p>
-            <a href="<?php echo esc_url(home_url('/articles/bun-bo-hue-vegan-berlin.html')); ?>" class="hub-news-more">
-              <span>Artikel lesen</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </article>
-
+        <?php
+            endwhile;
+            wp_reset_postdata();
+        endif;
+        ?>
       </div>
+    </div>
     </div>
   </section>
 

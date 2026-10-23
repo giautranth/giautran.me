@@ -256,11 +256,11 @@ get_header();
             Ob stimmungsvolle Geburtstage, Firmenfeiern, private Events oder gemütliche Familientreffen – Vegan Garden Berlin bietet den idealen Rahmen für unvergessliche Momente in einzigartiger Atmosphäre mitten in Friedrichshain.
           </p>
           <div class="feature-highlights">
-            <div class="highlight-pill"><i class="fa-solid fa-chair" style="color: #A98224;"></i> 100 Plätze innen</div>
-            <div class="highlight-pill"><i class="fa-solid fa-tree" style="color: #A98224;"></i> ca. 100 Plätze im Garten</div>
-            <div class="highlight-pill"><i class="fa-solid fa-crown" style="color: #A98224;"></i> VIP-Raum bis 20 Personen</div>
-            <div class="highlight-pill"><i class="fa-solid fa-microphone" style="color: #A98224;"></i> Bühne vorhanden</div>
-            <div class="highlight-pill"><i class="fa-solid fa-calendar-check" style="color: #A98224;"></i> Geburtstage & Firmenfeiern</div>
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: #A98224;"></i> 100 Plätze innen</div>
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: #A98224;"></i> ca. 100 Plätze im Garten</div>
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: #A98224;"></i> VIP-Raum bis 20 Personen</div>
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: #A98224;"></i> Bühne vorhanden</div>
+            <div class="highlight-pill"><i class="fa-solid fa-check" style="color: #A98224;"></i> Geburtstage & Firmenfeiern</div>
           </div>
         </div>
       </div>

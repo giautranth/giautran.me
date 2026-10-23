@@ -1,0 +1,67 @@
+================================================================================
+THÔNG TIN BÀN GIAO MÃ NGUỒN WEBSITE VEGAN GARDEN BERLIN
+================================================================================
+Dự án: Website Nhà Hàng Chay Vegan Garden Berlin
+Website chính thức: https://vegan-garden.berlin
+Ngày bàn giao: 25/09/2026
+Người thực hiện: Đội ngũ Phát triển Website
+
+--------------------------------------------------------------------------------
+1. CẤU TRÚC GÓI BÀN GIAO (MÃ NGUỒN & DỮ LIỆU)
+--------------------------------------------------------------------------------
+Gói bàn giao này chứa 100% tài sản số và dữ liệu để vận hành website độc lập:
+
+├── 1. vegangarden_wp_theme/
+│   ├── Toàn bộ mã nguồn Theme WordPress độc quyền được viết riêng cho nhà hàng:
+│   │   ├── front-page.php (Cấu trúc Trang chủ)
+│   │   ├── header.php & footer.php (Thanh điều hướng, chân trang, mạng xã hội)
+│   │   ├── functions.php (Hệ thống đặt bàn, xuất Excel, dịch đa ngôn ngữ i18n, cài đặt site)
+│   │   ├── styles.css & script.js (Giao diện chuẩn màu thương hiệu, font Lora, responsive)
+│   │   ├── page-impressum.php & page-datenschutz.php (Trang pháp lý chuẩn luật Đức § 5 DDG, DSGVO/GDPR)
+│   │   ├── images/ (Kho ảnh món ăn, không gian Sommergarten, phòng VIP)
+│   │   ├── logo/ (Bộ logo thương hiệu đầy đủ định dạng)
+│   │   ├── menu/ (Thực đơn Speisekarte PDF và ảnh in chất lượng cao)
+│   │   └── video/ (Video giới thiệu không gian vườn nhà hàng)
+│
+├── 2. vegangarden_database_backup_20260925.sql
+│   └── Cơ sở dữ liệu (Database) MySQL xuất mới nhất từ máy chủ live:
+│       ├── Toàn bộ thực đơn món ăn, giá tiền (€), phân loại món
+│       ├── Toàn bộ dữ liệu đơn đặt bàn của khách từ trước đến nay
+│       ├── Toàn bộ tin nhắn liên hệ của khách hàng
+│       ├── Danh sách đánh giá Google Reviews 5 sao
+│       └── Cấu hình thông tin nhà hàng (Hotline, email, giờ mở cửa, địa chỉ)
+│
+├── 3. Huong_Dan_Quan_Tri_Website_Vegan_Garden_Berlin.pptx
+│   └── File PowerPoint đào tạo hướng dẫn sử dụng CMS gồm 14 slide chuẩn thương hiệu,
+│       sử dụng 100% Font Lora và có logo nhà hàng bo tròn 4 góc.
+│
+├── 4. vegangarden_static_html/
+│   └── Bản sao lưu giao diện HTML tĩnh chạy độc lập không cần máy chủ cơ sở dữ liệu.
+│
+└── 5. THONG_TIN_BAN_GIAO_MA_NGUON.txt
+    └── Tài liệu này.
+
+--------------------------------------------------------------------------------
+2. YÊU CẦU MÁY CHỦ HỆ THỐNG (SYSTEM REQUIREMENTS)
+--------------------------------------------------------------------------------
+Nếu cần chuyển sang nhà cung cấp máy chủ / hosting khác trong tương lai:
+- Hệ điều hành: Linux (Ubuntu / Debian / CentOS / CloudLinux)
+- Máy chủ web: Apache 2.4+ (có bật mod_rewrite) hoặc Nginx
+- Phiên bản PHP: PHP 8.0 trở lên (khuyên dùng PHP 8.1 hoặc 8.2)
+- Cơ sở dữ liệu: MySQL 5.7+ hoặc MariaDB 10.3+
+- Nền tảng CMS: WordPress phiên bản 6.0 trở lên
+
+--------------------------------------------------------------------------------
+3. HƯỚNG DẪN KHÔI PHỤC WEBSITE (DISASTER RECOVERY / MIGRATION)
+--------------------------------------------------------------------------------
+Bước 1: Cài đặt một bản WordPress sạch trên hosting mới.
+Bước 2: Tạo một cơ sở dữ liệu mới và import file 'vegangarden_database_backup_20260925.sql'.
+Bước 3: Copy thư mục 'vegangarden_wp_theme' vào thư mục 'wp-content/themes/' trên máy chủ.
+Bước 4: Đăng nhập vào trang quản trị WordPress -> Giao diện (Appearance) -> Kích hoạt theme 'Vegan Garden'.
+Bước 5: Cấu hình lại file 'wp-config.php' khớp với tên database và mật khẩu mới.
+
+Website sẽ hoạt động lại 100% nguyên vẹn như phiên bản đang chạy online.
+
+================================================================================
+Bản quyền mã nguồn & toàn bộ nội dung thuộc sở hữu của Nhà hàng Vegan Garden Berlin.
+================================================================================

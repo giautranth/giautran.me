@@ -62,14 +62,24 @@
           <?php endif; ?>
         </div>
 
-        <!-- Map Location Column -->
+        <!-- Map Location Column (DSGVO 2-KLICK LÖSUNG) -->
         <div class="footer-map">
           <h3 class="footer-col-title">FINDEN SIE UNS</h3>
-          <div class="map-card" style="padding: 0; border: none; background: transparent;">
+          <div class="map-card" id="vgMapContainer" style="padding: 0; border: none; background: #2A160F; border-radius: 12px; overflow: hidden; height: 140px; position: relative;">
             <?php $map_link = function_exists('vg_get_option') ? vg_get_option('maps_url', 'https://maps.app.goo.gl/St5dH8yWhqsPBheCA') : 'https://maps.app.goo.gl/St5dH8yWhqsPBheCA'; ?>
-            <a href="<?php echo esc_url($map_link); ?>" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 12px; overflow: hidden; height: 140px;" title="Route planen auf Google Maps">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px; pointer-events: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </a>
+            
+            <!-- 2-Click Consent Overlay (Displayed when consent not yet granted) -->
+            <div id="vgMapOverlay" style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px 14px; box-sizing: border-box; background: linear-gradient(135deg, rgba(42,22,15,0.92), rgba(60,35,25,0.95)); color: #F6F1E7;">
+              <i class="fa-solid fa-map-location-dot" style="font-size: 22px; color: #C79A4A; margin-bottom: 6px;"></i>
+              <p style="font-size: 0.72rem; line-height: 1.35; color: #d5cdc3; margin: 0 0 8px;">Google Maps ist deaktiviert. Aktivieren Sie die Karte zur Datenübertragung an Google.</p>
+              <div style="display: flex; gap: 6px; flex-wrap: wrap; justify-content: center;">
+                <button type="button" id="vgBtnActivateMap" onclick="vgLoadGoogleMap(true)" style="background: #8F6D1E; color: #fff; border: none; border-radius: 20px; font-size: 0.72rem; font-weight: 700; padding: 5px 12px; cursor: pointer; text-transform: uppercase;">Karte laden</button>
+                <a href="<?php echo esc_url($map_link); ?>" target="_blank" rel="noopener" style="background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; font-size: 0.72rem; padding: 4px 10px; text-decoration: none;">Maps öffnen ↗</a>
+              </div>
+            </div>
+
+            <!-- Iframe Container (Injected upon consent) -->
+            <div id="vgMapIframeWrapper" style="display: none; width: 100%; height: 100%;"></div>
           </div>
         </div>
       </div>
@@ -77,11 +87,11 @@
       <div class="footer-bottom">
         <div>© 2026 Vegan Garden Berlin – Alle Rechte vorbehalten</div>
         <div class="footer-legal-links">
-          <a href="<?php echo esc_url(home_url('/impressum.html')); ?>" target="_blank" style="display: inline-block; text-transform: capitalize;">Impressum</a>
+          <a href="<?php echo esc_url(home_url('/impressum/')); ?>" style="display: inline-block; text-transform: capitalize;">Impressum</a>
           <span class="footer-legal-sep">&bull;</span>
-          <a href="<?php echo esc_url(home_url('/datenschutz.html')); ?>" target="_blank">Datenschutz</a>
+          <a href="<?php echo esc_url(home_url('/datenschutz/')); ?>">Datenschutz</a>
           <span class="footer-legal-sep">&bull;</span>
-          <a href="<?php echo esc_url(home_url('/cookie-einstellungen.html')); ?>" target="_blank">Cookie-Einstellungen</a>
+          <a href="<?php echo esc_url(home_url('/cookie-einstellungen/')); ?>">Cookie-Einstellungen</a>
         </div>
       </div>
     </div>
@@ -666,11 +676,209 @@
   </div>
 
 
-  <!-- FLOATING RESERVATION BUTTON (GLOBAL ACROSS ALL PAGES) -->
-  <button class="floating-reserve-btn js-open-reserve" aria-label="Tisch reservieren" title="Tisch reservieren">
-    <span class="floating-reserve-pulse"></span>
-    <i class="fa-solid fa-calendar-check"></i>
-  </button>
+  <!-- COOKIE CONSENT BANNER (DSGVO / TTDSG COMPLIANT) -->
+  <div id="vgCookieBanner" class="vg-cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie-Einwilligung" style="display: none;">
+    <div class="vg-cookie-inner">
+      <div class="vg-cookie-header">
+        <div class="vg-cookie-title">
+          <i class="fa-solid fa-cookie-bite"></i>
+          <span>Cookie-Einstellungen</span>
+        </div>
+      </div>
+      <p class="vg-cookie-text">
+        Wir nutzen Cookies, um Ihnen das bestmögliche Restauranterlebnis zu bieten und Funktionen wie Tischreservierung und interaktive Karten zu ermöglichen. Weitere Informationen finden Sie in unserer <a href="<?php echo esc_url(home_url('/datenschutz/')); ?>">Datenschutzerklärung</a>.
+      </p>
+      <div class="vg-cookie-actions">
+        <button type="button" id="vgCookieAcceptAll" class="vg-cookie-btn vg-cookie-btn-primary">Alle akzeptieren</button>
+        <button type="button" id="vgCookieReject" class="vg-cookie-btn vg-cookie-btn-secondary">Ablehnen</button>
+        <a href="<?php echo esc_url(home_url('/cookie-einstellungen/')); ?>" class="vg-cookie-btn vg-cookie-btn-settings">Auswahl anpassen</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .vg-cookie-banner {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      max-width: 440px;
+      width: calc(100% - 48px);
+      background: rgba(33, 26, 22, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #F6F1E7;
+      border: 1px solid rgba(199, 154, 74, 0.35);
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+      padding: 20px 22px 18px;
+      z-index: 99990;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      animation: vgCookieSlideUp 0.4s ease-out forwards;
+    }
+    @keyframes vgCookieSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .vg-cookie-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .vg-cookie-title i {
+      color: #C79A4A;
+      font-size: 1.15rem;
+    }
+    .vg-cookie-text {
+      font-size: 0.84rem;
+      line-height: 1.5;
+      color: #d1c7bc;
+      margin: 0 0 14px;
+    }
+    .vg-cookie-text a {
+      color: #C79A4A;
+      text-decoration: underline;
+    }
+    .vg-cookie-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .vg-cookie-btn {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 50px;
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .vg-cookie-btn-primary {
+      background: #8F6D1E;
+      color: #ffffff;
+    }
+    .vg-cookie-btn-primary:hover {
+      background: #a98224;
+      transform: translateY(-1px);
+    }
+    .vg-cookie-btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .vg-cookie-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .vg-cookie-btn-settings {
+      background: transparent;
+      color: #C79A4A;
+      border: 1px solid rgba(199, 154, 74, 0.5);
+    }
+    .vg-cookie-btn-settings:hover {
+      background: rgba(199, 154, 74, 0.15);
+      color: #ffffff;
+    }
+    @media (max-width: 600px) {
+      .vg-cookie-banner {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        max-width: none;
+        padding: 16px 18px;
+      }
+      .vg-cookie-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .vg-cookie-btn {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+
+  <script>
+  function vgLoadGoogleMap(userTriggered) {
+    var overlay = document.getElementById('vgMapOverlay');
+    var wrapper = document.getElementById('vgMapIframeWrapper');
+    if (!wrapper) return;
+    if (userTriggered) {
+      try {
+        var current = {};
+        try { current = JSON.parse(localStorage.getItem('vg_cookie_consent')) || {}; } catch(e){}
+        current.essential = true;
+        current.functional = true;
+        current.timestamp = new Date().toISOString();
+        localStorage.setItem('vg_cookie_consent', JSON.stringify(current));
+      } catch(e){}
+    }
+    if (overlay) overlay.style.display = 'none';
+    wrapper.style.display = 'block';
+    wrapper.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.174100523497!2d13.461623976899723!3d52.51402283681423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84ebd0b4fffff%3A0x868b420084f7bbd8!2sFrankfurter%20Allee%2021%2C%2010247%20Berlin%2C%20Germany!5e0!3m2!1sen!2s!4v1722600000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+  }
+
+  (function(){
+    try {
+      var consent = null;
+      try { consent = JSON.parse(localStorage.getItem('vg_cookie_consent')); } catch(e){}
+      
+      // Auto-load map if functional consent already granted
+      if (consent && consent.functional) {
+        vgLoadGoogleMap(false);
+      }
+
+      // Show banner if not yet consented
+      if (!consent) {
+        setTimeout(function(){
+          var banner = document.getElementById('vgCookieBanner');
+          if (banner) banner.style.display = 'block';
+        }, 600);
+      }
+
+      var acceptBtn = document.getElementById('vgCookieAcceptAll');
+      var rejectBtn = document.getElementById('vgCookieReject');
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', function(){
+          localStorage.setItem('vg_cookie_consent', JSON.stringify({
+            essential: true,
+            functional: true,
+            analytics: true,
+            timestamp: new Date().toISOString()
+          }));
+          var b = document.getElementById('vgCookieBanner');
+          if (b) b.style.display = 'none';
+          vgLoadGoogleMap(false);
+        });
+      }
+      if (rejectBtn) {
+        rejectBtn.addEventListener('click', function(){
+          localStorage.setItem('vg_cookie_consent', JSON.stringify({
+            essential: true,
+            functional: false,
+            analytics: false,
+            timestamp: new Date().toISOString()
+          }));
+          var b = document.getElementById('vgCookieBanner');
+          if (b) b.style.display = 'none';
+        });
+      }
+    } catch(e) {}
+  })();
+  </script>
 
   <?php wp_footer(); ?>
 </body>

@@ -539,8 +539,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Seamless Infinite Auto Slider - Left to Right Direction (Google Reviews, SPEISEKARTE, GALLERY)
-  function initAutoSlider(gridId, prevBtnId, nextBtnId, intervalMs = 0, defaultDirection = 'ltr') {
+  // Seamless Infinite Auto Slider - Right to Left Direction (Google Reviews, SPEISEKARTE, GALLERY)
+  function initAutoSlider(gridId, prevBtnId, nextBtnId, intervalMs = 0, defaultDirection = 'rtl') {
     const grid = document.getElementById(gridId);
     const prevBtn = document.getElementById(prevBtnId);
     const nextBtn = document.getElementById(nextBtnId);
@@ -709,18 +709,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Google Reviews, SPEISEKARTE, and GALLERY: Smooth Auto Slider with Left-to-Right transition
-  initAutoSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext', 3200, 'ltr');
-  initAutoSlider('galleryGrid', 'galleryPrev', 'galleryNext', 3000, 'ltr');
-  initAutoSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext', 3500, 'ltr');
-  initAutoSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext', 0);
+  // Google Reviews, SPEISEKARTE, and GALLERY: Smooth Auto Slider with Right-to-Left transition
+  initAutoSlider('highlightsGrid', 'highlightsPrev', 'highlightsNext', 3200, 'rtl');
+  initAutoSlider('galleryGrid', 'galleryPrev', 'galleryNext', 3000, 'rtl');
+  initAutoSlider('reviewsSlider', 'reviewsPrev', 'reviewsNext', 3500, 'rtl');
+  initAutoSlider('newsGrid', 'ratgeberPrev', 'ratgeberNext', 0, 'rtl');
 
   // Hero Banner Fade Slider logic (5 seconds auto slide)
   function initHeroSlider(intervalMs = 5000) {
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.hero-dot');
-    const prevBtn = document.getElementById('heroPrevBtn');
-    const nextBtn = document.getElementById('heroNextBtn');
+    const prevBtn = document.getElementById('heroPrevBtn') || document.querySelector('.hero-arrow-left');
+    const nextBtn = document.getElementById('heroNextBtn') || document.querySelector('.hero-arrow-right');
     const heroSection = document.getElementById('home');
 
     if (!slides.length) return;
@@ -787,7 +787,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     dots.forEach((dot) => {
       dot.addEventListener('click', () => {
-        const idx = parseInt(dot.dataset.slide, 10);
+        const idx = parseInt(dot.dataset.slide || dot.dataset.index, 10);
         stopAutoSlide();
         showSlide(idx);
         startAutoSlide();

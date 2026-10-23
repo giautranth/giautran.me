@@ -15,6 +15,10 @@ get_header();
           <div style="margin-bottom: 30px; border-radius: 12px; overflow: hidden;">
             <?php the_post_thumbnail('large', array('style' => 'width: 100%; height: auto; display: block;')); ?>
           </div>
+        <?php elseif ($cimg = get_post_meta(get_the_ID(), '_article_custom_img', true)) : ?>
+          <div style="margin-bottom: 30px; border-radius: 12px; overflow: hidden;">
+            <img src="<?php echo esc_url($cimg); ?>" alt="<?php the_title_attribute(); ?>" style="width: 100%; height: auto; display: block;">
+          </div>
         <?php endif; ?>
         <div class="article-content" style="line-height: 1.85; font-size: 1.05rem; color: var(--text-dark);">
           <?php the_content(); ?>

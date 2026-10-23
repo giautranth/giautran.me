@@ -12,7 +12,7 @@
         width: 100%;
         max-width: 650px;
         border-radius: 24px;
-        box-shadow: 0 28px 60px -12px rgba(0, 48, 73, 0.38), 0 0 0 1.5px rgba(226, 199, 132, 0.65);
+        box-shadow: 0 28px 60px -12px rgba(0, 48, 73, 0.38);
         position: relative;
         max-height: 92vh;
         overflow-y: auto;
@@ -29,7 +29,7 @@
         justify-content: space-between;
         position: relative;
         overflow: hidden;
-        border-bottom: 2px solid rgba(226, 199, 132, 0.7);
+        border-bottom: none;
       }
       #cih-booking-modal .cih-bk-header::before {
         content: '';

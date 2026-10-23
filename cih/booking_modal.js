@@ -1,27 +1,62 @@
-/* CIH BỆNH VIỆN QUỐC TẾ CITY - MINIMALIST BRAND BOOKING MODAL (#007DA5) */
+/* CIH BỆNH VIỆN QUỐC TẾ CITY - LUXURY GRADIENT BOOKING MODAL */
 (function() {
   const modalHTML = `
-  <div id="cih-booking-modal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(0, 26, 40, 0.65); backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 1rem; overflow-y: auto; font-family: 'Lexend', 'Inter', system-ui, -apple-system, sans-serif;">
+  <div id="cih-booking-modal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(4, 24, 38, 0.68); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 1rem; overflow-y: auto; font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;">
     <style>
       #cih-booking-modal *, #cih-booking-modal input, #cih-booking-modal select, #cih-booking-modal textarea, #cih-booking-modal button {
-        font-family: 'Lexend', 'Inter', system-ui, -apple-system, sans-serif !important;
+        font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif !important;
         box-sizing: border-box;
+      }
+      #cih-booking-modal .cih-bk-dialog {
+        background: linear-gradient(165deg, #F2FAFD 0%, #FFFFFF 46%, #FDF9EE 100%);
+        width: 100%;
+        max-width: 650px;
+        border-radius: 24px;
+        box-shadow: 0 28px 60px -12px rgba(0, 48, 73, 0.38), 0 0 0 1.5px rgba(226, 199, 132, 0.65);
+        position: relative;
+        max-height: 92vh;
+        overflow-y: auto;
+        border: none;
+      }
+      #cih-booking-modal .cih-bk-header {
+        background: linear-gradient(125deg, #003F5C 0%, #007DA5 52%, #34B3CE 100%);
+        padding: 1.35rem 1.75rem;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 2px solid rgba(226, 199, 132, 0.7);
+      }
+      #cih-booking-modal .cih-bk-header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 240px;
+        height: 240px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 70%);
+        pointer-events: none;
       }
       #cih-booking-modal input, #cih-booking-modal select, #cih-booking-modal textarea {
         width: 100%;
-        padding: 0.7rem 0.9rem;
-        background: #f8fafc;
-        border: 1.5px solid #e2e8f0;
-        border-radius: 10px;
+        padding: 0.72rem 0.95rem;
+        background: #ffffff;
+        border: 1.5px solid #dbe7f0;
+        border-radius: 12px;
         font-size: 0.9rem;
         color: #0f172a;
         outline: none;
-        transition: all 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 125, 165, 0.04);
+        transition: all 0.22s ease;
       }
       #cih-booking-modal input:focus, #cih-booking-modal select:focus, #cih-booking-modal textarea:focus {
         border-color: #007DA5 !important;
         background: #ffffff !important;
-        box-shadow: 0 0 0 3px rgba(0, 125, 165, 0.15) !important;
+        box-shadow: 0 0 0 3.5px rgba(0, 125, 165, 0.16) !important;
       }
       #cih-booking-modal input::placeholder, #cih-booking-modal textarea::placeholder {
         color: #94a3b8;
@@ -31,30 +66,57 @@
         display: block;
         font-size: 0.82rem;
         font-weight: 700;
-        color: #334155;
-        margin-bottom: 0.35rem;
+        color: #1e293b;
+        margin-bottom: 0.38rem;
       }
       .cih-form-group {
-        margin-bottom: 0.9rem;
+        margin-bottom: 0.95rem;
       }
       .cih-section-title {
-        font-size: 0.875rem;
+        font-size: 0.86rem;
         font-weight: 800;
+        background: linear-gradient(90deg, #005B7F 0%, #007DA5 60%, #1CA3C4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         color: #007DA5;
-        margin: 1.1rem 0 0.75rem 0;
+        margin: 1.15rem 0 0.8rem 0;
         display: flex;
         align-items: center;
         gap: 8px;
         text-transform: uppercase;
-        letter-spacing: 0.3px;
+        letter-spacing: 0.4px;
       }
       .cih-section-title::before {
         content: '';
         display: inline-block;
         width: 4px;
-        height: 14px;
-        background: #007DA5;
-        border-radius: 2px;
+        height: 15px;
+        background: linear-gradient(180deg, #007DA5 0%, #34B3CE 100%);
+        border-radius: 3px;
+      }
+      .cih-bk-submit-btn {
+        width: 100%;
+        background: linear-gradient(135deg, #004E6E 0%, #007DA5 48%, #2CB1CE 100%);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        padding: 0.92rem 1.5rem;
+        border-radius: 999px;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: 0.6px;
+        cursor: pointer;
+        box-shadow: 0 10px 24px rgba(0, 125, 165, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .cih-bk-submit-btn:hover {
+        background: linear-gradient(135deg, #005E84 0%, #008EBA 48%, #3CC2DF 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(0, 125, 165, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.4);
       }
       @media (max-width: 580px) {
         .cih-grid-2col {
@@ -63,16 +125,16 @@
       }
     </style>
     
-    <div style="background: #ffffff; width: 100%; max-width: 650px; border-radius: 24px; box-shadow: 0 25px 50px -12px rgba(0, 59, 92, 0.25); position: relative; max-height: 90vh; overflow-y: auto; border: 1px solid #e2e8f0;">
+    <div class="cih-bk-dialog">
       
-      <!-- Modal Header (Official CIH Cyan #007DA5) -->
-      <div style="background: linear-gradient(135deg, #007DA5 0%, #005f80 100%); padding: 1.35rem 1.75rem; border-top-left-radius: 24px; border-top-right-radius: 24px; color: #ffffff; display: flex; align-items: center; justify-content: space-between;">
-        <h2 style="font-size: 1.3rem; font-weight: 800; margin: 0; color: #ffffff; letter-spacing: -0.2px;">ĐĂNG KÝ KHÁM BỆNH</h2>
-        <button onclick="closeBookingModal()" aria-label="Đóng" style="width: 32px; height: 32px; border-radius: 50%; border: none; background: rgba(255, 255, 255, 0.2); color: #ffffff; font-size: 1.3rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='rgba(255, 255, 255, 0.35)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.2)'">✕</button>
+      <!-- Modal Header (Luxury Multi-Stop CIH Gradient) -->
+      <div class="cih-bk-header">
+        <h2 style="font-size: 1.28rem; font-weight: 800; margin: 0; color: #ffffff; letter-spacing: 0.2px; text-shadow: 0 2px 6px rgba(0, 25, 40, 0.25);">ĐĂNG KÝ KHÁM BỆNH</h2>
+        <button onclick="closeBookingModal()" aria-label="Đóng" style="width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.3); background: rgba(255, 255, 255, 0.18); color: #ffffff; font-size: 1.15rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;" onmouseover="this.style.background='rgba(255, 255, 255, 0.32)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.18)'">✕</button>
       </div>
 
       <!-- Form Content -->
-      <div style="padding: 1.5rem 1.75rem;">
+      <div style="padding: 1.5rem 1.75rem 1.65rem;">
         <form onsubmit="handleModalBookingSubmit(event)">
           
           <!-- SECTION 1: LỊCH KHÁM -->
@@ -98,7 +160,7 @@
               <label>Chọn bác sĩ <span style="color: #e11d48;">*</span></label>
               <select id="modal-bk-doctor" required>
                 <option value="">-- Bác sĩ khám bất kỳ --</option>
-                <option value="BS.CKII. Nguyễn Vũ Mỹ Linh">BS.CKII. Nguyễn Vũ Mỹ Linh (Trưởng khoa Sản)</option>
+                <option value="BS.CKII. Nguyễn Vũ Mỹ Linh">BS.CKII. Nguyễn Vũ Mỹ Linh (Phó Trưởng khoa Phụ Sản)</option>
                 <option value="BS.CKII. Nguyễn Bạch Huệ">BS.CKII. Nguyễn Bạch Huệ (Trưởng khoa Nhi)</option>
                 <option value="BS.CKII. Lê Kim Sang">BS.CKII. Lê Kim Sang (Trưởng khoa Tiêu Hóa)</option>
               </select>
@@ -113,9 +175,9 @@
 
             <div>
               <label>Khung giờ <span style="color: #e11d48;">*</span></label>
-              <div style="display: flex; gap: 6px; background: #f1f5f9; padding: 4px; border-radius: 10px; border: 1.5px solid #e2e8f0;">
-                <button type="button" id="modal-slot-sang" onclick="setModalSlot('Sáng (07:30 - 11:30)', this)" style="flex: 1; padding: 0.45rem; border: none; border-radius: 7px; font-weight: 700; font-size: 0.85rem; cursor: pointer; background: #007DA5; color: #fff; transition: all 0.2s;">🌅 Sáng</button>
-                <button type="button" id="modal-slot-chieu" onclick="setModalSlot('Chiều (13:00 - 16:30)', this)" style="flex: 1; padding: 0.45rem; border: none; border-radius: 7px; font-weight: 700; font-size: 0.85rem; cursor: pointer; background: transparent; color: #64748b; transition: all 0.2s;">⛅ Chiều</button>
+              <div style="display: flex; gap: 6px; background: #eef6fa; padding: 4px; border-radius: 12px; border: 1.5px solid #dbe7f0;">
+                <button type="button" id="modal-slot-sang" onclick="setModalSlot('Sáng (07:30 - 11:30)', this)" style="flex: 1; padding: 0.46rem; border: none; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; background: linear-gradient(135deg, #006288 0%, #0088B4 55%, #2CB1CE 100%); color: #fff; box-shadow: 0 3px 10px rgba(0, 125, 165, 0.25); transition: all 0.2s;">🌅 Sáng</button>
+                <button type="button" id="modal-slot-chieu" onclick="setModalSlot('Chiều (13:00 - 16:30)', this)" style="flex: 1; padding: 0.46rem; border: none; border-radius: 8px; font-weight: 700; font-size: 0.85rem; cursor: pointer; background: transparent; color: #64748b; transition: all 0.2s;">⛅ Chiều</button>
               </div>
               <input type="hidden" id="modal-bk-timeslot" value="Sáng (07:30 - 11:30)" />
             </div>
@@ -140,7 +202,7 @@
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-bottom: 1.5rem;" class="cih-form-group cih-grid-2col">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-bottom: 1.45rem;" class="cih-form-group cih-grid-2col">
             <div>
               <label>Ngày sinh <span style="color: #e11d48;">*</span></label>
               <input type="text" id="modal-bk-dob" required placeholder="dd/mm/yyyy" style="background: #ffffff; cursor: pointer;" />
@@ -151,8 +213,8 @@
             </div>
           </div>
 
-          <button type="submit" style="width: 100%; background: linear-gradient(135deg, #007DA5 0%, #005f80 100%); color: #ffffff; border: none; padding: 0.9rem; border-radius: 50px; font-weight: 800; font-size: 1rem; cursor: pointer; box-shadow: 0 6px 18px rgba(0, 125, 165, 0.25); transition: all 0.25s ease;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 24px rgba(0, 125, 165, 0.35)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 6px 18px rgba(0, 125, 165, 0.25)'">
-            ĐĂNG KÝ KHÁM BỆNH NGAY →
+          <button type="submit" class="cih-bk-submit-btn">
+            GỬI
           </button>
         </form>
       </div>
@@ -242,13 +304,19 @@
   };
 
   window.setModalSlot = function(slotStr, btn) {
-    document.getElementById('modal-slot-sang').style.background = 'transparent';
-    document.getElementById('modal-slot-sang').style.color = '#64748b';
-    document.getElementById('modal-slot-chieu').style.background = 'transparent';
-    document.getElementById('modal-slot-chieu').style.color = '#64748b';
+    const sang = document.getElementById('modal-slot-sang');
+    const chieu = document.getElementById('modal-slot-chieu');
+    [sang, chieu].forEach(el => {
+      if (el) {
+        el.style.background = 'transparent';
+        el.style.color = '#64748b';
+        el.style.boxShadow = 'none';
+      }
+    });
 
-    btn.style.background = '#007DA5';
+    btn.style.background = 'linear-gradient(135deg, #006288 0%, #0088B4 55%, #2CB1CE 100%)';
     btn.style.color = '#ffffff';
+    btn.style.boxShadow = '0 3px 10px rgba(0, 125, 165, 0.25)';
     document.getElementById('modal-bk-timeslot').value = slotStr;
   };
 
@@ -258,9 +326,9 @@
     docSelect.innerHTML = '<option value="">-- Bác sĩ khám bất kỳ --</option>';
     
     const docs = {
-      'khoa-phu-san': ['BS.CKII. Nguyễn Vũ Mỹ Linh', 'TS.BS.CKII. Trần Việt Thế Phương'],
+      'khoa-phu-san': ['BS.CKII. Nguyễn Vũ Mỹ Linh', 'BS.CKII. Phạm Minh Khôi Nguyên', 'BS.CKII. Trần Thế Lộc'],
       'khoa-nhi': ['BS.CKII. Nguyễn Bạch Huệ', 'BS.CKI. Nguyễn Thị Hạnh'],
-      'ivf': ['ThS.BS. Lê Thị Bích Châu', 'BS.CKII. Nguyễn Vũ Mỹ Linh'],
+      'ivf': ['BS.CKI. Nguyễn Thị Ngọc Sương', 'BS.CKII. Nguyễn Vũ Mỹ Linh'],
       'noi-soi-tieu-hoa': ['BS.CKII. Lê Kim Sang']
     }[specSlug] || ['Bác sĩ Trưởng khoa CIH'];
 

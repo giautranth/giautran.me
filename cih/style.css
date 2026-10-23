@@ -1055,8 +1055,14 @@ html.translated-ltr .header__cta .btn {
 .subpage-hero__breadcrumbs a { color: #005f80; font-weight: 700; text-decoration: none; transition: color 0.2s; }
 .subpage-hero__breadcrumbs a:hover { color: var(--c-primary); text-decoration: underline; }
 .subpage-hero__breadcrumbs span { color: var(--c-navy); font-weight: 700; }
-.nav__link.active { color: var(--c-primary) !important; position: relative; }
-.nav__link.active::after { content: ''; position: absolute; bottom: 0; left: 1rem; right: 1rem; height: 3px; background: var(--c-primary); border-radius: var(--r-full); }
+/* Active & Hover Header Nav Link Underline Effect */
+.nav__link:not(.nav__link--search) { position: relative; transition: color 0.22s ease; }
+.nav__link:not(.nav__link--search)::after { content: ''; position: absolute; bottom: 12px; left: 0.52rem; right: 0.52rem; height: 2px; background: #007DA5; border-radius: 2px; transform: scaleX(0); transform-origin: center; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+.nav__link:not(.nav__link--search):hover, .nav__item--dropdown:hover > .nav__link, .nav__link.active, .nav__item.active > .nav__link { color: #007DA5 !important; }
+.nav__link:not(.nav__link--search):hover::after, .nav__item--dropdown:hover > .nav__link::after, .nav__link.active::after, .nav__item.active > .nav__link::after { transform: scaleX(1); }
+@media (max-width: 1380px) and (min-width: 1251px) { .nav__link:not(.nav__link--search)::after { left: 0.35rem; right: 0.35rem; } }
+html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; right: 0.35rem; }
+@media (max-width: 1250px) { .nav__link:not(.nav__link--search)::after { display: none !important; } }
 
 /* ── SUBPAGE CONTENT WRAPPER ── */
 .subpage-content { padding: 4.5rem 0; background: var(--c-bg); }

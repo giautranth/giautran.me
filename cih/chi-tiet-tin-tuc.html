@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1792741000" />
+  <link rel="stylesheet" href="style.css?v=1792742000" />
 </head>
 <body style="background: #f8fafc;">
 
@@ -90,7 +90,7 @@
         <li class="nav__item"><a href="chuyen-khoa" class="nav__link">Chuyên Khoa</a></li>
         <li class="nav__item"><a href="bac-si" class="nav__link">Bác Sĩ</a></li>
         <li class="nav__item"><a href="goi-kham" class="nav__link">Gói Dịch Vụ</a></li>
-        <li class="nav__item"><a href="tin-tuc" class="nav__link">Tin Tức</a></li>
+        <li class="nav__item"><a href="tin-tuc" class="nav__link active">Tin Tức</a></li>
         <li class="nav__item nav__item--dropdown">
           <a href="javascript:void(0)" class="nav__link" onclick="event.preventDefault();">Viện Đào Tạo &amp; NCKH <span class="dropdown-arrow">▾</span></a>
           <ul class="nav__dropdown">
@@ -376,6 +376,9 @@
   });
 
   function renderPackageDetail(pkg, allPkgs) {
+    document.querySelectorAll('#main-nav .nav__link').forEach(l => l.classList.remove('active'));
+    const pkgNav = document.querySelector('#main-nav a.nav__link[href="goi-kham"]');
+    if (pkgNav) pkgNav.classList.add('active');
     document.getElementById('page-head-title').innerText = formatTitleCase(pkg.title) + ' | Bệnh viện Quốc tế City';
     
     // Update breadcrumb

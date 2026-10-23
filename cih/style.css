@@ -1531,7 +1531,7 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 ═══════════════════════════════════════════════ */
 .insurance-section {
   padding: 3.5rem 0 4.5rem 0;
-  background: #ffffff !important;
+  background: #f6f6f6 !important;
   border-top: none;
 }
 
@@ -3248,6 +3248,7 @@ main.subpage-content {
 }
 #doi-tac-bao-hiem,
 section#doi-tac-bao-hiem.section.insurance-section {
-  padding-top: 1.25rem !important;
+  background: #f6f6f6 !important;
+  padding-top: 1.75rem !important;
   padding-bottom: 2.25rem !important;
 }

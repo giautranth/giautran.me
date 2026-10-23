@@ -584,8 +584,8 @@ window.closeDoctorModal = function() {
 /* ── AWARD DETAIL MODAL POPUP ── */
 const CIH_AWARDS_DATA = {
   'iso-7101': {
-    img: 'images/Website/giai-thuong/iso_7101_2023.jpg?v=20261023',
-    logo: 'images/Website/giai-thuong/iso_7101_2023.jpg?v=20261023',
+    img: 'images/Website/giai-thuong/iso_7101_2023.png?v=2',
+    logo: 'images/Website/giai-thuong/iso_7101_2023.png?v=2',
     title: 'Chứng nhận ISO 7101:2023',
     badge: 'Chứng nhận Quốc tế',
     desc: 'ISO 7101:2023 là bộ tiêu chuẩn quốc tế đầu tiên được thiết kế chuyên biệt dành cho hệ thống quản lý chất lượng trong lĩnh vực chăm sóc sức khỏe (do AACI chứng nhận). Việc đạt chứng nhận ISO 7101:2023 khẳng định hệ thống quản trị đồng bộ, hiệu quả vận hành chuẩn mực, cải tiến liên tục quy trình chăm sóc và cam kết an toàn người bệnh ở mức cao nhất tại Bệnh viện Quốc tế City.'

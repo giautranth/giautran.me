@@ -593,7 +593,7 @@
         if (!paginationWrap) return;
 
         if (totalPages <= 1) {
-          paginationWrap.innerHTML = `<div style="color: #64748b; font-size: 0.9rem; font-weight: 600;">Hiển thị tất cả ${totalItems} gói dịch vụ</div>`;
+          paginationWrap.innerHTML = '';
           return;
         }
 
@@ -624,9 +624,9 @@
 
         buttonsHTML += '</div>';
 
-        const infoHTML = `<div style="color: #64748b; font-size: 0.92rem; font-weight: 600;">Trang ${currentPage} / ${totalPages} (Tổng ${totalItems} gói dịch vụ)</div>`;
 
-        paginationWrap.innerHTML = buttonsHTML + infoHTML;
+
+        paginationWrap.innerHTML = buttonsHTML;
       }
 
       window.goToPkgPage = function(page) {

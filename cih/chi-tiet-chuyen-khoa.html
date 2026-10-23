@@ -82,6 +82,7 @@
       text-transform: uppercase;
       position: relative;
       padding-bottom: 0.9rem;
+      color: #007DA5 !important;
       text-shadow: 0 1px 10px rgba(255, 255, 255, 0.85);
     }
     .opt1-hero__title::after {
@@ -101,6 +102,8 @@
       color: #1e293b;
       font-weight: 500;
       margin: 0 0 1.8rem 0;
+      text-align: justify;
+      text-justify: inter-word;
       text-shadow: 0 1px 8px rgba(255, 255, 255, 0.8);
     }
     .opt1-hero__actions {
@@ -997,8 +1000,8 @@
       <h1 class="opt1-hero__title" id="spec-title">KHOA PHỤ SẢN</h1>
       <p class="opt1-hero__desc" id="spec-hero-desc">Đồng hành trọn vẹn cùng mẹ bầu trong suốt thai kỳ với dịch vụ Thai sản trọn gói, kỹ thuật Sinh con không đau, Phòng sinh Gia đình ấm cúng và Tầm soát chuyên sâu bệnh lý Phụ khoa – Tuyến vú.</p>
       <div class="opt1-hero__actions">
-        <a href="lien-he.html#dat-lich" class="opt1-btn-gold">📅 ĐẶT LỊCH KHÁM NGAY</a>
-        <a href="#goi-kham" class="opt1-btn-outline" id="spec-hero-pkg-btn">Xem Gói Thai Sản &rarr;</a>
+        <a href="lien-he.html#dat-lich" class="opt1-btn-outline">Đặt Lịch Khám Ngay &rarr;</a>
+
       </div>
     </div>
   </div>
@@ -1544,7 +1547,7 @@
         document.getElementById('spec-title').innerHTML = (spec.title || spec.name).toUpperCase();
         document.getElementById('spec-breadcrumb-title').innerText = spec.name;
         document.getElementById('spec-intro-heading').innerText = 'Giới thiệu';
-        document.getElementById('spec-hero-pkg-btn').innerHTML = 'Xem Gói Dịch Vụ &rarr;';
+        const pkgBtn = document.getElementById('spec-hero-pkg-btn'); if (pkgBtn) pkgBtn.innerHTML = 'Xem Gói Dịch Vụ &rarr;';
 
         if (spec.banner || spec.default_banner) {
           document.getElementById('spec-hero').style.backgroundImage = `url('${spec.banner || spec.default_banner}')`;

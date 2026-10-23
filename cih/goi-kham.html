@@ -443,16 +443,17 @@
         <label class="filter-label" for="pkg-specialty">Chuyên khoa</label>
         <select id="pkg-specialty" class="filter-select">
           <option value="">Tất cả chuyên khoa</option>
-          <option value="tong-quat">Khoa Khám Tổng Quát</option>
-          <option value="phu-san">Khoa Phụ Sản & Thai Sản</option>
-          <option value="nhi">Khoa Nhi & Tiêm Chủng</option>
-          <option value="ung-buou">Tầm Soát Ung Thư</option>
-          <option value="tieu-hoa">Khoa Tiêu Hóa & Nội Soi</option>
-          <option value="cot-song">Khoa Cột Sống & Cơ Xương Khớp</option>
-          <option value="tim-mach">Khoa Tim Mạch & Đột Quỵ</option>
-          <option value="mat">Khoa Mắt</option>
-          <option value="tai-mui-hong">Khoa Tai Mũi Họng</option>
-          <option value="doanh-nghiep">Khám Doanh Nghiệp & Giấy Phép</option>
+          <option value="khoa-phu-san">Khoa Phụ Sản</option>
+          <option value="khoa-kham-tong-quat-ehs">Khoa Khám Tổng Quát (EHS)</option>
+          <option value="khoa-nhi">Khoa Nhi</option>
+          <option value="trung-tam-tiem-chung">Trung Tâm Tiêm Chủng</option>
+          <option value="khoa-tieu-hoa-noi-soi">Trung Tâm Tiêu hóa – Nội soi</option>
+          <option value="khoa-chan-thuong-chinh-hinh">Khoa Chấn Thương Chỉnh Hình</option>
+          <option value="khoa-noi-than-kinh">Khoa Thần Kinh</option>
+          <option value="khoa-tim-mach">Khoa Tim mạch</option>
+          <option value="khoa-mat">Khoa Mắt</option>
+          <option value="trung-tam-tai-mui-hong-va-phau-thuat-dau-co">Trung tâm Tai Mũi Họng chuyên sâu &amp; Phẫu thuật đầu cổ</option>
+          <option value="khoa-da-lieu">Khoa Da Liễu</option>
         </select>
       </div>
     </div>
@@ -470,56 +471,92 @@
       const itemsPerPage = 9;
       let currentFilteredPackages = [];
 
-      function getPkgCatAndTitle(pkg) {
-        const rawTitle = (pkg && pkg.title) ? pkg.title.trim() : '';
-        if (/^khám tổng quát\s*[–-]\s*/i.test(rawTitle)) {
-          const parts = rawTitle.split(/\s*[–-]\s*/);
-          return {
-            cat: parts[0],
-            title: parts.slice(1).join(' – ')
-          };
+            function getPackageSpecialties(pkg) {
+        const title = ((pkg && pkg.title) || '').toLowerCase().trim();
+        const specs = [];
+
+        if (
+          title.includes('thai sản') ||
+          title.includes('gói sinh') ||
+          title.includes('khám thai') ||
+          title.includes('mang thai') ||
+          title.includes('ung thư vú') ||
+          title.includes('cổ tử cung')
+        ) {
+          specs.push('khoa-phu-san', 'phu-san');
         }
-        const rawCat = (pkg && pkg.category) ? pkg.category.replace(/^Gói\s+/i, '').trim() : 'Gói dịch vụ';
-        return {
-          cat: rawCat || 'Gói dịch vụ',
-          title: rawTitle
-        };
+
+        if (title.includes('tiêm chủng')) {
+          specs.push('trung-tam-tiem-chung', 'tiem-chung', 'khoa-nhi', 'nhi');
+        }
+        if (title.includes('trẻ em')) {
+          if (!specs.includes('khoa-nhi')) specs.push('khoa-nhi', 'nhi');
+        }
+
+        if (title.includes('mắt')) {
+          specs.push('khoa-mat', 'mat');
+        }
+
+        if (title.includes('dạ dày') || title.includes('đại tràng') || title.includes('tiêu hóa')) {
+          specs.push('khoa-tieu-hoa-noi-soi', 'tieu-hoa');
+        }
+
+        if (title.includes('cột sống') || title.includes('thắt lưng') || title.includes('chấn thương') || title.includes('chỉnh hình')) {
+          specs.push('khoa-chan-thuong-chinh-hinh', 'cot-song');
+        }
+
+        if (title.includes('đột quỵ') || title.includes('tim mạch') || title.includes('thần kinh')) {
+          specs.push('khoa-noi-than-kinh', 'than-kinh', 'khoa-tim-mach', 'tim-mach');
+        }
+
+        if (title.includes('tai mũi họng')) {
+          specs.push('trung-tam-tai-mui-hong-va-phau-thuat-dau-co', 'tai-mui-hong');
+        }
+
+        if (title.includes('dị ứng') || title.includes('da liễu')) {
+          specs.push('khoa-da-lieu', 'da-lieu');
+        }
+
+        if (
+          title.includes('khám tổng quát') ||
+          title.includes('work permit') ||
+          title.includes('lái xe') ||
+          title.includes('sức khỏe công ty')
+        ) {
+          if (!title.includes('trẻ em')) {
+            specs.push('khoa-kham-tong-quat-ehs', 'tong-quat');
+          }
+        }
+
+        if (specs.length === 0) {
+          specs.push('khoa-kham-tong-quat-ehs', 'tong-quat');
+        }
+
+        return specs;
       }
 
-      function getPackageSpecialty(pkg) {
-        const t = ((pkg.title || '') + ' ' + (pkg.category || '') + ' ' + (pkg.excerpt || '')).toLowerCase();
-        if (t.includes('thai sản') || t.includes('sinh ') || t.includes('khám thai') || t.includes('mang thai') || t.includes('sinh sản') || t.includes('cát tường') || t.includes('như ý') || t.includes('hoa khai phú quý') || t.includes('khởi nguyên hưng thịnh')) {
-          return 'phu-san';
-        }
-        if (t.includes('tiêm chủng') || t.includes('trẻ em') || t.includes('nhi')) {
-          if (t.includes('mắt trẻ em')) return 'mat';
-          return 'nhi';
-        }
-        if (t.includes('ung thư vú') || t.includes('ung thư cổ tử cung') || (t.includes('tầm soát ung thư') && !t.includes('dạ dày') && !t.includes('đại tràng') && !t.includes('tai mũi họng'))) {
-          return 'ung-buou';
-        }
-        if (t.includes('dạ dày') || t.includes('đại tràng') || t.includes('tiêu hóa')) {
-          return 'tieu-hoa';
-        }
-        if (t.includes('cột sống') || t.includes('thắt lưng') || t.includes('chấn thương') || t.includes('chỉnh hình')) {
-          return 'cot-song';
-        }
-        if (t.includes('đột quỵ') || t.includes('tim mạch')) {
-          return 'tim-mach';
-        }
-        if (t.includes('mắt')) {
-          return 'mat';
-        }
-        if (t.includes('tai mũi họng')) {
-          return 'tai-mui-hong';
-        }
-        if (t.includes('work permit') || t.includes('lái xe') || t.includes('công ty')) {
-          return 'doanh-nghiep';
-        }
-        if (t.includes('tổng quát') || t.includes('kim cương') || t.includes('bạch kim') || t.includes('vàng') || t.includes('bạc') || t.includes('tiêu chuẩn')) {
-          return 'tong-quat';
-        }
-        return 'tong-quat';
+      function getPkgCatAndTitle(pkg) {
+        const rawTitle = (pkg && pkg.title) ? pkg.title.trim() : '';
+        const cleanTitle = /^khám tổng quát\s*[–-]\s*/i.test(rawTitle)
+          ? rawTitle.split(/\s*[–-]\s*/).slice(1).join(' – ')
+          : rawTitle;
+
+        const specs = getPackageSpecialties(pkg);
+        let cat = 'Khoa Khám Tổng Quát (EHS)';
+        if (specs.includes('khoa-phu-san')) cat = 'Khoa Phụ Sản';
+        else if (specs.includes('trung-tam-tiem-chung')) cat = 'Trung Tâm Tiêm Chủng';
+        else if (specs.includes('khoa-mat')) cat = 'Khoa Mắt';
+        else if (specs.includes('khoa-da-lieu')) cat = 'Khoa Da Liễu';
+        else if (specs.includes('khoa-nhi')) cat = 'Khoa Nhi';
+        else if (specs.includes('khoa-tieu-hoa-noi-soi')) cat = 'Trung Tâm Tiêu hóa – Nội soi';
+        else if (specs.includes('khoa-chan-thuong-chinh-hinh')) cat = 'Khoa Chấn Thương Chỉnh Hình';
+        else if (specs.includes('khoa-noi-than-kinh')) cat = 'Khoa Thần Kinh – Tim mạch';
+        else if (specs.includes('trung-tam-tai-mui-hong-va-phau-thuat-dau-co')) cat = 'Trung tâm Tai Mũi Họng';
+
+        return {
+          cat: cat,
+          title: cleanTitle
+        };
       }
 
       function applyFilters() {
@@ -529,13 +566,12 @@
         const selectedSpec = specSelect ? specSelect.value : '';
 
         currentFilteredPackages = (window.allPackages || []).filter(p => {
-          const matchesSearch = !term || 
-            (p.title && p.title.toLowerCase().includes(term)) || 
-            (p.excerpt && p.excerpt.toLowerCase().includes(term)) ||
+          const matchesSearch = !term ||
+            (p.title && p.title.toLowerCase().includes(term)) ||
             (p.category && p.category.toLowerCase().includes(term));
-          
-          const spec = getPackageSpecialty(p);
-          const matchesSpec = !selectedSpec || spec === selectedSpec;
+
+          const specs = getPackageSpecialties(p);
+          const matchesSpec = !selectedSpec || specs.includes(selectedSpec);
 
           return matchesSearch && matchesSpec;
         });
@@ -556,10 +592,25 @@
             const searchParam = urlParams.get('search') || urlParams.get('q');
             
             if (specParam) {
+              const aliasMap = {
+                'phu-san': 'khoa-phu-san',
+                'tong-quat': 'khoa-kham-tong-quat-ehs',
+                'nhi': 'khoa-nhi',
+                'tiem-chung': 'trung-tam-tiem-chung',
+                'tieu-hoa': 'khoa-tieu-hoa-noi-soi',
+                'cot-song': 'khoa-chan-thuong-chinh-hinh',
+                'than-kinh': 'khoa-noi-than-kinh',
+                'tim-mach': 'khoa-tim-mach',
+                'mat': 'khoa-mat',
+                'tai-mui-hong': 'trung-tam-tai-mui-hong-va-phau-thuat-dau-co',
+                'da-lieu': 'khoa-da-lieu'
+              };
+              const resolvedSpec = aliasMap[specParam] || specParam;
               const specSelect = document.getElementById('pkg-specialty');
-              if (specSelect && Array.from(specSelect.options).some(o => o.value === specParam)) {
-                specSelect.value = specParam;
+              if (specSelect && Array.from(specSelect.options).some(o => o.value === resolvedSpec)) {
+                specSelect.value = resolvedSpec;
               }
+            }
             }
             if (searchParam) {
               const searchInput = document.getElementById('pkg-search');

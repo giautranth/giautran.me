@@ -329,7 +329,7 @@ const CIH_NEWS_DATA = [
     "id": 11,
     "title": "Thông tin bảo hiểm",
     "link": "https://cih.com.vn/thong-tin-bao-hiem/",
-    "img": "https://cih.com.vn/images/12.2023/Bo-him-lin-kt.jpg",
+    "img": "images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp",
     "date": "01/11/2024",
     "category": "Khoa Sản &#8211; Nhi",
     "author": "Ban Biên Tập Y Khoa CIH",

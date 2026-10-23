@@ -494,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
           relGrid.innerHTML = related.map(p => `
             <article class="news-card news-card--standard">
               <a href="chi-tiet-tin-tuc?id=${p.id}" class="news-card__img-link">
-                <img src="${p.image || 'images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'}" alt="${formatTitleCase(p.title)}" class="news-card__img" />
+                <img src="${p.image || 'images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'}" alt="${formatTitleCase(p.title)}" class="news-card__img" />
                 <span class="news-card__cat">${p.categories[0] || 'TIN TỨC'}</span>
               </a>
               <div class="news-card__body">
@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
       newsListGrid.innerHTML = dataset.posts.map(p => `
         <article class="news-card news-card--standard">
           <a href="chi-tiet-tin-tuc?id=${p.id}" class="news-card__img-link">
-            <img src="${p.image || 'images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'}" alt="${formatTitleCase(p.title)}" class="news-card__img" />
+            <img src="${p.image || 'images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'}" alt="${formatTitleCase(p.title)}" class="news-card__img" />
             <span class="news-card__cat">${p.categories[0] || 'TIN TỨC'}</span>
           </a>
           <div class="news-card__body">
@@ -555,7 +555,7 @@ window.openDoctorModal = function(docId) {
     const expEl = document.getElementById('doc-modal-exp');
     const contentEl = document.getElementById('doc-modal-content');
 
-    if (imgEl) imgEl.src = d.image || 'images/doctor_male_1.png';
+    if (imgEl) imgEl.src = d.image || 'images/doctor_male_1.webp';
     if (nameEl) nameEl.innerText = d.name;
     let cleanContent = (d.content || d.excerpt || '<p>Thông tin chuyên môn chi tiết đang được cập nhật.</p>')
       .replace(/Bệnh Viện Quốc Tế City\s*[–\-]\s*Mỗi điểm chạm là một trải nghiệm hạnh phúc!?/gi, '')
@@ -584,113 +584,113 @@ window.closeDoctorModal = function() {
 /* ── AWARD DETAIL MODAL POPUP ── */
 const CIH_AWARDS_DATA = {
   'iso-7101': {
-    img: 'images/Website/giai-thuong/iso_7101_2023.png?v=2',
-    logo: 'images/Website/giai-thuong/iso_7101_2023.png?v=2',
+    img: 'images/Website/giai-thuong/iso_7101_2023.webp?v=2',
+    logo: 'images/Website/giai-thuong/iso_7101_2023.webp?v=2',
     title: 'Chứng nhận ISO 7101:2023',
     badge: 'Chứng nhận Quốc tế',
     desc: 'ISO 7101:2023 là bộ tiêu chuẩn quốc tế đầu tiên được thiết kế chuyên biệt dành cho hệ thống quản lý chất lượng trong lĩnh vực chăm sóc sức khỏe (do AACI chứng nhận). Việc đạt chứng nhận ISO 7101:2023 khẳng định hệ thống quản trị đồng bộ, hiệu quả vận hành chuẩn mực, cải tiến liên tục quy trình chăm sóc và cam kết an toàn người bệnh ở mức cao nhất tại Bệnh viện Quốc tế City.'
   },
   aaci: {
-    img: 'images/Website/giai-thuong/gt_acci.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/logo/acci_transparent.png',
+    img: 'images/Website/giai-thuong/gt_acci.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/acci_transparent.webp',
     title: 'Chứng nhận Chất lượng Quốc tế AACI (Hoa Kỳ)',
     badge: 'Chứng nhận Quốc tế',
     desc: 'Bệnh viện Quốc tế City là bệnh viện đầu tiên tại Việt Nam đạt Tiêu chuẩn An toàn & Chất lượng Y tế Quốc tế AACI (American Accreditation Commission International). AACI đánh giá toàn diện các tiêu chuẩn khắt khe về an toàn người bệnh, quản lý rủi ro lâm sàng, cơ sở hạ tầng hiện đại và văn hóa y tế lấy người bệnh làm trung tâm.'
   },
   rtac: {
-    img: 'images/Website/giai-thuong/gt_rtac.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/logo/RTAC_transparent.png',
+    img: 'images/Website/giai-thuong/gt_rtac.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/RTAC_transparent.webp',
     title: 'Chứng nhận Quốc tế Hỗ trợ Sinh sản RTAC (Úc)',
     badge: 'Chứng nhận Quốc tế',
     desc: 'RTAC là bộ tiêu chuẩn chất lượng quốc tế uy tín trong lĩnh vực Hỗ trợ Sinh sản (IVF), do Ủy ban Chứng nhận Kỹ thuật Hỗ trợ Sinh sản trực thuộc Hiệp hội Sinh sản Úc và New Zealand (Fertility Society of Australia) xây dựng và thẩm định. Bộ tiêu chuẩn được áp dụng bắt buộc tại Úc và New Zealand, nhằm đảm bảo an toàn tối đa cho người bệnh, độ chính xác tuyệt đối trong thực hành chuyên môn và tỷ lệ thụ thai thành công vượt trội.'
   },
   asia: {
-    img: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
     title: 'Top 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Bệnh viện Quốc tế City vinh dự được vinh danh trong hạng mục “Top 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025” (Asia Top Trust Brand Award 2025). Giải thưởng ghi nhận chiến lược phát triển bền vững, chất lượng điều trị y tế chuyên sâu, dịch vụ chăm sóc chuẩn 5 sao và uy tín hàng đầu của bệnh viện trong khu vực.'
   },
   'asia-brand': {
-    img: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
     title: 'Top 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Bệnh viện Quốc tế City vinh dự được vinh danh trong hạng mục “Top 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025” (Asia Top Trust Brand Award 2025). Giải thưởng ghi nhận chiến lược phát triển bền vững, chất lượng điều trị y tế chuyên sâu, dịch vụ chăm sóc chuẩn 5 sao và uy tín hàng đầu của bệnh viện trong khu vực.'
   },
   ihf: {
-    img: 'images/Website/giai-thuong/gt_ihf.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/gt_ihf.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/gt_ihf.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/gt_ihf.webp?v=20260812',
     title: 'Thành viên Liên đoàn Bệnh viện Quốc tế (IHF)',
     badge: 'Hội viên Toàn cầu',
     desc: 'Bệnh viện Quốc tế City tự hào là thành viên chính thức độc lập của Liên đoàn Bệnh viện Quốc tế (International Hospital Federation - IHF). Là tổ chức phi chính phủ toàn cầu đại diện cho các bệnh viện và tổ chức chăm sóc sức khỏe uy tín, IHF kết nối CIH với mạng lưới các chuyên gia y tế thế giới nhằm không ngừng nâng cao chất lượng dịch vụ theo chuẩn quốc tế.'
   },
   esc: {
-    img: 'images/Website/giai-thuong/cert_esc_icare.png?v=20260812',
-    logo: 'images/Website/giai-thuong/logo/Esc-logo_transparent.png',
+    img: 'images/Website/giai-thuong/cert_esc_icare.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/Esc-logo_transparent.webp',
     title: 'Chứng nhận Quốc tế Điều trị Suy tim Full ICARe-HF (ESC/HFA)',
     badge: 'Chứng nhận Quốc tế',
     desc: 'Bệnh viện Quốc tế City vinh dự là 1 trong 4 bệnh viện duy nhất tại TP. HCM đạt chứng nhận Quốc tế cao nhất trong điều trị suy tim (Full ICARe-HF Accreditation), cấp bởi Hiệp hội Tim mạch Châu Âu ESC/HFA. Đây là chứng nhận quốc tế uy tín, đánh giá toàn diện chất lượng chăm sóc và điều trị bệnh nhân suy tim dựa trên các tiêu chuẩn chuyên môn nghiêm ngặt của châu Âu.'
   },
   'healthcare-asia': {
-    img: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812',
     title: 'Giải thưởng Healthcare Asia Awards 2023',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Giải thưởng danh giá Healthcare Asia Awards 2023 vinh danh Bệnh viện Quốc tế City với hạng mục "Most Improved Community Hospital of the Year - Vietnam" nhờ những nỗ lực không ngừng trong việc đổi mới quy trình khám chữa bệnh, ứng dụng kỹ thuật cao và nâng tầm trải nghiệm chăm sóc sức khỏe cộng đồng.'
   },
   top10ivf: {
-    img: 'images/Website/giai-thuong/top10ivf.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/top10ivf.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
     title: 'Top 10 Trung tâm Hỗ trợ Sinh sản Tốt nhất Việt Nam 2025',
     badge: 'Giải thưởng Y tế',
     desc: 'Trung tâm Hỗ trợ Sinh sản (IVF Center) thuộc Bệnh viện Quốc tế City vinh dự đạt danh hiệu Top 10 Trung tâm Hỗ trợ Sinh sản tốt nhất Việt Nam. Giải thưởng khẳng định năng lực chuyên môn vượt trội của đội ngũ bác sĩ, chuyên gia phôi học giàu kinh nghiệm, hệ thống phòng Lab sạch chuẩn quốc tế và tỷ lệ điều trị hiếm muộn thành công hàng đầu tại Việt Nam.'
   },
   'top-10-ivf': {
-    img: 'images/Website/giai-thuong/top10ivf.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/top10ivf.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
     title: 'Top 10 Trung tâm Hỗ trợ Sinh sản Tốt nhất Việt Nam 2025',
     badge: 'Giải thưởng Y tế',
     desc: 'Trung tâm Hỗ trợ Sinh sản (IVF Center) thuộc Bệnh viện Quốc tế City vinh dự đạt danh hiệu Top 10 Trung tâm Hỗ trợ Sinh sản tốt nhất Việt Nam. Giải thưởng khẳng định năng lực chuyên môn vượt trội của đội ngũ bác sĩ, chuyên gia phôi học giàu kinh nghiệm, hệ thống phòng Lab sạch chuẩn quốc tế và tỷ lệ điều trị hiếm muộn thành công hàng đầu tại Việt Nam.'
   },
   top3: {
-    img: 'images/Website/giai-thuong/top3.png?v=20260812',
-    logo: 'images/Website/giai-thuong/top3.png?v=20260812',
+    img: 'images/Website/giai-thuong/top3.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/top3.webp?v=20260812',
     title: 'Top 3 Thương hiệu Tiêu biểu Châu Á - Thái Bình Dương 2026',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Bệnh viện Quốc tế City tự hào đạt danh hiệu "Top 3 Thương hiệu Tiêu biểu Châu Á - Thái Bình Dương 2026". Đây là minh chứng rõ nét cho sự đầu tư chuẩn mực về chuyên môn, công nghệ y khoa hiện đại và dịch vụ y tế hướng tới trải nghiệm hoàn hảo cho khách hàng.'
   },
   'top-3': {
-    img: 'images/Website/giai-thuong/top3.png?v=20260812',
-    logo: 'images/Website/giai-thuong/top3.png?v=20260812',
+    img: 'images/Website/giai-thuong/top3.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/top3.webp?v=20260812',
     title: 'Top 3 Thương hiệu Tiêu biểu Châu Á Thái Bình Dương 2026',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Tại Diễn đàn Kinh tế Châu Á – Thái Bình Dương (APEF) diễn ra ở Bắc Kinh, Bệnh viện Quốc tế City vinh dự được vinh danh trong hạng mục “Top 3 Thương hiệu – Doanh nghiệp tiêu biểu Châu Á Thái Bình Dương 2026”. Giải thưởng là sự ghi nhận xứng đáng cho hành trình tiên phong đổi mới, năng lực y tế chuyên môn sâu, chất lượng dịch vụ 5 sao và uy tín vững chắc của CIH trên trường quốc tế.'
   },
   iso: {
-    img: 'images/Website/giai-thuong/iso.png?v=20260812',
-    logo: 'images/Website/giai-thuong/iso.png?v=20260812',
+    img: 'images/Website/giai-thuong/iso.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/iso.webp?v=20260812',
     title: 'Chứng Nhận ISO 15189:2022',
     badge: 'Tiêu chuẩn Quốc tế',
     desc: 'Khoa Xét nghiệm Bệnh viện Quốc tế City cũng đạt chứng nhận ISO 15189:2022 - thuộc tổ chức tiêu chuẩn hóa quốc tế (ISO) toàn cầu. Trong lĩnh vực y học xét nghiệm, ISO 15189:2022 được xem là chuẩn mực khắt khe bậc nhất, các tiêu chí đánh giá toàn diện năng lực và chất lượng Khoa Xét nghiệm của bệnh viện.'
   },
   'iso-15189': {
-    img: 'images/Website/giai-thuong/iso.png?v=20260812',
-    logo: 'images/Website/giai-thuong/iso.png?v=20260812',
+    img: 'images/Website/giai-thuong/iso.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/iso.webp?v=20260812',
     title: 'Chứng Nhận ISO 15189:2022',
     badge: 'Tiêu chuẩn Quốc tế',
     desc: 'Khoa Xét nghiệm Bệnh viện Quốc tế City cũng đạt chứng nhận ISO 15189:2022 - thuộc tổ chức tiêu chuẩn hóa quốc tế (ISO) toàn cầu. Trong lĩnh vực y học xét nghiệm, ISO 15189:2022 được xem là chuẩn mực khắt khe bậc nhất, các tiêu chí đánh giá toàn diện năng lực và chất lượng Khoa Xét nghiệm của bệnh viện.'
   },
   'top10-asia-2025': {
-    img: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
     title: 'Top 10 thương hiệu xuất sắc Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Danh hiệu danh giá này được xét duyệt dựa trên những tiêu chí khắt khe như chất lượng dịch vụ, uy tín thương hiệu, hệ thống quản lý chất lượng và các giá trị đóng góp cho cộng đồng. Đây là một bước tiến quan trọng, đánh dấu vị thế ngày càng vững chắc của Bệnh viện Quốc tế City trên bản đồ y tế khu vực, khẳng định chiến lược phát triển bền vững và tầm nhìn hội nhập quốc tế.'
   },
   'top10asia': {
-    img: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.jpg?v=20260812',
-    logo: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.jpg?v=20260812',
+    img: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
     title: 'Top 10 thương hiệu xuất sắc Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Danh hiệu danh giá này được xét duyệt dựa trên những tiêu chí khắt khe như chất lượng dịch vụ, uy tín thương hiệu, hệ thống quản lý chất lượng và các giá trị đóng góp cho cộng đồng. Đây là một bước tiến quan trọng, đánh dấu vị thế ngày càng vững chắc của Bệnh viện Quốc tế City trên bản đồ y tế khu vực, khẳng định chiến lược phát triển bền vững và tầm nhìn hội nhập quốc tế.'

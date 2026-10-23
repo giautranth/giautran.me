@@ -12,8 +12,122 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css?v=1792746000" />
+  <style>
+    .related-news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .related-news-card {
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .related-news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+      border-color: #cbd5e1;
+    }
+    .related-news-card__img-link {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #f8fafc;
+      position: relative;
+    }
+    .related-news-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .related-news-card:hover .related-news-card__img {
+      transform: scale(1.04);
+    }
+    .related-news-card__body {
+      padding: 1.15rem 1.35rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
+    .related-news-card__date {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #64748b;
+      margin-bottom: 0.6rem;
+    }
+    .related-news-card__date svg {
+      color: #64748b;
+      flex-shrink: 0;
+    }
+    .related-news-card__title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin: 0 0 1.15rem 0 !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+      text-align: left !important;
+      min-height: calc(2 * 1.45em);
+    }
+    .related-news-card__title a {
+      color: #1e293b !important;
+      text-decoration: none !important;
+      transition: color 0.15s ease;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+      text-align: left !important;
+    }
+    .related-news-card__title a:hover {
+      color: #007DA5 !important;
+    }
+    .related-news-card__more {
+      margin-top: auto !important;
+      align-self: flex-end !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 4px !important;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      color: #475569 !important;
+      text-decoration: none !important;
+      border-top: none !important;
+      padding-top: 0.25rem !important;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .related-news-card:hover .related-news-card__more,
+    .related-news-card__more:hover {
+      color: #007DA5 !important;
+      font-weight: 700 !important;
+    }
+    @media (max-width: 992px) {
+      .related-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .related-news-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body style="background: #f8fafc;">
+<body style="background: #ffffff;">
 
 <!-- TOP BAR -->
 <div class="top-bar" id="top-bar">
@@ -130,11 +244,11 @@
   </div>
 </section>
 
-<!-- MAIN ARTICLE SECTION (SINGLE COLUMN CLEAN STYLE - TAM ANH LIKE) -->
-<main class="subpage-content" style="padding: 2.5rem 0;">
-  <div class="container" style="max-width: 960px;">
+<!-- MAIN ARTICLE SECTION -->
+<main class="subpage-content" style="padding: 2.5rem 0; background: #ffffff !important;">
+  <div class="container">
     
-    <article class="article-detail-wrap" style="background: #ffffff; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;">
+    <article class="article-detail-wrap" style="background: #ffffff; padding: 0; border: none; box-shadow: none;">
       
       <!-- Article Title Uppercase Blue -->
       <h1 id="art-title" style="font-size: clamp(1.25rem, 2vw, 1.55rem); font-weight: 800; line-height: 1.4; color: #007DA5; text-transform: uppercase; margin-bottom: 1.25rem; letter-spacing: -0.2px;">
@@ -192,21 +306,26 @@
       </div>
 
       <!-- Related Articles Row Slider -->
-      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+      <div style="margin-top: 2.25rem; padding-top: 2.25rem; border-top: 1px solid #e2e8f0;">
         
-        <h3 style="font-size: 1.25rem; font-weight: 800; color: #007DA5; margin-bottom: 1.5rem; text-transform: uppercase;">
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: #007DA5; margin-bottom: 1.75rem; text-transform: uppercase; letter-spacing: 0.2px; position: relative; padding-bottom: 0.65rem;">
           Bài viết liên quan
+          <span style="position: absolute; bottom: 0; left: 0; width: 44px; height: 3px; background: #dc2626; border-radius: 2px;"></span>
         </h3>
 
-        <div style="position: relative; padding: 0 1rem;">
+        <div style="position: relative; padding: 0;">
           <!-- Slider Prev Arrow (Left Middle) -->
-          <button id="rel-prev-btn" aria-label="Bài trước" style="position: absolute; left: -18px; top: 40%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">‹</button>
+          <button id="rel-prev-btn" aria-label="Bài trước" style="position: absolute; left: -22px; top: 50%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #e2e8f0; background: #ffffff; color: #007DA5; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';this.style.borderColor='#007DA5';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';this.style.borderColor='#e2e8f0';">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
 
           <!-- Cards Grid -->
-          <div id="related-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;"></div>
+          <div id="related-grid" class="related-news-grid"></div>
 
           <!-- Slider Next Arrow (Right Middle) -->
-          <button id="rel-next-btn" aria-label="Bài sau" style="position: absolute; right: -18px; top: 40%; transform: translateY(-50%); z-index: 10; width: 42px; height: 42px; border-radius: 50%; border: 1px solid #cbd5e1; background: #ffffff; color: #007DA5; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 12px rgba(0,0,0,0.12);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';">›</button>
+          <button id="rel-next-btn" aria-label="Bài sau" style="position: absolute; right: -22px; top: 50%; transform: translateY(-50%); z-index: 10; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #e2e8f0; background: #ffffff; color: #007DA5; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);" onmouseover="this.style.background='#007DA5';this.style.color='#fff';this.style.borderColor='#007DA5';" onmouseout="this.style.background='#fff';this.style.color='#007DA5';this.style.borderColor='#e2e8f0';">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
       </div>
 
@@ -788,16 +907,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       relatedGrid.innerHTML = items.map(rel => `
-        <div style="background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); transition: transform 0.2s; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-          <a href="chi-tiet-tin-tuc?id=${rel.id}">
-            <img src="${rel.img}" alt="${formatTitleCase(rel.title)}" style="width: 100%; height: 180px; object-fit: cover;" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
+        <article class="related-news-card">
+          <a href="chi-tiet-tin-tuc?id=${rel.id}" class="related-news-card__img-link">
+            <img src="${rel.img}" alt="${formatTitleCase(rel.title)}" class="related-news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.png'" loading="lazy" />
           </a>
-          <div style="padding: 1rem 1.15rem; flex: 1;">
-            <h4 style="font-size: 0.95rem; font-weight: 700; line-height: 1.5; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
-              <a href="chi-tiet-tin-tuc?id=${rel.id}" style="color: #0f3775; text-decoration: none;">${formatTitleCase(rel.title)}</a>
+          <div class="related-news-card__body">
+            <div class="related-news-card__date">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>${formatNewsDate(rel.date) || '19/08/2026'}</span>
+            </div>
+            <h4 class="related-news-card__title">
+              <a href="chi-tiet-tin-tuc?id=${rel.id}">${formatTitleCase(rel.title)}</a>
             </h4>
+            <a href="chi-tiet-tin-tuc?id=${rel.id}" class="news-card__more related-news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
-        </div>
+        </article>
       `).join('');
     }
 

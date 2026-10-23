@@ -2367,18 +2367,18 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 }
 
 .mobile-arrow--prev {
-  left: -22px !important;
+  left: -21px !important;
 }
 
 .mobile-arrow--next {
-  right: -22px !important;
+  right: -21px !important;
 }
 
 .mobile-slider-track-wrap {
   width: 100% !important;
   overflow: hidden !important;
   border-radius: 18px !important;
-  padding: 6px 2px !important;
+  padding: 6px 0 !important;
   box-sizing: border-box !important;
 }
 
@@ -2401,10 +2401,11 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
   .mobile-slider-track-wrap #spec-grid > *,
   .mobile-slider-track-wrap #doc-grid-3 > *,
   .mobile-slider-track-wrap #pkg-grid > *,
+  #goi-kham .mobile-slider-track-wrap #pkg-grid > .pkg-home-card,
   .mobile-slider-track-wrap #news-grid-3 > * {
-    flex: 0 0 calc((100% - 3.5rem - 4px) / 3) !important;
-    width: calc((100% - 3.5rem - 4px) / 3) !important;
-    max-width: calc((100% - 3.5rem - 4px) / 3) !important;
+    flex: 0 0 calc((100% - 3.5rem) / 3) !important;
+    width: calc((100% - 3.5rem) / 3) !important;
+    max-width: calc((100% - 3.5rem) / 3) !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;

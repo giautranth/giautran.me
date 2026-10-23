@@ -1065,7 +1065,12 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 @media (max-width: 1250px) { .nav__link:not(.nav__link--search)::after { display: none !important; } }
 
 /* ── SUBPAGE CONTENT WRAPPER ── */
-.subpage-content { padding: 4.5rem 0; background: #ffffff; }
+.subpage-content { padding: 2rem 0 1.25rem 0 !important; background: #ffffff; }
+.subpage-content + #doi-tac-bao-hiem,
+#doi-tac-bao-hiem.insurance-section {
+  padding-top: 1.25rem !important;
+  padding-bottom: 2.5rem !important;
+}
 .subpage-card { background: var(--c-white); border-radius: var(--r-lg); padding: 2.5rem; box-shadow: var(--shadow-md); border: 1px solid var(--c-border); margin-bottom: 2.5rem; }
 .subpage-heading { font-size: 1.75rem; font-weight: 800; color: #007DA5; margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; }
 .subpage-heading::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 3px; background: var(--c-green); border-radius: var(--r-full); }

@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1792740000" />
+  <link rel="stylesheet" href="style.css?v=1792741000" />
   <style>
     /* Filter Bar Styles */
     .filter-bar {
@@ -241,19 +241,60 @@
       gap: 5px !important;
       text-align: right !important;
       width: 100% !important;
-      color: #00688B !important;
-      font-weight: 700 !important;
+      color: #475569 !important;
+      font-weight: 400 !important;
       font-size: 0.82rem !important;
       text-decoration: none !important;
     }
 
     #pkg-grid .pkg-home-card .news-card__more .arrow {
-      color: #00688B !important;
-      font-weight: 700 !important;
+      color: #475569 !important;
+      font-weight: 400 !important;
       transition: transform 0.2s ease !important;
     }
 
     #pkg-grid .pkg-home-card:hover .news-card__more .arrow {
+      transform: translateX(3px) !important;
+    }
+  
+    /* Xem thêm: bình thường không bold, không màu; rê chuột vào mới bold, màu xanh */
+    .spec-card:hover .spec-card__link,
+    .doc-card-v2:hover .doc-card-v2__more-link,
+    .news-card:hover .news-card__more,
+    .pkg-home-card:hover .news-card__more,
+    .spec-card__link:hover,
+    .doc-card-v2__more-link:hover,
+    .news-card__more:hover,
+    a.spec-card__link:hover,
+    a.doc-card-v2__more-link:hover,
+    a.news-card__more:hover,
+    #tin-tuc .news-card:hover .news-card__more,
+    #tin-tuc a.news-card__more:hover,
+    #chuyen-khoa .spec-card:hover .spec-card__link,
+    #chuyen-khoa a.spec-card:hover .spec-card__link,
+    #bac-si .doc-card-v2:hover .doc-card-v2__more-link,
+    #bac-si a.doc-card-v2__more-link:hover,
+    #goi-kham .pkg-home-card:hover .news-card__more,
+    #goi-kham .pkg-home-card a.news-card__more:hover,
+    #pkg-grid .pkg-home-card:hover .news-card__more,
+    #pkg-grid .pkg-home-card a.news-card__more:hover {
+      color: #007DA5 !important;
+      font-weight: 700 !important;
+    }
+    .spec-card:hover .spec-card__link .arrow,
+    .doc-card-v2:hover .doc-card-v2__more-link .arrow,
+    .news-card:hover .news-card__more .arrow,
+    .pkg-home-card:hover .news-card__more .arrow,
+    .spec-card__link:hover .arrow,
+    .doc-card-v2__more-link:hover .arrow,
+    .news-card__more:hover .arrow,
+    #tin-tuc .news-card:hover .news-card__more .arrow,
+    #chuyen-khoa .spec-card:hover .spec-card__link .arrow,
+    #bac-si .doc-card-v2:hover .doc-card-v2__more-link .arrow,
+    #goi-kham .pkg-home-card:hover .news-card__more .arrow,
+    #pkg-grid .pkg-home-card:hover .news-card__more .arrow {
+      color: #007DA5 !important;
+      font-weight: 700 !important;
       transform: translateX(3px) !important;
     }
   </style>

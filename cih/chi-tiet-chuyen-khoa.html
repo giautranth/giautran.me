@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=1792715800" />
+  <link rel="stylesheet" href="style.css?v=1792721800" />
   <style>
     /* Footer long divider line before Copyright */
     .footer__bottom {
@@ -26,12 +26,12 @@
       background: #ffffff;
     }
 
-    /* 1. HERO BANNER */
+    /* 1. HERO BANNER (MẪU SANG 1: CHAMPAGNE SILK & BOKEH VIP SUITE) */
     .opt1-hero {
       position: relative;
       width: 100%;
       min-height: 460px;
-      background: #003452 url('images/banner_khoa_phu_san.jpg') right center / cover no-repeat;
+      background: #f8f4ec url('images/banner_khoa_phu_san.jpg') right center / cover no-repeat;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -40,7 +40,9 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(0, 52, 82, 0.98) 0%, rgba(0, 88, 124, 0.94) 44%, rgba(0, 125, 165, 0.25) 56%, rgba(0, 0, 0, 0) 68%);
+      background:
+        radial-gradient(circle at 18% 28%, rgba(255, 250, 235, 0.55) 0%, transparent 48%),
+        linear-gradient(90deg, rgba(252, 245, 228, 0.88) 0%, rgba(248, 236, 206, 0.76) 33%, rgba(244, 228, 190, 0.25) 47%, rgba(244, 228, 190, 0) 58%);
       z-index: 1;
     }
     .opt1-hero > .container {
@@ -49,9 +51,10 @@
       z-index: 2;
     }
     .opt1-hero__content {
-      max-width: 520px;
+      max-width: 500px;
       padding: 3.5rem 0;
-      color: #ffffff;
+      color: #073B54;
+      position: relative;
     }
     .opt1-hero__badge {
       display: inline-flex;
@@ -70,19 +73,35 @@
       backdrop-filter: blur(6px);
     }
     .opt1-hero__title {
-      font-size: 2.45rem;
-      font-weight: 900;
+      font-size: 2.5rem;
+      font-weight: 800;
       line-height: 1.2;
-      margin: 0 0 0.95rem 0;
-      color: #ffffff;
-      letter-spacing: -0.4px;
+      margin: 0 0 1.25rem 0;
+      color: #073B54;
+      letter-spacing: 0.02em;
       text-transform: uppercase;
+      position: relative;
+      padding-bottom: 0.9rem;
+      text-shadow: 0 1px 10px rgba(255, 255, 255, 0.85);
+    }
+    .opt1-hero__title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 68px;
+      height: 3.5px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #C59A3F 0%, #F1D382 50%, #C59A3F 100%);
+      box-shadow: 0 2px 10px rgba(197, 154, 63, 0.35);
     }
     .opt1-hero__desc {
-      font-size: 0.96rem;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.92);
-      margin: 0 0 1.65rem 0;
+      font-size: 0.98rem;
+      line-height: 1.72;
+      color: #1e293b;
+      font-weight: 500;
+      margin: 0 0 1.8rem 0;
+      text-shadow: 0 1px 8px rgba(255, 255, 255, 0.8);
     }
     .opt1-hero__actions {
       display: flex;
@@ -91,14 +110,15 @@
       flex-wrap: wrap;
     }
     .opt1-btn-gold {
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      background: linear-gradient(135deg, #074766 0%, #006B8F 100%);
       color: #ffffff !important;
+      border: 1px solid rgba(212, 175, 55, 0.45);
       font-weight: 800;
       font-size: 0.9rem;
       padding: 13px 24px;
       border-radius: 99px;
       text-decoration: none;
-      box-shadow: 0 8px 22px rgba(217, 119, 6, 0.38);
+      box-shadow: 0 10px 24px rgba(7, 71, 102, 0.28);
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -106,23 +126,25 @@
     }
     .opt1-btn-gold:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 26px rgba(217, 119, 6, 0.48);
+      box-shadow: 0 14px 28px rgba(7, 71, 102, 0.38);
     }
     .opt1-btn-outline {
-      background: rgba(255, 255, 255, 0.14);
-      border: 1.5px solid rgba(255, 255, 255, 0.75);
-      color: #ffffff !important;
+      background: rgba(255, 253, 248, 0.88);
+      border: 1.5px solid #B88928;
+      color: #7A540B !important;
       font-weight: 700;
       font-size: 0.9rem;
       padding: 12px 22px;
       border-radius: 99px;
       text-decoration: none;
       backdrop-filter: blur(6px);
-      transition: background 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 14px rgba(184, 137, 40, 0.12);
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
     .opt1-btn-outline:hover {
-      background: rgba(255, 255, 255, 0.26);
+      background: rgba(255, 253, 248, 0.98);
       transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(184, 137, 40, 0.2);
     }
 
     /* 2. SUB-NAVIGATION BAR */
@@ -617,7 +639,7 @@
         background-position: 75% center;
       }
       .opt1-hero::before {
-        background: linear-gradient(180deg, rgba(0, 52, 82, 0.86) 0%, rgba(0, 68, 102, 0.94) 100%);
+        background: linear-gradient(180deg, rgba(252, 245, 228, 0.90) 0%, rgba(248, 236, 206, 0.94) 100%);
       }
       .opt1-hero__content {
         padding: 2.25rem 0;
@@ -1205,6 +1227,6 @@
 </div>
 
 <div id="google_translate_element" style="display:none"></div>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

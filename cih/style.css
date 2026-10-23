@@ -445,22 +445,23 @@ ul{list-style:none}
 /* ── NEWS CARD (MATCHING CHUYÊN KHOA LAYOUT & 16:9 IMAGES) ── */
 .news-card,
 .news-card--standard {
-  background: var(--c-white);
-  border: 1.5px solid #D8B15A !important;
-  border-radius: var(--r-lg);
+  background: #ffffff !important;
+  border: 1.5px solid #E2C784 !important;
+  border-radius: 18px !important;
+  padding: 12px 12px 18px 12px !important;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: all 0.25s var(--ease);
-  box-shadow: 0 6px 22px rgba(197, 154, 63, 0.10) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease !important;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04) !important;
 }
 
 .news-card:hover,
 .news-card--standard:hover {
-  box-shadow: 0 14px 32px rgba(197, 154, 63, 0.22) !important;
-  transform: translateY(-6px);
-  border-color: #B8862D !important;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.08) !important;
+  transform: translateY(-5px) !important;
+  border-color: #ead5a0 !important;
 }
 
 .news-card__img-link,
@@ -2364,6 +2365,8 @@ html.translated-ltr .header__cta .btn {
   width: 100% !important;
   overflow: hidden !important;
   border-radius: 18px !important;
+  padding: 6px 2px !important;
+  box-sizing: border-box !important;
 }
 
 /* DESKTOP (3 Cards per row for homepage sliders) */
@@ -2386,9 +2389,9 @@ html.translated-ltr .header__cta .btn {
   .mobile-slider-track-wrap #doc-grid-3 > *,
   .mobile-slider-track-wrap #pkg-grid > *,
   .mobile-slider-track-wrap #news-grid-3 > * {
-    flex: 0 0 calc((100% - 3.5rem) / 3) !important;
-    width: calc((100% - 3.5rem) / 3) !important;
-    max-width: calc((100% - 3.5rem) / 3) !important;
+    flex: 0 0 calc((100% - 3.5rem - 4px) / 3) !important;
+    width: calc((100% - 3.5rem - 4px) / 3) !important;
+    max-width: calc((100% - 3.5rem - 4px) / 3) !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;

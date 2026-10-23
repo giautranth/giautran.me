@@ -24,7 +24,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=1792659700" />
+  <link rel="stylesheet" href="style.css?v=1792715800" />
 
 </head>
 
@@ -4218,7 +4218,9 @@
 
 <div class="award-modal" id="cih-equip-modal" onclick="if(event.target===this) closeCihEquipModal()">
 
-  <div class="award-modal__content" role="dialog" aria-modal="true" aria-labelledby="cih-equip-modal-title">
+  <div class="award-modal__dialog-wrap">
+    <button type="button" class="mobile-arrow mobile-arrow--prev" onclick="stepCihEquipModal(-1)" aria-label="Thiết bị trước"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+    <div class="award-modal__content" role="dialog" aria-modal="true" aria-labelledby="cih-equip-modal-title">
 
     <button class="award-modal__close" onclick="closeCihEquipModal()" aria-label="Đóng">✕</button>
 
@@ -4231,6 +4233,8 @@
     <h3 class="award-modal__title" id="cih-equip-modal-title"></h3>
 
     <p class="award-modal__desc" id="cih-equip-modal-desc"></p>
+    </div>
+    <button type="button" class="mobile-arrow mobile-arrow--next" onclick="stepCihEquipModal(1)" aria-label="Thiết bị tiếp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
 
   </div>
 

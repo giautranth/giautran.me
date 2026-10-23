@@ -1952,6 +1952,7 @@ html.translated-ltr .header__cta .btn {
   opacity: 1;
 }
 
+.award-modal__dialog-wrap { position: relative; max-width: 620px; width: 100%; display: flex; align-items: center; justify-content: center; }
 .award-modal__content {
   background: #ffffff;
   border-radius: 24px;
@@ -1968,7 +1969,8 @@ html.translated-ltr .header__cta .btn {
   text-align: left;
 }
 
-.award-modal.active .award-modal__content {
+.award-modal.active .award-modal__dialog-wrap { position: relative; max-width: 620px; width: 100%; display: flex; align-items: center; justify-content: center; }
+.award-modal__content {
   transform: scale(1);
 }
 
@@ -1996,7 +1998,7 @@ html.translated-ltr .header__cta .btn {
   background: #ef4444;
   color: #ffffff;
   border-color: #ef4444;
-  transform: rotate(90deg);
+  border-color: #ef4444; transform: none !important;
 }
 
 .award-modal__img-box {

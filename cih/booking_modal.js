@@ -1,5 +1,287 @@
 /* CIH BỆNH VIỆN QUỐC TẾ CITY - LUXURY GRADIENT BOOKING MODAL */
 (function() {
+  const CIH_BOOKING_CATALOG = [
+    {
+      slug: 'khoa-phu-san',
+      aliases: ['khoa-phu-san', 'phu-san'],
+      name: 'Khoa Phụ Sản',
+      doctors: [
+        { name: 'BS.CKII. Nguyễn Vũ Mỹ Linh', role: 'Phó Trưởng Khoa Phụ Sản' },
+        { name: 'BS.CKII. Phạm Minh Khôi Nguyên', role: 'Bác sĩ Khoa Phụ Sản' },
+        { name: 'BS.CKII. Trần Thế Lộc', role: 'Bác sĩ Khoa Phụ Sản' },
+        { name: 'BS.CKI. Nguyễn Ngân Hà', role: 'Bác sĩ Khoa Phụ Sản' },
+        { name: 'ThS.BS. Nguyễn Xuân Công', role: 'Bác sĩ Siêu âm Khoa Phụ Sản' }
+      ]
+    },
+    {
+      slug: 'khoa-ho-tro-sinh-san-ivf',
+      aliases: ['khoa-ho-tro-sinh-san-ivf', 'ivf'],
+      name: 'Trung tâm Hỗ trợ sinh sản (IVF)',
+      doctors: [
+        { name: 'BS.CKI. Nguyễn Thị Ngọc Sương', role: 'Trưởng Trung tâm Hỗ trợ sinh sản' },
+        { name: 'Thạc sĩ Đặng Trường Sơn', role: 'Phó Trưởng Trung tâm Hỗ trợ sinh sản' },
+        { name: 'BS.CKII. Cù Thị Kim Loan', role: 'Bác sĩ Trung tâm Hỗ trợ sinh sản' }
+      ]
+    },
+    {
+      slug: 'khoa-nhi',
+      aliases: ['khoa-nhi', 'khoa-hoi-suc-tich-cuc-so-sinh-nicu', 'nhi'],
+      name: 'Khoa Nhi & Hồi sức tích cực sơ sinh (NICU)',
+      doctors: [
+        { name: 'BS.CKII. Nguyễn Bạch Huệ', role: 'Trưởng khoa Nhi & NICU' },
+        { name: 'BS.CKII. Đặng Quang Thuyết', role: 'Phó Giám đốc Y Khoa - Chuyên khoa Nhi' },
+        { name: 'BS.CKII. Nguyễn Thị Hồng Cẩm', role: 'Bác sĩ Chuyên khoa Tim mạch Nhi' },
+        { name: 'BS.CKII. Dương Thị Kim Cúc', role: 'Bác sĩ Ngoại Nhi, Tiết Niệu' },
+        { name: 'BS.CKI. Nguyễn Thị Lệ Liễu', role: 'Bác sĩ Chuyên khoa Nhi' },
+        { name: 'BS.CKI. Nguyễn Xuân Tài', role: 'Bác sĩ Chuyên khoa Nhi' }
+      ]
+    },
+    {
+      slug: 'khoa-kham-tong-quat-ehs',
+      aliases: ['khoa-kham-tong-quat-ehs', 'khoa-kham-tong-quat', 'khoa-kham-benh', 'tong-quat'],
+      name: 'Khoa Khám Tổng Quát (EHS) & Khám Bệnh',
+      doctors: [
+        { name: 'BS.CKII. Trần Thanh Bình', role: 'Trưởng Khoa Khám bệnh' },
+        { name: 'ThS.BS. Trần Như Hải', role: 'Trưởng Phòng khám Quốc tế - Cố vấn cấp cao' },
+        { name: 'BS.CKII. Hà Thị Kim Hồng', role: 'Bác sĩ Khám Tổng Quát & Nội Tiết' },
+        { name: 'ThS.BS. Đỗ Đức Tín', role: 'Bác sĩ Chuyên khoa Khám sức khỏe Tổng quát' },
+        { name: 'BS.CKII. Dương Anh Phượng', role: 'Trưởng khoa Nội Tổng Quát' },
+        { name: 'BS.CKII. Nguyễn Bảo Hòa', role: 'Bác sĩ Da liễu & Nội Cơ Xương Khớp' },
+        { name: 'BS.CKI. Lê Thị Ngọc Trân', role: 'Bác sĩ Chuyên khoa Dinh Dưỡng' }
+      ]
+    },
+    {
+      slug: 'khoa-noi-tong-hop',
+      aliases: ['khoa-noi-tong-hop', 'noi-tong-quat'],
+      name: 'Khoa Nội Tổng Quát',
+      doctors: [
+        { name: 'BS.CKII. Dương Anh Phượng', role: 'Trưởng khoa Nội Tổng Quát' },
+        { name: 'ThS.BS.CKII. Hoàng Chân Phương', role: 'Bác sĩ Chuyên khoa Nội Tổng Quát' },
+        { name: 'ThS.BS. Trần Như Hải', role: 'Bác sĩ Nội Tổng Quát - Trưởng Phòng khám Quốc tế' },
+        { name: 'BS.CKII. Trần Thanh Bình', role: 'Trưởng Khoa Khám bệnh' },
+        { name: 'BS.CKII. Hà Thị Kim Hồng', role: 'Bác sĩ Khám Tổng Quát & Nội Tiết' }
+      ]
+    },
+    {
+      slug: 'khoa-tim-mach',
+      aliases: ['khoa-tim-mach', 'tim-mach'],
+      name: 'Khoa Tim Mạch',
+      doctors: [
+        { name: 'BS.CKII. Nguyễn Ngọc Quỳnh Dung', role: 'Bác sĩ Nội Tim mạch' },
+        { name: 'ThS.BS. Bùi Thị Xuân Nga', role: 'Bác sĩ Chuyên khoa Tim Mạch' },
+        { name: 'ThS.BS.CKI. Trần Thế Vinh', role: 'Bác sĩ Chuyên khoa Tim Mạch' },
+        { name: 'BS.CKI. Lê Văn Tuyến', role: 'Bác sĩ Chuyên khoa Tim Mạch' },
+        { name: 'BS.CKII. Nguyễn Thị Hồng Cẩm', role: 'Bác sĩ Chuyên khoa Tim mạch Nhi' }
+      ]
+    },
+    {
+      slug: 'khoa-can-thiep-mach-mau',
+      aliases: ['khoa-can-thiep-mach-mau', 'khoa-can-thiep-mach-mau-dsa'],
+      name: 'Khoa Can Thiệp Mạch Máu (DSA)',
+      doctors: [
+        { name: 'PGS.TS.BS. Trần Minh Hoàng', role: 'Trưởng Đơn vị Can thiệp mạch máu (DSA)' },
+        { name: 'ThS.BS.CKI. Trần Thế Vinh', role: 'Bác sĩ Tim mạch – Tim mạch can thiệp' },
+        { name: 'BS.CKI. Lê Văn Tuyến', role: 'Bác sĩ Tim mạch – Tim mạch can thiệp' }
+      ]
+    },
+    {
+      slug: 'khoa-noi-tieu-hoa',
+      aliases: ['khoa-noi-tieu-hoa', 'khoa-tieu-hoa-noi-soi', 'noi-soi-tieu-hoa', 'tieu-hoa'],
+      name: 'Trung tâm Tiêu hóa – Nội soi',
+      doctors: [
+        { name: 'BS.CKII. Lê Kim Sang', role: 'Trưởng Khoa Tiêu Hóa & Nội Soi Tiêu Hóa' },
+        { name: 'BS.CKII. Đinh Đức Minh', role: 'Bác sĩ Chuyên khoa Nội soi Tiêu hóa' }
+      ]
+    },
+    {
+      slug: 'khoa-noi-than-kinh',
+      aliases: ['khoa-noi-than-kinh', 'khoa-than-kinh'],
+      name: 'Khoa Nội Thần Kinh',
+      doctors: [
+        { name: 'ThS.BS. Trần Thị Mai Thy', role: 'Bác sĩ Chuyên khoa Nội Thần Kinh' },
+        { name: 'BS.CKI. Khúc Thừa Minh', role: 'Bác sĩ Chuyên khoa Nội Thần Kinh' },
+        { name: 'ThS.BS. Đỗ Đức Tín', role: 'Bác sĩ Nội Thần Kinh & Khám Tổng Quát' }
+      ]
+    },
+    {
+      slug: 'khoa-ngoai-than-kinh',
+      aliases: ['khoa-ngoai-than-kinh'],
+      name: 'Khoa Ngoại Thần Kinh',
+      doctors: [
+        { name: 'BS.CKI. Nguyễn Mạnh Hùng', role: 'Bác sĩ Ngoại Thần kinh - Cố vấn Cấp cao BGĐ' },
+        { name: 'TS.BS. Huỳnh Hồng Châu', role: 'Bác sĩ Khoa Ngoại Thần kinh' },
+        { name: 'ThS.BS.CKII. Trần Trọng Tâm', role: 'Bác sĩ Ngoại Thần kinh' },
+        { name: 'BS.CKI. Nguyễn Quốc Giang', role: 'Bác sĩ Ngoại Thần kinh' }
+      ]
+    },
+    {
+      slug: 'khoa-ngoai-tong-quat',
+      aliases: ['khoa-ngoai-tong-quat'],
+      name: 'Khoa Ngoại Tổng Quát',
+      doctors: [
+        { name: 'BS.CKII. Nguyễn Bảo Xuân Thanh', role: 'Trưởng Khoa Ngoại Tổng Quát' },
+        { name: 'ThS.BS. Nguyễn Văn Khoa', role: 'Bác sĩ Khoa Ngoại Tổng Quát' },
+        { name: 'ThS.BS.CKI. Hà Phú Xuân', role: 'Bác sĩ Khoa Ngoại Tổng Quát' }
+      ]
+    },
+    {
+      slug: 'khoa-chan-thuong-chinh-hinh',
+      aliases: ['khoa-chan-thuong-chinh-hinh', 'cot-song'],
+      name: 'Khoa Chấn Thương Chỉnh Hình & Cơ Xương Khớp',
+      doctors: [
+        { name: 'TS.BS. Phạm Chí Lăng', role: 'Trưởng khoa Chấn Thương Chỉnh Hình' },
+        { name: 'ThS.BS. Trần Văn Bé Bảy', role: 'Bác sĩ Chấn Thương Chỉnh Hình & Cơ Xương Khớp' },
+        { name: 'BS.CKI. Nguyễn Văn Tịnh', role: 'Bác sĩ điều trị Chấn thương Chỉnh hình' },
+        { name: 'BS.CKII. Nguyễn Bảo Hòa', role: 'Bác sĩ Nội Cơ Xương Khớp & Da liễu' }
+      ]
+    },
+    {
+      slug: 'khoa-tiet-nieu',
+      aliases: ['khoa-tiet-nieu', 'khoa-than-loc-mau'],
+      name: 'Khoa Tiết Niệu & Thận Lọc Máu',
+      doctors: [
+        { name: 'BS.CKII. Dương Thị Kim Cúc', role: 'Bác sĩ Ngoại Nhi, Tiết Niệu' },
+        { name: 'BS.CKI. Nguyễn Thị Thái Hà', role: 'Bác sĩ Chuyên khoa Tiết Niệu' }
+      ]
+    },
+    {
+      slug: 'khoa-tai-mui-hong',
+      aliases: ['khoa-tai-mui-hong', 'trung-tam-tai-mui-hong-va-phau-thuat-dau-co'],
+      name: 'Trung tâm Tai Mũi Họng & Phẫu thuật đầu cổ',
+      doctors: [
+        { name: 'ThS.BS. Nguyễn Lê Nhân Văn', role: 'Bác sĩ Chuyên khoa Tai Mũi Họng' },
+        { name: 'BS.CKI. Lê Ngọc Hiếu', role: 'Bác sĩ Chuyên khoa Tai Mũi Họng' }
+      ]
+    },
+    {
+      slug: 'khoa-mat',
+      aliases: ['khoa-mat'],
+      name: 'Khoa Mắt',
+      doctors: [
+        { name: 'BS.CKII. Trịnh Bạch Tuyết', role: 'Bác sĩ Trưởng khoa Mắt' },
+        { name: 'BS.CKI. Mai Thị Hương Thảo', role: 'Bác sĩ Khoa Mắt' }
+      ]
+    },
+    {
+      slug: 'khoa-da-lieu',
+      aliases: ['khoa-da-lieu'],
+      name: 'Khoa Da Liễu',
+      doctors: [
+        { name: 'BS. Lê Đức Thọ', role: 'Bác sĩ Chuyên khoa Da liễu' },
+        { name: 'BS.CKII. Nguyễn Bảo Hòa', role: 'Bác sĩ Chuyên khoa Da liễu & Nội cơ xương khớp' }
+      ]
+    },
+    {
+      slug: 'khoa-dinh-duong',
+      aliases: ['khoa-dinh-duong'],
+      name: 'Khoa Dinh Dưỡng',
+      doctors: [
+        { name: 'BS.CKI. Lê Thị Ngọc Trân', role: 'Bác sĩ Chuyên khoa Dinh Dưỡng' },
+        { name: 'ThS.BS. Phạm Trần Thiên Nhân', role: 'Bác sĩ Chuyên khoa Dinh Dưỡng' }
+      ]
+    },
+    {
+      slug: 'khoa-phau-thuat-tao-hinh-tham-my',
+      aliases: ['khoa-phau-thuat-tao-hinh-tham-my', 'khoa-tham-my'],
+      name: 'Trung tâm Thẩm mỹ – Y học tái tạo',
+      doctors: [
+        { name: 'BS.CKI. Hồ Thanh Phong', role: 'Bác sĩ Phẫu thuật tạo hình thẩm mỹ' }
+      ]
+    },
+    {
+      slug: 'khoa-phuc-hoi-chuc-nang',
+      aliases: ['khoa-phuc-hoi-chuc-nang'],
+      name: 'Khoa Phục Hồi Chức Năng',
+      doctors: [
+        { name: 'BS.CKI. Trần Phương Thảo', role: 'Bác sĩ Chuyên khoa Phục hồi Chức năng' }
+      ]
+    },
+    {
+      slug: 'khoa-chan-doan-hinh-anh',
+      aliases: ['khoa-chan-doan-hinh-anh'],
+      name: 'Khoa Chẩn Đoán Hình Ảnh',
+      doctors: [
+        { name: 'PGS.TS.BS. Trần Minh Hoàng', role: 'Trưởng Khoa Chẩn đoán hình ảnh & Đơn vị DSA' },
+        { name: 'BS.CKI. Ông Kiến Huy', role: 'Bác sĩ Chuyên khoa Chẩn Đoán Hình Ảnh' }
+      ]
+    },
+    {
+      slug: 'khoa-gay-me-hoi-suc',
+      aliases: ['khoa-gay-me-hoi-suc'],
+      name: 'Khoa Gây Mê Hồi Sức',
+      doctors: [
+        { name: 'BS.CKI. Nguyễn Minh Tuấn B', role: 'Bác sĩ Khoa Gây mê Hồi sức' }
+      ]
+    },
+    {
+      slug: 'khoa-cap-cuu',
+      aliases: ['khoa-cap-cuu', 'khoa-hoi-suc-tich-cuc-icu'],
+      name: 'Khoa Cấp Cứu & Hồi sức tích cực (ICU)',
+      doctors: [
+        { name: 'ThS.BS.CKII. Nguyễn Văn Nhôm', role: 'Trưởng Khoa Cấp Cứu – Hồi sức Tích cực' },
+        { name: 'BS.CKII. Phan Hoàng Nguyên', role: 'Cố vấn Chuyên môn BGĐ - Hồi sức tích cực' },
+        { name: 'ThS.BS. Nguyễn Phước Lộc', role: 'Bác sĩ Chuyên khoa Hồi Sức Tích Cực' },
+        { name: 'BS.CKI. Lê Quốc Khánh', role: 'Bác sĩ Khoa Cấp cứu' },
+        { name: 'BS.CKI. Trương Thanh Phương', role: 'Bác sĩ Khoa Cấp cứu' },
+        { name: 'BS. Trần Hiếu', role: 'Bác sĩ Khoa Cấp cứu' }
+      ]
+    },
+    {
+      slug: 'khoa-rang-ham-mat',
+      aliases: ['khoa-rang-ham-mat'],
+      name: 'Khoa Răng Hàm Mặt',
+      doctors: [
+        { name: 'Bác sĩ Chuyên khoa Răng Hàm Mặt CIH', role: 'Khoa Răng Hàm Mặt' }
+      ]
+    },
+    {
+      slug: 'trung-tam-tiem-chung',
+      aliases: ['trung-tam-tiem-chung'],
+      name: 'Trung Tâm Tiêm Chủng',
+      doctors: [
+        { name: 'BS.CKII. Nguyễn Bạch Huệ', role: 'Trưởng khoa Nhi & Tư vấn Tiêm chủng' },
+        { name: 'BS.CKI. Nguyễn Thị Lệ Liễu', role: 'Bác sĩ Khám sàng lọc Tiêm chủng' },
+        { name: 'BS.CKI. Nguyễn Xuân Tài', role: 'Bác sĩ Khám sàng lọc Tiêm chủng' }
+      ]
+    }
+  ];
+
+  window.CIH_BOOKING_CATALOG = CIH_BOOKING_CATALOG;
+
+  function resolveSpecialtyBySlug(rawSlug) {
+    if (!rawSlug) return null;
+    const clean = rawSlug.trim().toLowerCase();
+    return CIH_BOOKING_CATALOG.find(
+      s => s.slug === clean || (s.aliases && s.aliases.includes(clean))
+    ) || null;
+  }
+
+  function normalizeTextKey(str) {
+    return (str || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/[^a-z0-9]/g, '');
+  }
+
+  function findDoctorSpecialty(doctorName) {
+    if (!doctorName || doctorName === 'Bác sĩ khám bất kỳ') return null;
+    const key = normalizeTextKey(doctorName);
+    for (const spec of CIH_BOOKING_CATALOG) {
+      for (const d of spec.doctors) {
+        if (normalizeTextKey(d.name) === key || key.includes(normalizeTextKey(d.name)) || normalizeTextKey(d.name).includes(key)) {
+          return { specSlug: spec.slug, doctorName: d.name };
+        }
+      }
+    }
+    return null;
+  }
+
+  const specialtyOptionsHTML = CIH_BOOKING_CATALOG.map(
+    s => `<option value="${s.slug}">${s.name}</option>`
+  ).join('\n                ');
+
   const modalHTML = `
   <div id="cih-booking-modal" style="display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(4, 24, 38, 0.68); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 1rem; overflow-y: auto; font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;">
     <style>
@@ -145,24 +427,14 @@
               <label>Chọn chuyên khoa <span style="color: #e11d48;">*</span></label>
               <select id="modal-bk-specialty" required onchange="updateModalDoctors(this.value)">
                 <option value="">-- Chọn Chuyên Khoa --</option>
-                <option value="khoa-phu-san">Khoa Phụ Sản</option>
-                <option value="khoa-nhi">Khoa Nhi</option>
-                <option value="ivf">Trung tâm Hỗ trợ sinh sản (IVF)</option>
-                <option value="khoa-than-kinh">Khoa Thần Kinh</option>
-                <option value="noi-soi-tieu-hoa">Trung tâm Tiêu hóa - Nội soi</option>
-                <option value="khoa-ngoai-tong-quat">Khoa Ngoại Tổng Quát</option>
-                <option value="khoa-tim-mach">Khoa Tim Mạch</option>
-                <option value="khoa-kham-tong-quat">Khoa Khám Tổng Quát (EHS)</option>
+                ${specialtyOptionsHTML}
               </select>
             </div>
 
             <div>
               <label>Chọn bác sĩ <span style="color: #e11d48;">*</span></label>
-              <select id="modal-bk-doctor" required>
-                <option value="">-- Bác sĩ khám bất kỳ --</option>
-                <option value="BS.CKII. Nguyễn Vũ Mỹ Linh">BS.CKII. Nguyễn Vũ Mỹ Linh (Phó Trưởng khoa Phụ Sản)</option>
-                <option value="BS.CKII. Nguyễn Bạch Huệ">BS.CKII. Nguyễn Bạch Huệ (Trưởng khoa Nhi)</option>
-                <option value="BS.CKII. Lê Kim Sang">BS.CKII. Lê Kim Sang (Trưởng khoa Tiêu Hóa)</option>
+              <select id="modal-bk-doctor" onchange="handleModalDoctorChange(this)">
+                <option value="Bác sĩ khám bất kỳ">-- Bác sĩ khám bất kỳ --</option>
               </select>
             </div>
           </div>
@@ -277,12 +549,22 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     document.body.insertAdjacentHTML('beforeend', modalHTML);
+    updateModalDoctors('');
     loadFlatpickrAssets();
 
     // Attach click events to all booking buttons on the page
-    document.querySelectorAll('a[href*="lien-he"][href*="dat-lich"], button[id*="booking"], .btn--primary').forEach(btn => {
+    document.querySelectorAll('a[href*="lien-he"][href*="dat-lich"], button[id*="booking"], #header-booking-btn, .btn--primary').forEach(btn => {
+      // Do not hijack submit buttons inside forms (e.g., contact form or modal form)
+      if (btn.tagName === 'BUTTON' && btn.type === 'submit') return;
       btn.addEventListener('click', function(e) {
-        if (!window.location.href.includes('lien-he')) {
+        const href = (btn.getAttribute('href') || '').toLowerCase();
+        const isBookingBtn =
+          btn.id === 'header-booking-btn' ||
+          (btn.id && btn.id.includes('booking')) ||
+          href.includes('dat-lich') ||
+          (btn.textContent && btn.textContent.toUpperCase().includes('ĐẶT LỊCH'));
+
+        if (isBookingBtn || !window.location.href.includes('lien-he')) {
           e.preventDefault();
           openBookingModal();
         }
@@ -290,12 +572,55 @@
     });
   });
 
-  window.openBookingModal = function() {
+  window.openBookingModal = function(preSpecSlug, preDocName) {
     const modal = document.getElementById('cih-booking-modal');
-    if (modal) {
-      modal.style.display = 'flex';
-      initVietnameseDatePickers();
+    if (!modal) return;
+
+    const specSelect = document.getElementById('modal-bk-specialty');
+    const urlParams = new URLSearchParams(window.location.search);
+    const pagePath = window.location.pathname.toLowerCase();
+
+    // Auto-detect specialty or doctor context if on specialty detail or doctor detail page
+    if (!preSpecSlug && !preDocName && specSelect && !specSelect.value) {
+      if (pagePath.includes('chi-tiet-chuyen-khoa')) {
+        const pageSlug = urlParams.get('slug') || 'khoa-phu-san';
+        const matchedSpec = resolveSpecialtyBySlug(pageSlug);
+        if (matchedSpec) {
+          preSpecSlug = matchedSpec.slug;
+        }
+      } else if (pagePath.includes('chi-tiet-bac-si')) {
+        const docHeading = document.getElementById('doc-name');
+        const currentDocName = docHeading ? docHeading.textContent.trim() : '';
+        const matchedDoc = findDoctorSpecialty(currentDocName);
+        if (matchedDoc) {
+          preSpecSlug = matchedDoc.specSlug;
+          preDocName = matchedDoc.doctorName;
+        }
+      } else if (pagePath.includes('bac-si')) {
+        const filterSpec = document.getElementById('filter-specialty');
+        if (filterSpec && filterSpec.value) {
+          const matchedSpec = resolveSpecialtyBySlug(filterSpec.value);
+          if (matchedSpec) preSpecSlug = matchedSpec.slug;
+        }
+      }
     }
+
+    if (preSpecSlug && specSelect) {
+      const resolved = resolveSpecialtyBySlug(preSpecSlug);
+      if (resolved) {
+        specSelect.value = resolved.slug;
+        updateModalDoctors(resolved.slug, preDocName);
+      }
+    } else if (preDocName) {
+      const matched = findDoctorSpecialty(preDocName);
+      if (matched && specSelect) {
+        specSelect.value = matched.specSlug;
+        updateModalDoctors(matched.specSlug, matched.doctorName);
+      }
+    }
+
+    modal.style.display = 'flex';
+    initVietnameseDatePickers();
   };
 
   window.closeBookingModal = function() {
@@ -320,28 +645,76 @@
     document.getElementById('modal-bk-timeslot').value = slotStr;
   };
 
-  window.updateModalDoctors = function(specSlug) {
+  window.updateModalDoctors = function(specSlug, preferredDoctorName) {
     const docSelect = document.getElementById('modal-bk-doctor');
     if (!docSelect) return;
-    docSelect.innerHTML = '<option value="">-- Bác sĩ khám bất kỳ --</option>';
-    
-    const docs = {
-      'khoa-phu-san': ['BS.CKII. Nguyễn Vũ Mỹ Linh', 'BS.CKII. Phạm Minh Khôi Nguyên', 'BS.CKII. Trần Thế Lộc'],
-      'khoa-nhi': ['BS.CKII. Nguyễn Bạch Huệ', 'BS.CKI. Nguyễn Thị Hạnh'],
-      'ivf': ['BS.CKI. Nguyễn Thị Ngọc Sương', 'BS.CKII. Nguyễn Vũ Mỹ Linh'],
-      'noi-soi-tieu-hoa': ['BS.CKII. Lê Kim Sang']
-    }[specSlug] || ['Bác sĩ Trưởng khoa CIH'];
 
-    docs.forEach(d => {
-      const opt = document.createElement('option');
-      opt.value = d;
-      opt.innerText = d;
-      docSelect.appendChild(opt);
-    });
+    const currentSelectedDoc = preferredDoctorName || docSelect.value;
+    docSelect.innerHTML = '';
+
+    const anyOpt = document.createElement('option');
+    anyOpt.value = 'Bác sĩ khám bất kỳ';
+    anyOpt.textContent = '-- Bác sĩ khám bất kỳ --';
+    docSelect.appendChild(anyOpt);
+
+    const resolvedSpec = resolveSpecialtyBySlug(specSlug);
+
+    if (resolvedSpec) {
+      let matchedSelection = false;
+      resolvedSpec.doctors.forEach(d => {
+        const opt = document.createElement('option');
+        opt.value = d.name;
+        opt.setAttribute('data-spec', resolvedSpec.slug);
+        opt.textContent = d.role ? `${d.name} (${d.role})` : d.name;
+        if (currentSelectedDoc && normalizeTextKey(currentSelectedDoc) === normalizeTextKey(d.name)) {
+          opt.selected = true;
+          matchedSelection = true;
+        }
+        docSelect.appendChild(opt);
+      });
+      if (!matchedSelection) {
+        docSelect.value = 'Bác sĩ khám bất kỳ';
+      }
+    } else {
+      // When no specialty is chosen yet, group all doctors by specialty so the user can also pick a doctor first
+      CIH_BOOKING_CATALOG.forEach(spec => {
+        const group = document.createElement('optgroup');
+        group.label = spec.name;
+        spec.doctors.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d.name;
+          opt.setAttribute('data-spec', spec.slug);
+          opt.textContent = d.role ? `${d.name} (${d.role})` : d.name;
+          group.appendChild(opt);
+        });
+        docSelect.appendChild(group);
+      });
+    }
+  };
+
+  window.handleModalDoctorChange = function(docSelect) {
+    if (!docSelect) return;
+    const selectedOpt = docSelect.options[docSelect.selectedIndex];
+    if (!selectedOpt) return;
+
+    const docName = docSelect.value;
+    if (!docName || docName === 'Bác sĩ khám bất kỳ') return;
+
+    const optSpec = selectedOpt.getAttribute('data-spec');
+    const specSelect = document.getElementById('modal-bk-specialty');
+    if (specSelect && !specSelect.value && optSpec) {
+      specSelect.value = optSpec;
+      updateModalDoctors(optSpec, docName);
+    }
   };
 
   window.handleModalBookingSubmit = function(e) {
     e.preventDefault();
+    const specSelect = document.getElementById('modal-bk-specialty');
+    const specText = specSelect && specSelect.options[specSelect.selectedIndex]
+      ? specSelect.options[specSelect.selectedIndex].text
+      : '';
+    const doctor = document.getElementById('modal-bk-doctor').value || 'Bác sĩ khám bất kỳ';
     const name = document.getElementById('modal-bk-fullname').value;
     const phone = document.getElementById('modal-bk-phone').value;
     const date = document.getElementById('modal-bk-date').value;
@@ -350,6 +723,8 @@
     alert('🎉 ĐĂNG KÝ KHÁM BỆNH THÀNH CÔNG!\n\n' +
           'Bệnh nhân: ' + name + '\n' +
           'Số điện thoại: ' + phone + '\n' +
+          'Chuyên khoa: ' + specText + '\n' +
+          'Bác sĩ: ' + doctor + '\n' +
           'Ngày khám: ' + date + ' (' + slot + ')\n\n' +
           'Bộ phận CSKH Bệnh viện Quốc tế City sẽ gọi điện xác nhận lịch hẹn với bạn trong 15 phút.');
     closeBookingModal();

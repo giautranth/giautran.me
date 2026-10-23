@@ -1908,7 +1908,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=1792750000"></script>
 <script src="news_data.js?v=1792750000"></script>
-<script src="specialty_data.js?v=1792750000"></script>
+<script src="specialty_data.js?v=1792770000"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
@@ -1937,18 +1937,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (spec.doctors && spec.doctors.length > 0) {
           const docsGrid = document.getElementById('doc-grid-3');
-          docsGrid.innerHTML = spec.doctors.slice(0, 3).map(d => `
+          docsGrid.innerHTML = spec.doctors.map(d => {
+            const docHref = d.slug ? `chi-tiet-bac-si?slug=${d.slug}` : 'bac-si';
+            return `
             <div class="doc-card-v2">
-              <a href="bac-si" class="doc-card-v2__img-wrap">
+              <a href="${docHref}" class="doc-card-v2__img-wrap">
                 <img src="${d.img}" alt="${d.name}" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'" loading="lazy" />
               </a>
               <div class="doc-card-v2__body">
-                <h3 class="doc-card-v2__name"><a href="bac-si">${d.name}</a></h3>
+                <h3 class="doc-card-v2__name"><a href="${docHref}">${d.name}</a></h3>
                 <div class="doc-card-v2__position">${(d.title || d.degree || '').replace(/\s*[–-]\s*Bệnh viện/g, '<br>Bệnh viện').replace(/\s+và\s+/g, '<br>và ')}</div>
-                <a href="bac-si" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+                <a href="${docHref}" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
               </div>
             </div>
-          `).join('');
+          `;
+          }).join('');
         }
       }
     }
@@ -1986,7 +1989,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 </script>
 
-<script src="booking_modal.js?v=1792745000"></script>
+<script src="booking_modal.js?v=1792770000"></script>
 <!-- Floating Chat Widgets (Zalo Top, Messenger Bottom) -->
 <div class="float-actions" id="float-actions">
   <a href="https://zalo.me/2430902570795156082" target="_blank" rel="noopener noreferrer" class="float-btn float-btn--zalo float-btn__icon-ring" id="float-zalo" title="Chat qua Zalo">

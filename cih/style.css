@@ -467,7 +467,7 @@ ul{list-style:none}
 .news-card:not(.pkg-home-card) .news-card__img-link,
 .news-card--standard .news-card__img-link {
   width: 100% !important;
-  aspect-ratio: 16 / 9 !important;
+  aspect-ratio: 3 / 2 !important;
   height: auto !important;
   border-radius: 0 !important;
   position: relative !important;
@@ -480,7 +480,7 @@ ul{list-style:none}
 .news-card--standard .news-card__img {
   width: 100% !important;
   height: 100% !important;
-  aspect-ratio: 16 / 9 !important;
+  aspect-ratio: 3 / 2 !important;
   border-radius: 0 !important;
   object-fit: cover !important;
   object-position: center !important;
@@ -999,8 +999,8 @@ html.translated-ltr .header__cta .btn {
   /* 7. News & Package Cards Mobile */
   .news-card__img-link,
   .pkg-home-card .news-card__img-link {
-    height: 200px !important;
-    border-radius: 18px 18px 0 0 !important;
+    height: auto !important;
+    border-radius: 0 !important;
   }
   .news-card__body,
   .pkg-home-card .news-card__body {

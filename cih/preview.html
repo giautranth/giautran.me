@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIH Stitch Preview — Xem giao diện Mobile / Tablet / Desktop</title>
+  <link rel="icon" type="image/webp" href="images/logo1x1.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #131316;
+      color: #f4f4f5;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    /* ═══ TOP BAR (STITCH STYLE) ═══ */
+    .stitch-topbar {
+      height: 56px;
+      background: #131316;
+      border-bottom: 1px solid #27272a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+
+    .stitch-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stitch-logo-text {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+    }
+
+    .stitch-beta-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #a1a1aa;
+      border: 1px solid #3f3f46;
+      border-radius: 99px;
+      padding: 2px 8px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .stitch-page-select {
+      margin-left: 12px;
+      background: #1e1e24;
+      color: #e4e4e7;
+      border: 1px solid #34343d;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 500;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .stitch-page-select:hover,
+    .stitch-page-select:focus {
+      border-color: #6366f1;
+    }
+
+    /* ═══ CENTER CONTROLS ═══ */
+    .stitch-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stitch-device-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .stitch-icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      color: #a1a1aa;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      position: relative;
+    }
+
+    .stitch-icon-btn:hover {
+      background: #27272a;
+      color: #ffffff;
+    }
+
+    .stitch-icon-btn.active {
+      background: #e4e4e7;
+      color: #111113;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.15);
+    }
+
+    .stitch-divider {
+      width: 1px;
+      height: 20px;
+      background: #2e2e36;
+      margin: 0 8px;
+    }
+
+    .stitch-dim-badge {
+      font-size: 0.75rem;
+      color: #71717a;
+      background: #1c1c21;
+      border: 1px solid #27272a;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-left: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ═══ RIGHT ACTIONS ═══ */
+    .stitch-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stitch-share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #1e1e24;
+      color: #e4e4e7;
+      border: 1px solid #34343d;
+      border-radius: 99px;
+      padding: 7px 16px;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .stitch-share-btn:hover {
+      background: #27272f;
+      border-color: #52525b;
+      color: #ffffff;
+    }
+
+    /* ═══ DOTTED WORKSPACE CANVAS ═══ */
+    .stitch-canvas {
+      flex: 1;
+      width: 100%;
+      background-color: #16161a;
+      background-image: radial-gradient(#2e2f38 1.15px, transparent 1.15px);
+      background-size: 22px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+      padding: 24px;
+      position: relative;
+    }
+
+    /* ═══ DEVICE FRAME BEZEL ═══ */
+    .device-bezel {
+      position: relative;
+      background: #ffffff;
+      transition: width 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+                  height 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-radius 0.32s ease,
+                  border-width 0.32s ease;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65),
+                  0 0 0 1px rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* MOBILE MODE (390 x 844) */
+    .device-bezel[data-device="mobile"] {
+      width: 414px;
+      height: min(868px, calc(100vh - 96px));
+      border: 12px solid #8e929b;
+      border-radius: 44px;
+    }
+
+    /* TABLET MODE (820 x 1180 - Stitch Center Frame) */
+    .device-bezel[data-device="tablet"] {
+      width: 852px;
+      height: min(1120px, calc(100vh - 92px));
+      border: 16px solid #8e929b;
+      border-radius: 36px;
+    }
+
+    /* DESKTOP MODE (1440 / Full Width) */
+    .device-bezel[data-device="desktop"] {
+      width: min(1460px, calc(100vw - 48px));
+      height: calc(100vh - 92px);
+      border: 10px solid #6b707b;
+      border-radius: 18px;
+    }
+
+    /* Side hardware buttons on Tablet/Mobile */
+    .device-bezel::before {
+      content: '';
+      position: absolute;
+      left: -19px;
+      top: 120px;
+      width: 3px;
+      height: 50px;
+      background: #52525b;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .device-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      background: #ffffff;
+    }
+
+    /* QR Modal */
+    .qr-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(6px);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+    }
+    .qr-modal.open {
+      display: flex;
+    }
+    .qr-card {
+      background: #1e1e24;
+      border: 1px solid #34343d;
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      max-width: 340px;
+      width: 90%;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    }
+    .qr-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .qr-card p {
+      font-size: 0.82rem;
+      color: #a1a1aa;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+    .qr-img-wrap {
+      background: #ffffff;
+      padding: 14px;
+      border-radius: 14px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    .qr-close-btn {
+      background: #27272a;
+      color: #fff;
+      border: 1px solid #3f3f46;
+      padding: 8px 20px;
+      border-radius: 99px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    /* Toast notification */
+    .stitch-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #e4e4e7;
+      color: #111113;
+      padding: 8px 18px;
+      border-radius: 99px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 1000;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .stitch-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .stitch-dim-badge { display: none; }
+      .stitch-logo-text { font-size: 1rem; }
+      .stitch-beta-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ TOP BAR ═══ -->
+  <header class="stitch-topbar">
+    <div class="stitch-brand">
+      <span class="stitch-logo-text">Stitch</span>
+      <span class="stitch-beta-badge">CIH PREVIEW</span>
+
+      <select id="page-selector" class="stitch-page-select" title="Chọn trang cần xem">
+        <option value="./">🏠 Trang chủ (index)</option>
+        <option value="ve-chung-toi">🏥 Về chúng tôi</option>
+        <option value="chung-nhan-giai-thuong">🏆 Chứng nhận &amp; Giải thưởng</option>
+        <option value="chuyen-khoa">🩺 Chuyên khoa</option>
+        <option value="chi-tiet-chuyen-khoa?slug=khoa-phu-san">👶 Chi tiết Khoa Phụ Sản</option>
+        <option value="bac-si">👨‍⚕️ Đội ngũ Bác sĩ</option>
+        <option value="goi-kham">📋 Gói dịch vụ khám</option>
+        <option value="tin-tuc">📰 Tin tức</option>
+        <option value="chi-tiet-tin-tuc?id=46565">📄 Chi tiết Tin tức (ID 46565)</option>
+        <option value="vien-dao-tao-nckh">🎓 Viện Đào tạo &amp; NCKH</option>
+        <option value="danh-cho-khach-hang">🤝 Dành cho khách hàng</option>
+        <option value="lien-he">📞 Liên hệ &amp; Đặt lịch</option>
+      </select>
+    </div>
+
+    <!-- CENTER DEVICE SWITCHER (MOBILE / TABLET / DESKTOP) -->
+    <div class="stitch-controls">
+      <div class="stitch-device-group">
+        <!-- Mobile Icon -->
+        <button class="stitch-icon-btn" data-mode="mobile" title="Giao diện Điện thoại (390px)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="2" width="12" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Tablet Icon -->
+        <button class="stitch-icon-btn active" data-mode="tablet" title="Giao diện Máy tính bảng (820px)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Desktop Icon -->
+        <button class="stitch-icon-btn" data-mode="desktop" title="Giao diện Máy tính (1440px)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </button>
+      </div>
+
+      <span class="stitch-dim-badge" id="dim-label">Tablet • 820px</span>
+
+      <div class="stitch-divider"></div>
+
+      <!-- Open in New Tab -->
+      <button class="stitch-icon-btn" id="btn-open-tab" title="Mở trang hiện tại ở tab mới">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </button>
+
+      <!-- Refresh Frame -->
+      <button class="stitch-icon-btn" id="btn-refresh" title="Tải lại khung xem trước">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+        </svg>
+      </button>
+
+      <!-- QR Code for Mobile Testing -->
+      <button class="stitch-icon-btn" id="btn-qr" title="Mã QR để mở trên điện thoại thật">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+      </button>
+    </div>
+
+    <!-- RIGHT SHARE BUTTON -->
+    <div class="stitch-right">
+      <button class="stitch-share-btn" id="btn-share">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        Share
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ DOTTED PREVIEW CANVAS ═══ -->
+  <main class="stitch-canvas">
+    <div class="device-bezel" id="device-bezel" data-device="tablet">
+      <iframe id="preview-iframe" class="device-iframe" src="./" title="CIH Responsive Preview"></iframe>
+    </div>
+  </main>
+
+  <!-- ═══ QR CODE POPUP MODAL ═══ -->
+  <div class="qr-modal" id="qr-modal" onclick="if(event.target===this) this.classList.remove('open')">
+    <div class="qr-card">
+      <h3>Quét mã QR trên điện thoại</h3>
+      <p>Dùng camera điện thoại hoặc Zalo để mở trực tiếp trang đang xem:</p>
+      <div class="qr-img-wrap">
+        <img id="qr-img" src="" alt="QR Code" width="180" height="180" />
+      </div>
+      <div>
+        <button class="qr-close-btn" onclick="document.getElementById('qr-modal').classList.remove('open')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="stitch-toast" id="stitch-toast">Đã sao chép đường dẫn xem trước!</div>
+
+  <script>
+    (function() {
+      const bezel = document.getElementById('device-bezel');
+      const iframe = document.getElementById('preview-iframe');
+      const pageSelect = document.getElementById('page-selector');
+      const dimLabel = document.getElementById('dim-label');
+      const modeBtns = document.querySelectorAll('.stitch-icon-btn[data-mode]');
+      const toast = document.getElementById('stitch-toast');
+
+      const LABELS = {
+        mobile: 'Mobile • 390px',
+        tablet: 'Tablet • 820px',
+        desktop: 'Desktop • 1440px'
+      };
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+      }
+
+      function setDevice(mode) {
+        if (!LABELS[mode]) mode = 'tablet';
+        bezel.setAttribute('data-device', mode);
+        dimLabel.textContent = LABELS[mode];
+        modeBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === mode));
+        updateUrlState(pageSelect.value, mode);
+      }
+
+      function setPage(pageUrl) {
+        iframe.src = pageUrl;
+        updateUrlState(pageUrl, bezel.getAttribute('data-device'));
+      }
+
+      function updateUrlState(page, device) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('page', page);
+        url.searchParams.set('device', device);
+        window.history.replaceState({}, '', url);
+      }
+
+      // Init from URL params if present
+      const params = new URLSearchParams(window.location.search);
+      const initPage = params.get('page');
+      const initDevice = params.get('device');
+
+      if (initPage) {
+        // Check if option exists, otherwise add custom option
+        let found = Array.from(pageSelect.options).some(opt => opt.value === initPage);
+        if (!found) {
+          const opt = document.createElement('option');
+          opt.value = initPage;
+          opt.textContent = '🔗 ' + initPage;
+          pageSelect.appendChild(opt);
+        }
+        pageSelect.value = initPage;
+        iframe.src = initPage;
+      }
+
+      if (initDevice && LABELS[initDevice]) {
+        setDevice(initDevice);
+      }
+
+      // Event listeners
+      modeBtns.forEach(btn => {
+        btn.addEventListener('click', () => setDevice(btn.getAttribute('data-mode')));
+      });
+
+      pageSelect.addEventListener('change', () => {
+        setPage(pageSelect.value);
+      });
+
+      // Sync dropdown when user clicks links inside the iframe
+      iframe.addEventListener('load', () => {
+        try {
+          const loc = iframe.contentWindow.location;
+          let rel = loc.pathname.split('/cih/').pop() || './';
+          rel = rel.replace(/\.html$/, '');
+          if (rel === '' || rel === 'index') rel = './';
+          const fullRel = rel + (loc.search || '');
+          let found = Array.from(pageSelect.options).some(opt => opt.value === fullRel);
+          if (found) {
+            pageSelect.value = fullRel;
+          }
+          updateUrlState(fullRel, bezel.getAttribute('data-device'));
+        } catch (e) {
+          // Cross-origin fallback
+        }
+      });
+
+      // Open current page in new tab
+      document.getElementById('btn-open-tab').addEventListener('click', () => {
+        try {
+          window.open(iframe.contentWindow.location.href, '_blank');
+        } catch (e) {
+          window.open(iframe.src, '_blank');
+        }
+      });
+
+      // Refresh iframe
+      document.getElementById('btn-refresh').addEventListener('click', () => {
+        try {
+          iframe.contentWindow.location.reload();
+        } catch (e) {
+          iframe.src = iframe.src;
+        }
+        showToast('Đã tải lại trang!');
+      });
+
+      // QR Code modal
+      document.getElementById('btn-qr').addEventListener('click', () => {
+        let targetUrl = window.location.origin + '/cih/' + (pageSelect.value === './' ? '' : pageSelect.value);
+        try {
+          targetUrl = iframe.contentWindow.location.href;
+        } catch (e) {}
+        const qrImg = document.getElementById('qr-img');
+        qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(targetUrl);
+        document.getElementById('qr-modal').classList.add('open');
+      });
+
+      // Share button
+      document.getElementById('btn-share').addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('Đã sao chép liên kết xem trước!');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

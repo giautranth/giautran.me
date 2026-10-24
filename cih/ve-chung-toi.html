@@ -127,6 +127,130 @@
 </header>
 
   <style>
+    /* ═══════════════════════════════════════════════
+       1. HERO BANNER (CHAMPAGNE LUXURY STYLE MATCHING KHOA PHỤ SẢN)
+       ═══════════════════════════════════════════════ */
+    .opt1-hero {
+      position: relative;
+      width: 100%;
+      min-height: 460px;
+      background: #f8f4ec url('images/banner_ve_chung_toi.webp?v=1792811400') right center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .opt1-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 28%, rgba(255, 250, 235, 0.55) 0%, transparent 48%),
+        linear-gradient(90deg, rgba(252, 245, 228, 0.90) 0%, rgba(248, 236, 206, 0.80) 33%, rgba(244, 228, 190, 0.28) 47%, rgba(244, 228, 190, 0) 60%);
+      z-index: 1;
+    }
+    .opt1-hero > .container {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .opt1-hero__content {
+      max-width: 540px;
+      padding: 3.5rem 0;
+      color: #073B54;
+      position: relative;
+    }
+    .opt1-hero__title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 1.25rem 0;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 0.9rem;
+      color: #007DA5 !important;
+      text-shadow: 0 1px 10px rgba(255, 255, 255, 0.85);
+    }
+    .opt1-hero__title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 68px;
+      height: 3.5px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #C59A3F 0%, #F1D382 50%, #C59A3F 100%);
+      box-shadow: 0 2px 10px rgba(197, 154, 63, 0.35);
+    }
+    .opt1-hero__desc {
+      font-size: 0.98rem;
+      line-height: 1.72;
+      color: #1e293b;
+      font-weight: 500;
+      margin: 0 0 1.8rem 0;
+      text-align: justify;
+      text-justify: inter-word;
+      text-shadow: 0 1px 8px rgba(255, 255, 255, 0.8);
+    }
+    .opt1-hero__actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .opt1-btn-gold {
+      background: linear-gradient(135deg, #074766 0%, #006B8F 100%);
+      color: #ffffff !important;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 13px 24px;
+      border-radius: 99px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(7, 71, 102, 0.28);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .opt1-btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(7, 71, 102, 0.38);
+    }
+    .opt1-btn-outline {
+      background: rgba(255, 253, 248, 0.88);
+      border: 1.5px solid #B88928;
+      color: #7A540B !important;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 22px;
+      border-radius: 99px;
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 14px rgba(184, 137, 40, 0.12);
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .opt1-btn-outline:hover {
+      background: rgba(255, 253, 248, 0.98);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(184, 137, 40, 0.2);
+    }
+    @media (max-width: 768px) {
+      .opt1-hero {
+        min-height: 360px;
+        background-position: 75% center;
+      }
+      .opt1-hero::before {
+        background: linear-gradient(180deg, rgba(252, 245, 228, 0.92) 0%, rgba(248, 236, 206, 0.96) 100%);
+      }
+      .opt1-hero__content {
+        padding: 2.25rem 0;
+      }
+      .opt1-hero__title {
+        font-size: 1.65rem;
+      }
+    }
+
     /* Premium About Us Styling (Hoa Lâm Corporate Style) */
     .about-group {
       background: #ffffff;
@@ -915,17 +1039,33 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     HERO BANNER (VỀ CHÚNG TÔI - CHAMPAGNE LUXURY STYLE)
+═══════════════════════════════════════════════ -->
+<section class="opt1-hero about-hero-banner" id="about-hero">
+  <div class="container">
+    <div class="opt1-hero__content">
+      <h1 class="opt1-hero__title">VỀ CHÚNG TÔI</h1>
+      <p class="opt1-hero__desc">Bệnh viện Quốc tế City chính thức đi vào hoạt động từ ngày 05/01/2014, toạ lạc tại Khu Y tế kỹ thuật cao TP. HCM. Bệnh viện được trang bị cơ sở vật chất và trang thiết bị hiện đại đạt tiêu chuẩn quốc tế.</p>
+      <div class="opt1-hero__actions">
+        <a href="#tong-quan" class="opt1-btn-gold">Khám Phá Thêm &rarr;</a>
+        <a href="lien-he.html#dat-lich" class="opt1-btn-outline">Đặt Lịch Khám &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- MAIN ABOUT SECTION (Hoa Lâm Corporate Style) -->
 <main class="about-group">
   <div class="container">
 
     <!-- Section 1: Overview Grid -->
-    <div class="about-group-grid animate-fade-up">
+    <div class="about-group-grid animate-fade-up" id="tong-quan">
       <div class="group-content">
-        <h2 class="timeline-section-title" style="text-align: left; margin-bottom: 20px; font-size: 1.8rem;">Về chúng tôi</h2>
+        <h2 class="timeline-section-title" style="text-align: left; margin-bottom: 20px; font-size: 1.8rem;">Tổng quan bệnh viện</h2>
         
         <p class="about-lead">
-          Bệnh viện Quốc tế City chính thức đi vào hoạt động từ ngày 05/01/2014, toạ lạc tại Khu Y tế kỹ thuật cao TP. HCM. Bệnh viện được trang bị cơ sở vật chất và trang thiết bị hiện đại đạt tiêu chuẩn quốc tế.
+          Toạ lạc tại Khu Y tế kỹ thuật cao TP. HCM với quy mô 320 giường bệnh nội trú, Bệnh viện Quốc tế City luôn tiên phong trang bị hệ thống cơ sở vật chất và công nghệ y khoa hiện đại đạt tiêu chuẩn kiểm định an toàn quốc tế AACI.
         </p>
 
         <!-- Bộ 4 Con Số Ấn Tượng ngay dưới đoạn văn giới thiệu mở đầu -->

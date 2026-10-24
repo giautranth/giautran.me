@@ -425,17 +425,23 @@
         <label class="filter-label" for="filter-role">Chức vụ</label>
         <select id="filter-role" class="filter-select">
           <option value="">Tất cả chức vụ</option>
-          <option value="giam-doc">Ban Giám Đốc / Giám đốc Y khoa</option>
-          <option value="truong-khoa">Trưởng khoa</option>
+          <option value="giam-doc">Ban Giám Đốc / Cố vấn cấp cao</option>
+          <option value="truong-khoa">Trưởng khoa / Trưởng trung tâm / Trưởng đơn vị</option>
+          <option value="pho-khoa">Phó Trưởng khoa / Phó Trung tâm</option>
+          <option value="bac-si-dieu-tri">Bác sĩ Chuyên khoa / Bác sĩ điều trị</option>
         </select>
       </div>
 
       <div class="filter-group">
         <label class="filter-label" for="filter-degree">Học hàm học vị</label>
         <select id="filter-degree" class="filter-select">
-          <option value="">Tất cả học vị</option>
-          <option value="ts">Tiến sĩ (TS.BS)</option>
+          <option value="">Tất cả học hàm, học vị</option>
+          <option value="pgs">Phó Giáo sư (PGS.TS.BS)</option>
+          <option value="ts">Tiến sĩ (TS.BS / PGS.TS.BS)</option>
           <option value="ckii">Bác sĩ Chuyên khoa II (BS.CKII)</option>
+          <option value="ths">Thạc sĩ (ThS.BS / Thạc sĩ)</option>
+          <option value="cki">Bác sĩ Chuyên khoa I (BS.CKI)</option>
+          <option value="bs">Bác sĩ (BS)</option>
         </select>
       </div>
     </div>
@@ -443,7 +449,7 @@
     <!-- Doctor List -->
     <div class="doc-grid-4">
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="bac-si" data-degree="" data-id="26352">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="giam-doc" data-degree="ths" data-id="26352">
         <a href="chi-tiet-bac-si?slug=ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-thanh.webp" alt="ThS.BS. Trần Quốc Thành" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -454,7 +460,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="bac-si" data-degree="" data-id="45321">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc" data-role="giam-doc" data-degree="ckii" data-id="45321">
         <a href="chi-tiet-bac-si?slug=bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-nguyen.webp" alt="BS.CKII. Phan Hoàng Nguyên" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -465,7 +471,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc khoa-nhi" data-role="bac-si" data-degree="" data-id="7423">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc khoa-nhi" data-role="giam-doc" data-degree="ckii" data-id="7423">
         <a href="chi-tiet-bac-si?slug=bs-ckii-dang-quang-thuyet" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-thuyet.webp" alt="BS.CKII. Đặng Quang Thuyết" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -476,7 +482,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc khoa-noi-tong-hop khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="30169">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="ban-giam-doc khoa-noi-tong-hop khoa-kham-tong-quat-ehs" data-role="giam-doc truong-khoa" data-degree="ths" data-id="30169">
         <a href="chi-tiet-bac-si?slug=ths-bs-tran-nhu-hai" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-hai.webp" alt="ThS.BS. Trần Như Hải" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -487,7 +493,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-doan-hinh-anh khoa-can-thiep-mach-mau-dsa" data-role="bac-si" data-degree="" data-id="42828">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-doan-hinh-anh khoa-can-thiep-mach-mau-dsa" data-role="truong-khoa" data-degree="pgs ts" data-id="42828">
         <a href="chi-tiet-bac-si?slug=pgs-ts-bs-tran-minh-hoang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-hoang.webp" alt="PGS.TS. BS. Trần Minh Hoàng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -498,7 +504,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="bac-si" data-degree="" data-id="24866">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="truong-khoa" data-degree="cki" data-id="24866">
         <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-ngoc-suong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-suong.webp" alt="BS.CKI. Nguyễn Thị Ngọc Sương" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -509,7 +515,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs khoa-kham-benh khoa-noi-tong-hop" data-role="bac-si" data-degree="" data-id="7426">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs khoa-kham-benh khoa-noi-tong-hop" data-role="truong-khoa" data-degree="ckii" data-id="7426">
         <a href="chi-tiet-bac-si?slug=bs-ckii-tran-thanh-binh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-binh.webp" alt="BS.CKII. Trần Thanh Bình" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -520,7 +526,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="7428">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="truong-khoa" data-degree="ckii" data-id="7428">
         <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bach-hue" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-hue.webp" alt="BS.CKII. Nguyễn Bạch Huệ" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -531,7 +537,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si" data-degree="" data-id="7434">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="truong-khoa" data-degree="ts" data-id="7434">
         <a href="chi-tiet-bac-si?slug=ts-bs-pham-chi-lang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-lang.webp" alt="TS.BS. Phạm Chí Lăng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -542,7 +548,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tieu-hoa" data-role="bac-si" data-degree="" data-id="7437">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tieu-hoa" data-role="truong-khoa" data-degree="ckii" data-id="7437">
         <a href="chi-tiet-bac-si?slug=bs-ckii-le-kim-sang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/50-768x768_9d33a1ff.webp" alt="BS.CKII. Lê Kim Sang" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -553,7 +559,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="bac-si" data-degree="" data-id="7440">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="truong-khoa" data-degree="ckii ths" data-id="7440">
         <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-nhom" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/BS-Nguyen-Van-Nhom_bc3afe5c.webp" alt="ThS.BS.CKII. Nguyễn Văn Nhôm" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -564,7 +570,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si" data-degree="" data-id="7445">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="truong-khoa" data-degree="ckii" data-id="7445">
         <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-xuan-thanh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/6-1_96c330c4.webp" alt="BS.CKII. Nguyễn Bảo Xuân Thanh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -575,7 +581,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7527">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7527">
         <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-ngan-ha" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-ha.webp" alt="BS.CKI. Nguyễn Ngân Hà" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -586,7 +592,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7523">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="7523">
         <a href="chi-tiet-bac-si?slug=bs-ckii-pham-minh-khoi-nguyen" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-khoi-nguyen.webp?v=2" alt="BS.CKII. Phạm Minh Khôi Nguyên" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -597,7 +603,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7511">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="7511">
         <a href="chi-tiet-bac-si?slug=bs-cki-tran-the-loc" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-loc.webp?v=2" alt="BS.CKII. Trần Thế Lộc" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -608,7 +614,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="bac-si" data-degree="" data-id="25206">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="pho-khoa" data-degree="ths" data-id="25206">
         <a href="chi-tiet-bac-si?slug=thac-si-dang-truong-son" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/44-768x768_09638f5d.webp" alt="Thạc sĩ Đặng Trường Sơn" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -619,7 +625,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7509">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si-dieu-tri" data-degree="ths" data-id="7509">
         <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-xuan-cong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-cong.webp" alt="ThS.BS. Nguyễn Xuân Công" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -630,7 +636,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="bac-si" data-degree="" data-id="7453">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phu-san" data-role="pho-khoa" data-degree="ckii" data-id="7453">
         <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-vu-my-linh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/bac-si/new/bs-linh.webp?v=2" alt="BS.CKII. Nguyễn Vũ Mỹ Linh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -641,7 +647,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="7520">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7520">
         <a href="chi-tiet-bac-si?slug=bscki-nguyen-xuan-tai" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/BS_Tai_25f4c069.webp" alt="BS.CKI. Nguyễn Xuân Tài" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -652,7 +658,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach khoa-can-thiep-mach-mau-dsa" data-role="bac-si" data-degree="" data-id="25131">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach khoa-can-thiep-mach-mau-dsa" data-role="bac-si-dieu-tri" data-degree="ths cki" data-id="25131">
         <a href="chi-tiet-bac-si?slug=bs-cki-tra" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/12_9f3430cb.webp" alt="ThS.BS.CKI. Trần Thế Vinh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -663,7 +669,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach khoa-can-thiep-mach-mau-dsa" data-role="bac-si" data-degree="" data-id="24871">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach khoa-can-thiep-mach-mau-dsa" data-role="bac-si-dieu-tri" data-degree="cki" data-id="24871">
         <a href="chi-tiet-bac-si?slug=bs-cki-le-van-tuyen" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/11_d0d43d75.webp" alt="BS.CKI. Lê Văn Tuyến" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -674,7 +680,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si" data-degree="" data-id="7506">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7506">
         <a href="chi-tiet-bac-si?slug=bscki-nguyen-thi-le-lieu" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/BS-Le-Thi-Lieu_46e4c201.webp" alt="BS.CKI. Nguyễn Thị Lệ Liễu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -685,7 +691,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-dinh-duong khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7501">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-dinh-duong khoa-kham-tong-quat-ehs" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7501">
         <a href="chi-tiet-bac-si?slug=bs-cki-le-thi-ngoc-tran" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-2-1_4fcab0c0.webp" alt="BS.CKI. Lê Thị Ngọc Trân" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -696,7 +702,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs khoa-noi-than-kinh" data-role="bac-si" data-degree="" data-id="7456">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs khoa-noi-than-kinh" data-role="bac-si-dieu-tri" data-degree="ths" data-id="7456">
         <a href="chi-tiet-bac-si?slug=ths-bs-do-duc-tin" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-4_df007c3f.webp" alt="ThS.BS. Đỗ Đức Tín" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -707,7 +713,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tieu-hoa" data-role="bac-si" data-degree="" data-id="7495">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tieu-hoa" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="7495">
         <a href="chi-tiet-bac-si?slug=bs-ckii-dinh-duc-minh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/51-768x768_41e40e89.webp" alt="BS.CKII. Đinh Đức Minh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -718,7 +724,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach" data-role="bac-si" data-degree="" data-id="7459">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach" data-role="bac-si-dieu-tri" data-degree="ths" data-id="7459">
         <a href="chi-tiet-bac-si?slug=ths-bs-bui-thi-xuan-nga" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/13_f418a374.webp" alt="ThS.BS. Bùi Thị Xuân Nga" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -729,7 +735,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si" data-degree="" data-id="7467">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si-dieu-tri" data-degree="ths" data-id="7467">
         <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-van-khoa" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/8-1_1d8185a4.webp" alt="ThS.BS. Nguyễn Văn Khoa" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -740,7 +746,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-doan-hinh-anh" data-role="bac-si" data-degree="" data-id="7538">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-doan-hinh-anh" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7538">
         <a href="chi-tiet-bac-si?slug=bs-cki-ong-kien-huy" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-3-1_54ba0519.webp" alt="BS.CKI. Ông Kiến Huy" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -751,7 +757,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si" data-degree="" data-id="7461">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si-dieu-tri" data-degree="ths" data-id="7461">
         <a href="chi-tiet-bac-si?slug=ths-bs-tran-van-be-bay" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/BS-Tran-Van-Be-Bay_0509b48e.webp" alt="ThS.BS. Trần Văn Bé Bảy" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -762,7 +768,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si" data-degree="" data-id="24869">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-chan-thuong-chinh-hinh" data-role="bac-si-dieu-tri" data-degree="cki" data-id="24869">
         <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-van-tinh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/BS-Nguyen-Van-Tinh_3bb8ac08.webp" alt="BS.CKI. Nguyễn Văn Tịnh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -773,7 +779,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si" data-degree="" data-id="7492">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si-dieu-tri" data-degree="ckii ths" data-id="7492">
         <a href="chi-tiet-bac-si?slug=ths-bs-ckii-tran-trong-tam" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/48-768x768_231b41e3.webp" alt="ThS.BS.CKII. Trần Trọng Tâm" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -784,7 +790,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si" data-degree="" data-id="7475">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7475">
         <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-quoc-giang" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/45-768x768_311ccace.webp" alt="BS.CKI. Nguyễn Quốc Giang" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -795,7 +801,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si" data-degree="" data-id="7470">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh" data-role="bac-si-dieu-tri" data-degree="ts" data-id="7470">
         <a href="chi-tiet-bac-si?slug=ts-bs-huynh-hong-chau" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/47-768x768_eb19d25f.webp" alt="TS.BS. Huỳnh Hồng Châu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -806,7 +812,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-than-kinh" data-role="bac-si" data-degree="" data-id="7473">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-than-kinh" data-role="bac-si-dieu-tri" data-degree="ths" data-id="7473">
         <a href="chi-tiet-bac-si?slug=ths-bs-tran-thi-mai-thy" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/49-768x768_497c10db.webp" alt="ThS.BS. Trần Thị Mai Thy" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -817,7 +823,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tong-hop khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7481">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tong-hop khoa-kham-tong-quat-ehs" data-role="truong-khoa" data-degree="ckii" data-id="7481">
         <a href="chi-tiet-bac-si?slug=bsckii-duong-anh-phuong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-2_e0bbdc42.webp" alt="BS. CKII. Dương Anh Phượng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -828,7 +834,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tong-hop" data-role="bac-si" data-degree="" data-id="7478">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-tong-hop" data-role="bac-si-dieu-tri" data-degree="ckii ths" data-id="7478">
         <a href="chi-tiet-bac-si?slug=ths-bs-ckii-hoang-chan-phuong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-1-1_ea522e9a.webp" alt="ThS. BS. CKII. Hoàng Chân Phương" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -839,7 +845,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-gay-me-hoi-suc" data-role="bac-si" data-degree="" data-id="7543">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-gay-me-hoi-suc" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7543">
         <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-minh-tuan-b" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-4-1_f16990bd.webp" alt="BS.CKI. Nguyễn Minh Tuấn B" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -850,7 +856,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi khoa-tim-mach" data-role="bac-si" data-degree="" data-id="7540">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-nhi khoa-tim-mach" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="7540">
         <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-thi-hong-cam" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2024/09/bs-ckii-nguyen-thi-hong-cam_66f8da21dcf11-png.avif" alt="BS.CKII. Nguyễn Thị Hồng Cẩm" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -861,7 +867,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-hoi-suc-tich-cuc-icu khoa-cap-cuu" data-role="bac-si" data-degree="" data-id="7535">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-hoi-suc-tich-cuc-icu khoa-cap-cuu" data-role="bac-si-dieu-tri" data-degree="ths" data-id="7535">
         <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-phuoc-loc" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/BS-Nguyen-Phuoc-Loc_c876a829.webp" alt="ThS.BS. Nguyễn Phước Lộc" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -872,7 +878,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-da-lieu khoa-chan-thuong-chinh-hinh khoa-kham-tong-quat-ehs" data-role="bac-si" data-degree="" data-id="7517">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-da-lieu khoa-chan-thuong-chinh-hinh khoa-kham-tong-quat-ehs" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="7517">
         <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-bao-hoa" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp" alt="BS.CKII. Nguyễn Bảo Hòa" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -883,7 +889,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-mat" data-role="bac-si" data-degree="" data-id="7514">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-mat" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7514">
         <a href="chi-tiet-bac-si?slug=bs-cki-mai-thi-huong-thao" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-5_2abb6ba8.webp" alt="BS.CKI. Mai Thị Hương Thảo" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -894,7 +900,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tiet-nieu khoa-than-loc-mau" data-role="bac-si" data-degree="" data-id="7503">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tiet-nieu khoa-than-loc-mau" data-role="bac-si-dieu-tri" data-degree="cki" data-id="7503">
         <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-thi-thai-ha" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/8_43370d63.webp" alt="BS.CKI. Nguyễn Thị Thái Hà" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -905,7 +911,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-da-lieu" data-role="bac-si" data-degree="" data-id="7489">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-da-lieu" data-role="bac-si-dieu-tri" data-degree="bs" data-id="7489">
         <a href="chi-tiet-bac-si?slug=bs-le-duc-tho" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/59_bbeafbbc.webp" alt="BS. Lê Đức Thọ" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -916,7 +922,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tiet-nieu khoa-than-loc-mau khoa-nhi" data-role="bac-si" data-degree="" data-id="7487">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tiet-nieu khoa-than-loc-mau khoa-nhi" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="7487">
         <a href="chi-tiet-bac-si?slug=bs-ckii-duong-thi-kim-cuc" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-1-2_7591572f.webp" alt="BS.CKII. Dương Thị Kim Cúc" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -927,7 +933,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="bac-si" data-degree="" data-id="25486">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ho-tro-sinh-san-ivf" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="25486">
         <a href="chi-tiet-bac-si?slug=bs-ckii-cu-thi-kim-loan" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-6_4dbd24f7.webp" alt="BS.CKII. Cù Thị Kim Loan" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -938,7 +944,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh ban-giam-doc" data-role="bac-si" data-degree="" data-id="46473">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-than-kinh ban-giam-doc" data-role="giam-doc" data-degree="cki" data-id="46473">
         <a href="chi-tiet-bac-si?slug=bs-cki-nguyen-manh-hung" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2026/08/Bio-Doctor-template-for-website_2026-768x768.webp" alt="BS.CKI. Nguyễn Mạnh Hùng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -949,7 +955,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach" data-role="bac-si" data-degree="" data-id="45966">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tim-mach" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="45966">
         <a href="chi-tiet-bac-si?slug=bs-ckii-nguyen-ngoc-quynh-dung" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2024/07/Bio-Doctor-template-for-website_2026-2.webp" alt="BS.CKII. Nguyễn Ngọc Quỳnh Dung" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -960,7 +966,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-dinh-duong" data-role="bac-si" data-degree="" data-id="44525">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-dinh-duong" data-role="bac-si-dieu-tri" data-degree="ths" data-id="44525">
         <a href="chi-tiet-bac-si?slug=ths-bs-pham-tran-thien-nhan" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2026/03/Bio-Doctor-template-for-website_2026-7.webp" alt="ThS.BS. Phạm Trần Thiên Nhân" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -971,7 +977,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-than-kinh" data-role="bac-si" data-degree="" data-id="44112">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-noi-than-kinh" data-role="bac-si-dieu-tri" data-degree="cki" data-id="44112">
         <a href="chi-tiet-bac-si?slug=bs-cki-khuc-thua-minh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-1-7_d91a39a2.webp" alt="BS. CKI. Khúc Thừa Minh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -982,7 +988,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si" data-degree="" data-id="44067">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-ngoai-tong-quat" data-role="bac-si-dieu-tri" data-degree="ths cki" data-id="44067">
         <a href="chi-tiet-bac-si?slug=ths-bs-cki-ha-phu-xuan" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-template-for-website_2026-6_6a813fc2.webp" alt="ThS.BS.CKI. Hà Phú Xuân" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -993,7 +999,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="bac-si" data-degree="" data-id="25265">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="bac-si-dieu-tri" data-degree="cki" data-id="25265">
         <a href="chi-tiet-bac-si?slug=bs-cki-le-quoc-khanh" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/43-768x768_9466cd59.webp" alt="BS.CKI. Lê Quốc Khánh" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1004,7 +1010,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="bac-si" data-degree="" data-id="46055">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu" data-role="bac-si-dieu-tri" data-degree="cki" data-id="46055">
         <a href="chi-tiet-bac-si?slug=bs-cki-truong-thanh-phuong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2024/02/My_-Bio-Doctor-template-for-website_2026-1.webp" alt="BS. CKI. Trương Thanh Phương" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1015,7 +1021,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-mat" data-role="bac-si" data-degree="" data-id="7450">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-mat" data-role="truong-khoa" data-degree="ckii" data-id="7450">
         <a href="chi-tiet-bac-si?slug=bs-ckii-trinh-bach-tuyet" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/26_de3d44d8.webp" alt="BS.CKII. Trịnh Bạch Tuyết" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1026,7 +1032,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tai-mui-hong" data-role="bac-si" data-degree="" data-id="45973">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tai-mui-hong" data-role="bac-si-dieu-tri" data-degree="cki" data-id="45973">
         <a href="chi-tiet-bac-si?slug=cki-le-ngoc-hieu" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2026/07/Bio-Doctor-template-for-website_2026.webp" alt="BS. CKI. Lê Ngọc Hiếu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1037,7 +1043,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu khoa-hoi-suc-tich-cuc-icu" data-role="bac-si" data-degree="" data-id="44842">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-cap-cuu khoa-hoi-suc-tich-cuc-icu" data-role="bac-si-dieu-tri" data-degree="bs" data-id="44842">
         <a href="chi-tiet-bac-si?slug=bs-tran-hieu" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2026/04/Bio-Doctor-template-for-website_2026-1.webp" alt="BS. Trần Hiếu" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1048,7 +1054,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tai-mui-hong" data-role="bac-si" data-degree="" data-id="44662">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-tai-mui-hong" data-role="bac-si-dieu-tri" data-degree="ths" data-id="44662">
         <a href="chi-tiet-bac-si?slug=ths-bs-nguyen-le-nhan-van" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2024/01/Bio-Doctor-template-for-website_2026.webp" alt="ThS. BS. Nguyễn Lê Nhân Văn" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1059,7 +1065,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phau-thuat-tao-hinh-tham-my" data-role="bac-si" data-degree="" data-id="30120">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phau-thuat-tao-hinh-tham-my" data-role="bac-si-dieu-tri" data-degree="cki" data-id="30120">
         <a href="chi-tiet-bac-si?slug=bs-cki-ho-thanh-phong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="https://cih.com.vn/wp-content/uploads/2024/01/My_-Bio-Doctor-template-for-website_2026.webp" alt="BS.CKI. Hồ Thanh Phong" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1070,7 +1076,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs khoa-noi-tong-hop" data-role="bac-si" data-degree="" data-id="7431">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-kham-tong-quat-ehs khoa-noi-tong-hop" data-role="bac-si-dieu-tri" data-degree="ckii" data-id="7431">
         <a href="chi-tiet-bac-si?slug=bs-ckii-ha-thi-kim-hong" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/5-1_803d0079.webp" alt="BS.CKII. Hà Thị Kim Hồng" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1081,7 +1087,7 @@
         </div>
       </div>
 
-      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phuc-hoi-chuc-nang" data-role="bac-si" data-degree="" data-id="44281">
+      <div class="doc-card-v2 doc-detail-card" data-specialty="khoa-phuc-hoi-chuc-nang" data-role="bac-si-dieu-tri" data-degree="cki" data-id="44281">
         <a href="chi-tiet-bac-si?slug=bs-cki-tran-phuong-thao" class="doc-card-v2__img-wrap" style="display: block; text-decoration: none;">
           <img src="images/ext_webp/Bio-Doctor-Thao_c39e66b0.webp" alt="BS.CKI. Trần Phương Thảo" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </a>
@@ -1541,18 +1547,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Role filter
         let matchesRole = true;
-        if (selectedRole === 'giam-doc') {
-          matchesRole = fullText.includes('giám đốc') || fullText.includes('ban giám đốc');
-        } else if (selectedRole === 'truong-khoa') {
-          matchesRole = fullText.includes('trưởng khoa') || fullText.includes('trưởng trung tâm') || fullText.includes('trưởng đơn vị') || fullText.includes('trưởng phòng lab') || role === 'truong-khoa';
+        if (selectedRole) {
+          const roleTokens = role.split(/\s+/);
+          if (roleTokens.includes(selectedRole)) {
+            matchesRole = true;
+          } else if (selectedRole === 'giam-doc') {
+            matchesRole = pos.includes('giám đốc') || pos.includes('bgđ') || pos.includes('cố vấn') || specSlug.includes('ban-giam-doc');
+          } else if (selectedRole === 'pho-khoa') {
+            matchesRole = pos.includes('phó trưởng') || pos.includes('phó khoa');
+          } else if (selectedRole === 'truong-khoa') {
+            matchesRole = !pos.includes('phó trưởng') && !pos.includes('phó khoa') && (pos.includes('trưởng khoa') || pos.includes('trưởng trung tâm') || pos.includes('trưởng đơn vị') || pos.includes('trưởng phòng'));
+          } else if (selectedRole === 'bac-si-dieu-tri') {
+            matchesRole = !pos.includes('giám đốc') && !pos.includes('trưởng');
+          } else {
+            matchesRole = false;
+          }
         }
 
         // Degree filter
         let matchesDegree = true;
-        if (selectedDegree === 'ts') {
-          matchesDegree = / (ts|pgs|gs) /i.test(name) || degree === 'ts';
-        } else if (selectedDegree === 'ckii') {
-          matchesDegree = / ckii /i.test(name) || degree === 'ckii';
+        if (selectedDegree) {
+          const degTokens = degree.split(/\s+/);
+          if (degTokens.includes(selectedDegree)) {
+            matchesDegree = true;
+          } else if (selectedDegree === 'pgs') {
+            matchesDegree = /\bpgs\b/i.test(name);
+          } else if (selectedDegree === 'ts') {
+            matchesDegree = /\bts\b/i.test(name);
+          } else if (selectedDegree === 'ckii') {
+            matchesDegree = /\bckii\b/i.test(name);
+          } else if (selectedDegree === 'ths') {
+            matchesDegree = /\b(ths|thạc sĩ)\b/i.test(name);
+          } else if (selectedDegree === 'cki') {
+            matchesDegree = /\bcki\b/i.test(name);
+          } else if (selectedDegree === 'bs') {
+            matchesDegree = !/\b(pgs|ts|ckii|cki|ths|thạc sĩ)\b/i.test(name) && /\bbs\b/i.test(name);
+          } else {
+            matchesDegree = false;
+          }
         }
 
         return matchesSpecialty && matchesRole && matchesDegree;

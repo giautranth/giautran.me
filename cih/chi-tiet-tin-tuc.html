@@ -125,6 +125,121 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* Chuẩn hóa bề ngang bài viết 874px theo chuẩn Bệnh viện Tâm Anh (.box_detail_post) */
+    .box-detail-post {
+      max-width: 874px;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    #art-body {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #2b3445;
+      text-align: justify;
+      text-justify: inter-word;
+      overflow: hidden;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    #art-body p {
+      margin-bottom: 1rem !important;
+      line-height: 1.75;
+    }
+    #art-body h2 {
+      font-size: 1.3rem !important;
+      line-height: 1.4 !important;
+      font-weight: 700 !important;
+      color: #007DA5 !important;
+      margin-top: 1.75rem !important;
+      margin-bottom: 0.75rem !important;
+      text-align: left;
+    }
+    #art-body h3 {
+      font-size: 1.15rem !important;
+      line-height: 1.45 !important;
+      font-weight: 700 !important;
+      color: #0f3775 !important;
+      margin-top: 1.5rem !important;
+      margin-bottom: 0.65rem !important;
+      text-align: left;
+    }
+    #art-body figure,
+    #art-body .wp-caption,
+    #art-body .wp-block-image,
+    #art-body .wp-block-gallery {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 1.5rem auto !important;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #f5f7fa;
+    }
+    #art-body img {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      margin: 1.25rem auto !important;
+      border-radius: 8px;
+    }
+    #art-body figure img,
+    #art-body .wp-caption img {
+      margin: 0 auto !important;
+      border-radius: 8px 8px 0 0;
+    }
+    #art-body figcaption,
+    #art-body .wp-caption-text {
+      text-align: center !important;
+      font-size: 0.9rem !important;
+      line-height: 1.5 !important;
+      color: #475569 !important;
+      font-style: italic !important;
+      background: #f5f7fa !important;
+      padding: 0.65rem 1rem !important;
+      margin: 0 !important;
+      border-radius: 0 0 8px 8px;
+    }
+    #art-body ul,
+    #art-body ol {
+      padding-left: 1.75rem !important;
+      margin-bottom: 1.25rem !important;
+    }
+    #art-body ul {
+      list-style-type: disc !important;
+    }
+    #art-body ol {
+      list-style-type: decimal !important;
+    }
+    #art-body ul li,
+    #art-body ol li {
+      display: list-item !important;
+      margin-bottom: 0.5rem !important;
+      line-height: 1.75 !important;
+      color: #2b3445 !important;
+    }
+    #art-body a {
+      color: #007DA5;
+      text-decoration: underline;
+    }
+    #art-body blockquote {
+      border-left: 4px solid #007DA5;
+      padding: 0.85rem 1.25rem;
+      margin: 1.5rem 0;
+      background: #f0f9ff;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #334155;
+    }
+    #art-body iframe {
+      max-width: 100% !important;
+    }
+    #art-body table {
+      max-width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
   </style>
 </head>
 <body style="background: #ffffff;">
@@ -249,59 +364,40 @@
   <div class="container">
     
     <article class="article-detail-wrap" style="background: #ffffff; padding: 0; border: none; box-shadow: none;">
-      
-      <!-- Article Title Uppercase Blue -->
-      <h1 id="art-title" style="font-size: clamp(1.25rem, 2vw, 1.55rem); font-weight: 800; line-height: 1.4; color: #007DA5; text-transform: uppercase; margin-bottom: 1.25rem; letter-spacing: -0.2px;">
-        Tiêu đề bài viết
-      </h1>
+      <div class="box-detail-post">
+        <!-- Article Title Uppercase Blue -->
+        <h1 id="art-title" style="font-size: clamp(1.3rem, 2.2vw, 1.65rem); font-weight: 800; line-height: 1.4; color: #007DA5; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: -0.2px;">
+          Tiêu đề bài viết
+        </h1>
 
-      <!-- Meta Bar under Title -->
-      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid #f1f5f9;">
-        <!-- Date -->
-        <span id="art-date" style="font-size: 0.875rem; color: #64748b; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
-          📅 <span id="art-date-val">23/07/2026</span>
-        </span>
-      </div>
+        <!-- Meta Bar under Title -->
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem; flex-wrap: wrap; padding-bottom: 0.85rem; border-bottom: 1px solid #e2e8f0;">
+          <!-- Date -->
+          <span id="art-date" style="font-size: 0.875rem; color: #64748b; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;">
+            📅 <span id="art-date-val">23/07/2026</span>
+          </span>
+        </div>
 
-      <!-- Article Body -->
-      <div id="art-body" style="font-size: 1.05rem; line-height: 1.85; color: #334155; text-align: justify; text-justify: inter-word; overflow: hidden; word-wrap: break-word; overflow-wrap: break-word;">
-        <style>
-          #art-body img { max-width: 100% !important; height: auto !important; border-radius: 8px; display: block; margin: 1rem auto; }
-          #art-body figure { max-width: 100% !important; margin: 1.5rem 0; }
-          #art-body iframe { max-width: 100% !important; }
-          #art-body table { max-width: 100%; overflow-x: auto; display: block; }
-          #art-body .wp-block-image, #art-body .wp-block-gallery { max-width: 100% !important; }
-          #art-body p { margin-bottom: 1rem !important; }
-          #art-body h2, #art-body h3 { color: #0f3775; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 700; }
-          #art-body ul, #art-body ol { padding-left: 1.75rem !important; margin-bottom: 1.25rem !important; }
-          #art-body ul { list-style-type: disc !important; }
-          #art-body ol { list-style-type: decimal !important; }
-          #art-body ul li, #art-body ol li { display: list-item !important; margin-bottom: 0.5rem !important; line-height: 1.8 !important; color: #334155 !important; }
-          #art-body a { color: #005f80; text-decoration: underline; }
-          #art-body img { max-width: 100% !important; height: auto !important; max-height: 500px !important; object-fit: contain !important; display: block; margin: 1rem auto; }
-          #art-body figure { max-width: 100% !important; overflow: hidden; }
-          #art-body h2 { font-size: 1.25rem !important; margin-top: 2rem !important; margin-bottom: 0.75rem !important; color: #0f3775 !important; }
-          #art-body h3 { font-size: 1.1rem !important; margin-top: 1.5rem !important; margin-bottom: 0.5rem !important; color: #0f3775 !important; }
-          #art-body blockquote { border-left: 4px solid #007DA5; padding: 0.75rem 1.25rem; margin: 1.5rem 0; background: #f0f9ff; border-radius: 0 8px 8px 0; font-style: italic; color: #475569; }
-          #art-body figcaption, #art-body .wp-caption-text { text-align: center; font-size: 0.875rem; color: #64748b; font-style: italic; margin-top: 0.5rem; }
-        </style>
-        <p>Đang tải nội dung bài viết...</p>
-      </div>
+        <!-- Article Body -->
+        <div id="art-body">
+          <p>Đang tải nội dung bài viết...</p>
+        </div>
 
-      <!-- Social Media Share Bar (Only Facebook & Copy Link) -->
-      <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-        <span style="font-weight: 700; color: #007DA5; font-size: 0.95rem;">Chia sẻ bài viết này:</span>
-        <div style="display: flex; gap: 0.75rem; align-items: center;">
-          
-          <!-- Facebook Icon -->
-          <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener" title="Chia sẻ qua Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: #fff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, opacity 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
+        <!-- Social Media Share Bar (Only Facebook & Copy Link) -->
+        <div style="margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <span style="font-weight: 700; color: #007DA5; font-size: 0.95rem;">Chia sẻ bài viết này:</span>
+          <div style="display: flex; gap: 0.75rem; align-items: center;">
+            
+            <!-- Facebook Icon -->
+            <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener" title="Chia sẻ qua Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: #fff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, opacity 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
 
-          <!-- Copy Link Button -->
-          <button onclick="navigator.clipboard.writeText(window.location.href);alert('Đã sao chép liên kết bài viết!')" title="Sao chép liên kết" style="width: 40px; height: 40px; border-radius: 50%; background: #64748b; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          </button>
+            <!-- Copy Link Button -->
+            <button onclick="navigator.clipboard.writeText(window.location.href);alert('Đã sao chép liên kết bài viết!')" title="Sao chép liên kết" style="width: 40px; height: 40px; border-radius: 50%; background: #64748b; color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -891,7 +987,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bcNewsSpan.innerHTML = `<a href="./" style="color: #555555; font-weight: 600; text-decoration: none;">Trang chủ</a> &nbsp;/&nbsp; <a href="tin-tuc" style="color: #555555; font-weight: 600; text-decoration: none;">Tin tức</a> &nbsp;/&nbsp; <span style="color: #007DA5; font-weight: 700;">${formatTitleCase(article.title)}</span>`;
     }
     document.getElementById('art-date-val').innerText = formatNewsDate(article.date) || '23/07/2026';
-    document.getElementById('art-body').innerHTML = article.content;
+    document.getElementById('art-body').innerHTML = (article.content || '').replace(/http:\/\/cih\.com\.vn/g, 'https://cih.com.vn');
 
     // Filter related articles (excluding current article)
     const otherArticles = CIH_NEWS_DATA.filter(n => n.id !== article.id);

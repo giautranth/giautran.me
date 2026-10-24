@@ -251,6 +251,87 @@
       }
     }
 
+    /* ═══════════════════════════════════════════════
+       2. HORIZONTAL STAT STRIP BELOW BANNER
+       ═══════════════════════════════════════════════ */
+    .about-stat-strip {
+      background: #f9f9f8;
+      border-top: 1px solid #ebe2d2;
+      border-bottom: 1px solid #ebe2d2;
+      padding: 26px 0;
+    }
+    .about-stat-strip__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+    }
+    .about-stat-strip__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 6px 20px;
+      position: relative;
+    }
+    .about-stat-strip__item:not(:first-child)::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 48px;
+      background: #e0d2ba;
+    }
+    .about-stat-strip__icon {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #C2882E;
+    }
+    .about-stat-strip__num {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #C2882E;
+      line-height: 1.15;
+      margin-bottom: 3px;
+      letter-spacing: -0.3px;
+    }
+    .about-stat-strip__num sup {
+      font-size: 1.15rem;
+      font-weight: 800;
+      top: -0.45em;
+    }
+    .about-stat-strip__label {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #5a6577;
+      line-height: 1.3;
+    }
+    @media (max-width: 991px) {
+      .about-stat-strip__grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 24px;
+      }
+      .about-stat-strip__item:nth-child(3)::before {
+        display: none;
+      }
+    }
+    @media (max-width: 576px) {
+      .about-stat-strip__grid {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+      }
+      .about-stat-strip__item {
+        justify-content: flex-start;
+        padding-left: 24px;
+      }
+      .about-stat-strip__item::before {
+        display: none !important;
+      }
+    }
+
     /* Premium About Us Styling (Hoa Lâm Corporate Style) */
     .about-group {
       background: #ffffff;
@@ -1055,97 +1136,84 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     DÃY THỐNG KÊ HÀNG NGANG DƯỚI BANNER
+═══════════════════════════════════════════════ -->
+<section class="about-stat-strip">
+  <div class="container">
+    <div class="about-stat-strip__grid">
+
+      <div class="about-stat-strip__item">
+        <div class="about-stat-strip__icon">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#C2882E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+            <circle cx="20" cy="10" r="2"></circle>
+          </svg>
+        </div>
+        <div>
+          <div class="about-stat-strip__num">16</div>
+          <div class="about-stat-strip__label">Chuyên khoa</div>
+        </div>
+      </div>
+
+      <div class="about-stat-strip__item">
+        <div class="about-stat-strip__icon">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#C2882E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 4v16"></path>
+            <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+            <path d="M2 17h20"></path>
+            <path d="M6 8v9"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="about-stat-strip__num">320</div>
+          <div class="about-stat-strip__label">Giường bệnh</div>
+        </div>
+      </div>
+
+      <div class="about-stat-strip__item">
+        <div class="about-stat-strip__icon">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#C2882E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="about-stat-strip__num">550+</div>
+          <div class="about-stat-strip__label">Nhân sự y tế</div>
+        </div>
+      </div>
+
+      <div class="about-stat-strip__item">
+        <div class="about-stat-strip__icon">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#C2882E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <path d="M9 22v-4h6v4"></path>
+            <path d="M8 6h.01"></path>
+            <path d="M16 6h.01"></path>
+            <path d="M8 10h.01"></path>
+            <path d="M16 10h.01"></path>
+            <path d="M8 14h.01"></path>
+            <path d="M16 14h.01"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="about-stat-strip__num">27.000+ m<sup>2</sup></div>
+          <div class="about-stat-strip__label">Diện tích</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- MAIN ABOUT SECTION (Hoa Lâm Corporate Style) -->
-<main class="about-group">
+<main class="about-group" id="tong-quan">
   <div class="container">
 
-    <!-- Section 1: Overview Grid -->
-    <div class="about-group-grid animate-fade-up" id="tong-quan">
-      <div class="group-content">
-        <h2 class="timeline-section-title" style="text-align: left; margin-bottom: 20px; font-size: 1.8rem;">Tổng quan bệnh viện</h2>
-        
-        <p class="about-lead">
-          Toạ lạc tại Khu Y tế kỹ thuật cao TP. HCM với quy mô 320 giường bệnh nội trú, Bệnh viện Quốc tế City luôn tiên phong trang bị hệ thống cơ sở vật chất và công nghệ y khoa hiện đại đạt tiêu chuẩn kiểm định an toàn quốc tế AACI.
-        </p>
-
-        <!-- Bộ 4 Con Số Ấn Tượng ngay dưới đoạn văn giới thiệu mở đầu -->
-        <div class="intro-stats-grid">
-          
-          <div class="intro-stat-card">
-            <div class="intro-stat-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
-                <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
-                <circle cx="20" cy="10" r="2"></circle>
-              </svg>
-            </div>
-            <div>
-              <div class="intro-stat-num">16</div>
-              <div class="intro-stat-label">Chuyên khoa</div>
-            </div>
-          </div>
-
-          <div class="intro-stat-card">
-            <div class="intro-stat-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 4v16"></path>
-                <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
-                <path d="M2 17h20"></path>
-                <path d="M6 8v9"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="intro-stat-num">320</div>
-              <div class="intro-stat-label">Giường</div>
-            </div>
-          </div>
-
-          <div class="intro-stat-card">
-            <div class="intro-stat-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="intro-stat-num">550+</div>
-              <div class="intro-stat-label">Nhân sự y tế</div>
-            </div>
-          </div>
-
-          <div class="intro-stat-card">
-            <div class="intro-stat-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                <path d="M9 22v-4h6v4"></path>
-                <path d="M8 6h.01"></path>
-                <path d="M16 6h.01"></path>
-                <path d="M8 10h.01"></path>
-                <path d="M16 10h.01"></path>
-                <path d="M8 14h.01"></path>
-                <path d="M16 14h.01"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="intro-stat-num">27.000+</div>
-              <div class="intro-stat-label">m² (Diện tích)</div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="group-visual">
-        <div class="glass-visual-box">
-          <img src="images/cih1.webp" alt="Bệnh viện Quốc tế City" class="visual-img" />
-        </div>
-      </div>
-    </div>
-
-    
     <!-- Section 3: Tầm nhìn - Sứ mệnh - Giá trị cốt lõi (Dribbble 2026 Redesign) -->
     <div class="vmg-wrapper animate-fade-up" id="giai-thuong">
       

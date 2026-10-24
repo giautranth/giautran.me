@@ -514,16 +514,7 @@
           <span id="doc-spec-badge" class="pn-doc-hero__badge">Chuyên gia Y tế CIH</span>
           <h1 id="doc-name" class="pn-doc-hero__name">Đang tải...</h1>
           <div id="doc-position" class="pn-doc-hero__position"></div>
-          <div id="doc-hero-intro" class="pn-doc-hero__intro"></div>
-          <div class="pn-doc-hero__actions">
-            <a href="#doc-booking-box" onclick="event.preventDefault(); const el=document.getElementById('doc-booking-box'); if(el){el.scrollIntoView({behavior:'smooth', block:'center'}); setTimeout(()=>document.getElementById('doc-book-name')?.focus(), 450);}" class="pn-btn-book">
-              <span>📅 Đặt lịch khám</span>
-              <span>→</span>
-            </a>
-            <a href="tel:19008146" class="pn-btn-call">
-              <span>📞 Gọi tư vấn: 1900 8146</span>
-            </a>
-          </div>
+          <div id="doc-hero-intro" class="pn-doc-hero__intro" style="margin-bottom: 0;"></div>
         </div>
       </div>
 
@@ -1066,7 +1057,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const specBadge = document.getElementById('doc-spec-badge');
     if (specBadge) {
-      specBadge.innerText = doctor.specialty ? ('Khoa ' + doctor.specialty.replace(/^Khoa\s+/i, '')) : 'Chuyên gia Y tế CIH';
+      const sp = (doctor.specialty || '').trim();
+      if (!sp) {
+        specBadge.innerText = 'Chuyên gia Y tế CIH';
+      } else if (/^(Khoa|Ban|Đơn vị|Trung tâm|Phòng)\b/i.test(sp)) {
+        specBadge.innerText = sp;
+      } else {
+        specBadge.innerText = 'Khoa ' + sp;
+      }
     }
 
     const formDocName = document.getElementById('doc-form-doctor-name');
@@ -1153,7 +1151,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Skip redundant position line at very top
         if (sections.length === 1 && currentSec.nodes.length === 0 && text.length < 140) {
           const textNorm = normalizeStr(text);
-          if (posNorm && (textNorm === posNorm || posNorm.includes(textNorm) || textNorm.includes(posNorm))) {
+          if (
+            (posNorm && (textNorm === posNorm || posNorm.includes(textNorm) || textNorm.includes(posNorm))) ||
+            /^(cố vấn|giám đốc|phó giám đốc|trưởng khoa|phó trưởng khoa|phó khoa)\b/i.test(text)
+          ) {
             return;
           }
         }

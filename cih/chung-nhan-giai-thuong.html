@@ -113,13 +113,39 @@
       font-weight: 800;
     }
 
-    /* 🎖️ CHỨNG NHẬN QUỐC TẾ GRID */
-    .cert-section-title {
-      font-size: 1.8rem;
+    /* 🎖️ PHÂN MỤC CHỨNG NHẬN & GIẢI THƯỞNG */
+    .award-category-section {
+      margin-bottom: 3.75rem;
+    }
+    .award-category-section:last-child {
+      margin-bottom: 0;
+    }
+    .award-category-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 1.75rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 2px solid #f1f5f9;
+      position: relative;
+    }
+    .award-category-header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 90px;
+      height: 3px;
+      background: linear-gradient(90deg, #d97706 0%, #f59e0b 100%);
+      border-radius: 3px;
+    }
+    .award-category-title {
+      font-size: 1.5rem;
       font-weight: 800;
       color: #007DA5;
-      margin-bottom: 2rem;
-      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
     .cert-detail-grid {
       display: grid;
@@ -395,117 +421,139 @@
       </p>
     </div>
 
-    <!-- 🏆 STANDALONE FEATURED AACI CERTIFICATE BOX -->
-    <div class="aaci-featured-hero-box animate-fade-up" onclick="openAwardModal('aaci')" style="background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1.2px, transparent 1.2px), linear-gradient(135deg, #fffef5 0%, #fffbeb 50%, #fef3c7 100%); background-size: 18px 18px, 100% 100%; border: 2px solid #fde68a; border-radius: 24px; padding: 2.25rem 2.5rem; margin-bottom: 2.5rem; box-shadow: 0 12px 35px -5px rgba(217, 119, 6, 0.15); display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: center; position: relative; overflow: hidden; cursor: pointer;">
-      <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.12); border: 2px solid #fde68a; background: #ffffff; text-align: center;">
-        <img src="images/Website/giai-thuong/gt_acci.webp?v=20260812" alt="Bằng chứng nhận AACI Hoa Kỳ - Bệnh viện Quốc tế City" style="width: 100%; height: auto; max-height: 280px; object-fit: contain; padding: 10px;" loading="lazy" />
+    <!-- ═══════════════════════════════════════════════
+         PHẦN 1: CHỨNG NHẬN
+    ═══════════════════════════════════════════════ -->
+    <section class="award-category-section" id="chung-nhan">
+      <div class="award-category-header">
+        <h2 class="award-category-title">Chứng nhận</h2>
       </div>
-      <div>
-        <div style="margin-bottom: 0.85rem;">
-          <h3 style="font-size: 1.5rem; font-weight: 800; color: #92400e; margin: 0; line-height: 1.35; letter-spacing: -0.3px;">BỆNH VIỆN ĐẦU TIÊN TẠI VIỆT NAM ĐẠT CHUẨN CHẤT LƯỢNG AACI (HOA KỲ)</h3>
+
+      <!-- 🏆 STANDALONE FEATURED AACI CERTIFICATE BOX -->
+      <div class="aaci-featured-hero-box animate-fade-up" onclick="openAwardModal('aaci')" style="background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1.2px, transparent 1.2px), linear-gradient(135deg, #fffef5 0%, #fffbeb 50%, #fef3c7 100%); background-size: 18px 18px, 100% 100%; border: 2px solid #fde68a; border-radius: 24px; padding: 2.25rem 2.5rem; margin-bottom: 2rem; box-shadow: 0 12px 35px -5px rgba(217, 119, 6, 0.15); display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: center; position: relative; overflow: hidden; cursor: pointer;">
+        <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.12); border: 2px solid #fde68a; background: #ffffff; text-align: center;">
+          <img src="images/Website/giai-thuong/gt_acci.webp?v=20260812" alt="Bằng chứng nhận AACI Hoa Kỳ - Bệnh viện Quốc tế City" style="width: 100%; height: auto; max-height: 280px; object-fit: contain; padding: 10px;" loading="lazy" />
         </div>
-        <p style="font-size: 1.05rem; color: #1e293b; line-height: 1.75; margin: 0; font-weight: 500; text-align: justify;">Bệnh viện Quốc tế City là bệnh viện đầu tiên tại Việt Nam đạt Tiêu chuẩn An toàn &amp; Chất lượng Y tế Quốc tế AACI (American Accreditation Commission International).</p>
-      </div>
-    </div>
-
-    <div class="cert-detail-grid animate-fade-up">
-
-      <!-- 1. CHỨNG NHẬN RTAC -->
-      <div class="cert-card" onclick="openAwardModal('rtac')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/gt_rtac.webp?v=20260812" alt="Chứng nhận RTAC" />
+        <div>
+          <div style="margin-bottom: 0.85rem;">
+            <h3 style="font-size: 1.5rem; font-weight: 800; color: #92400e; margin: 0; line-height: 1.35; letter-spacing: -0.3px;">BỆNH VIỆN ĐẦU TIÊN TẠI VIỆT NAM ĐẠT CHUẨN CHẤT LƯỢNG AACI (HOA KỲ)</h3>
+          </div>
+          <p style="font-size: 1.05rem; color: #1e293b; line-height: 1.75; margin: 0; font-weight: 500; text-align: justify;">Bệnh viện Quốc tế City là bệnh viện đầu tiên tại Việt Nam đạt Tiêu chuẩn An toàn &amp; Chất lượng Y tế Quốc tế AACI (American Accreditation Commission International).</p>
         </div>
-        <h3 class="cert-card-title">CHỨNG NHẬN RTAC</h3>
       </div>
 
-      <!-- 2. CHỨNG NHẬN ICARE-HF -->
-      <div class="cert-card" onclick="openAwardModal('esc')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/cert_esc_icare.webp?v=20260812" alt="Chứng nhận ICARe-HF" />
+      <div class="cert-detail-grid animate-fade-up">
+
+        <!-- 1. CHỨNG NHẬN RTAC -->
+        <div class="cert-card" onclick="openAwardModal('rtac')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/gt_rtac.webp?v=20260812" alt="Chứng nhận RTAC" />
+          </div>
+          <h3 class="cert-card-title">CHỨNG NHẬN RTAC</h3>
         </div>
-        <h3 class="cert-card-title">CHỨNG NHẬN ICARE-HF</h3>
-      </div>
 
-      <!-- 3. CHỨNG NHẬN ISO 15189:2022 -->
-      <div class="cert-card" onclick="openAwardModal('iso')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/iso.webp?v=20260812" alt="Chứng nhận ISO 15189:2022" />
+        <!-- 2. CHỨNG NHẬN ICARE-HF -->
+        <div class="cert-card" onclick="openAwardModal('esc')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/cert_esc_icare.webp?v=20260812" alt="Chứng nhận ICARe-HF" />
+          </div>
+          <h3 class="cert-card-title">CHỨNG NHẬN ICARE-HF</h3>
         </div>
-        <h3 class="cert-card-title">CHỨNG NHẬN ISO 15189:2022</h3>
-      </div>
 
-      <!-- 3.5. CHỨNG NHẬN ISO 7101:2023 -->
-      <div class="cert-card" onclick="openAwardModal('iso-7101')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/iso_7101_2023.webp?v=2" alt="Chứng nhận ISO 7101:2023" />
+        <!-- 3. CHỨNG NHẬN ISO 15189:2022 -->
+        <div class="cert-card" onclick="openAwardModal('iso')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/iso.webp?v=20260812" alt="Chứng nhận ISO 15189:2022" />
+          </div>
+          <h3 class="cert-card-title">CHỨNG NHẬN ISO 15189:2022</h3>
         </div>
-        <h3 class="cert-card-title">CHỨNG NHẬN ISO 7101:2023</h3>
-      </div>
 
-      <!-- 4. THÀNH VIÊN LIÊN ĐOÀN BỆNH VIỆN IHF -->
-      <div class="cert-card" onclick="openAwardModal('ihf')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/gt_ihf.webp?v=20260812" alt="IHF Membership Certificate" />
+        <!-- 4. CHỨNG NHẬN ISO 7101:2023 -->
+        <div class="cert-card" onclick="openAwardModal('iso-7101')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/iso_7101_2023.webp?v=2" alt="Chứng nhận ISO 7101:2023" />
+          </div>
+          <h3 class="cert-card-title">CHỨNG NHẬN ISO 7101:2023</h3>
         </div>
-        <h3 class="cert-card-title">
-          <span>THÀNH VIÊN</span>
-          <span>LIÊN ĐOÀN BỆNH VIỆN IHF</span>
-        </h3>
-      </div>
 
-      <!-- 5. TOP 3 THƯƠNG HIỆU TIÊU BIỂU CHÂU Á THÁI BÌNH DƯƠNG 2026 -->
-      <div class="cert-card" onclick="openAwardModal('top3')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/top3.webp?v=20260812" alt="Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026" />
+        <!-- 5. THÀNH VIÊN LIÊN ĐOÀN BỆNH VIỆN IHF -->
+        <div class="cert-card" onclick="openAwardModal('ihf')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/gt_ihf.webp?v=20260812" alt="IHF Membership Certificate" />
+          </div>
+          <h3 class="cert-card-title">
+            <span>THÀNH VIÊN</span>
+            <span>LIÊN ĐOÀN BỆNH VIỆN IHF</span>
+          </h3>
         </div>
-        <h3 class="cert-card-title">
-          <span>TOP 3 THƯƠNG HIỆU TIÊU BIỂU</span>
-          <span>CHÂU Á THÁI BÌNH DƯƠNG 2026</span>
-        </h3>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PHẦN 2: GIẢI THƯỞNG
+    ═══════════════════════════════════════════════ -->
+    <section class="award-category-section" id="giai-thuong">
+      <div class="award-category-header">
+        <h2 class="award-category-title">Giải thưởng</h2>
       </div>
 
-      <!-- 6. TOP 10 THƯƠNG HIỆU XUẤT SẮC CHÂU Á 2025 -->
-      <div class="cert-card" onclick="openAwardModal('top10-asia-2025')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812" alt="Top 10 thương hiệu xuất sắc Châu Á 2025" />
+      <div class="cert-detail-grid animate-fade-up">
+
+        <!-- 1. TOP 3 THƯƠNG HIỆU TIÊU BIỂU CHÂU Á THÁI BÌNH DƯƠNG 2026 -->
+        <div class="cert-card" onclick="openAwardModal('top3')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/top3.webp?v=20260812" alt="Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026" />
+          </div>
+          <h3 class="cert-card-title">
+            <span>TOP 3 THƯƠNG HIỆU TIÊU BIỂU</span>
+            <span>CHÂU Á THÁI BÌNH DƯƠNG 2026</span>
+          </h3>
         </div>
-        <h3 class="cert-card-title">
-          <span>TOP 10 THƯƠNG HIỆU</span>
-          <span>XUẤT SẮC CHÂU Á 2025</span>
-        </h3>
-      </div>
 
-      <!-- 7. TOP 10 THƯƠNG HIỆU UY TÍN HÀNG ĐẦU CHÂU Á 2025 -->
-      <div class="cert-card" onclick="openAwardModal('asia')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812" alt="Top 10 Thương hiệu uy tín hàng đầu Châu Á 2025" />
+        <!-- 2. TOP 10 THƯƠNG HIỆU XUẤT SẮC CHÂU Á 2025 -->
+        <div class="cert-card" onclick="openAwardModal('top10-asia-2025')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812" alt="Top 10 thương hiệu xuất sắc Châu Á 2025" />
+          </div>
+          <h3 class="cert-card-title">
+            <span>TOP 10 THƯƠNG HIỆU</span>
+            <span>XUẤT SẮC CHÂU Á 2025</span>
+          </h3>
         </div>
-        <h3 class="cert-card-title">
-          <span>TOP 10 THƯƠNG HIỆU UY TÍN</span>
-          <span>HÀNG ĐẦU CHÂU Á 2025</span>
-        </h3>
-      </div>
 
-      <!-- 8. GIẢI THƯỞNG HEALTHCARE ASIA AWARDS 2023 -->
-      <div class="cert-card" onclick="openAwardModal('healthcare-asia')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812" alt="Healthcare Asia Awards 2023" />
+        <!-- 3. TOP 10 THƯƠNG HIỆU UY TÍN HÀNG ĐẦU CHÂU Á 2025 -->
+        <div class="cert-card" onclick="openAwardModal('asia')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812" alt="Top 10 Thương hiệu uy tín hàng đầu Châu Á 2025" />
+          </div>
+          <h3 class="cert-card-title">
+            <span>TOP 10 THƯƠNG HIỆU UY TÍN</span>
+            <span>HÀNG ĐẦU CHÂU Á 2025</span>
+          </h3>
         </div>
-        <h3 class="cert-card-title">
-          <span>GIẢI THƯỞNG</span>
-          <span>HEALTHCARE ASIA AWARDS 2023</span>
-        </h3>
-      </div>
 
-      <!-- 9. TOP 10 TRUNG TÂM HỖ TRỢ SINH SẢN TỐT NHẤT VIỆT NAM 2025 -->
-      <div class="cert-card" onclick="openAwardModal('top10ivf')">
-        <div class="cert-img-box">
-          <img src="images/Website/giai-thuong/top10ivf.webp?v=20260812" alt="Top 10 Trung tâm Hỗ trợ sinh sản tốt nhất Việt Nam 2025" />
+        <!-- 4. GIẢI THƯỞNG HEALTHCARE ASIA AWARDS 2023 -->
+        <div class="cert-card" onclick="openAwardModal('healthcare-asia')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812" alt="Healthcare Asia Awards 2023" />
+          </div>
+          <h3 class="cert-card-title">
+            <span>GIẢI THƯỞNG</span>
+            <span>HEALTHCARE ASIA AWARDS 2023</span>
+          </h3>
         </div>
-        <h3 class="cert-card-title"><span>TOP 10 TRUNG TÂM HỖ TRỢ SINH SẢN</span><span>TỐT NHẤT VIỆT NAM 2025</span></h3>
-      </div>
 
-    </div>
+        <!-- 5. TOP 10 TRUNG TÂM HỖ TRỢ SINH SẢN TỐT NHẤT VIỆT NAM 2025 -->
+        <div class="cert-card" onclick="openAwardModal('top10ivf')">
+          <div class="cert-img-box">
+            <img src="images/Website/giai-thuong/top10ivf.webp?v=20260812" alt="Top 10 Trung tâm Hỗ trợ sinh sản tốt nhất Việt Nam 2025" />
+          </div>
+          <h3 class="cert-card-title"><span>TOP 10 TRUNG TÂM HỖ TRỢ SINH SẢN</span><span>TỐT NHẤT VIỆT NAM 2025</span></h3>
+        </div>
+
+      </div>
+    </section>
 
   </div>
 </main>

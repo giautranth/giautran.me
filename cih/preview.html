@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PREVIEW — Xem giao diện Mobile / Tablet / Desktop</title>
+  <title>Preview — Xem giao diện Mobile / Tablet / Desktop</title>
   <link rel="icon" type="image/webp" href="images/logo1x1.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -64,8 +64,12 @@
       text-transform: uppercase;
     }
 
-    .stitch-page-select {
+    .stitch-dropdown {
+      position: relative;
       margin-left: 12px;
+    }
+
+    .stitch-page-select {
       background: #1e1e24;
       color: #e4e4e7;
       border: 1px solid #34343d;
@@ -76,12 +80,104 @@
       font-weight: 500;
       outline: none;
       cursor: pointer;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 230px;
+      justify-content: space-between;
     }
 
     .stitch-page-select:hover,
-    .stitch-page-select:focus {
+    .stitch-dropdown.open .stitch-page-select {
       border-color: #6366f1;
+      background: #23232b;
+    }
+
+    .stitch-page-select__left {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .stitch-page-select__left svg,
+    .stitch-dropdown__item svg {
+      width: 15px;
+      height: 15px;
+      color: #a1a1aa;
+      flex-shrink: 0;
+      transition: color 0.15s ease;
+    }
+
+    .stitch-dropdown__arrow {
+      width: 14px;
+      height: 14px;
+      color: #a1a1aa;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .stitch-dropdown.open .stitch-dropdown__arrow {
+      transform: rotate(180deg);
+    }
+
+    .stitch-dropdown__menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      min-width: 250px;
+      background: #1c1c22;
+      border: 1px solid #34343d;
+      border-radius: 10px;
+      padding: 5px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+      z-index: 300;
+      max-height: 420px;
+      overflow-y: auto;
+    }
+
+    .stitch-dropdown.open .stitch-dropdown__menu {
+      display: block;
+    }
+
+    .stitch-dropdown__item {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: #d4d4d8;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 8px 10px;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .stitch-dropdown__item:hover {
+      background: #272730;
+      color: #ffffff;
+    }
+
+    .stitch-dropdown__item:hover svg {
+      color: #e4e4e7;
+    }
+
+    .stitch-dropdown__item.active {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .stitch-dropdown__item.active svg {
+      color: #ffffff;
     }
 
     /* ═══ CENTER CONTROLS ═══ */
@@ -332,22 +428,67 @@
   <!-- ═══ TOP BAR ═══ -->
   <header class="stitch-topbar">
     <div class="stitch-brand">
-      <span class="stitch-logo-text">PREVIEW</span>
+      <span class="stitch-logo-text">Preview</span>
 
-      <select id="page-selector" class="stitch-page-select" title="Chọn trang cần xem">
-        <option value="./">🏠 Trang chủ (index)</option>
-        <option value="ve-chung-toi">🏥 Về chúng tôi</option>
-        <option value="chung-nhan-giai-thuong">🏆 Chứng nhận &amp; Giải thưởng</option>
-        <option value="chuyen-khoa">🩺 Chuyên khoa</option>
-        <option value="chi-tiet-chuyen-khoa?slug=khoa-phu-san">👶 Chi tiết Khoa Phụ Sản</option>
-        <option value="bac-si">👨‍⚕️ Đội ngũ Bác sĩ</option>
-        <option value="goi-kham">📋 Gói dịch vụ khám</option>
-        <option value="tin-tuc">📰 Tin tức</option>
-        <option value="chi-tiet-tin-tuc?id=46565">📄 Chi tiết Tin tức (ID 46565)</option>
-        <option value="vien-dao-tao-nckh">🎓 Viện Đào tạo &amp; NCKH</option>
-        <option value="danh-cho-khach-hang">🤝 Dành cho khách hàng</option>
-        <option value="lien-he">📞 Liên hệ &amp; Đặt lịch</option>
-      </select>
+      <div class="stitch-dropdown" id="page-dropdown">
+        <button type="button" class="stitch-page-select" id="page-dropdown-btn" title="Chọn trang cần xem">
+          <span class="stitch-page-select__left" id="page-dropdown-current">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Trang chủ (index)</span>
+          </span>
+          <svg class="stitch-dropdown__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div class="stitch-dropdown__menu" id="page-dropdown-menu">
+          <button type="button" class="stitch-dropdown__item active" data-value="./">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <span>Trang chủ (index)</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="ve-chung-toi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="18"></line><line x1="15" y1="22" x2="15" y2="18"></line><line x1="12" y1="6" x2="12" y2="10"></line><line x1="10" y1="8" x2="14" y2="8"></line></svg>
+            <span>Về chúng tôi</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="chung-nhan-giai-thuong">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg>
+            <span>Chứng nhận &amp; Giải thưởng</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="chuyen-khoa">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            <span>Chuyên khoa</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="chi-tiet-chuyen-khoa?slug=khoa-phu-san">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+            <span>Chi tiết Khoa Phụ Sản</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="bac-si">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Đội ngũ Bác sĩ</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="goi-kham">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="12" x2="17" y2="12"></line><line x1="7" y1="16" x2="13" y2="16"></line></svg>
+            <span>Gói dịch vụ khám</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="tin-tuc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>
+            <span>Tin tức</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="chi-tiet-tin-tuc?id=46565">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>Chi tiết Tin tức (ID 46565)</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="vien-dao-tao-nckh">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <span>Viện Đào tạo &amp; NCKH</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="danh-cho-khach-hang">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <span>Dành cho khách hàng</span>
+          </button>
+          <button type="button" class="stitch-dropdown__item" data-value="lien-he">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>Liên hệ &amp; Đặt lịch</span>
+          </button>
+        </div>
+      </div>
     </div>
 
     <!-- CENTER DEVICE SWITCHER (MOBILE / TABLET / DESKTOP) -->
@@ -454,10 +595,15 @@
     (function() {
       const bezel = document.getElementById('device-bezel');
       const iframe = document.getElementById('preview-iframe');
-      const pageSelect = document.getElementById('page-selector');
+      const dropdown = document.getElementById('page-dropdown');
+      const dropdownBtn = document.getElementById('page-dropdown-btn');
+      const dropdownMenu = document.getElementById('page-dropdown-menu');
+      const dropdownCurrent = document.getElementById('page-dropdown-current');
       const dimLabel = document.getElementById('dim-label');
       const modeBtns = document.querySelectorAll('.stitch-icon-btn[data-mode]');
       const toast = document.getElementById('stitch-toast');
+
+      let currentPageValue = './';
 
       const LABELS = {
         mobile: 'Mobile • 390px',
@@ -465,10 +611,33 @@
         desktop: 'Desktop • 1440px'
       };
 
+      const LINK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>';
+
       function showToast(msg) {
         toast.textContent = msg;
         toast.classList.add('show');
         setTimeout(() => toast.classList.remove('show'), 2200);
+      }
+
+      function syncDropdownUI(val) {
+        currentPageValue = val;
+        let items = Array.from(dropdownMenu.querySelectorAll('.stitch-dropdown__item'));
+        let match = items.find(btn => btn.getAttribute('data-value') === val);
+        if (!match) {
+          match = document.createElement('button');
+          match.type = 'button';
+          match.className = 'stitch-dropdown__item';
+          match.setAttribute('data-value', val);
+          match.innerHTML = LINK_SVG + '<span>' + val + '</span>';
+          match.addEventListener('click', () => {
+            dropdown.classList.remove('open');
+            setPage(val);
+          });
+          dropdownMenu.appendChild(match);
+          items.push(match);
+        }
+        items.forEach(btn => btn.classList.toggle('active', btn === match));
+        dropdownCurrent.innerHTML = match.innerHTML;
       }
 
       function setDevice(mode) {
@@ -476,10 +645,11 @@
         bezel.setAttribute('data-device', mode);
         dimLabel.textContent = LABELS[mode];
         modeBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === mode));
-        updateUrlState(pageSelect.value, mode);
+        updateUrlState(currentPageValue, mode);
       }
 
       function setPage(pageUrl) {
+        syncDropdownUI(pageUrl);
         iframe.src = pageUrl;
         updateUrlState(pageUrl, bezel.getAttribute('data-device'));
       }
@@ -491,21 +661,32 @@
         window.history.replaceState({}, '', url);
       }
 
+      // Toggle custom dropdown
+      dropdownBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove('open');
+        }
+      });
+
+      dropdownMenu.querySelectorAll('.stitch-dropdown__item').forEach(btn => {
+        btn.addEventListener('click', () => {
+          dropdown.classList.remove('open');
+          setPage(btn.getAttribute('data-value'));
+        });
+      });
+
       // Init from URL params if present
       const params = new URLSearchParams(window.location.search);
       const initPage = params.get('page');
       const initDevice = params.get('device');
 
       if (initPage) {
-        // Check if option exists, otherwise add custom option
-        let found = Array.from(pageSelect.options).some(opt => opt.value === initPage);
-        if (!found) {
-          const opt = document.createElement('option');
-          opt.value = initPage;
-          opt.textContent = '🔗 ' + initPage;
-          pageSelect.appendChild(opt);
-        }
-        pageSelect.value = initPage;
+        syncDropdownUI(initPage);
         iframe.src = initPage;
       }
 
@@ -518,10 +699,6 @@
         btn.addEventListener('click', () => setDevice(btn.getAttribute('data-mode')));
       });
 
-      pageSelect.addEventListener('change', () => {
-        setPage(pageSelect.value);
-      });
-
       // Sync dropdown when user clicks links inside the iframe
       iframe.addEventListener('load', () => {
         try {
@@ -530,9 +707,11 @@
           rel = rel.replace(/\.html$/, '');
           if (rel === '' || rel === 'index') rel = './';
           const fullRel = rel + (loc.search || '');
-          let found = Array.from(pageSelect.options).some(opt => opt.value === fullRel);
+          let found = Array.from(dropdownMenu.querySelectorAll('.stitch-dropdown__item')).some(btn => btn.getAttribute('data-value') === fullRel);
           if (found) {
-            pageSelect.value = fullRel;
+            syncDropdownUI(fullRel);
+          } else {
+            currentPageValue = fullRel;
           }
           updateUrlState(fullRel, bezel.getAttribute('data-device'));
         } catch (e) {
@@ -561,7 +740,7 @@
 
       // QR Code modal
       document.getElementById('btn-qr').addEventListener('click', () => {
-        let targetUrl = window.location.origin + '/cih/' + (pageSelect.value === './' ? '' : pageSelect.value);
+        let targetUrl = window.location.origin + '/cih/' + (currentPageValue === './' ? '' : currentPageValue);
         try {
           targetUrl = iframe.contentWindow.location.href;
         } catch (e) {}

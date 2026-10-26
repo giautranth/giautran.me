@@ -2385,7 +2385,7 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 }
 
 /* DESKTOP (3 Cards per row for homepage sliders) */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   .mobile-slider-track-wrap #spec-grid,
   .mobile-slider-track-wrap #doc-grid-3,
   .mobile-slider-track-wrap #pkg-grid,
@@ -2413,6 +2413,50 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
     flex-direction: column !important;
     height: auto !important;
     align-self: stretch !important;
+  }
+}
+
+/* TABLET (2 Cards per row for homepage & specialty detail sliders + subpage grids) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mobile-slider-track-wrap #spec-grid,
+  .mobile-slider-track-wrap #doc-grid-3,
+  .mobile-slider-track-wrap #pkg-grid,
+  .mobile-slider-track-wrap #news-grid-3 {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  }
+
+  .mobile-slider-track-wrap #spec-grid > *,
+  .mobile-slider-track-wrap #doc-grid-3 > *,
+  .mobile-slider-track-wrap #pkg-grid > *,
+  #goi-kham .mobile-slider-track-wrap #pkg-grid > .pkg-home-card,
+  .mobile-slider-track-wrap #news-grid-3 > * {
+    flex: 0 0 calc((100% - 1.5rem) / 2) !important;
+    width: calc((100% - 1.5rem) / 2) !important;
+    max-width: calc((100% - 1.5rem) / 2) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    align-self: stretch !important;
+  }
+
+  .specialties-grid,
+  .doctors-grid-3,
+  .doc-grid-4,
+  .packages-grid,
+  .subpage-pkg-grid,
+  .subpage-content #pkg-grid,
+  .subpage-content .pkg-grid,
+  .news-grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
   }
 }
 

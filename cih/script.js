@@ -300,8 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const totalItems = items.length;
       if (totalItems === 0) return;
 
-      const isDesktop = window.innerWidth > 768;
-      const visibleCount = isDesktop ? 3 : 1;
+      const visibleCount = window.innerWidth > 1024 ? 3 : (window.innerWidth > 768 ? 2 : 1);
       const maxIndex = Math.max(0, totalItems - visibleCount);
 
       // Infinite loop wrap

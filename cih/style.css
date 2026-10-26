@@ -186,8 +186,8 @@ ul{list-style:none}
 .hero__actions{display:flex;gap:1rem;flex-wrap:wrap}
 
 /* Nav buttons */
-.hero__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);border:1px solid rgba(0,59,92,0.15);color:#007DA5;width:44px;height:44px;border-radius:50%;font-size:1.6rem;line-height:1;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
-.hero__nav:hover{background:#007DA5;color:#ffffff;transform:translateY(-50%) scale(1.08)}
+.hero__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:#ffffff;border:1.5px solid #d8dff0;color:#21368b;width:44px;height:44px;padding:0;border-radius:50%;font-size:1.2rem;font-weight:700;line-height:1;cursor:pointer;transition:all .25s ease;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(15,23,42,0.08);user-select:none}.hero__nav svg{display:block;width:18px;height:18px;flex-shrink:0}
+.hero__nav:hover{background:#007DA5;color:#ffffff;border-color:#007DA5;transform:translateY(-50%) scale(1.06);box-shadow:0 6px 18px rgba(0,125,165,0.28)}
 .hero__nav--prev{left:1.5rem}
 .hero__nav--next{right:1.5rem}
 

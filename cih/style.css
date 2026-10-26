@@ -1428,26 +1428,26 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
     rgba(255, 255, 255, 0) 100%
   );
   transform: rotate(25deg);
-  animation: awardShimmer 2s 1 ease-in-out forwards;
+  animation: awardShimmer 2.8s 1 ease-in-out forwards;
   pointer-events: none;
   z-index: 5;
 }
 
 /* Stagger light sweep sequentially across cards */
-.awards-grid .award-card:nth-child(1)::after { animation-delay: 0.2s; }
-.awards-grid .award-card:nth-child(2)::after { animation-delay: 0.6s; }
-.awards-grid .award-card:nth-child(3)::after { animation-delay: 1.0s; }
-.awards-grid .award-card:nth-child(4)::after { animation-delay: 1.4s; }
+.awards-grid .award-card:nth-child(1)::after { animation-delay: 0.3s; }
+.awards-grid .award-card:nth-child(2)::after { animation-delay: 0.9s; }
+.awards-grid .award-card:nth-child(3)::after { animation-delay: 1.5s; }
+.awards-grid .award-card:nth-child(4)::after { animation-delay: 2.1s; }
 
 .award-card:hover::after {
-  animation: awardShimmerHover 0.75s ease-out forwards;
+  animation: awardShimmerHover 1.8s ease-in-out forwards;
 }
 
 @keyframes awardShimmer {
   0% {
     left: -150%;
   }
-  35%, 100% {
+  100% {
     left: 200%;
   }
 }

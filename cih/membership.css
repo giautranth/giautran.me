@@ -1056,7 +1056,7 @@
       }
       
       #header-booking-btn {
-        display: none !important;
+        display: inline-flex !important;
       }
       
       .header-search-btn {

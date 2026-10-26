@@ -846,7 +846,7 @@ html.translated-ltr .header__cta .btn {
   .top-bar { display: none !important; }
   .header__logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0; z-index: 5; height: 38px; display: flex; align-items: center; justify-content: center; }
   .header__logo-img { height: 38px !important; width: auto !important; object-fit: contain; }
-  #header-booking-btn { display: none !important; }
+  #header-booking-btn { display: inline-flex !important; }
   .header-search-btn { display: flex !important; }
   .header { position: sticky; top: 0; z-index: 1000; background: var(--c-white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 
@@ -3336,5 +3336,96 @@ section#doi-tac-bao-hiem.section.insurance-section {
     background: #007DA5 !important;
     color: #ffffff !important;
     border-color: #007DA5 !important;
+  }
+
+  /* Nút Đặt Lịch Khám 2 dòng trên Header Mobile */
+  .header .container,
+  .header__inner {
+    height: 60px !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 0.75rem !important;
+  }
+  .header__logo {
+    position: absolute !important;
+    left: 46.5% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .header__logo-img {
+    height: 36px !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+  .header__cta {
+    display: flex !important;
+    align-items: center !important;
+    z-index: 10 !important;
+    flex-shrink: 0 !important;
+  }
+  #header-booking-btn {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1px !important;
+    padding: 5px 10px !important;
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.25px !important;
+  }
+  #header-booking-btn .btn-booking-icon {
+    display: none !important;
+  }
+  #header-booking-btn .btn-line-1,
+  #header-booking-btn .btn-line-2 {
+    display: block !important;
+    white-space: nowrap !important;
+    line-height: 1.15 !important;
+  }
+}
+
+@media (min-width: 769px) {
+  #header-booking-btn {
+    gap: 0.28rem !important;
+  }
+  #header-booking-btn .btn-booking-icon,
+  #header-booking-btn .btn-line-1,
+  #header-booking-btn .btn-line-2 {
+    display: inline !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .container,
+  .header__inner {
+    padding: 0 10px !important;
+  }
+  .header__logo {
+    left: 46% !important;
+    height: 32px !important;
+  }
+  .header__logo-img {
+    height: 32px !important;
+  }
+  #header-booking-btn {
+    font-size: 0.64rem !important;
+    padding: 4px 9px !important;
+    line-height: 1.15 !important;
+    border-radius: 7px !important;
   }
 }

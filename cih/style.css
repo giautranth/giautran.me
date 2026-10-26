@@ -3108,9 +3108,9 @@ body {
 
 .cert-card-title,
 .cert-card h3 {
-  font-size: 1.05rem !important;
-  font-weight: 800 !important;
-  color: #92400E !important;
+  font-size: 1.04rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
   line-height: 1.35 !important;
   margin: 0 !important;
   text-align: center !important;

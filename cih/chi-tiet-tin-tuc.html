@@ -1080,13 +1080,13 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${rel.image}" alt="${formatTitleCase(rel.title)}" class="related-news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'" loading="lazy" />
           </a>
           <div class="related-news-card__body">
-            <div class="related-news-card__date" style="color: #dc2626; font-weight: 800; font-size: 0.92rem;">
+            <h4 class="related-news-card__title" style="margin-bottom: 0.45rem;">
+              <a href="chi-tiet-tin-tuc?id=${rel.id}">${formatPkgRelatedTitle(rel.title)}</a>
+            </h4>
+            <div class="related-news-card__date" style="color: #dc2626; font-weight: 800; font-size: 0.92rem; margin-bottom: 0.85rem;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
               <span>${rel.price || 'Liên hệ báo giá'}</span>
             </div>
-            <h4 class="related-news-card__title">
-              <a href="chi-tiet-tin-tuc?id=${rel.id}">${formatPkgRelatedTitle(rel.title)}</a>
-            </h4>
             <a href="chi-tiet-tin-tuc?id=${rel.id}" class="news-card__more related-news-card__more">Xem thêm <span class="arrow">→</span></a>
           </div>
         </article>

@@ -293,17 +293,25 @@
       color: #C2882E;
     }
     .about-stat-strip__num {
-      font-size: 2.1rem;
+      font-size: 1.8rem;
       font-weight: 800;
       color: #C2882E;
-      line-height: 1.15;
+      line-height: 1.2;
       margin-bottom: 3px;
       letter-spacing: -0.3px;
     }
     .about-stat-strip__num sup {
-      font-size: 1.15rem;
+      font-size: 1rem;
       font-weight: 800;
       top: -0.45em;
+    }
+    @media (max-width: 768px) {
+      .about-stat-strip__num {
+        font-size: 1.65rem;
+      }
+      .about-stat-strip__num sup {
+        font-size: 0.92rem;
+      }
     }
     .about-stat-strip__label {
       font-size: 0.95rem;

@@ -715,6 +715,13 @@ const CIH_AWARDS_DATA = {
     title: 'Bệnh viện Xanh',
     badge: 'Giải thưởng Quốc gia',
     desc: '<p style="margin-bottom:0.75rem;">Trong khuôn khổ chương trình truyền thông “Xây dựng và Phát triển Nền kinh tế Xanh Quốc Gia lần thứ 10”, Bệnh viện Quốc tế City vinh dự nhận giải thưởng <strong>Bệnh viện Xanh – Green Hospital</strong> tại Diễn đàn Xây dựng Văn hóa số – Kinh tế số – chuyển đổi xanh và phát triển bền vững cùng Lễ công bố ghi nhận nhà Lãnh đạo – đơn vị – doanh nghiệp tiêu biểu vì sự nghiệp phát triển Quốc gia thịnh vượng.</p><p style="margin-bottom:0.75rem;">Bệnh viện Quốc tế City (CIH) là một trong những cơ sở y tế hàng đầu tại Việt Nam, cung cấp dịch vụ chăm sóc sức khỏe chất lượng cao cho cả bệnh nhân trong và ngoài nước. Với sự đầu tư mạnh mẽ về cơ sở vật chất, trang thiết bị hiện đại cùng đội ngũ y bác sĩ chuyên nghiệp và tận tâm, CIH tự hào là địa chỉ y tế tin cậy, mang đến những dịch vụ y tế tốt nhất cho người bệnh.</p><p style="margin-bottom:0;">Vinh dự nhận được giải thưởng Bệnh viện Xanh - Green Hospital là một ghi nhận của cộng đồng dành cho tất cả những nỗ lực của đội ngũ bác sĩ và nhân viên CIH trong suốt thời gian qua. Với động lực to lớn này, CIH sẽ tiếp tục phát huy, giữ vững những thành quả đã đạt được, không ngừng cập nhật, đào tạo con người, đầu tư máy móc trang thiết bị hiện đại, áp dụng tiêu chuẩn 5S, tiên phong xây dựng chuyển đổi và vận hành quy trình theo phương châm kinh doanh có trách nhiệm với cộng đồng, xã hội và môi trường, tiếp tục là nhân tố tạo thành hiệu ứng tích cực về phát triển bền vững trong xã hội cũng như cộng đồng doanh nghiệp.</p>'
+  },
+  'green-clean-friendly': {
+    img: 'images/Website/giai-thuong/gt_co_so_y_te_xanh.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/gt_co_so_y_te_xanh.webp?v=20261026',
+    title: 'Cơ sở y tế Xanh- Sạch -Thân Thiện',
+    badge: 'Giải thưởng Quốc gia',
+    desc: 'Ngày 20/7/2023, dưới sự bảo trợ và tư vấn tổ chức của Hiệp hội Thông tin Tư vấn Kinh tế Thương mại Việt Nam (VICETA), Công ty Cổ phần Tư Vấn và Phát Triển Truyền Thông Brand Vina cùng các cơ quan báo chí truyền hình Hà Nội thực hiện tổ chức chương trình truyền thông “Xây dựng và Phát triển Nền kinh tế Xanh Quốc Gia năm 2023”. Chương trình đã trao tặng danh hiệu Cơ sở y tế Xanh- Sạch- Thân Thiện cho Bệnh viện Quốc tế City cũng như trao giải thưởng cho các doanh nhân, doanh nghiệp, thương hiệu, sản phẩm, nhà máy, khu công nghiệp, bệnh viện xanh tiêu biểu năm 2023.'
   }
 };
 
@@ -733,7 +740,8 @@ const DEFAULT_AWARD_KEYS = [
   'top10ivf',
   'green-hospital',
   'pioneer-2025',
-  'top10-vietnam-2024'
+  'top10-vietnam-2024',
+  'green-clean-friendly'
 ];
 
 function getPageAwardKeys() {

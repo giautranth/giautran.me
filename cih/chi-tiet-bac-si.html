@@ -971,7 +971,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <script src="script.js?v=1792750000"></script>
-<script src="cih_doctors_data.js?v=1792999200"></script>
+<script src="cih_doctors_data.js?v=1793002000"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
@@ -1089,12 +1089,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function cleanDoctorBio(content) {
       if (!content) return '';
       let cleaned = content
-        .replace(/^Giám đốc Điều hành Bệnh viện Quốc tế City\s*&\s*Bệnh viện Gia An 115\s*Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TPHCM\s*/gi, '')
+        .replace(/^Giám đốc Điều hành Bệnh viện Quốc tế City\s*&\s*Bệnh viện Gia An 115\s*Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TP. HCM\s*/gi, '')
         .replace(/^Giám đốc Điều hành Bệnh viện Quốc tế City\s*&\s*Bệnh viện Gia An 115\s*/gi, '')
-        .replace(/^Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TPHCM\s*/gi, '')
+        .replace(/^Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TP. HCM\s*/gi, '')
         .replace(/Bệnh Viện Quốc Tế City\s*[–\-]\s*Mỗi điểm chạm là một trải nghiệm hạnh phúc!?/gi, '')
-        .replace(/Số 3 Đường 17A,\s*Phường An Lạc,\s*TP\.?HCM\.?\s*\(Cạnh siêu thị Aeon Mall Bình Tân\)\.?/gi, '')
-        .replace(/Số 3 Đường 17A,\s*Phường An Lạc,\s*TP\.?HCM\.?/gi, '')
+        .replace(/Số 3 Đường 17A,\s*Phường An Lạc,\s*TP\.?\s*HCM\.?\s*\(Cạnh siêu thị Aeon Mall Bình Tân\)\.?/gi, '')
+        .replace(/Số 3 Đường 17A,\s*Phường An Lạc,\s*TP\.?\s*HCM\.?/gi, '')
         .replace(/(?:Tổng đài|ĐT):\s*19008146/gi, '')
         .replace(/Cấp cứu:\s*\(028\)\s*6290\s*1155/gi, '')
         .replace(/(?:<p>(?:&#8212;|[—\-])+<\/p>\s*)?(?:<div class="bt-social-share[^"]*">[\s\S]*?<\/div>\s*<\/div>\s*)?<p>(?:<span[^>]*>)?\s*Bản quyền\s*©\s*2018\s*thuộc về\s*Bệnh Viện Quốc Tế City[\s\S]*$/gi, '')

@@ -24,7 +24,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=20261026_awards_slider" />
+  <link rel="stylesheet" href="style.css?v=20261026_awards_speed" />
 
 </head>
 
@@ -4653,21 +4653,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let isHovered = false;
   let animId = null;
-  let pos = 0;
-  const speed = 0.8; // 60fps smooth gliding speed (same as Đối tác bảo hiểm)
+  const speed = 0.8; // 60fps smooth gliding speed
 
   const getHalfWidth = () => track.scrollWidth / 2;
 
   function infiniteAwardsScrollLoop() {
     if (!isHovered && track) {
-      pos += speed;
+      track.scrollLeft += speed;
       const halfWidth = getHalfWidth();
-      if (halfWidth > 0 && pos >= halfWidth) {
-        pos -= halfWidth;
+      if (halfWidth > 0 && track.scrollLeft >= halfWidth) {
+        track.scrollLeft -= halfWidth;
       }
-      track.scrollLeft = pos;
-    } else if (track) {
-      pos = track.scrollLeft;
     }
     animId = requestAnimationFrame(infiniteAwardsScrollLoop);
   }
@@ -4690,7 +4686,7 @@ document.addEventListener('DOMContentLoaded', () => {
         track.scrollLeft -= halfWidth;
       }
       track.scrollBy({ left: getCardStep(), behavior: 'smooth' });
-      setTimeout(() => { pos = track.scrollLeft; isHovered = false; }, 1200);
+      setTimeout(() => { isHovered = false; }, 2000);
     });
   }
 
@@ -4702,7 +4698,7 @@ document.addEventListener('DOMContentLoaded', () => {
         track.scrollLeft += halfWidth;
       }
       track.scrollBy({ left: -getCardStep(), behavior: 'smooth' });
-      setTimeout(() => { pos = track.scrollLeft; isHovered = false; }, 1200);
+      setTimeout(() => { isHovered = false; }, 2000);
     });
   }
 });

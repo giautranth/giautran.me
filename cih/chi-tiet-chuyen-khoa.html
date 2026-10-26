@@ -619,33 +619,51 @@
       background: linear-gradient(180deg, #8E1B1E 0%, #D4AF37 100%);
       flex-shrink: 0;
     }
-    .spec-orig-p {
+    .spec-orig-p,
+    .spec-orig-card p,
+    .spec-subcard__body p {
       font-size: 1.02rem;
       line-height: 1.75;
       color: #334155;
       margin: 0 0 12px 0;
       text-align: justify;
     }
-    .spec-orig-p:last-child {
+    .spec-orig-p:last-child,
+    .spec-orig-card p:last-child,
+    .spec-subcard__body p:last-child {
       margin-bottom: 0;
     }
-    .spec-orig-list {
+    .spec-orig-list,
+    .spec-orig-card ul,
+    .spec-orig-card ol,
+    .spec-subcard__body ul,
+    .spec-subcard__body ol {
       margin: 8px 0 14px 0;
       padding-left: 22px;
       color: #334155;
       font-size: 1.01rem;
       line-height: 1.72;
     }
-    .spec-orig-list:last-child {
+    .spec-orig-list:last-child,
+    .spec-orig-card ul:last-child,
+    .spec-orig-card ol:last-child,
+    .spec-subcard__body ul:last-child,
+    .spec-subcard__body ol:last-child {
       margin-bottom: 0;
     }
-    .spec-orig-list li {
+    .spec-orig-list li,
+    .spec-orig-card li,
+    .spec-subcard__body li {
       margin-bottom: 7px;
     }
-    .spec-orig-list li:last-child {
+    .spec-orig-list li:last-child,
+    .spec-orig-card li:last-child,
+    .spec-subcard__body li:last-child {
       margin-bottom: 0;
     }
-    .spec-orig-list li::marker {
+    .spec-orig-list li::marker,
+    .spec-orig-card li::marker,
+    .spec-subcard__body li::marker {
       color: #8E1B1E;
     }
     .spec-subcard-grid {
@@ -2348,15 +2366,17 @@ document.addEventListener('DOMContentLoaded', () => {
           if (pkgGrid) {
             pkgGrid.innerHTML = spec.packages.map(p => {
               const pkgHref = p.id ? `chi-tiet-tin-tuc?id=${p.id}` : 'goi-kham';
+              const pkgImg = p.image || p.img || 'images/goikham/ehs/1.webp';
+              const pkgTitleHtml = p.title_html || p.title || '';
               return `
               <div class="news-card pkg-home-card">
                 <a href="${pkgHref}" class="news-card__img-link">
-                  <img src="${p.img}" alt="${p.title}" loading="lazy" />
+                  <img src="${pkgImg}" alt="${p.title || ''}" loading="lazy" />
                 </a>
                 <div class="news-card__body">
                   <div style="width: 100%;">
                     <p class="pkg-card__cat">${p.cat || spec.name}</p>
-                    <h3 class="news-card__title"><a href="${pkgHref}">${p.title}</a></h3>
+                    <h3 class="news-card__title"><a href="${pkgHref}">${pkgTitleHtml}</a></h3>
                   </div>
                   <a href="${pkgHref}" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
                 </div>

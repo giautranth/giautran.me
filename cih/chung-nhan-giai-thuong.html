@@ -8,7 +8,7 @@
   <link rel="icon" type="image/webp" href="images/logo1x1.webp" />
   <link rel="shortcut icon" type="image/webp" href="images/logo1x1.webp" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-  <link rel="stylesheet" href="style.css?v=1793003500" />
+  <link rel="stylesheet" href="style.css?v=1793007200" />
   <style>
     .awards-header-box {
       text-align: left;
@@ -163,7 +163,7 @@
       border-radius: 20px;
       padding: 1.5rem;
       box-shadow: 0 8px 20px -4px rgba(217, 119, 6, 0.08);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1), transform 1.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -185,6 +185,8 @@
     .cert-card:hover,
     .cert-card.aos-animate:hover {
       transform: translateY(-8px) !important;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+      transition-delay: 0s !important;
       box-shadow: 0 22px 42px -8px rgba(217, 119, 6, 0.24), 0 4px 12px rgba(0, 125, 165, 0.08);
       border-color: #f59e0b;
     }
@@ -436,7 +438,7 @@
       box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10), 0 2px 8px rgba(15, 23, 42, 0.05);
       transform: rotate(-3deg) translateX(-35px);
       overflow: hidden;
-      animation: aaciCertFloat 5s ease-in-out infinite;
+      animation: aaciCertFloat 7.5s ease-in-out infinite;
       transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
     }
     .aaci-opt1-cert::after {
@@ -471,7 +473,7 @@
       flex-direction: column;
       align-items: center;
       transform-origin: top center;
-      animation: aaciMedalSwing 4.5s ease-in-out infinite;
+      animation: aaciMedalSwing 7s ease-in-out infinite;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .aaci-opt1-hero:hover .aaci-opt1-medal-wrap {
@@ -730,7 +732,7 @@
       </div>
 
       <!-- 🏆 STANDALONE FEATURED AACI CERTIFICATE BOX (OPTION 1: SOFT GOLD & ANIMATED MEDAL/CERT) -->
-      <div class="aaci-opt1-hero" data-aos="fade-up" data-aos-delay="100" onclick="openAwardModal('aaci')">
+      <div class="aaci-opt1-hero" data-aos="fade-up" data-aos-delay="150" onclick="openAwardModal('aaci')">
         <div class="aaci-opt1-left" data-aos="fade-right" data-aos-delay="150">
           <h3 class="aaci-opt1-title">BỆNH VIỆN ĐẦU TIÊN TẠI VIỆT NAM<br>ĐẠT CHUẨN CHẤT LƯỢNG AACI (HOA KỲ)</h3>
           <div class="aaci-opt1-ribbon">AMERICAN ACCREDITATION COMMISSION INTERNATIONAL</div>
@@ -752,7 +754,7 @@
             </div>
           </div>
         </div>
-        <div class="aaci-opt1-right" data-aos="fade-left" data-aos-delay="200">
+        <div class="aaci-opt1-right" data-aos="fade-left" data-aos-delay="300">
           <div class="aaci-opt1-cert">
             <img src="images/Website/giai-thuong/gt_acci.webp?v=20260812" alt="Bằng chứng nhận AACI Hoa Kỳ - Bệnh viện Quốc tế City" loading="lazy" />
           </div>
@@ -782,7 +784,7 @@
       <div class="cert-detail-grid">
 
         <!-- 1. CHỨNG NHẬN RTAC -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="100" onclick="openAwardModal('rtac')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150" onclick="openAwardModal('rtac')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/gt_rtac.webp?v=20260812" alt="Chứng nhận RTAC" />
           </div>
@@ -790,7 +792,7 @@
         </div>
 
         <!-- 2. CHỨNG NHẬN ICARE-HF -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="200" onclick="openAwardModal('esc')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('esc')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/cert_esc_icare.webp?v=20260812" alt="Chứng nhận ICARe-HF" />
           </div>
@@ -798,7 +800,7 @@
         </div>
 
         <!-- 3. CHỨNG NHẬN ISO 15189:2022 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('iso')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="450" onclick="openAwardModal('iso')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/iso.webp?v=20260812" alt="Chứng nhận ISO 15189:2022" />
           </div>
@@ -806,7 +808,7 @@
         </div>
 
         <!-- 4. CHỨNG NHẬN ISO 7101:2023 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="100" onclick="openAwardModal('iso-7101')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150" onclick="openAwardModal('iso-7101')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/iso_7101_2023.webp?v=2" alt="Chứng nhận ISO 7101:2023" />
           </div>
@@ -814,7 +816,7 @@
         </div>
 
         <!-- 5. THÀNH VIÊN LIÊN ĐOÀN BỆNH VIỆN IHF -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="200" onclick="openAwardModal('ihf')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('ihf')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/gt_ihf.webp?v=20260812" alt="IHF Membership Certificate" />
           </div>
@@ -838,7 +840,7 @@
       <div class="cert-detail-grid">
 
         <!-- 1. TOP 3 THƯƠNG HIỆU TIÊU BIỂU CHÂU Á THÁI BÌNH DƯƠNG 2026 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="100" onclick="openAwardModal('top3')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150" onclick="openAwardModal('top3')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/top3.webp?v=20260812" alt="Top 3 Thương hiệu tiêu biểu Châu Á Thái Bình Dương 2026" />
           </div>
@@ -849,7 +851,7 @@
         </div>
 
         <!-- 2. TOP 10 THƯƠNG HIỆU XUẤT SẮC CHÂU Á 2025 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="200" onclick="openAwardModal('top10-asia-2025')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('top10-asia-2025')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812" alt="Top 10 thương hiệu xuất sắc Châu Á 2025" />
           </div>
@@ -860,7 +862,7 @@
         </div>
 
         <!-- 3. TOP 10 THƯƠNG HIỆU UY TÍN HÀNG ĐẦU CHÂU Á 2025 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('asia')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="450" onclick="openAwardModal('asia')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812" alt="Top 10 Thương hiệu uy tín hàng đầu Châu Á 2025" />
           </div>
@@ -871,7 +873,7 @@
         </div>
 
         <!-- 4. TOP 10 TRUNG TÂM HỖ TRỢ SINH SẢN TỐT NHẤT VIỆT NAM 2025 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="100" onclick="openAwardModal('top10ivf')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150" onclick="openAwardModal('top10ivf')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/top10ivf.webp?v=20260812" alt="Top 10 Trung tâm Hỗ trợ sinh sản tốt nhất Việt Nam 2025" />
           </div>
@@ -882,7 +884,7 @@
         </div>
 
         <!-- 5. TOP 100 INTERNATIONAL BUSINESS STYLE AWARDS 2025 - DOANH NGHIỆP TIÊN PHONG -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="200" onclick="openAwardModal('pioneer-2025')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('pioneer-2025')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/gt_doanh_nghiep_tien_phong.webp?v=20261026" alt="Top 100 International Business Style Awards 2025" />
           </div>
@@ -893,7 +895,7 @@
         </div>
 
         <!-- 6. TOP 10 BỆNH VIỆN TỐT NHẤT VIỆT NAM 2024 - THE BEST OF VIETNAM 2024 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('top10-vietnam-2024')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="450" onclick="openAwardModal('top10-vietnam-2024')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/gt_top10_benh_vien_2024.webp?v=20261026" alt="Top 10 Bệnh viện tốt nhất Việt Nam 2024 – The Best of Vietnam 2024" />
           </div>
@@ -904,7 +906,7 @@
         </div>
 
         <!-- 7. HEALTHCARE ASIA AWARDS 2023 -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="100" onclick="openAwardModal('healthcare-asia')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150" onclick="openAwardModal('healthcare-asia')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812" alt="Healthcare Asia Awards 2023" />
           </div>
@@ -914,7 +916,7 @@
         </div>
 
         <!-- 8. GIẢI THƯỞNG BỆNH VIỆN XANH - GREEN HOSPITAL -->
-        <div class="cert-card" data-aos="fade-up" data-aos-delay="200" onclick="openAwardModal('green-hospital')">
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="300" onclick="openAwardModal('green-hospital')">
           <div class="cert-img-box">
             <img src="images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026" alt="Giải thưởng Bệnh viện Xanh - Green Hospital" />
           </div>
@@ -1035,10 +1037,10 @@
   document.addEventListener('DOMContentLoaded', function() {
     if (window.AOS) {
       AOS.init({
-        easing: 'ease-out-back',
-        duration: 1000,
+        easing: 'ease-out-cubic',
+        duration: 1400,
         once: false,
-        offset: 80
+        offset: 70
       });
     }
   });

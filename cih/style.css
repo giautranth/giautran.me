@@ -3088,7 +3088,7 @@ body {
   justify-content: flex-start !important;
   height: 100% !important;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
-  transition: transform 0.28s ease, box-shadow 0.28s ease !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 /* Sleek subtle top gradient accent line */

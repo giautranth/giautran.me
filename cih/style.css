@@ -128,7 +128,7 @@ ul{list-style:none}
 /* ═══════════════════════════
    HEADER
 ═══════════════════════════ */
-.header{background:var(--c-white);position:sticky;top:0;z-index:200;box-shadow:0 1px 0 var(--c-border);transition:box-shadow .25s}
+.header{background:var(--c-white);position:sticky;top:0;z-index:200;border-bottom:1px solid #eef0f3;box-shadow:none;transition:box-shadow .25s}
 .header.scrolled{box-shadow:var(--shadow-md)}
 .header .container{max-width:1240px !important;width:100% !important;padding:0 1.5rem !important}
 .header__inner{display:flex;align-items:center;justify-content:space-between;gap:0.75rem;height:68px;width:100%}
@@ -1058,7 +1058,7 @@ html.translated-ltr .header__cta .btn {
 .subpage-hero__breadcrumbs span { color: var(--c-navy); font-weight: 700; }
 /* Active & Hover Header Nav Link Underline Effect */
 .nav__link:not(.nav__link--search) { position: relative; transition: color 0.22s ease; }
-.nav__link:not(.nav__link--search)::after { content: ''; position: absolute; bottom: 12px; left: 0.52rem; right: 0.52rem; height: 2px; background: #007DA5; border-radius: 2px; transform: scaleX(0); transform-origin: center; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+.nav__link:not(.nav__link--search)::after { content: ''; position: absolute; bottom: 13px; left: 0.52rem; right: 0.52rem; height: 1.5px; background: #007DA5; border-radius: 2px; transform: scaleX(0); transform-origin: center; transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
 .nav__link:not(.nav__link--search):hover, .nav__item--dropdown:hover > .nav__link, .nav__link.active, .nav__item.active > .nav__link { color: #007DA5 !important; }
 .nav__link:not(.nav__link--search):hover::after, .nav__item--dropdown:hover > .nav__link::after, .nav__link.active::after, .nav__item.active > .nav__link::after { transform: scaleX(1); }
 @media (max-width: 1380px) and (min-width: 1251px) { .nav__link:not(.nav__link--search)::after { left: 0.35rem; right: 0.35rem; } }
@@ -2084,7 +2084,7 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 .subpage-hero,
 .breadcrumbs-bar {
   background: #f8f9fa !important;
-  border-top: 1px solid #eef0f3 !important;
+  border-top: none !important;
   border-bottom: 1px solid #eef0f3 !important;
   padding: 0.6rem 0 !important;
 }

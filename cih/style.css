@@ -2062,6 +2062,7 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
   line-height: 1.35;
   margin: 0 0 0.85rem 0;
   letter-spacing: -0.2px;
+  text-align: center;
 }
 
 .award-modal__desc,

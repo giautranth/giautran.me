@@ -635,7 +635,7 @@ const CIH_AWARDS_DATA = {
   'healthcare-asia': {
     img: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812',
     logo: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812',
-    title: 'Giải thưởng Healthcare Asia Awards 2023',
+    title: 'Healthcare Asia Awards 2023',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Giải thưởng danh giá Healthcare Asia Awards 2023 vinh danh Bệnh viện Quốc tế City với hạng mục "Most Improved Community Hospital of the Year - Vietnam" nhờ những nỗ lực không ngừng trong việc đổi mới quy trình khám chữa bệnh, ứng dụng kỹ thuật cao và nâng tầm trải nghiệm chăm sóc sức khỏe cộng đồng.'
   },
@@ -698,7 +698,7 @@ const CIH_AWARDS_DATA = {
   'pioneer-2025': {
     img: 'images/Website/giai-thuong/gt_doanh_nghiep_tien_phong.webp?v=20261026',
     logo: 'images/Website/giai-thuong/gt_doanh_nghiep_tien_phong.webp?v=20261026',
-    title: 'Giải thưởng “Doanh nghiệp Tiên phong” – Top 100 International Business Style Awards 2025',
+    title: 'Top 100 International Business Style Awards 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Ngày 11/12/2025, Bệnh viện Quốc tế City tự hào ghi dấu ấn tại Lễ vinh danh Top 100 International Business Style Awards 2025, nhận giải thưởng “Doanh nghiệp Tiên phong” – minh chứng cho những nỗ lực không ngừng trong việc nâng tầm chất lượng chăm sóc sức khỏe cho cộng đồng.'
   },
@@ -712,7 +712,7 @@ const CIH_AWARDS_DATA = {
   'green-hospital': {
     img: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
     logo: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
-    title: 'Giải thưởng Bệnh viện Xanh - Green Hospital',
+    title: 'Bệnh viện Xanh',
     badge: 'Giải thưởng Quốc gia',
     desc: '<p style="margin-bottom:0.75rem;">Trong khuôn khổ chương trình truyền thông “Xây dựng và Phát triển Nền kinh tế Xanh Quốc Gia lần thứ 10”, Bệnh viện Quốc tế City vinh dự nhận giải thưởng <strong>Bệnh viện Xanh – Green Hospital</strong> tại Diễn đàn Xây dựng Văn hóa số – Kinh tế số – chuyển đổi xanh và phát triển bền vững cùng Lễ công bố ghi nhận nhà Lãnh đạo – đơn vị – doanh nghiệp tiêu biểu vì sự nghiệp phát triển Quốc gia thịnh vượng.</p><p style="margin-bottom:0.75rem;">Bệnh viện Quốc tế City (CIH) là một trong những cơ sở y tế hàng đầu tại Việt Nam, cung cấp dịch vụ chăm sóc sức khỏe chất lượng cao cho cả bệnh nhân trong và ngoài nước. Với sự đầu tư mạnh mẽ về cơ sở vật chất, trang thiết bị hiện đại cùng đội ngũ y bác sĩ chuyên nghiệp và tận tâm, CIH tự hào là địa chỉ y tế tin cậy, mang đến những dịch vụ y tế tốt nhất cho người bệnh.</p><p style="margin-bottom:0;">Vinh dự nhận được giải thưởng Bệnh viện Xanh - Green Hospital là một ghi nhận của cộng đồng dành cho tất cả những nỗ lực của đội ngũ bác sĩ và nhân viên CIH trong suốt thời gian qua. Với động lực to lớn này, CIH sẽ tiếp tục phát huy, giữ vững những thành quả đã đạt được, không ngừng cập nhật, đào tạo con người, đầu tư máy móc trang thiết bị hiện đại, áp dụng tiêu chuẩn 5S, tiên phong xây dựng chuyển đổi và vận hành quy trình theo phương châm kinh doanh có trách nhiệm với cộng đồng, xã hội và môi trường, tiếp tục là nhân tố tạo thành hiệu ứng tích cực về phát triển bền vững trong xã hội cũng như cộng đồng doanh nghiệp.</p>'
   }
@@ -827,7 +827,7 @@ window.openAwardModal = function(key) {
   if (badgeEl && data.badge) {
     badgeEl.textContent = `🏆 ${data.badge}`;
   }
-  if (titleEl) titleEl.innerText = data.title;
+  if (titleEl) { titleEl.innerText = data.title; titleEl.style.textAlign = 'center'; }
   if (descEl) descEl.innerHTML = data.desc;
 
   modal.style.display = 'flex';

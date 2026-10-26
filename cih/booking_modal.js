@@ -528,7 +528,7 @@
         flatpickr('#doc-book-date', {
           locale: flatpickrVN,
           dateFormat: 'd/m/Y',
-          minDate: 'today',
+          minDate: 'today', defaultDate: new Date(), allowInput: true }); } if (document.getElementById('doc-book-dob')) { flatpickr('#doc-book-dob', { locale: flatpickrVN, dateFormat: 'd/m/Y', maxDate: 'today',
           allowInput: true
         });
       }

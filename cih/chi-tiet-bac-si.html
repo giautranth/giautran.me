@@ -294,17 +294,48 @@
       padding: 1.5rem 1.5rem 1.65rem;
       box-shadow: 0 12px 30px -6px rgba(0, 125, 165, 0.12);
     }
-    .doc-booking-sticky__title {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #007DA5;
-      text-transform: uppercase;
+    .doc-booking-sticky__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
       margin: 0 0 1rem 0;
       padding-bottom: 0.75rem;
       border-bottom: 1px solid #dbeafe;
+    }
+    .doc-booking-sticky__title {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: #007DA5;
+      text-transform: uppercase;
+      margin: 0;
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+    .doc-step-tabs {
+      display: inline-flex;
+      background: #e0f2fe;
+      padding: 3px;
+      border-radius: 99px;
+      gap: 3px;
+    }
+    .doc-step-tab {
+      border: none;
+      background: transparent;
+      color: #0369a1;
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 0.28rem 0.68rem;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .doc-step-tab.active {
+      background: #007DA5;
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 125, 165, 0.25);
     }
     .doc-booking-sticky__sub {
       font-size: 0.85rem;
@@ -315,7 +346,7 @@
       border-bottom: 1px solid #dbeafe;
     }
     .doc-form-group {
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.82rem;
     }
     .doc-form-label {
       display: block;
@@ -326,35 +357,84 @@
     }
     .doc-form-input {
       width: 100%;
-      padding: 0.7rem 0.9rem;
+      padding: 0.66rem 0.85rem;
       border-radius: 10px;
       border: 1.5px solid #cbd5e1;
       background: #ffffff;
       font-family: inherit;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #0f172a;
       outline: none;
       transition: border-color 0.2s;
+      box-sizing: border-box;
     }
     .doc-form-input:focus {
       border-color: #007DA5;
     }
+    .doc-slot-group {
+      display: flex;
+      gap: 6px;
+      background: #eef6fa;
+      padding: 4px;
+      border-radius: 10px;
+      border: 1.5px solid #cbd5e1;
+    }
+    .doc-slot-btn {
+      flex: 1;
+      padding: 0.45rem 0.5rem;
+      border: none;
+      border-radius: 7px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.82rem;
+      cursor: pointer;
+      background: transparent;
+      color: #64748b;
+      transition: all 0.2s ease;
+    }
+    .doc-slot-btn.active {
+      background: linear-gradient(135deg, #007DA5 0%, #005f80 100%);
+      color: #ffffff;
+      box-shadow: 0 3px 10px rgba(0, 125, 165, 0.24);
+    }
+    .doc-form-actions {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.35rem;
+    }
+    .doc-form-back {
+      flex: 0 0 auto;
+      background: #ffffff;
+      color: #007DA5;
+      border: 1.5px solid #bae6fd;
+      border-radius: 99px;
+      padding: 0.78rem 1.05rem;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .doc-form-back:hover {
+      background: #e0f2fe;
+      border-color: #007DA5;
+    }
     .doc-form-submit {
+      flex: 1;
       width: 100%;
       background: linear-gradient(135deg, #007DA5 0%, #005f80 100%);
       color: #ffffff;
       border: none;
       border-radius: 99px;
-      padding: 0.82rem 1.25rem;
+      padding: 0.8rem 1.25rem;
       font-family: inherit;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.4px;
       cursor: pointer;
       box-shadow: 0 6px 18px rgba(0, 125, 165, 0.25);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      margin-top: 0.25rem;
     }
     .doc-form-submit:hover {
       transform: translateY(-2px);
@@ -537,37 +617,94 @@
 
         <!-- Cột phải: Form Đặt lịch khám cố định (Sticky) -->
         <aside id="doc-booking-box" class="doc-booking-sticky">
-          <h3 class="doc-booking-sticky__title">
-            <span>ĐẶT LỊCH KHÁM</span>
-          </h3>
-
-          <form id="doc-direct-booking-form" onsubmit="event.preventDefault(); document.getElementById('doc-book-success').style.display='block'; this.reset();">
-            <div class="doc-form-group">
-              <label class="doc-form-label" for="doc-book-name">Họ tên <span style="color:#dc2626">*</span></label>
-              <input type="text" id="doc-book-name" class="doc-form-input" required />
+          <div class="doc-booking-sticky__head">
+            <h3 class="doc-booking-sticky__title">
+              <span>ĐẶT LỊCH KHÁM</span>
+            </h3>
+            <div class="doc-step-tabs" role="tablist" aria-label="Các bước đặt lịch">
+              <button type="button" class="doc-step-tab active" id="doc-step-tab-1" onclick="goToDocBookStep(1, false)">Trang 1</button>
+              <button type="button" class="doc-step-tab" id="doc-step-tab-2" onclick="goToDocBookStep(2, false)">Trang 2</button>
             </div>
+          </div>
 
-            <div class="doc-form-group">
-              <label class="doc-form-label" for="doc-book-phone">Số điện thoại <span style="color:#dc2626">*</span></label>
-              <input type="tel" id="doc-book-phone" class="doc-form-input" required pattern="[0-9+\s\.\-]{8,15}" />
-            </div>
+          <form id="doc-direct-booking-form" novalidate onsubmit="submitDocDirectBooking(event)">
+            <!-- TRANG 1: THÔNG TIN BỆNH NHÂN -->
+            <div id="doc-book-step-1">
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-name">Họ tên <span style="color:#dc2626">*</span></label>
+                <input type="text" id="doc-book-name" class="doc-form-input" required placeholder="Nhập họ và tên" />
+              </div>
 
-            <div class="doc-form-group">
-              <label class="doc-form-label" for="doc-book-date">Ngày khám</label>
-              <div style="position: relative;">
-                <input type="text" id="doc-book-date" class="doc-form-input" placeholder="ngày / tháng / năm" style="padding-right: 2.4rem; cursor: pointer;" />
-                <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #64748b; pointer-events: none; display: flex; align-items: center;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                </span>
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-phone">Số điện thoại <span style="color:#dc2626">*</span></label>
+                <input type="tel" id="doc-book-phone" class="doc-form-input" required pattern="[0-9+\s\.\-]{8,15}" placeholder="Nhập số điện thoại" />
+              </div>
+
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-dob">Ngày sinh <span style="color:#dc2626">*</span></label>
+                <div style="position: relative;">
+                  <input type="text" id="doc-book-dob" class="doc-form-input" required placeholder="dd/mm/yyyy" style="padding-right: 2.4rem; cursor: pointer;" />
+                  <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #64748b; pointer-events: none; display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-code">Mã khách hàng <span style="color:#94a3b8; font-weight:400;">(Không bắt buộc)</span></label>
+                <input type="text" id="doc-book-code" class="doc-form-input" placeholder="Nhập mã khách hàng (nếu có)" />
+              </div>
+
+              <div class="doc-form-actions">
+                <button type="button" class="doc-form-submit" onclick="goToDocBookStep(2, true)">TIẾP THEO &rarr;</button>
               </div>
             </div>
 
-            <div class="doc-form-group">
-              <label class="doc-form-label" for="doc-book-note">Ghi chú triệu chứng / nhu cầu khám</label>
-              <textarea id="doc-book-note" rows="3" class="doc-form-input"></textarea>
-            </div>
+            <!-- TRANG 2: CHUYÊN KHOA & LỊCH KHÁM -->
+            <div id="doc-book-step-2" style="display: none;">
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-specialty">Chọn chuyên khoa <span style="color:#dc2626">*</span></label>
+                <select id="doc-book-specialty" class="doc-form-input" required onchange="updateDocSidebarDoctors(this.value)">
+                  <option value="">-- Chọn chuyên khoa --</option>
+                </select>
+              </div>
 
-            <button type="submit" class="doc-form-submit">GỬI</button>
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-doctor">Chọn bác sĩ <span style="color:#dc2626">*</span></label>
+                <select id="doc-book-doctor" class="doc-form-input" required onchange="handleDocSidebarDoctorChange(this)">
+                  <option value="Bác sĩ khám bất kỳ">-- Bác sĩ khám bất kỳ --</option>
+                </select>
+              </div>
+
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-date">Chọn ngày khám <span style="color:#dc2626">*</span></label>
+                <div style="position: relative;">
+                  <input type="text" id="doc-book-date" class="doc-form-input" required placeholder="dd/mm/yyyy" style="padding-right: 2.4rem; cursor: pointer;" />
+                  <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #64748b; pointer-events: none; display: flex; align-items: center;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  </span>
+                </div>
+              </div>
+
+              <div class="doc-form-group">
+                <label class="doc-form-label">Khung giờ <span style="color:#dc2626">*</span></label>
+                <div class="doc-slot-group">
+                  <button type="button" id="doc-slot-sang" class="doc-slot-btn active" onclick="setDocSidebarSlot('Sáng (07:30 - 11:30)', this)">🌅 Sáng</button>
+                  <button type="button" id="doc-slot-chieu" class="doc-slot-btn" onclick="setDocSidebarSlot('Chiều (13:00 - 16:30)', this)">⛅ Chiều</button>
+                </div>
+                <input type="hidden" id="doc-book-timeslot" value="Sáng (07:30 - 11:30)" />
+              </div>
+
+              <div class="doc-form-group">
+                <label class="doc-form-label" for="doc-book-note">Nhập vấn đề cần khám</label>
+                <textarea id="doc-book-note" rows="2" class="doc-form-input" placeholder="Triệu chứng hoặc nhu cầu khám..."></textarea>
+              </div>
+
+              <div class="doc-form-actions">
+                <button type="button" class="doc-form-back" onclick="goToDocBookStep(1, false)">&larr; Quay lại</button>
+                <button type="submit" class="doc-form-submit">GỬI</button>
+              </div>
+            </div>
 
             <div id="doc-book-success" style="display: none; margin-top: 0.9rem; padding: 0.75rem 1rem; background: #dcfce7; border: 1px solid #86efac; color: #166534; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-align: center; line-height: 1.5;">
               ✅ Đã ghi nhận yêu cầu đặt lịch khám! Bộ phận CSKH CIH sẽ liên hệ xác nhận với Quý khách sớm nhất.
@@ -972,6 +1109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=1792750000"></script>
 <script src="cih_doctors_data.js?v=1793004100"></script>
+<script src="booking_modal.js?v=1793005600"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
@@ -1342,11 +1480,242 @@ document.addEventListener('DOMContentLoaded', function() {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     };
+
+    // ═══ INITIALIZE 2-STEP SIDEBAR BOOKING FORM ═══
+    const catalog = Array.isArray(window.CIH_BOOKING_CATALOG) ? window.CIH_BOOKING_CATALOG.slice() : [];
+    const docKey = normalizeStr(doctor.name);
+
+    function findCatalogSpecBySlug(rawSlug) {
+      if (!rawSlug) return null;
+      const clean = rawSlug.trim().toLowerCase();
+      return catalog.find(s => s.slug === clean || (s.aliases && s.aliases.includes(clean))) || null;
+    }
+
+    function findCatalogSpecByDoctor(dName) {
+      const k = normalizeStr(dName);
+      if (!k) return null;
+      for (const sp of catalog) {
+        for (const d of (sp.doctors || [])) {
+          const dk = normalizeStr(d.name);
+          if (dk === k || dk.includes(k) || k.includes(dk)) {
+            return sp;
+          }
+        }
+      }
+      return null;
+    }
+
+    // Resolve the current doctor's specialty
+    let matchedSpec = findCatalogSpecBySlug(doctor.specialty_slug);
+    if (!matchedSpec) {
+      matchedSpec = findCatalogSpecByDoctor(doctor.name);
+    }
+    if (!matchedSpec && doctor.specialty) {
+      // Fallback: create a virtual specialty entry for e.g. Ban Giám Đốc if not matched
+      const fallbackSlug = doctor.specialty_slug || 'chuyen-gia-cih';
+      matchedSpec = {
+        slug: fallbackSlug,
+        aliases: [fallbackSlug],
+        name: /^(Khoa|Ban|Đơn vị|Trung tâm|Phòng)\b/i.test(doctor.specialty) ? doctor.specialty : ('Khoa ' + doctor.specialty),
+        doctors: [{ name: doctor.name }]
+      };
+      catalog.unshift(matchedSpec);
+    }
+
+    // Ensure the current doctor is present in their matched specialty's doctors list
+    if (matchedSpec && matchedSpec.doctors) {
+      const existsInSpec = matchedSpec.doctors.some(d => {
+        const dk = normalizeStr(d.name);
+        return dk === docKey || dk.includes(docKey) || docKey.includes(dk);
+      });
+      if (!existsInSpec) {
+        matchedSpec.doctors.unshift({ name: doctor.name });
+      }
+    }
+
+    const specSelectEl = document.getElementById('doc-book-specialty');
+    if (specSelectEl) {
+      specSelectEl.innerHTML = '<option value="">-- Chọn chuyên khoa --</option>' +
+        catalog.map(s => `<option value="${s.slug}">${s.name}</option>`).join('');
+    }
+
+    window.updateDocSidebarDoctors = function(specSlug, preferredDoctorName) {
+      const docSelectEl = document.getElementById('doc-book-doctor');
+      if (!docSelectEl) return;
+
+      const targetDocName = preferredDoctorName !== undefined ? preferredDoctorName : docSelectEl.value;
+      const targetDocKey = normalizeStr(targetDocName);
+      docSelectEl.innerHTML = '';
+
+      const sp = findCatalogSpecBySlug(specSlug);
+      let matchedOption = false;
+
+      if (sp && Array.isArray(sp.doctors)) {
+        // Also merge any additional doctors from doctorsList with the same specialty_slug
+        const combinedDoctors = sp.doctors.slice();
+        doctorsList.forEach(dItem => {
+          if (dItem.specialty_slug && (dItem.specialty_slug === sp.slug || (sp.aliases && sp.aliases.includes(dItem.specialty_slug)))) {
+            const k = normalizeStr(dItem.name);
+            if (!combinedDoctors.some(cd => normalizeStr(cd.name) === k)) {
+              combinedDoctors.push({ name: dItem.name });
+            }
+          }
+        });
+
+        combinedDoctors.forEach(d => {
+          const opt = document.createElement('option');
+          opt.value = d.name;
+          opt.setAttribute('data-spec', sp.slug);
+          opt.textContent = d.name;
+          const dk = normalizeStr(d.name);
+          if (targetDocKey && (dk === targetDocKey || dk.includes(targetDocKey) || targetDocKey.includes(dk))) {
+            opt.selected = true;
+            matchedOption = true;
+          }
+          docSelectEl.appendChild(opt);
+        });
+
+        const anyOpt = document.createElement('option');
+        anyOpt.value = 'Bác sĩ khám bất kỳ';
+        anyOpt.textContent = '-- Bác sĩ khám bất kỳ --';
+        if (!matchedOption && targetDocName === 'Bác sĩ khám bất kỳ') {
+          anyOpt.selected = true;
+          matchedOption = true;
+        }
+        docSelectEl.appendChild(anyOpt);
+
+        if (!matchedOption && docSelectEl.options.length > 0) {
+          docSelectEl.selectedIndex = 0;
+        }
+      } else {
+        const anyOpt = document.createElement('option');
+        anyOpt.value = 'Bác sĩ khám bất kỳ';
+        anyOpt.textContent = '-- Bác sĩ khám bất kỳ --';
+        docSelectEl.appendChild(anyOpt);
+
+        catalog.forEach(s => {
+          const group = document.createElement('optgroup');
+          group.label = s.name;
+          (s.doctors || []).forEach(d => {
+            const opt = document.createElement('option');
+            opt.value = d.name;
+            opt.setAttribute('data-spec', s.slug);
+            opt.textContent = d.name;
+            const dk = normalizeStr(d.name);
+            if (targetDocKey && (dk === targetDocKey || dk.includes(targetDocKey) || targetDocKey.includes(dk))) {
+              opt.selected = true;
+            }
+            group.appendChild(opt);
+          });
+          docSelectEl.appendChild(group);
+        });
+      }
+    };
+
+    window.handleDocSidebarDoctorChange = function(sel) {
+      if (!sel) return;
+      const opt = sel.options[sel.selectedIndex];
+      if (!opt) return;
+      const optSpec = opt.getAttribute('data-spec');
+      if (specSelectEl && !specSelectEl.value && optSpec) {
+        specSelectEl.value = optSpec;
+        window.updateDocSidebarDoctors(optSpec, sel.value);
+      }
+    };
+
+    // Pre-select current doctor's specialty and current doctor
+    if (matchedSpec && specSelectEl) {
+      specSelectEl.value = matchedSpec.slug;
+      window.updateDocSidebarDoctors(matchedSpec.slug, doctor.name);
+    } else {
+      window.updateDocSidebarDoctors('', doctor.name);
+    }
+
+    window.goToDocBookStep = function(step, validateFirst) {
+      const step1El = document.getElementById('doc-book-step-1');
+      const step2El = document.getElementById('doc-book-step-2');
+      const tab1El = document.getElementById('doc-step-tab-1');
+      const tab2El = document.getElementById('doc-step-tab-2');
+      const successEl = document.getElementById('doc-book-success');
+      if (successEl) successEl.style.display = 'none';
+
+      if (step === 2 && validateFirst) {
+        const nameInput = document.getElementById('doc-book-name');
+        const phoneInput = document.getElementById('doc-book-phone');
+        const dobInput = document.getElementById('doc-book-dob');
+        for (const inp of [nameInput, phoneInput, dobInput]) {
+          if (inp && !inp.checkValidity()) {
+            inp.reportValidity();
+            return;
+          }
+        }
+      }
+
+      if (step === 2) {
+        if (step1El) step1El.style.display = 'none';
+        if (step2El) step2El.style.display = 'block';
+        if (tab1El) tab1El.classList.remove('active');
+        if (tab2El) tab2El.classList.add('active');
+      } else {
+        if (step1El) step1El.style.display = 'block';
+        if (step2El) step2El.style.display = 'none';
+        if (tab1El) tab1El.classList.add('active');
+        if (tab2El) tab2El.classList.remove('active');
+      }
+    };
+
+    window.setDocSidebarSlot = function(slotStr, btn) {
+      document.querySelectorAll('#doc-booking-box .doc-slot-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      const slotInput = document.getElementById('doc-book-timeslot');
+      if (slotInput) slotInput.value = slotStr;
+    };
+
+    window.submitDocDirectBooking = function(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('doc-book-name');
+      const phoneInput = document.getElementById('doc-book-phone');
+      const dobInput = document.getElementById('doc-book-dob');
+      for (const inp of [nameInput, phoneInput, dobInput]) {
+        if (inp && !inp.checkValidity()) {
+          window.goToDocBookStep(1, false);
+          inp.reportValidity();
+          return;
+        }
+      }
+
+      const specInput = document.getElementById('doc-book-specialty');
+      const docInput = document.getElementById('doc-book-doctor');
+      const dateInput = document.getElementById('doc-book-date');
+      for (const inp of [specInput, docInput, dateInput]) {
+        if (inp && !inp.checkValidity()) {
+          window.goToDocBookStep(2, false);
+          inp.reportValidity();
+          return;
+        }
+      }
+
+      const successEl = document.getElementById('doc-book-success');
+      if (successEl) {
+        const chosenDoc = docInput ? docInput.value : doctor.name;
+        const chosenDate = dateInput ? dateInput.value : '';
+        const chosenSlot = (document.getElementById('doc-book-timeslot') || {}).value || '';
+        successEl.innerHTML = `✅ Đã ghi nhận lịch khám cùng <strong>${chosenDoc}</strong> (${chosenDate} – ${chosenSlot})! Bộ phận CSKH CIH sẽ liên hệ xác nhận với Quý khách sớm nhất.`;
+        successEl.style.display = 'block';
+      }
+
+      if (nameInput) nameInput.value = '';
+      if (phoneInput) phoneInput.value = '';
+      if (dobInput) dobInput.value = '';
+      const codeInput = document.getElementById('doc-book-code');
+      if (codeInput) codeInput.value = '';
+      const noteInput = document.getElementById('doc-book-note');
+      if (noteInput) noteInput.value = '';
+    };
   }, 100);
 });
 </script>
 
-<script src="booking_modal.js?v=1792989400"></script>
 <div id="google_translate_element" style="display:none"></div>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>

@@ -896,7 +896,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const artId = parseInt(params.get('id')) || 9;
 
-    fetch('real_45_packages.json?v=1792988000')
+    fetch('real_45_packages.json?v=1793001600')
       .then(res => res.json())
       .then(packagesData => {
         const foundPackage = packagesData.find(p => p.id === artId);
@@ -938,7 +938,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div>
           <h1 style="font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 800; line-height: 1.35; color: #007DA5; margin: 0 0 0.85rem 0;">${formatTitleCase(pkg.title)}</h1>
           
-          <div style="font-size: 2rem; font-weight: 800; color: #dc2626; margin-bottom: 0.25rem;">${pkg.price || 'Liên hệ báo giá'}</div>
+          <div style="font-size: 2rem; font-weight: 800; color: #dc2626; margin-bottom: 0.25rem;">${pkg.price || 'Liên hệ'}</div>
           <div style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 1rem;">${pkg.date_note || 'Giá gói áp dụng theo niêm yết hiện hành.'}</div>
           ${pkg.intro ? `<p style="font-size: 0.98rem; line-height: 1.7; color: #334155; margin: 0 0 1.35rem 0;">${pkg.intro}</p>` : ''}
           <a href="#pkg-consult-box" onclick="event.preventDefault(); document.getElementById('pkg-consult-box').scrollIntoView({behavior:'smooth', block:'center'});" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #007DA5 0%, #005f80 100%); color: #ffffff; font-weight: 700; font-size: 0.92rem; padding: 0.8rem 1.6rem; border-radius: 99px; text-decoration: none; box-shadow: 0 6px 18px rgba(0, 125, 165, 0.25); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -1127,7 +1127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </h4>
             <div class="related-news-card__date" style="color: #dc2626; font-weight: 400; font-size: 0.92rem; margin-bottom: 0.65rem !important;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-              <span>${rel.price || 'Liên hệ báo giá'}</span>
+              <span>${rel.price || 'Liên hệ'}</span>
             </div>
             <a href="chi-tiet-tin-tuc?id=${rel.id}" class="news-card__more related-news-card__more" style="align-self: flex-end !important; margin-left: auto !important;">Xem thêm <span class="arrow">→</span></a>
           </div>

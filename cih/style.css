@@ -2460,8 +2460,19 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
   }
 }
 
-/* MOBILE (1 Card per row for homepage sliders) */
+/* MOBILE (1 Card per row for homepage sliders & subpage grids) */
 @media (max-width: 768px) {
+  .specialties-grid:not(#spec-grid),
+  .doc-grid-4,
+  .subpage-pkg-grid,
+  .subpage-content #pkg-grid,
+  .subpage-content .pkg-grid,
+  .news-grid-3:not(#news-grid-3) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
   .mobile-slider-container {
     padding: 0 20px !important;
   }

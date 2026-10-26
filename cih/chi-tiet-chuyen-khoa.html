@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20261026_newstabs" />
+  <link rel="stylesheet" href="style.css?v=20261026_specmob" />
   <style>
     /* Footer long divider line before Copyright */
     .footer__bottom {
@@ -548,13 +548,13 @@
       border-radius: 0 !important;
       box-shadow: none !important;
     }
-    @media (max-width: 991px) {
+    @media (max-width: 1024px) {
       .spec-prog-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
       }
     }
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       .spec-prog-grid {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -873,10 +873,11 @@
         padding: 0.55rem 0;
       }
       .opt1-breadcrumbs {
-        display: none;
+        display: block;
+        font-size: 0.78rem;
       }
       .opt1-subnav__inner {
-        justify-content: center;
+        justify-content: flex-start;
       }
       .opt1-features-2x2 {
         grid-template-columns: 1fr;

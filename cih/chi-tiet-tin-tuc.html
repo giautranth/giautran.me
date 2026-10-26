@@ -957,10 +957,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- FORM ĐĂNG KÝ TƯ VẤN GÓI DỊCH VỤ -->
       <div id="pkg-consult-box" style="max-width: 820px; margin: 2.5rem auto 1rem auto; background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%); border: 1.5px solid #bae6fd; border-radius: 20px; padding: 2.25rem 2.5rem; box-shadow: 0 12px 32px -8px rgba(0, 125, 165, 0.10);">
-        <div style="text-align: center; margin-bottom: 1.75rem;">
-          <span style="display: inline-block; background: #e0f2fe; color: #007DA5; font-size: 0.78rem; font-weight: 800; padding: 4px 14px; border-radius: 99px; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 0.5rem;">Hỗ trợ nhanh chóng</span>
-          <h3 style="font-size: 1.45rem; font-weight: 800; color: #0f3775; margin: 0 0 0.4rem 0; text-transform: uppercase;">Đăng ký tư vấn gói dịch vụ</h3>
-          <p style="font-size: 0.92rem; color: #475569; margin: 0;">Vui lòng để lại thông tin, bộ phận Chăm sóc khách hàng CIH sẽ liên hệ tư vấn chi tiết cho Quý khách.</p>
+        <div style="text-align: center; margin-bottom: 1.5rem;">
+          <h3 style="font-size: 1.45rem; font-weight: 800; color: #0f3775; margin: 0; text-transform: uppercase;">Đăng ký tư vấn gói dịch vụ</h3>
         </div>
 
         <form id="pkg-consult-form" onsubmit="event.preventDefault(); document.getElementById('pkg-consult-success').style.display='block'; this.reset(); document.getElementById('pkg-consult-select').value='${formatTitleCase(pkg.title).replace(/'/g, "\'")}';">

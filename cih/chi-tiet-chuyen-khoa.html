@@ -561,6 +561,200 @@
       }
     }
 
+    /* 3.8. DYNAMIC SPECIALTY HERO & ORIGINAL CONTENT CARDS (25 OTHER SPECIALTIES) */
+    .opt1-hero.opt1-hero--dynamic {
+      background-color: #fbf7ef;
+      background-size: 56% 100%;
+      background-position: right center;
+      background-repeat: no-repeat;
+    }
+    .opt1-hero.opt1-hero--dynamic::before {
+      background: linear-gradient(90deg, #faf5ea 0%, #faf5ea 42%, rgba(250, 245, 234, 0.96) 50%, rgba(250, 245, 234, 0.72) 60%, rgba(250, 245, 234, 0.18) 76%, rgba(250, 245, 234, 0) 92%);
+    }
+    @media (max-width: 991px) {
+      .opt1-hero.opt1-hero--dynamic {
+        background-size: cover;
+        background-position: center center;
+      }
+      .opt1-hero.opt1-hero--dynamic::before {
+        background: linear-gradient(180deg, rgba(253, 250, 243, 0.95) 0%, rgba(253, 250, 243, 0.90) 65%, rgba(253, 250, 243, 0.82) 100%);
+      }
+    }
+
+    .spec-orig-content-wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .spec-orig-card {
+      background: #ffffff;
+      border-radius: 20px;
+      border: 1.5px solid #E2C784;
+      padding: 28px 32px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+    }
+    .spec-orig-card--lead {
+      background: linear-gradient(180deg, #ffffff 0%, #fffdf8 100%);
+    }
+    .spec-orig-h2 {
+      font-family: var(--font-heading);
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: #8E1B1E;
+      margin: 0 0 18px 0;
+      padding-bottom: 12px;
+      border-bottom: 1.5px solid rgba(226, 199, 132, 0.55);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.4;
+    }
+    .spec-orig-h2::before {
+      content: '';
+      width: 5px;
+      height: 22px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, #8E1B1E 0%, #D4AF37 100%);
+      flex-shrink: 0;
+    }
+    .spec-orig-p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: #334155;
+      margin: 0 0 12px 0;
+      text-align: justify;
+    }
+    .spec-orig-p:last-child {
+      margin-bottom: 0;
+    }
+    .spec-orig-list {
+      margin: 8px 0 14px 0;
+      padding-left: 22px;
+      color: #334155;
+      font-size: 1.01rem;
+      line-height: 1.72;
+    }
+    .spec-orig-list:last-child {
+      margin-bottom: 0;
+    }
+    .spec-orig-list li {
+      margin-bottom: 7px;
+    }
+    .spec-orig-list li:last-child {
+      margin-bottom: 0;
+    }
+    .spec-orig-list li::marker {
+      color: #8E1B1E;
+    }
+    .spec-subcard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 14px;
+    }
+    .spec-subcard-grid--single {
+      grid-template-columns: 1fr;
+    }
+    .spec-subcard {
+      background: #fdfaf3;
+      border: 1px solid rgba(226, 199, 132, 0.75);
+      border-radius: 16px;
+      padding: 20px 24px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .spec-subcard:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(184, 134, 11, 0.10);
+      background: #ffffff;
+    }
+    .spec-subcard__title {
+      font-family: var(--font-heading);
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #1E293B;
+      margin: 0 0 10px 0;
+      line-height: 1.45;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .spec-subcard__title::before {
+      content: '✦';
+      color: #B38728;
+      font-size: 0.95rem;
+      line-height: 1.45;
+      flex-shrink: 0;
+    }
+    .spec-subcard__body .spec-orig-p,
+    .spec-subcard__body .spec-orig-list {
+      font-size: 0.98rem;
+    }
+    .spec-table-wrap {
+      overflow-x: auto;
+      margin: 12px 0;
+      border-radius: 12px;
+      border: 1px solid rgba(226, 199, 132, 0.7);
+    }
+    .spec-orig-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.96rem;
+      background: #ffffff;
+    }
+    .spec-orig-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      line-height: 1.55;
+      vertical-align: top;
+    }
+    .spec-orig-table tr:last-child td {
+      border-bottom: none;
+    }
+    .spec-orig-table tr.spec-table-cat-row td {
+      background: #fdf8eb;
+      color: #8E1B1E;
+      font-weight: 700;
+      border-top: 1px solid rgba(226, 199, 132, 0.6);
+      border-bottom: 1px solid rgba(226, 199, 132, 0.6);
+    }
+    .spec-video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 14px;
+    }
+    .spec-video-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0f172a;
+      border: 1.5px solid #E2C784;
+    }
+    .spec-video-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    @media (max-width: 900px) {
+      .spec-subcard-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .spec-orig-card {
+        padding: 20px 18px;
+      }
+      .spec-subcard {
+        padding: 16px 18px;
+      }
+    }
+
     /* 4. DOCTORS SECTION (3-COLUMN HOMEPAGE SYNCHRONIZED) */
     #bac-si.doctors-section {
       position: relative;
@@ -2063,50 +2257,115 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261026_tablet2"></script>
 <script src="news_data.js?v=1792750000"></script>
-<script src="specialty_data.js?v=1792770000"></script>
+<script src="specialty_data.js?v=20261026_all26"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
-    const slug = params.get('slug') || 'khoa-phu-san';
+    let slug = params.get('slug') || 'khoa-phu-san';
+    const slugAliases = {
+      'khoa-kham-tong-quat': 'khoa-kham-tong-quat-ehs'
+    };
+    if (slugAliases[slug]) slug = slugAliases[slug];
 
-    // If visiting another specialty (not khoa-phu-san), dynamically populate Option 1 layout
+    // If visiting another specialty (not khoa-phu-san), dynamically populate Option 1 layout with 100% original content
     if (slug !== 'khoa-phu-san' && typeof CIH_SPECIALTY_DATA !== 'undefined') {
-      const progSec = document.getElementById('chuong-trinh-kham'); if (progSec) progSec.style.display = 'none';
       const spec = CIH_SPECIALTY_DATA.find(s => s.slug === slug);
       if (spec) {
         document.getElementById('page-head-title').innerText = spec.name + ' | Bệnh viện Quốc tế City';
         document.getElementById('spec-title').innerHTML = spec.title || spec.name;
         document.getElementById('spec-breadcrumb-title').innerText = spec.name;
         document.getElementById('spec-intro-heading').innerText = 'Giới thiệu';
-        const pkgBtn = document.getElementById('spec-hero-pkg-btn'); if (pkgBtn) pkgBtn.innerHTML = 'Xem Gói Dịch Vụ &rarr;';
 
-        if (spec.banner || spec.default_banner) {
-          document.getElementById('spec-hero').style.backgroundImage = `url('${spec.banner || spec.default_banner}')`;
+        const heroDescEl = document.getElementById('spec-hero-desc');
+        if (heroDescEl && spec.hero_desc) {
+          heroDescEl.innerHTML = spec.hero_desc;
         }
-        if (spec.content) {
-          document.getElementById('spec-body').innerHTML = spec.content;
+
+        const heroEl = document.getElementById('spec-hero');
+        if (heroEl && (spec.banner || spec.default_banner)) {
+          heroEl.classList.add('opt1-hero--dynamic');
+          heroEl.style.backgroundImage = `url('${spec.banner || spec.default_banner}')`;
         }
-        if (spec.facilities && spec.facilities.length > 0) {
-          const g1 = document.getElementById('spec-gallery-img-1');
-          if (g1 && spec.facilities[0].img) g1.src = spec.facilities[0].img;
+
+        const bodyEl = document.getElementById('spec-body');
+        if (bodyEl && (spec.intro_html || spec.content)) {
+          bodyEl.innerHTML = spec.intro_html || spec.content;
         }
+
+        const g1 = document.getElementById('spec-gallery-img-1');
+        if (g1) {
+          const gallerySrc = spec.gallery_img || (spec.facilities && spec.facilities.length > 0 ? spec.facilities[0].img : spec.banner);
+          if (gallerySrc) {
+            g1.src = gallerySrc;
+            g1.alt = spec.name + ' - Bệnh viện Quốc tế City';
+          }
+        }
+
+        // Section 2.5: Các hoạt động mũi nhọn / Dịch vụ chuyên khoa (Original Content)
+        const progSec = document.getElementById('chuong-trinh-kham');
+        const progHeading = document.getElementById('spec-prog-heading');
+        const progGrid = document.getElementById('spec-prog-grid');
+        if (progSec && progGrid) {
+          if (spec.programs_html && spec.programs_html.trim() !== '') {
+            progSec.style.display = '';
+            if (progHeading) {
+              progHeading.innerHTML = spec.programs_heading || 'Các hoạt động mũi nhọn của khoa';
+            }
+            progGrid.className = 'spec-orig-content-wrap';
+            progGrid.innerHTML = spec.programs_html;
+          } else {
+            progSec.style.display = 'none';
+          }
+        }
+
+        // Section 3: Bác sĩ
         if (spec.doctors && spec.doctors.length > 0) {
           const docsGrid = document.getElementById('doc-grid-3');
-          docsGrid.innerHTML = spec.doctors.map(d => {
-            const docHref = d.slug ? `chi-tiet-bac-si?slug=${d.slug}` : 'bac-si';
-            return `
-            <div class="doc-card-v2">
-              <a href="${docHref}" class="doc-card-v2__img-wrap">
-                <img src="${d.img}" alt="${d.name}" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'" loading="lazy" />
-              </a>
-              <div class="doc-card-v2__body">
-                <h3 class="doc-card-v2__name"><a href="${docHref}">${d.name}</a></h3>
-                <div class="doc-card-v2__position">${(d.title || d.degree || '').replace(/\s*[–-]\s*Bệnh viện/g, '<br>Bệnh viện').replace(/\s+và\s+/g, '<br>và ')}</div>
-                <a href="${docHref}" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+          if (docsGrid) {
+            docsGrid.innerHTML = spec.doctors.map(d => {
+              const docHref = d.slug ? `chi-tiet-bac-si?slug=${d.slug}` : 'bac-si';
+              return `
+              <div class="doc-card-v2">
+                <a href="${docHref}" class="doc-card-v2__img-wrap">
+                  <img src="${d.img}" alt="${d.name}" class="doc-card-v2__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'" loading="lazy" />
+                </a>
+                <div class="doc-card-v2__body">
+                  <h3 class="doc-card-v2__name"><a href="${docHref}">${d.name}</a></h3>
+                  <div class="doc-card-v2__position">${(d.title || d.degree || '').replace(/\s*[–-]\s*Bệnh viện/g, '<br>Bệnh viện').replace(/\s+và\s+/g, '<br>và ')}</div>
+                  <a href="${docHref}" class="doc-card-v2__more-link">Xem thêm <span class="arrow">→</span></a>
+                </div>
               </div>
-            </div>
-          `;
-          }).join('');
+            `;
+            }).join('');
+            const docMobWrap = document.getElementById('doc-mob-wrap');
+            if (docMobWrap) docMobWrap.dispatchEvent(new Event('cih-slider-reset'));
+          }
+        }
+
+        // Section 4: Gói dịch vụ
+        if (spec.packages && spec.packages.length > 0) {
+          const pkgGrid = document.getElementById('pkg-grid');
+          if (pkgGrid) {
+            pkgGrid.innerHTML = spec.packages.map(p => {
+              const pkgHref = p.id ? `chi-tiet-tin-tuc?id=${p.id}` : 'goi-kham';
+              return `
+              <div class="news-card pkg-home-card">
+                <a href="${pkgHref}" class="news-card__img-link">
+                  <img src="${p.img}" alt="${p.title}" loading="lazy" />
+                </a>
+                <div class="news-card__body">
+                  <div style="width: 100%;">
+                    <p class="pkg-card__cat">${p.cat || spec.name}</p>
+                    <h3 class="news-card__title"><a href="${pkgHref}">${p.title}</a></h3>
+                  </div>
+                  <a href="${pkgHref}" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+                </div>
+              </div>
+            `;
+            }).join('');
+            const pkgMobWrap = document.getElementById('pkg-mob-wrap');
+            if (pkgMobWrap) pkgMobWrap.dispatchEvent(new Event('cih-slider-reset'));
+          }
         }
       }
     }

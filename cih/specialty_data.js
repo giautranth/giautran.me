@@ -373,7 +373,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bscki-nguyen-xuan-tai",
         "name": "BS.CKI. Nguyễn Xuân Tài",
         "title": "Bác sĩ chuyên khoa Nhi",
-        "img": "images/ext_webp/BS_Tai_25f4c069.webp"
+        "img": "images/ext_webp/BS_Tai_25f4c069.webp?v=2"
       },
       {
         "slug": "bscki-nguyen-thi-le-lieu",
@@ -478,7 +478,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bscki-nguyen-xuan-tai",
         "name": "BS.CKI. Nguyễn Xuân Tài",
         "title": "Bác sĩ chuyên khoa Nhi",
-        "img": "images/ext_webp/BS_Tai_25f4c069.webp"
+        "img": "images/ext_webp/BS_Tai_25f4c069.webp?v=2"
       },
       {
         "slug": "bscki-nguyen-thi-le-lieu",
@@ -2720,7 +2720,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bscki-nguyen-xuan-tai",
         "name": "BS.CKI. Nguyễn Xuân Tài",
         "title": "Bác sĩ chuyên khoa Nhi",
-        "img": "images/ext_webp/BS_Tai_25f4c069.webp"
+        "img": "images/ext_webp/BS_Tai_25f4c069.webp?v=2"
       },
       {
         "slug": "bscki-nguyen-thi-le-lieu",

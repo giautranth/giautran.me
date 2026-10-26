@@ -924,30 +924,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Package Description & Medical Table -->
       <div style="font-size: 1.05rem; line-height: 1.8; color: #334155;">
-        <!-- Medical Items Table -->
-        <div style="overflow-x: auto; margin: 1.5rem 0 2rem 0; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-          <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #ffffff;">
+        <!-- Medical Items Table (Fit to text width & Centered) -->
+        <div style="width: fit-content; max-width: 100%; overflow-x: auto; margin: 1.5rem auto 0.85rem auto; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);">
+          <table style="width: auto; border-collapse: collapse; font-size: 0.95rem; background: #ffffff;">
             <thead>
               <tr style="background: #f1f5f9; border-bottom: 2px solid #cbd5e1; color: #007DA5;">
-                <th style="padding: 0.9rem 1rem; text-align: center; font-weight: 800; width: 70px; border-right: 1px solid #cbd5e1;">STT</th>
-                <th style="padding: 0.9rem 1.25rem; text-align: left; font-weight: 800;">${formatTitleCase(pkg.title)}</th>
+                <th style="padding: 0.9rem 1.15rem; text-align: center; font-weight: 800; width: 68px; white-space: nowrap; border-right: 1px solid #cbd5e1;">STT</th>
+                <th style="padding: 0.9rem 1.75rem; text-align: left; font-weight: 800;">${formatTitleCase(pkg.title)}</th>
               </tr>
             </thead>
             <tbody>
               ${(pkg.table || []).map((row, idx) => `
                 <tr style="border-bottom: 1px solid #e2e8f0; background: ${idx % 2 === 0 ? '#ffffff' : '#f8fafc'};">
-                  <td style="padding: 0.8rem 1rem; text-align: center; color: #64748b; font-weight: 700; border-right: 1px solid #e2e8f0;">${row.stt}</td>
-                  <td style="padding: 0.8rem 1.25rem; color: #1e293b; font-weight: 500;">${row.item}</td>
+                  <td style="padding: 0.8rem 1.15rem; text-align: center; color: #64748b; font-weight: 700; border-right: 1px solid #e2e8f0;">${row.stt}</td>
+                  <td style="padding: 0.8rem 1.75rem; color: #1e293b; font-weight: 500;">${row.item}</td>
                 </tr>
               `).join('')}
               <tr style="background: #f0f9ff; font-weight: 700;">
-                <td style="padding: 0.9rem 1rem; text-align: center; border-right: 1px solid #cbd5e1; color: #007DA5;">-</td>
-                <td style="padding: 0.9rem 1.25rem; color: #007DA5; font-size: 1.05rem;">Giá gói: ${pkg.price || 'Liên hệ'}</td>
+                <td style="padding: 0.9rem 1.15rem; text-align: center; border-right: 1px solid #cbd5e1; color: #007DA5;">-</td>
+                <td style="padding: 0.9rem 1.75rem; color: #007DA5; font-size: 1.05rem;">Giá gói: ${pkg.price || 'Liên hệ'}</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 2.5rem;">${pkg.date_note || ''}</p>
+        <p style="font-size: 0.875rem; color: #64748b; font-style: italic; text-align: center; margin-bottom: 2.5rem;">${pkg.date_note || ''}</p>
       </div>
 
       <!-- FORM ĐĂNG KÝ TƯ VẤN GÓI DỊCH VỤ (OPTION 2: HEADER XANH CIH + VIỀN VÀNG KIM & ICON INPUT) -->

@@ -704,7 +704,53 @@ const CIH_AWARDS_DATA = {
   }
 };
 
+let currentAwardKey = null;
+const DEFAULT_AWARD_KEYS = [
+  'aaci',
+  'rtac',
+  'esc',
+  'iso',
+  'iso-7101',
+  'ihf',
+  'top3',
+  'top10-asia-2025',
+  'asia',
+  'healthcare-asia',
+  'top10ivf',
+  'green-hospital'
+];
+
+function getPageAwardKeys() {
+  const keys = [];
+  document.querySelectorAll('[onclick*="openAwardModal"]').forEach(el => {
+    const attr = el.getAttribute('onclick') || '';
+    const m = attr.match(/openAwardModal\(\s*['"]([^'"]+)['"]\s*\)/);
+    if (m && m[1] && CIH_AWARDS_DATA[m[1]] && !keys.includes(m[1])) {
+      keys.push(m[1]);
+    }
+  });
+  return keys.length > 1 ? keys : DEFAULT_AWARD_KEYS;
+}
+
+window.stepAwardModal = function(delta) {
+  const keys = getPageAwardKeys();
+  if (!keys.length) return;
+  let idx = keys.indexOf(currentAwardKey);
+  if (idx === -1) idx = 0;
+  const nextIdx = (idx + delta + keys.length) % keys.length;
+  window.openAwardModal(keys[nextIdx]);
+};
+
+document.addEventListener('keydown', (e) => {
+  const modal = document.getElementById('award-modal');
+  const isOpen = modal && (modal.classList.contains('active') || modal.style.display === 'flex');
+  if (!isOpen) return;
+  if (e.key === 'ArrowLeft') stepAwardModal(-1);
+  else if (e.key === 'ArrowRight') stepAwardModal(1);
+});
+
 window.openAwardModal = function(key) {
+  currentAwardKey = key;
   const data = CIH_AWARDS_DATA[key];
   if (!data) return;
 
@@ -725,6 +771,32 @@ window.openAwardModal = function(key) {
       </div>
     `;
     document.body.appendChild(modal);
+  }
+
+  if (modal && !modal.querySelector('.award-modal__dialog-wrap')) {
+    const contentEl = modal.querySelector('.award-modal__content');
+    if (contentEl) {
+      const wrap = document.createElement('div');
+      wrap.className = 'award-modal__dialog-wrap';
+      const prevBtn = document.createElement('button');
+      prevBtn.type = 'button';
+      prevBtn.className = 'mobile-arrow mobile-arrow--prev';
+      prevBtn.setAttribute('aria-label', 'Chứng nhận trước');
+      prevBtn.onclick = function() { stepAwardModal(-1); };
+      prevBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+
+      const nextBtn = document.createElement('button');
+      nextBtn.type = 'button';
+      nextBtn.className = 'mobile-arrow mobile-arrow--next';
+      nextBtn.setAttribute('aria-label', 'Chứng nhận tiếp');
+      nextBtn.onclick = function() { stepAwardModal(1); };
+      nextBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+
+      contentEl.parentNode.insertBefore(wrap, contentEl);
+      wrap.appendChild(prevBtn);
+      wrap.appendChild(contentEl);
+      wrap.appendChild(nextBtn);
+    }
   }
 
   const imgEl = document.getElementById('award-modal-img') || document.getElementById('award-modal-logo');

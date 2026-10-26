@@ -976,17 +976,21 @@
      AWARD & CERTIFICATE DETAIL POPUP MODAL
 ═══════════════════════════════════════════════ -->
 <div class="award-modal" id="award-modal" onclick="if(event.target===this) closeAwardModal()">
-  <div class="award-modal__content">
-    <button class="award-modal__close" onclick="closeAwardModal()" aria-label="Đóng">✕</button>
-    <div class="award-modal__img-box" id="award-modal-img-wrap">
-      <img id="award-modal-img" src="" alt="Chứng nhận" />
+  <div class="award-modal__dialog-wrap">
+    <button type="button" class="mobile-arrow mobile-arrow--prev" onclick="stepAwardModal(-1)" aria-label="Chứng nhận trước"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+    <div class="award-modal__content">
+      <button class="award-modal__close" onclick="closeAwardModal()" aria-label="Đóng">✕</button>
+      <div class="award-modal__img-box" id="award-modal-img-wrap">
+        <img id="award-modal-img" src="" alt="Chứng nhận" />
+      </div>
+      <h3 class="award-modal__title" id="award-modal-title"></h3>
+      <p class="award-modal__desc" id="award-modal-desc"></p>
     </div>
-    <h3 class="award-modal__title" id="award-modal-title"></h3>
-    <p class="award-modal__desc" id="award-modal-desc"></p>
+    <button type="button" class="mobile-arrow mobile-arrow--next" onclick="stepAwardModal(1)" aria-label="Chứng nhận tiếp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
   </div>
 </div>
 
-<script src="script.js?v=1792978000"></script>
+<script src="script.js?v=1793001800"></script>
 <script src="booking_modal.js?v=1792770000"></script>
 <div id="google_translate_element" style="display:none"></div>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

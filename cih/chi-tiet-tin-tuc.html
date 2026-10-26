@@ -1054,7 +1054,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <label for="pkg-consult-select" style="display: block; font-size: 0.78rem; font-weight: 700; color: #1e293b; margin-bottom: 0.3rem;">Gói dịch vụ <span style="color: #dc2626;">*</span></label>
               <select id="pkg-consult-select" required style="width: 100%; padding: 0.52rem 0.6rem; border-radius: 9px; border: 1.5px solid #cbd5e1; background: #f8fafc; font-family: inherit; font-size: 0.8rem; font-weight: 600; color: #0f172a; outline: none; cursor: pointer; transition: all 0.2s;" onfocus="this.style.borderColor='#007DA5';this.style.background='#ffffff'" onblur="this.style.borderColor='#cbd5e1';this.style.background='#f8fafc'">
                 ${(allPkgs || [pkg]).map(p => `
-                  <option value="${formatTitleCase(p.title)}" ${p.id === pkg.id ? 'selected' : ''}>${formatTitleCase(p.title)} (${p.price || 'Liên hệ'})</option>
+                  <option value="${formatTitleCase(p.title)}" ${p.id === pkg.id ? 'selected' : ''}>${formatTitleCase(p.title)}</option>
                 `).join('')}
               </select>
             </div>

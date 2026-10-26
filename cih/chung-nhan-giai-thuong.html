@@ -224,22 +224,31 @@
       letter-spacing: 0.5px;
     }
     .cert-card h3,
-    .cert-card h3 span,
-    .cert-card-title,
-    .cert-card-title span {
+    .cert-card-title {
       font-size: 1.04rem !important;
       font-weight: 700 !important;
       color: #111827 !important;
       margin: 0;
-      line-height: 1.42;
-      min-height: 3rem;
+      line-height: 1.38;
+      min-height: 2.85rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 2px;
       text-align: center;
       width: 100%;
       text-transform: none;
+    }
+    .cert-card h3 span,
+    .cert-card-title span {
+      font-size: inherit !important;
+      font-weight: inherit !important;
+      color: #111827 !important;
+      line-height: 1.38 !important;
+      min-height: 0 !important;
+      display: block !important;
+      margin: 0 !important;
     }
     .cert-card, .aaci-featured-hero-box {
       cursor: pointer;

@@ -3115,10 +3115,12 @@ body {
   margin: 0 !important;
   text-align: center !important;
   letter-spacing: -0.2px !important;
-  min-height: 3rem !important;
+  min-height: 2.85rem !important;
   display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+  gap: 2px !important;
 }
 
 .cert-img-box {

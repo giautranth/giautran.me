@@ -967,7 +967,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <script src="script.js?v=1792750000"></script>
-<script src="cih_doctors_data.js?v=1792770000"></script>
+<script src="cih_doctors_data.js?v=1792989200"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
@@ -1213,7 +1213,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
 
-      return sections.filter(s => s.nodes.length > 0);
+      return sections.filter(s => s.nodes.length > 0 && !/lịch\s*(làm\s*việc|khám)/i.test(s.title));
     }
 
     const cleanedHtml = cleanDoctorBio(doctor.content || '');

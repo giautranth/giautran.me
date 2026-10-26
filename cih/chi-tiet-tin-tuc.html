@@ -911,11 +911,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <!-- Right: Specs & Price -->
         <div>
-          <span style="background: #e0f2fe; color: #007DA5; padding: 0.35rem 0.9rem; border-radius: 99px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 0.75rem;">${pkg.category || 'GÓI KHÁM TỔNG QUÁT'}</span>
-          <h1 style="font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 800; line-height: 1.35; color: #0f3775; margin: 0 0 1rem 0;">${formatTitleCase(pkg.title)}</h1>
+          <h1 style="font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 800; line-height: 1.35; color: #0f3775; margin: 0 0 0.85rem 0;">${formatTitleCase(pkg.title)}</h1>
           
           <div style="font-size: 2rem; font-weight: 800; color: #dc2626; margin-bottom: 0.25rem;">${pkg.price || 'Liên hệ báo giá'}</div>
-          <div style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 1.25rem;">${pkg.date_note || 'Giá gói áp dụng theo niêm yết hiện hành.'}</div>
+          <div style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 1rem;">${pkg.date_note || 'Giá gói áp dụng theo niêm yết hiện hành.'}</div>
+          ${pkg.intro ? `<p style="font-size: 0.98rem; line-height: 1.7; color: #334155; margin: 0 0 1.35rem 0;">${pkg.intro}</p>` : ''}
           <a href="#pkg-consult-box" onclick="event.preventDefault(); document.getElementById('pkg-consult-box').scrollIntoView({behavior:'smooth', block:'center'});" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #007DA5 0%, #005f80 100%); color: #ffffff; font-weight: 700; font-size: 0.92rem; padding: 0.8rem 1.6rem; border-radius: 99px; text-decoration: none; box-shadow: 0 6px 18px rgba(0, 125, 165, 0.25); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
             <span>📝 ĐĂNG KÝ TƯ VẤN GÓI NÀY</span>
           </a>
@@ -924,7 +924,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       <!-- Package Description & Medical Table -->
       <div style="font-size: 1.05rem; line-height: 1.8; color: #334155;">
-        <p style="font-size: 1.05rem; line-height: 1.8; color: #334155; margin-bottom: 1.25rem;">${pkg.intro || ''}</p>
         <p style="font-size: 0.95rem; color: #475569; margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem 1.25rem; border-left: 4px solid #007DA5; border-radius: 0 8px 8px 0;">
           Nếu quý khách có nhu cầu đăng ký hoặc cần hỗ trợ tư vấn thủ tục, nội dung gói khám,... vui lòng liên hệ <strong>tổng đài 1900 8146</strong> hoặc <strong>inbox fanpage CIH</strong>. Dưới đây là nội dung chi tiết:
         </p>

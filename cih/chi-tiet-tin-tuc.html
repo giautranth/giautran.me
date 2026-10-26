@@ -144,10 +144,36 @@
       .related-news-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+      .related-news-grid .related-news-card:nth-child(n+3) {
+        display: none !important;
+      }
     }
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .related-news-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+      }
+      .related-news-grid .related-news-card:nth-child(n+2) {
+        display: none !important;
+      }
+      #pkg-rel-prev-btn,
+      #rel-prev-btn {
+        left: 8px !important;
+        width: 38px !important;
+        height: 38px !important;
+        background: rgba(255, 255, 255, 0.94) !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
+        z-index: 20 !important;
+      }
+      #pkg-rel-next-btn,
+      #rel-next-btn {
+        right: 8px !important;
+        width: 38px !important;
+        height: 38px !important;
+        background: rgba(255, 255, 255, 0.94) !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
+        z-index: 20 !important;
       }
     }
 
@@ -1180,17 +1206,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const pkgNextBtn = document.getElementById('pkg-rel-next-btn');
     const pkgPrevBtn = document.getElementById('pkg-rel-prev-btn');
+    const getPkgStep = () => (window.innerWidth <= 768 ? 1 : (window.innerWidth <= 992 ? 2 : 3));
     if (pkgNextBtn && otherPackages.length > 0) {
       pkgNextBtn.addEventListener('click', function() {
-        pkgRelIndex = (pkgRelIndex + 3) % otherPackages.length;
+        const step = getPkgStep();
+        pkgRelIndex = (pkgRelIndex + step) % otherPackages.length;
         renderRelatedPackages();
       });
     }
     if (pkgPrevBtn && otherPackages.length > 0) {
       pkgPrevBtn.addEventListener('click', function() {
-        pkgRelIndex = (pkgRelIndex - 3 + otherPackages.length) % otherPackages.length;
+        const step = getPkgStep();
+        pkgRelIndex = (pkgRelIndex - step + otherPackages.length) % otherPackages.length;
         renderRelatedPackages();
       });
+    }
+    const pkgGridEl = document.getElementById('pkg-related-grid');
+    if (pkgGridEl && otherPackages.length > 0) {
+      let touchStartX = 0;
+      pkgGridEl.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      pkgGridEl.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 40) {
+          const step = getPkgStep();
+          pkgRelIndex = diff > 0
+            ? (pkgRelIndex + step) % otherPackages.length
+            : (pkgRelIndex - step + otherPackages.length) % otherPackages.length;
+          renderRelatedPackages();
+        }
+      }, { passive: true });
     }
   }
 
@@ -1250,17 +1294,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Navigation arrow handlers
     const nextBtn = document.getElementById('rel-next-btn');
     const prevBtn = document.getElementById('rel-prev-btn');
+    const getRelStep = () => (window.innerWidth <= 768 ? 1 : (window.innerWidth <= 992 ? 2 : 3));
     if (nextBtn) {
       nextBtn.addEventListener('click', function() {
-        relIndex = (relIndex + 3) % otherArticles.length;
+        const step = getRelStep();
+        relIndex = (relIndex + step) % otherArticles.length;
         renderRelated();
       });
     }
     if (prevBtn) {
       prevBtn.addEventListener('click', function() {
-        relIndex = (relIndex - 3 + otherArticles.length) % otherArticles.length;
+        const step = getRelStep();
+        relIndex = (relIndex - step + otherArticles.length) % otherArticles.length;
         renderRelated();
       });
+    }
+    const relGridEl = document.getElementById('related-grid');
+    if (relGridEl && otherArticles.length > 0) {
+      let touchStartX = 0;
+      relGridEl.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+      relGridEl.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 40) {
+          const step = getRelStep();
+          relIndex = diff > 0
+            ? (relIndex + step) % otherArticles.length
+            : (relIndex - step + otherArticles.length) % otherArticles.length;
+          renderRelated();
+        }
+      }, { passive: true });
     }
   }
 </script>

@@ -3259,3 +3259,24 @@ section#doi-tac-bao-hiem.section.insurance-section {
 }
 
 .award-modal__badge { display: none !important; }
+
+/* ── MOBILE: CANH ĐỀU 2 BÊN (JUSTIFY) NỘI DUNG DƯỚI TIÊU ĐỀ ── */
+@media (max-width: 768px) {
+  .section__header-left {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .section__header-left p,
+  .section__header p,
+  .section__subtitle,
+  .doc-section-subtitle,
+  .cih-equip-subtitle,
+  .section-subtitle,
+  .opt1-hero__desc,
+  .opt1-intro__lead,
+  #spec-body p,
+  .aaci-opt1-desc,
+  .cert-desc {
+    text-align: justify !important;
+  }
+}

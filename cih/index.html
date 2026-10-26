@@ -24,7 +24,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=1792989800" />
+  <link rel="stylesheet" href="style.css?v=1792992200" />
 
 </head>
 
@@ -262,27 +262,31 @@
 
   <div class="hero__slider" id="hero-slider">
 
-
-
+    <!-- Slide 1: Trọn gói sanh không phát sinh chỉ từ 29TR -->
     <div class="hero__slide hero__slide--active">
-
       <div class="hero__slide-bg">
-
         <picture style="display: block; width: 100%; height: 100%;">
-
-          <source media="(max-width: 768px)" srcset="images/banner/2_mobile.webp" />
-
-          <img src="images/banner/2.webp" alt="Trang thiết bị hiện đại CIH" class="hero__slide-img" />
-
+          <source media="(max-width: 768px)" srcset="images/banner/banner_sanh_mobile.webp?v=20261026" />
+          <img src="images/banner/banner_sanh_desktop.webp?v=20261026" alt="Trọn gói sanh không phát sinh chỉ từ 29 triệu - Bệnh viện Quốc tế City" class="hero__slide-img" />
         </picture>
-
       </div>
-
     </div>
 
-
+    <!-- Slide 2: Ưu đãi đặc biệt Giảm 10% Gói khám xương khớp -->
+    <div class="hero__slide">
+      <div class="hero__slide-bg">
+        <picture style="display: block; width: 100%; height: 100%;">
+          <source media="(max-width: 768px)" srcset="images/banner/banner_xuong_khop_mobile.webp?v=20261026" />
+          <img src="images/banner/banner_xuong_khop_desktop.webp?v=20261026" alt="Ưu đãi đặc biệt Giảm 10% Gói khám xương khớp - Bệnh viện Quốc tế City" class="hero__slide-img" loading="lazy" />
+        </picture>
+      </div>
+    </div>
 
   </div><!-- /.hero__slider -->
+
+  <!-- Slider Navigation Arrows -->
+  <button class="hero__nav hero__nav--prev" id="slide-prev" aria-label="Banner trước">‹</button>
+  <button class="hero__nav hero__nav--next" id="slide-next" aria-label="Banner tiếp">›</button>
 
 </section>
 

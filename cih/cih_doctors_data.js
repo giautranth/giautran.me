@@ -227,7 +227,7 @@ const CIH_DOCTORS_DATA = [
     "position": "Bác sĩ Chuyên Khoa Tim Mạch",
     "specialty": "Tim Mạch",
     "specialty_slug": "khoa-tim-mach",
-    "image": "images/ext_webp/11_d0d43d75.webp",
+    "image": "images/ext_webp/11_d0d43d75.webp?v=2",
     "content": "<p>Bác sĩ Tim Mạch</p>\r\n<h3>1. Chuyên Khoa</h3>\r\n<p>Tim Mạch &#8211; Tim mạch can thiệp</p>\r\n<h3>2. Thông Tin Bác Sĩ</h3>\r\n<p>Với bề dày gần 10 năm công tác và nghiên cứu, Bác sĩ Lê Văn Tuyến có nhiều kinh nghiệm trong việc chẩn đoán và điều trị các bệnh lý về nội tim mạch, tim mạch can thiệp. Học hàm – học vị: Bác sĩ Chuyên khoa I</p>\r\n<h3>3. Quá Trình Công Tác</h3>\r\n<ul>\r\n<li>2017 &#8211; 2023 Bệnh viện Đa khoa tỉnh Quảng Trị Bác sĩ Nội tim mạch – Tim mạch can thiệp.</li>\r\n<li>2023 &#8211; 09/2024: Bác sĩ Tim mạch can thiệp Bệnh viện Đa khoa Tâm Anh.</li>\r\n<li>10/2024 &#8211; nay: Bác sĩ khoa Tim mạch, Can thiệp mạch máu Bệnh viện Quốc tế City.</li>\r\n</ul>\r\n<h3>4. Bằng Cấp Chuyên Môn</h3>\r\n<ul>\r\n<li>2011 &#8211; 2017: Bác sĩ đa khoa Đại học Y Dược Huế Y.</li>\r\n<li>2020 &#8211; 2022:  Bác sĩ chuyên khoa 1 Nội tổng quát, Đại học Y Khoa Phạm Ngọc Thạch.</li>\r\n</ul>\r\n<h3>5. Chứng chỉ đào tạo</h3>\r\n\r\n\r\n\r\n<!-- /wp:post-content -->\r\n\r\n\r\n\r\n<!-- wp:paragraph -->\r\n\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph /-->",
     "excerpt": ""
   },

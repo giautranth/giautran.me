@@ -1098,7 +1098,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-cki-le-van-tuyen",
         "name": "BS.CKI. Lê Văn Tuyến",
         "title": "Bác sĩ Chuyên Khoa Tim Mạch",
-        "img": "images/ext_webp/11_d0d43d75.webp"
+        "img": "images/ext_webp/11_d0d43d75.webp?v=2"
       },
       {
         "slug": "ths-bs-bui-thi-xuan-nga",
@@ -1779,7 +1779,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-cki-le-van-tuyen",
         "name": "BS.CKI. Lê Văn Tuyến",
         "title": "Bác sĩ Chuyên Khoa Tim Mạch",
-        "img": "images/ext_webp/11_d0d43d75.webp"
+        "img": "images/ext_webp/11_d0d43d75.webp?v=2"
       }
     ],
     "packages": [

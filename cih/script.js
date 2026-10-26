@@ -633,7 +633,7 @@ const CIH_AWARDS_DATA = {
   },
   'healthcare-asia': {
     img: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/logo/healthcare_asia_transparent.webp',
+    logo: 'images/Website/giai-thuong/logo/healthcare_asia_transparent.webp?v=2',
     title: 'Healthcare Asia Awards 2023',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Giải thưởng danh giá Healthcare Asia Awards 2023 vinh danh Bệnh viện Quốc tế City với hạng mục "Most Improved Community Hospital of the Year - Vietnam" nhờ những nỗ lực không ngừng trong việc đổi mới quy trình khám chữa bệnh, ứng dụng kỹ thuật cao và nâng tầm trải nghiệm chăm sóc sức khỏe cộng đồng.'

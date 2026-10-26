@@ -23,11 +23,11 @@
     .pn-doc-hero {
       background: linear-gradient(135deg, #f0f9ff 0%, #fdfbf7 100%);
       border: 1.5px solid #dbeafe;
-      border-bottom: none;
-      border-radius: 20px 20px 0 0;
-      padding: 2rem 2.25rem;
+      border-radius: 20px;
+      padding: 1.85rem 2.25rem;
+      margin-bottom: 2.25rem;
       display: grid;
-      grid-template-columns: 260px 1fr;
+      grid-template-columns: 250px 1fr;
       gap: 2.25rem;
       align-items: center;
       box-shadow: 0 10px 30px rgba(0, 59, 92, 0.05);
@@ -523,17 +523,10 @@
           <img id="doc-photo" src="images/doctor_male_1.webp" alt="Bác sĩ" onerror="this.onerror=null; this.src='images/doctor_male_1.webp'" loading="lazy" />
         </div>
         <div class="pn-doc-hero__info">
-          <span id="doc-spec-badge" class="pn-doc-hero__badge">Chuyên gia Y tế CIH</span>
           <h1 id="doc-name" class="pn-doc-hero__name">Đang tải...</h1>
-          <div id="doc-position" class="pn-doc-hero__position"></div>
-          <div id="doc-hero-intro" class="pn-doc-hero__intro" style="margin-bottom: 0;"></div>
+          <div id="doc-position" class="pn-doc-hero__position" style="margin-bottom: 0;"></div>
         </div>
       </div>
-
-      <!-- 2. THANH NGANG MÀU XANH #007DA5 KIỂU TÂM ANH -->
-      <nav id="doc-tab-bar" class="ta-nav-bar" aria-label="Điều hướng hồ sơ bác sĩ">
-        <button type="button" class="ta-nav-pill active">Giới thiệu</button>
-      </nav>
 
       <!-- 3. PHẦN THÂN DƯỚI: CỘT TRÁI (MỤC TÂM ANH) + CỘT PHẢI (STICKY FORM) -->
       <div class="doc-body-grid">
@@ -1249,11 +1242,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const docContentEl = document.getElementById('doc-content');
 
     if (sections.length > 0) {
-      tabBar.innerHTML = sections.map((sec, idx) => `
-        <button type="button" class="ta-nav-pill ${idx === 0 ? 'active' : ''}" onclick="scrollToDocSec('ta-sec-${idx}', this)">
-          ${sec.title}
-        </button>
-      `).join('');
+      if (tabBar) {
+        tabBar.innerHTML = sections.map((sec, idx) => `
+          <button type="button" class="ta-nav-pill ${idx === 0 ? 'active' : ''}" onclick="scrollToDocSec('ta-sec-${idx}', this)">
+            ${sec.title}
+          </button>
+        `).join('');
+      }
 
       docContentEl.innerHTML = sections.map((sec, idx) => {
         const bodyDiv = document.createElement('div');
@@ -1291,7 +1286,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
       }).join('');
     } else {
-      tabBar.innerHTML = `<button type="button" class="ta-nav-pill active">Giới thiệu</button>`;
+      if (tabBar) tabBar.innerHTML = `<button type="button" class="ta-nav-pill active">Giới thiệu</button>`;
       docContentEl.innerHTML = `
         <section class="ta-sec-block" id="ta-sec-0">
           <div class="ta-sec-header" onclick="toggleDocSec(this)">

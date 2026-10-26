@@ -971,7 +971,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <script src="script.js?v=1792750000"></script>
-<script src="cih_doctors_data.js?v=1792989200"></script>
+<script src="cih_doctors_data.js?v=1792997800"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
@@ -1153,8 +1153,21 @@ document.addEventListener('DOMContentLoaded', function() {
         if (node.nodeType !== Node.ELEMENT_NODE) return;
 
         const tag = node.tagName.toLowerCase();
-        const text = (node.textContent || '').trim();
+        const text = (node.textContent || '').replace(/\u00a0/g, ' ').trim();
         if (!text && tag !== 'table' && !node.querySelector('img, table')) return;
+
+        // Skip hospital slogan / hotline / emergency / address footer lines
+        if (
+          /^bệnh viện quốc tế city\s*[–\-—]+\s*mỗi điểm chạm là một trải nghiệm hạnh phúc/i.test(text) ||
+          /^(?:tổng đài|đt|đặt hẹn)\s*:\s*(?:1900\s*8146|\(?028\)?\s*6280\s*3333)/i.test(text) ||
+          /^cấp cứu\s*:\s*\(?028\)?\s*6290\s*1155/i.test(text) ||
+          /^số\s*0?3,?\s*đường\s*17a/i.test(text) ||
+          /^1900\s*8146$/i.test(text) ||
+          /^hướng dẫn đặt hẹn khám bệnh với/i.test(text) ||
+          /^cách\s*[12]\s*:/i.test(text)
+        ) {
+          return;
+        }
 
         // Skip redundant position line at very top
         if (sections.length === 1 && currentSec.nodes.length === 0 && text.length < 140) {

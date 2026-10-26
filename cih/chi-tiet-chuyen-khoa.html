@@ -73,7 +73,8 @@
       backdrop-filter: blur(6px);
     }
     .opt1-hero__title {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
+      text-transform: none !important;
       font-weight: 800;
       line-height: 1.2;
       margin: 0 0 1.25rem 0;
@@ -1056,7 +1057,7 @@
 <section class="opt1-hero" id="spec-hero">
   <div class="container">
     <div class="opt1-hero__content">
-      <h1 class="opt1-hero__title" id="spec-title">KHOA PHỤ SẢN</h1>
+      <h1 class="opt1-hero__title" id="spec-title">Khoa Phụ Sản</h1>
       <p class="opt1-hero__desc" id="spec-hero-desc">Khoa Phụ Sản là một trong 4 khoa mũi nhọn của Bệnh viện Quốc tế City, chuyên cung cấp các dịch vụ chăm sóc sức khỏe cho sản phụ trong suốt thai kỳ. Bên cạnh đó là các dịch vụ toàn diện và hiệu quả trong chẩn đoán và điều trị các bệnh lý thông thường hoặc ác tính của cơ quan sinh dục nữ.</p>
       <div class="opt1-hero__actions">
         <a href="lien-he.html#dat-lich" class="opt1-btn-outline">Đặt Lịch Khám Ngay &rarr;</a>
@@ -2082,7 +2083,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const spec = CIH_SPECIALTY_DATA.find(s => s.slug === slug);
       if (spec) {
         document.getElementById('page-head-title').innerText = spec.name + ' | Bệnh viện Quốc tế City';
-        document.getElementById('spec-title').innerHTML = (spec.title || spec.name).toUpperCase();
+        document.getElementById('spec-title').innerHTML = spec.title || spec.name;
         document.getElementById('spec-breadcrumb-title').innerText = spec.name;
         document.getElementById('spec-intro-heading').innerText = 'Giới thiệu';
         const pkgBtn = document.getElementById('spec-hero-pkg-btn'); if (pkgBtn) pkgBtn.innerHTML = 'Xem Gói Dịch Vụ &rarr;';

@@ -292,17 +292,17 @@
       display: block;
     }
     .pkg-consult-grid {
-      max-width: 780px;
+      max-width: 830px;
       margin: 2rem auto 0.75rem auto;
-      background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 65%);
+      background: #ffffff;
       border: 1.5px solid #bae6fd;
       border-radius: 22px;
       padding: 0;
       overflow: hidden;
       box-shadow: 0 16px 40px rgba(0, 91, 127, 0.09);
       display: grid;
-      grid-template-columns: 0.96fr 1.04fr;
-      gap: 0;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 1.25rem;
       align-items: stretch;
     }
     .pkg-consult-visual {
@@ -318,13 +318,24 @@
       object-position: center 20%;
       display: block;
     }
+    .pkg-consult-form-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1.5rem 2rem 1.5rem 1.25rem;
+      background: #ffffff;
+    }
     @media (max-width: 720px) {
       .pkg-consult-grid {
         grid-template-columns: 1fr;
+        gap: 0.5rem;
       }
       .pkg-consult-visual {
         height: 230px;
         min-height: 230px;
+      }
+      .pkg-consult-form-col {
+        padding: 1.25rem 1.35rem 1.5rem 1.35rem;
       }
     }
   </style>
@@ -1044,7 +1055,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
 
         <!-- Cột phải: Form đăng ký nhỏ gọn sang trọng -->
-        <div style="display: flex; flex-direction: column; justify-content: center; padding: 1.35rem 1.5rem; background: #ffffff;">
+        <div class="pkg-consult-form-col">
           <div style="margin-bottom: 0.85rem; padding-bottom: 0.6rem; border-bottom: 1.5px solid #e2e8f0; display: flex; align-items: center; gap: 8px;">
             <span style="width: 4px; height: 18px; border-radius: 99px; background: #007DA5; display: inline-block;"></span>
             <h3 style="font-size: 1.08rem; font-weight: 800; color: #007DA5; margin: 0; text-transform: uppercase; letter-spacing: 0.3px;">ĐĂNG KÝ TƯ VẤN</h3>

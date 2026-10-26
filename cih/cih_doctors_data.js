@@ -216,7 +216,7 @@ const CIH_DOCTORS_DATA = [
     "position": "Bác sĩ Chuyên Khoa Tim Mạch",
     "specialty": "Tim Mạch",
     "specialty_slug": "khoa-tim-mach",
-    "image": "images/ext_webp/12_9f3430cb.webp",
+    "image": "images/ext_webp/12_9f3430cb.webp?v=2",
     "content": "<p>Bác sĩ Tim Mạch</p>\r\n<h3>1. Chuyên Khoa</h3>\r\n<p>Tim Mạch &#8211; Tim mạch can thiệp</p>\r\n<h3>2. Thông Tin Bác Sĩ</h3>\r\n<p>Với bề dày gần 10 năm công tác và nghiên cứu, Bác sĩ Trần Thế Vinh có nhiều kinh nghiệm trong việc chẩn đoán và điều trị các bệnh lý về nội tim mạch, tim mạch can thiệp. Học hàm – học vị: Bác sĩ Chuyên khoa I</p>\r\n<h3>3. Quá Trình Công Tác</h3>\r\n<ul>\r\n<li>02/2022 – 08/2024: Bệnh viện đa khoa Tâm Anh thành phố Hồ Chí Minh\r\n<ul>\r\n<li>Chẩn đoán, khám chữa bệnh các bệnh lý tim mạch tổng quát</li>\r\n<li>Thực hiện các cận lâm sàng tim mạch: điện tim gắng sức, holter ECG, siêu âm tim, siêu âm tim gắng sức, siêu âm tim thực quản.</li>\r\n<li>Chụp chẩn đoán mạch vành các ca chương trình và cấp cứu</li>\r\n</ul>\r\n</li>\r\n<li>10/2024 &#8211; nay: Bác sĩ khoa Tim mạch, Can thiệp mạch máu Bệnh viện Quốc tế City.</li>\r\n</ul>\r\n<h3>4. Bằng Cấp Chuyên Môn</h3>\r\n<ul>\r\n<li>2012 &#8211; 2018: Bác sĩ đa khoa Đại học Y Khoa Phạm Ngọc Thạch.</li>\r\n<li>2018 &#8211; 2021:  Bác sĩ chuyên khoa 1 Nội trú, Nội tổng quát, Đại học Y Khoa Phạm Ngọc Thạch.</li>\r\n</ul>\r\n<h3>5. Chứng chỉ đào tạo</h3>\r\n\r\n<!-- /wp:post-content -->\r\n\r\n\r\n\r\n<!-- wp:paragraph -->\r\n<p><strong>Bệnh Viện Quốc Tế City</strong></p>\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->\r\n\r\n<!-- /wp:paragraph -->\r\n\r\n<!-- wp:paragraph -->",
     "excerpt": ""
   },

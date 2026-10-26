@@ -1092,7 +1092,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-cki-tra",
         "name": "ThS.BS.CKI. Trần Thế Vinh",
         "title": "Bác sĩ Chuyên Khoa Tim Mạch",
-        "img": "images/ext_webp/12_9f3430cb.webp"
+        "img": "images/ext_webp/12_9f3430cb.webp?v=2"
       },
       {
         "slug": "bs-cki-le-van-tuyen",
@@ -1773,7 +1773,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-cki-tra",
         "name": "ThS.BS.CKI. Trần Thế Vinh",
         "title": "Bác sĩ Chuyên Khoa Tim Mạch",
-        "img": "images/ext_webp/12_9f3430cb.webp"
+        "img": "images/ext_webp/12_9f3430cb.webp?v=2"
       },
       {
         "slug": "bs-cki-le-van-tuyen",

@@ -855,9 +855,9 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0, 75, 120, 0.45);
-      color: #ffffff;
-      border: none;
+      background: #ffffff;
+      color: #007DA5;
+      border: 1.5px solid #d8dff0;
       width: 44px;
       height: 44px;
       border-radius: 50%;
@@ -872,7 +872,9 @@
     }
     
     .slider-arrow:hover {
-      background: rgba(0, 75, 120, 0.85);
+      background: #007DA5;
+      color: #ffffff;
+      border-color: #007DA5;
       transform: translateY(-50%) scale(1.1);
     }
     

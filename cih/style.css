@@ -186,7 +186,7 @@ ul{list-style:none}
 .hero__actions{display:flex;gap:1rem;flex-wrap:wrap}
 
 /* Nav buttons */
-.hero__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:#ffffff;border:1.5px solid #d8dff0;color:#21368b;width:44px;height:44px;padding:0;border-radius:50%;font-size:1.2rem;font-weight:700;line-height:1;cursor:pointer;transition:all .25s ease;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(15,23,42,0.08);user-select:none}.hero__nav svg{display:block;width:18px;height:18px;flex-shrink:0}
+.hero__nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:#ffffff;border:1.5px solid #d8dff0;color:#007DA5;width:44px;height:44px;padding:0;border-radius:50%;font-size:1.2rem;font-weight:700;line-height:1;cursor:pointer;transition:all .25s ease;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(15,23,42,0.08);user-select:none}.hero__nav svg{display:block;width:18px;height:18px;flex-shrink:0}
 .hero__nav:hover{background:#007DA5;color:#ffffff;border-color:#007DA5;transform:translateY(-50%) scale(1.06);box-shadow:0 6px 18px rgba(0,125,165,0.28)}
 .hero__nav--prev{left:1.5rem}
 .hero__nav--next{right:1.5rem}
@@ -2343,7 +2343,7 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
   border-radius: 50% !important;
   border: 1.5px solid #d8dff0 !important;
   background: #ffffff !important;
-  color: #21368b !important;
+  color: #007DA5 !important;
   font-size: 1.2rem !important;
   font-weight: 700 !important;
   cursor: pointer !important;

@@ -7,7 +7,12 @@
   <link rel="shortcut icon" type="image/webp" href="images/logo1x1.webp" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="page-head-title">Chi Tiết Tin Tức | Bệnh viện Quốc tế City</title>
-  <meta name="description" content="Thông tin y khoa chính thức và tin tức sự kiện từ Bệnh viện Quốc tế City – City International Hospital." />
+  <meta name="description" id="meta-desc" content="Thông tin y khoa chính thức và tin tức sự kiện từ Bệnh viện Quốc tế City – City International Hospital." />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Bệnh viện Quốc tế City (CIH)" />
+  <meta property="og:title" id="og-title" content="Bệnh viện Quốc tế City – City International Hospital" />
+  <meta property="og:description" id="og-desc" content="Thông tin y khoa chính thức và tin tức sự kiện từ Bệnh viện Quốc tế City – City International Hospital." />
+  <meta property="og:image" id="og-image" content="https://giautran.me/cih/images/HÌNH ẢNH/Bệnh viện/1.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -389,7 +394,7 @@
           <div style="display: flex; gap: 0.75rem; align-items: center;">
             
             <!-- Facebook Icon -->
-            <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener" title="Chia sẻ qua Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: #fff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, opacity 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <a id="fb-share-btn" href="https://www.facebook.com/sharer/sharer.php" onclick="event.preventDefault(); window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href) + '&quote=' + encodeURIComponent(document.title), '_blank', 'width=640,height=520,noopener,noreferrer');" target="_blank" rel="noopener noreferrer" title="Chia sẻ qua Facebook" style="width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: #fff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, opacity 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
 
@@ -1109,8 +1114,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderNewsDetail(artId) {
     const article = CIH_NEWS_DATA.find(n => n.id === artId) || CIH_NEWS_DATA[0];
 
-    document.getElementById('page-head-title').innerText = formatTitleCase(article.title) + ' | Bệnh viện Quốc tế City';
+    const fullTitle = formatTitleCase(article.title) + ' | Bệnh viện Quốc tế City';
+    document.getElementById('page-head-title').innerText = fullTitle;
     document.getElementById('art-title').innerText = formatTitleCase(article.title);
+    const ogTitleEl = document.getElementById('og-title');
+    if (ogTitleEl) ogTitleEl.setAttribute('content', fullTitle);
+    const fbBtn = document.getElementById('fb-share-btn');
+    if (fbBtn) {
+      fbBtn.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href) + '&quote=' + encodeURIComponent(fullTitle);
+    }
     const bcNewsSpan = document.querySelector('.subpage-hero__breadcrumbs');
     if (bcNewsSpan) {
       bcNewsSpan.innerHTML = `<a href="./" style="color: #555555; font-weight: 600; text-decoration: none;">Trang chủ</a> &nbsp;/&nbsp; <a href="tin-tuc" style="color: #555555; font-weight: 600; text-decoration: none;">Tin tức</a> &nbsp;/&nbsp; <span style="color: #007DA5; font-weight: 700;">${formatTitleCase(article.title)}</span>`;

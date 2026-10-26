@@ -1108,7 +1108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 
 <script src="script.js?v=1792750000"></script>
-<script src="cih_doctors_data.js?v=1793004100"></script>
+<script src="cih_doctors_data.js?v=1793008000"></script>
 <script src="booking_modal.js?v=1793005600"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1312,7 +1312,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const textNorm = normalizeStr(text);
           if (
             (posNorm && (textNorm === posNorm || posNorm.includes(textNorm) || textNorm.includes(posNorm))) ||
-            /^(cố vấn|giám đốc|phó giám đốc|trưởng khoa|phó trưởng khoa|phó khoa)\b/i.test(text)
+            /^(cố vấn|giám đốc|phó giám đốc|trưởng khoa|phó trưởng khoa|phó khoa|trưởng đơn vị|trưởng trung tâm|trưởng phòng)\b/i.test(text)
           ) {
             return;
           }

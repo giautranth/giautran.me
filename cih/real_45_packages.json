@@ -113,7 +113,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Kim cương (nữ có gia đình) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Kim cương dành cho Nữ có gia đình là gói tầm soát toàn diện cao cấp nhất tại CIH, kết hợp kiểm tra chuyên sâu đa cơ quan, tầm soát ung thư phụ khoa – tuyến vú và chẩn đoán hình ảnh kỹ thuật cao.",
     "table": [
       {
         "stt": "1",
@@ -143,7 +143,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Kim cương (nữ độc thân) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Kim cương dành cho Nữ độc thân giúp đánh giá toàn diện chức năng các cơ quan, tầm soát sớm ung thư tuyến vú, tuyến giáp, tiêu hóa, tim mạch và các bệnh lý chuyển hóa chuyên sâu.",
     "table": [
       {
         "stt": "1",
@@ -173,7 +173,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Bạch kim (nam) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Bạch kim dành cho Nam giới được thiết kế chuyên sâu nhằm đánh giá toàn diện hệ tim mạch, hô hấp, tiêu hóa, gan mật và tầm soát sớm các dấu ấn ung thư phổ biến ở nam giới.",
     "table": [
       {
         "stt": "1",
@@ -203,7 +203,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Bạch kim (nữ có gia đình) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Bạch kim dành cho Nữ có gia đình giúp kiểm tra chuyên sâu chức năng toàn thân, kết hợp tầm soát các bệnh lý phụ khoa, tuyến vú, tuyến giáp và các chỉ số ung thư quan trọng ở phụ nữ.",
     "table": [
       {
         "stt": "1",
@@ -233,7 +233,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Bạch kim (nữ độc thân) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Bạch kim dành cho Nữ độc thân cung cấp danh mục kiểm tra chuyên sâu từ xét nghiệm sinh hóa, nội tiết, dấu ấn ung thư đến chẩn đoán hình ảnh nhằm bảo vệ sức khỏe chủ động cho phụ nữ hiện đại.",
     "table": [
       {
         "stt": "1",
@@ -263,7 +263,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói vàng (nam) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Vàng dành cho Nam giới giúp kiểm tra toàn diện các chỉ số huyết học, gan thận, mỡ máu, tim mạch và tầm soát sớm các bệnh lý nội khoa thường gặp ở nam giới.",
     "table": [
       {
         "stt": "1",
@@ -293,7 +293,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói vàng (nữ có gia đình) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Vàng dành cho Nữ có gia đình kết hợp khám nội khoa tổng quát, xét nghiệm chuyên sâu và tầm soát phụ khoa – tuyến vú định kỳ, giúp phát hiện sớm các bất thường về sức khỏe.",
     "table": [
       {
         "stt": "1",
@@ -323,7 +323,7 @@
     "price": "29.990.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói sinh Hoa Khai Phú Quý tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói sinh Hoa Khai Phú Quý mang đến dịch vụ thai sản và vượt cạn đẳng cấp VIP tại CIH với phòng nghỉ dưỡng tiêu chuẩn khách sạn 5 sao, ê-kíp bác sĩ Sản – Nhi đầu ngành và chế độ chăm sóc mẹ và bé toàn diện 24/7.",
     "table": [
       {
         "stt": "1",
@@ -353,7 +353,7 @@
     "price": "29.990.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói sinh Khởi Nguyên Hưng Thịnh tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói sinh Khởi Nguyên Hưng Thịnh được thiết kế trọn gói các dịch vụ đỡ sinh an toàn, giảm đau sản khoa hiện đại cùng chế độ chăm sóc hậu sản chu đáo cho mẹ và bé trong môi trường y tế chuẩn quốc tế AACI.",
     "table": [
       {
         "stt": "1",
@@ -383,7 +383,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám tổng quát trẻ em tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám tổng quát trẻ em giúp theo dõi toàn diện sự phát triển thể chất, dinh dưỡng, thị lực, răng miệng và tầm soát sớm các bệnh lý tiềm ẩn ở trẻ nhỏ theo từng giai đoạn phát triển.",
     "table": [
       {
         "stt": "1",
@@ -413,7 +413,7 @@
     "price": "54.150.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói thai sản Cát Tường (khám thai + sinh) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói thai sản trọn gói Cát Tường (khám thai + sinh) đồng hành cùng mẹ bầu từ những tuần thai đầu tiên đến ngày vượt cạn an toàn, bao gồm đầy đủ lịch khám thai định kỳ, xét nghiệm sàng lọc và dịch vụ sinh trọn gói.",
     "table": [
       {
         "stt": "1",
@@ -491,7 +491,7 @@
     "price": "48.200.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói thai sản Như Ý (khám thai + sinh) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói thai sản trọn gói Như Ý (khám thai + sinh) tích hợp lịch trình theo dõi thai kỳ khoa học và dịch vụ sinh con tiêu chuẩn quốc tế, giúp mẹ bầu an tâm tận hưởng hành trình làm mẹ trọn vẹn.",
     "table": [
       {
         "stt": "1",
@@ -569,7 +569,7 @@
     "price": "2.100.000 đ",
     "category": "Gói tầm soát ung thư",
     "date_note": "Giá gói áp dụng từ 01/07/2024.",
-    "intro": "Gói tầm soát ung thư vú giúp phát hiện sớm các tổn thương tuyến vú, khối u lành tính hoặc ung thư giai đoạn sớm, mang lại hiệu quả điều trị tối ưu cho phụ nữ.",
+    "intro": "Gói tầm soát ung thư vú giúp phát hiện sớm các tổn thương tuyến vú, khối u lành tính hoặc ung thư giai đoạn sớm thông qua siêu âm tuyến vú và chụp nhũ ảnh kỹ thuật số hiện đại.",
     "table": [
       {
         "stt": "1",
@@ -599,7 +599,7 @@
     "price": "1.950.000 đ",
     "category": "Gói tầm soát ung thư",
     "date_note": "Giá gói áp dụng từ 01/07/2024.",
-    "intro": "Gói tầm soát ung thư cổ tử cung ứng dụng các kỹ thuật xét nghiệm sinh học phân tử hiện đại giúp phát hiện sớm vi-rút HPV nguy cơ cao và các biến đổi tế bào bất thường.",
+    "intro": "Gói tầm soát ung thư cổ tử cung ứng dụng các kỹ thuật xét nghiệm tế bào học và sinh học phân tử HPV hiện đại, giúp phát hiện sớm các biến đổi bất thường ở cổ tử cung để điều trị kịp thời.",
     "table": [
       {
         "stt": "1",
@@ -629,7 +629,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám Work Permit tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Work Permit được thiết kế đúng quy chuẩn của Bộ Y tế dành cho người nước ngoài làm việc tại Việt Nam và người Việt Nam đi lao động, định cư hoặc du học nước ngoài.",
     "table": [
       {
         "stt": "1",
@@ -659,7 +659,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát Ung thư dạ dày – đại tràng tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát ung thư dạ dày – đại tràng ứng dụng kỹ thuật nội soi tiêu hóa độ phân giải cao (có gây mê không đau), giúp phát hiện sớm polyp, viêm loét và các tổn thương tiền ung thư đường tiêu hóa.",
     "table": [
       {
         "stt": "1",
@@ -689,7 +689,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát Ung thư đại tràng tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát ung thư đại tràng giúp kiểm tra chuyên sâu toàn bộ khung đại trực tràng bằng nội soi kỹ thuật cao và xét nghiệm dấu ấn ung thư, phát hiện sớm polyp và các khối u đường tiêu hóa dưới.",
     "table": [
       {
         "stt": "1",
@@ -719,7 +719,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát Ung thư dạ dày tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát ung thư dạ dày kết hợp nội soi thực quản – dạ dày – tá tràng công nghệ cao và xét nghiệm vi khuẩn H.Pylori, giúp phát hiện sớm viêm loét và các tổn thương ác tính giai đoạn đầu.",
     "table": [
       {
         "stt": "1",
@@ -749,7 +749,7 @@
     "price": "39.500.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói sinh Cát tường tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói sinh Cát Tường cung cấp dịch vụ vượt cạn an toàn với ê-kíp bác sĩ Sản Phụ khoa giàu kinh nghiệm, phòng sinh hiện đại và chế độ chăm sóc hậu sản tận tâm dành cho mẹ và bé sơ sinh.",
     "table": [
       {
         "stt": "1",
@@ -779,7 +779,7 @@
     "price": "25.100.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói sinh Như ý tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói sinh Như Ý mang đến hành trình vượt cạn nhẹ nhàng, an toàn với đầy đủ dịch vụ đỡ sinh/mổ lấy thai, chăm sóc mẹ sau sinh và sàng lọc – tiêm chủng cơ bản cho bé sơ sinh.",
     "table": [
       {
         "stt": "1",
@@ -809,7 +809,7 @@
     "price": "9.100.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói khám thai (tuần 36-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám thai giai đoạn cuối thai kỳ (tuần 36 – 40) giúp theo dõi sát sao sức khỏe mẹ và thai nhi, đánh giá ngôi thai, tim thai (Monitoring sản khoa) và chuẩn bị sẵn sàng cho cuộc vượt cạn an toàn.",
     "table": [
       {
         "stt": "1",
@@ -919,7 +919,7 @@
     "price": "13.400.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói khám thai (tuần 28-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám thai 3 tháng cuối (tuần 28 – 40) bao gồm đầy đủ các mốc khám thai, siêu âm Doppler màu và xét nghiệm tiền sản quan trọng giúp mẹ bầu theo dõi sự phát triển hoàn thiện của thai nhi trước sinh.",
     "table": [
       {
         "stt": "1",
@@ -1029,7 +1029,7 @@
     "price": "17.300.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói khám thai (tuần 13-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám thai từ tam cá nguyệt thứ hai (tuần 13 – 40) đồng hành cùng mẹ bầu qua các mốc siêu âm hình thái học 4D, xét nghiệm dung nạp đường huyết và theo dõi sức khỏe thai kỳ toàn diện đến khi sinh.",
     "table": [
       {
         "stt": "1",
@@ -1151,7 +1151,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Bạc tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe tổng quát Bạc cung cấp các danh mục kiểm tra thiết yếu về huyết học, chức năng gan thận, đường huyết, mỡ máu và chẩn đoán hình ảnh cơ bản giúp đánh giá sức khỏe định kỳ hiệu quả.",
     "table": [
       {
         "stt": "1",
@@ -1181,7 +1181,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Bạch Kim (Nữ có gia đình) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Bạch Kim (Nữ có gia đình) được thiết kế chuyên biệt cho phụ nữ đã lập gia đình, tích hợp tầm soát chuyên sâu nội khoa, phụ khoa, tuyến vú, tuyến giáp và các dấu ấn ung thư phổ biến.",
     "table": [
       {
         "stt": "1",
@@ -1211,7 +1211,7 @@
     "price": "1.422.000 đ",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng từ 01/7/2024.",
-    "intro": "Khám sức khỏe lái xe là thủ tục bắt buộc trước khi bạn muốn học lái xe máy, xe ô tô và thi bằng lái tất cả các hạng (A1, A2, B1, B2, C, D...). Tại Bệnh viện Quốc tế City (CIH) có cung cấp dịch vụ này với sự thuận tiện, nhanh chóng và chuẩn xác.",
+    "intro": "Gói khám sức khỏe lái xe đáp ứng đầy đủ quy chuẩn khám sức khỏe định kỳ và cấp mới/đổi giấy phép lái xe các hạng (A1, A2, B1, B2, C, D...) với quy trình nhanh chóng, thuận tiện và chính xác tại CIH.",
     "table": [
       {
         "stt": "1",
@@ -1257,7 +1257,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát cột sống Thắt lưng – Nâng cao tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát cột sống thắt lưng – Nâng cao kết hợp khám chuyên khoa Ngoại Thần kinh – Cột sống và chụp cộng hưởng từ (MRI) chuyên sâu, giúp chẩn đoán chính xác thoát vị đĩa đệm, thoái hóa và chèn ép rễ thần kinh.",
     "table": [
       {
         "stt": "1",
@@ -1287,7 +1287,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát cột sống Thắt lưng – Cơ bản tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát cột sống thắt lưng – Cơ bản giúp phát hiện sớm các nguyên nhân gây đau lưng mạn tính, thoái hóa cột sống, gai cột sống và rối loạn cơ xương khớp vùng thắt lưng.",
     "table": [
       {
         "stt": "1",
@@ -1317,7 +1317,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát cột sống Cổ – Nâng Cao tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát cột sống cổ – Nâng cao sử dụng hệ thống chẩn đoán hình ảnh MRI/X-quang hiện đại giúp đánh giá chi tiết tình trạng thoái hóa đốt sống cổ, thoát vị đĩa đệm và hội chứng đau mỏi cổ vai gáy.",
     "table": [
       {
         "stt": "1",
@@ -1347,7 +1347,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói vàng (nữ độc thân) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe Vàng dành cho Nữ độc thân giúp đánh giá toàn diện sức khỏe nội khoa, chức năng gan thận, tim mạch, tuyến giáp, tuyến vú và tầm soát các nguy cơ bệnh lý tiềm ẩn ở phụ nữ.",
     "table": [
       {
         "stt": "1",
@@ -1377,7 +1377,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát dị ứng cho trẻ em và người lớn tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát dị ứng cho trẻ em và người lớn thực hiện xét nghiệm định lượng kháng thể IgE đặc hiệu với hàng chục dị nguyên hô hấp và thực phẩm, giúp xác định chính xác nguyên nhân gây dị ứng.",
     "table": [
       {
         "stt": "1",
@@ -1407,7 +1407,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát (Gói vàng <40T) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe tổng quát Vàng (dành cho khách hàng dưới 40 tuổi) giúp kiểm tra toàn diện các chỉ số sức khỏe nền tảng, tầm soát sớm rối loạn chuyển hóa, gan mật, tim mạch và chức năng các cơ quan.",
     "table": [
       {
         "stt": "1",
@@ -1437,7 +1437,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát ung thư Tai Mũi Họng tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát ung thư Tai Mũi Họng ứng dụng nội soi tai mũi họng ống mềm/ống cứng độ phân giải cao kết hợp xét nghiệm chuyên sâu, giúp phát hiện sớm ung thư vòm họng và các bệnh lý vùng đầu cổ.",
     "table": [
       {
         "stt": "1",
@@ -1467,7 +1467,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tiêm chủng 13 – 24 tháng tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tiêm chủng cho trẻ từ 13 – 24 tháng tuổi cung cấp đầy đủ các mũi vắc-xin nhắc lại và vắc-xin phòng bệnh truyền nhiễm quan trọng, nguồn vắc-xin chất lượng cao được bảo quản theo chuẩn quốc tế.",
     "table": [
       {
         "stt": "1",
@@ -1497,7 +1497,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát cột sống Cổ – Cơ bản tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát cột sống cổ – Cơ bản giúp kiểm tra và phát hiện sớm tình trạng thoái hóa đốt sống cổ, co thắt cơ vùng cổ vai gáy, đặc biệt phù hợp với nhân viên văn phòng và người làm việc máy tính nhiều.",
     "table": [
       {
         "stt": "1",
@@ -1527,7 +1527,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát mắt trẻ em tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát mắt trẻ em giúp kiểm tra chuyên sâu thị lực, phát hiện sớm các tật khúc xạ học đường (cận thị, viễn thị, loạn thị), nhược thị và các bệnh lý nhãn khoa ở trẻ nhỏ.",
     "table": [
       {
         "stt": "1",
@@ -1557,7 +1557,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát mắt Người lớn tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát mắt người lớn giúp đánh giá toàn diện chức năng thị giác, đo nhãn áp, soi đáy mắt và phát hiện sớm đục thủy tinh thể, glôcôm (cườm nước) cũng như các bệnh lý võng mạc.",
     "table": [
       {
         "stt": "1",
@@ -1587,7 +1587,7 @@
     "price": "5.894.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói khám trước mang thai tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe tiền hôn nhân và trước khi mang thai giúp đánh giá sức khỏe sinh sản, sàng lọc các bệnh lý di truyền, truyền nhiễm và chuẩn bị nền tảng thể chất tốt nhất cho hành trình đón bé yêu.",
     "table": [
       {
         "stt": "1",
@@ -1729,7 +1729,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tiêm chủng 0 – 12 tháng tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tiêm chủng trọn gói cho bé từ 0 – 12 tháng tuổi bao gồm đầy đủ các loại vắc-xin thiết yếu trong năm đầu đời, giúp bé xây dựng hệ miễn dịch vững vàng dưới sự theo dõi của bác sĩ Nhi khoa.",
     "table": [
       {
         "stt": "1",
@@ -1759,7 +1759,7 @@
     "price": "4.500.000 đ",
     "category": "Gói tầm soát đột quỵ",
     "date_note": "Giá gói áp dụng từ 01/07/2024.",
-    "intro": "Gói tầm soát đột quỵ tiêu chuẩn giúp đánh giá tình trạng xơ vữa mạch máu, nguy cơ nghẽn mạch não và các yếu tố nguy cơ tim mạch ở người lớn tuổi hoặc người có tiền sử huyết áp.",
+    "intro": "Gói tầm soát đột quỵ tiêu chuẩn giúp đánh giá tình trạng xơ vữa mạch máu, nguy cơ nghẽn mạch não và các yếu tố nguy cơ tim mạch ở người lớn tuổi hoặc người có tiền sử tăng huyết áp, đái tháo đường.",
     "table": [
       {
         "stt": "1",
@@ -1793,7 +1793,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói tầm soát y tế",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói tầm soát đột quỵ – Cao cấp tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói tầm soát đột quỵ cao cấp ứng dụng chụp cộng hưởng từ (MRI/MRA) sọ não – mạch máu não kết hợp siêu âm tim mạch và xét nghiệm chuyên sâu, giúp phát hiện sớm dị dạng mạch máu não và nguy cơ đột quỵ.",
     "table": [
       {
         "stt": "1",
@@ -1823,7 +1823,7 @@
     "price": "24.900.000 đ",
     "category": "Gói thai sản & Sinh sản",
     "date_note": "Lưu ý: Giá có thể được điều chỉnh theo thực tế. Bảng giá có thể thay đổi mà không cần báo trước.",
-    "intro": "Dịch vụ Gói khám thai (tuần 7-40) tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ Sản Phụ khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám thai toàn diện từ tuần 7 – 40 đồng hành xuyên suốt 3 tam cá nguyệt với đầy đủ các mốc khám thai, siêu âm 4D hình thái học và xét nghiệm sàng lọc trước sinh chuẩn quốc tế.",
     "table": [
       {
         "stt": "1",
@@ -2013,7 +2013,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Khám tổng quát – Gói Tiêu Chuẩn tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe tổng quát Tiêu chuẩn giúp kiểm tra định kỳ các chỉ số huyết học, sinh hóa gan thận, tim mạch, hô hấp và siêu âm tổng quát, phát hiện sớm các vấn đề sức khỏe thường gặp.",
     "table": [
       {
         "stt": "1",
@@ -2043,7 +2043,7 @@
     "price": "Liên hệ báo giá",
     "category": "Gói khám tổng quát",
     "date_note": "Giá gói áp dụng theo niêm yết hiện hành của Bệnh viện.",
-    "intro": "Dịch vụ Gói khám sức khỏe công ty tại Bệnh viện Quốc tế City (CIH) được thiết kế chuyên sâu bởi đội ngũ bác sĩ chuyên khoa giàu kinh nghiệm, đáp ứng chuẩn mực y tế quốc tế AACI.",
+    "intro": "Gói khám sức khỏe doanh nghiệp (Corporate Health Check-up) được thiết kế linh hoạt theo đặc thù ngành nghề và ngân sách của từng công ty, giúp doanh nghiệp chăm sóc toàn diện sức khỏe đội ngũ nhân sự.",
     "table": [
       {
         "stt": "1",

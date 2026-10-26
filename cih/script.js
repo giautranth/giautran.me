@@ -695,6 +695,13 @@ const CIH_AWARDS_DATA = {
     badge: 'Giải thưởng Quốc tế',
     desc: 'Danh hiệu danh giá này được xét duyệt dựa trên những tiêu chí khắt khe như chất lượng dịch vụ, uy tín thương hiệu, hệ thống quản lý chất lượng và các giá trị đóng góp cho cộng đồng. Đây là một bước tiến quan trọng, đánh dấu vị thế ngày càng vững chắc của Bệnh viện Quốc tế City trên bản đồ y tế khu vực, khẳng định chiến lược phát triển bền vững và tầm nhìn hội nhập quốc tế.'
   },
+  'pioneer-2025': {
+    img: 'images/Website/giai-thuong/gt_doanh_nghiep_tien_phong.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/gt_doanh_nghiep_tien_phong.webp?v=20261026',
+    title: 'Giải thưởng “Doanh nghiệp Tiên phong” – Top 100 International Business Style Awards 2025',
+    badge: 'Giải thưởng Quốc tế',
+    desc: 'Ngày 11/12/2025, Bệnh viện Quốc tế City tự hào ghi dấu ấn tại Lễ vinh danh Top 100 International Business Style Awards 2025, nhận giải thưởng “Doanh nghiệp Tiên phong” – minh chứng cho những nỗ lực không ngừng trong việc nâng tầm chất lượng chăm sóc sức khỏe cho cộng đồng.'
+  },
   'green-hospital': {
     img: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
     logo: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
@@ -717,7 +724,8 @@ const DEFAULT_AWARD_KEYS = [
   'asia',
   'healthcare-asia',
   'top10ivf',
-  'green-hospital'
+  'green-hospital',
+  'pioneer-2025'
 ];
 
 function getPageAwardKeys() {

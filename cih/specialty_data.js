@@ -385,7 +385,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-thi-hong-cam",
         "name": "BS.CKII. Nguyễn Thị Hồng Cẩm",
         "title": "Chuyên khoa Tim mạch Nhi",
-        "img": "https://cih.com.vn/wp-content/uploads/2024/09/bs-ckii-nguyen-thi-hong-cam_66f8da21dcf11-png.avif"
+        "img": "images/ext_webp/bs-ckii-nguyen-thi-hong-cam.webp?v=2"
       },
       {
         "slug": "bs-ckii-duong-thi-kim-cuc",
@@ -490,7 +490,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-thi-hong-cam",
         "name": "BS.CKII. Nguyễn Thị Hồng Cẩm",
         "title": "Chuyên khoa Tim mạch Nhi",
-        "img": "https://cih.com.vn/wp-content/uploads/2024/09/bs-ckii-nguyen-thi-hong-cam_66f8da21dcf11-png.avif"
+        "img": "images/ext_webp/bs-ckii-nguyen-thi-hong-cam.webp?v=2"
       },
       {
         "slug": "bs-ckii-duong-thi-kim-cuc",
@@ -1110,7 +1110,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-thi-hong-cam",
         "name": "BS.CKII. Nguyễn Thị Hồng Cẩm",
         "title": "Chuyên khoa Tim mạch Nhi",
-        "img": "https://cih.com.vn/wp-content/uploads/2024/09/bs-ckii-nguyen-thi-hong-cam_66f8da21dcf11-png.avif"
+        "img": "images/ext_webp/bs-ckii-nguyen-thi-hong-cam.webp?v=2"
       },
       {
         "slug": "bs-ckii-nguyen-ngoc-quynh-dung",
@@ -2750,7 +2750,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-thi-hong-cam",
         "name": "BS.CKII. Nguyễn Thị Hồng Cẩm",
         "title": "Chuyên khoa Tim mạch Nhi",
-        "img": "https://cih.com.vn/wp-content/uploads/2024/09/bs-ckii-nguyen-thi-hong-cam_66f8da21dcf11-png.avif"
+        "img": "images/ext_webp/bs-ckii-nguyen-thi-hong-cam.webp?v=2"
       },
       {
         "slug": "bs-ckii-nguyen-bao-hoa",

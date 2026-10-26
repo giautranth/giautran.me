@@ -240,7 +240,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "thac-si-dang-truong-son",
         "name": "Thạc sĩ Đặng Trường Sơn",
         "title": "Phó trưởng Trung tâm Hỗ trợ sinh sản",
-        "img": "images/ext_webp/44-768x768_09638f5d.webp"
+        "img": "images/ext_webp/44-768x768_09638f5d.webp?v=2"
       },
       {
         "slug": "bs-ckii-cu-thi-kim-loan",

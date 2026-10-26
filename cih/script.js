@@ -713,7 +713,6 @@ window.openAwardModal = function(key) {
         <div class="award-modal__img-box" id="award-modal-img-wrap">
           <img id="award-modal-img" src="" alt="" />
         </div>
-        <div id="award-modal-badge" class="award-modal__badge">🏆 Chứng nhận Quốc tế</div>
         <h3 class="award-modal__title" id="award-modal-title"></h3>
         <p class="award-modal__desc" id="award-modal-desc"></p>
       </div>

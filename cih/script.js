@@ -42,6 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── HERO SLIDER ── */
   const slides = document.querySelectorAll('.hero__slide');
+  const dotsWrap = document.getElementById('hero-dots') || document.querySelector('.hero__dots');
+  if (dotsWrap && slides.length > 0 && dotsWrap.querySelectorAll('.hero__dot').length !== slides.length) {
+    dotsWrap.innerHTML = Array.from(slides).map((_, i) =>
+      `<button type="button" class="hero__dot${i === 0 ? ' hero__dot--active' : ''}" aria-label="Banner ${i + 1}"></button>`
+    ).join('');
+  }
   const dots   = document.querySelectorAll('.hero__dot');
   let current  = 0;
   let autoTimer;

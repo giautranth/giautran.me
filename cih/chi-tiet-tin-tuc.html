@@ -932,7 +932,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const artId = parseInt(params.get('id')) || 9;
 
-    fetch('real_45_packages.json?v=1793001600')
+    fetch('real_45_packages.json?v=1793006900')
       .then(res => res.json())
       .then(packagesData => {
         const foundPackage = packagesData.find(p => p.id === artId);
@@ -974,8 +974,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <div>
           <h1 style="font-size: clamp(1.4rem, 2.5vw, 1.85rem); font-weight: 800; line-height: 1.35; color: #007DA5; margin: 0 0 0.85rem 0;">${formatTitleCase(pkg.title)}</h1>
           
-          <div style="font-size: 2rem; font-weight: 800; color: #dc2626; margin-bottom: 0.25rem;">${pkg.price || 'Liên hệ'}</div>
-          <div style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 1rem;">${pkg.date_note || 'Giá gói áp dụng theo niêm yết hiện hành.'}</div>
+          <div style="font-size: 2rem; font-weight: 800; color: #dc2626; margin-bottom: ${(pkg.date_note && !pkg.date_note.includes('niêm yết hiện hành')) ? '0.25rem' : '0.85rem'};">${pkg.price || 'Liên hệ'}</div>
+          ${(pkg.date_note && !pkg.date_note.includes('niêm yết hiện hành')) ? `<div style="font-size: 0.875rem; color: #64748b; font-style: italic; margin-bottom: 1rem;">${pkg.date_note}</div>` : ''}
           ${pkg.intro ? `<p style="font-size: 0.98rem; line-height: 1.7; color: #334155; margin: 0 0 1.35rem 0;">${pkg.intro}</p>` : ''}
           <a href="#pkg-consult-box" onclick="event.preventDefault(); document.getElementById('pkg-consult-box').scrollIntoView({behavior:'smooth', block:'center'});" style="display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #007DA5 0%, #005f80 100%); color: #ffffff; font-weight: 700; font-size: 0.82rem; padding: 0.55rem 1.15rem; border-radius: 99px; text-decoration: none; box-shadow: 0 4px 12px rgba(0, 125, 165, 0.22); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
             <span>ĐĂNG KÝ TƯ VẤN</span>

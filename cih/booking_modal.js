@@ -523,6 +523,15 @@
         maxDate: 'today',
         allowInput: true
       });
+
+      if (document.getElementById('doc-book-date')) {
+        flatpickr('#doc-book-date', {
+          locale: flatpickrVN,
+          dateFormat: 'd/m/Y',
+          minDate: 'today',
+          allowInput: true
+        });
+      }
     }
   }
 

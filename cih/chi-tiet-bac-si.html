@@ -539,7 +539,7 @@
         <!-- Cột phải: Form Đặt lịch khám cố định (Sticky) -->
         <aside id="doc-booking-box" class="doc-booking-sticky">
           <h3 class="doc-booking-sticky__title">
-            <span>ĐĂNG KÝ KHÁM BỆNH</span>
+            <span>ĐẶT LỊCH KHÁM</span>
           </h3>
 
           <form id="doc-direct-booking-form" onsubmit="event.preventDefault(); document.getElementById('doc-book-success').style.display='block'; this.reset();">
@@ -555,7 +555,12 @@
 
             <div class="doc-form-group">
               <label class="doc-form-label" for="doc-book-date">Ngày khám</label>
-              <input type="date" id="doc-book-date" class="doc-form-input" />
+              <div style="position: relative;">
+                <input type="text" id="doc-book-date" class="doc-form-input" placeholder="ngày / tháng / năm" style="padding-right: 2.4rem; cursor: pointer;" />
+                <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: #64748b; pointer-events: none; display: flex; align-items: center;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </span>
+              </div>
             </div>
 
             <div class="doc-form-group">
@@ -563,7 +568,7 @@
               <textarea id="doc-book-note" rows="3" class="doc-form-input"></textarea>
             </div>
 
-            <button type="submit" class="doc-form-submit">Gửi đăng ký khám</button>
+            <button type="submit" class="doc-form-submit">GỬI</button>
 
             <div id="doc-book-success" style="display: none; margin-top: 0.9rem; padding: 0.75rem 1rem; background: #dcfce7; border: 1px solid #86efac; color: #166534; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-align: center; line-height: 1.5;">
               ✅ Đã ghi nhận yêu cầu đặt lịch khám! Bộ phận CSKH CIH sẽ liên hệ xác nhận với Quý khách sớm nhất.
@@ -1329,7 +1334,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<script src="booking_modal.js?v=1792770000"></script>
+<script src="booking_modal.js?v=1792989400"></script>
 <div id="google_translate_element" style="display:none"></div>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>

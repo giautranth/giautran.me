@@ -286,11 +286,13 @@
       box-shadow: 0 12px 30px -6px rgba(0, 125, 165, 0.12);
     }
     .doc-booking-sticky__title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 800;
       color: #007DA5;
       text-transform: uppercase;
-      margin: 0 0 0.25rem 0;
+      margin: 0 0 1rem 0;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #dbeafe;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -534,29 +536,28 @@
         <!-- Cột phải: Form Đặt lịch khám cố định (Sticky) -->
         <aside id="doc-booking-box" class="doc-booking-sticky">
           <h3 class="doc-booking-sticky__title">
-            <span>📅 Đặt lịch khám với Bác sĩ</span>
+            <span>ĐĂNG KÝ KHÁM BỆNH</span>
           </h3>
-          <div id="doc-form-doctor-name" class="doc-booking-sticky__sub">Bệnh viện Quốc tế City</div>
 
           <form id="doc-direct-booking-form" onsubmit="event.preventDefault(); document.getElementById('doc-book-success').style.display='block'; this.reset();">
             <div class="doc-form-group">
-              <label class="doc-form-label" for="doc-book-name">Họ và tên <span style="color:#dc2626">*</span></label>
-              <input type="text" id="doc-book-name" class="doc-form-input" required placeholder="Nhập họ và tên của bạn..." />
+              <label class="doc-form-label" for="doc-book-name">Họ tên <span style="color:#dc2626">*</span></label>
+              <input type="text" id="doc-book-name" class="doc-form-input" required />
             </div>
 
             <div class="doc-form-group">
               <label class="doc-form-label" for="doc-book-phone">Số điện thoại <span style="color:#dc2626">*</span></label>
-              <input type="tel" id="doc-book-phone" class="doc-form-input" required pattern="[0-9+\s\.\-]{8,15}" placeholder="Nhập số điện thoại liên hệ..." />
+              <input type="tel" id="doc-book-phone" class="doc-form-input" required pattern="[0-9+\s\.\-]{8,15}" />
             </div>
 
             <div class="doc-form-group">
-              <label class="doc-form-label" for="doc-book-date">Ngày khám dự kiến</label>
+              <label class="doc-form-label" for="doc-book-date">Ngày khám</label>
               <input type="date" id="doc-book-date" class="doc-form-input" />
             </div>
 
             <div class="doc-form-group">
               <label class="doc-form-label" for="doc-book-note">Ghi chú triệu chứng / nhu cầu khám</label>
-              <textarea id="doc-book-note" rows="3" class="doc-form-input" placeholder="Nhập triệu chứng, câu hỏi hoặc khung giờ mong muốn..."></textarea>
+              <textarea id="doc-book-note" rows="3" class="doc-form-input"></textarea>
             </div>
 
             <button type="submit" class="doc-form-submit">Gửi đăng ký khám</button>

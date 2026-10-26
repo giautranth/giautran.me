@@ -3306,4 +3306,12 @@ section#doi-tac-bao-hiem.section.insurance-section {
     margin-top: 3px !important;
     letter-spacing: 0.02em !important;
   }
+
+  /* Filter bar trên mobile xếp 1 cột dọc gọn đẹp */
+  .filter-bar {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1.15rem 1rem !important;
+    margin-bottom: 1.75rem !important;
+  }
 }

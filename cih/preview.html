@@ -491,7 +491,7 @@
     <div class="stitch-controls">
       <div class="stitch-device-group">
         <!-- Desktop Icon -->
-        <button class="stitch-icon-btn" data-mode="desktop" title="Giao diện Máy tính (1440px)">
+        <button class="stitch-icon-btn active" data-mode="desktop" title="Giao diện Máy tính (1440px)">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="8" y1="21" x2="16" y2="21"></line>
@@ -508,7 +508,7 @@
         </button>
 
         <!-- Tablet Icon -->
-        <button class="stitch-icon-btn active" data-mode="tablet" title="Giao diện Máy tính bảng (820px)">
+        <button class="stitch-icon-btn" data-mode="tablet" title="Giao diện Máy tính bảng (820px)">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
             <line x1="12" y1="18" x2="12.01" y2="18"></line>
@@ -516,7 +516,7 @@
         </button>
       </div>
 
-      <span class="stitch-dim-badge" id="dim-label">Tablet • 820px</span>
+      <span class="stitch-dim-badge" id="dim-label">Desktop • 1440px</span>
 
       <div class="stitch-divider"></div>
 
@@ -565,7 +565,7 @@
 
   <!-- ═══ DOTTED PREVIEW CANVAS ═══ -->
   <main class="stitch-canvas">
-    <div class="device-bezel" id="device-bezel" data-device="tablet">
+    <div class="device-bezel" id="device-bezel" data-device="desktop">
       <iframe id="preview-iframe" class="device-iframe" src="./" title="CIH Responsive Preview"></iframe>
     </div>
   </main>
@@ -637,7 +637,7 @@
       }
 
       function setDevice(mode) {
-        if (!LABELS[mode]) mode = 'tablet';
+        if (!LABELS[mode]) mode = 'desktop';
         bezel.setAttribute('data-device', mode);
         dimLabel.textContent = LABELS[mode];
         modeBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === mode));
@@ -676,19 +676,16 @@
         });
       });
 
-      // Init from URL params if present
+      // Init from URL params if present, defaulting to page='./' and device='desktop'
       const params = new URLSearchParams(window.location.search);
-      const initPage = params.get('page');
-      const initDevice = params.get('device');
+      const initPage = params.get('page') || './';
+      const initDevice = params.get('device') || 'desktop';
 
-      if (initPage) {
-        syncDropdownUI(initPage);
+      syncDropdownUI(initPage);
+      if (initPage !== './') {
         iframe.src = initPage;
       }
-
-      if (initDevice && LABELS[initDevice]) {
-        setDevice(initDevice);
-      }
+      setDevice(initDevice);
 
       // Event listeners
       modeBtns.forEach(btn => {

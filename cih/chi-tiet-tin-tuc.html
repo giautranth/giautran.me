@@ -117,6 +117,16 @@
       text-align: right !important;
       transition: color 0.2s ease, transform 0.2s ease;
     }
+    #pkg-related-grid .pkg-card__cat {
+      font-size: 0.7rem !important;
+      font-weight: 700 !important;
+      color: #C59A3F !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      margin: 0 0 4px 0 !important;
+      text-align: left !important;
+      width: 100% !important;
+    }
     #pkg-related-grid .related-news-card__title {
       margin: 0 0 0.35rem 0 !important;
       min-height: 0 !important;
@@ -1075,6 +1085,27 @@ document.addEventListener('DOMContentLoaded', () => {
       return stripped.replace(/(\([^)]+\))/g, '<span style="display:inline-block">$1</span>');
     }
 
+    function getPkgCategoryName(pkgObj) {
+      const title = ((pkgObj && pkgObj.title) || '').toLowerCase().trim();
+      if (
+        title.includes('thai sản') ||
+        title.includes('gói sinh') ||
+        title.includes('khám thai') ||
+        title.includes('mang thai') ||
+        title.includes('ung thư vú') ||
+        title.includes('cổ tử cung')
+      ) return 'Khoa Phụ Sản';
+      if (title.includes('tiêm chủng')) return 'Trung Tâm Tiêm Chủng';
+      if (title.includes('mắt')) return 'Khoa Mắt';
+      if (title.includes('dị ứng') || title.includes('da liễu')) return 'Khoa Da Liễu';
+      if (title.includes('trẻ em')) return 'Khoa Nhi';
+      if (title.includes('dạ dày') || title.includes('đại tràng') || title.includes('tiêu hóa')) return 'Trung Tâm Tiêu hóa – Nội soi';
+      if (title.includes('cột sống') || title.includes('thắt lưng') || title.includes('chấn thương') || title.includes('chỉnh hình')) return 'Khoa Chấn Thương Chỉnh Hình';
+      if (title.includes('đột quỵ') || title.includes('tim mạch') || title.includes('thần kinh')) return 'Khoa Thần Kinh – Tim mạch';
+      if (title.includes('tai mũi họng')) return 'Trung tâm Tai Mũi Họng';
+      return 'Khoa Khám Tổng Quát (EHS)';
+    }
+
     function renderRelatedPackages() {
       const pkgGrid = document.getElementById('pkg-related-grid');
       if (!pkgGrid || otherPackages.length === 0) return;
@@ -1090,6 +1121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="${rel.image}" alt="${formatTitleCase(rel.title)}" class="related-news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'" loading="lazy" />
           </a>
           <div class="related-news-card__body">
+            <p class="pkg-card__cat">${getPkgCategoryName(rel)}</p>
             <h4 class="related-news-card__title" style="margin: 0 0 0.35rem 0 !important; min-height: 0 !important;">
               <a href="chi-tiet-tin-tuc?id=${rel.id}">${formatPkgRelatedTitle(rel.title)}</a>
             </h4>

@@ -535,11 +535,33 @@
         return specs;
       }
 
+      function formatPkgCardTitleHtml(title) {
+        if (!title) return '';
+        const t = title.trim();
+        const exactMap = {
+          'gói thai sản cát tường (khám thai + sinh)': 'Gói thai sản Cát Tường<br>(khám thai + sinh)',
+          'gói thai sản như ý (khám thai + sinh)': 'Gói thai sản Như Ý<br>(khám thai + sinh)',
+          'gói tầm soát ung thư dạ dày – đại tràng': 'Gói tầm soát Ung thư<br>dạ dày – đại tràng',
+          'gói tầm soát cột sống thắt lưng – nâng cao': 'Gói tầm soát cột sống<br>Thắt lưng – Nâng cao',
+          'gói tầm soát cột sống thắt lưng – cơ bản': 'Gói tầm soát cột sống<br>Thắt lưng – Cơ bản',
+          'gói tầm soát cột sống cổ – nâng cao': 'Gói tầm soát cột sống<br>Cổ – Nâng Cao',
+          'gói tầm soát cột sống cổ – cơ bản': 'Gói tầm soát cột sống<br>Cổ – Cơ bản',
+          'gói tầm soát dị ứng cho trẻ em và người lớn': 'Gói tầm soát dị ứng<br>cho trẻ em và người lớn',
+          'gói tầm soát ung thư tai mũi họng': 'Gói tầm soát ung thư<br>Tai Mũi Họng',
+          'gói tầm soát đột quỵ – tiêu chuẩn': 'Gói tầm soát<br>đột quỵ – Tiêu chuẩn'
+        };
+        const lower = t.toLowerCase();
+        if (exactMap[lower]) return exactMap[lower];
+        // Wrap parentheticals so they move as a whole unit to line 2 if wrapped
+        return t.replace(/(\([^)]+\))/g, '<span style="display:inline-block">$1</span>');
+      }
+
       function getPkgCatAndTitle(pkg) {
         const rawTitle = (pkg && pkg.title) ? pkg.title.trim() : '';
-        const cleanTitle = /^khám tổng quát\s*[–-]\s*/i.test(rawTitle)
+        const strippedTitle = /^khám tổng quát\s*[–-]\s*/i.test(rawTitle)
           ? rawTitle.split(/\s*[–-]\s*/).slice(1).join(' – ')
           : rawTitle;
+        const cleanTitle = formatPkgCardTitleHtml(strippedTitle);
 
         const specs = getPackageSpecialties(pkg);
         let cat = 'Khoa Khám Tổng Quát (EHS)';

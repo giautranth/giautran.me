@@ -245,14 +245,24 @@
     .ta-sec-body p {
       margin-bottom: 0.85rem;
     }
-    .ta-sec-body ul,
+    .ta-sec-body ul {
+      list-style: disc outside !important;
+      padding-left: 1.45rem !important;
+      margin-bottom: 0.85rem;
+    }
     .ta-sec-body ol {
-      padding-left: 1.4rem;
+      list-style: decimal outside !important;
+      padding-left: 1.45rem !important;
       margin-bottom: 0.85rem;
     }
     .ta-sec-body li {
-      margin-bottom: 0.45rem;
+      display: list-item !important;
+      list-style: inherit !important;
+      margin-bottom: 0.5rem;
       line-height: 1.75;
+    }
+    .ta-sec-body li::marker {
+      color: #334155;
     }
     .ta-sec-body table {
       width: 100%;
@@ -1247,7 +1257,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
       docContentEl.innerHTML = sections.map((sec, idx) => {
         const bodyDiv = document.createElement('div');
-        sec.nodes.forEach(n => bodyDiv.appendChild(n));
+        const secLower = sec.title.toLowerCase();
+        const isListSection = secLower.includes('đào tạo') || secLower.includes('bằng cấp') || secLower.includes('công tác') || secLower.includes('kinh nghiệm') || secLower.includes('chứng chỉ') || secLower.includes('thành tích') || secLower.includes('nghiên cứu') || secLower.includes('tổ chức');
+        let pendingUl = null;
+        sec.nodes.forEach(n => {
+          const tag = n.tagName ? n.tagName.toLowerCase() : '';
+          if (tag === 'p' && (isListSection || /^[•\-\+]\s+/.test((n.textContent || '').trim()))) {
+            if (!pendingUl) {
+              pendingUl = document.createElement('ul');
+              bodyDiv.appendChild(pendingUl);
+            }
+            const li = document.createElement('li');
+            li.innerHTML = n.innerHTML.replace(/^\s*[•\-\+]\s+/, '');
+            pendingUl.appendChild(li);
+          } else {
+            pendingUl = null;
+            bodyDiv.appendChild(n);
+          }
+        });
         return `
           <section class="ta-sec-block" id="ta-sec-${idx}">
             <div class="ta-sec-header" onclick="toggleDocSec(this)">

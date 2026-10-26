@@ -289,27 +289,27 @@
       transform: scale(1.15);
       color: #f59e0b;
     }
-    /* 🏆 OPTION 1 (NỀN TRẮNG - DÃY VÀNG THUẦN KHIẾT): FEATURED AACI SHOWCASE */
+    /* 🏆 OPTION 1 (NỀN TRẮNG - VÀNG NHẸ NHÀNG & HIỆU ỨNG CHỨNG NHẬN + HUY CHƯƠNG) */
     .aaci-opt1-hero {
       position: relative;
-      border-radius: 26px;
+      border-radius: 24px;
       overflow: hidden;
       background: #ffffff;
-      padding: 44px 52px 62px;
+      padding: 42px 50px 52px;
       margin-bottom: 2.25rem;
       display: grid;
       grid-template-columns: 1.25fr 0.95fr;
       gap: 40px;
       align-items: center;
-      border: 2px solid #fde68a;
-      box-shadow: 0 20px 48px rgba(217, 119, 6, 0.12);
+      border: 1.5px solid #fde68a;
+      box-shadow: 0 12px 32px -4px rgba(217, 119, 6, 0.08);
       cursor: pointer;
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
     }
     .aaci-opt1-hero:hover {
       transform: translateY(-4px);
-      box-shadow: 0 26px 56px rgba(217, 119, 6, 0.2);
-      border-color: #f59e0b;
+      box-shadow: 0 22px 48px -6px rgba(217, 119, 6, 0.15);
+      border-color: #fcd34d;
     }
     .aaci-opt1-hero::before {
       content: '';
@@ -317,38 +317,30 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, #b45309 0%, #f59e0b 25%, #fde047 50%, #f59e0b 75%, #b45309 100%);
+      height: 3.5px;
+      background: linear-gradient(90deg, #fcd34d 0%, #fde68a 35%, #fef9c3 70%, #fde68a 100%);
       z-index: 5;
     }
     .aaci-opt1-left {
       position: relative;
       z-index: 4;
     }
-    .aaci-opt1-eyebrow {
-      color: #b45309;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
     .aaci-opt1-title {
       font-size: 1.62rem;
       font-weight: 900;
-      line-height: 1.34;
+      line-height: 1.35;
       color: #111827;
       margin: 0 0 16px 0;
       text-transform: uppercase;
     }
     .aaci-opt1-ribbon {
       display: inline-block;
-      background: linear-gradient(90deg, #fef3c7 0%, #fde68a 50%, #fef3c7 100%);
-      border: 1px solid #f59e0b;
+      background: linear-gradient(90deg, #fffdf5 0%, #fef9c3 50%, #fffdf5 100%);
+      border: 1px solid #fde68a;
       color: #92400e;
       font-weight: 800;
-      font-size: 0.86rem;
-      padding: 8px 24px;
+      font-size: 0.84rem;
+      padding: 8px 22px;
       margin-bottom: 18px;
       border-radius: 8px;
       letter-spacing: 0.4px;
@@ -366,15 +358,19 @@
       gap: 12px;
     }
     .aaci-opt1-meta-item {
-      background: #fffdf7;
-      border: 1px solid #fde68a;
-      border-top: 3px solid #f59e0b;
+      background: #fffef9;
+      border: 1px solid #fef08a;
+      border-top: 2.5px solid #fde68a;
       border-radius: 10px;
       padding: 10px 14px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+    .aaci-opt1-hero:hover .aaci-opt1-meta-item {
+      border-top-color: #fcd34d;
     }
     .aaci-opt1-meta-label {
       font-size: 0.7rem;
-      color: #475569;
+      color: #64748b;
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 2px;
@@ -392,70 +388,165 @@
       justify-content: center;
       min-height: 300px;
     }
+    /* Soft radial golden glow behind certificate & medal */
+    .aaci-opt1-right::before {
+      content: '';
+      position: absolute;
+      width: 310px;
+      height: 310px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(254, 240, 138, 0.45) 0%, rgba(254, 249, 195, 0.15) 55%, transparent 72%);
+      animation: aaciAuraBreath 4s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Framed Certificate with 3D Float & Light Sweep Effect */
     .aaci-opt1-cert {
+      position: relative;
+      z-index: 2;
       width: 275px;
       background: #ffffff;
       padding: 10px;
       border-radius: 16px;
-      border: 2.5px solid #f59e0b;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
+      border: 2px solid #fde68a;
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.10), 0 0 24px rgba(253, 224, 71, 0.22);
       transform: rotate(-3deg) translateX(-35px);
-      transition: transform 0.35s ease;
+      overflow: hidden;
+      animation: aaciCertFloat 5s ease-in-out infinite;
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease, border-color 0.45s ease;
+    }
+    .aaci-opt1-cert::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -120%;
+      width: 65%;
+      height: 200%;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(25deg);
+      animation: aaciShineSweep 4.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      pointer-events: none;
     }
     .aaci-opt1-hero:hover .aaci-opt1-cert {
-      transform: rotate(-1.5deg) translateX(-35px) scale(1.02);
+      animation-play-state: paused;
+      transform: rotate(0deg) translateX(-35px) translateY(-6px) scale(1.035);
+      border-color: #fcd34d;
+      box-shadow: 0 24px 48px rgba(15, 23, 42, 0.15), 0 0 35px rgba(250, 204, 21, 0.4);
     }
     .aaci-opt1-cert img {
       width: 100%;
       display: block;
       border-radius: 8px;
     }
+    /* Hanging Gold Medal with Pendulum Float, Pulsing Halo & Shimmer */
     .aaci-opt1-medal-wrap {
       position: absolute;
       right: 12px;
-      top: -44px;
+      top: -42px;
+      z-index: 3;
       display: flex;
       flex-direction: column;
       align-items: center;
-      filter: drop-shadow(0 14px 24px rgba(15, 23, 42, 0.2));
+      transform-origin: top center;
+      animation: aaciMedalSwing 4.5s ease-in-out infinite;
+      filter: drop-shadow(0 12px 22px rgba(15, 23, 42, 0.16));
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .aaci-opt1-hero:hover .aaci-opt1-medal-wrap {
+      animation-play-state: paused;
+      transform: scale(1.07) translateY(3px);
     }
     .aaci-opt1-red-ribbon {
-      width: 68px;
-      height: 92px;
-      background: linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #7f1d1d 100%);
+      width: 66px;
+      height: 90px;
+      background: linear-gradient(135deg, #b91c1c 0%, #ef4444 50%, #991b1b 100%);
       clip-path: polygon(0 0, 38% 0, 50% 65%, 62% 0, 100% 0, 74% 100%, 26% 100%);
       margin-bottom: -14px;
     }
     .aaci-opt1-medal-ring {
-      width: 172px;
-      height: 172px;
+      position: relative;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
-      padding: 7px;
-      background: conic-gradient(from 0deg, #b45309, #fef08a, #d97706, #fef08a, #b45309);
+      padding: 6px;
+      background: conic-gradient(from 0deg, #eab308, #fef9c3, #facc15, #fef9c3, #eab308);
+      box-shadow: 0 0 28px rgba(253, 224, 71, 0.55);
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .aaci-opt1-medal-ring img {
+    /* Expanding Golden Halo Ring around Medal */
+    .aaci-opt1-medal-ring::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px solid rgba(250, 204, 21, 0.55);
+      animation: aaciHaloRipple 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+      pointer-events: none;
+    }
+    /* Inner Specular Sheen on Medal */
+    .aaci-opt1-medal-inner {
+      position: relative;
       width: 100%;
       height: 100%;
       border-radius: 50%;
+      overflow: hidden;
       background: #ffffff;
+    }
+    .aaci-opt1-medal-inner::after {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -130%;
+      width: 55%;
+      height: 180%;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(25deg);
+      animation: aaciShineSweep 3.6s cubic-bezier(0.4, 0, 0.2, 1) 1.2s infinite;
+      pointer-events: none;
+    }
+    .aaci-opt1-medal-inner img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
       object-fit: contain;
+      display: block;
+    }
+    @keyframes aaciCertFloat {
+      0%, 100% { transform: rotate(-3deg) translateX(-35px) translateY(0px); }
+      50% { transform: rotate(-1.8deg) translateX(-35px) translateY(-7px); }
+    }
+    @keyframes aaciMedalSwing {
+      0%, 100% { transform: rotate(-1.8deg) translateY(0px); }
+      50% { transform: rotate(1.8deg) translateY(4px); }
+    }
+    @keyframes aaciShineSweep {
+      0% { left: -130%; }
+      45%, 100% { left: 160%; }
+    }
+    @keyframes aaciHaloRipple {
+      0% { transform: scale(0.96); opacity: 0.85; }
+      75% { transform: scale(1.13); opacity: 0; }
+      100% { transform: scale(1.13); opacity: 0; }
+    }
+    @keyframes aaciAuraBreath {
+      0%, 100% { transform: scale(0.95); opacity: 0.7; }
+      50% { transform: scale(1.08); opacity: 1; }
     }
     .aaci-opt1-wave {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 34px;
+      height: 24px;
       width: 100%;
       z-index: 3;
     }
     @media (max-width: 991px) {
       .aaci-opt1-hero {
         grid-template-columns: 1fr;
-        padding: 32px 24px 52px;
+        padding: 32px 24px 44px;
         gap: 28px;
       }
       .aaci-opt1-title {
@@ -630,10 +721,9 @@
         <h2 class="award-category-title">Chứng nhận</h2>
       </div>
 
-      <!-- 🏆 STANDALONE FEATURED AACI CERTIFICATE BOX (OPTION 1: WHITE BG & PURE GOLD STRIPS) -->
+      <!-- 🏆 STANDALONE FEATURED AACI CERTIFICATE BOX (OPTION 1: SOFT GOLD & ANIMATED MEDAL/CERT) -->
       <div class="aaci-opt1-hero animate-fade-up" onclick="openAwardModal('aaci')">
         <div class="aaci-opt1-left">
-          <div class="aaci-opt1-eyebrow">★ TIÊU CHUẨN AN TOÀN &amp; CHẤT LƯỢNG Y TẾ HOA KỲ ★</div>
           <h3 class="aaci-opt1-title">BỆNH VIỆN ĐẦU TIÊN TẠI VIỆT NAM<br>ĐẠT CHUẨN CHẤT LƯỢNG AACI (HOA KỲ)</h3>
           <div class="aaci-opt1-ribbon">AMERICAN ACCREDITATION COMMISSION INTERNATIONAL</div>
           <p class="aaci-opt1-desc">
@@ -661,19 +751,21 @@
           <div class="aaci-opt1-medal-wrap">
             <div class="aaci-opt1-red-ribbon"></div>
             <div class="aaci-opt1-medal-ring">
-              <img src="images/Website/giai-thuong/aaci_gold_seal.webp" alt="AACI Gold Seal" loading="lazy" />
+              <div class="aaci-opt1-medal-inner">
+                <img src="images/Website/giai-thuong/aaci_gold_seal.webp" alt="AACI Gold Seal" loading="lazy" />
+              </div>
             </div>
           </div>
         </div>
         <svg class="aaci-opt1-wave" viewBox="0 0 1200 45" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0,10 Q600,48 1200,10 L1200,45 L0,45 Z" fill="url(#aaciPureGoldGrad)"/>
+          <path d="M0,14 Q600,46 1200,14 L1200,45 L0,45 Z" fill="url(#aaciPureGoldGrad)"/>
           <defs>
             <linearGradient id="aaciPureGoldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#b45309"/>
-              <stop offset="25%" stop-color="#f59e0b"/>
-              <stop offset="50%" stop-color="#fde047"/>
-              <stop offset="75%" stop-color="#f59e0b"/>
-              <stop offset="100%" stop-color="#b45309"/>
+              <stop offset="0%" stop-color="#fde68a"/>
+              <stop offset="25%" stop-color="#fef08a"/>
+              <stop offset="50%" stop-color="#fef9c3"/>
+              <stop offset="75%" stop-color="#fef08a"/>
+              <stop offset="100%" stop-color="#fde68a"/>
             </linearGradient>
           </defs>
         </svg>

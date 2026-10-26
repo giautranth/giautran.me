@@ -702,6 +702,13 @@ const CIH_AWARDS_DATA = {
     badge: 'Giải thưởng Quốc tế',
     desc: 'Ngày 11/12/2025, Bệnh viện Quốc tế City tự hào ghi dấu ấn tại Lễ vinh danh Top 100 International Business Style Awards 2025, nhận giải thưởng “Doanh nghiệp Tiên phong” – minh chứng cho những nỗ lực không ngừng trong việc nâng tầm chất lượng chăm sóc sức khỏe cho cộng đồng.'
   },
+  'top10-vietnam-2024': {
+    img: 'images/Website/giai-thuong/gt_top10_benh_vien_2024.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/gt_top10_benh_vien_2024.webp?v=20261026',
+    title: 'Top 10 Bệnh viện tốt nhất Việt Nam 2024 – The Best of Vietnam 2024',
+    badge: 'Giải thưởng Quốc gia',
+    desc: '<p style="margin-bottom:0.75rem;">Ngày 24/08/2024, Bệnh viện Quốc tế City (CIH) đã tự hào được vinh danh trong Top 10 Bệnh viện tốt nhất Việt Nam tại Lễ công bố “The Best of Vietnam 2024”. Sự kiện do Tạp chí Sở hữu Trí tuệ &amp; Sáng tạo phối hợp với Liên hiệp Khoa học Doanh nhân Việt Nam tổ chức nhằm tôn vinh những thương hiệu hàng đầu cả nước.</p><p style="margin-bottom:0;">“The Best of Vietnam 2024” là một chương trình uy tín, nơi các thương hiệu hàng đầu được đánh giá dựa trên tiêu chí khắt khe từ góc nhìn của người tiêu dùng và quá trình thẩm định chuyên nghiệp của Ban tổ chức. Việc đánh giá và chấm điểm được thực hiện bởi các chuyên gia hàng đầu, với quy trình nghiêm ngặt. Bệnh viện Quốc tế City được xướng tên trong Top 10 Bệnh viện tốt nhất Việt Nam 2024 là minh chứng cho chất lượng dịch vụ vượt trội và uy tín của bệnh viện trong lĩnh vực y tế.</p>'
+  },
   'green-hospital': {
     img: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
     logo: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
@@ -725,7 +732,8 @@ const DEFAULT_AWARD_KEYS = [
   'healthcare-asia',
   'top10ivf',
   'green-hospital',
-  'pioneer-2025'
+  'pioneer-2025',
+  'top10-vietnam-2024'
 ];
 
 function getPageAwardKeys() {

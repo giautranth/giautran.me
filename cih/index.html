@@ -24,7 +24,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=20261026_specmob" />
+  <link rel="stylesheet" href="style.css?v=20261026_awards_slider" />
 
 </head>
 
@@ -4484,99 +4484,229 @@
 
   <div class="container">
 
-    <div class="section__header">
+    <div class="section__header" style="margin-bottom: 1.25rem;">
 
       <div class="section__header-left">
 
-        <h2 class="section__title" style="margin-bottom: 0;">Chứng nhận &amp; Giải thưởng</h2>
+        <h2 class="section__title" style="margin-bottom: 0;">Ch?ng nh?n &amp; Gi?i th??ng</h2>
 
       </div>
 
     </div>
 
+    <!-- Awards 1-Row Carousel Track (Same continuous effect as ??i t?c b?o hi?m) -->
+    <div class="awards-slider-wrap" style="position: relative; padding: 0.5rem 10px;">
 
+      <button class="mobile-arrow mobile-arrow--prev" id="awards-prev" aria-label="Tr??c"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
 
-    <!-- Awards Grid with Rich Interactive Effects -->
+      <div class="awards-track" id="awards-track">
 
-    <div class="awards-grid">
-
-      
-
-      <!-- Award 1: AACI -->
-
-      <div class="award-card" data-award="aaci" onclick="openAwardModal('aaci')">
-
-        <div class="award-card__logo-wrap">
-
-          <img src="images/Website/giai-thuong/logo/acci_transparent.webp" alt="Chứng nhận AACI" class="award-card__img" onerror="this.onerror=null; this.src='images/logo_cih_acci.webp'" loading="lazy" />
-
+        <!-- 1. Ch?ng nh?n AACI -->
+        <div class="award-card" data-award="aaci" onclick="openAwardModal('aaci')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/acci_transparent.webp" alt="Ch?ng nh?n AACI" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">Ch?ng nh?n AACI</h4>
         </div>
 
-        <h4 class="award-card__title">Chứng nhận AACI</h4>
+        <!-- 2. Ch?ng nh?n RTAC -->
+        <div class="award-card" data-award="rtac" onclick="openAwardModal('rtac')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/RTAC_transparent.webp" alt="Ch?ng nh?n RTAC" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">Ch?ng nh?n RTAC</h4>
+        </div>
+
+        <!-- 3. Ch?ng nh?n ICARe-HF -->
+        <div class="award-card" data-award="esc" onclick="openAwardModal('esc')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/Esc-logo_transparent.webp" alt="Ch?ng nh?n ICARe-HF" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">Ch?ng nh?n ICARe-HF</h4>
+        </div>
+
+        <!-- 4. Ch?ng nh?n ISO 15189:2022 -->
+        <div class="award-card" data-award="iso" onclick="openAwardModal('iso')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/download_transparent.webp" alt="Ch?ng nh?n ISO 15189:2022" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">Ch?ng nh?n ISO 15189:2022</h4>
+        </div>
+
+        <!-- 5. Ch?ng nh?n ISO 7101:2023 -->
+        <div class="award-card" data-award="iso-7101" onclick="openAwardModal('iso-7101')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/iso_7101_2023.webp?v=2" alt="Ch?ng nh?n ISO 7101:2023" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">Ch?ng nh?n ISO 7101:2023</h4>
+        </div>
+
+        <!-- 6. Th?nh vi?n Li?n ?o?n B?nh vi?n IHF -->
+        <div class="award-card" data-award="ihf" onclick="openAwardModal('ihf')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/ihf_transparent.webp" alt="Th?nh vi?n Li?n ?o?n B?nh vi?n IHF" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">Th?nh vi?n<br>Li?n ?o?n B?nh vi?n IHF</h4>
+        </div>
+
+        <!-- 7. TOP 3 Th??ng hi?u ti?u bi?u Ch?u ? Th?i B?nh D??ng 2026 -->
+        <div class="award-card" data-award="top3" onclick="openAwardModal('top3')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/top3_transparent.webp" alt="TOP 3 Th??ng hi?u ti?u bi?u Ch?u ? Th?i B?nh D??ng 2026" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">TOP 3 Th??ng hi?u ti?u bi?u<br>Ch?u ? Th?i B?nh D??ng 2026</h4>
+        </div>
+
+        <!-- 8. TOP 10 Th??ng hi?u xu?t s?c Ch?u ? 2025 -->
+        <div class="award-card" data-award="top10-asia-2025" onclick="openAwardModal('top10-asia-2025')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/top10_asia_2025_transparent.webp" alt="TOP 10 Th??ng hi?u xu?t s?c Ch?u ? 2025" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">TOP 10 Th??ng hi?u<br>xu?t s?c Ch?u ? 2025</h4>
+        </div>
+
+        <!-- 9. TOP 10 Th??ng hi?u uy t?n h?ng ??u Ch?u ? 2025 -->
+        <div class="award-card" data-award="asia" onclick="openAwardModal('asia')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/asia_trust_2025_transparent.webp" alt="TOP 10 Th??ng hi?u uy t?n h?ng ??u Ch?u ? 2025" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">TOP 10 Th??ng hi?u uy t?n<br>h?ng ??u Ch?u ? 2025</h4>
+        </div>
+
+        <!-- 10. TOP 10 Trung t?m H? tr? sinh s?n t?t nh?t Vi?t Nam 2025 -->
+        <div class="award-card" data-award="top10ivf" onclick="openAwardModal('top10ivf')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/best_of_vietnam_transparent.webp" alt="TOP 10 Trung t?m H? tr? sinh s?n t?t nh?t Vi?t Nam 2025" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">TOP 10 Trung t?m H? tr? sinh s?n<br>t?t nh?t Vi?t Nam 2025</h4>
+        </div>
+
+        <!-- 11. TOP 100 International Business Style Awards 2025 -->
+        <div class="award-card" data-award="pioneer-2025" onclick="openAwardModal('pioneer-2025')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/pioneer_2025_transparent.webp" alt="TOP 100 International Business Style Awards 2025" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">TOP 100 International<br>Business Style Awards 2025</h4>
+        </div>
+
+        <!-- 12. TOP 10 B?nh vi?n t?t nh?t Vi?t Nam 2024 -->
+        <div class="award-card" data-award="top10-vietnam-2024" onclick="openAwardModal('top10-vietnam-2024')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/best_of_vietnam_transparent.webp" alt="TOP 10 B?nh vi?n t?t nh?t Vi?t Nam 2024" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">TOP 10 B?nh vi?n<br>t?t nh?t Vi?t Nam 2024</h4>
+        </div>
+
+        <!-- 13. Healthcare Asia Awards 2023 -->
+        <div class="award-card" data-award="healthcare-asia" onclick="openAwardModal('healthcare-asia')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/healthcare_asia_transparent.webp" alt="Healthcare Asia Awards 2023" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">Healthcare Asia Awards 2023</h4>
+        </div>
+
+        <!-- 14. B?nh vi?n Xanh -->
+        <div class="award-card" data-award="green-hospital" onclick="openAwardModal('green-hospital')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/green_hospital_transparent.webp" alt="B?nh vi?n Xanh" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">B?nh vi?n Xanh</h4>
+        </div>
+
+        <!-- 15. C? s? y t? Xanh- S?ch -Th?n Thi?n -->
+        <div class="award-card" data-award="green-clean-friendly" onclick="openAwardModal('green-clean-friendly')">
+          <div class="award-card__logo-wrap">
+            <img src="images/Website/giai-thuong/logo/co_so_xanh_transparent.webp" alt="C? s? y t? Xanh- S?ch -Th?n Thi?n" class="award-card__img" loading="lazy" />
+          </div>
+          <h4 class="award-card__title">C? s? y t? Xanh- S?ch -Th?n Thi?n</h4>
+        </div>
 
       </div>
 
-
-
-      <!-- Award 2: RTAC -->
-
-      <div class="award-card" data-award="rtac" onclick="openAwardModal('rtac')">
-
-        <div class="award-card__logo-wrap">
-
-          <img src="images/Website/giai-thuong/logo/RTAC_transparent.webp" alt="Chứng nhận RTAC" class="award-card__img" onerror="this.onerror=null; this.src='images/Website/giai-thuong/logo/RTAC.webp'" loading="lazy" />
-
-        </div>
-
-        <h4 class="award-card__title">Chứng nhận RTAC</h4>
-
-      </div>
-
-
-
-      <!-- Award 3: ESC -->
-
-      <div class="award-card" data-award="esc" onclick="openAwardModal('esc')">
-
-        <div class="award-card__logo-wrap">
-
-          <img src="images/Website/giai-thuong/logo/Esc-logo_transparent.webp" alt="Chứng nhận Full ICARe-HF" class="award-card__img" onerror="this.onerror=null; this.src='images/Website/giai-thuong/logo/Esc-logo.webp'" loading="lazy" />
-
-        </div>
-
-        <h4 class="award-card__title">Chứng nhận Full ICARe-HF</h4>
-
-      </div>
-
-
-
-      <!-- Award 4: ISO 15189 -->
-
-      <div class="award-card" data-award="iso-7101" onclick="openAwardModal('iso-7101')">
-
-        <div class="award-card__logo-wrap">
-
-          <img src="images/Website/giai-thuong/iso_7101_2023.webp?v=2" alt="Chứng nhận ISO 7101:2023" class="award-card__img" onerror="this.onerror=null; this.src='images/Website/giai-thuong/iso_7101_2023.webp'" loading="lazy" />
-
-        </div>
-
-        <h4 class="award-card__title">Chứng nhận ISO 7101:2023</h4>
-
-      </div>
-
-
+      <button class="mobile-arrow mobile-arrow--next" id="awards-next" aria-label="Ti?p"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
 
     </div>
 
     <div style="text-align: center; margin-top: 2rem;">
 
-      <a href="chung-nhan-giai-thuong" class="section__header-btn">Xem tất cả</a>
+      <a href="chung-nhan-giai-thuong" class="section__header-btn">Xem t?t c?</a>
 
     </div>
 
   </div>
 
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.getElementById('awards-track');
+  const prevBtn = document.getElementById('awards-prev');
+  const nextBtn = document.getElementById('awards-next');
+
+  if (!track) return;
+
+  // Clone cards once for seamless infinite loop
+  const initialCards = Array.from(track.children);
+  initialCards.forEach(card => {
+    track.appendChild(card.cloneNode(true));
+  });
+
+  let isHovered = false;
+  let animId = null;
+  let pos = 0;
+  const speed = 0.8; // 60fps smooth gliding speed (same as ??i t?c b?o hi?m)
+
+  const getHalfWidth = () => track.scrollWidth / 2;
+
+  function infiniteAwardsScrollLoop() {
+    if (!isHovered && track) {
+      pos += speed;
+      const halfWidth = getHalfWidth();
+      if (halfWidth > 0 && pos >= halfWidth) {
+        pos -= halfWidth;
+      }
+      track.scrollLeft = pos;
+    } else if (track) {
+      pos = track.scrollLeft;
+    }
+    animId = requestAnimationFrame(infiniteAwardsScrollLoop);
+  }
+
+  animId = requestAnimationFrame(infiniteAwardsScrollLoop);
+
+  track.addEventListener('mouseenter', () => { isHovered = true; });
+  track.addEventListener('mouseleave', () => { isHovered = false; });
+
+  const getCardStep = () => {
+    const card = track.querySelector('.award-card');
+    return card ? card.offsetWidth + 20 : 240;
+  };
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      isHovered = true;
+      const halfWidth = getHalfWidth();
+      if (halfWidth > 0 && track.scrollLeft >= halfWidth - getCardStep()) {
+        track.scrollLeft -= halfWidth;
+      }
+      track.scrollBy({ left: getCardStep(), behavior: 'smooth' });
+      setTimeout(() => { pos = track.scrollLeft; isHovered = false; }, 1200);
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      isHovered = true;
+      const halfWidth = getHalfWidth();
+      if (halfWidth > 0 && track.scrollLeft <= 5) {
+        track.scrollLeft += halfWidth;
+      }
+      track.scrollBy({ left: -getCardStep(), behavior: 'smooth' });
+      setTimeout(() => { pos = track.scrollLeft; isHovered = false; }, 1200);
+    });
+  }
+});
+</script>
 
 
 
@@ -7145,7 +7275,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-<script src="script.js?v=20261026_tablet2"></script>
+<script src="script.js?v=20261026_awards_slider"></script>
 
 <script src="booking_modal.js?v=1792770000"></script>
 

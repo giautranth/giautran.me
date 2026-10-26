@@ -3506,3 +3506,61 @@ section#doi-tac-bao-hiem.section.insurance-section {
     border-radius: 7px !important;
   }
 }
+
+/* ?? AWARDS 1-ROW CAROUSEL SLIDER (SAME AS INSURANCE PARTNERS) ?? */
+.awards-track {
+  display: flex !important;
+  gap: 1.25rem !important;
+  overflow-x: auto !important;
+  scroll-behavior: auto !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 14px 8px !important;
+  margin: -14px -8px !important;
+  align-items: stretch !important;
+}
+
+.awards-track::-webkit-scrollbar {
+  display: none;
+}
+
+.awards-track .award-card {
+  flex: 0 0 calc(25% - 0.95rem);
+  min-width: 240px;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 1.15rem 1rem;
+}
+
+.awards-track .award-card__title {
+  font-size: 0.96rem;
+  line-height: 1.35;
+  min-height: 2.7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .awards-track .award-card {
+    flex: 0 0 calc(50% - 0.65rem);
+    min-width: 210px;
+  }
+}
+
+@media (max-width: 576px) {
+  .awards-track {
+    gap: 0.75rem !important;
+  }
+  .awards-track .award-card {
+    flex: 0 0 calc(50% - 0.4rem);
+    min-width: 150px;
+    padding: 0.9rem 0.5rem !important;
+  }
+  .awards-track .award-card__title {
+    font-size: 0.78rem !important;
+    min-height: 2.7em;
+  }
+}
+

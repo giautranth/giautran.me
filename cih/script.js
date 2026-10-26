@@ -605,21 +605,21 @@ const CIH_AWARDS_DATA = {
   },
   asia: {
     img: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/asia_trust_2025_transparent.webp',
     title: 'TOP 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Bệnh viện Quốc tế City vinh dự được vinh danh trong hạng mục “Top 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025” (Asia Top Trust Brand Award 2025). Giải thưởng ghi nhận chiến lược phát triển bền vững, chất lượng điều trị y tế chuyên sâu, dịch vụ chăm sóc chuẩn 5 sao và uy tín hàng đầu của bệnh viện trong khu vực.'
   },
   'asia-brand': {
     img: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/ASIA TOP TRUST BRAND AWARD 2025.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/asia_trust_2025_transparent.webp',
     title: 'TOP 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Bệnh viện Quốc tế City vinh dự được vinh danh trong hạng mục “Top 10 Thương hiệu Uy tín Hàng đầu Châu Á 2025” (Asia Top Trust Brand Award 2025). Giải thưởng ghi nhận chiến lược phát triển bền vững, chất lượng điều trị y tế chuyên sâu, dịch vụ chăm sóc chuẩn 5 sao và uy tín hàng đầu của bệnh viện trong khu vực.'
   },
   ihf: {
     img: 'images/Website/giai-thuong/gt_ihf.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/gt_ihf.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/ihf_transparent.webp',
     title: 'Thành viên Liên đoàn Bệnh viện Quốc tế (IHF)',
     badge: 'Hội viên Toàn cầu',
     desc: 'Bệnh viện Quốc tế City tự hào là thành viên chính thức độc lập của Liên đoàn Bệnh viện Quốc tế (International Hospital Federation - IHF). Là tổ chức phi chính phủ toàn cầu đại diện cho các bệnh viện và tổ chức chăm sóc sức khỏe uy tín, IHF kết nối CIH với mạng lưới các chuyên gia y tế thế giới nhằm không ngừng nâng cao chất lượng dịch vụ theo chuẩn quốc tế.'
@@ -633,91 +633,91 @@ const CIH_AWARDS_DATA = {
   },
   'healthcare-asia': {
     img: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/HEALTHCARE ASIA AWARD 2023.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/healthcare_asia_transparent.webp',
     title: 'Healthcare Asia Awards 2023',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Giải thưởng danh giá Healthcare Asia Awards 2023 vinh danh Bệnh viện Quốc tế City với hạng mục "Most Improved Community Hospital of the Year - Vietnam" nhờ những nỗ lực không ngừng trong việc đổi mới quy trình khám chữa bệnh, ứng dụng kỹ thuật cao và nâng tầm trải nghiệm chăm sóc sức khỏe cộng đồng.'
   },
   top10ivf: {
     img: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/best_of_vietnam_transparent.webp',
     title: 'TOP 10 Trung tâm Hỗ trợ Sinh sản Tốt nhất Việt Nam 2025',
     badge: 'Giải thưởng Y tế',
     desc: 'Trung tâm Hỗ trợ Sinh sản (IVF Center) thuộc Bệnh viện Quốc tế City vinh dự đạt danh hiệu Top 10 Trung tâm Hỗ trợ Sinh sản tốt nhất Việt Nam. Giải thưởng khẳng định năng lực chuyên môn vượt trội của đội ngũ bác sĩ, chuyên gia phôi học giàu kinh nghiệm, hệ thống phòng Lab sạch chuẩn quốc tế và tỷ lệ điều trị hiếm muộn thành công hàng đầu tại Việt Nam.'
   },
   'top-10-ivf': {
     img: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/top10ivf.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/best_of_vietnam_transparent.webp',
     title: 'TOP 10 Trung tâm Hỗ trợ Sinh sản Tốt nhất Việt Nam 2025',
     badge: 'Giải thưởng Y tế',
     desc: 'Trung tâm Hỗ trợ Sinh sản (IVF Center) thuộc Bệnh viện Quốc tế City vinh dự đạt danh hiệu Top 10 Trung tâm Hỗ trợ Sinh sản tốt nhất Việt Nam. Giải thưởng khẳng định năng lực chuyên môn vượt trội của đội ngũ bác sĩ, chuyên gia phôi học giàu kinh nghiệm, hệ thống phòng Lab sạch chuẩn quốc tế và tỷ lệ điều trị hiếm muộn thành công hàng đầu tại Việt Nam.'
   },
   top3: {
     img: 'images/Website/giai-thuong/top3.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/top3.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/top3_transparent.webp',
     title: 'TOP 3 Thương hiệu Tiêu biểu Châu Á - Thái Bình Dương 2026',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Bệnh viện Quốc tế City tự hào đạt danh hiệu "Top 3 Thương hiệu Tiêu biểu Châu Á - Thái Bình Dương 2026". Đây là minh chứng rõ nét cho sự đầu tư chuẩn mực về chuyên môn, công nghệ y khoa hiện đại và dịch vụ y tế hướng tới trải nghiệm hoàn hảo cho khách hàng.'
   },
   'top-3': {
     img: 'images/Website/giai-thuong/top3.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/top3.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/top3_transparent.webp',
     title: 'TOP 3 Thương hiệu Tiêu biểu Châu Á Thái Bình Dương 2026',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Tại Diễn đàn Kinh tế Châu Á – Thái Bình Dương (APEF) diễn ra ở Bắc Kinh, Bệnh viện Quốc tế City vinh dự được vinh danh trong hạng mục “Top 3 Thương hiệu – Doanh nghiệp tiêu biểu Châu Á Thái Bình Dương 2026”. Giải thưởng là sự ghi nhận xứng đáng cho hành trình tiên phong đổi mới, năng lực y tế chuyên môn sâu, chất lượng dịch vụ 5 sao và uy tín vững chắc của CIH trên trường quốc tế.'
   },
   iso: {
     img: 'images/Website/giai-thuong/iso.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/iso.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/download_transparent.webp',
     title: 'Chứng nhận ISO 15189:2022',
     badge: 'Tiêu chuẩn Quốc tế',
     desc: 'Khoa Xét nghiệm Bệnh viện Quốc tế City cũng đạt chứng nhận ISO 15189:2022 - thuộc tổ chức tiêu chuẩn hóa quốc tế (ISO) toàn cầu. Trong lĩnh vực y học xét nghiệm, ISO 15189:2022 được xem là chuẩn mực khắt khe bậc nhất, các tiêu chí đánh giá toàn diện năng lực và chất lượng Khoa Xét nghiệm của bệnh viện.'
   },
   'iso-15189': {
     img: 'images/Website/giai-thuong/iso.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/iso.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/download_transparent.webp',
     title: 'Chứng nhận ISO 15189:2022',
     badge: 'Tiêu chuẩn Quốc tế',
     desc: 'Khoa Xét nghiệm Bệnh viện Quốc tế City cũng đạt chứng nhận ISO 15189:2022 - thuộc tổ chức tiêu chuẩn hóa quốc tế (ISO) toàn cầu. Trong lĩnh vực y học xét nghiệm, ISO 15189:2022 được xem là chuẩn mực khắt khe bậc nhất, các tiêu chí đánh giá toàn diện năng lực và chất lượng Khoa Xét nghiệm của bệnh viện.'
   },
   'top10-asia-2025': {
     img: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/top10_asia_2025_transparent.webp',
     title: 'TOP 10 thương hiệu xuất sắc Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Danh hiệu danh giá này được xét duyệt dựa trên những tiêu chí khắt khe như chất lượng dịch vụ, uy tín thương hiệu, hệ thống quản lý chất lượng và các giá trị đóng góp cho cộng đồng. Đây là một bước tiến quan trọng, đánh dấu vị thế ngày càng vững chắc của Bệnh viện Quốc tế City trên bản đồ y tế khu vực, khẳng định chiến lược phát triển bền vững và tầm nhìn hội nhập quốc tế.'
   },
   'top10asia': {
     img: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
-    logo: 'images/Website/giai-thuong/gt_thuonghieuxuatsac.webp?v=20260812',
+    logo: 'images/Website/giai-thuong/logo/top10_asia_2025_transparent.webp',
     title: 'TOP 10 thương hiệu xuất sắc Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Danh hiệu danh giá này được xét duyệt dựa trên những tiêu chí khắt khe như chất lượng dịch vụ, uy tín thương hiệu, hệ thống quản lý chất lượng và các giá trị đóng góp cho cộng đồng. Đây là một bước tiến quan trọng, đánh dấu vị thế ngày càng vững chắc của Bệnh viện Quốc tế City trên bản đồ y tế khu vực, khẳng định chiến lược phát triển bền vững và tầm nhìn hội nhập quốc tế.'
   },
   'pioneer-2025': {
     img: 'images/Website/giai-thuong/gt_doanh_nghiep_tien_phong.webp?v=20261026',
-    logo: 'images/Website/giai-thuong/gt_doanh_nghiep_tien_phong.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/logo/pioneer_2025_transparent.webp',
     title: 'TOP 100 International Business Style Awards 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Ngày 11/12/2025, Bệnh viện Quốc tế City tự hào ghi dấu ấn tại Lễ vinh danh Top 100 International Business Style Awards 2025, nhận giải thưởng “Doanh nghiệp Tiên phong” – minh chứng cho những nỗ lực không ngừng trong việc nâng tầm chất lượng chăm sóc sức khỏe cho cộng đồng.'
   },
   'top10-vietnam-2024': {
     img: 'images/Website/giai-thuong/gt_top10_benh_vien_2024.webp?v=20261026',
-    logo: 'images/Website/giai-thuong/gt_top10_benh_vien_2024.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/logo/best_of_vietnam_transparent.webp',
     title: 'TOP 10 Bệnh viện tốt nhất Việt Nam 2024 – The Best of Vietnam 2024',
     badge: 'Giải thưởng Quốc gia',
     desc: '<p style="margin-bottom:0.75rem;">Ngày 24/08/2024, Bệnh viện Quốc tế City (CIH) đã tự hào được vinh danh trong Top 10 Bệnh viện tốt nhất Việt Nam tại Lễ công bố “The Best of Vietnam 2024”. Sự kiện do Tạp chí Sở hữu Trí tuệ &amp; Sáng tạo phối hợp với Liên hiệp Khoa học Doanh nhân Việt Nam tổ chức nhằm tôn vinh những thương hiệu hàng đầu cả nước.</p><p style="margin-bottom:0;">“The Best of Vietnam 2024” là một chương trình uy tín, nơi các thương hiệu hàng đầu được đánh giá dựa trên tiêu chí khắt khe từ góc nhìn của người tiêu dùng và quá trình thẩm định chuyên nghiệp của Ban tổ chức. Việc đánh giá và chấm điểm được thực hiện bởi các chuyên gia hàng đầu, với quy trình nghiêm ngặt. Bệnh viện Quốc tế City được xướng tên trong Top 10 Bệnh viện tốt nhất Việt Nam 2024 là minh chứng cho chất lượng dịch vụ vượt trội và uy tín của bệnh viện trong lĩnh vực y tế.</p>'
   },
   'green-hospital': {
     img: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
-    logo: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/logo/green_hospital_transparent.webp',
     title: 'Bệnh viện Xanh',
     badge: 'Giải thưởng Quốc gia',
     desc: '<p style="margin-bottom:0.75rem;">Trong khuôn khổ chương trình truyền thông “Xây dựng và Phát triển Nền kinh tế Xanh Quốc Gia lần thứ 10”, Bệnh viện Quốc tế City vinh dự nhận giải thưởng <strong>Bệnh viện Xanh – Green Hospital</strong> tại Diễn đàn Xây dựng Văn hóa số – Kinh tế số – chuyển đổi xanh và phát triển bền vững cùng Lễ công bố ghi nhận nhà Lãnh đạo – đơn vị – doanh nghiệp tiêu biểu vì sự nghiệp phát triển Quốc gia thịnh vượng.</p><p style="margin-bottom:0.75rem;">Bệnh viện Quốc tế City (CIH) là một trong những cơ sở y tế hàng đầu tại Việt Nam, cung cấp dịch vụ chăm sóc sức khỏe chất lượng cao cho cả bệnh nhân trong và ngoài nước. Với sự đầu tư mạnh mẽ về cơ sở vật chất, trang thiết bị hiện đại cùng đội ngũ y bác sĩ chuyên nghiệp và tận tâm, CIH tự hào là địa chỉ y tế tin cậy, mang đến những dịch vụ y tế tốt nhất cho người bệnh.</p><p style="margin-bottom:0;">Vinh dự nhận được giải thưởng Bệnh viện Xanh - Green Hospital là một ghi nhận của cộng đồng dành cho tất cả những nỗ lực của đội ngũ bác sĩ và nhân viên CIH trong suốt thời gian qua. Với động lực to lớn này, CIH sẽ tiếp tục phát huy, giữ vững những thành quả đã đạt được, không ngừng cập nhật, đào tạo con người, đầu tư máy móc trang thiết bị hiện đại, áp dụng tiêu chuẩn 5S, tiên phong xây dựng chuyển đổi và vận hành quy trình theo phương châm kinh doanh có trách nhiệm với cộng đồng, xã hội và môi trường, tiếp tục là nhân tố tạo thành hiệu ứng tích cực về phát triển bền vững trong xã hội cũng như cộng đồng doanh nghiệp.</p>'
   },
   'green-clean-friendly': {
     img: 'images/Website/giai-thuong/gt_co_so_y_te_xanh.webp?v=20261026',
-    logo: 'images/Website/giai-thuong/gt_co_so_y_te_xanh.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/logo/co_so_xanh_transparent.webp',
     title: 'Cơ sở y tế Xanh- Sạch -Thân Thiện',
     badge: 'Giải thưởng Quốc gia',
     desc: 'Ngày 20/7/2023, dưới sự bảo trợ và tư vấn tổ chức của Hiệp hội Thông tin Tư vấn Kinh tế Thương mại Việt Nam (VICETA), Công ty Cổ phần Tư Vấn và Phát Triển Truyền Thông Brand Vina cùng các cơ quan báo chí truyền hình Hà Nội thực hiện tổ chức chương trình truyền thông “Xây dựng và Phát triển Nền kinh tế Xanh Quốc Gia năm 2023”. Chương trình đã trao tặng danh hiệu Cơ sở y tế Xanh- Sạch- Thân Thiện cho Bệnh viện Quốc tế City cũng như trao giải thưởng cho các doanh nhân, doanh nghiệp, thương hiệu, sản phẩm, nhà máy, khu công nghiệp, bệnh viện xanh tiêu biểu năm 2023.'

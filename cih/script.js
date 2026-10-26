@@ -694,6 +694,13 @@ const CIH_AWARDS_DATA = {
     title: 'Top 10 thương hiệu xuất sắc Châu Á 2025',
     badge: 'Giải thưởng Quốc tế',
     desc: 'Danh hiệu danh giá này được xét duyệt dựa trên những tiêu chí khắt khe như chất lượng dịch vụ, uy tín thương hiệu, hệ thống quản lý chất lượng và các giá trị đóng góp cho cộng đồng. Đây là một bước tiến quan trọng, đánh dấu vị thế ngày càng vững chắc của Bệnh viện Quốc tế City trên bản đồ y tế khu vực, khẳng định chiến lược phát triển bền vững và tầm nhìn hội nhập quốc tế.'
+  },
+  'green-hospital': {
+    img: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
+    logo: 'images/Website/giai-thuong/gt_benh_vien_xanh.webp?v=20261026',
+    title: 'Giải thưởng Bệnh viện Xanh - Green Hospital',
+    badge: 'Giải thưởng Quốc gia',
+    desc: '<p style="margin-bottom:0.75rem;">Trong khuôn khổ chương trình truyền thông “Xây dựng và Phát triển Nền kinh tế Xanh Quốc Gia lần thứ 10”, Bệnh viện Quốc tế City vinh dự nhận giải thưởng <strong>Bệnh viện Xanh – Green Hospital</strong> tại Diễn đàn Xây dựng Văn hóa số – Kinh tế số – chuyển đổi xanh và phát triển bền vững cùng Lễ công bố ghi nhận nhà Lãnh đạo – đơn vị – doanh nghiệp tiêu biểu vì sự nghiệp phát triển Quốc gia thịnh vượng.</p><p style="margin-bottom:0.75rem;">Bệnh viện Quốc tế City (CIH) là một trong những cơ sở y tế hàng đầu tại Việt Nam, cung cấp dịch vụ chăm sóc sức khỏe chất lượng cao cho cả bệnh nhân trong và ngoài nước. Với sự đầu tư mạnh mẽ về cơ sở vật chất, trang thiết bị hiện đại cùng đội ngũ y bác sĩ chuyên nghiệp và tận tâm, CIH tự hào là địa chỉ y tế tin cậy, mang đến những dịch vụ y tế tốt nhất cho người bệnh.</p><p style="margin-bottom:0;">Vinh dự nhận được giải thưởng Bệnh viện Xanh - Green Hospital là một ghi nhận của cộng đồng dành cho tất cả những nỗ lực của đội ngũ bác sĩ và nhân viên CIH trong suốt thời gian qua. Với động lực to lớn này, CIH sẽ tiếp tục phát huy, giữ vững những thành quả đã đạt được, không ngừng cập nhật, đào tạo con người, đầu tư máy móc trang thiết bị hiện đại, áp dụng tiêu chuẩn 5S, tiên phong xây dựng chuyển đổi và vận hành quy trình theo phương châm kinh doanh có trách nhiệm với cộng đồng, xã hội và môi trường, tiếp tục là nhân tố tạo thành hiệu ứng tích cực về phát triển bền vững trong xã hội cũng như cộng đồng doanh nghiệp.</p>'
   }
 };
 

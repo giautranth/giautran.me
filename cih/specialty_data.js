@@ -246,7 +246,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-cu-thi-kim-loan",
         "name": "BS.CKII. Cù Thị Kim Loan",
         "title": "Bác sĩ Trung tâm Hỗ trợ sinh sản",
-        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026-6_4dbd24f7.webp"
+        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026-6_4dbd24f7.webp?v=2"
       }
     ],
     "packages": [

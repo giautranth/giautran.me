@@ -1104,7 +1104,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ths-bs-bui-thi-xuan-nga",
         "name": "ThS.BS. Bùi Thị Xuân Nga",
         "title": "Bác sĩ Chuyên Khoa Tim Mạch",
-        "img": "images/ext_webp/13_f418a374.webp"
+        "img": "images/ext_webp/13_f418a374.webp?v=2"
       },
       {
         "slug": "bs-ckii-nguyen-thi-hong-cam",

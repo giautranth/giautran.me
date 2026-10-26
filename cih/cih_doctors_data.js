@@ -282,7 +282,7 @@ const CIH_DOCTORS_DATA = [
     "position": "Bác sĩ Chuyên Khoa Tim Mạch",
     "specialty": "Tim Mạch",
     "specialty_slug": "khoa-tim-mach",
-    "image": "images/ext_webp/13_f418a374.webp",
+    "image": "images/ext_webp/13_f418a374.webp?v=2",
     "content": "<p>Bác sĩ Chuyên Khoa Tim Mạch</p>\n<p>1. Chuyên Khoa<br />\nTim Mạch<br />\n2. Thông Tin Bác Sĩ<br />\nVới bề dày 16 năm công tác tại Đại học Y Dược TP. HCM và Bệnh viện Quốc Tế City, Bác sĩ Bùi Thị Xuân Nga có nhiều kinh nghiệm trong việc chẩn đoán và điều trị các bệnh lý về nội tim mạch.<br />\nHọc hàm – học vị: Thạc sĩ, Bác sĩ Chuyên khoa I<br />\n3. Quá Trình Công Tác<br />\n2001-2005: Bác sĩ Nội trú chuyên ngành Lão Khoa tại Đại học Y Dược TP Hồ Chí Minh<br />\n2005-2013: Bác sĩ điều trị khoa Nội Tim Mạch, bệnh viện Đại học Y Dược TP Hồ Chí Minh<br />\n2013-nay: Bác sĩ khoa Nội Tim mạch, Bệnh viện Quốc tế City<br />\n4. Bằng Cấp Chuyên Môn<br />\n2001: Tốt Nghiệp Bác sĩ Đa khoa Đại Học Y Dược TP Hồ Chí Minh.<br />\n2005: Tốt nghiệp Bác sĩ Nội trú Chuyên ngành Lão Khoa, Đại học Y Dược TP Hồ Chí Minh.<br />\n2012: Thạc sĩ Chuyên ngành Lão Khoa, Đại học Y Dược TP Hồ Chí Minh.</p>",
     "excerpt": ""
   },

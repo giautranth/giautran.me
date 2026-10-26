@@ -24,7 +24,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=1793010600" />
+  <link rel="stylesheet" href="style.css?v=1793010900" />
 
 </head>
 
@@ -791,35 +791,31 @@
 
 
   @media (max-width: 640px) {
-
     .cih-floating-stats {
-
-      grid-template-columns: 1fr;
-
-      gap: 16px;
-
-      padding: 20px 16px !important;
-
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0 !important;
+      padding: 14px 6px !important;
     }
-
     .cih-stat-box {
-
-      border-right: none;
-
-      border-bottom: 1px solid #f1f5f9;
-
-      padding-bottom: 16px;
-
+      padding: 6px 4px !important;
+      border-right: 1px solid rgba(197, 154, 63, 0.28) !important;
+      border-bottom: none !important;
     }
-
     .cih-stat-box:last-child {
-
-      border-bottom: none;
-
-      padding-bottom: 0;
-
+      border-right: none !important;
+      border-bottom: none !important;
+      padding-bottom: 6px !important;
     }
-
+    .cih-stat-num {
+      font-size: 1.55rem !important;
+      line-height: 1.8rem !important;
+    }
+    .cih-stat-title {
+      font-size: 0.68rem !important;
+      line-height: 0.95rem !important;
+      margin-top: 3px !important;
+      letter-spacing: 0.02em !important;
+    }
   }
 
 

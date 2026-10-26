@@ -3279,4 +3279,31 @@ section#doi-tac-bao-hiem.section.insurance-section {
   .cert-desc {
     text-align: justify !important;
   }
+
+  /* 3 con số thống kê trên mobile hiển thị trên 1 dòng ngang */
+  .cih-floating-stats {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0 !important;
+    padding: 14px 6px !important;
+  }
+  .cih-stat-box {
+    padding: 6px 4px !important;
+    border-right: 1px solid rgba(197, 154, 63, 0.28) !important;
+    border-bottom: none !important;
+  }
+  .cih-stat-box:last-child {
+    border-right: none !important;
+    border-bottom: none !important;
+    padding-bottom: 6px !important;
+  }
+  .cih-stat-num {
+    font-size: 1.55rem !important;
+    line-height: 1.8rem !important;
+  }
+  .cih-stat-title {
+    font-size: 0.68rem !important;
+    line-height: 0.95rem !important;
+    margin-top: 3px !important;
+    letter-spacing: 0.02em !important;
+  }
 }

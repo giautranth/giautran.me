@@ -727,11 +727,11 @@ const CIH_AWARDS_DATA = {
 let currentAwardKey = null;
 const DEFAULT_AWARD_KEYS = [
   'aaci',
+  'iso-7101',
+  'ihf',
   'rtac',
   'esc',
   'iso',
-  'iso-7101',
-  'ihf',
   'top3',
   'top10-asia-2025',
   'asia',

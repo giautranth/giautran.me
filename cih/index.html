@@ -24,7 +24,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="style.css?v=20261026_awards_speed" />
+  <link rel="stylesheet" href="style.css?v=20261026_awards_loop" />
 
 </head>
 
@@ -4589,60 +4589,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!track) return;
 
-  // Clone cards once for seamless infinite loop
+  // Clone cards twice (3 sets total) for a 100% seamless infinite loop
   const initialCards = Array.from(track.children);
-  initialCards.forEach(card => {
-    track.appendChild(card.cloneNode(true));
-  });
+  if (initialCards.length === 0) return;
+  let firstClone = null;
+  for (let copy = 0; copy < 2; copy++) {
+    initialCards.forEach((card, idx) => {
+      const clone = card.cloneNode(true);
+      if (copy === 0 && idx === 0) firstClone = clone;
+      track.appendChild(clone);
+    });
+  }
 
   let isHovered = false;
-  let animId = null;
+  let scrollPos = 0;
   const speed = 0.8; // 60fps smooth gliding speed
 
-  const getHalfWidth = () => track.scrollWidth / 2;
+  const getSetWidth = () => {
+    if (firstClone && initialCards[0]) {
+      const diff = firstClone.offsetLeft - initialCards[0].offsetLeft;
+      if (diff > 0) return diff;
+    }
+    return track.scrollWidth / 3;
+  };
 
   function infiniteAwardsScrollLoop() {
     if (!isHovered && track) {
-      track.scrollLeft += speed;
-      const halfWidth = getHalfWidth();
-      if (halfWidth > 0 && track.scrollLeft >= halfWidth) {
-        track.scrollLeft -= halfWidth;
+      scrollPos += speed;
+      const setWidth = getSetWidth();
+      if (setWidth > 0 && scrollPos >= setWidth) {
+        scrollPos -= setWidth;
       }
+      track.scrollLeft = scrollPos;
     }
-    animId = requestAnimationFrame(infiniteAwardsScrollLoop);
+    requestAnimationFrame(infiniteAwardsScrollLoop);
   }
 
-  animId = requestAnimationFrame(infiniteAwardsScrollLoop);
+  requestAnimationFrame(infiniteAwardsScrollLoop);
 
-  track.addEventListener('mouseenter', () => { isHovered = true; });
-  track.addEventListener('mouseleave', () => { isHovered = false; });
+  track.addEventListener('mouseenter', () => {
+    isHovered = true;
+    scrollPos = track.scrollLeft;
+  });
+  track.addEventListener('mouseleave', () => {
+    scrollPos = track.scrollLeft;
+    isHovered = false;
+  });
 
   const getCardStep = () => {
     const card = track.querySelector('.award-card');
     return card ? card.offsetWidth + 20 : 240;
   };
 
+  let resumeTimer = null;
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
       isHovered = true;
-      const halfWidth = getHalfWidth();
-      if (halfWidth > 0 && track.scrollLeft >= halfWidth - getCardStep()) {
-        track.scrollLeft -= halfWidth;
+      if (resumeTimer) clearTimeout(resumeTimer);
+      const setWidth = getSetWidth();
+      if (setWidth > 0 && track.scrollLeft >= setWidth) {
+        track.scrollLeft -= setWidth;
       }
       track.scrollBy({ left: getCardStep(), behavior: 'smooth' });
-      setTimeout(() => { isHovered = false; }, 2000);
+      resumeTimer = setTimeout(() => {
+        scrollPos = track.scrollLeft;
+        isHovered = false;
+      }, 1200);
     });
   }
 
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       isHovered = true;
-      const halfWidth = getHalfWidth();
-      if (halfWidth > 0 && track.scrollLeft <= 5) {
-        track.scrollLeft += halfWidth;
+      if (resumeTimer) clearTimeout(resumeTimer);
+      const setWidth = getSetWidth();
+      if (setWidth > 0 && track.scrollLeft <= getCardStep()) {
+        track.scrollLeft += setWidth;
       }
       track.scrollBy({ left: -getCardStep(), behavior: 'smooth' });
-      setTimeout(() => { isHovered = false; }, 2000);
+      resumeTimer = setTimeout(() => {
+        scrollPos = track.scrollLeft;
+        isHovered = false;
+      }, 1200);
     });
   }
 });
@@ -6866,135 +6894,98 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <script>
-
 document.addEventListener('DOMContentLoaded', () => {
-
   const track = document.getElementById('insurance-track');
-
   const prevBtn = document.getElementById('insurance-prev');
-
   const nextBtn = document.getElementById('insurance-next');
-
-
 
   if (!track) return;
 
-
-
-  // Clone cards once for seamless infinite loop
-
+  // Clone cards twice (3 sets total) for a 100% seamless infinite loop
   const initialCards = Array.from(track.children);
-
-  initialCards.forEach(card => {
-
-    track.appendChild(card.cloneNode(true));
-
-  });
-
-
+  if (initialCards.length === 0) return;
+  let firstClone = null;
+  for (let copy = 0; copy < 2; copy++) {
+    initialCards.forEach((card, idx) => {
+      const clone = card.cloneNode(true);
+      if (copy === 0 && idx === 0) firstClone = clone;
+      track.appendChild(clone);
+    });
+  }
 
   let isHovered = false;
-
-  let animId = null;
-
+  let scrollPos = 0;
   const speed = 0.8; // 60fps smooth gliding speed
 
-
-
-  const getHalfWidth = () => track.scrollWidth / 2;
-
-
-
-  function infiniteScrollLoop() {
-
-    if (!isHovered && track) {
-
-      track.scrollLeft += speed;
-
-      const halfWidth = getHalfWidth();
-
-      if (halfWidth > 0 && track.scrollLeft >= halfWidth) {
-
-        track.scrollLeft -= halfWidth;
-
-      }
-
+  const getSetWidth = () => {
+    if (firstClone && initialCards[0]) {
+      const diff = firstClone.offsetLeft - initialCards[0].offsetLeft;
+      if (diff > 0) return diff;
     }
-
-    animId = requestAnimationFrame(infiniteScrollLoop);
-
-  }
-
-
-
-  animId = requestAnimationFrame(infiniteScrollLoop);
-
-
-
-  track.addEventListener('mouseenter', () => { isHovered = true; });
-
-  track.addEventListener('mouseleave', () => { isHovered = false; });
-
-
-
-  const getCardStep = () => {
-
-    const card = track.querySelector('.insurance-card');
-
-    return card ? card.offsetWidth + 20 : 180;
-
+    return track.scrollWidth / 3;
   };
 
-
-
-  if (nextBtn) {
-
-    nextBtn.addEventListener('click', () => {
-
-      isHovered = true;
-
-      const halfWidth = getHalfWidth();
-
-      if (halfWidth > 0 && track.scrollLeft >= halfWidth - getCardStep()) {
-
-        track.scrollLeft -= halfWidth;
-
+  function infiniteScrollLoop() {
+    if (!isHovered && track) {
+      scrollPos += speed;
+      const setWidth = getSetWidth();
+      if (setWidth > 0 && scrollPos >= setWidth) {
+        scrollPos -= setWidth;
       }
-
-      track.scrollBy({ left: getCardStep(), behavior: 'smooth' });
-
-      setTimeout(() => { isHovered = false; }, 2000);
-
-    });
-
+      track.scrollLeft = scrollPos;
+    }
+    requestAnimationFrame(infiniteScrollLoop);
   }
 
+  requestAnimationFrame(infiniteScrollLoop);
 
+  track.addEventListener('mouseenter', () => {
+    isHovered = true;
+    scrollPos = track.scrollLeft;
+  });
+  track.addEventListener('mouseleave', () => {
+    scrollPos = track.scrollLeft;
+    isHovered = false;
+  });
+
+  const getCardStep = () => {
+    const card = track.querySelector('.insurance-card');
+    return card ? card.offsetWidth + 20 : 180;
+  };
+
+  let resumeTimer = null;
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      isHovered = true;
+      if (resumeTimer) clearTimeout(resumeTimer);
+      const setWidth = getSetWidth();
+      if (setWidth > 0 && track.scrollLeft >= setWidth) {
+        track.scrollLeft -= setWidth;
+      }
+      track.scrollBy({ left: getCardStep(), behavior: 'smooth' });
+      resumeTimer = setTimeout(() => {
+        scrollPos = track.scrollLeft;
+        isHovered = false;
+      }, 1200);
+    });
+  }
 
   if (prevBtn) {
-
     prevBtn.addEventListener('click', () => {
-
       isHovered = true;
-
-      const halfWidth = getHalfWidth();
-
-      if (halfWidth > 0 && track.scrollLeft <= 5) {
-
-        track.scrollLeft += halfWidth;
-
+      if (resumeTimer) clearTimeout(resumeTimer);
+      const setWidth = getSetWidth();
+      if (setWidth > 0 && track.scrollLeft <= getCardStep()) {
+        track.scrollLeft += setWidth;
       }
-
       track.scrollBy({ left: -getCardStep(), behavior: 'smooth' });
-
-      setTimeout(() => { isHovered = false; }, 2000);
-
+      resumeTimer = setTimeout(() => {
+        scrollPos = track.scrollLeft;
+        isHovered = false;
+      }, 1200);
     });
-
   }
-
 });
-
 </script>
 
 

@@ -670,14 +670,14 @@ const CIH_AWARDS_DATA = {
   iso: {
     img: 'images/Website/giai-thuong/iso.webp?v=20260812',
     logo: 'images/Website/giai-thuong/iso.webp?v=20260812',
-    title: 'Chứng Nhận ISO 15189:2022',
+    title: 'Chứng nhận ISO 15189:2022',
     badge: 'Tiêu chuẩn Quốc tế',
     desc: 'Khoa Xét nghiệm Bệnh viện Quốc tế City cũng đạt chứng nhận ISO 15189:2022 - thuộc tổ chức tiêu chuẩn hóa quốc tế (ISO) toàn cầu. Trong lĩnh vực y học xét nghiệm, ISO 15189:2022 được xem là chuẩn mực khắt khe bậc nhất, các tiêu chí đánh giá toàn diện năng lực và chất lượng Khoa Xét nghiệm của bệnh viện.'
   },
   'iso-15189': {
     img: 'images/Website/giai-thuong/iso.webp?v=20260812',
     logo: 'images/Website/giai-thuong/iso.webp?v=20260812',
-    title: 'Chứng Nhận ISO 15189:2022',
+    title: 'Chứng nhận ISO 15189:2022',
     badge: 'Tiêu chuẩn Quốc tế',
     desc: 'Khoa Xét nghiệm Bệnh viện Quốc tế City cũng đạt chứng nhận ISO 15189:2022 - thuộc tổ chức tiêu chuẩn hóa quốc tế (ISO) toàn cầu. Trong lĩnh vực y học xét nghiệm, ISO 15189:2022 được xem là chuẩn mực khắt khe bậc nhất, các tiêu chí đánh giá toàn diện năng lực và chất lượng Khoa Xét nghiệm của bệnh viện.'
   },

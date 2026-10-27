@@ -253,7 +253,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "5. Chuyển phôi (Embryo Transfer)",
-        "img": "images/programs/ivf_prog_5.webp",
+        "img": "images/programs/ivf_prog_5.webp?v=2",
         "desc": "<p>Đây là bước quan trọng trong hành trình IVF và có thể được thực hiện dưới hướng dẫn của siêu âm. Bác sĩ sẽ sử dụng các loại dụng cụ và môi trường chuyển phôi phù hợp cho từng bệnh nhân. Phôi sẽ được tạo điều kiện tốt nhất cho làm tổ.</p>",
         "title_html": "5. Chuyển phôi <span style=\"display:inline-block\">(Embryo Transfer)</span>"
       },

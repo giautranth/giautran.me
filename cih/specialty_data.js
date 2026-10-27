@@ -289,7 +289,7 @@ const CIH_SPECIALTY_DATA = [
       }
     ],
     "equip_heading": "Thế mạnh về trang thiết bị",
-    "equip_subtitle": "Hệ thống phòng Lab hiện đại bậc nhất — “Trái tim” của Trung tâm Hỗ trợ sinh sản CIH giúp nâng cao tỷ lệ thành công.",
+    "equip_subtitle": "",
     "equip_cards": [
       {
         "wide": true,

@@ -235,7 +235,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "2. Chọc hút trứng (Oocyte Aspiration)",
-        "img": "images/programs/ivf_prog_2.webp",
+        "img": "images/programs/ivf_prog_2.webp?v=2",
         "desc": "<p>Với kinh nghiệm nhiều năm trong Hỗ trợ sinh sản, các bác sĩ tại Trung tâm Hỗ Trợ Sinh Sản – Bệnh viện Quốc tế City sẽ hạn chế tối đa các rủi ro trong và sau quá trình chọc hút trứng, giúp bệnh nhân sớm hồi phục.</p>",
         "title_html": "2. Chọc hút trứng <span style=\"display:inline-block\">(Oocyte Aspiration)</span>"
       },

@@ -597,6 +597,190 @@
       }
     }
 
+    /* 3.6. THẾ MẠNH VỀ TRANG THIẾT BỊ (BENTO GRID 6 Ô GIỐNG TRANG CHỦ) */
+    #spec-equip-section.facilities-section {
+      background:
+        radial-gradient(ellipse 68% 72% at 92% 8%, #8BBAE0 0%, rgba(139, 186, 224, 0) 70%),
+        radial-gradient(ellipse 62% 68% at 6% 6%, #F7FCFE 0%, rgba(247, 252, 254, 0) 68%),
+        radial-gradient(ellipse 65% 65% at 8% 92%, #DEF3EE 0%, rgba(222, 243, 238, 0) 70%),
+        radial-gradient(ellipse 65% 60% at 55% 92%, #B4E9F3 0%, rgba(180, 233, 243, 0) 70%),
+        linear-gradient(135deg, #F7FCFE 0%, #CCEAF6 38%, #BCDDF0 68%, #C2E1E7 100%) !important;
+      border-top: none !important;
+      border-bottom: none !important;
+      padding: 3.5rem 0 4rem !important;
+    }
+    .cih-equip-subtitle {
+      font-size: 0.96rem;
+      color: #1e3a5f;
+      margin-top: 6px;
+      margin-bottom: 0;
+      font-weight: 500;
+    }
+    .cih-equip-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 275px;
+      gap: 18px;
+      margin-top: 1.5rem;
+    }
+    .cih-equip-card {
+      position: relative;
+      grid-column: span 3;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #ffffff;
+      border: 2px solid #ffffff;
+      box-shadow: 0 10px 28px rgba(0, 125, 165, 0.12);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+    .cih-equip-card--wide {
+      grid-column: span 6;
+    }
+    .cih-equip-card:hover {
+      transform: translateY(-4px);
+      border-color: #ffffff;
+      box-shadow: 0 18px 38px rgba(0, 125, 165, 0.22);
+    }
+    .cih-equip-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cih-equip-card:hover .cih-equip-card__img {
+      transform: scale(1.07);
+    }
+    .cih-equip-card__hint {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.92);
+      pointer-events: none;
+      transition: all 0.25s ease;
+    }
+    .cih-equip-card__hint svg {
+      position: absolute;
+      filter: drop-shadow(0 1px 2.5px rgba(0, 0, 0, 0.65));
+      transition: opacity 0.22s ease, transform 0.25s ease;
+    }
+    .cih-equip-card__hint .cih-hint-default {
+      width: 13px;
+      height: 13px;
+      opacity: 0.9;
+    }
+    .cih-equip-card__hint .cih-hint-hand {
+      width: 17px;
+      height: 17px;
+      opacity: 0;
+      transform: scale(0.75) translateY(2px);
+    }
+    .cih-equip-card:hover .cih-equip-card__hint .cih-hint-default {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    .cih-equip-card:hover .cih-equip-card__hint .cih-hint-hand {
+      opacity: 1;
+      animation: cihHandClickTap 0.9s ease-in-out infinite;
+    }
+    .cih-equip-card__overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      text-align: left;
+      padding: 20px 22px 18px;
+      background: linear-gradient(180deg, rgba(2, 28, 52, 0) 35%, rgba(2, 38, 68, 0.72) 72%, rgba(2, 48, 86, 0.92) 100%);
+      transition: all 0.35s ease;
+    }
+    .cih-equip-card:hover .cih-equip-card__overlay {
+      background: linear-gradient(180deg, rgba(2, 28, 52, 0.15) 0%, rgba(2, 45, 78, 0.85) 55%, rgba(2, 40, 72, 0.96) 100%);
+    }
+    .cih-equip-card__title {
+      color: #ffffff !important;
+      font-size: 1.02rem;
+      font-weight: 800 !important;
+      line-height: 1.38;
+      margin: 0;
+      width: 100%;
+      text-align: left !important;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+      transition: color 0.25s ease;
+    }
+    .cih-equip-card--wide .cih-equip-card__title {
+      font-size: 1.15rem;
+    }
+    .cih-equip-card:hover .cih-equip-card__title {
+      color: #fef08a !important;
+    }
+    .cih-equip-card__desc-wrap {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin-top 0.35s ease;
+      margin-top: 0;
+    }
+    .cih-equip-card--wide .cih-equip-card__desc-wrap,
+    .cih-equip-card:hover .cih-equip-card__desc-wrap {
+      max-height: 150px;
+      opacity: 1;
+      margin-top: 8px;
+    }
+    .cih-equip-card__desc {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.84rem;
+      line-height: 1.5;
+      margin: 0 0 8px 0;
+      text-align: left !important;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .cih-equip-card__more {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #7dd3fc;
+    }
+    @media (max-width: 1024px) {
+      .cih-equip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cih-equip-card,
+      .cih-equip-card--wide {
+        grid-column: span 1;
+      }
+    }
+    @media (max-width: 560px) {
+      .cih-equip-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 245px;
+        gap: 14px;
+      }
+      .cih-equip-card__desc-wrap {
+        max-height: 100px;
+        opacity: 1;
+        margin-top: 6px;
+      }
+    }
+
     /* 3.8. DYNAMIC SPECIALTY HERO & ORIGINAL CONTENT CARDS (25 OTHER SPECIALTIES) */
     .opt1-hero.opt1-hero--dynamic {
       background-color: #fbf7ef;
@@ -1461,6 +1645,21 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     2.6. THẾ MẠNH VỀ TRANG THIẾT BỊ (BENTO GRID 6 Ô GIỐNG TRANG CHỦ)
+═══════════════════════════════════════════════ -->
+<section class="section facilities-section" id="spec-equip-section" style="display: none;">
+  <div class="container">
+    <div class="section__header" style="margin-bottom: 0.5rem;">
+      <div class="section__header-left">
+        <h2 class="section__title" id="spec-equip-heading" style="margin-bottom: 0;">Thế mạnh về trang thiết bị</h2>
+        <p class="cih-equip-subtitle" id="spec-equip-subtitle"></p>
+      </div>
+    </div>
+    <div class="cih-equip-grid" id="spec-equip-grid"></div>
+  </div>
+</section>
+
 <!-- Popup Modal Chương trình khám & Điều trị (Giống Cơ sở vật chất - Trang thiết bị hiện đại) -->
 <div class="award-modal" id="spec-prog-modal" onclick="if(event.target===this) closeSpecProgModal()">
   <div class="award-modal__dialog-wrap">
@@ -1511,10 +1710,12 @@
     }
   ];
 
+  let specEquipData = [];
+  let activeModalList = specProgData;
   let currentSpecProgIdx = 0;
 
   function renderSpecProgModal(idx) {
-    const item = specProgData[idx];
+    const item = activeModalList[idx];
     if (!item) return;
     document.getElementById('spec-prog-modal-img').src = item.img;
     document.getElementById('spec-prog-modal-img').alt = item.title;
@@ -1543,6 +1744,18 @@
   }
 
   function openSpecProgModal(idx) {
+    activeModalList = specProgData;
+    currentSpecProgIdx = idx;
+    renderSpecProgModal(currentSpecProgIdx);
+    const modal = document.getElementById('spec-prog-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function openSpecEquipModal(idx) {
+    activeModalList = specEquipData;
     currentSpecProgIdx = idx;
     renderSpecProgModal(currentSpecProgIdx);
     const modal = document.getElementById('spec-prog-modal');
@@ -1561,7 +1774,8 @@
   }
 
   function stepSpecProgModal(dir) {
-    currentSpecProgIdx = (currentSpecProgIdx + dir + specProgData.length) % specProgData.length;
+    if (!activeModalList || activeModalList.length === 0) return;
+    currentSpecProgIdx = (currentSpecProgIdx + dir + activeModalList.length) % activeModalList.length;
     renderSpecProgModal(currentSpecProgIdx);
   }
 
@@ -2335,7 +2549,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261027_arrows"></script>
 <script src="news_data.js?v=1792750000"></script>
-<script src="specialty_data.js?v=20261027_khoa_nhi2"></script>
+<script src="specialty_data.js?v=20261027_ivf_bento"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
@@ -2414,6 +2628,41 @@ document.addEventListener('DOMContentLoaded', () => {
             progSec.style.display = 'none';
             const progPill = document.querySelector('.opt1-pill[href="#chuong-trinh-kham"]');
             if (progPill) progPill.style.display = 'none';
+          }
+        }
+
+        // Section 2.6: Thế mạnh về trang thiết bị (Bento Grid 6 ô giống Trang chủ)
+        const equipSec = document.getElementById('spec-equip-section');
+        const equipHeading = document.getElementById('spec-equip-heading');
+        const equipSub = document.getElementById('spec-equip-subtitle');
+        const equipGrid = document.getElementById('spec-equip-grid');
+        if (equipSec && equipGrid) {
+          if (spec.equip_cards && spec.equip_cards.length > 0) {
+            equipSec.style.display = '';
+            if (equipHeading) equipHeading.textContent = spec.equip_heading || 'Thế mạnh về trang thiết bị';
+            if (equipSub) equipSub.textContent = spec.equip_subtitle || '';
+            specEquipData = spec.equip_cards;
+            equipGrid.innerHTML = spec.equip_cards.map((ec, idx) => {
+              const safeAlt = (ec.title || '').replace(/"/g, '&quot;');
+              const wideCls = ec.wide ? ' cih-equip-card--wide' : '';
+              return `
+              <div class="cih-equip-card${wideCls}" onclick="openSpecEquipModal(${idx})">
+                <img src="${ec.img}" alt="${safeAlt}" class="cih-equip-card__img" loading="lazy" />
+                <span class="cih-equip-card__hint" aria-hidden="true">
+                  <svg class="cih-hint-default" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <svg class="cih-hint-hand" viewBox="0 0 24 24" fill="currentColor" stroke="rgba(15,23,42,0.45)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11.24V7.5a2.5 2.5 0 0 1 5 0v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.37-.08-.76.04-1.03.31-.43.44-.43 1.14 0 1.58l4.01 4.01c.38.37.89.58 1.42.58h6.1c1 0 1.84-.73 1.98-1.72l.63-4.47c.12-.85-.32-1.69-1.09-2.07z"/></svg>
+                </span>
+                <div class="cih-equip-card__overlay">
+                  <h3 class="cih-equip-card__title">${ec.title}</h3>
+                  <div class="cih-equip-card__desc-wrap">
+                    <p class="cih-equip-card__desc">${ec.short_desc || ''}</p>
+                    <span class="cih-equip-card__more">Xem chi tiết &rarr;</span>
+                  </div>
+                </div>
+              </div>`;
+            }).join('');
+          } else {
+            equipSec.style.display = 'none';
           }
         }
 

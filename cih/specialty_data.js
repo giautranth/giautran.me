@@ -221,11 +221,6 @@ const CIH_SPECIALTY_DATA = [
         "title": "9. Hỗ trợ tâm lý (Psychological Support)",
         "img": "images/programs/ivf_prog_9.webp",
         "desc": "<p>Điều trị IVF có thể là một quá trình căng thẳng về mặt tâm lý. Trung Tâm Hỗ Trợ Sinh Sản – Bệnh viện Quốc tế City cung cấp hỗ trợ tâm lý, giúp các cặp vợ chồng đối phó với những khó khăn và căng thẳng trong suốt quá trình điều trị.</p>\n<p>Những kỹ thuật và phương pháp này đều có mục đích giúp tối ưu hóa cơ hội mang thai thành công cho các cặp vợ chồng gặp vấn đề về sinh sản. Mỗi trường hợp sẽ được bác sĩ tư vấn và lựa chọn phương pháp phù hợp nhất.</p>"
-      },
-      {
-        "title": "Thế mạnh về trang thiết bị",
-        "img": "images/programs/ivf_real_1.webp",
-        "desc": "<p>Nếu xem Trung Tâm Hỗ Trợ Sinh Sản là “Một ngôi nhà chung” thì “Trái tim” của ngôi nhà chung đó, chính là hệ thống phòng Lab, nơi nuôi dưỡng “những bạn nhỏ phôi” trước khi được chuyển vào tử cung người mẹ. Chính vì thế, phòng Lab phải đạt chuẩn giúp nâng cao TỈ LỆ THÀNH CÔNG như:</p>\n<ul><li>Các Bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm.</li><li>Hệ thống Phòng Lab đạt chuẩn ISO 6, trang bị hệ thống màng lọc HEPA, hệ thống Clean Room lọc được 99,95% các hạt bụi mịn siêu nhỏ. Ngoài ra còn có thảm dính bụi, nội thất bằng thép không gỉ,… Trang bị đầy đủ các thiết bị tân tiến nhất, nhập khẩu trực tiếp từ nước ngoài, được kết hợp vào thiết kế của phòng vô trùng nhằm ngăn các chất gây ô nhiễm xâm nhập vào môi trường.</li><li>Hệ thống vi thao tác được áp dụng trong kĩ thuật ICSI, chẩn đoán di truyền tiền làm tổ, tối ưu khả năng thành công.</li><li>Hệ thống nhận diện bệnh nhân chống nhầm lẫn mẫu tiên tiến nhất hiện nay. Mọi quy trình đều thực hiện nghiêm ngặt kiểm tra chéo, kết hợp cùng công nghệ hiện đại nhằm tối ưu hóa qui trình và đảm bảo sự chính xác tuyệt đối.</li><li>Khu vực trữ phôi rộng rãi, đảm bảo đủ các tiêu chuẩn y tế. Hệ thống bảo quản phôi tự động, riêng lẻ từng bệnh nhân, tránh yếu tố lây nhiễm chéo, có hệ thống cảnh báo từ xa và bảo mật thông tin khách hàng.</li><li>Liên tục cập nhật công nghệ mới trong các kỹ thuật chọc hút trứng, trữ đông noãn/phôi bằng phương pháp thủy tinh hoá đạt kết quả tối ưu.</li><li>Mỗi bệnh nhân được nuôi cấy trong một buồng nuôi cấy và riêng biệt</li></ul>\n<p>Như trái tim không bao giờ ngừng đập, đội ngũ chuyên viên phôi học không quản ngày đêm, miệt mài “chăm sóc” những em bé phôi lớn lên từng ngày, để các em là những em bé khoẻ mạnh trước khi về với ba mẹ.</p>"
       }
     ],
     "extra_html": "",
@@ -291,6 +286,52 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Kim cương <span style=\"display:inline-block\">(nữ có gia đình)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-gd.webp"
+      }
+    ],
+    "equip_heading": "Thế mạnh về trang thiết bị",
+    "equip_subtitle": "Hệ thống phòng Lab hiện đại bậc nhất — “Trái tim” của Trung tâm Hỗ trợ sinh sản CIH giúp nâng cao tỷ lệ thành công.",
+    "equip_cards": [
+      {
+        "wide": true,
+        "title": "Hệ thống Phòng Lab đạt chuẩn ISO 6 & Clean Room",
+        "img": "images/equip_ivf_rtac.webp",
+        "short_desc": "Trang bị màng lọc HEPA, hệ thống Clean Room lọc 99,95% hạt bụi mịn siêu nhỏ cùng thiết bị tân tiến nhập khẩu trực tiếp từ nước ngoài.",
+        "desc": "<p>Hệ thống Phòng Lab đạt chuẩn ISO 6, trang bị hệ thống màng lọc HEPA, hệ thống Clean Room lọc được 99,95% các hạt bụi mịn siêu nhỏ. Ngoài ra còn có thảm dính bụi, nội thất bằng thép không gỉ,… Trang bị đầy đủ các thiết bị tân tiến nhất, nhập khẩu trực tiếp từ nước ngoài, được kết hợp vào thiết kế của phòng vô trùng nhằm ngăn các chất gây ô nhiễm xâm nhập vào môi trường.</p>"
+      },
+      {
+        "wide": false,
+        "title": "Hệ thống Vi thao tác ICSI & Chẩn đoán tiền làm tổ",
+        "img": "images/programs/ivf_prog_3.webp",
+        "short_desc": "Ứng dụng trong kỹ thuật ICSI và chẩn đoán di truyền tiền làm tổ (PGT), tối ưu khả năng thành công.",
+        "desc": "<p>Hệ thống vi thao tác được áp dụng trong kỹ thuật ICSI, chẩn đoán di truyền tiền làm tổ (PGT), tối ưu khả năng tạo phôi và làm tổ thành công.</p>"
+      },
+      {
+        "wide": false,
+        "title": "Buồng nuôi cấy phôi riêng biệt & Công nghệ Thủy tinh hóa",
+        "img": "images/programs/ivf_prog_4.webp",
+        "short_desc": "Mỗi bệnh nhân được nuôi cấy trong một buồng riêng biệt, kết hợp trữ đông noãn/phôi bằng phương pháp thủy tinh hóa.",
+        "desc": "<p>Liên tục cập nhật công nghệ mới trong các kỹ thuật chọc hút trứng, trữ đông noãn/phôi bằng phương pháp thủy tinh hóa đạt kết quả tối ưu. Mỗi bệnh nhân được nuôi cấy trong một buồng nuôi cấy riêng biệt.</p>"
+      },
+      {
+        "wide": false,
+        "title": "Hệ thống Nhận diện chống nhầm lẫn mẫu",
+        "img": "images/programs/ivf_prog_6.webp",
+        "short_desc": "Quy trình kiểm tra chéo nghiêm ngặt kết hợp công nghệ nhận diện hiện đại đảm bảo sự chính xác tuyệt đối.",
+        "desc": "<p>Hệ thống nhận diện bệnh nhân chống nhầm lẫn mẫu tiên tiến nhất hiện nay. Mọi quy trình đều thực hiện nghiêm ngặt kiểm tra chéo, kết hợp cùng công nghệ hiện đại nhằm tối ưu hóa quy trình và đảm bảo sự chính xác tuyệt đối.</p>"
+      },
+      {
+        "wide": false,
+        "title": "Khu vực Trữ phôi tự động & Cảnh báo từ xa 24/7",
+        "img": "images/programs/ivf_prog_7.webp",
+        "short_desc": "Bảo quản phôi tự động riêng lẻ từng bệnh nhân, tránh lây nhiễm chéo, cảnh báo từ xa và bảo mật thông tin.",
+        "desc": "<p>Khu vực trữ phôi rộng rãi, đảm bảo đủ các tiêu chuẩn y tế. Hệ thống bảo quản phôi tự động, riêng lẻ từng bệnh nhân, tránh yếu tố lây nhiễm chéo, có hệ thống cảnh báo từ xa và bảo mật thông tin khách hàng.</p>"
+      },
+      {
+        "wide": true,
+        "title": "Đội ngũ Chuyên gia Phôi học & Bác sĩ Phòng Lab giàu kinh nghiệm",
+        "img": "images/programs/ivf_real_1.webp",
+        "short_desc": "Đội ngũ bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm tận tâm “chăm sóc” phôi 24/7.",
+        "desc": "<p>Các Bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm.</p><p>Như trái tim không bao giờ ngừng đập, đội ngũ chuyên viên phôi học không quản ngày đêm, miệt mài “chăm sóc” những em bé phôi lớn lên từng ngày, để các em là những em bé khỏe mạnh trước khi về với ba mẹ.</p>"
       }
     ]
   },

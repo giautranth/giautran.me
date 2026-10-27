@@ -2333,7 +2333,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </footer>
 
-<script src="script.js?v=20261026_tablet2"></script>
+<script src="script.js?v=20261027_arrows"></script>
 <script src="news_data.js?v=1792750000"></script>
 <script src="specialty_data.js?v=20261027_gmhs"></script>
 <script>
@@ -2442,8 +2442,16 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             `;
             }).join('');
-            const docMobWrap = document.getElementById('doc-mob-wrap');
-            if (docMobWrap) docMobWrap.dispatchEvent(new Event('cih-slider-reset'));
+            const docMobPrev = document.getElementById('doc-mob-prev');
+            const docMobNext = document.getElementById('doc-mob-next');
+            if (filteredSpecDoctors.length <= 3) {
+              if (docMobPrev) docMobPrev.style.setProperty('display', 'none', 'important');
+              if (docMobNext) docMobNext.style.setProperty('display', 'none', 'important');
+            } else {
+              if (docMobPrev) docMobPrev.style.removeProperty('display');
+              if (docMobNext) docMobNext.style.removeProperty('display');
+            }
+            docsGrid.dispatchEvent(new Event('cih-slider-reset'));
           }
         }
 

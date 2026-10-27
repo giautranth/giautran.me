@@ -309,6 +309,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const visibleCount = window.innerWidth > 1024 ? 3 : (window.innerWidth > 768 ? 2 : 1);
       const maxIndex = Math.max(0, totalItems - visibleCount);
 
+      if (totalItems <= 3 && trackId === 'doc-grid-3') {
+        prevBtn.style.setProperty('display', 'none', 'important');
+        nextBtn.style.setProperty('display', 'none', 'important');
+      } else if (totalItems <= visibleCount) {
+        prevBtn.style.setProperty('display', 'none', 'important');
+        nextBtn.style.setProperty('display', 'none', 'important');
+      } else {
+        prevBtn.style.removeProperty('display');
+        nextBtn.style.removeProperty('display');
+      }
+
       // Infinite loop wrap
       if (currentIndex > maxIndex) currentIndex = 0;
       if (currentIndex < 0) currentIndex = maxIndex;
@@ -364,6 +375,8 @@ document.addEventListener('DOMContentLoaded', () => {
       currentIndex = 0;
       updateSlider();
     });
+
+    updateSlider();
   }
 
   initMobileInfiniteSlider('spec-grid', 'spec-mob-prev', 'spec-mob-next');

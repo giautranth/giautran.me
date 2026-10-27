@@ -388,7 +388,7 @@ const CIH_SPECIALTY_DATA = [
       {
         "wide": true,
         "title": "Đội ngũ Chuyên gia Phôi học & Bác sĩ Phòng Lab giàu kinh nghiệm",
-        "img": "images/programs/ivf_real_1.webp",
+        "img": "images/programs/ivf_real_1.webp?v=2",
         "short_desc": "Đội ngũ bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm tận tâm “chăm sóc” phôi 24/7.",
         "desc": "<p>Các Bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm.</p><p>Như trái tim không bao giờ ngừng đập, đội ngũ chuyên viên phôi học không quản ngày đêm, miệt mài “chăm sóc” những em bé phôi lớn lên từng ngày, để các em là những em bé khỏe mạnh trước khi về với ba mẹ.</p>"
       }

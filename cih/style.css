@@ -2739,12 +2739,12 @@ div[style*="text-align: center; margin-top:"] {
   top: 100%;
   right: 0;
   margin-top: 0.5rem;
-  background: #005f80;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0, 50, 75, 0.4);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
   list-style: none;
-  padding: 8px;
+  padding: 6px;
   min-width: 175px;
   z-index: 1000;
   display: none;
@@ -2770,12 +2770,12 @@ div[style*="text-align: center; margin-top:"] {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 10px 14px;
-  color: #ffffff !important;
-  font-size: 0.92rem;
+  padding: 9px 12px;
+  color: #1e293b !important;
+  font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none !important;
-  border-radius: 10px;
+  border-radius: 9px;
   transition: all 0.18s ease;
 }
 
@@ -2784,20 +2784,20 @@ div[style*="text-align: center; margin-top:"] {
   height: 16px;
   border-radius: 3px;
   object-fit: cover;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
   flex-shrink: 0;
 }
 
 .lang-option:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff !important;
+  background: #f0f9ff;
+  color: #007DA5 !important;
 }
 
 .lang-option.active {
-  background: #007DA5 !important;
-  color: #ffffff !important;
+  background: #f0f9ff !important;
+  color: #007DA5 !important;
   font-weight: 700;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(0, 125, 165, 0.22);
 }
 
 /* Hide Google Translate overlay & frame */

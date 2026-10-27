@@ -271,7 +271,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "8. Điều trị nam khoa (Andrology treatment)",
-        "img": "images/programs/ivf_prog_8.webp",
+        "img": "images/programs/ivf_prog_8.webp?v=2",
         "desc": "<p>Với đội ngũ bác sĩ chuyên nam khoa, trung tâm chuyên điều trị các vấn đề liên quan đến vô sinh nam và các vấn đề sinh dục nam.</p>",
         "title_html": "8. Điều trị nam khoa<br>(Andrology treatment)"
       },
@@ -2606,7 +2606,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Ung thư tinh hoàn.",
-        "img": "images/programs/ivf_prog_8.webp",
+        "img": "images/programs/ivf_prog_8.webp?v=2",
         "desc": "<p style=\"margin:0;\">Ung thư tinh hoàn.</p>",
         "title_html": "Ung thư tinh hoàn."
       },

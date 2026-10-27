@@ -2179,7 +2179,7 @@ const CIH_SPECIALTY_DATA = [
     "name": "Khoa Răng Hàm Mặt",
     "title": "Khoa Răng Hàm Mặt",
     "banner": "images/banners/banner_khoa-rang-ham-mat.webp?v=2",
-    "gallery_img": "images/HÌNH ẢNH/Phòng khám Quốc tế/28.webp",
+    "gallery_img": "images/ext_webp/khoa-rang-ham-mat.webp?v=2",
     "hero_desc": "Khoa Răng Hàm Mặt, với đội ngũ bác sĩ chuyên nghiệp, được thiết kế theo tiêu chuẩn quốc tế đảm bảo vô trùng tuyệt đối cho bệnh nhân và trang bị các máy móc hiện đại, máy cấy ghép rang Implant, máy chụp X-quang cầm tay, máy chữa tủy nội nha… Ưu thế của khoa là chuyên về Nha khoa thẩm mỹ, phục hình răng toàn sứ chất lượng cao, cấy ghép Implant và chỉnh hình răng mặt.",
     "intro_html": "<p><strong>Khoa Răng Hàm Mặt</strong>, với đội ngũ bác sĩ chuyên nghiệp, được thiết kế theo tiêu chuẩn quốc tế đảm bảo vô trùng tuyệt đối cho bệnh nhân và trang bị các máy móc hiện đại, máy cấy ghép rang Implant, máy chụp X-quang cầm tay, máy chữa tủy nội nha… Ưu thế của khoa là chuyên về Nha khoa thẩm mỹ, phục hình răng toàn sứ chất lượng cao, cấy ghép Implant và chỉnh hình răng mặt.</p>",
     "programs_heading": "Các hoạt động mũi nhọn của khoa",

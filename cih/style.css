@@ -193,9 +193,9 @@ ul{list-style:none}
 
 /* Dots */
 .hero__dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:15;display:flex;align-items:center;gap:10px}
-.hero__dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.92);border:1.5px solid #005B7F;cursor:pointer;padding:0;transition:all .25s ease;box-shadow:0 1px 4px rgba(15,23,42,0.12)}
+.hero__dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.92);border:1.5px solid #007DA5;cursor:pointer;padding:0;transition:all .25s ease;box-shadow:0 1px 4px rgba(15,23,42,0.12)}
 .hero__dot:hover{transform:scale(1.18);border-color:#007DA5}
-.hero__dot--active{background:#005B7F;border-color:#005B7F;width:10px;height:10px;border-radius:50%}
+.hero__dot--active{background:#007DA5;border-color:#007DA5;width:10px;height:10px;border-radius:50%}
 @media (max-width:768px){.hero__dots{bottom:10px;gap:8px}.hero__dot,.hero__dot--active{width:8px;height:8px}}
 
 /* Stats bar */

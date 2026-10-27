@@ -446,7 +446,7 @@ const CIH_SPECIALTY_DATA = [
     "banner": "images/banners/banner_khoa-hoi-suc-tich-cuc-so-sinh-nicu.webp?v=2",
     "gallery_img": "images/programs/right_khoa-hoi-suc-tich-cuc-so-sinh-nicu.webp",
     "hero_desc": "Khoa Săn sóc tích cực sơ sinh (NICU) điều trị cho trẻ sinh thiếu tháng hoặc trẻ sơ sinh cần chăm sóc đặc biệt. Khoa được trang bị đầy đủ thuốc và máy móc thế hệ mới như máy thở, máy theo dõi trẻ liên tục, máy bơm tiêm tự động, máy truyền dịch thế hệ mới và cả hệ thống lồng ấp, lồng kính, đèn chiếu hiện đại nhất.",
-    "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\"><em><strong>Khoa Săn sóc tích cực sơ sinh (NICU)</strong></em> điều trị cho trẻ sinh thiếu tháng hoặc trẻ sơ sinh cần chăm sóc đặc biệt. Khoa được trang bị đầy đủ thuốc và máy móc thế hệ mới như máy thở, máy theo dõi trẻ liên tục, máy bơm tiêm tự động, máy truyền dịch thế hệ mới và cả hệ thống lồng ấp, lồng kính, đèn chiếu hiện đại nhất.</p>",
+    "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\">Khoa Săn sóc tích cực sơ sinh (NICU) điều trị cho trẻ sinh thiếu tháng hoặc trẻ sơ sinh cần chăm sóc đặc biệt. Khoa được trang bị đầy đủ thuốc và máy móc thế hệ mới như máy thở, máy theo dõi trẻ liên tục, máy bơm tiêm tự động, máy truyền dịch thế hệ mới và cả hệ thống lồng ấp, lồng kính, đèn chiếu hiện đại nhất.</p>",
     "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {

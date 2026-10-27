@@ -265,7 +265,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "7. Lưu trữ trứng, tinh trùng và phôi (Embryo/ Oocyte/ Sperm Cryopreservation)",
-        "img": "images/programs/ivf_prog_7.webp",
+        "img": "images/programs/ivf_prog_7.webp?v=2",
         "desc": "<ul><li>Phôi và noãn được trữ đông bằng công nghệ thủy tinh hóa, giúp tỉ lệ sống sau rã đông đạt ~100%. Phôi sẽ được lưu trữ trong Bình trữ tự động, đảo bảo tính bảo mật và an toàn cho phôi/ noãn.</li><li>Bên cạnh đó, ngân hàng tinh trùng với số lượng mẫu có sẵn lớn, đạt các tiêu chuẩn nghiêm ngặt của Bộ Y Tế và Bệnh viện. Hỗ trợ các trường hợp vô sinh do nam giới và phụ nữ độc thân mong con.</li></ul>",
         "title_html": "7. Lưu trữ trứng, tinh trùng và phôi<br>(Embryo/ Oocyte/ Sperm Cryopreservation)"
       },
@@ -381,7 +381,7 @@ const CIH_SPECIALTY_DATA = [
       {
         "wide": false,
         "title": "Khu vực Trữ phôi tự động & Cảnh báo từ xa 24/7",
-        "img": "images/programs/ivf_prog_7.webp",
+        "img": "images/programs/ivf_prog_7.webp?v=2",
         "short_desc": "Bảo quản phôi tự động riêng lẻ từng bệnh nhân, tránh lây nhiễm chéo, cảnh báo từ xa và bảo mật thông tin.",
         "desc": "<p>Khu vực trữ phôi rộng rãi, đảm bảo đủ các tiêu chuẩn y tế. Hệ thống bảo quản phôi tự động, riêng lẻ từng bệnh nhân, tránh yếu tố lây nhiễm chéo, có hệ thống cảnh báo từ xa và bảo mật thông tin khách hàng.</p>"
       },
@@ -3506,7 +3506,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Truyền máu",
-        "img": "images/programs/ivf_prog_7.webp",
+        "img": "images/programs/ivf_prog_7.webp?v=2",
         "desc": "<p>Xét nghiệm nhóm máu và những kháng thể bất thường (nếu có trong máu người bệnh, những kháng thể này có thể gây kết tụ hồng cầu người cho). Những xét nghiệm này rất cần thiết cho bệnh nhân phẫu thuật có thể phải truyền máu. Chúng tôi cung cấp điều kiện an toàn cho bệnh nhân cần phải truyền máu và các sản phẩm của máu.</p>",
         "title_html": "Truyền máu"
       },

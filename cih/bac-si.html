@@ -16,14 +16,36 @@
     /* Bác sĩ page specific styles */
     .filter-bar {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
       background: var(--c-white);
       padding: 1.5rem;
       border-radius: var(--r-md);
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--c-border);
       margin-bottom: 2.5rem;
+    }
+    .filter-search-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .filter-search-wrap .filter-input {
+      padding-right: 2.4rem;
+      cursor: text;
+    }
+    .filter-search-icon {
+      position: absolute;
+      right: 0.85rem;
+      color: #64748b;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+    }
+    @media (max-width: 992px) {
+      .filter-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
     .filter-group {
       display: flex;
@@ -397,8 +419,21 @@
       <h1 class="timeline-section-title" style="text-align: left; margin-bottom: 0; font-size: 1.8rem; font-weight: 800; color: #007DA5;">Bác sĩ</h1>
     </div>
 
-    <!-- Filter bar (Specialty, Position, Degree) -->
+    <!-- Filter bar (Search by Name, Specialty, Position, Degree) -->
     <div class="filter-bar">
+      <div class="filter-group">
+        <label class="filter-label" for="filter-name">Tìm theo tên bác sĩ</label>
+        <div class="filter-search-wrap">
+          <input type="search" id="filter-name" class="filter-select filter-input" placeholder="Nhập tên bác sĩ..." autocomplete="off" />
+          <span class="filter-search-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+        </div>
+      </div>
+
       <div class="filter-group">
         <label class="filter-label" for="filter-specialty">Chuyên khoa</label>
         <select id="filter-specialty" class="filter-select">
@@ -1508,6 +1543,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <script src="script.js?v=20261026_tablet2"></script>
 <script>
   function initDoctorCatalog() {
+    const nameInput = document.getElementById('filter-name');
     const specialtySelect = document.getElementById('filter-specialty');
     const roleSelect = document.getElementById('filter-role');
     const degreeSelect = document.getElementById('filter-degree');
@@ -1520,15 +1556,28 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPage = 1;
     let totalPages = 1;
 
+    const normalizeVi = (str) => (str || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/\s+/g, ' ')
+      .trim();
+
     // Check search URL parameter if any
     const urlParams = new URLSearchParams(window.location.search);
-    const searchQuery = (urlParams.get('search') || urlParams.get('s') || '').trim().toLowerCase();
+    const searchQuery = (urlParams.get('search') || urlParams.get('s') || '').trim();
+    if (searchQuery && nameInput) {
+      nameInput.value = searchQuery;
+    }
     const urlSpecialty = (urlParams.get('specialty') || urlParams.get('khoa') || '').trim().toLowerCase();
     if (urlSpecialty && specialtySelect) {
       specialtySelect.value = urlSpecialty;
     }
 
     const updatePaginationAndDisplay = () => {
+      const typedName = nameInput ? nameInput.value.trim().toLowerCase() : '';
+      const typedNameNorm = normalizeVi(typedName);
       const selectedSpecialty = specialtySelect ? specialtySelect.value.trim().toLowerCase() : '';
       const selectedRole = roleSelect ? roleSelect.value.trim().toLowerCase() : '';
       const selectedDegree = degreeSelect ? degreeSelect.value.trim().toLowerCase() : '';
@@ -1539,10 +1588,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const degree = (card.getAttribute('data-degree') || '').toLowerCase();
         const name = (card.querySelector('.doc-card-v2__name')?.textContent || '').toLowerCase();
         const pos = (card.querySelector('.doc-card-v2__position')?.textContent || '').toLowerCase();
-        const fullText = specSlug + ' ' + name + ' ' + pos;
+        const nameNorm = normalizeVi(name);
+        const fullTextNorm = normalizeVi(specSlug + ' ' + name + ' ' + pos);
 
-        // Search query filter
-        if (searchQuery && !fullText.includes(searchQuery)) {
+        // Name / search query filter
+        if (typedNameNorm && !nameNorm.includes(typedNameNorm) && !fullTextNorm.includes(typedNameNorm)) {
           return false;
         }
 
@@ -1648,6 +1698,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    if (nameInput) {
+      nameInput.addEventListener('input', () => { currentPage = 1; updatePaginationAndDisplay(); });
+      nameInput.addEventListener('search', () => { currentPage = 1; updatePaginationAndDisplay(); });
+    }
     if (specialtySelect) specialtySelect.addEventListener('change', () => { currentPage = 1; updatePaginationAndDisplay(); });
     if (roleSelect) roleSelect.addEventListener('change', () => { currentPage = 1; updatePaginationAndDisplay(); });
     if (degreeSelect) degreeSelect.addEventListener('change', () => { currentPage = 1; updatePaginationAndDisplay(); });

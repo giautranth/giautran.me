@@ -1333,7 +1333,7 @@
   <div class="container">
     <div class="section__header" style="margin-bottom: 1.5rem;">
       <div class="section__header-left">
-        <h2 class="section__title" id="spec-prog-heading" style="margin-bottom: 0;">Chương trình khám &amp; Điều trị</h2>
+        <h2 class="section__title" id="spec-prog-heading" style="margin-bottom: 0;">Các hoạt động mũi nhọn của khoa</h2>
       </div>
     </div>
 
@@ -2300,7 +2300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261026_tablet2"></script>
 <script src="news_data.js?v=1792750000"></script>
-<script src="specialty_data.js?v=20261026_cards26_v8"></script>
+<script src="specialty_data.js?v=20261027_heading"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
@@ -2352,7 +2352,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (spec.prog_cards && spec.prog_cards.length > 0) {
             progSec.style.display = '';
             if (progHeading) {
-              progHeading.innerHTML = spec.programs_heading || 'Các Hoạt Động Mũi Nhọn Của Khoa';
+              progHeading.innerHTML = spec.programs_heading || 'Các hoạt động mũi nhọn của khoa';
             }
             specProgData = spec.prog_cards;
             progGrid.className = 'spec-prog-grid';

@@ -7,7 +7,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/phu_san_gioi_thieu.webp?v=2",
     "hero_desc": "Khoa Phụ Sản là một trong 4 khoa mũi nhọn của Bệnh viện Quốc tế City, chuyên cung cấp các dịch vụ chăm sóc sức khỏe cho sản phụ trong suốt thai kỳ. Bên cạnh đó là các dịch vụ toàn diện và hiệu quả trong chẩn đoán và điều trị các bệnh lý thông thường hoặc ác tính của cơ quan sinh dục nữ.",
     "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\">Sở hữu đội ngũ bác sĩ được đào tạo chuyên sâu, có nhiều năm kinh nghiệm trong lĩnh vực chăm sóc sức khỏe phụ nữ, Khoa Phụ sản luôn mang đến những lời khuyên hữu ích và phương pháp điều trị hiệu quả nhất cho các mẹ bầu. Bên cạnh đó, Khoa Phụ sản cũng được trang bị các thiết bị hiện đại như: máy soi cổ tử cung, chụp nhũ ảnh kỹ thuật số, siêu âm 4D…, phòng thí nghiệm chính xác cho kết quả nhanh chóng, giúp tầm soát, phát hiện sớm và điều trị ung thư vú, ung thư cổ tử cung – là hai bệnh ung thư có tỉ lệ mắc cao nhất trong các loại ung thư của phụ nữ.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Chương trình tầm soát bệnh lý của vú và ung thư vú",
@@ -302,7 +302,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/Website/nhi-khoa/1784087275401_1272607247884588763_1272607247884588763_cb03d6466e89cc5d61965640d8b7f443.webp",
     "hero_desc": "Khoa Nhi Bệnh viện Quốc tế City phát triển tương xứng với một bệnh viện hiện đại, đạt tiêu chuẩn chất lượng theo mô hình bệnh viện quốc tế. Chúng tôi đáp ứng nhu cầu được khám chữa bệnh chất lượng cao của bệnh nhi và gia đình với đội ngũ nhân viên y tế nhiệt tình, năng động, sáng tạo, có trình độ và kỹ năng nhi khoa cùng với một môi trường an toàn, thân thiện.",
     "intro_html": "<p>Đặc biệt Khoa nhi có đầy đủ chức năng hoạt động cả trong giờ hành trình và ngoài giờ.</p>\n<h4>Khoa Nhi Tổng Quát</h4>\n<p>Khoa Nhi tổng quát điều trị nội khoa và phẫu thuật cho trẻ dưới 16 tuổi.</p>\n<p>Đội ngũ bác sĩ của chúng tôi đều có kinh nghiệm làm việc lâu năm, tham gia nhiều lớp huấn luyện trong và ngoài nước, có tay nghề cao trong cả nhi khoa tổng quát và nhi khoa chuyên sâu.</p>\n<p>Đội ngũ điều dưỡng được đào tạo chuyên sâu về kỹ thuật chăm sóc trẻ. Với mong muốn là “bệnh viện thân thiện với trẻ em”, khoa luôn thiết kế phòng bệnh sáng sủa, tiện nghi cho việc chăm sóc trẻ cùng những khu vực vui chơi dành riêng cho trẻ.</p>\n<p>Ngoài ra, chế độ dinh dưỡng được xây dựng phù hợp từng lứa tuổi về chất lượng cũng như số lượng và theo nhu cầu dinh dưỡng, nhu cầu bệnh lý cho trẻ.</p>\n<p><em>Không gian vui chơi rộng rãi, thoáng mát sẽ giúp bé luôn vui vẻ, thoải mái khi đến khám – chích ngừa.</em></p>\n<p><em>Bác sĩ luôn ân cần, nhẹ nhàng giúp con có tâm lý thoải mái nhất.</em></p>\n<h4><strong>Thời gian khám bệnh trong giờ hành chính</strong></h4>\n<p><strong>Từ thứ Hai đến thứ Sáu: </strong></p>\n<ul><li>Buổi Sáng từ 7.30 – 12.00.</li><li>Buổi chiều từ: 13:00 đến 16:30.</li></ul>\n<h4><strong>Thứ Bảy</strong></h4>\n<ul><li>Buổi Sáng từ 7:30 – 11:30.</li><li>Chiều: Nghỉ.</li></ul>\n<h4><strong>Phòng khám nhi ngoài giờ</strong></h4>\n<ul><li>Thứ Bảy: Từ 13:00 – 16:00.</li><li>Chủ Nhật: Sáng từ 8:00 – 11:00.</li></ul>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Nhi khoa sơ sinh: tầm soát dị tật bẩm sinh, kiểm tra trước khi xuất viện, theo dõi và tái khám theo lịch và chủng ngừa theo định kỳ.",
@@ -447,7 +447,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-hoi-suc-tich-cuc-so-sinh-nicu.webp",
     "hero_desc": "Khoa Săn sóc tích cực sơ sinh (NICU) điều trị cho trẻ sinh thiếu tháng hoặc trẻ sơ sinh cần chăm sóc đặc biệt. Khoa được trang bị đầy đủ thuốc và máy móc thế hệ mới như máy thở, máy theo dõi trẻ liên tục, máy bơm tiêm tự động, máy truyền dịch thế hệ mới và cả hệ thống lồng ấp, lồng kính, đèn chiếu hiện đại nhất.",
     "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\"><em><strong>Khoa Săn sóc tích cực sơ sinh (NICU)</strong></em> điều trị cho trẻ sinh thiếu tháng hoặc trẻ sơ sinh cần chăm sóc đặc biệt. Khoa được trang bị đầy đủ thuốc và máy móc thế hệ mới như máy thở, máy theo dõi trẻ liên tục, máy bơm tiêm tự động, máy truyền dịch thế hệ mới và cả hệ thống lồng ấp, lồng kính, đèn chiếu hiện đại nhất.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Nhi khoa sơ sinh: tầm soát dị tật bẩm sinh, kiểm tra trước khi xuất viện, theo dõi và tái khám theo lịch và chủng ngừa theo định kỳ.",
@@ -552,7 +552,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-kham-tong-quat-ehs.webp",
     "hero_desc": "Kiểm tra sức khỏe tổng quát đóng một vai trò quan trọng trong việc tầm soát mầm bệnh ngay cả trong trường hợp bạn không có bất kì dấu hiệu hay triệu chứng nào của bệnh. Việc phát hiện sớm và có biện pháp can thiệp điều trị đúng cách sẽ giúp làm giảm nguy cơ mắc bệnh.",
     "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\">Phòng khám có các gói khám sức khỏe tổng quát được thiết kế phù hợp với yêu cầu khác nhau của mỗi người. Với đội ngũ bác sĩ và điều dưỡng viên tận tâm, giàu kinh nghiệm, chúng tôi sẽ giúp cho bạn tìm được gói khám phù hợp nhất.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Các chương trình khám sức khỏe định kỳ cho cá nhân và gia đình.",
@@ -722,7 +722,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-noi-tong-hop.webp",
     "hero_desc": "Khoa Nội Tổng Quát thuộc Bệnh viện Quốc tế City là một khoa lâm sàng điều trị bệnh nhân. Hiện tại khoa toạ lạc tại lầu 5 của bệnh viện với hệ thống phòng 1 giường và phòng 2 giường. Ngoài ra, khoa có một phòng bệnh cách ly với áp lực âm dành cho những bệnh lây truyền qua đường không khí (airborn diseases). Khoa có các phòng khám nội khoa tổng quát, hô hấp, tiêu hóa, tim mạch, nội tiết, da liễu để khám và nhận các bệnh điều trị nội trú.",
     "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\">Khoa Nội Tổng Quát thuộc Bệnh viện Quốc tế City là một khoa lâm sàng điều trị bệnh nhân. Hiện tại khoa toạ lạc tại lầu 5 của bệnh viện với hệ thống phòng 1 giường và phòng 2 giường. Ngoài ra, khoa có một phòng bệnh cách ly với áp lực âm dành cho những bệnh lây truyền qua đường không khí (airborn diseases). Khoa có các phòng khám nội khoa tổng quát, hô hấp, tiêu hóa, tim mạch, nội tiết, da liễu để khám và nhận các bệnh điều trị nội trú.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Ngoài các phương tiện thăm khám và xử trí cấp cứu, khoa còn áp dụng các phương tiện kỹ thuật cao của bệnh viện Quốc tế City như: CT, MRI, MRA, DSA, siêu âm tim mạch, siêu âm tổng quát, nội soi hô hấp, nội soi tiêu hóa, các xét nghiệm về sinh hóa, vi sinh, các xét nghiệm về sinh học phân tử trong chẩn đoán và điều trị bệnh để đạt được kết quả điều trị tối ưu.",
@@ -882,7 +882,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/ext_webp/Khoa-than-kinh_1_30e49880.webp",
     "hero_desc": "Khoa Thần kinh Bệnh viện Quốc tế City phẫu thuật và điều trị các trường hợp liên quan đến: Chấn thương sọ não, Chấn thương cột sống và tủy sống, Chấn thương thần kinh ngoại biên, Bệnh lý não, Bệnh lý cột sống tủy sống, Bệnh lý các dây thần kinh ngoại biên…",
     "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\">Ngoài ra, Bệnh viện Quốc tế City còn tư vấn và điều trị các bệnh về sọ não, cột sống và tủy sống, chấn thương thần kinh ngoại biên, bệnh lý não, bệnh lý cột sống tủy sống như thoát vị đĩa đệm, thoái hóa cột sống…</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Tầm soát, phòng ngừa hoặc điều trị tai biến mạch máu não (Đột quỵ).",
@@ -1048,7 +1048,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-tim-mach.webp",
     "hero_desc": "Khoa Tim mạch Bệnh viện Quốc tế City cung cấp dịch vụ khám, tầm soát, tư vấn và điều trị ngoại trú, nội trú các bệnh tim mạch.",
     "intro_html": "<p class=\"opt1-intro__lead\" style=\"margin-bottom:0;\">Khoa Tim mạch Bệnh viện Quốc tế City cung cấp dịch vụ khám, tầm soát, tư vấn và điều trị ngoại trú, nội trú các bệnh tim mạch.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Điện tâm đồ",
@@ -1172,7 +1172,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/ext_webp/Khoa-noi-soi-2_b6f99ea2.webp",
     "hero_desc": "Trung Tâm Tiêu hóa – Nội soi Bệnh viện Quốc tế City được trang bị đầy đủ các phương tiện máy móc thiết bị cho phép nội soi chẩn đoán và điều trị dưới an thần an toàn, giúp người bệnh không còn sợ nội soi.",
     "intro_html": "<p>Đơn vị nội soi cũng được thiết kế theo tiêu chuẩn quốc tế, giúp người bệnh tránh được những mầm bệnh nguy hiểm lây truyền qua dụng cụ nội soi, tiếp xúc với các hóa chất khử khuẩn độc hại, cũng như đảm bảo cho người bệnh được riêng tư, thoải mái, an toàn khi đến nội soi.</p>\n<p>Khoa Tiêu hóa &amp; Nội soi của <strong>Bệnh viện Quốc tế City</strong> được thiết kế để đáp ứng tính riêng tư, tiện nghi và sự an toàn cho người bệnh. Bên cạnh đó là sự tuân thủ các nguyên tắc nghiêm ngặt trong tiệt khuẩn và khử khuẩn để ngăn chặn sự lây lan mầm bệnh qua dụng cụ nội soi cho bệnh nhân và nhân viên y tế:</p>\n<ul><li>Các khu nội soi, trước soi / sau soi, rửa ống soi nằm tách biệt.</li><li>Ống soi được rửa bằng máy tự động</li><li>Kềm sinh thiết và dụng cụ hỗ trợ nội soi được tiệt khuẩn bằng khí EO và Plasma</li><li>Sử dụng CO2 trong nội soi</li><li>Hệ thống lọc không khí và thông khí áp lực âm: Lọc không khí, tạo áp lực âm và hoán chuyển không khí nên hoàn toàn sạch và không có mùi hóa chất khử khuẩn thường thấy tại đa số các trung tâm nội soi.</li></ul>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Trung tâm",
+    "programs_heading": "Các hoạt động mũi nhọn của trung tâm",
     "prog_cards": [
       {
         "title": "Nội soi không đau (an thần, dùng khí Co2)",
@@ -1384,7 +1384,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-ngoai-tong-quat.webp",
     "hero_desc": "Khoa Ngoại tổng quát của Bệnh viện Quốc tế City là khoa chuyên sâu, chuyên điều trị các bệnh lý về đường tiêu hóa, và Gan – Mật – Tụy. Cùng với hệ thống máy móc và trang thiết bị hiện đại của bệnh viện, Khoa Ngoại tổng quát: Gan – Mật – Tụy thực hiện khám, tư vấn, chẩn đoán và điều trị, trong đó có cả phẫu thuật và can thiệp nội soi.",
     "intro_html": "<p>Với đội ngũ Y – Bác sĩ giàu tâm huyết, giỏi tay nghề cùng dịch vụ chuẩn quốc tế, chúng tôi cam kết mang lại hiệu quả và sự thoải mái cho khách hàng khi đến thăm, khám và điều trị tại bệnh viện.</p>\n<p>– Khám tư vấn với các bác sĩ chuyên khoa, thực hiện các chẩn đoán chức năng với quy trình chuẩn giảm thiểu sự khó chịu và rủi ro cho người bệnh.</p>\n<p>– Can thiệp điều trị với các phương pháp tiên tiến với sự hỗ trợ của trang thiết bị hiện đại như: Phẫu thuật nội soi, dao mổ siêu âm (Harmonic), dao cắt gan Cusa, nội soi mật – tụy ngược dòng (ERCP), mổ trĩ với laser…</p>\n<p>– Hệ thống phòng mổ và thủ thuật hiện đại vô trùng đảm bảo bằng hệ thống lọc không khí đạt chuẩn quốc tế, giảm thiểu nhiễm trùng sau mổ ở mức tối thiểu.</p>\n<p>– Quy trình an toàn người bệnh được tuân thủ chặt chẽ, giảm thiểu sai sót y khoa với hệ thống quản lý chất lượng nghiêm ngặt và cải tiến liên tục.</p>\n<p>– Phòng khám tư vấn: gồm 5 phòng khám và 1 phòng thủ thuật rộng, kín đáo để khám tư vấn các bệnh tiêu hóa – Gan Mật Tụy. Phòng khám ngay bên cạnh Khoa Nội soi tiêu hóa, thuận tiện cho việc nội soi dạ dày, nội soi đại tràng, chẩn đoán bệnh hay tầm soát ung thư đường tiêu hóa.</p>\n<p>– Khoa điều trị nội trú: là nơi điều trị nội trú cho bệnh nhân có chỉ định theo dõi, chăm sóc nội trú hoặc chăm sóc sau mổ. Với hệ thống phòng đơn hoặc phòng đôi tích hợp hệ thống oxy, hút trung tâm và hệ thống gọi điều dưỡng tại giường giúp người bệnh và thân nhân có thể gọi nhân viên y tế ngay tại phòng bệnh.</p>\n<p>– Khoa phẫu thuật: gồm 10 phòng mổ với hệ thống chống nhiễm khuẩn hiện đại đạt chuẩn quốc tế. Hệ thống máy phẫu thuật nội soi mới nhất, các dao mổ siêu âm, Cusa, đốt lạnh, laser … đảm bảo cầm máu tốt trong quá trình mổ.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Khám tư vấn, tầm soát & Phẫu thuật nội soi ít xâm hại",
@@ -1491,7 +1491,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-hoi-suc-tich-cuc-icu.webp",
     "hero_desc": "Đội ngũ bác sĩ , điều dưỡng chuyên môn cao có nhiều năm kinh nghiệm từ các bệnh viện danh giá trong thành phố, luôn tận tâm và thân thiện.",
     "intro_html": "<p>Khoa ICU của Bệnh viện Quốc tế City có quy mô lớn với 20 giường bệnh được trang bị thiết bị hiện đại. Máy thở và monitor theo dõi bệnh nhân thế hệ mới, hệ thống hút, máy phun khí dung…  được trang bị đầy đủ cho mỗi phòng bệnh. Hệ thống Monitor trung tâm kết nối với các Monitor từ phòng bệnh giúp bác sĩ hồi sức thuận tiện theo dõi toàn bộ bệnh nhân trong khoa. Kỹ thuật lọc máu liên tục thực hiện ngay tại khoa cho những bệnh nhân có chỉ định. Đứng đầu là ThS. BS. CKII. Nguyễn Văn Nhôm, Trưởng Khoa Cấp Cứu – Hồi sức Tích cực, Bệnh viện Quốc tế City cùng với đội ngũ nhân viên y tế giàu kinh nghiệm, chuyên môn cao và luôn thân thiện.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Khoa có hệ thống phòng bệnh riêng biệt, phòng bệnh rộng rãi, được thiết kế đúng nguyên tắc thiết kế công trình y tế của Viện kiến trúc Hoa kỳ và thế giới. Khoa có hệ thống phòng cách ly áp lực âm, tuân thủ nghiêm ngặt các chính sách kiểm soát nhiễm khuẩn, hạn chế tối đa tình trạng nhiễm khuẩn bệnh viện.",
@@ -1615,7 +1615,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-chan-thuong-chinh-hinh.webp",
     "hero_desc": "Khoa Chấn Thương Chỉnh Hình của Bệnh viện Quốc tế City mang lại cho khách hàng các dịch vụ khám và điều trị các chấn thương của hệ cơ xương khớp, như gãy xương, trật khớp và các bệnh lý về cơ xương khớp như viêm khớp, bướu xương, thoái hóa khớp gối, khớp háng.",
     "intro_html": "<p>Với ước vọng giúp người bệnh “Hết đau nhức &amp; sống vui khỏe”, các bác sĩ, điều dưỡng và chuyên gia vật lý trị liệu luôn đào sâu cập nhật kỹ thuật điều trị mới nhằm đồng hành giúp bệnh nhân trở lại với cuộc sống bình thường, năng động, không còn đau đớn.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Điều trị gãy xương – trật khớp chi trên, chi dưới, xương chậu và cột sống.",
@@ -1738,7 +1738,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-can-thiep-mach-mau.webp",
     "hero_desc": "Đơn vị Can Thiệp Mạch Máu tại Bệnh viện Quốc tế City được đầu tư các trang thiết bị y khoa tân tiến, hiện đại trong ngành cùng đội ngũ bác sĩ trong và ngoài nước có nhiều năm kinh nghiệm làm việc trong lĩnh vực can thiệp mạch máu. Đồng thời, khoa còn sở hữu cơ sở vật chất tiện nghi, sang trọng, được thiết kế theo chuẩn quốc tế, cam kết mang lại hiệu quả điều trị tối ưu cùng sự thoải mái tối đa cho khách hàng và bệnh nhân.",
     "intro_html": "<p>Hệ thống DSA của Bệnh viện Quốc tế City thuộc hệ thống Artis zee của Siemens, là một trong những thiết bị chụp mạch máu xóa nền tân tiến.</p>\n<p>Nền tảng PURE® tiên tiến tích hợp cung cấp khả năng quản lý liều lượng phóng xạ tối ưu và các ứng dụng lâm sàng mới nhất, đảm bảo tiêu chuẩn công nghệ hình ảnh chuẩn xác.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Gói CLEAR &amp; CARE",
@@ -1835,7 +1835,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/ext_webp/Tiet-nieu-2-1_3203924d.webp",
     "hero_desc": "Khoa Tiết Niệu của Bệnh Viện Quốc Tế City là nơi quy tụ đội ngũ bác sĩ chuyên môn cao và trang thiết bị hiện đại, cam kết mang đến dịch vụ y tế toàn diện, an toàn và hiệu quả cho người bệnh.",
     "intro_html": "<p>Khoa Tiết Niệu của Bệnh Viện Quốc Tế City là nơi quy tụ đội ngũ bác sĩ chuyên môn cao và trang thiết bị hiện đại, cam kết mang đến dịch vụ y tế toàn diện, an toàn và hiệu quả cho người bệnh.</p>\n<p>Khoa chuyên thăm khám và điều trị các bệnh lý tiết niệu cho cả nam và nữ như:</p>\n<p>Với sứ mệnh chăm sóc sức khỏe tiết niệu toàn diện, Khoa Tiết Niệu tại Bệnh Viện Quốc Tế City luôn sẵn sàng đồng hành cùng bạn trong hành trình điều trị và cải thiện chất lượng cuộc sống.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Sỏi thận, sỏi niệu quản, sỏi bàng quang và sỏi niệu đạo.",
@@ -1976,7 +1976,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/tmh/2.webp",
     "hero_desc": "Trung tâm Tai Mũi Họng chuyên sâu &amp; Phẫu thuật đầu cổ của Bệnh viện Quốc tế City tự hào là đơn vị đủ nâng lực thực hiện các kỹ thuật đầu cổ phức tạp, điều trị bệnh lý tai mũi họng chuyên sâu. Với định hướng cá thể hóa và phối hợp liên chuyên khoa, đội ngũ bác sĩ giàu kinh nghiệm của Trung tâm sẵn sàng đồng hành cùng người bệnh đến khi tự tin trở lại cuộc sống bình thường.",
     "intro_html": "<p><strong>Trung tâm Tai Mũi Họng chuyên sâu &amp; Phẫu thuật đầu cổ của Bệnh viện Quốc tế City</strong> tự hào là đơn vị đủ nâng lực thực hiện các kỹ thuật đầu cổ phức tạp, điều trị bệnh lý tai mũi họng chuyên sâu. Với định hướng cá thể hóa và phối hợp liên chuyên khoa, đội ngũ bác sĩ giàu kinh nghiệm của Trung tâm sẵn sàng đồng hành cùng người bệnh đến khi tự tin trở lại cuộc sống bình thường.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Trung Tâm",
+    "programs_heading": "Các hoạt động mũi nhọn của trung tâm",
     "prog_cards": [
       {
         "title": "Khám và điều trị bệnh lý thông thường",
@@ -2057,7 +2057,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/ext_webp/Khoa-Mat_07ae2744.webp",
     "hero_desc": "Khoa mắt của Bệnh viện Quốc tế City cung cấp dịch vụ chăm sóc mắt toàn diện cho bệnh nhân nội và ngoại trú. Đội ngũ bác sĩ nhãn khoa cam kết phục vụ chăm sóc và bảo vệ đôi mắt sáng cho người bệnh. Khoa cung cấp đa dạng các dịch vụ khám và điều trị các bệnh mắt thường gặp cũng như các bệnh lý về mắt như: đục thủy tinh thể, Glaucoma…",
     "intro_html": "<p><strong>Khoa mắt</strong> của Bệnh viện Quốc tế City cung cấp dịch vụ chăm sóc mắt toàn diện cho bệnh nhân nội và ngoại trú. Đội ngũ bác sĩ nhãn khoa cam kết phục vụ chăm sóc và bảo vệ đôi mắt sáng cho người bệnh. Khoa cung cấp đa dạng các dịch vụ khám và điều trị các bệnh mắt thường gặp cũng như các bệnh lý về mắt như: đục thủy tinh thể, Glaucoma…</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Khoa Mắt ứng dụng các trang thiết bị chẩn đoán hình ảnh hiện đại nhằm phát hiện sớm các bệnh về mắt.",
@@ -2153,7 +2153,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/HÌNH ẢNH/Phòng khám Quốc tế/28.webp",
     "hero_desc": "Khoa Răng Hàm Mặt, với đội ngũ bác sĩ chuyên nghiệp, được thiết kế theo tiêu chuẩn quốc tế đảm bảo vô trùng tuyệt đối cho bệnh nhân và trang bị các máy móc hiện đại, máy cấy ghép rang Implant, máy chụp X-quang cầm tay, máy chữa tủy nội nha… Ưu thế của khoa là chuyên về Nha khoa thẩm mỹ, phục hình răng toàn sứ chất lượng cao, cấy ghép Implant và chỉnh hình răng mặt.",
     "intro_html": "<p><strong>Khoa Răng Hàm Mặt</strong>, với đội ngũ bác sĩ chuyên nghiệp, được thiết kế theo tiêu chuẩn quốc tế đảm bảo vô trùng tuyệt đối cho bệnh nhân và trang bị các máy móc hiện đại, máy cấy ghép rang Implant, máy chụp X-quang cầm tay, máy chữa tủy nội nha… Ưu thế của khoa là chuyên về Nha khoa thẩm mỹ, phục hình răng toàn sứ chất lượng cao, cấy ghép Implant và chỉnh hình răng mặt.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Nha khoa tổng quát",
@@ -2262,7 +2262,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-cap-cuu.webp",
     "hero_desc": "Khoa Cấp cứu Bệnh viện Quốc tế City hoạt động 24/24 vào tất cả các ngày trong tuần, kể cả thứ 7 – Chủ nhật cũng như các ngày Lễ/Tết trong năm.",
     "intro_html": "<p>Bệnh viện Quốc tế City đã thiết kế xây dựng khu vực khoa Cấp cứu rộng lớn, đầy đủ tiện nghi, trang thiết bị hiện đại theo đúng chuẩn quốc tế với sức chứa đến 10 giường bệnh tọa lạc tại tầng trệt của bệnh viện, lối ra vào khoa rộng rãi, thông thoáng đảm bảo quá trình xuất xe thuận lợi, kịp thời.</p>\n<p>Có rất nhiều tình huống bệnh nhân cần được cứu chữa khẩn cấp như các trường hợp ngộ độc thuốc – hóa chất, chấn thương; bệnh lý ngoại khoa khẩn cấp như viêm ruột thừa cấp, tắc ruột, thủng ruột, xuất huyết tiêu hóa…; bệnh lý nội khoa khẩn cấp như tai biến mạch máu não, nhồi máu cơ tim cấp, hôn mê tiểu đường, nhiễm trùng huyết…, bệnh nhân cần được chẩn đoán – điều trị chính xác và ngay lập tức.</p>\n<p>Tại <em><strong>Bệnh viện Quốc tế City</strong></em>, đội ngũ bác sĩ, điều dưỡng, kỹ thuật viên với nhiều kinh nghiệm về các bệnh lý cấp cứu, cùng các kỹ thuật chẩn đoán và hồi sức hiện đại tiên tiến, trong môi trường chữa trị bệnh hoàn hảo, sẵn sàng phục vụ người bệnh.</p>\n<h4>Đội ngũ y bác sĩ khoa Cấp cứu luôn đồng hành cùng bạn và gia đình trong mọi tình huống khẩn cấp</h4>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Chẩn đoán và điều trị tất cả bệnh lý cấp cứu.",
@@ -2463,7 +2463,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/ext_webp/9_ed9a2e98.webp",
     "hero_desc": "Tại Bệnh viện Quốc tế City, chúng tôi có điều khiện thuận lợi để phục vụ tất cả các bệnh nhân nội trú và ngoại trú. Khoa Xét nghiệm sở hữu những máy móc tự động, tối tân nhất, chất lượng nhất và là máy móc của chính hãng. Bên cạnh đó, chúng tôi có một đội ngũ các bác sĩ và kỹ thuật viên tận tụy, chuyên nghiệp cung cấp những kết quả xét nghiệm chính xác, đáng tin cậy và trong thời gian ngắn nhất.",
     "intro_html": "<p>Chúng tôi vận hành Khoa Xét nghiệm với mục tiêu cung cấp những kết quả xét nghiệm tin cậy nhất và kịp thời, hỗ trợ tối đa các bác sĩ lâm sàng trong chẩn đoán và điều trị bệnh.</p>\n<p>Khoa Xét nghiệm được chia làm 6 chuyên khoa khác nhau:</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Sinh hóa lâm sàng",
@@ -2582,7 +2582,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-chan-doan-hinh-anh.webp",
     "hero_desc": "Là chuyên ngành Y khoa rất quan trọng, sử dụng các kỹ thuật hình ảnh (như X quang, Siêu âm, Chụp cắt lớp xử lý vi tính – CT, Cộng hưởng từ – MRI…) cho phép bác sĩ “thấy” được hình thái và chức năng các cấu trúc trong cơ thể người. Những hình ảnh này là cơ sở thiết yếu giúp bác sỹ chẩn đoán và điều trị các bệnh trong cơ thể.",
     "intro_html": "<p>Là chuyên ngành Y khoa rất quan trọng, sử dụng các kỹ thuật hình ảnh (như X quang, Siêu âm, Chụp cắt lớp xử lý vi tính – CT, Cộng hưởng từ – MRI…) cho phép bác sĩ “thấy” được hình thái và chức năng các cấu trúc trong cơ thể người. Những hình ảnh này là cơ sở thiết yếu giúp bác sỹ chẩn đoán và điều trị các bệnh trong cơ thể.</p>\n<p>Khoa Chẩn đoán Hình ảnh thực hiện các ứng dụng lâm sàng và kỹ thuật hình ảnh mới trên thế giới cũng như các kỹ thuật qui ước một cách nhanh chóng, an toàn, hiệu quả và chẩn đoán chính xác.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Đội Ngũ Nhân Lực Hùng Hậu",
@@ -3023,7 +3023,7 @@ const CIH_SPECIALTY_DATA = [
     "gallery_img": "images/programs/right_khoa-gay-me-hoi-suc.webp",
     "hero_desc": "Gây mê hồi sức là một phần thiết yếu của y khoa hiện đại trong điều trị phẫu thuật. Những tiến bộ mới đây trong Gây mê đã giúp cho những cuộc phẫu thuật phức tạp trở nên an toàn hơn và hiệu quả hơn. Bác sĩ Gây mê hồi sức không thể thiếu trong bất cứ cuộc phẫu thuật nào, cũng như trong một số thủ thuật chẩn đoán và điều trị khác như thủ thuật nội soi ống tiêu hóa, hay gây tê ngoài màng cứng giúp đẻ không đau trong sản khoa. Nhiều kỹ thuật mới trong vô cảm vùng và kiểm soát đau đang giữ vai trò quan trọng trong việc cải thiện chất lượng cuộc sống của bệnh nhân chúng tôi.",
     "intro_html": "<p>Các bác sĩ <strong>Gây mê hồi sức</strong> giàu kinh nghiệm của bệnh viện quốc tế City đã được đào tạo tại các bệnh viện hàng đầu trên thế giới. Chúng tôi là những chuyên gia trong việc chăm sóc bệnh nhân chu phẫu và kiểm soát các cơn đau.</p>\n<p>Mục tiêu của khoa Gây mê hồi sức: <strong>“SẴN SÀNG VÌ NGƯỜI BỆNH”</strong>.</p>",
-    "programs_heading": "Các Hoạt Động Mũi Nhọn Của Khoa",
+    "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {
         "title": "Đánh giá và tham vấn trước gây mê để mổ.",

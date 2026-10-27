@@ -1251,7 +1251,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-dinh-duc-minh",
         "name": "BS.CKII. Đinh Đức Minh",
         "title": "Bác sĩ chuyên khoa Nội soi",
-        "img": "images/ext_webp/51-768x768_41e40e89.webp"
+        "img": "images/ext_webp/51-768x768_41e40e89.webp?v=2"
       }
     ],
     "packages": [

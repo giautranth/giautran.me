@@ -189,7 +189,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "3. Thụ tinh trong ống nghiệm (IVF/ICSI)",
-        "img": "images/programs/ivf_prog_3.webp",
+        "img": "images/programs/ivf_prog_3.webp?v=2",
         "desc": "<p>Tỉ lệ thụ tinh bằng các kỹ thuật hỗ trợ sinh sản tại Bệnh viện Quốc tế City luôn giữ mức cao (70-80%) so với mức trung bình chung tại Việt Nam và thế giới (60-70%).</p>"
       },
       {
@@ -301,7 +301,7 @@ const CIH_SPECIALTY_DATA = [
       {
         "wide": false,
         "title": "Hệ thống Vi thao tác ICSI & Chẩn đoán tiền làm tổ",
-        "img": "images/programs/ivf_prog_3.webp",
+        "img": "images/programs/ivf_prog_3.webp?v=2",
         "short_desc": "Ứng dụng trong kỹ thuật ICSI và chẩn đoán di truyền tiền làm tổ (PGT), tối ưu khả năng thành công.",
         "desc": "<p>Hệ thống vi thao tác được áp dụng trong kỹ thuật ICSI, chẩn đoán di truyền tiền làm tổ (PGT), tối ưu khả năng tạo phôi và làm tổ thành công.</p>"
       },
@@ -2110,7 +2110,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Phẫu thuật nhãn khoa kỹ thuật cao & Phòng khúc xạ Ortho-K",
-        "img": "images/programs/ivf_prog_3.webp",
+        "img": "images/programs/ivf_prog_3.webp?v=2",
         "desc": "<p>Với trang thiết bị hiện đại nhất hiện nay, khoa mắt đã và đang thực hiện các loại phẫu thuật:</p>\n<ul><li>Phaco +IOL (điều trị đục TTT), kính đơn tiêu hoặc đa tiêu.</li><li>Cắt bè cũng mạc + Ologen ( shunt, valve) để điều trị cườm nước.</li><li>Phẫu thuật mộng, quặm.</li><li>Tạo hình mi mắt.</li><li>Phẫu thuật lệ quản, lé.</li><li>Phẫu thuật lệ đạo.</li><li>Phẫu thuật điều trị sụp mi bẩm sinh hoặc mắc phải.</li></ul>\n<p>Và đặc biệt có <strong>phòng khúc xạ có thể đo khúc xạ chính xác</strong>, hỗ trợ để bn đặt <strong>Ortho-K</strong>: là phương pháp mới điều trị tật khúc xạ giúp hạn chế những bất lợi của kính gọng hoặc contact lens ban ngày mà không cần phẫu thuật.</p>"
       }
     ],
@@ -2503,7 +2503,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Giải phẫu bệnh lý",
-        "img": "images/programs/ivf_prog_3.webp",
+        "img": "images/programs/ivf_prog_3.webp?v=2",
         "desc": "<p>Cung cấp những chẩn đoán về tế bào học của những sang thương và khối u, giúp bác sĩ lâm sàng chẩn đoán bệnh sớm và có những quyết định điều trị hiệu quả nhất cho bệnh nhân.</p>"
       }
     ],

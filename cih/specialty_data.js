@@ -2950,7 +2950,7 @@ const CIH_SPECIALTY_DATA = [
     "banner": "images/banners/banner_khoa-gay-me-hoi-suc.webp?v=2",
     "gallery_img": "images/programs/right_khoa-gay-me-hoi-suc.webp",
     "hero_desc": "Gây mê hồi sức là một phần thiết yếu của y khoa hiện đại trong điều trị phẫu thuật. Những tiến bộ mới đây trong Gây mê đã giúp cho những cuộc phẫu thuật phức tạp trở nên an toàn hơn và hiệu quả hơn. Bác sĩ Gây mê hồi sức không thể thiếu trong bất cứ cuộc phẫu thuật nào, cũng như trong một số thủ thuật chẩn đoán và điều trị khác như thủ thuật nội soi ống tiêu hóa, hay gây tê ngoài màng cứng giúp đẻ không đau trong sản khoa. Nhiều kỹ thuật mới trong vô cảm vùng và kiểm soát đau đang giữ vai trò quan trọng trong việc cải thiện chất lượng cuộc sống của bệnh nhân chúng tôi.",
-    "intro_html": "<p>Các bác sĩ <strong>Gây mê hồi sức</strong> giàu kinh nghiệm của bệnh viện quốc tế City đã được đào tạo tại các bệnh viện hàng đầu trên thế giới. Chúng tôi là những chuyên gia trong việc chăm sóc bệnh nhân chu phẫu và kiểm soát các cơn đau.</p>\n<p>Mục tiêu của khoa Gây mê hồi sức: <strong>“SẴN SÀNG VÌ NGƯỜI BỆNH”</strong>.</p>",
+    "intro_html": "<p>Các bác sĩ Gây mê hồi sức giàu kinh nghiệm của bệnh viện quốc tế City đã được đào tạo tại các bệnh viện hàng đầu trên thế giới. Chúng tôi là những chuyên gia trong việc chăm sóc bệnh nhân chu phẫu và kiểm soát các cơn đau.</p>",
     "programs_heading": "Các hoạt động mũi nhọn của khoa",
     "prog_cards": [
       {

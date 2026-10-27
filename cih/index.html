@@ -1025,309 +1025,1587 @@
 
 
 
-<div class="cih-hero-overlap-wrapper">
+<style>
+  /* ══════════════════════════════════════════════════════════════════
+     QUICK ACTIONS & STATS — 5 MODERN DESIGN OPTIONS + SWITCHER
+  ══════════════════════════════════════════════════════════════════ */
+  .cih-qa-switcher-bar {
+    max-width: 1120px;
+    margin: 14px auto 8px;
+    padding: 8px 12px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    position: relative;
+    z-index: 60;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .cih-qa-switcher-label {
+    color: #94a3b8;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 8px 0 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .cih-qa-switcher-btn {
+    appearance: none;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+    font-family: var(--font);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 6px 13px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  .cih-qa-switcher-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+  }
+  .cih-qa-switcher-btn.active {
+    background: linear-gradient(135deg, #007DA5 0%, #00a3c4 100%);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 12px rgba(0, 125, 165, 0.45);
+  }
 
-  <!-- AESTHETIC BACKGROUND WAVE 1: Exact Demo Code Gradient Mesh & Ribbon Wave SVG -->
+  .cih-qa-panel {
+    display: none;
+    position: relative;
+    z-index: 25;
+  }
+  .cih-qa-panel.active {
+    display: block;
+    animation: cihQaFadeIn 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes cihQaFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
+  /* Neutral clean background when modern options (opt1..opt4) are active */
+  .cih-hero-overlap-wrapper[data-qa-mode="opt1"],
+  .cih-hero-overlap-wrapper[data-qa-mode="opt2"],
+  .cih-hero-overlap-wrapper[data-qa-mode="opt3"],
+  .cih-hero-overlap-wrapper[data-qa-mode="opt4"] {
+    background: linear-gradient(180deg, #f3f8fb 0%, #ffffff 100%) !important;
+  }
+  .cih-hero-overlap-wrapper[data-qa-mode="opt1"] .cih-hero-wave-clip,
+  .cih-hero-overlap-wrapper[data-qa-mode="opt2"] .cih-hero-wave-clip,
+  .cih-hero-overlap-wrapper[data-qa-mode="opt3"] .cih-hero-wave-clip,
+  .cih-hero-overlap-wrapper[data-qa-mode="opt4"] .cih-hero-wave-clip {
+    opacity: 0.22;
+    filter: hue-rotate(155deg) saturate(0.6);
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     OPTION 1: UNIFIED GLASS COMMAND DOCK (2-TIER INTEGRATED)
+  ───────────────────────────────────────────────────────────────── */
+  .qa-opt1-dock {
+    max-width: 1120px;
+    margin: 14px auto 0;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 22px 50px -10px rgba(0, 75, 104, 0.13), 0 4px 16px rgba(15, 23, 42, 0.05);
+    border: 1px solid rgba(0, 125, 165, 0.15);
+    overflow: hidden;
+  }
+  .qa-opt1-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #ffffff;
+  }
+  .qa-opt1-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 22px 22px;
+    text-decoration: none;
+    border-right: 1px solid #eef2f6;
+    transition: all 0.25s ease;
+    position: relative;
+  }
+  .qa-opt1-item:last-child {
+    border-right: none;
+  }
+  .qa-opt1-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 3px;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(90deg, #007DA5, #78be20);
+    opacity: 0;
+    transform: scaleX(0.5);
+    transition: all 0.25s ease;
+  }
+  .qa-opt1-item:hover {
+    background: #f8fcff;
+  }
+  .qa-opt1-item:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  .qa-opt1-item__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+  }
+  .qa-opt1-item__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #e6f5fa 0%, #f0f9ff 100%);
+    color: #007DA5;
+    border: 1px solid rgba(0, 125, 165, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.28s ease;
+  }
+  .qa-opt1-item--highlight .qa-opt1-item__icon {
+    background: linear-gradient(135deg, #007DA5 0%, #0096a6 100%);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 8px 18px rgba(0, 125, 165, 0.28);
+  }
+  .qa-opt1-item:hover .qa-opt1-item__icon {
+    background: linear-gradient(135deg, #007DA5 0%, #005f80 100%);
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 18px rgba(0, 125, 165, 0.24);
+  }
+  .qa-opt1-item__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .qa-opt1-item__title {
+    font-size: 1.02rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    transition: color 0.2s ease;
+  }
+  .qa-opt1-item:hover .qa-opt1-item__title {
+    color: #007DA5;
+  }
+  .qa-opt1-item__sub {
+    font-size: 0.76rem;
+    color: #64748b;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .qa-opt1-item__arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #007DA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+  .qa-opt1-item:hover .qa-opt1-item__arrow {
+    background: #007DA5;
+    color: #ffffff;
+    transform: translateX(3px);
+  }
+
+  .qa-opt1-stats {
+    background:
+      radial-gradient(circle at 15% 50%, rgba(66, 177, 200, 0.22) 0%, transparent 50%),
+      radial-gradient(circle at 85% 50%, rgba(197, 154, 63, 0.18) 0%, transparent 50%),
+      linear-gradient(135deg, #003b54 0%, #00668a 52%, #007DA5 100%);
+    padding: 22px 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    position: relative;
+  }
+  .qa-opt1-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 6px 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .qa-opt1-stat:last-child {
+    border-right: none;
+  }
+  .qa-opt1-stat__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #fde68a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .qa-opt1-stat__num {
+    font-size: 2.35rem;
+    font-weight: 900;
+    line-height: 1.05;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .qa-opt1-stat__label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 3px;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     OPTION 2: MEDICAL TEAL & PEARL BENTO (4 ACTION CARDS + 3 STAT BENTO CARDS)
+  ───────────────────────────────────────────────────────────────── */
+  .qa-opt2-wrap {
+    max-width: 1120px;
+    margin: 14px auto 0;
+  }
+  .qa-opt2-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .qa-opt2-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 26px -6px rgba(0, 125, 165, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .qa-opt2-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.5px;
+    background: linear-gradient(90deg, #007DA5, #42b1c8);
+    opacity: 0.85;
+    transition: height 0.2s ease;
+  }
+  .qa-opt2-card--cta::before {
+    background: linear-gradient(90deg, #78be20, #007DA5);
+  }
+  .qa-opt2-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 125, 165, 0.35);
+    box-shadow: 0 18px 34px -6px rgba(0, 125, 165, 0.16);
+  }
+  .qa-opt2-card__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .qa-opt2-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #edf8fc;
+    color: #007DA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+  .qa-opt2-card:hover .qa-opt2-card__icon {
+    background: #007DA5;
+    color: #ffffff;
+  }
+  .qa-opt2-card__title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: block;
+  }
+  .qa-opt2-card__sub {
+    font-size: 0.74rem;
+    color: #64748b;
+    display: block;
+    margin-top: 2px;
+  }
+  .qa-opt2-card__arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #007DA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all 0.25s ease;
+  }
+  .qa-opt2-card:hover .qa-opt2-card__arrow {
+    background: #007DA5;
+    border-color: #007DA5;
+    color: #ffffff;
+  }
+
+  .qa-opt2-stats {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .qa-opt2-stat-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 22px 24px;
+    border: 1px solid rgba(0, 125, 165, 0.14);
+    box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.07);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .qa-opt2-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px -8px rgba(0, 125, 165, 0.14);
+  }
+  .qa-opt2-stat-card__badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #007DA5 0%, #004b68 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 10px 20px rgba(0, 125, 165, 0.22);
+  }
+  .qa-opt2-stat-card:nth-child(2) .qa-opt2-stat-card__badge {
+    background: linear-gradient(135deg, #C59A3F 0%, #9a7212 100%);
+    box-shadow: 0 10px 20px rgba(197, 154, 63, 0.24);
+  }
+  .qa-opt2-stat-card:nth-child(3) .qa-opt2-stat-card__badge {
+    background: linear-gradient(135deg, #0096a6 0%, #006e7b 100%);
+    box-shadow: 0 10px 20px rgba(0, 150, 166, 0.22);
+  }
+  .qa-opt2-stat-card__num {
+    font-size: 2.35rem;
+    font-weight: 900;
+    line-height: 1.05;
+    color: #007DA5;
+    font-variant-numeric: tabular-nums;
+  }
+  .qa-opt2-stat-card:nth-child(2) .qa-opt2-stat-card__num {
+    color: #b4821f;
+  }
+  .qa-opt2-stat-card__title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 3px;
+  }
+  .qa-opt2-stat-card__desc {
+    font-size: 0.74rem;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     OPTION 3: ASYMMETRIC SPLIT BENTO (LEFT 2x2 ACTIONS + RIGHT LUXURY STATS)
+  ───────────────────────────────────────────────────────────────── */
+  .qa-opt3-grid {
+    max-width: 1120px;
+    margin: 14px auto 0;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+  }
+  .qa-opt3-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .qa-opt3-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px 22px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 24px -6px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    text-decoration: none;
+    transition: all 0.28s ease;
+  }
+  .qa-opt3-card:hover {
+    transform: translateY(-4px);
+    border-color: #007DA5;
+    box-shadow: 0 18px 34px -8px rgba(0, 125, 165, 0.16);
+  }
+  .qa-opt3-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .qa-opt3-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #e6f5fa 0%, #f0f9ff 100%);
+    color: #007DA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+  }
+  .qa-opt3-card:hover .qa-opt3-card__icon {
+    background: #007DA5;
+    color: #ffffff;
+  }
+  .qa-opt3-card__arrow {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #007DA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.25s ease;
+  }
+  .qa-opt3-card:hover .qa-opt3-card__arrow {
+    background: #007DA5;
+    color: #ffffff;
+    transform: translateX(3px);
+  }
+  .qa-opt3-card__title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0f172a;
+  }
+  .qa-opt3-card__sub {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  .qa-opt3-showcase {
+    background:
+      radial-gradient(circle at 90% 15%, rgba(212, 175, 55, 0.25) 0%, transparent 45%),
+      linear-gradient(145deg, #06283d 0%, #004b68 55%, #007DA5 100%);
+    border-radius: 22px;
+    padding: 24px 26px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 42px -10px rgba(0, 75, 104, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .qa-opt3-showcase__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .qa-opt3-showcase__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(253, 230, 138, 0.45);
+    color: #fde68a;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .qa-opt3-showcase__caption {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 500;
+  }
+  .qa-opt3-showcase__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .qa-opt3-stat-box {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 18px 10px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+  }
+  .qa-opt3-stat-box__num {
+    font-size: 2.15rem;
+    font-weight: 900;
+    line-height: 1.1;
+    background: linear-gradient(180deg, #ffffff 0%, #fde68a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-variant-numeric: tabular-nums;
+  }
+  .qa-opt3-stat-box__label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     OPTION 4: FLOATING CAPSULE PILL DOCK + ARCHITECTURAL MINIMAL STATS
+  ───────────────────────────────────────────────────────────────── */
+  .qa-opt4-wrap {
+    max-width: 1120px;
+    margin: 14px auto 0;
+  }
+  .qa-opt4-capsule {
+    background: #ffffff;
+    border-radius: 999px;
+    padding: 10px;
+    box-shadow: 0 20px 45px -10px rgba(0, 75, 104, 0.14), 0 0 0 1px rgba(0, 125, 165, 0.14);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .qa-opt4-pill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    background: transparent;
+  }
+  .qa-opt4-pill:hover {
+    background: #f0f9ff;
+  }
+  .qa-opt4-pill--primary {
+    background: linear-gradient(135deg, #007DA5 0%, #0096a6 100%);
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(0, 125, 165, 0.28);
+  }
+  .qa-opt4-pill--primary:hover {
+    background: linear-gradient(135deg, #00668a 0%, #007DA5 100%);
+    transform: translateY(-2px);
+  }
+  .qa-opt4-pill__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .qa-opt4-pill__icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #e6f5fa;
+    color: #007DA5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+  .qa-opt4-pill--primary .qa-opt4-pill__icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+  .qa-opt4-pill__title {
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #0f172a;
+  }
+  .qa-opt4-pill--primary .qa-opt4-pill__title {
+    color: #ffffff;
+  }
+  .qa-opt4-pill__arrow {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #007DA5;
+    transition: transform 0.2s ease;
+  }
+  .qa-opt4-pill--primary .qa-opt4-pill__arrow {
+    color: #ffffff;
+  }
+  .qa-opt4-pill:hover .qa-opt4-pill__arrow {
+    transform: translateX(4px);
+  }
+
+  .qa-opt4-stats {
+    max-width: 980px;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    padding: 20px 16px;
+    border: 1px solid #e2e8f0;
+  }
+  .qa-opt4-stat {
+    text-align: center;
+    padding: 8px 16px;
+    position: relative;
+  }
+  .qa-opt4-stat:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 15%;
+    bottom: 15%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, #cbd5e1, transparent);
+  }
+  .qa-opt4-stat__tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #007DA5;
+    background: #e6f5fa;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+  .qa-opt4-stat__num {
+    font-size: 2.85rem;
+    font-weight: 900;
+    line-height: 1.05;
+    background: linear-gradient(135deg, #004b68 0%, #007DA5 65%, #78be20 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-variant-numeric: tabular-nums;
+  }
+  .qa-opt4-stat__label {
+    font-size: 0.86rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     OPTION 5: ROYAL TEAL & CHAMPAGNE GOLD PRESTIGE
+  ───────────────────────────────────────────────────────────────── */
+  .qa-opt5-wrap {
+    max-width: 1120px;
+    margin: 14px auto 0;
+  }
+  .qa-opt5-actions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .qa-opt5-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 16px 18px;
+    border: 1.5px solid rgba(197, 154, 63, 0.42);
+    box-shadow: 0 12px 26px -6px rgba(15, 23, 42, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all 0.28s ease;
+  }
+  .qa-opt5-card:hover {
+    transform: translateY(-4px);
+    border-color: #007DA5;
+    box-shadow: 0 18px 34px -6px rgba(0, 125, 165, 0.16);
+  }
+  .qa-opt5-card__left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .qa-opt5-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #007DA5 0%, #004b68 100%);
+    color: #fde68a;
+    border: 1px solid rgba(216, 177, 90, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+  .qa-opt5-card:hover .qa-opt5-card__icon {
+    transform: scale(1.06);
+  }
+  .qa-opt5-card__title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f172a;
+    display: block;
+  }
+  .qa-opt5-card__sub {
+    font-size: 0.74rem;
+    color: #926c15;
+    font-weight: 600;
+    display: block;
+    margin-top: 2px;
+  }
+  .qa-opt5-card__arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fef9ec;
+    border: 1px solid rgba(197, 154, 63, 0.45);
+    color: #b4821f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all 0.25s ease;
+  }
+  .qa-opt5-card:hover .qa-opt5-card__arrow {
+    background: #007DA5;
+    border-color: #007DA5;
+    color: #ffffff;
+  }
+
+  .qa-opt5-stats {
+    margin-top: 24px;
+    background:
+      url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D8B15A' stroke-width='1' stroke-opacity='0.12'%3E%3Cpath d='M36 0L72 36L36 72L0 36Z'/%3E%3C/g%3E%3C/svg%3E"),
+      linear-gradient(135deg, #062235 0%, #004663 50%, #062235 100%);
+    border: 1.5px solid #D8B15A;
+    border-radius: 22px;
+    padding: 26px 24px;
+    box-shadow: 0 18px 38px rgba(6, 34, 53, 0.22);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+  .qa-opt5-stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px 16px;
+    border-right: 1px solid rgba(216, 177, 90, 0.28);
+  }
+  .qa-opt5-stat:last-child {
+    border-right: none;
+  }
+  .qa-opt5-stat__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(216, 177, 90, 0.14);
+    border: 1px solid rgba(216, 177, 90, 0.55);
+    color: #fde68a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .qa-opt5-stat__num {
+    font-size: 2.55rem;
+    font-weight: 900;
+    line-height: 1.05;
+    background: linear-gradient(180deg, #fffbeb 0%, #f5d076 55%, #d4a338 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-variant-numeric: tabular-nums;
+  }
+  .qa-opt5-stat__label {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  /* ── RESPONSIVE FOR ALL OPTIONS ON TABLET & MOBILE ── */
+  @media (max-width: 991px) {
+    .cih-qa-switcher-bar {
+      margin: 10px 12px 8px;
+      border-radius: 16px;
+      padding: 8px;
+    }
+    .qa-opt1-dock,
+    .qa-opt2-wrap,
+    .qa-opt3-grid,
+    .qa-opt4-wrap,
+    .qa-opt5-wrap {
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+    .qa-opt3-grid {
+      grid-template-columns: 1fr;
+    }
+    .qa-opt4-capsule {
+      border-radius: 22px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cih-qa-switcher-label {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 2px;
+    }
+    .cih-qa-switcher-btn {
+      font-size: 0.72rem;
+      padding: 5px 10px;
+    }
+    .qa-opt1-actions,
+    .qa-opt2-actions,
+    .qa-opt4-capsule,
+    .qa-opt5-actions {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 6px !important;
+    }
+    .qa-opt1-item,
+    .qa-opt2-card,
+    .qa-opt4-pill,
+    .qa-opt5-card {
+      padding: 10px 4px !important;
+      justify-content: center !important;
+    }
+    .qa-opt1-item__left,
+    .qa-opt2-card__left,
+    .qa-opt4-pill__left,
+    .qa-opt5-card__left {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      gap: 5px !important;
+    }
+    .qa-opt1-item__icon,
+    .qa-opt2-card__icon,
+    .qa-opt4-pill__icon,
+    .qa-opt5-card__icon {
+      width: 32px !important;
+      height: 32px !important;
+      border-radius: 9px !important;
+    }
+    .qa-opt1-item__icon svg,
+    .qa-opt2-card__icon svg,
+    .qa-opt4-pill__icon svg,
+    .qa-opt5-card__icon svg {
+      width: 16px !important;
+      height: 16px !important;
+    }
+    .qa-opt1-item__title,
+    .qa-opt2-card__title,
+    .qa-opt4-pill__title,
+    .qa-opt5-card__title {
+      font-size: 0.64rem !important;
+      white-space: nowrap !important;
+    }
+    .qa-opt1-item__sub,
+    .qa-opt1-item__arrow,
+    .qa-opt2-card__sub,
+    .qa-opt2-card__arrow,
+    .qa-opt4-pill__arrow,
+    .qa-opt5-card__sub,
+    .qa-opt5-card__arrow {
+      display: none !important;
+    }
+    .qa-opt1-stats,
+    .qa-opt2-stats,
+    .qa-opt4-stats,
+    .qa-opt5-stats {
+      grid-template-columns: repeat(3, 1fr) !important;
+      padding: 14px 8px !important;
+      gap: 6px !important;
+    }
+    .qa-opt1-stat,
+    .qa-opt5-stat {
+      flex-direction: column !important;
+      gap: 6px !important;
+      padding: 4px !important;
+      text-align: center !important;
+    }
+    .qa-opt1-stat__icon,
+    .qa-opt5-stat__icon {
+      width: 32px !important;
+      height: 32px !important;
+    }
+    .qa-opt2-stat-card {
+      flex-direction: column !important;
+      padding: 12px 6px !important;
+      text-align: center !important;
+      gap: 8px !important;
+    }
+    .qa-opt2-stat-card__badge {
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 11px !important;
+    }
+    .qa-opt2-stat-card__desc,
+    .qa-opt4-stat__tag {
+      display: none !important;
+    }
+    .qa-opt1-stat__num,
+    .qa-opt2-stat-card__num,
+    .qa-opt3-stat-box__num,
+    .qa-opt4-stat__num,
+    .qa-opt5-stat__num {
+      font-size: 1.5rem !important;
+    }
+    .qa-opt1-stat__label,
+    .qa-opt2-stat-card__title,
+    .qa-opt3-stat-box__label,
+    .qa-opt4-stat__label,
+    .qa-opt5-stat__label {
+      font-size: 0.65rem !important;
+    }
+  }
+</style>
+
+<div class="cih-hero-overlap-wrapper" id="cih-hero-overlap-wrapper" data-qa-mode="opt1">
+
+  <!-- AESTHETIC BACKGROUND WAVE -->
   <div class="cih-hero-wave-clip" aria-hidden="true">
-
     <div class="cih-hero-glow-left"></div>
-
     <div class="cih-hero-glow-right"></div>
-
     <svg class="cih-hero-wave-svg" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-
       <path d="M0,96L48,112C96,128,192,160,288,181.3C384,203,480,213,576,192C672,171,768,117,864,112C960,107,1056,149,1152,165.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#hero-wave-gold-primary)" opacity="0.4"></path>
-
       <path d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,224C672,235,768,213,864,186.7C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#hero-wave-gold-accent)" opacity="0.6"></path>
-
       <defs>
-
         <linearGradient id="hero-wave-gold-primary" x1="0%" x2="100%" y1="0%" y2="0%">
-
           <stop offset="0%" stop-color="#E5C07B" stop-opacity="0.3"></stop>
-
           <stop offset="50%" stop-color="#D4AF37" stop-opacity="0.22"></stop>
-
           <stop offset="100%" stop-color="#C59B27" stop-opacity="0.28"></stop>
-
         </linearGradient>
-
         <linearGradient id="hero-wave-gold-accent" x1="0%" x2="100%" y1="0%" y2="0%">
-
           <stop offset="0%" stop-color="#F3E5AB" stop-opacity="0.45"></stop>
-
           <stop offset="50%" stop-color="#E5C07B" stop-opacity="0.35"></stop>
-
           <stop offset="100%" stop-color="#D4AF37" stop-opacity="0.4"></stop>
-
         </linearGradient>
-
       </defs>
-
     </svg>
-
   </div>
 
-
-
-  <!-- 4 STANDALONE QUICK ACTION CARDS -->
-
-  <div class="cih-standalone-actions" id="quick-actions">
-
-    <a href="bac-si" class="cih-action-pill cih-action-pill--gold" id="qa-doctor">
-
-      <div class="cih-action-pill__left">
-
-        <div class="cih-action-pill__icon">
-
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-
-            <circle cx="11" cy="11" r="7"></circle>
-
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-
-            <line x1="11" y1="8" x2="11" y2="14"></line>
-
-            <line x1="8" y1="11" x2="14" y2="11"></line>
-
-          </svg>
-
-        </div>
-
-        <span class="cih-action-pill__title">Tìm bác sĩ</span>
-
-      </div>
-
-      <span class="cih-action-pill__arrow">&rarr;</span>
-
-    </a>
-
-
-
-    <a href="chuyen-khoa" class="cih-action-pill cih-action-pill--gold" id="qa-specialty">
-
-      <div class="cih-action-pill__left">
-
-        <div class="cih-action-pill__icon">
-
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-
-            <rect x="4" y="3" width="16" height="18" rx="2"></rect>
-
-            <line x1="2" y1="21" x2="22" y2="21"></line>
-
-            <line x1="12" y1="7" x2="12" y2="11"></line>
-
-            <line x1="10" y1="9" x2="14" y2="9"></line>
-
-            <line x1="9" y1="14" x2="9.01" y2="14"></line>
-
-            <line x1="15" y1="14" x2="15.01" y2="14"></line>
-
-            <line x1="9" y1="17" x2="9.01" y2="17"></line>
-
-            <line x1="15" y1="17" x2="15.01" y2="17"></line>
-
-          </svg>
-
-        </div>
-
-        <span class="cih-action-pill__title">Chuyên khoa</span>
-
-      </div>
-
-      <span class="cih-action-pill__arrow">&rarr;</span>
-
-    </a>
-
-
-
-    <a href="lien-he#dat-lich" class="cih-action-pill cih-action-pill--gold" id="qa-booking">
-
-      <div class="cih-action-pill__left">
-
-        <div class="cih-action-pill__icon">
-
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-
-            <rect x="3" y="4" width="18" height="18" rx="3"></rect>
-
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-
-          </svg>
-
-        </div>
-
-        <span class="cih-action-pill__title">Đặt lịch khám</span>
-
-      </div>
-
-      <span class="cih-action-pill__arrow">&rarr;</span>
-
-    </a>
-
-
-
-    <a href="https://patient.cih.com.vn/Account/Login" target="_blank" rel="noopener noreferrer" class="cih-action-pill cih-action-pill--gold" id="qa-results">
-
-      <div class="cih-action-pill__left">
-
-        <div class="cih-action-pill__icon">
-
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-
-            <polyline points="14 2 14 8 20 8"></polyline>
-
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-
-            <polyline points="10 9 9 9 8 9"></polyline>
-
-          </svg>
-
-        </div>
-
-        <span class="cih-action-pill__title">Tra cứu kết quả</span>
-
-      </div>
-
-      <span class="cih-action-pill__arrow">&rarr;</span>
-
-    </a>
-
+  <!-- INTERACTIVE OPTION SWITCHER BAR -->
+  <div class="cih-qa-switcher-bar" id="cih-qa-switcher">
+    <span class="cih-qa-switcher-label">✨ Chọn thử giao diện:</span>
+    <button type="button" class="cih-qa-switcher-btn active" data-qa-target="opt1">Option 1: Glass Dock Hợp Khối</button>
+    <button type="button" class="cih-qa-switcher-btn" data-qa-target="opt2">Option 2: Bento Tách Rời</button>
+    <button type="button" class="cih-qa-switcher-btn" data-qa-target="opt3">Option 3: Split Bento 2 Cột</button>
+    <button type="button" class="cih-qa-switcher-btn" data-qa-target="opt4">Option 4: Capsule &amp; Minimal</button>
+    <button type="button" class="cih-qa-switcher-btn" data-qa-target="opt5">Option 5: Royal Teal &amp; Gold</button>
+    <button type="button" class="cih-qa-switcher-btn" data-qa-target="current">Bản cũ</button>
   </div>
 
+  <!-- ════════════════════════════════════════════════════════════════
+       OPTION 1: UNIFIED GLASS COMMAND DOCK (2-TIER INTEGRATED)
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="cih-qa-panel active" data-qa-panel="opt1">
+    <div class="qa-opt1-dock">
+      <div class="qa-opt1-actions">
+        <a href="bac-si" class="qa-opt1-item">
+          <div class="qa-opt1-item__left">
+            <div class="qa-opt1-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="qa-opt1-item__text">
+              <span class="qa-opt1-item__title">Tìm bác sĩ</span>
+              <span class="qa-opt1-item__sub">Chuyên gia đầu ngành</span>
+            </div>
+          </div>
+          <span class="qa-opt1-item__arrow">&rarr;</span>
+        </a>
 
+        <a href="chuyen-khoa" class="qa-opt1-item">
+          <div class="qa-opt1-item__left">
+            <div class="qa-opt1-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="2" y1="21" x2="22" y2="21"></line><line x1="12" y1="7" x2="12" y2="11"></line><line x1="10" y1="9" x2="14" y2="9"></line><line x1="9" y1="14" x2="9.01" y2="14"></line><line x1="15" y1="14" x2="15.01" y2="14"></line><line x1="9" y1="17" x2="9.01" y2="17"></line><line x1="15" y1="17" x2="15.01" y2="17"></line></svg>
+            </div>
+            <div class="qa-opt1-item__text">
+              <span class="qa-opt1-item__title">Chuyên khoa</span>
+              <span class="qa-opt1-item__sub">Đa chuyên khoa mũi nhọn</span>
+            </div>
+          </div>
+          <span class="qa-opt1-item__arrow">&rarr;</span>
+        </a>
 
-  <!-- FLOATING 3-COLUMN STATS CARD -->
+        <a href="lien-he#dat-lich" class="qa-opt1-item qa-opt1-item--highlight">
+          <div class="qa-opt1-item__left">
+            <div class="qa-opt1-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div class="qa-opt1-item__text">
+              <span class="qa-opt1-item__title">Đặt lịch khám</span>
+              <span class="qa-opt1-item__sub">Đặt hẹn nhanh 24/7</span>
+            </div>
+          </div>
+          <span class="qa-opt1-item__arrow">&rarr;</span>
+        </a>
 
-  <div class="cih-floating-stats" id="stats-card">
+        <a href="https://patient.cih.com.vn/Account/Login" target="_blank" rel="noopener noreferrer" class="qa-opt1-item">
+          <div class="qa-opt1-item__left">
+            <div class="qa-opt1-item__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="qa-opt1-item__text">
+              <span class="qa-opt1-item__title">Tra cứu kết quả</span>
+              <span class="qa-opt1-item__sub">Hồ sơ &amp; xét nghiệm</span>
+            </div>
+          </div>
+          <span class="qa-opt1-item__arrow">&rarr;</span>
+        </a>
+      </div>
 
-    <div class="cih-stat-box">
+      <div class="qa-opt1-stats">
+        <div class="qa-opt1-stat">
+          <div class="qa-opt1-stat__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt1-stat__num cih-stat-num" data-target="16" data-suffix="">16</div>
+            <div class="qa-opt1-stat__label">CHUYÊN KHOA</div>
+          </div>
+        </div>
 
-      <div class="cih-stat-num cih-stat-num--orange" data-target="16" data-suffix="" style="font-variant-numeric: tabular-nums;">0</div>
+        <div class="qa-opt1-stat">
+          <div class="qa-opt1-stat__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt1-stat__num cih-stat-num" data-target="320" data-suffix="">320</div>
+            <div class="qa-opt1-stat__label">GIƯỜNG</div>
+          </div>
+        </div>
 
-      <div class="cih-stat-title">CHUYÊN KHOA</div>
+        <div class="qa-opt1-stat">
+          <div class="qa-opt1-stat__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt1-stat__num cih-stat-num" data-target="550" data-suffix="+">550+</div>
+            <div class="qa-opt1-stat__label">NHÂN VIÊN Y TẾ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- ════════════════════════════════════════════════════════════════
+       OPTION 2: MEDICAL TEAL & PEARL BENTO (4 ACTION CARDS + 3 STAT BENTO CARDS)
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="cih-qa-panel" data-qa-panel="opt2">
+    <div class="qa-opt2-wrap">
+      <div class="qa-opt2-actions">
+        <a href="bac-si" class="qa-opt2-card">
+          <div class="qa-opt2-card__left">
+            <div class="qa-opt2-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt2-card__title">Tìm bác sĩ</span>
+              <span class="qa-opt2-card__sub">Đội ngũ chuyên gia</span>
+            </div>
+          </div>
+          <span class="qa-opt2-card__arrow">&#8599;</span>
+        </a>
+
+        <a href="chuyen-khoa" class="qa-opt2-card">
+          <div class="qa-opt2-card__left">
+            <div class="qa-opt2-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="2" y1="21" x2="22" y2="21"></line><line x1="12" y1="7" x2="12" y2="11"></line><line x1="10" y1="9" x2="14" y2="9"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt2-card__title">Chuyên khoa</span>
+              <span class="qa-opt2-card__sub">Điều trị chuyên sâu</span>
+            </div>
+          </div>
+          <span class="qa-opt2-card__arrow">&#8599;</span>
+        </a>
+
+        <a href="lien-he#dat-lich" class="qa-opt2-card qa-opt2-card--cta">
+          <div class="qa-opt2-card__left">
+            <div class="qa-opt2-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt2-card__title">Đặt lịch khám</span>
+              <span class="qa-opt2-card__sub">Xác nhận nhanh chóng</span>
+            </div>
+          </div>
+          <span class="qa-opt2-card__arrow">&#8599;</span>
+        </a>
+
+        <a href="https://patient.cih.com.vn/Account/Login" target="_blank" rel="noopener noreferrer" class="qa-opt2-card">
+          <div class="qa-opt2-card__left">
+            <div class="qa-opt2-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt2-card__title">Tra cứu kết quả</span>
+              <span class="qa-opt2-card__sub">Bảo mật &amp; tiện lợi</span>
+            </div>
+          </div>
+          <span class="qa-opt2-card__arrow">&#8599;</span>
+        </a>
+      </div>
+
+      <div class="qa-opt2-stats">
+        <div class="qa-opt2-stat-card">
+          <div class="qa-opt2-stat-card__badge">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt2-stat-card__num cih-stat-num" data-target="16" data-suffix="">16</div>
+            <div class="qa-opt2-stat-card__title">CHUYÊN KHOA</div>
+            <div class="qa-opt2-stat-card__desc">Đa chuyên khoa tiêu chuẩn quốc tế</div>
+          </div>
+        </div>
+
+        <div class="qa-opt2-stat-card">
+          <div class="qa-opt2-stat-card__badge">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt2-stat-card__num cih-stat-num" data-target="320" data-suffix="">320</div>
+            <div class="qa-opt2-stat-card__title">GIƯỜNG</div>
+            <div class="qa-opt2-stat-card__desc">Nội trú tiện nghi chuẩn 5 sao</div>
+          </div>
+        </div>
+
+        <div class="qa-opt2-stat-card">
+          <div class="qa-opt2-stat-card__badge">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt2-stat-card__num cih-stat-num" data-target="550" data-suffix="+">550+</div>
+            <div class="qa-opt2-stat-card__title">NHÂN VIÊN Y TẾ</div>
+            <div class="qa-opt2-stat-card__desc">Bác sĩ &amp; điều dưỡng tận tâm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       OPTION 3: ASYMMETRIC SPLIT BENTO (LEFT 2x2 ACTIONS + RIGHT STATS SHOWCASE)
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="cih-qa-panel" data-qa-panel="opt3">
+    <div class="qa-opt3-grid">
+      <div class="qa-opt3-actions">
+        <a href="bac-si" class="qa-opt3-card">
+          <div class="qa-opt3-card__top">
+            <div class="qa-opt3-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <span class="qa-opt3-card__arrow">&rarr;</span>
+          </div>
+          <div>
+            <div class="qa-opt3-card__title">Tìm bác sĩ</div>
+            <div class="qa-opt3-card__sub">Tra cứu thông tin &amp; lịch khám chuyên gia</div>
+          </div>
+        </a>
+
+        <a href="chuyen-khoa" class="qa-opt3-card">
+          <div class="qa-opt3-card__top">
+            <div class="qa-opt3-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="2" y1="21" x2="22" y2="21"></line><line x1="12" y1="7" x2="12" y2="11"></line><line x1="10" y1="9" x2="14" y2="9"></line></svg>
+            </div>
+            <span class="qa-opt3-card__arrow">&rarr;</span>
+          </div>
+          <div>
+            <div class="qa-opt3-card__title">Chuyên khoa</div>
+            <div class="qa-opt3-card__sub">Hệ thống trung tâm &amp; chuyên khoa sâu</div>
+          </div>
+        </a>
+
+        <a href="lien-he#dat-lich" class="qa-opt3-card">
+          <div class="qa-opt3-card__top">
+            <div class="qa-opt3-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <span class="qa-opt3-card__arrow">&rarr;</span>
+          </div>
+          <div>
+            <div class="qa-opt3-card__title">Đặt lịch khám</div>
+            <div class="qa-opt3-card__sub">Chủ động thời gian, hỗ trợ 24/7</div>
+          </div>
+        </a>
+
+        <a href="https://patient.cih.com.vn/Account/Login" target="_blank" rel="noopener noreferrer" class="qa-opt3-card">
+          <div class="qa-opt3-card__top">
+            <div class="qa-opt3-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <span class="qa-opt3-card__arrow">&rarr;</span>
+          </div>
+          <div>
+            <div class="qa-opt3-card__title">Tra cứu kết quả</div>
+            <div class="qa-opt3-card__sub">Xem hồ sơ &amp; kết quả cận lâm sàng</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="qa-opt3-showcase">
+        <div class="qa-opt3-showcase__head">
+          <span class="qa-opt3-showcase__tag">★ CHUẨN QUỐC TẾ AACI</span>
+          <span class="qa-opt3-showcase__caption">Năng lực &amp; Quy mô CIH</span>
+        </div>
+        <div class="qa-opt3-showcase__stats">
+          <div class="qa-opt3-stat-box">
+            <div class="qa-opt3-stat-box__num cih-stat-num" data-target="16" data-suffix="">16</div>
+            <div class="qa-opt3-stat-box__label">CHUYÊN KHOA</div>
+          </div>
+          <div class="qa-opt3-stat-box">
+            <div class="qa-opt3-stat-box__num cih-stat-num" data-target="320" data-suffix="">320</div>
+            <div class="qa-opt3-stat-box__label">GIƯỜNG</div>
+          </div>
+          <div class="qa-opt3-stat-box">
+            <div class="qa-opt3-stat-box__num cih-stat-num" data-target="550" data-suffix="+">550+</div>
+            <div class="qa-opt3-stat-box__label">NHÂN VIÊN Y TẾ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       OPTION 4: FLOATING CAPSULE PILL DOCK + ARCHITECTURAL MINIMAL STATS
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="cih-qa-panel" data-qa-panel="opt4">
+    <div class="qa-opt4-wrap">
+      <div class="qa-opt4-capsule">
+        <a href="bac-si" class="qa-opt4-pill">
+          <div class="qa-opt4-pill__left">
+            <div class="qa-opt4-pill__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <span class="qa-opt4-pill__title">Tìm bác sĩ</span>
+          </div>
+          <span class="qa-opt4-pill__arrow">&rarr;</span>
+        </a>
+
+        <a href="chuyen-khoa" class="qa-opt4-pill">
+          <div class="qa-opt4-pill__left">
+            <div class="qa-opt4-pill__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="2" y1="21" x2="22" y2="21"></line><line x1="12" y1="7" x2="12" y2="11"></line><line x1="10" y1="9" x2="14" y2="9"></line></svg>
+            </div>
+            <span class="qa-opt4-pill__title">Chuyên khoa</span>
+          </div>
+          <span class="qa-opt4-pill__arrow">&rarr;</span>
+        </a>
+
+        <a href="lien-he#dat-lich" class="qa-opt4-pill qa-opt4-pill--primary">
+          <div class="qa-opt4-pill__left">
+            <div class="qa-opt4-pill__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="3"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <span class="qa-opt4-pill__title">Đặt lịch khám</span>
+          </div>
+          <span class="qa-opt4-pill__arrow">&rarr;</span>
+        </a>
+
+        <a href="https://patient.cih.com.vn/Account/Login" target="_blank" rel="noopener noreferrer" class="qa-opt4-pill">
+          <div class="qa-opt4-pill__left">
+            <div class="qa-opt4-pill__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <span class="qa-opt4-pill__title">Tra cứu kết quả</span>
+          </div>
+          <span class="qa-opt4-pill__arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="qa-opt4-stats">
+        <div class="qa-opt4-stat">
+          <span class="qa-opt4-stat__tag">Chuyên môn sâu</span>
+          <div class="qa-opt4-stat__num cih-stat-num" data-target="16" data-suffix="">16</div>
+          <div class="qa-opt4-stat__label">CHUYÊN KHOA</div>
+        </div>
+        <div class="qa-opt4-stat">
+          <span class="qa-opt4-stat__tag">Nội trú tiêu chuẩn</span>
+          <div class="qa-opt4-stat__num cih-stat-num" data-target="320" data-suffix="">320</div>
+          <div class="qa-opt4-stat__label">GIƯỜNG</div>
+        </div>
+        <div class="qa-opt4-stat">
+          <span class="qa-opt4-stat__tag">Đội ngũ tận tâm</span>
+          <div class="qa-opt4-stat__num cih-stat-num" data-target="550" data-suffix="+">550+</div>
+          <div class="qa-opt4-stat__label">NHÂN VIÊN Y TẾ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       OPTION 5: ROYAL TEAL & CHAMPAGNE GOLD PRESTIGE
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="cih-qa-panel" data-qa-panel="opt5">
+    <div class="qa-opt5-wrap">
+      <div class="qa-opt5-actions">
+        <a href="bac-si" class="qa-opt5-card">
+          <div class="qa-opt5-card__left">
+            <div class="qa-opt5-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt5-card__title">Tìm bác sĩ</span>
+              <span class="qa-opt5-card__sub">Chuyên gia đầu ngành</span>
+            </div>
+          </div>
+          <span class="qa-opt5-card__arrow">&rarr;</span>
+        </a>
+
+        <a href="chuyen-khoa" class="qa-opt5-card">
+          <div class="qa-opt5-card__left">
+            <div class="qa-opt5-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="2" y1="21" x2="22" y2="21"></line><line x1="12" y1="7" x2="12" y2="11"></line><line x1="10" y1="9" x2="14" y2="9"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt5-card__title">Chuyên khoa</span>
+              <span class="qa-opt5-card__sub">Đa chuyên khoa quốc tế</span>
+            </div>
+          </div>
+          <span class="qa-opt5-card__arrow">&rarr;</span>
+        </a>
+
+        <a href="lien-he#dat-lich" class="qa-opt5-card">
+          <div class="qa-opt5-card__left">
+            <div class="qa-opt5-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt5-card__title">Đặt lịch khám</span>
+              <span class="qa-opt5-card__sub">Đặt hẹn nhanh 24/7</span>
+            </div>
+          </div>
+          <span class="qa-opt5-card__arrow">&rarr;</span>
+        </a>
+
+        <a href="https://patient.cih.com.vn/Account/Login" target="_blank" rel="noopener noreferrer" class="qa-opt5-card">
+          <div class="qa-opt5-card__left">
+            <div class="qa-opt5-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <div>
+              <span class="qa-opt5-card__title">Tra cứu kết quả</span>
+              <span class="qa-opt5-card__sub">Trực tuyến &amp; bảo mật</span>
+            </div>
+          </div>
+          <span class="qa-opt5-card__arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="qa-opt5-stats">
+        <div class="qa-opt5-stat">
+          <div class="qa-opt5-stat__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt5-stat__num cih-stat-num" data-target="16" data-suffix="">16</div>
+            <div class="qa-opt5-stat__label">CHUYÊN KHOA</div>
+          </div>
+        </div>
+
+        <div class="qa-opt5-stat">
+          <div class="qa-opt5-stat__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"></path><path d="M2 8h18a2 2 0 0 1 2 2v10"></path><path d="M2 17h20"></path><path d="M6 8v9"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt5-stat__num cih-stat-num" data-target="320" data-suffix="">320</div>
+            <div class="qa-opt5-stat__label">GIƯỜNG</div>
+          </div>
+        </div>
+
+        <div class="qa-opt5-stat">
+          <div class="qa-opt5-stat__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <div class="qa-opt5-stat__num cih-stat-num" data-target="550" data-suffix="+">550+</div>
+            <div class="qa-opt5-stat__label">NHÂN VIÊN Y TẾ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       CURRENT OPTION (BẢN CŨ)
+  ════════════════════════════════════════════════════════════════ -->
+  <div class="cih-qa-panel" data-qa-panel="current">
+    <div class="cih-standalone-actions" id="quick-actions">
+      <a href="bac-si" class="cih-action-pill cih-action-pill--gold" id="qa-doctor">
+        <div class="cih-action-pill__left">
+          <div class="cih-action-pill__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          </div>
+          <span class="cih-action-pill__title">Tìm bác sĩ</span>
+        </div>
+        <span class="cih-action-pill__arrow">&rarr;</span>
+      </a>
+
+      <a href="chuyen-khoa" class="cih-action-pill cih-action-pill--gold" id="qa-specialty">
+        <div class="cih-action-pill__left">
+          <div class="cih-action-pill__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="2" y1="21" x2="22" y2="21"></line><line x1="12" y1="7" x2="12" y2="11"></line><line x1="10" y1="9" x2="14" y2="9"></line><line x1="9" y1="14" x2="9.01" y2="14"></line><line x1="15" y1="14" x2="15.01" y2="14"></line><line x1="9" y1="17" x2="9.01" y2="17"></line><line x1="15" y1="17" x2="15.01" y2="17"></line></svg>
+          </div>
+          <span class="cih-action-pill__title">Chuyên khoa</span>
+        </div>
+        <span class="cih-action-pill__arrow">&rarr;</span>
+      </a>
+
+      <a href="lien-he#dat-lich" class="cih-action-pill cih-action-pill--gold" id="qa-booking">
+        <div class="cih-action-pill__left">
+          <div class="cih-action-pill__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </div>
+          <span class="cih-action-pill__title">Đặt lịch khám</span>
+        </div>
+        <span class="cih-action-pill__arrow">&rarr;</span>
+      </a>
+
+      <a href="https://patient.cih.com.vn/Account/Login" target="_blank" rel="noopener noreferrer" class="cih-action-pill cih-action-pill--gold" id="qa-results">
+        <div class="cih-action-pill__left">
+          <div class="cih-action-pill__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <span class="cih-action-pill__title">Tra cứu kết quả</span>
+        </div>
+        <span class="cih-action-pill__arrow">&rarr;</span>
+      </a>
     </div>
 
-
-
-    <div class="cih-stat-box">
-
-      <div class="cih-stat-num cih-stat-num--orange" data-target="320" data-suffix="" style="font-variant-numeric: tabular-nums;">0</div>
-
-      <div class="cih-stat-title">GIƯỜNG</div>
-
+    <div class="cih-floating-stats" id="stats-card">
+      <div class="cih-stat-box">
+        <div class="cih-stat-num cih-stat-num--orange" data-target="16" data-suffix="" style="font-variant-numeric: tabular-nums;">16</div>
+        <div class="cih-stat-title">CHUYÊN KHOA</div>
+      </div>
+      <div class="cih-stat-box">
+        <div class="cih-stat-num cih-stat-num--orange" data-target="320" data-suffix="" style="font-variant-numeric: tabular-nums;">320</div>
+        <div class="cih-stat-title">GIƯỜNG</div>
+      </div>
+      <div class="cih-stat-box">
+        <div class="cih-stat-num cih-stat-num--gold" data-target="550" data-suffix="+" style="font-variant-numeric: tabular-nums;">550+</div>
+        <div class="cih-stat-title">NHÂN VIÊN Y TẾ</div>
+      </div>
     </div>
-
-
-
-    <div class="cih-stat-box">
-
-      <div class="cih-stat-num cih-stat-num--gold" data-target="550" data-suffix="+" style="font-variant-numeric: tabular-nums;">0+</div>
-
-      <div class="cih-stat-title">NHÂN VIÊN Y TẾ</div>
-
-    </div>
-
   </div>
 
 </div>
 
-
-
 <script>
-
   (function() {
-
-    const statEls = document.querySelectorAll('#stats-card .cih-stat-num[data-target]');
-
-    if (!statEls.length) return;
-
-
+    const wrapper = document.getElementById('cih-hero-overlap-wrapper');
+    const btns = document.querySelectorAll('#cih-qa-switcher .cih-qa-switcher-btn');
+    const panels = document.querySelectorAll('#cih-hero-overlap-wrapper .cih-qa-panel');
 
     function runCounter(el) {
-
       const target = parseInt(el.getAttribute('data-target'), 10) || 0;
-
       const suffix = el.getAttribute('data-suffix') || '';
-
-      const duration = 1800;
-
+      const duration = 1200;
       const startTime = performance.now();
 
-
-
       function step(now) {
-
         const progress = Math.min((now - startTime) / duration, 1);
-
-        const eased = 1 - Math.pow(1 - progress, 3); // cubic ease-out
-
+        const eased = 1 - Math.pow(1 - progress, 3);
         const current = Math.floor(eased * target);
-
         el.textContent = current + suffix;
-
         if (progress < 1) {
-
           requestAnimationFrame(step);
-
         } else {
-
           el.textContent = target + suffix;
-
         }
-
       }
-
       requestAnimationFrame(step);
-
     }
 
-
-
-    const statsCard = document.getElementById('stats-card');
-
-    if ('IntersectionObserver' in window && statsCard) {
-
-      const obs = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-          if (entry.isIntersecting) {
-
-            statEls.forEach(runCounter);
-
-            obs.unobserve(entry.target);
-
-          }
-
-        });
-
-      }, { threshold: 0.25 });
-
-      obs.observe(statsCard);
-
-    } else {
-
-      statEls.forEach(runCounter);
-
+    function activateOption(mode) {
+      if (!wrapper) return;
+      wrapper.setAttribute('data-qa-mode', mode);
+      btns.forEach(b => b.classList.toggle('active', b.getAttribute('data-qa-target') === mode));
+      panels.forEach(p => {
+        const isMatch = p.getAttribute('data-qa-panel') === mode;
+        p.classList.toggle('active', isMatch);
+        if (isMatch) {
+          p.querySelectorAll('.cih-stat-num[data-target]').forEach(runCounter);
+        }
+      });
+      try { localStorage.setItem('cih_qa_option', mode); } catch (e) {}
     }
 
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activateOption(btn.getAttribute('data-qa-target'));
+      });
+    });
+
+    const urlOpt = new URLSearchParams(window.location.search).get('qa_opt');
+    let savedOpt = null;
+    try { savedOpt = localStorage.getItem('cih_qa_option'); } catch (e) {}
+    const initialMode = urlOpt || savedOpt || 'opt1';
+    activateOption(initialMode);
   })();
-
 </script>
-
-
 
 <!-- Section Về Chúng Tôi (Tiên Phong Chăm Sóc Sức Khỏe) hidden as requested -->
 

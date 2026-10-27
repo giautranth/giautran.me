@@ -3036,7 +3036,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-cki-nguyen-minh-tuan-b",
         "name": "BS.CKI. Nguyễn Minh Tuấn B",
         "title": "Bác sĩ Khoa Gây mê Hồi sức",
-        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026-4-1_f16990bd.webp"
+        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026-4-1_f16990bd.webp?v=2"
       }
     ],
     "packages": [

@@ -403,7 +403,7 @@ const CIH_DOCTORS_DATA = [
     "position": "Bác sĩ Khoa Gây mê Hồi sức",
     "specialty": "Gây Mê Hồi Sức",
     "specialty_slug": "khoa-gay-me-hoi-suc",
-    "image": "images/ext_webp/Bio-Doctor-template-for-website_2026-4-1_f16990bd.webp",
+    "image": "images/ext_webp/Bio-Doctor-template-for-website_2026-4-1_f16990bd.webp?v=2",
     "content": "<p><strong>Bác sĩ Khoa Gây mê Hồi sức</strong></p>\n<p><strong>Chuyên khoa: Gây Mê Hồi Sức</strong></p>\n<p><strong>1. Thông tin Bác sĩ:</strong></p>\n<p>Bác sĩ Nguyễn Minh Tuấn B có gần 10 năm kinh nghiệm công tác trong Y với lĩnh vực chuyên sâu gây mê hồi sức. Trong suốt quá trình công tác, bác sĩ Nguyễn Minh Tuấn B đã đóng góp nhiều giá trị quý báu qua các đề tài nghiên cứu, báo cáo khoa học và là người bác sĩ tận tâm, chuyên nghiệp.</p>\n<p>Từ 04/2023 đến nay, bác sĩ Nguyễn Minh Tuấn B đang đảm nhiệm vị trí bác sĩ Khoa Gây Mê Hồi Sức Bệnh viện Quốc tế City.</p>\n<p><strong>Học hàm &#8211; học vị:</strong> Bác sĩ Chuyên khoa 1.</p>\n<p><strong>2. Quá trình công tác:</strong></p>\n<ul>\n<li>2016 – 4/2024: Bác sĩ Gây Mê Hồi Sức, Bệnh viện đa khoa Thiện Hạnh, tỉnh DakLak</li>\n<li>4/2024 &#8211; nay: Bác sĩ Gây mê hồi sức khoa Gây mê hồi sức Bệnh viện Quốc tế City.</li>\n</ul>\n<p><strong>3. Bằng cấp chuyên môn:</strong></p>\n<ul>\n<li>2016: Bác sĩ Đa Khoa, trường Đại học Tây Nguyên, tỉnh DakLak.</li>\n<li>08/2023: Chuyên khoa 1 Gây mê hồi sức trường Đại học Y Dược TP. HCM.</li>\n</ul>",
     "excerpt": ""
   },

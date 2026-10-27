@@ -222,7 +222,7 @@ const CIH_SPECIALTY_DATA = [
     "name": "Trung tâm Hỗ trợ sinh sản (IVF)",
     "title": "Trung tâm Hỗ trợ sinh sản (IVF)",
     "banner": "images/banners/banner_khoa-ho-tro-sinh-san-ivf.webp?v=2",
-    "gallery_img": "images/ext_webp/ivf-center-intro.webp",
+    "gallery_img": "images/ext_webp/ivf-center-intro.webp?v=2",
     "hero_desc": "Trung tâm Hỗ trợ sinh sản IVF Center – Bệnh viện Quốc tế City là bệnh viện đầu tiên khu vực cửa ngõ phía Tây cung cấp cho các gia đình dịch vụ hỗ trợ sinh sản chất lượng 5 sao với chi phí phù hợp và tối ưu nhất.",
     "intro_html": "<ul class=\"opt1-intro__list\"><li>Trong Trung Tâm Hỗ Trợ Sinh Sản – Bệnh viện Quốc tế City, các kỹ thuật lâm sàng và điều trị đóng vai trò quan trọng trong việc giúp các cặp vợ chồng vượt qua các vấn đề về hiếm muộn và đạt được kết quả thành công. Mỗi trường hợp sẽ được bác sĩ tư vấn và lựa chọn phương pháp phù hợp nhất.</li><li>Đồng thời, chúng tôi có những chuyên gia với nhiều năm kinh nghiệm đồng hành cùng bệnh nhân sẽ có những phát đồ cụ thể cho từng trường hợp, hướng tới một chu kì điều trị hiệu quả với chi phí hợp lí nhất.</li><li>Bằng công nghệ nuôi cấy chuyên biệt, cá thể hóa cho từng bệnh nhân. CIH luôn giữ vững tỉ lệ tạo phôi cao, từ đó tăng tỉ lệ thành công trong IVF. Tỉ lệ thụ tinh bằng các kỹ thuật hỗ trợ sinh sản tại Trung Tâm Hỗ Trợ Sinh Sản – Bệnh viện Quốc tế City luôn giữ mức cao (70-80%) so với mức trung bình chung tại Việt Nam và thế giới (60-70%).</li><li>Trung tâm Hỗ trợ sinh sản – Bệnh viện Quốc tế City áp dụng các kỹ thuật lâm sàng tiến tiến hàng đầu Thế giới với mục đích giúp tối ưu hóa cơ hội mang thai thành công cho các cặp vợ chồng gặp vấn đề về sinh sản.</li></ul>",
     "programs_heading": "Thế mạnh chuyên môn",

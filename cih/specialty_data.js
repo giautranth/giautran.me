@@ -229,7 +229,7 @@ const CIH_SPECIALTY_DATA = [
     "prog_cards": [
       {
         "title": "1. Kích thích buồng trứng (Ovarian Stimulation)",
-        "img": "images/programs/ivf_prog_1.webp",
+        "img": "images/programs/ivf_prog_1.webp?v=2",
         "desc": "<p>Hiện nay, tại Trung Tâm Hỗ Trợ Sinh Sản – Bệnh viện Quốc tế City đang áp dụng những phát đồ kích thích buồng trứng tiến tiến nhất trên thế giới. Đồng thời, chúng tôi có những chuyên gia với nhiều năm kinh nghiệm đồng hành cùng bệnh nhân sẽ có những phát đồ cụ thể cho từng trường hợp, hướng tới một chu kì điều trị hiệu quả với chi phí hợp lí nhất.</p>",
         "title_html": "1. Kích thích buồng trứng<br>(Ovarian Stimulation)"
       },

@@ -1764,7 +1764,7 @@ const CIH_SPECIALTY_DATA = [
     "name": "Khoa Can Thiệp Mạch Máu",
     "title": "Khoa Can Thiệp Mạch Máu",
     "banner": "images/banners/banner_khoa-can-thiep-mach-mau.webp?v=2",
-    "gallery_img": "images/programs/right_khoa-can-thiep-mach-mau.webp",
+    "gallery_img": "images/ext_webp/khoa-can-thiep-mach-mau.webp?v=2",
     "hero_desc": "Đơn vị Can Thiệp Mạch Máu tại Bệnh viện Quốc tế City được đầu tư các trang thiết bị y khoa tân tiến, hiện đại trong ngành cùng đội ngũ bác sĩ trong và ngoài nước có nhiều năm kinh nghiệm làm việc trong lĩnh vực can thiệp mạch máu. Đồng thời, khoa còn sở hữu cơ sở vật chất tiện nghi, sang trọng, được thiết kế theo chuẩn quốc tế, cam kết mang lại hiệu quả điều trị tối ưu cùng sự thoải mái tối đa cho khách hàng và bệnh nhân.",
     "intro_html": "<p>Hệ thống DSA của Bệnh viện Quốc tế City thuộc hệ thống Artis zee của Siemens, là một trong những thiết bị chụp mạch máu xóa nền tân tiến.</p>\n<p>Nền tảng PURE® tiên tiến tích hợp cung cấp khả năng quản lý liều lượng phóng xạ tối ưu và các ứng dụng lâm sàng mới nhất, đảm bảo tiêu chuẩn công nghệ hình ảnh chuẩn xác.</p>",
     "programs_heading": "Các hoạt động mũi nhọn của khoa",

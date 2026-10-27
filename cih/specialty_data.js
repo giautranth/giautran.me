@@ -247,7 +247,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "4. Nuôi cấy phôi (Embryo Culture)",
-        "img": "images/programs/ivf_prog_4.webp",
+        "img": "images/programs/ivf_prog_4.webp?v=2",
         "desc": "<p>Bằng công nghệ nuôi cấy chuyên biệt, cá thể hóa cho từng bệnh nhân. Bệnh viện Quốc tế City luôn giữ vững tỉ lệ tạo phôi cao, từ đó tăng tỉ lệ thành công trong IVF.</p>",
         "title_html": "4. Nuôi cấy phôi <span style=\"display:inline-block\">(Embryo Culture)</span>"
       },
@@ -367,7 +367,7 @@ const CIH_SPECIALTY_DATA = [
       {
         "wide": false,
         "title": "Buồng nuôi cấy phôi riêng biệt & Công nghệ Thủy tinh hóa",
-        "img": "images/programs/ivf_prog_4.webp",
+        "img": "images/programs/ivf_prog_4.webp?v=2",
         "short_desc": "Mỗi bệnh nhân được nuôi cấy trong một buồng riêng biệt, kết hợp trữ đông noãn/phôi bằng phương pháp thủy tinh hóa.",
         "desc": "<p>Liên tục cập nhật công nghệ mới trong các kỹ thuật chọc hút trứng, trữ đông noãn/phôi bằng phương pháp thủy tinh hóa đạt kết quả tối ưu. Mỗi bệnh nhân được nuôi cấy trong một buồng nuôi cấy riêng biệt.</p>"
       },
@@ -3500,7 +3500,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Vi sinh",
-        "img": "images/programs/ivf_prog_4.webp",
+        "img": "images/programs/ivf_prog_4.webp?v=2",
         "desc": "<p>Cung cấp những xét nghiệm về: virus, vi trùng, nấm và ký sinh trùng gây bệnh, sau đó làm kháng sinh đồ để cung cấp cho bác sĩ điều trị loại kháng sinh nào tốt nhất có thể tiêu diệt vi trùng gây bệnh.</p>",
         "title_html": "Vi sinh"
       },
@@ -3976,7 +3976,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Pha chế các chế phẩm điện giải đậm đặc, chế phẩm vô khuẩn và thuốc ung thư phục vụ người bệnh nội trú.",
-        "img": "images/programs/ivf_prog_4.webp",
+        "img": "images/programs/ivf_prog_4.webp?v=2",
         "desc": "<p style=\"margin:0;\">Pha chế các chế phẩm điện giải đậm đặc, chế phẩm vô khuẩn và thuốc ung thư phục vụ người bệnh nội trú.</p>",
         "title_html": "Pha chế các chế phẩm điện giải đậm đặc, chế phẩm vô khuẩn và thuốc ung thư phục vụ người bệnh nội trú."
       },

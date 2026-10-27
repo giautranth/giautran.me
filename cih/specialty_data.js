@@ -1357,7 +1357,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-le-duc-tho",
         "name": "BS. Lê Đức Thọ",
         "title": "Bác sĩ chuyên khoa Da liễu",
-        "img": "images/ext_webp/59_bbeafbbc.webp"
+        "img": "images/ext_webp/59_bbeafbbc.webp?v=2"
       }
     ],
     "packages": [
@@ -2412,7 +2412,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-le-duc-tho",
         "name": "BS. Lê Đức Thọ",
         "title": "Bác sĩ chuyên khoa Da liễu",
-        "img": "images/ext_webp/59_bbeafbbc.webp"
+        "img": "images/ext_webp/59_bbeafbbc.webp?v=2"
       },
       {
         "slug": "bs-cki-ho-thanh-phong",

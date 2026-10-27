@@ -1245,7 +1245,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-le-kim-sang",
         "name": "BS.CKII. Lê Kim Sang",
         "title": "Trưởng Khoa Tiêu Hóa<br>&amp; Nội Soi Tiêu Hóa",
-        "img": "images/ext_webp/50-768x768_9d33a1ff.webp"
+        "img": "images/ext_webp/50-768x768_9d33a1ff.webp?v=2"
       },
       {
         "slug": "bs-ckii-dinh-duc-minh",

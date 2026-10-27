@@ -2153,13 +2153,13 @@
           </article>
 
           <article class="news-card news-card--standard">
-            <a href="chi-tiet-tin-tuc?id=46565" class="news-card__img-link">
-              <img src="https://cih.com.vn/wp-content/uploads/2026/08/1-19-1-768x512.webp" alt="Ra mắt ban chấp hành chi hội bệnh viện tư nhân TP. HCM và các tỉnh, thành phía nam" class="news-card__img" loading="lazy" />
-              <span class="news-card__cat">Tin Bệnh Viện</span>
+            <a href="chi-tiet-tin-tuc?id=44726" class="news-card__img-link">
+              <img src="https://cih.com.vn/wp-content/uploads/2026/04/1.webp" alt="Các mốc khám thai quan trọng mẹ bầu cần nhớ để thai kỳ khỏe mạnh" class="news-card__img" loading="lazy" />
+              <span class="news-card__cat">Khoa Phụ Sản</span>
             </a>
             <div class="news-card__body">
-              <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=46565">Ra mắt ban chấp hành chi hội bệnh viện tư nhân TP. HCM và các tỉnh, thành phía nam</a></h3>
-              <a href="chi-tiet-tin-tuc?id=46565" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+              <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=44726">Các mốc khám thai quan trọng mẹ bầu cần nhớ để thai kỳ khỏe mạnh</a></h3>
+              <a href="chi-tiet-tin-tuc?id=44726" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>
           </article>
         </div>
@@ -2553,8 +2553,8 @@ document.addEventListener('DOMContentLoaded', () => {
 </footer>
 
 <script src="script.js?v=20261027_arrows"></script>
-<script src="news_data.js?v=1792750000"></script>
-<script src="specialty_data.js?v=20261027_ivf3"></script>
+<script src="news_data.js?v=20261027_specnews"></script>
+<script src="specialty_data.js?v=20261027_specnews"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
@@ -2737,6 +2737,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }).join('');
             const pkgMobWrap = document.getElementById('pkg-mob-wrap');
             if (pkgMobWrap) pkgMobWrap.dispatchEvent(new Event('cih-slider-reset'));
+          }
+        }
+
+        // Section 5: Tin tức theo đúng chuyên khoa
+        if (spec.news && spec.news.length > 0) {
+          const newsGrid = document.getElementById('news-grid-3');
+          if (newsGrid) {
+            newsGrid.innerHTML = spec.news.map(n => {
+              const newsHref = n.id ? `chi-tiet-tin-tuc?id=${n.id}` : 'tin-tuc';
+              const newsImg = n.img || 'images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp';
+              const safeAlt = (n.title || '').replace(/"/g, '&quot;');
+              return `
+              <article class="news-card news-card--standard">
+                <a href="${newsHref}" class="news-card__img-link">
+                  <img src="${newsImg}" alt="${safeAlt}" class="news-card__img" onerror="this.onerror=null; this.src='images/HÌNH ẢNH/Phòng khám Quốc tế/27.webp'" loading="lazy" />
+                  <span class="news-card__cat">${n.cat || spec.name}</span>
+                </a>
+                <div class="news-card__body">
+                  <h3 class="news-card__title"><a href="${newsHref}">${n.title || ''}</a></h3>
+                  <a href="${newsHref}" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
+                </div>
+              </article>
+            `;
+            }).join('');
+            const newsMobWrap = document.getElementById('news-mob-wrap');
+            if (newsMobWrap) newsMobWrap.dispatchEvent(new Event('cih-slider-reset'));
           }
         }
       }

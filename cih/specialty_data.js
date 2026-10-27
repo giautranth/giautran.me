@@ -165,6 +165,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Phụ Sản",
         "image": "images/ext_webp/6-2_40f6990a.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 35,
+        "title": "Lớp học tiền sản quy mô lớn tháng 07: Theo dõi thai kỳ phát triển và nhận biết dấu hiệu chuyển dạ",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB-2-1.webp",
+        "cat": "Khoa Phụ Sản",
+        "date": "22/06/2026"
+      },
+      {
+        "id": 46128,
+        "title": "Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3.webp",
+        "cat": "Khoa Phụ Sản",
+        "date": "20/07/2026"
+      },
+      {
+        "id": 47,
+        "title": "Dấu ấn lớp học tiền sản quy mô kỷ lục tại Bệnh viện Quốc tế City thu hút gần 400 mẹ bầu",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/CIH05127-1024x683.webp",
+        "cat": "Khoa Phụ Sản",
+        "date": "30/05/2026"
+      },
+      {
+        "id": 44977,
+        "title": "Lớp học tiền sản quy mô lớn nhất năm 2026: Dinh dưỡng thai kỳ khoa học – Mẹ khỏe, bé phát triển tối ưu",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/HOI-THAO-Tien-San-_T5-2026-2.webp",
+        "cat": "Khoa Phụ Sản",
+        "date": "05/05/2026"
+      },
+      {
+        "id": 44726,
+        "title": "Các mốc khám thai quan trọng mẹ bầu cần nhớ để thai kỳ khỏe mạnh",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/04/1.webp",
+        "cat": "Khoa Phụ Sản",
+        "date": "18/04/2026"
+      },
+      {
+        "id": 27,
+        "title": "Dấu ấn hội thảo thẩm mỹ “Nâng cấp phiên bản rạng rỡ sau sinh”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/23-1024x695.webp",
+        "cat": "Khoa Phụ Sản",
+        "date": "27/06/2026"
+      }
     ]
   },
   {
@@ -333,6 +377,50 @@ const CIH_SPECIALTY_DATA = [
         "short_desc": "Đội ngũ bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm tận tâm “chăm sóc” phôi 24/7.",
         "desc": "<p>Các Bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm.</p><p>Như trái tim không bao giờ ngừng đập, đội ngũ chuyên viên phôi học không quản ngày đêm, miệt mài “chăm sóc” những em bé phôi lớn lên từng ngày, để các em là những em bé khỏe mạnh trước khi về với ba mẹ.</p>"
       }
+    ],
+    "news": [
+      {
+        "id": 46977,
+        "title": "Hành trình từ vô tinh đến có con sau Micro-TESE, ICSI và 3 lần chuyển phôi",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/HINH-PHONG-LAB.webp",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
+        "date": "14/09/2026"
+      },
+      {
+        "id": 46759,
+        "title": "MC Phương Linh: Từ lần tác nghiệp tại lễ khai trương IVF đến ngày đón con gái",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/1787888031417_5881801453882299579_5881801453882299579_fdcd665d8b354c5964cffb95bbc4016c.webp",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
+        "date": "03/09/2026"
+      },
+      {
+        "id": 49,
+        "title": "Hội thảo IVF tháng 5: Chế độ dinh dưỡng & kiểm soát cân nặng trong quá trình điều trị IVF",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/Hoi-thao-IVF-THANG-5-2026-4.webp",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
+        "date": "25/05/2026"
+      },
+      {
+        "id": 45046,
+        "title": "IVF thành công sau 10 năm hiếm muộn: Hành trình đón con sau hơn một thập kỷ chờ đợi",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/z7800055205083_2a228b6b1273ce4ab90dab488d8b9f11.webp",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
+        "date": "08/05/2026"
+      },
+      {
+        "id": 42850,
+        "title": "Dấu mốc quan trọng trong hành trình chuẩn hóa Trung tâm Hỗ trợ sinh sản theo tiêu chuẩn quốc tế",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/01/Bia-2.jpg",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
+        "date": "11/01/2026"
+      },
+      {
+        "id": 26418,
+        "title": "Bác sĩ Nguyễn Thị Ngọc Sương: Hành trình ba thập kỷ gieo hạnh phúc cho hàng ngàn cặp đôi hiếm muộn",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/06/SAN00374-copy-F.png",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
+        "date": "19/06/2025"
+      }
     ]
   },
   {
@@ -472,6 +560,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/1.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 45030,
+        "title": "Viêm màng não do não mô cầu gia tăng ở trẻ em: Mối nguy hiểm cha mẹ không thể chủ quan",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/2.webp",
+        "cat": "Khoa Nhi",
+        "date": "07/05/2026"
+      },
+      {
+        "id": 43894,
+        "title": "Hướng dẫn chăm trẻ mắc tay chân miệng tại nhà an toàn và hiệu quả",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/Tre-bi-tay-chan-mieng-1-1.jpg",
+        "cat": "Khoa Nhi",
+        "date": "26/02/2026"
+      },
+      {
+        "id": 43867,
+        "title": "Bổ sung kẽm trong điều trị tiêu chảy ở trẻ",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/Tieu-chay-thuong-gap-o-tre.jpg",
+        "cat": "Khoa Nhi",
+        "date": "24/02/2026"
+      },
+      {
+        "id": 43802,
+        "title": "Chăm sóc trẻ bị sốt tại nhà: Hướng dẫn cho phụ huynh",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/Giup-tre-bu-nuoc-dung-cach.jpg",
+        "cat": "Khoa Nhi",
+        "date": "13/02/2026"
+      },
+      {
+        "id": 43794,
+        "title": "Tết 2026 trẻ dễ bị táo bón: Mẹ cần làm gì để phòng ngừa hiệu quả?",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/Tao-bon-o-tre-em-co-the-do-nhieu-nguyen-nhan-gay-ra-1.jpg",
+        "cat": "Khoa Nhi",
+        "date": "13/02/2026"
+      },
+      {
+        "id": 43760,
+        "title": "Cha mẹ cần cảnh giác: Trẻ bị sốt xuất huyết trong dịp Tết 2026",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/Tre-bi-sot-cao-chan-an-met-moi.jpg",
+        "cat": "Khoa Nhi",
+        "date": "12/02/2026"
+      }
     ]
   },
   {
@@ -570,6 +702,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói tiêu chuẩn",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/1.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 43318,
+        "title": "Hành trình hồi sinh diệu kỳ của bé sinh non 31 tuần, nặng 1,1kg",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/01/Nguyen-nhan-khien-tre-de-viem-ho-hap-vao-mua-lanh.png",
+        "cat": "Khoa Hồi sức tích cực sơ sinh (NICU)",
+        "date": "29/01/2026"
+      },
+      {
+        "id": 43215,
+        "title": "Sinh non 1,8kg do nhau tiền đạo: Em bé IVF “Vượt ải” ngoạn mục tại Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/01/POST-MOI-NHI.png",
+        "cat": "Khoa Hồi sức tích cực sơ sinh (NICU)",
+        "date": "24/01/2026"
+      },
+      {
+        "id": 44532,
+        "title": "Lớp học tiền sản tháng 11/04/2026: Chăm sóc bé sơ sinh chuẩn quốc tế",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/03/LED-CHAO-AACI-7.webp",
+        "cat": "Khoa Hồi sức tích cực sơ sinh (NICU)",
+        "date": "31/03/2026"
+      },
+      {
+        "id": 43349,
+        "title": "11 Bệnh thường gặp ở trẻ sơ sinh",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/01/11-benh-thuong-gap-o-tre-so-sinh.jpg",
+        "cat": "Khoa Hồi sức tích cực sơ sinh (NICU)",
+        "date": "30/01/2026"
+      },
+      {
+        "id": 570,
+        "title": "Bệnh tim bẩm sinh ở trẻ sơ sinh sau sinh",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/benh-tim-bam-sinh-o-tre-so-sinh-sau-sinh_66f80524e6c48-png.avif",
+        "cat": "Khoa Hồi sức tích cực sơ sinh (NICU)",
+        "date": "12/09/2024"
+      },
+      {
+        "id": 45030,
+        "title": "Viêm màng não do não mô cầu gia tăng ở trẻ em: Mối nguy hiểm cha mẹ không thể chủ quan",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/2.webp",
+        "cat": "Khoa Hồi sức tích cực sơ sinh (NICU)",
+        "date": "07/05/2026"
       }
     ]
   },
@@ -741,6 +917,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/ext_webp/2-5_8abfc2e8.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 47341,
+        "title": "Khám sức khỏe định kỳ – Chủ động bảo vệ sức khỏe từ sớm",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/Noi-ho-hap-3.webp",
+        "cat": "Khoa Khám Tổng Quát (EHS)",
+        "date": "06/10/2026"
+      },
+      {
+        "id": 44969,
+        "title": "Tầm soát sức khỏe miễn phí 100% – Khám tổng quát đa chuyên khoa tại Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/z7775576743680_c7623d17c1d843c2746b9cfde8bf4911.webp",
+        "cat": "Khoa Khám Tổng Quát (EHS)",
+        "date": "05/05/2026"
+      },
+      {
+        "id": 44785,
+        "title": "Bệnh viện Quốc tế City khám sức khỏe người cao tuổi tại phường an lạc",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/04/z7747912564455_bfd6afc035c0645378fcbd15162a9c78.webp",
+        "cat": "Khoa Khám Tổng Quát (EHS)",
+        "date": "21/04/2026"
+      },
+      {
+        "id": 46301,
+        "title": "Tầm soát bệnh lý tim mạch và đột quỵ: Phát hiện sớm để điều trị kịp thời",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/06-1.webp",
+        "cat": "Khoa Khám Tổng Quát (EHS)",
+        "date": "27/07/2026"
+      },
+      {
+        "id": 45851,
+        "title": "Hội thảo Tim mạch – Đột quỵ 2026: Tầm soát sớm bệnh lý tim mạch và đột quỵ để bảo vệ sức khỏe toàn diện",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/COVER-FB-scaled.webp",
+        "cat": "Khoa Khám Tổng Quát (EHS)",
+        "date": "03/07/2026"
+      },
+      {
+        "id": 46128,
+        "title": "Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3.webp",
+        "cat": "Khoa Khám Tổng Quát (EHS)",
+        "date": "20/07/2026"
+      }
     ]
   },
   {
@@ -900,6 +1120,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói khám sức khỏe lái xe",
         "cat": "Khoa Nội Tổng Hợp",
         "image": "images/ext_webp/2-5_8abfc2e8.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 46727,
+        "title": "Kiểm soát viêm mô tế bào lan rộng ở bệnh nhân 73 tuổi có tiền sử ghép thận và phẫu thuật tim",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/02-kn.webp",
+        "cat": "Khoa Nội Tổng Hợp",
+        "date": "31/08/2026"
+      },
+      {
+        "id": 47252,
+        "title": "Hội thảo khoa học kỹ thuật 26/09: “Cập nhật điều trị nhiễm khuẩn gram âm đa kháng và nhiễm nấm xâm lấn” diễn ra thành công tốt đẹp",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/chon.webp",
+        "cat": "Khoa Nội Tổng Hợp",
+        "date": "26/09/2026"
+      },
+      {
+        "id": 46930,
+        "title": "Hội thảo khoa học kỹ thuật: Cập nhật điều trị nhiễm khuẩn gram âm đa kháng và nhiễm nấm xâm lấn",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/ZALO-OA-7.webp",
+        "cat": "Khoa Nội Tổng Hợp",
+        "date": "10/09/2026"
+      },
+      {
+        "id": 46,
+        "title": "Đừng lơ là với dấu hiệu nhận biết bệnh sốt xuất huyết",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/dung-lo-la-voi-dau-hieu-nhan-biet-benh-sot-xuat-huyet_66f81c066fb61-jpeg.avif",
+        "cat": "Khoa Nội Tổng Hợp",
+        "date": "02/06/2026"
+      },
+      {
+        "id": 48,
+        "title": "Hồi phục chức năng tim thận cho bệnh nhân suy tim – Suy thận nặng",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/Giam-doc-Y-khoa-va-kip-BS-dieu-tri-ca-benh-Huynh-Nhung-70T1.webp",
+        "cat": "Khoa Nội Tổng Hợp",
+        "date": "28/05/2026"
+      },
+      {
+        "id": 45647,
+        "title": "Biến chứng zona: Nam du khách Canada 23 tuổi nhập viện sau gần 48 giờ khởi phát",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/2560x1441_anh-bai-web.webp",
+        "cat": "Khoa Nội Tổng Hợp",
+        "date": "23/06/2026"
       }
     ]
   },
@@ -1067,6 +1331,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-docthan.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 47359,
+        "title": "Nhồi máu não diện rộng sau thai lưu: Phối hợp đa chuyên khoa giúp người phụ nữ 38 tuổi vượt qua nguy kịch",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/1789966808142_1671723407599379527_g7419247480356311170_55b06456b5fac3924fc23bb91547e5bf.webp",
+        "cat": "Khoa Thần Kinh",
+        "date": "08/10/2026"
+      },
+      {
+        "id": 44318,
+        "title": "Đột quỵ – Những cảnh báo từ Bác sĩ không nên bỏ qua",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/03/BS-CK1-Khuc-Thua-Minh.jpg",
+        "cat": "Khoa Thần Kinh",
+        "date": "17/03/2026"
+      },
+      {
+        "id": 43893,
+        "title": "Điều trị thành công ca chấn thương sọ não nặng sau tai nạn giao thông trong tình trạng hôn mê sâu, đa chấn thương nguy kịch",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/03/THAN-KINH-POST-1-scaled.png",
+        "cat": "Khoa Thần Kinh",
+        "date": "02/03/2026"
+      },
+      {
+        "id": 43640,
+        "title": "Bệnh viện Quốc tế City can thiệp thành công ca AVM não phức tạp, mở đường cho điều trị xạ phẫu tiếp theo",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/z7493762258509_3a8c6f0e2a0cdef00f4b845ab23b7203.jpg",
+        "cat": "Khoa Thần Kinh",
+        "date": "09/02/2026"
+      },
+      {
+        "id": 43440,
+        "title": "Can thiệp thành công ca vỡ túi phình mạch não ở nữ bệnh nhân trẻ",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/6-scaled.png",
+        "cat": "Khoa Thần Kinh",
+        "date": "04/02/2026"
+      },
+      {
+        "id": 30640,
+        "title": "Suýt mất mạng vì chủ quan sau tai nạn nhẹ: Cảnh báo nguy hiểm từ máu tụ dưới màng cứng bán cấp tiến triển nhanh",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/11/THAN-KINH-POST-1-scaled.png",
+        "cat": "Khoa Thần Kinh",
+        "date": "21/11/2025"
+      }
     ]
   },
   {
@@ -1191,6 +1499,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-docthan.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 47137,
+        "title": "Cấp cứu kịp thời ông cụ 60 tuổi bị nhồi máu cơ tim trong buổi khám từ thiện tại quảng ngãi",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/c1.webp",
+        "cat": "Khoa Tim mạch",
+        "date": "20/09/2026"
+      },
+      {
+        "id": 46321,
+        "title": "Nhồi máu cơ tim: 04 dấu hiệu nhận biết sớm và “Thời gian vàng”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/Tim-mach-01.webp",
+        "cat": "Khoa Tim mạch",
+        "date": "28/07/2026"
+      },
+      {
+        "id": 46391,
+        "title": "08 nguyên nhân khiến nhồi máu cơ tim ngày càng trẻ hóa, cảnh báo từ chuyên gia",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/00000001.webp",
+        "cat": "Khoa Tim mạch",
+        "date": "03/08/2026"
+      },
+      {
+        "id": 46009,
+        "title": "Ứng dụng công nghệ bản đồ tim 3d điều trị rối loạn nhịp tim",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/huynh-cong-tuan.webp",
+        "cat": "Khoa Tim mạch",
+        "date": "13/07/2026"
+      },
+      {
+        "id": 45049,
+        "title": "BV Quốc tế City đạt chứng nhận quốc tế cao nhất về điều trị suy tim",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/giai-tim-mach-01.webp",
+        "cat": "Khoa Tim mạch",
+        "date": "08/05/2026"
+      },
+      {
+        "id": 45357,
+        "title": "Hồi phục chức năng tim thận cho bệnh nhân suy tim – suy thận nặng",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/Giam-doc-Y-khoa-va-kip-BS-dieu-tri-ca-benh-Huynh-Nhung-70T1.webp",
+        "cat": "Khoa Tim mạch",
+        "date": "28/05/2026"
+      }
     ]
   },
   {
@@ -1296,6 +1648,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Kim cương <span style=\"display:inline-block\">(nữ có gia đình)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-gd.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 46664,
+        "title": "Sỏi lớn ống mật chủ kèm viêm túi mật: Xử trí toàn diện trong một cuộc mổ",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/2560x1441_anh-bai-web.webp",
+        "cat": "Trung Tâm Tiêu hóa – Nội soi",
+        "date": "26/08/2026"
+      },
+      {
+        "id": 46532,
+        "title": "Đau bụng dữ dội,  phát hiện nhiều sỏi mật kích thước “Khủng”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/34.webp",
+        "cat": "Trung Tâm Tiêu hóa – Nội soi",
+        "date": "17/08/2026"
+      },
+      {
+        "id": 42996,
+        "title": "Thành công ca cắt u đại trực tràng toàn thành bằng FTRD tại Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/01/z7450186387643_72b749519325174738c9267c42819e2b.jpg",
+        "cat": "Trung Tâm Tiêu hóa – Nội soi",
+        "date": "20/01/2026"
+      },
+      {
+        "id": 25640,
+        "title": "Cấp cứu thành công bệnh nhân xuất huyết tiêu hóa nguy kịch",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/03/Ghep-logo-2.png",
+        "cat": "Trung Tâm Tiêu hóa – Nội soi",
+        "date": "28/03/2025"
+      },
+      {
+        "id": 24735,
+        "title": "Kỹ thuật ESD – Bước đột phá trong điều trị ung thư sớm đường tiêu hóa",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/11/Noi-soi-1.jpg",
+        "cat": "Trung Tâm Tiêu hóa – Nội soi",
+        "date": "26/11/2024"
+      },
+      {
+        "id": 24539,
+        "title": "Khám phá công nghệ nội soi NBI chuẩn Nhật",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/11/Zalo.jpg",
+        "cat": "Trung Tâm Tiêu hóa – Nội soi",
+        "date": "12/11/2024"
       }
     ]
   },
@@ -1403,6 +1799,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nam-bachkim.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 45647,
+        "title": "Biến chứng zona: Nam du khách Canada 23 tuổi nhập viện sau gần 48 giờ khởi phát",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/2560x1441_anh-bai-web.webp",
+        "cat": "Khoa Da Liễu",
+        "date": "23/06/2026"
+      },
+      {
+        "id": 44864,
+        "title": "PRP trẻ hóa da đẹp tự nhiên",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/04/2-2.webp",
+        "cat": "Khoa Da Liễu",
+        "date": "24/04/2026"
+      },
+      {
+        "id": 45937,
+        "title": "Buổi chia sẻ đặc biệt tháng 7: “Các phương pháp căng chỉ thẩm mỹ” cùng GS. BS. Kwon Han Jin",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA.webp",
+        "cat": "Khoa Da Liễu",
+        "date": "08/07/2026"
+      },
+      {
+        "id": 46727,
+        "title": "Kiểm soát viêm mô tế bào lan rộng ở bệnh nhân 73 tuổi có tiền sử ghép thận và phẫu thuật tim",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/02-kn.webp",
+        "cat": "Khoa Da Liễu",
+        "date": "31/08/2026"
+      },
+      {
+        "id": 46147,
+        "title": "Lan tỏa tri thức – Truyền cảm hứng sống khỏe, sống đẹp",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/01bs.webp",
+        "cat": "Khoa Da Liễu",
+        "date": "20/07/2026"
+      },
+      {
+        "id": 45781,
+        "title": "Dấu ấn hội thảo thẩm mỹ “Nâng cấp phiên bản rạng rỡ sau sinh”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/23-scaled.webp",
+        "cat": "Khoa Da Liễu",
+        "date": "27/06/2026"
+      }
     ]
   },
   {
@@ -1509,6 +1949,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Kim cương <span style=\"display:inline-block\">(nữ có gia đình)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-gd.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 46664,
+        "title": "Sỏi lớn ống mật chủ kèm viêm túi mật: Xử trí toàn diện trong một cuộc mổ",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/2560x1441_anh-bai-web.webp",
+        "cat": "Khoa Ngoại Tổng quát",
+        "date": "26/08/2026"
+      },
+      {
+        "id": 46556,
+        "title": "Ưu đãi 20% phí gói phẫu thuật tại khoa ngoại tổng quát",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/My_Uu-dai-Khoa-Ngoai-tong-quat-1.webp",
+        "cat": "Khoa Ngoại Tổng quát",
+        "date": "19/08/2026"
+      },
+      {
+        "id": 46532,
+        "title": "Đau bụng dữ dội,  phát hiện nhiều sỏi mật kích thước “Khủng”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/34.webp",
+        "cat": "Khoa Ngoại Tổng quát",
+        "date": "17/08/2026"
+      },
+      {
+        "id": 46237,
+        "title": "Kết hợp phẫu thuật u tuyến giáp và viêm túi mật mạn đồng bộ, giúp rút ngắn thời gian điều trị và hồi phục tốt",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/SEO-SAN-5.webp",
+        "cat": "Khoa Ngoại Tổng quát",
+        "date": "23/07/2026"
+      },
+      {
+        "id": 45324,
+        "title": "Cắt đại tràng kịp thời cho bệnh nhân ung thư đại tràng sigma có dấu hiệu bán tắc ruột",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/5-2.webp",
+        "cat": "Khoa Ngoại Tổng quát",
+        "date": "22/05/2026"
+      },
+      {
+        "id": 43902,
+        "title": "Dấu hiệu của bệnh trĩ: Nhận biết sớm, tránh biến chứng nguy hiểm",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/1-2.png",
+        "cat": "Khoa Ngoại Tổng quát",
+        "date": "26/02/2026"
       }
     ]
   },
@@ -1634,6 +2118,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "https://cih.com.vn/wp-content/uploads/2026/03/7.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 46785,
+        "title": "Giành lại sự sống cho người bệnh viêm tụy hoại tử nặng, ngưng tuần hoàn khi nhập viện",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/Ca-Mai-Duc-Hung-web.webp",
+        "cat": "Khoa Hồi sức tích cực (ICU)",
+        "date": "03/09/2026"
+      },
+      {
+        "id": 47359,
+        "title": "Nhồi máu não diện rộng sau thai lưu: Phối hợp đa chuyên khoa giúp người phụ nữ 38 tuổi vượt qua nguy kịch",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/1789966808142_1671723407599379527_g7419247480356311170_55b06456b5fac3924fc23bb91547e5bf.webp",
+        "cat": "Khoa Hồi sức tích cực (ICU)",
+        "date": "08/10/2026"
+      },
+      {
+        "id": 43893,
+        "title": "Điều trị thành công ca chấn thương sọ não nặng sau tai nạn giao thông trong tình trạng hôn mê sâu, đa chấn thương nguy kịch",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/03/THAN-KINH-POST-1-scaled.png",
+        "cat": "Khoa Hồi sức tích cực (ICU)",
+        "date": "02/03/2026"
+      },
+      {
+        "id": 42500,
+        "title": "Cuộc chiến lúc nửa đêm: Kích hoạt “Báo động đỏ” cấp cứu thành công ca sản phụ nhau tiền đạo – Cài răng lược nguy kịch tại Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/12/Copy-of-Copy-of-CV-KHOA-PHONG-6.png",
+        "cat": "Khoa Hồi sức tích cực (ICU)",
+        "date": "15/12/2025"
+      },
+      {
+        "id": 47429,
+        "title": "Phối hợp đa chuyên khoa cứu người bệnh đa chấn thương",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/7.webp",
+        "cat": "Khoa Hồi sức tích cực (ICU)",
+        "date": "16/10/2026"
+      },
+      {
+        "id": 45357,
+        "title": "Hồi phục chức năng tim thận cho bệnh nhân suy tim – suy thận nặng",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/Giam-doc-Y-khoa-va-kip-BS-dieu-tri-ca-benh-Huynh-Nhung-70T1.webp",
+        "cat": "Khoa Hồi sức tích cực (ICU)",
+        "date": "28/05/2026"
+      }
     ]
   },
   {
@@ -1757,6 +2285,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nam-kc.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 47559,
+        "title": "Dấu ấn hội thảo thoái hóa khớp gối 24/10 “Hiểu đúng bệnh, chọn đúng phương pháp điều trị” diễn ra thành công tốt đẹp",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/1792818074643_647975034292112689_g2129412875815414594_h.webp",
+        "cat": "Khoa Chấn Thương Chỉnh Hình",
+        "date": "24/10/2026"
+      },
+      {
+        "id": 47180,
+        "title": "Hội thảo cơ xương khớp tháng 10: Thoái hóa khớp gối, hiểu đúng bệnh, chọn đúng phương pháp điều trị",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/Banner-Zalo-Post-1.webp",
+        "cat": "Khoa Chấn Thương Chỉnh Hình",
+        "date": "22/09/2026"
+      },
+      {
+        "id": 47429,
+        "title": "Phối hợp đa chuyên khoa cứu người bệnh đa chấn thương",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/7.webp",
+        "cat": "Khoa Chấn Thương Chỉnh Hình",
+        "date": "16/10/2026"
+      },
+      {
+        "id": 46075,
+        "title": "10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/1thumb.webp",
+        "cat": "Khoa Chấn Thương Chỉnh Hình",
+        "date": "17/07/2026"
+      },
+      {
+        "id": 45686,
+        "title": "Thay khớp háng thành công cho cụ bà 95 tuổi nhờ phối hợp đồng bộ đa chuyên khoa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/02-ctch01.webp",
+        "cat": "Khoa Chấn Thương Chỉnh Hình",
+        "date": "24/06/2026"
+      },
+      {
+        "id": 44408,
+        "title": "Hành trình điều trị khớp gối tại Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/03/BS.CK1-Nguyen-Van-Tinh-scaled.webp",
+        "cat": "Khoa Chấn Thương Chỉnh Hình",
+        "date": "24/03/2026"
+      }
     ]
   },
   {
@@ -1853,6 +2425,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Kim cương <span style=\"display:inline-block\">(nữ độc thân)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-docthan.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 47439,
+        "title": "Can thiệp nội mạch điều trị rò động tĩnh mạch màng cứng tại Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/ro-dong-tinh-mach-can-thiep-noi-mach.webp",
+        "cat": "Khoa Can Thiệp Mạch Máu",
+        "date": "16/10/2026"
+      },
+      {
+        "id": 46415,
+        "title": "Nhồi máu thận: Tái thông khẩn cấp động mạch thận khẩn cấp từ một cơn đau hông lưng",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/1-1.webp",
+        "cat": "Khoa Can Thiệp Mạch Máu",
+        "date": "07/08/2026"
+      },
+      {
+        "id": 46342,
+        "title": "Phối hợp can thiệp hai hệ mạch não và tim trong cùng một đợt nằm viện",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/1785381492383_1858338027095774142_8704828691385398713_46c59b609b69f10af14f5145afdfdd78-scaled.webp",
+        "cat": "Khoa Can Thiệp Mạch Máu",
+        "date": "04/08/2026"
+      },
+      {
+        "id": 43640,
+        "title": "Bệnh viện Quốc tế City can thiệp thành công ca AVM não phức tạp, mở đường cho điều trị xạ phẫu tiếp theo",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/z7493762258509_3a8c6f0e2a0cdef00f4b845ab23b7203.jpg",
+        "cat": "Khoa Can Thiệp Mạch Máu",
+        "date": "09/02/2026"
+      },
+      {
+        "id": 43440,
+        "title": "Can thiệp thành công ca vỡ túi phình mạch não ở nữ bệnh nhân trẻ",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/6-scaled.png",
+        "cat": "Khoa Can Thiệp Mạch Máu",
+        "date": "04/02/2026"
+      },
+      {
+        "id": 43410,
+        "title": "Can thiệp thành công ca nhồi máu cơ tim nguy kịch, tổn thương hai nhánh vành",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/z7492886609155_d6ef3ae03f1686ef0bcc7a2e4776fe35.jpg",
+        "cat": "Khoa Can Thiệp Mạch Máu",
+        "date": "02/02/2026"
       }
     ]
   },
@@ -1995,6 +2611,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "https://cih.com.vn/wp-content/uploads/2026/03/7.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 7569,
+        "title": "Sỏi thận có khả năng gây suy thận không?",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/soi-than-co-kha-nang-gay-suy-than-khong_66f8def95648d-jpeg.avif",
+        "cat": "Khoa Tiết Niệu",
+        "date": "23/09/2024"
+      },
+      {
+        "id": 46415,
+        "title": "Nhồi máu thận: Tái thông khẩn cấp động mạch thận khẩn cấp từ một cơn đau hông lưng",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/1-1.webp",
+        "cat": "Khoa Tiết Niệu",
+        "date": "07/08/2026"
+      },
+      {
+        "id": 48,
+        "title": "Hồi phục chức năng tim thận cho bệnh nhân suy tim – Suy thận nặng",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/Giam-doc-Y-khoa-va-kip-BS-dieu-tri-ca-benh-Huynh-Nhung-70T1.webp",
+        "cat": "Khoa Tiết Niệu",
+        "date": "28/05/2026"
+      },
+      {
+        "id": 42185,
+        "title": "Cứu sống mẹ và bé trong ca tiền sản giật nguy kịch – Suy thận cấp và tăng kali máu",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/11/8.png",
+        "cat": "Khoa Tiết Niệu",
+        "date": "24/11/2025"
+      },
+      {
+        "id": 46727,
+        "title": "Kiểm soát viêm mô tế bào lan rộng ở bệnh nhân 73 tuổi có tiền sử ghép thận và phẫu thuật tim",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/02-kn.webp",
+        "cat": "Khoa Tiết Niệu",
+        "date": "31/08/2026"
+      },
+      {
+        "id": 46532,
+        "title": "Đau bụng dữ dội,  phát hiện nhiều sỏi mật kích thước “Khủng”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/34.webp",
+        "cat": "Khoa Tiết Niệu",
+        "date": "17/08/2026"
+      }
     ]
   },
   {
@@ -2075,6 +2735,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Bạch kim <span style=\"display:inline-block\">(nam)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nam-bachkim.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 46651,
+        "title": "Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/1-2.webp",
+        "cat": "Trung tâm Tai Mũi Họng chuyên sâu & Phẫu thuật đầu cổ",
+        "date": "26/08/2026"
+      },
+      {
+        "id": 44973,
+        "title": "Điều trị ung thư lưỡi: 1 ca bệnh 1 phác đồ cá thể hóa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/2560x1441_anh-bai-web.webp",
+        "cat": "Trung tâm Tai Mũi Họng chuyên sâu & Phẫu thuật đầu cổ",
+        "date": "05/05/2026"
+      },
+      {
+        "id": 44951,
+        "title": "Đau đầu kéo dài không rõ nguyên nhân, đi khám nhiều nơi vẫn không ra bệnh: Hóa ra do nhiễm nấm nhiều xoang",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/26.webp",
+        "cat": "Trung tâm Tai Mũi Họng chuyên sâu & Phẫu thuật đầu cổ",
+        "date": "02/05/2026"
+      },
+      {
+        "id": 44545,
+        "title": "Ung thư thanh quản: Kỹ thuật khó hồi sinh 1 cuộc sống mới",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/04/gen-h-z7683877742619_2f349ddf2f2145ae785abca319025fa2.webp",
+        "cat": "Trung tâm Tai Mũi Họng chuyên sâu & Phẫu thuật đầu cổ",
+        "date": "03/04/2026"
+      },
+      {
+        "id": 44419,
+        "title": "Ứng dụng trí tuệ nhân tạo trong điều trị điếc đột ngột",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/03/1-2.webp",
+        "cat": "Trung tâm Tai Mũi Họng chuyên sâu & Phẫu thuật đầu cổ",
+        "date": "24/03/2026"
+      },
+      {
+        "id": 44374,
+        "title": "Điếc đột ngột: Khôi phục thính lực ngoạn mục cho bệnh nhân u70",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/03/2.webp",
+        "cat": "Trung tâm Tai Mũi Họng chuyên sâu & Phẫu thuật đầu cổ",
+        "date": "20/03/2026"
       }
     ]
   },
@@ -2172,6 +2876,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-docthan.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 12046,
+        "title": "Glaucoma – khó nhận diện, dễ mù lòa",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/glaucoma-kho-nhan-dien-de-mu-loa_66f8f893dddea-jpeg.avif",
+        "cat": "Khoa Mắt",
+        "date": "14/03/2019"
+      },
+      {
+        "id": 12043,
+        "title": "Glaucoma – “Kẻ trộm thị lực âm thầm”",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/glaucoma-ke-trom-thi-luc-am-tham_66f8f89180482-jpeg.avif",
+        "cat": "Khoa Mắt",
+        "date": "14/03/2019"
+      },
+      {
+        "id": 5630,
+        "title": "Cẩn trọng bệnh khô mắt do nắng nóng",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/can-trong-benh-kho-mat-do-nang-nong_66f81dc6c47a4-scaled.jpeg",
+        "cat": "Khoa Mắt",
+        "date": "24/04/2019"
+      },
+      {
+        "id": 5129,
+        "title": "Tầm soát bệnh Cườm nước (Glaucoma) cùng BS.CKII Trịnh Bạch Tuyết",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/tam-soat-benh-cuom-nuoc-glaucoma-cung-bs-ckii-trinh-bach-tuyet_66f81cd933c05-jpeg.avif",
+        "cat": "Khoa Mắt",
+        "date": "07/06/2019"
+      },
+      {
+        "id": 4586,
+        "title": "Dấu hiệu nhận biết trẻ có bệnh lý về mắt",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/dau-hieu-nhan-biet-tre-co-benh-ly-ve-mat_66f81c0b12aba-jpeg.avif",
+        "cat": "Khoa Mắt",
+        "date": "24/05/2019"
+      },
+      {
+        "id": 11770,
+        "title": "Hãy luôn chăm sóc “Cửa sổ của tâm hồn”",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/hay-luon-cham-soc-cua-so-cua-tam-hon_66f8f76b982bd-jpeg.avif",
+        "cat": "Khoa Mắt",
+        "date": "04/07/2019"
+      }
     ]
   },
   {
@@ -2262,6 +3010,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Bạch kim <span style=\"display:inline-block\">(nữ có gia đình)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "https://cih.com.vn/wp-content/uploads/2026/03/7.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 44973,
+        "title": "Điều trị ung thư lưỡi: 1 ca bệnh 1 phác đồ cá thể hóa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/2560x1441_anh-bai-web.webp",
+        "cat": "Khoa Răng Hàm Mặt",
+        "date": "05/05/2026"
+      },
+      {
+        "id": 44951,
+        "title": "Đau đầu kéo dài không rõ nguyên nhân, đi khám nhiều nơi vẫn không ra bệnh: Hóa ra do nhiễm nấm nhiều xoang",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/26.webp",
+        "cat": "Khoa Răng Hàm Mặt",
+        "date": "02/05/2026"
+      },
+      {
+        "id": 44545,
+        "title": "Ung thư thanh quản: Kỹ thuật khó hồi sinh 1 cuộc sống mới",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/04/gen-h-z7683877742619_2f349ddf2f2145ae785abca319025fa2.webp",
+        "cat": "Khoa Răng Hàm Mặt",
+        "date": "03/04/2026"
+      },
+      {
+        "id": 46651,
+        "title": "Ba năm sống cùng chóng mặt, ù tai, nghe kém: Hành trình tìm lại nhịp sống sau điều trị cá thể hóa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/1-2.webp",
+        "cat": "Khoa Răng Hàm Mặt",
+        "date": "26/08/2026"
+      },
+      {
+        "id": 1720,
+        "title": "Phòng ngừa và điều trị viêm mũi xoang",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/phong-ngua-va-dieu-tri-viem-mui-xoang_66f8159259108-jpeg.avif",
+        "cat": "Khoa Răng Hàm Mặt",
+        "date": "15/02/2022"
+      },
+      {
+        "id": 42813,
+        "title": "Bít thành công phình xoang valsalva vỡ: Dấu ấn chuyên môn của Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/01/5.png",
+        "cat": "Khoa Răng Hàm Mặt",
+        "date": "08/01/2026"
       }
     ]
   },
@@ -2367,6 +3159,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "https://cih.com.vn/wp-content/uploads/2026/03/7.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 47429,
+        "title": "Phối hợp đa chuyên khoa cứu người bệnh đa chấn thương",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/7.webp",
+        "cat": "Khoa Cấp Cứu",
+        "date": "16/10/2026"
+      },
+      {
+        "id": 46785,
+        "title": "Giành lại sự sống cho người bệnh viêm tụy hoại tử nặng, ngưng tuần hoàn khi nhập viện",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/Ca-Mai-Duc-Hung-web.webp",
+        "cat": "Khoa Cấp Cứu",
+        "date": "03/09/2026"
+      },
+      {
+        "id": 46203,
+        "title": "Đa chấn thương do tai nạn giao thông: Hành trình giành lại sự sống nhờ điều trị đa chuyên khoa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/16.webp",
+        "cat": "Khoa Cấp Cứu",
+        "date": "22/07/2026"
+      },
+      {
+        "id": 46093,
+        "title": "Sau đuối nước có cần nhập viện không? 3 biến chứng không nên chủ quan",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/47.webp",
+        "cat": "Khoa Cấp Cứu",
+        "date": "18/07/2026"
+      },
+      {
+        "id": 46043,
+        "title": "Bệnh viện Quốc tế City đón bệnh cấp cứu 0 đồng trong phạm vi 15km",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA-1.webp",
+        "cat": "Khoa Cấp Cứu",
+        "date": "15/07/2026"
+      },
+      {
+        "id": 45225,
+        "title": "Nên gọi xe cấp cứu hay tự đi bệnh viện? lưu ngay 6 điều cần biết",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/23.webp",
+        "cat": "Khoa Cấp Cứu",
+        "date": "15/05/2026"
+      }
     ]
   },
   {
@@ -2463,6 +3299,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Bạch kim <span style=\"display:inline-block\">(nam)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nam-bachkim.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 45937,
+        "title": "Buổi chia sẻ đặc biệt tháng 7: “Các phương pháp căng chỉ thẩm mỹ” cùng GS. BS. Kwon Han Jin",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/ZALO-OA.webp",
+        "cat": "Trung tâm Thẩm mỹ – Y học tái tạo",
+        "date": "08/07/2026"
+      },
+      {
+        "id": 45781,
+        "title": "Dấu ấn hội thảo thẩm mỹ “Nâng cấp phiên bản rạng rỡ sau sinh”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/23-scaled.webp",
+        "cat": "Trung tâm Thẩm mỹ – Y học tái tạo",
+        "date": "27/06/2026"
+      },
+      {
+        "id": 37,
+        "title": "Hội thảo thẩm mỹ tháng 6: Nâng cấp phiên bản rạng rỡ sau sinh",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB-3.webp",
+        "cat": "Trung tâm Thẩm mỹ – Y học tái tạo",
+        "date": "10/06/2026"
+      },
+      {
+        "id": 45063,
+        "title": "Khi nào nên thay túi ngực? 7 dấu hiệu không nên chủ quan",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/51.webp",
+        "cat": "Trung tâm Thẩm mỹ – Y học tái tạo",
+        "date": "08/05/2026"
+      },
+      {
+        "id": 44864,
+        "title": "PRP trẻ hóa da đẹp tự nhiên",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/04/2-2.webp",
+        "cat": "Trung tâm Thẩm mỹ – Y học tái tạo",
+        "date": "24/04/2026"
+      },
+      {
+        "id": 43881,
+        "title": "Hội thảo Sản phụ khoa kết hợp Thẩm mỹ: “AN TÂM SINH NỞ, RẠNG RỠ SAU SINH”",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/02/HOI-THAO-Hoi-thao-Tham-my-San-_T3-2026-2.png",
+        "cat": "Trung tâm Thẩm mỹ – Y học tái tạo",
+        "date": "25/02/2026"
       }
     ]
   },
@@ -2564,6 +3444,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Bạch kim <span style=\"display:inline-block\">(nữ có gia đình)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "https://cih.com.vn/wp-content/uploads/2026/03/7.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 43199,
+        "title": "Chúc mừng khoa xét nghiệm đạt chuẩn ISO 15189:2022",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/01/3-1.png",
+        "cat": "Khoa Xét Nghiệm",
+        "date": "23/01/2026"
+      },
+      {
+        "id": 42655,
+        "title": "Bệnh viện Quốc tế City hoàn thành đợt đánh giá ISO 15189",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/12/z7360978521359_0c08a2ffc957974e8dea06b77cfb9a5a.jpg",
+        "cat": "Khoa Xét Nghiệm",
+        "date": "24/12/2025"
+      },
+      {
+        "id": 47252,
+        "title": "Hội thảo khoa học kỹ thuật 26/09: “Cập nhật điều trị nhiễm khuẩn gram âm đa kháng và nhiễm nấm xâm lấn” diễn ra thành công tốt đẹp",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/chon.webp",
+        "cat": "Khoa Xét Nghiệm",
+        "date": "26/09/2026"
+      },
+      {
+        "id": 46930,
+        "title": "Hội thảo khoa học kỹ thuật: Cập nhật điều trị nhiễm khuẩn gram âm đa kháng và nhiễm nấm xâm lấn",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/ZALO-OA-7.webp",
+        "cat": "Khoa Xét Nghiệm",
+        "date": "10/09/2026"
+      },
+      {
+        "id": 46128,
+        "title": "Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3.webp",
+        "cat": "Khoa Xét Nghiệm",
+        "date": "20/07/2026"
+      },
+      {
+        "id": 45851,
+        "title": "Hội thảo Tim mạch – Đột quỵ 2026: Tầm soát sớm bệnh lý tim mạch và đột quỵ để bảo vệ sức khỏe toàn diện",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/COVER-FB-scaled.webp",
+        "cat": "Khoa Xét Nghiệm",
+        "date": "03/07/2026"
       }
     ]
   },
@@ -2670,6 +3594,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói tầm soát đột quỵ – Cao cấp",
         "cat": "Khoa Chẩn Đoán Hình Ảnh",
         "image": "images/ext_webp/22_5ea9ac86.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 42376,
+        "title": "Bệnh viện Quốc tế City ra mắt hệ thống nhũ ảnh lưu động – Một trong hai hệ thống duy nhất tại miền Nam",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/12/z7294292682710_01dbb1545ee1a6646fa86f491291bae0.jpg",
+        "cat": "Khoa Chẩn Đoán Hình Ảnh",
+        "date": "05/12/2025"
+      },
+      {
+        "id": 44802,
+        "title": "Hội thảo hình ảnh học nội mạch: Cập nhật xu hướng và ứng dụng mới tim mạch can thiệp",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/04/02cih2.webp",
+        "cat": "Khoa Chẩn Đoán Hình Ảnh",
+        "date": "22/04/2026"
+      },
+      {
+        "id": 46009,
+        "title": "Ứng dụng công nghệ bản đồ tim 3d điều trị rối loạn nhịp tim",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/huynh-cong-tuan.webp",
+        "cat": "Khoa Chẩn Đoán Hình Ảnh",
+        "date": "13/07/2026"
+      },
+      {
+        "id": 46128,
+        "title": "Hội thảo tầm soát ung thư vú – Phát hiện sớm, nâng cao cơ hội điều trị",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/POST-TONG-3.webp",
+        "cat": "Khoa Chẩn Đoán Hình Ảnh",
+        "date": "20/07/2026"
+      },
+      {
+        "id": 42,
+        "title": "Ưu đãi khách mới: Khám chuyên khoa miễn phí 100% – Tặng thêm 50% siêu âm hoặc chụp x-quang",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/BANNER-WEB.webp",
+        "cat": "Khoa Chẩn Đoán Hình Ảnh",
+        "date": "03/06/2026"
+      },
+      {
+        "id": 46301,
+        "title": "Tầm soát bệnh lý tim mạch và đột quỵ: Phát hiện sớm để điều trị kịp thời",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/06-1.webp",
+        "cat": "Khoa Chẩn Đoán Hình Ảnh",
+        "date": "27/07/2026"
       }
     ]
   },
@@ -2801,6 +3769,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nu-kc-docthan.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 45030,
+        "title": "Viêm màng não do não mô cầu gia tăng ở trẻ em: Mối nguy hiểm cha mẹ không thể chủ quan",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/05/2.webp",
+        "cat": "Trung Tâm Tiêm Chủng",
+        "date": "07/05/2026"
+      },
+      {
+        "id": 25339,
+        "title": "Phòng chống cúm mùa: Triệu chứng, điều trị và cách phòng ngừa",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/02/Phong-ngua-Cum-mua-frame-at-0m2s.jpg",
+        "cat": "Trung Tâm Tiêm Chủng",
+        "date": "20/02/2025"
+      },
+      {
+        "id": 25328,
+        "title": "Những điều cần biết về bệnh cúm mùa",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/02/4-1.jpg",
+        "cat": "Trung Tâm Tiêm Chủng",
+        "date": "17/02/2025"
+      },
+      {
+        "id": 8116,
+        "title": "Ưu đãi 30% tiêm vaccine Gardasil 0.5ml ngừa Ung thư cổ tử cung",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/uu-dai-30-tiem-vaccine-gardasil-0-5ml-ngua-ung-thu-co-tu-cung_66f8e1f7f0b15-png.avif",
+        "cat": "Trung Tâm Tiêm Chủng",
+        "date": "15/03/2024"
+      },
+      {
+        "id": 7840,
+        "title": "Tặng vaccine ngừa ung thư cổ tử cung cho Hội HLPN quận Bình Tân",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/tang-vaccine-ngua-ung-thu-co-tu-cung-cho-hoi-hlpn-quan-binh-tan_66f8e03f48570-jpeg.avif",
+        "cat": "Trung Tâm Tiêm Chủng",
+        "date": "27/06/2024"
+      },
+      {
+        "id": 2157,
+        "title": "Cách chăm sóc trẻ bị cúm mùa tại nhà",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/cach-cham-soc-tre-khi-benh-cum-vao-mua_66f8169fbc0d2-jpeg.avif",
+        "cat": "Trung Tâm Tiêm Chủng",
+        "date": "09/03/2022"
+      }
     ]
   },
   {
@@ -2902,6 +3914,50 @@ const CIH_SPECIALTY_DATA = [
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "https://cih.com.vn/wp-content/uploads/2026/03/7.webp"
       }
+    ],
+    "news": [
+      {
+        "id": 47231,
+        "title": "Ngày Dược sĩ Thế giới 25/9: Trao quyền cho Dược sĩ vì một tương lai khỏe mạnh hơn",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/1790309092725_3917487006458220690_g9041818109830429877_h.webp",
+        "cat": "Khoa Dược",
+        "date": "25/09/2026"
+      },
+      {
+        "id": 47252,
+        "title": "Hội thảo khoa học kỹ thuật 26/09: “Cập nhật điều trị nhiễm khuẩn gram âm đa kháng và nhiễm nấm xâm lấn” diễn ra thành công tốt đẹp",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/chon.webp",
+        "cat": "Khoa Dược",
+        "date": "26/09/2026"
+      },
+      {
+        "id": 46930,
+        "title": "Hội thảo khoa học kỹ thuật: Cập nhật điều trị nhiễm khuẩn gram âm đa kháng và nhiễm nấm xâm lấn",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/ZALO-OA-7.webp",
+        "cat": "Khoa Dược",
+        "date": "10/09/2026"
+      },
+      {
+        "id": 45918,
+        "title": "Thông báo Bệnh viện Quốc tế City đáp ứng yêu cầu là cơ sở thực hành trong đào tạo khối ngành sức khỏe – Lần 3 (Chuyên khoa I: Dược lý, dược lâm sàng & đại học: Dược sĩ)",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/AVATAR_DAO-TAO-KHOI-NGANH-SUC-KHOE.webp",
+        "cat": "Khoa Dược",
+        "date": "06/07/2026"
+      },
+      {
+        "id": 45863,
+        "title": "Chúc mừng Viện Đào tạo và Nghiên cứu Khoa học – Bệnh viện Quốc tế City được công bố là cơ sở thực hành trong đào tạo chuyên ngành dược sĩ hệ đại học và Chuyên khoa I",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/CONG-BO-CO-SO-THUC-HANH.webp",
+        "cat": "Khoa Dược",
+        "date": "03/07/2026"
+      },
+      {
+        "id": 24620,
+        "title": "CIH hưởng ứng “Tuần lễ thế giới nhận thức về kháng thuốc kháng sinh 2024”",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/11/Ngay-khang-khang-sinh-1.jpg",
+        "cat": "Khoa Dược",
+        "date": "18/11/2024"
+      }
     ]
   },
   {
@@ -2981,6 +4037,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Kim cương <span style=\"display:inline-block\">(nam)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "images/goikham/ehs/nam-kc.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 46873,
+        "title": "Chúc mừng Ngày Quốc tế Vật lý trị liệu 8/9",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/2560x1441_anh-bai-web.webp",
+        "cat": "Khoa Phục Hồi Chức Năng",
+        "date": "08/09/2026"
+      },
+      {
+        "id": 47559,
+        "title": "Dấu ấn hội thảo thoái hóa khớp gối 24/10 “Hiểu đúng bệnh, chọn đúng phương pháp điều trị” diễn ra thành công tốt đẹp",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/1792818074643_647975034292112689_g2129412875815414594_h.webp",
+        "cat": "Khoa Phục Hồi Chức Năng",
+        "date": "24/10/2026"
+      },
+      {
+        "id": 47180,
+        "title": "Hội thảo cơ xương khớp tháng 10: Thoái hóa khớp gối, hiểu đúng bệnh, chọn đúng phương pháp điều trị",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/09/Banner-Zalo-Post-1.webp",
+        "cat": "Khoa Phục Hồi Chức Năng",
+        "date": "22/09/2026"
+      },
+      {
+        "id": 46075,
+        "title": "10 năm chịu đựng đau đớn, bệnh nhân 76 tuổi tìm lại hạnh phúc sau ca thay khớp gối",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/07/1thumb.webp",
+        "cat": "Khoa Phục Hồi Chức Năng",
+        "date": "17/07/2026"
+      },
+      {
+        "id": 45686,
+        "title": "Thay khớp háng thành công cho cụ bà 95 tuổi nhờ phối hợp đồng bộ đa chuyên khoa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/02-ctch01.webp",
+        "cat": "Khoa Phục Hồi Chức Năng",
+        "date": "24/06/2026"
+      },
+      {
+        "id": 2336,
+        "title": "Hội thảo online: Thoát vị đĩa đệm đa tầng và Trượt đốt sống lưng",
+        "img": "https://cih.com.vn/wp-content/uploads/2024/09/hoi-thao-online-thoat-vi-dia-dem-da-tang-va-truot-dot-song-lung_66f816ff454c1-jpeg.avif",
+        "cat": "Khoa Phục Hồi Chức Năng",
+        "date": "19/05/2020"
       }
     ]
   },
@@ -3081,6 +4181,50 @@ const CIH_SPECIALTY_DATA = [
         "title_html": "Gói Bạch kim <span style=\"display:inline-block\">(nữ có gia đình)</span>",
         "cat": "Khoa Khám Tổng Quát (EHS)",
         "image": "https://cih.com.vn/wp-content/uploads/2026/03/7.webp"
+      }
+    ],
+    "news": [
+      {
+        "id": 47446,
+        "title": "Chúc mừng Ngày Gây mê Thế giới 16/10: Chung tay vì gây mê an toàn, chăm sóc người bệnh toàn diện",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/1792119137743_5187092637677240371_g2253548627801186953_h.webp",
+        "cat": "Khoa Gây Mê Hồi Sức",
+        "date": "16/10/2026"
+      },
+      {
+        "id": 46542,
+        "title": "Kiểm soát nguy cơ tim mạch, phẫu thuật nội soi cắt thân đuôi tụy cho bệnh nhân 70 tuổi",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/44.webp",
+        "cat": "Khoa Gây Mê Hồi Sức",
+        "date": "26/08/2026"
+      },
+      {
+        "id": 46664,
+        "title": "Sỏi lớn ống mật chủ kèm viêm túi mật: Xử trí toàn diện trong một cuộc mổ",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/08/2560x1441_anh-bai-web.webp",
+        "cat": "Khoa Gây Mê Hồi Sức",
+        "date": "26/08/2026"
+      },
+      {
+        "id": 47429,
+        "title": "Phối hợp đa chuyên khoa cứu người bệnh đa chấn thương",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/10/7.webp",
+        "cat": "Khoa Gây Mê Hồi Sức",
+        "date": "16/10/2026"
+      },
+      {
+        "id": 45686,
+        "title": "Thay khớp háng thành công cho cụ bà 95 tuổi nhờ phối hợp đồng bộ đa chuyên khoa",
+        "img": "https://cih.com.vn/wp-content/uploads/2026/06/02-ctch01.webp",
+        "cat": "Khoa Gây Mê Hồi Sức",
+        "date": "24/06/2026"
+      },
+      {
+        "id": 42500,
+        "title": "Cuộc chiến lúc nửa đêm: Kích hoạt “Báo động đỏ” cấp cứu thành công ca sản phụ nhau tiền đạo – Cài răng lược nguy kịch tại Bệnh viện Quốc tế City",
+        "img": "https://cih.com.vn/wp-content/uploads/2025/12/Copy-of-Copy-of-CV-KHOA-PHONG-6.png",
+        "cat": "Khoa Gây Mê Hồi Sức",
+        "date": "15/12/2025"
       }
     ]
   }

@@ -549,6 +549,7 @@
       margin: 0;
       text-shadow: 0 2px 8px rgba(42, 24, 3, 0.65);
       transition: color 0.2s ease;
+      text-wrap: balance;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -2554,7 +2555,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261027_arrows"></script>
 <script src="news_data.js?v=20261027_specnews"></script>
-<script src="specialty_data.js?v=20261027_specnews"></script>
+<script src="specialty_data.js?v=20261027_balance"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
@@ -2622,7 +2623,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   </span>
                 </div>
                 <div class="spec-prog-card__body">
-                  <h3 class="spec-prog-card__title">${c.title}</h3>
+                  <h3 class="spec-prog-card__title">${c.title_html || c.title}</h3>
                 </div>
               </div>`;
             }).join('');

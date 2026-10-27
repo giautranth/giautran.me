@@ -4351,6 +4351,7 @@
       badge: 'Trung tâm Hỗ trợ sinh sản',
 
       title: 'Phòng Lab IVF Chuẩn RTAC & Tủ nuôi cấy phôi Time-Lapse AI',
+      title_html: 'Phòng Lab IVF Chuẩn RTAC<br>&amp; Tủ nuôi cấy phôi Time-Lapse AI',
 
       img: 'images/equip_ivf_rtac.webp?v=1792600000',
 
@@ -4363,6 +4364,7 @@
       badge: 'Trang thiết bị hiện đại',
 
       title: 'Trung tâm Nội soi NBI Olympus & Xét nghiệm Tự động ISO 15189:2022',
+      title_html: 'Trung tâm Nội soi NBI Olympus<br>&amp; Xét nghiệm Tự động ISO 15189:2022',
 
       img: 'images/equip_endoscopy_olympus.webp?v=1792599300',
 
@@ -4404,7 +4406,7 @@
 
     if (badgeEl) badgeEl.textContent = '🏥 ' + (item.badge || 'Trang thiết bị hiện đại');
 
-    document.getElementById('cih-equip-modal-title').textContent = item.title;
+    document.getElementById('cih-equip-modal-title').innerHTML = item.title_html || item.title;
 
     document.getElementById('cih-equip-modal-desc').textContent = item.desc;
 

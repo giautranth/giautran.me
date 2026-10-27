@@ -355,42 +355,48 @@ const CIH_SPECIALTY_DATA = [
         "title": "Hệ thống Phòng Lab đạt chuẩn ISO 6 & Clean Room",
         "img": "images/equip_ivf_rtac.webp",
         "short_desc": "Trang bị màng lọc HEPA, hệ thống Clean Room lọc 99,95% hạt bụi mịn siêu nhỏ cùng thiết bị tân tiến nhập khẩu trực tiếp từ nước ngoài.",
-        "desc": "<p>Hệ thống Phòng Lab đạt chuẩn ISO 6, trang bị hệ thống màng lọc HEPA, hệ thống Clean Room lọc được 99,95% các hạt bụi mịn siêu nhỏ. Ngoài ra còn có thảm dính bụi, nội thất bằng thép không gỉ,… Trang bị đầy đủ các thiết bị tân tiến nhất, nhập khẩu trực tiếp từ nước ngoài, được kết hợp vào thiết kế của phòng vô trùng nhằm ngăn các chất gây ô nhiễm xâm nhập vào môi trường.</p>"
+        "desc": "<p>Hệ thống Phòng Lab đạt chuẩn ISO 6, trang bị hệ thống màng lọc HEPA, hệ thống Clean Room lọc được 99,95% các hạt bụi mịn siêu nhỏ. Ngoài ra còn có thảm dính bụi, nội thất bằng thép không gỉ,… Trang bị đầy đủ các thiết bị tân tiến nhất, nhập khẩu trực tiếp từ nước ngoài, được kết hợp vào thiết kế của phòng vô trùng nhằm ngăn các chất gây ô nhiễm xâm nhập vào môi trường.</p>",
+        "title_html": "Hệ thống Phòng Lab đạt chuẩn ISO 6 <span style=\"display:inline-block\">&amp; Clean Room</span>"
       },
       {
         "wide": false,
         "title": "Hệ thống Vi thao tác ICSI & Chẩn đoán tiền làm tổ",
         "img": "images/programs/ivf_prog_3.webp?v=2",
         "short_desc": "Ứng dụng trong kỹ thuật ICSI và chẩn đoán di truyền tiền làm tổ (PGT), tối ưu khả năng thành công.",
-        "desc": "<p>Hệ thống vi thao tác được áp dụng trong kỹ thuật ICSI, chẩn đoán di truyền tiền làm tổ (PGT), tối ưu khả năng tạo phôi và làm tổ thành công.</p>"
+        "desc": "<p>Hệ thống vi thao tác được áp dụng trong kỹ thuật ICSI, chẩn đoán di truyền tiền làm tổ (PGT), tối ưu khả năng tạo phôi và làm tổ thành công.</p>",
+        "title_html": "Hệ thống Vi thao tác ICSI <span style=\"display:inline-block\">&amp; Chẩn đoán tiền làm tổ</span>"
       },
       {
         "wide": false,
         "title": "Buồng nuôi cấy phôi riêng biệt & Công nghệ Thủy tinh hóa",
         "img": "images/programs/ivf_prog_4.webp?v=2",
         "short_desc": "Mỗi bệnh nhân được nuôi cấy trong một buồng riêng biệt, kết hợp trữ đông noãn/phôi bằng phương pháp thủy tinh hóa.",
-        "desc": "<p>Liên tục cập nhật công nghệ mới trong các kỹ thuật chọc hút trứng, trữ đông noãn/phôi bằng phương pháp thủy tinh hóa đạt kết quả tối ưu. Mỗi bệnh nhân được nuôi cấy trong một buồng nuôi cấy riêng biệt.</p>"
+        "desc": "<p>Liên tục cập nhật công nghệ mới trong các kỹ thuật chọc hút trứng, trữ đông noãn/phôi bằng phương pháp thủy tinh hóa đạt kết quả tối ưu. Mỗi bệnh nhân được nuôi cấy trong một buồng nuôi cấy riêng biệt.</p>",
+        "title_html": "Buồng nuôi cấy phôi riêng biệt<br>&amp; Công nghệ Thủy tinh hóa"
       },
       {
         "wide": false,
         "title": "Hệ thống Nhận diện chống nhầm lẫn mẫu",
         "img": "images/programs/ivf_prog_6.webp?v=2",
         "short_desc": "Quy trình kiểm tra chéo nghiêm ngặt kết hợp công nghệ nhận diện hiện đại đảm bảo sự chính xác tuyệt đối.",
-        "desc": "<p>Hệ thống nhận diện bệnh nhân chống nhầm lẫn mẫu tiên tiến nhất hiện nay. Mọi quy trình đều thực hiện nghiêm ngặt kiểm tra chéo, kết hợp cùng công nghệ hiện đại nhằm tối ưu hóa quy trình và đảm bảo sự chính xác tuyệt đối.</p>"
+        "desc": "<p>Hệ thống nhận diện bệnh nhân chống nhầm lẫn mẫu tiên tiến nhất hiện nay. Mọi quy trình đều thực hiện nghiêm ngặt kiểm tra chéo, kết hợp cùng công nghệ hiện đại nhằm tối ưu hóa quy trình và đảm bảo sự chính xác tuyệt đối.</p>",
+        "title_html": "Hệ thống Nhận diện chống nhầm lẫn mẫu"
       },
       {
         "wide": false,
         "title": "Khu vực Trữ phôi tự động & Cảnh báo từ xa 24/7",
         "img": "images/programs/ivf_prog_7.webp?v=2",
         "short_desc": "Bảo quản phôi tự động riêng lẻ từng bệnh nhân, tránh lây nhiễm chéo, cảnh báo từ xa và bảo mật thông tin.",
-        "desc": "<p>Khu vực trữ phôi rộng rãi, đảm bảo đủ các tiêu chuẩn y tế. Hệ thống bảo quản phôi tự động, riêng lẻ từng bệnh nhân, tránh yếu tố lây nhiễm chéo, có hệ thống cảnh báo từ xa và bảo mật thông tin khách hàng.</p>"
+        "desc": "<p>Khu vực trữ phôi rộng rãi, đảm bảo đủ các tiêu chuẩn y tế. Hệ thống bảo quản phôi tự động, riêng lẻ từng bệnh nhân, tránh yếu tố lây nhiễm chéo, có hệ thống cảnh báo từ xa và bảo mật thông tin khách hàng.</p>",
+        "title_html": "Khu vực Trữ phôi tự động <span style=\"display:inline-block\">&amp; Cảnh báo từ xa 24/7</span>"
       },
       {
         "wide": true,
         "title": "Đội ngũ Chuyên gia Phôi học & Bác sĩ Phòng Lab giàu kinh nghiệm",
         "img": "images/programs/ivf_real_1.webp?v=2",
         "short_desc": "Đội ngũ bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm tận tâm “chăm sóc” phôi 24/7.",
-        "desc": "<p>Các Bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm.</p><p>Như trái tim không bao giờ ngừng đập, đội ngũ chuyên viên phôi học không quản ngày đêm, miệt mài “chăm sóc” những em bé phôi lớn lên từng ngày, để các em là những em bé khỏe mạnh trước khi về với ba mẹ.</p>"
+        "desc": "<p>Các Bác sĩ, chuyên gia phòng Lab nhiều năm kinh nghiệm trong lĩnh vực thụ tinh trong ống nghiệm.</p><p>Như trái tim không bao giờ ngừng đập, đội ngũ chuyên viên phôi học không quản ngày đêm, miệt mài “chăm sóc” những em bé phôi lớn lên từng ngày, để các em là những em bé khỏe mạnh trước khi về với ba mẹ.</p>",
+        "title_html": "Đội ngũ Chuyên gia Phôi học<br>&amp; Bác sĩ Phòng Lab giàu kinh nghiệm"
       }
     ],
     "news": [
@@ -458,7 +464,7 @@ const CIH_SPECIALTY_DATA = [
         "title": "Nhi khoa tổng quát: khám tổng quát và tiêm chủng, điều trị các bệnh lý thông thường ở trẻ em.",
         "img": "images/programs/nhi_prog_2.webp",
         "desc": "<p style=\"margin:0;\">Nhi khoa tổng quát: khám tổng quát và tiêm chủng, điều trị các bệnh lý thông thường ở trẻ em.</p>",
-        "title_html": "Nhi khoa tổng quát: khám tổng quát và tiêm chủng, điều trị các bệnh lý thông thường ở trẻ em."
+        "title_html": "Nhi khoa tổng quát: khám tổng quát và tiêm chủng,<br>điều trị các bệnh lý thông thường ở trẻ em."
       },
       {
         "title": "Nhi khoa chuyên sâu về: hô hấp, tim mạch, thần kinh, thận niệu.",
@@ -1220,19 +1226,19 @@ const CIH_SPECIALTY_DATA = [
         "title": "Điều trị đau đầu cấp tính và mạn tính do nhồi máu não, u não, u màng não, chảy máu não.",
         "img": "images/programs/than_kinh_prog_2.webp",
         "desc": "<p style=\"margin:0;\">Điều trị đau đầu cấp tính và mạn tính do nhồi máu não, u não, u màng não, chảy máu não.</p>",
-        "title_html": "Điều trị đau đầu cấp tính và mạn tính do nhồi máu não, u não, u màng não, chảy máu não."
+        "title_html": "Điều trị đau đầu cấp tính và mạn tính<br>do nhồi máu não, u não, u màng não, chảy máu não."
       },
       {
         "title": "Điều trị các bệnh đau đầu: chứng đau nữa đầu, đau đầu căn nguyên mạch máu, đau đầu mạn tính.",
         "img": "images/programs/than_kinh_prog_3.webp",
         "desc": "<p style=\"margin:0;\">Điều trị các bệnh đau đầu: chứng đau nữa đầu, đau đầu căn nguyên mạch máu, đau đầu mạn tính.</p>",
-        "title_html": "Điều trị các bệnh đau đầu: chứng đau nữa đầu, đau đầu căn nguyên mạch máu, đau đầu mạn tính."
+        "title_html": "Điều trị các bệnh đau đầu: chứng đau nửa đầu,<br>đau đầu căn nguyên mạch máu, đau đầu mạn tính."
       },
       {
         "title": "Điều trị bệnh đau vai gáy do thoái hóa cột sống cổ, thoát vị đĩa đệm cột sống cổ,…",
         "img": "images/programs/than_kinh_prog_4.webp",
         "desc": "<p style=\"margin:0;\">Điều trị bệnh đau vai gáy do thoái hóa cột sống cổ, thoát vị đĩa đệm cột sống cổ,…</p>",
-        "title_html": "Điều trị bệnh đau vai gáy do thoái hóa cột sống cổ, thoát vị đĩa đệm cột sống cổ,…"
+        "title_html": "Điều trị bệnh đau vai gáy do thoái hóa cột sống cổ,<br>thoát vị đĩa đệm cột sống cổ,…"
       },
       {
         "title": "Đau thắt lưng do thoái hóa, thoát vị, đau do viêm khớp cùng chậu….",
@@ -1262,19 +1268,19 @@ const CIH_SPECIALTY_DATA = [
         "title": "Tư vấn và điều trị các bệnh lý rối loạn về giấc ngủ: mất ngủ cấp tính hoặc mạn tính.",
         "img": "images/programs/than_kinh_prog_9.webp",
         "desc": "<p style=\"margin:0;\">Tư vấn và điều trị các bệnh lý rối loạn về giấc ngủ: mất ngủ cấp tính hoặc mạn tính.</p>",
-        "title_html": "Tư vấn và điều trị các bệnh lý rối loạn về giấc ngủ: mất ngủ cấp tính hoặc mạn tính."
+        "title_html": "Tư vấn và điều trị các bệnh lý rối loạn về giấc ngủ:<br>mất ngủ cấp tính hoặc mạn tính."
       },
       {
         "title": "Điều trị các thay đổi dáng đi, chậm chạp ít tiếp xúc, tiểu dàm do đầu nước ở người lớn.",
         "img": "images/programs/than_kinh_prog_10.webp",
         "desc": "<p style=\"margin:0;\">Điều trị các thay đổi dáng đi, chậm chạp ít tiếp xúc, tiểu dàm do đầu nước ở người lớn.</p>",
-        "title_html": "Điều trị các thay đổi dáng đi, chậm chạp ít tiếp xúc, tiểu dàm do đầu nước ở người lớn."
+        "title_html": "Điều trị các thay đổi dáng đi, chậm chạp ít tiếp xúc,<br>tiểu dầm do đầu nước ở người lớn."
       },
       {
         "title": "Tầm soát cái yếu tố nguy cơ có khả năng gây đột quỵ để giúp người bệnh phòng ngừa điều trị tốt hơn.",
         "img": "images/programs/than_kinh_prog_11.webp",
         "desc": "<p style=\"margin:0;\">Tầm soát cái yếu tố nguy cơ có khả năng gây đột quỵ để giúp người bệnh phòng ngừa điều trị tốt hơn.</p>",
-        "title_html": "Tầm soát cái yếu tố nguy cơ có khả năng gây đột quỵ để giúp người bệnh phòng ngừa điều trị tốt hơn."
+        "title_html": "Tầm soát các yếu tố nguy cơ có khả năng gây đột quỵ<br>để giúp người bệnh phòng ngừa điều trị tốt hơn."
       },
       {
         "title": "Điều trị các bệnh lý thần kinh ngoại biên.",
@@ -1630,7 +1636,7 @@ const CIH_SPECIALTY_DATA = [
         "title": "Xét nghiệm hơi thở tìm vi khuẩn H. pylori bằng carbon C13 không có hoạt tính phóng xạ.",
         "img": "images/programs/tieu_hoa_prog_4.webp",
         "desc": "<p style=\"margin:0;\">Xét nghiệm hơi thở tìm vi khuẩn H. pylori bằng carbon C13 không có hoạt tính phóng xạ.</p>",
-        "title_html": "Xét nghiệm hơi thở tìm vi khuẩn H. pylori bằng carbon C13 không có hoạt tính phóng xạ."
+        "title_html": "Xét nghiệm hơi thở tìm vi khuẩn H. pylori<br>bằng carbon C13 không có hoạt tính phóng xạ."
       },
       {
         "title": "Nội soi chẩn đoán",
@@ -1769,7 +1775,7 @@ const CIH_SPECIALTY_DATA = [
         "title": "Bệnh da viêm: viêm da cơ địa (chàm), viêm da tiếp xúc, viêm da tiết bã,…",
         "img": "images/programs/da_lieu_prog_1.webp",
         "desc": "<p style=\"margin:0;\">Bệnh da viêm: viêm da cơ địa (chàm), viêm da tiếp xúc, viêm da tiết bã,…</p>",
-        "title_html": "Bệnh da viêm: viêm da cơ địa <span style=\"display:inline-block\">(chàm)</span>, viêm da tiếp xúc, viêm da tiết bã,…"
+        "title_html": "Bệnh da viêm: viêm da cơ địa (chàm),<br>viêm da tiếp xúc, viêm da tiết bã,…"
       },
       {
         "title": "Bệnh da nhiễm trùng: do nấm, chốc, viêm nang lông, nhiễm trùng mô mềm, ký sinh trùng (bệnh ghẻ,…), herpes, thuỷ đậu, zona, mụn cơm…",
@@ -2904,7 +2910,7 @@ const CIH_SPECIALTY_DATA = [
         "title": "Khoa Mắt ứng dụng các trang thiết bị chẩn đoán hình ảnh hiện đại nhằm phát hiện sớm các bệnh về mắt.",
         "img": "images/programs/right_khoa-mat.webp",
         "desc": "<p>Khoa Mắt ứng dụng các trang thiết bị chẩn đoán hình ảnh hiện đại nhằm phát hiện sớm các bệnh về mắt.</p>\n<ul><li>Viêm kết mạc, viêm giác mạc.</li><li>Bệnh lý bộ lệ.</li><li>Cườm khô (đục thuỷ tinh thể).</li><li>Cườm nước ( glaucoma) tất cả các dạng bệnh.</li><li>Viêm màng bồ đào trước, sau và toàn bộ.</li><li>Tật khúc xạ bao gồm cận, viễn loạn.</li><li>Chắp, lẹo, mộng, quặm.</li><li>Phù hoàng điểm, thoái hóa hoàng điểm liên quan tuổi.</li><li>Vẩn đục pha lê dịch.</li><li>Bệnh lý võng mạc đái tháo đường.</li><li>Các bệnh lý VM khác: tắc tĩnh mạch VM, xuất huyết võng mạc.</li><li>Bệnh lý thần kinh thị giác, viêm gai thị,…</li></ul>",
-        "title_html": "Khoa Mắt ứng dụng các trang thiết bị chẩn đoán hình ảnh hiện đại nhằm phát hiện sớm các bệnh về mắt."
+        "title_html": "Khoa Mắt ứng dụng các trang thiết bị chẩn đoán hình ảnh<br>hiện đại nhằm phát hiện sớm các bệnh về mắt."
       },
       {
         "title": "Xử lý các tình trạng cấp cứu mắt",
@@ -3978,7 +3984,7 @@ const CIH_SPECIALTY_DATA = [
         "title": "Pha chế các chế phẩm điện giải đậm đặc, chế phẩm vô khuẩn và thuốc ung thư phục vụ người bệnh nội trú.",
         "img": "images/programs/ivf_prog_4.webp?v=2",
         "desc": "<p style=\"margin:0;\">Pha chế các chế phẩm điện giải đậm đặc, chế phẩm vô khuẩn và thuốc ung thư phục vụ người bệnh nội trú.</p>",
-        "title_html": "Pha chế các chế phẩm điện giải đậm đặc, chế phẩm vô khuẩn và thuốc ung thư phục vụ người bệnh nội trú."
+        "title_html": "Pha chế các chế phẩm điện giải đậm đặc, chế phẩm vô khuẩn<br>và thuốc ung thư phục vụ người bệnh nội trú."
       },
       {
         "title": "Đào tạo và tư vấn sử dụng thuốc, phát hành các tài liệu chuyên môn tham khảo, cung cấp thông tin cho nhân viên y tế, nhằm liên tục cập nhật và nâng cao trình độ chuyên môn về dược của cán bộ y tế.",
@@ -3990,7 +3996,7 @@ const CIH_SPECIALTY_DATA = [
         "title": "Tư vấn sử dụng thuốc cho người bệnh ngoại trú nhằm nâng cao hiệu quả và tuân thủ điều trị của người bệnh.",
         "img": "images/programs/consult_demo.webp",
         "desc": "<p style=\"margin:0;\">Tư vấn sử dụng thuốc cho người bệnh ngoại trú nhằm nâng cao hiệu quả và tuân thủ điều trị của người bệnh.</p>",
-        "title_html": "Tư vấn sử dụng thuốc cho người bệnh ngoại trú nhằm nâng cao hiệu quả và tuân thủ điều trị của người bệnh."
+        "title_html": "Tư vấn sử dụng thuốc cho người bệnh ngoại trú<br>nhằm nâng cao hiệu quả và tuân thủ điều trị của người bệnh."
       },
       {
         "title": "Liên kết với các cơ sở đào tạo Y – Dược, là cơ sở thực hành, nghiên cứu khoa học cho các học viên của các trường Đại học, cao đẳng chuyên ngành Y – Dược.",

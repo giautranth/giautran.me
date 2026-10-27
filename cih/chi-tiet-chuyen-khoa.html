@@ -567,6 +567,7 @@
     }
     #spec-prog-modal .award-modal__title {
       text-align: center !important;
+      text-wrap: balance;
     }
     #spec-prog-modal .award-modal__img-box {
       padding: 0 !important;
@@ -1686,11 +1687,13 @@
   let specProgData = [
     {
       title: 'Chương trình tầm soát bệnh lý của vú và ung thư vú',
+      title_html: 'Chương trình tầm soát bệnh lý của vú<br>và ung thư vú',
       img: 'images/phu_san_prog_1.webp?v=3',
       desc: '<p style="margin:0;">Phát hiện sớm ung thư vú là một yếu tố quan trọng trong điều trị thành công bệnh này. Chụp nhũ ảnh kỹ thuật số là phương pháp có thể chẩn đoán ung thư vú từ rất sớm. Ngoài ra, Khoa Sản còn thực hiện phương pháp hút tế bào với kim nhỏ để sớm có chẩn đoán và điều trị các khối u trong vú.</p>'
     },
     {
       title: 'Tầm soát ung thư cổ tử cung (nội mạc tử cung)',
+      title_html: 'Tầm soát ung thư cổ tử cung<br>(nội mạc tử cung)',
       img: 'images/phu_san_prog_2.webp?v=3',
       desc: '<p style="margin:0;">Dựa trên thử nghiệm ThinPrep hay Pap’s smear, định type HPV, soi cổ tử cung và sinh thiết, chúng tôi có thể giúp phụ nữ phát hiện sớm ung thư cổ tử cung trên 90%, nên ung thư cổ tử cung có thể được phát hiện sớm và điều trị hiệu quả. Chúng tôi cũng cung cấp dịch vụ tư vấn và chủng ngừa ung thư cổ tử cung.</p>'
     },
@@ -1706,11 +1709,13 @@
     },
     {
       title: 'Chăm sóc sức khỏe giai đoạn tiền mãn kinh – mãn kinh',
+      title_html: 'Chăm sóc sức khỏe giai đoạn<br>tiền mãn kinh – mãn kinh',
       img: 'images/phu_san_prog_5.webp?v=3',
       desc: '<p style="margin:0;">Cung cấp các dịch vụ tư vấn cho phụ nữ sắp tới thời kỳ mãn kinh để giúp phụ nữ giảm các triệu chứng khó chịu trong thời kỳ này.</p>'
     },
     {
       title: 'Chăm sóc thai sản và chương trình chăm sóc tại nhà',
+      title_html: 'Chăm sóc thai sản<br>và chương trình chăm sóc tại nhà',
       img: 'images/phu_san_prog_6.webp?v=4',
       desc: '<p style="margin:0 0 10px 0;">Cung cấp các gói khám thai trọn gói: thai phụ sẽ được chăm sóc từ lúc bắt đầu có thai cho đến lúc lâm bồn, với sự thăm khám của các bác sĩ nhiều kinh nghiệm. Được thực hiện các xét nghiệm cần thiết khi mang thai, giúp phát hiện sớm các bất thường nếu có của thai nhi để có hướng xử trí phù hợp.</p><p style="margin:0 0 10px 0;">Các lớp học tiền sản hướng dẫn các phương pháp, bài tập nâng cao sức khỏe thai kỳ và hướng dẫn chăm sóc em bé.</p><p style="margin:0;">Với kỹ thuật sinh con an toàn và không đau, sản phụ sẽ được tư vấn về các phương pháp giảm đau tiên tiến và hướng dẫn lựa chọn hình thức sinh con phù hợp với sức khỏe và nguyện vọng. Đặc biệt, khi sinh con tại Bệnh viện Quốc tế City, chồng hoặc một người thân của sản phụ sẽ được vào phòng sanh hoặc phòng mổ đối với những ca mổ lấy thai không cấp cứu và chăm sóc sản phụ cùng đội ngũ bác sĩ. Trong suốt quá trình nằm viện, đội ngũ điều dưỡng và bác sĩ luôn có mặt 24/24 để chăm sóc và hướng dẫn gia đình chăm sóc bé.</p>'
     }
@@ -1731,6 +1736,7 @@
     tmpDiv.innerHTML = item.desc || '';
     const plainDesc = (tmpDiv.textContent || tmpDiv.innerText || '').replace(/\s+/g, ' ').trim();
     const cleanTitle = (item.title || '').replace(/\s+/g, ' ').trim();
+    const displayTitleHtml = item.title_html || item.title;
     if (plainDesc === cleanTitle) {
       if (cleanTitle.length > 110) {
         const secHeading = document.getElementById('spec-prog-heading');
@@ -1738,12 +1744,12 @@
         descEl.style.display = '';
         descEl.innerHTML = item.desc;
       } else {
-        titleEl.textContent = item.title;
+        titleEl.innerHTML = displayTitleHtml;
         descEl.style.display = 'none';
         descEl.innerHTML = '';
       }
     } else {
-      titleEl.textContent = item.title;
+      titleEl.innerHTML = displayTitleHtml;
       descEl.style.display = '';
       descEl.innerHTML = item.desc;
     }
@@ -2555,7 +2561,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261027_arrows"></script>
 <script src="news_data.js?v=20261027_specnews"></script>
-<script src="specialty_data.js?v=20261027_ivf7"></script>
+<script src="specialty_data.js?v=20261027_modal_balance"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);

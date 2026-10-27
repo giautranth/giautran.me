@@ -1109,7 +1109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261026_tablet2"></script>
 <script src="cih_doctors_data.js?v=1793028300"></script>
-<script src="booking_modal.js?v=1793005600"></script>
+<script src="booking_modal.js?v=20261027_exec_docs"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
@@ -1482,6 +1482,13 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // ═══ INITIALIZE 2-STEP SIDEBAR BOOKING FORM ═══
+    const nonClinicalExecSlugs = ['ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city', 'bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa', 'bs-ckii-dang-quang-thuyet'];
+    if (nonClinicalExecSlugs.includes(doctor.slug)) {
+      const bookingBoxEl = document.getElementById('doc-booking-box');
+      if (bookingBoxEl) bookingBoxEl.style.display = 'none';
+      const bodyGridEl = document.querySelector('.doc-body-grid');
+      if (bodyGridEl) bodyGridEl.style.gridTemplateColumns = '1fr';
+    }
     const catalog = Array.isArray(window.CIH_BOOKING_CATALOG) ? window.CIH_BOOKING_CATALOG.slice() : [];
     const docKey = normalizeStr(doctor.name);
 
@@ -1553,7 +1560,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (sp && Array.isArray(sp.doctors)) {
         // Also merge any additional doctors from doctorsList with the same specialty_slug
         const combinedDoctors = sp.doctors.slice();
-        doctorsList.forEach(dItem => {
+        doctorsList.forEach(dItem => { if (nonClinicalExecSlugs.includes(dItem.slug)) return;
           if (dItem.specialty_slug && (dItem.specialty_slug === sp.slug || (sp.aliases && sp.aliases.includes(dItem.specialty_slug)))) {
             const k = normalizeStr(dItem.name);
             if (!combinedDoctors.some(cd => normalizeStr(cd.name) === k)) {

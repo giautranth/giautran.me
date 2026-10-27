@@ -2335,7 +2335,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261026_tablet2"></script>
 <script src="news_data.js?v=1792750000"></script>
-<script src="specialty_data.js?v=20261027_nicu_intro"></script>
+<script src="specialty_data.js?v=20261027_exec_docs"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
@@ -2418,10 +2418,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Section 3: Bác sĩ
-        if (spec.doctors && spec.doctors.length > 0) {
+        const nonClinicalSlugs = [
+          'ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city',
+          'bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa',
+          'bs-ckii-dang-quang-thuyet'
+        ];
+        const filteredSpecDoctors = (spec.doctors || []).filter(d => !nonClinicalSlugs.includes(d.slug));
+        if (filteredSpecDoctors.length > 0) {
           const docsGrid = document.getElementById('doc-grid-3');
           if (docsGrid) {
-            docsGrid.innerHTML = spec.doctors.map(d => {
+            docsGrid.innerHTML = filteredSpecDoctors.map(d => {
               const docHref = d.slug ? `chi-tiet-bac-si?slug=${d.slug}` : 'bac-si';
               return `
               <div class="doc-card-v2">

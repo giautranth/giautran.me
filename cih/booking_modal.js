@@ -29,7 +29,6 @@
       name: 'Khoa Nhi & Hồi sức tích cực sơ sinh (NICU)',
       doctors: [
         { name: 'BS.CKII. Nguyễn Bạch Huệ', role: 'Trưởng khoa Nhi & NICU' },
-        { name: 'BS.CKII. Đặng Quang Thuyết', role: 'Phó Giám đốc Y Khoa - Chuyên khoa Nhi' },
         { name: 'BS.CKII. Nguyễn Thị Hồng Cẩm', role: 'Bác sĩ Chuyên khoa Tim mạch Nhi' },
         { name: 'BS.CKII. Dương Thị Kim Cúc', role: 'Bác sĩ Ngoại Nhi, Tiết Niệu' },
         { name: 'BS.CKI. Nguyễn Thị Lệ Liễu', role: 'Bác sĩ Chuyên khoa Nhi' },
@@ -219,7 +218,6 @@
       name: 'Khoa Cấp Cứu & Hồi sức tích cực (ICU)',
       doctors: [
         { name: 'ThS.BS.CKII. Nguyễn Văn Nhôm', role: 'Trưởng Khoa Cấp Cứu – Hồi sức Tích cực' },
-        { name: 'BS.CKII. Phan Hoàng Nguyên', role: 'Cố vấn Chuyên môn BGĐ - Hồi sức tích cực' },
         { name: 'ThS.BS. Nguyễn Phước Lộc', role: 'Bác sĩ Chuyên khoa Hồi Sức Tích Cực' },
         { name: 'BS.CKI. Lê Quốc Khánh', role: 'Bác sĩ Khoa Cấp cứu' },
         { name: 'BS.CKI. Trương Thanh Phương', role: 'Bác sĩ Khoa Cấp cứu' },

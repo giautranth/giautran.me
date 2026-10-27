@@ -358,12 +358,6 @@ const CIH_SPECIALTY_DATA = [
     "extra_html": "",
     "doctors": [
       {
-        "slug": "bs-ckii-dang-quang-thuyet",
-        "name": "BS.CKII. Đặng Quang Thuyết",
-        "title": "Phó Giám đốc Y Khoa",
-        "img": "images/bac-si/new/bs-thuyet.webp"
-      },
-      {
         "slug": "bs-ckii-nguyen-bach-hue",
         "name": "BS.CKII. Nguyễn Bạch Huệ",
         "title": "Trưởng khoa Nhi<br>&amp; Hồi sức Tích cực Sơ sinh",
@@ -462,12 +456,6 @@ const CIH_SPECIALTY_DATA = [
     ],
     "extra_html": "",
     "doctors": [
-      {
-        "slug": "bs-ckii-dang-quang-thuyet",
-        "name": "BS.CKII. Đặng Quang Thuyết",
-        "title": "Phó Giám đốc Y Khoa",
-        "img": "images/bac-si/new/bs-thuyet.webp"
-      },
       {
         "slug": "bs-ckii-nguyen-bach-hue",
         "name": "BS.CKII. Nguyễn Bạch Huệ",
@@ -2179,24 +2167,6 @@ const CIH_SPECIALTY_DATA = [
     "extra_html": "",
     "doctors": [
       {
-        "slug": "ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city",
-        "name": "ThS.BS. Trần Quốc Thành",
-        "title": "Giám đốc Điều hành Bệnh viện Quốc tế City<br>và Bệnh viện Gia An 115",
-        "img": "images/bac-si/new/bs-thanh.webp"
-      },
-      {
-        "slug": "bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa",
-        "name": "BS.CKII. Phan Hoàng Nguyên",
-        "title": "Cố vấn Chuyên môn BGĐ BV Quốc tế City<br>và Phó Giám đốc Điều hành BV Gia An 115",
-        "img": "images/bac-si/new/bs-nguyen.webp"
-      },
-      {
-        "slug": "bs-ckii-dang-quang-thuyet",
-        "name": "BS.CKII. Đặng Quang Thuyết",
-        "title": "Phó Giám đốc Y Khoa",
-        "img": "images/bac-si/new/bs-thuyet.webp"
-      },
-      {
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
@@ -2499,24 +2469,6 @@ const CIH_SPECIALTY_DATA = [
     "extra_html": "",
     "doctors": [
       {
-        "slug": "ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city",
-        "name": "ThS.BS. Trần Quốc Thành",
-        "title": "Giám đốc Điều hành Bệnh viện Quốc tế City<br>và Bệnh viện Gia An 115",
-        "img": "images/bac-si/new/bs-thanh.webp"
-      },
-      {
-        "slug": "bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa",
-        "name": "BS.CKII. Phan Hoàng Nguyên",
-        "title": "Cố vấn Chuyên môn BGĐ BV Quốc tế City<br>và Phó Giám đốc Điều hành BV Gia An 115",
-        "img": "images/bac-si/new/bs-nguyen.webp"
-      },
-      {
-        "slug": "bs-ckii-dang-quang-thuyet",
-        "name": "BS.CKII. Đặng Quang Thuyết",
-        "title": "Phó Giám đốc Y Khoa",
-        "img": "images/bac-si/new/bs-thuyet.webp"
-      },
-      {
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
@@ -2693,12 +2645,6 @@ const CIH_SPECIALTY_DATA = [
     "extra_html": "",
     "doctors": [
       {
-        "slug": "bs-ckii-dang-quang-thuyet",
-        "name": "BS.CKII. Đặng Quang Thuyết",
-        "title": "Phó Giám đốc Y Khoa",
-        "img": "images/bac-si/new/bs-thuyet.webp"
-      },
-      {
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
@@ -2859,24 +2805,6 @@ const CIH_SPECIALTY_DATA = [
     ],
     "extra_html": "",
     "doctors": [
-      {
-        "slug": "ths-bs-tran-quoc-thanh-giam-doc-dieu-hanh-benh-vien-quoc-te-city",
-        "name": "ThS.BS. Trần Quốc Thành",
-        "title": "Giám đốc Điều hành Bệnh viện Quốc tế City<br>và Bệnh viện Gia An 115",
-        "img": "images/bac-si/new/bs-thanh.webp"
-      },
-      {
-        "slug": "bs-ckii-phan-hoang-nguyen-giam-doc-y-khoa",
-        "name": "BS.CKII. Phan Hoàng Nguyên",
-        "title": "Cố vấn Chuyên môn BGĐ BV Quốc tế City<br>và Phó Giám đốc Điều hành BV Gia An 115",
-        "img": "images/bac-si/new/bs-nguyen.webp"
-      },
-      {
-        "slug": "bs-ckii-dang-quang-thuyet",
-        "name": "BS.CKII. Đặng Quang Thuyết",
-        "title": "Phó Giám đốc Y Khoa",
-        "img": "images/bac-si/new/bs-thuyet.webp"
-      },
       {
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",

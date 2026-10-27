@@ -640,7 +640,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-bao-hoa",
         "name": "BS.CKII. Nguyễn Bảo Hòa",
         "title": "Bác sĩ chuyên khoa Da liễu<br>&amp; Nội cơ xương khớp",
-        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp"
+        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp?v=2"
       },
       {
         "slug": "bs-ckii-ha-thi-kim-hong",
@@ -1351,7 +1351,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-bao-hoa",
         "name": "BS.CKII. Nguyễn Bảo Hòa",
         "title": "Bác sĩ chuyên khoa Da liễu<br>&amp; Nội cơ xương khớp",
-        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp"
+        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp?v=2"
       },
       {
         "slug": "bs-le-duc-tho",
@@ -1711,7 +1711,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-bao-hoa",
         "name": "BS.CKII. Nguyễn Bảo Hòa",
         "title": "Bác sĩ chuyên khoa Da liễu<br>&amp; Nội cơ xương khớp",
-        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp"
+        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp?v=2"
       }
     ],
     "packages": [
@@ -2406,7 +2406,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-bao-hoa",
         "name": "BS.CKII. Nguyễn Bảo Hòa",
         "title": "Bác sĩ chuyên khoa Da liễu<br>&amp; Nội cơ xương khớp",
-        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp"
+        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp?v=2"
       },
       {
         "slug": "bs-le-duc-tho",
@@ -2743,7 +2743,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-bao-hoa",
         "name": "BS.CKII. Nguyễn Bảo Hòa",
         "title": "Bác sĩ chuyên khoa Da liễu<br>&amp; Nội cơ xương khớp",
-        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp"
+        "img": "images/ext_webp/Bio-Doctor-template-for-website_2026_d568b3f1.webp?v=2"
       },
       {
         "slug": "bs-ckii-duong-thi-kim-cuc",

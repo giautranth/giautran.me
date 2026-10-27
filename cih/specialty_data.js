@@ -169,8 +169,8 @@ const CIH_SPECIALTY_DATA = [
   },
   {
     "slug": "khoa-ho-tro-sinh-san-ivf",
-    "name": "Trung tâm Hỗ Trợ Sinh Sản (IVF)",
-    "title": "Trung tâm Hỗ Trợ Sinh Sản (IVF)",
+    "name": "Trung tâm Hỗ trợ sinh sản (IVF)",
+    "title": "Trung tâm Hỗ trợ sinh sản (IVF)",
     "banner": "images/banners/banner_khoa-ho-tro-sinh-san-ivf.webp?v=2",
     "gallery_img": "images/ext_webp/SAN00365_Edit-1_d5c86838.webp",
     "hero_desc": "Trung tâm Hỗ trợ sinh sản IVF Center – Bệnh viện Quốc tế City là bệnh viện đầu tiên khu vực cửa ngõ phía Tây cung cấp cho các gia đình dịch vụ hỗ trợ sinh sản chất lượng 5 sao với chi phí phù hợp và tối ưu nhất.",
@@ -254,21 +254,21 @@ const CIH_SPECIALTY_DATA = [
         "id": 24896,
         "title": "Gói tầm soát ung thư vú",
         "title_html": "Gói tầm soát ung thư vú",
-        "cat": "Trung tâm Hỗ Trợ Sinh Sản (IVF)",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
         "image": "images/ext_webp/31_418d6eae.webp"
       },
       {
         "id": 24894,
         "title": "Gói tầm soát ung thư cổ tử cung",
         "title_html": "Gói tầm soát ung thư cổ tử cung",
-        "cat": "Trung tâm Hỗ Trợ Sinh Sản (IVF)",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
         "image": "images/goi-tam-soat-ung-thu-co-tu-cung.webp"
       },
       {
         "id": 23992,
         "title": "Gói khám trước mang thai",
         "title_html": "Gói khám trước mang thai",
-        "cat": "Trung tâm Hỗ Trợ Sinh Sản (IVF)",
+        "cat": "Trung tâm Hỗ trợ sinh sản (IVF)",
         "image": "images/ext_webp/12-1_9f66d131.webp"
       },
       {

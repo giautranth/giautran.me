@@ -259,7 +259,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "6. Sàng lọc di truyền phôi (Preimplantation Genetic Testing)",
-        "img": "images/programs/ivf_prog_6.webp",
+        "img": "images/programs/ivf_prog_6.webp?v=2",
         "desc": "<p>Kỹ thuật này được thực hiện để kiểm tra phôi về các bất thường di truyền hoặc rối loạn di truyền trước khi chuyển phôi vào tử cung. Trung Tâm Hỗ Trợ Sinh Sản – Bệnh viện Quốc tế City triển khai tất cả các dịch vụ sàng lọc di truyền phôi cho bệnh nhân bao gồm:</p>\n<ul><li>Xét nghiệm PGT-A được áp dụng nhằm phát hiện các bất thường về số lượng và cấu trúc của nhiễm sắc thể phát sinh ngẫu nhiên trong quá trình hình thành trứng, tinh trùng và phát triển của phôi.</li><li>Xét nghiệm PGT-M là xét nghiệm nhằm mục đích chẩn đoán các rối loạn di truyền từ bố mẹ sang con. Xét nghiệm này thường được áp dụng trong trường hợp các cặp vợ chồng đã được xác định là thể mang – người lành mang gen bệnh.</li></ul>",
         "title_html": "6. Sàng lọc di truyền phôi<br>(Preimplantation Genetic Testing)"
       },
@@ -374,7 +374,7 @@ const CIH_SPECIALTY_DATA = [
       {
         "wide": false,
         "title": "Hệ thống Nhận diện chống nhầm lẫn mẫu",
-        "img": "images/programs/ivf_prog_6.webp",
+        "img": "images/programs/ivf_prog_6.webp?v=2",
         "short_desc": "Quy trình kiểm tra chéo nghiêm ngặt kết hợp công nghệ nhận diện hiện đại đảm bảo sự chính xác tuyệt đối.",
         "desc": "<p>Hệ thống nhận diện bệnh nhân chống nhầm lẫn mẫu tiên tiến nhất hiện nay. Mọi quy trình đều thực hiện nghiêm ngặt kiểm tra chéo, kết hợp cùng công nghệ hiện đại nhằm tối ưu hóa quy trình và đảm bảo sự chính xác tuyệt đối.</p>"
       },
@@ -3494,7 +3494,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Huyết học",
-        "img": "images/programs/ivf_prog_6.webp",
+        "img": "images/programs/ivf_prog_6.webp?v=2",
         "desc": "<p>Lĩnh vực này làm những xét nghiệm đếm số lượng tế bào máu và chẩn đoán hình ảnh bất thường của các tế bào máu: đây là những xét nghiệm thường quy và giúp chẩn đoán tình trạng thiếu máu hay ung thư máu. Chúng tôi còn làm những xét nghiệm đông máu giúp theo dõi những bệnh nhân sử dụng thuốc kháng đông.</p>",
         "title_html": "Huyết học"
       },
@@ -3994,7 +3994,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "Liên kết với các cơ sở đào tạo Y – Dược, là cơ sở thực hành, nghiên cứu khoa học cho các học viên của các trường Đại học, cao đẳng chuyên ngành Y – Dược.",
-        "img": "images/programs/ivf_prog_6.webp",
+        "img": "images/programs/ivf_prog_6.webp?v=2",
         "desc": "<p style=\"margin:0;\">Liên kết với các cơ sở đào tạo Y – Dược, là cơ sở thực hành, nghiên cứu khoa học cho các học viên của các trường Đại học, cao đẳng chuyên ngành Y – Dược.</p>",
         "title_html": "Liên kết với các cơ sở đào tạo Y – Dược, là cơ sở thực hành, nghiên cứu khoa học cho các học viên của các trường Đại học, cao đẳng chuyên ngành Y – Dược."
       }

@@ -219,7 +219,7 @@ const CIH_SPECIALTY_DATA = [
       },
       {
         "title": "9. Hỗ trợ tâm lý (Psychological Support)",
-        "img": "images/programs/ivf_prog_9.webp",
+        "img": "images/programs/ivf_prog_9.webp?v=2",
         "desc": "<p>Điều trị IVF có thể là một quá trình căng thẳng về mặt tâm lý. Trung Tâm Hỗ Trợ Sinh Sản – Bệnh viện Quốc tế City cung cấp hỗ trợ tâm lý, giúp các cặp vợ chồng đối phó với những khó khăn và căng thẳng trong suốt quá trình điều trị.</p>\n<p>Những kỹ thuật và phương pháp này đều có mục đích giúp tối ưu hóa cơ hội mang thai thành công cho các cặp vợ chồng gặp vấn đề về sinh sản. Mỗi trường hợp sẽ được bác sĩ tư vấn và lựa chọn phương pháp phù hợp nhất.</p>"
       }
     ],

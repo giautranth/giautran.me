@@ -242,6 +242,37 @@
       margin-bottom: 1.1rem;
       text-align: justify;
     }
+    #spec-body p,
+    #spec-body li {
+      font-size: 1.01rem;
+      line-height: 1.75;
+      color: #334155;
+      text-align: justify;
+    }
+    #spec-body p {
+      margin-bottom: 0.9rem;
+    }
+    #spec-body p:last-child {
+      margin-bottom: 0;
+    }
+    #spec-body ul {
+      list-style: disc !important;
+      padding-left: 1.35rem;
+      margin: 0.25rem 0 0.9rem 0;
+    }
+    #spec-body ul:last-child {
+      margin-bottom: 0;
+    }
+    #spec-body li {
+      list-style: disc !important;
+      margin-bottom: 0.75rem;
+    }
+    #spec-body li:last-child {
+      margin-bottom: 0;
+    }
+    #spec-body li::marker {
+      color: #334155;
+    }
     .opt1-features-2x2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1294,7 +1325,10 @@
         <h2 class="section__title" id="spec-intro-heading" style="margin-bottom: 1.15rem !important;">Giới thiệu</h2>
 
         <div id="spec-body" style="margin-top: 1.15rem;">
-          <p class="opt1-intro__lead" style="margin-bottom: 0;">Sở hữu đội ngũ bác sĩ được đào tạo chuyên sâu, có nhiều năm kinh nghiệm trong lĩnh vực chăm sóc sức khỏe phụ nữ, Khoa Phụ sản luôn mang đến những lời khuyên hữu ích và phương pháp điều trị hiệu quả nhất cho các mẹ bầu. Bên cạnh đó, Khoa Phụ sản cũng được trang bị các thiết bị hiện đại như: máy soi cổ tử cung, chụp nhũ ảnh kỹ thuật số, siêu âm 4D…, phòng thí nghiệm chính xác cho kết quả nhanh chóng, giúp tầm soát, phát hiện sớm và điều trị ung thư vú, ung thư cổ tử cung – là hai bệnh ung thư có tỉ lệ mắc cao nhất trong các loại ung thư của phụ nữ.</p>
+          <ul class="opt1-intro__list">
+            <li>Sở hữu đội ngũ bác sĩ được đào tạo chuyên sâu, có nhiều năm kinh nghiệm trong lĩnh vực chăm sóc sức khỏe phụ nữ, Khoa Phụ sản luôn mang đến những lời khuyên hữu ích và phương pháp điều trị hiệu quả nhất cho các mẹ bầu.</li>
+            <li>Bên cạnh đó, Khoa Phụ sản cũng được trang bị các thiết bị hiện đại như: máy soi cổ tử cung, chụp nhũ ảnh kỹ thuật số, siêu âm 4D…, phòng thí nghiệm chính xác cho kết quả nhanh chóng, giúp tầm soát, phát hiện sớm và điều trị ung thư vú, ung thư cổ tử cung – là hai bệnh ung thư có tỉ lệ mắc cao nhất trong các loại ung thư của phụ nữ.</li>
+          </ul>
         </div>
       </div>
 
@@ -2300,7 +2334,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script src="script.js?v=20261026_tablet2"></script>
 <script src="news_data.js?v=1792750000"></script>
-<script src="specialty_data.js?v=20261027_heading"></script>
+<script src="specialty_data.js?v=20261027_heading2"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);

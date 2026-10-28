@@ -425,407 +425,255 @@
 
 
 
-  /* 4 Standalone Floating Action Cards */
-
+  /* Option 4B: Floating Capsule Pill Dock & Unified Teal Stats */
   #quick-actions.cih-standalone-actions {
-
     max-width: 1120px;
-
     margin: 18px auto 0;
-
     position: relative;
-
     z-index: 25;
-
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
-    gap: 18px;
-
-    background: transparent !important;
-
-    padding: 0 !important;
-
-    border: none !important;
-
-    box-shadow: none !important;
-
+    gap: 10px;
+    align-items: center;
+    background: #ffffff !important;
+    border-radius: 999px !important;
+    padding: 10px 12px !important;
+    border: 1.5px solid rgba(197, 154, 63, 0.55) !important;
+    box-shadow: 0 18px 42px -10px rgba(0, 125, 165, 0.14) !important;
   }
-
-
 
   .cih-action-pill {
-
-    background: rgba(255, 255, 255, 0.95) !important;
-
-    backdrop-filter: blur(16px);
-
-    -webkit-backdrop-filter: blur(16px);
-
-    border-radius: 16px !important;
-
-    padding: 15px 18px !important;
-
+    background: transparent !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 999px !important;
+    padding: 12px 18px !important;
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     text-decoration: none;
-
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
-
-    transition: all 0.3s ease;
-
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    transition: all 0.25s ease;
   }
-
-
 
   .cih-action-pill:hover {
-
-    transform: translateY(-4px);
-
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
-
+    background: #fdfaf2 !important;
+    transform: translateY(-2px);
+    box-shadow: none !important;
+    border-color: rgba(197, 154, 63, 0.28) !important;
   }
-
-
-
-  .cih-action-pill--teal,
-
-  .cih-action-pill--gold {
-
-    border: 1px solid rgba(197, 154, 63, 0.6) !important;
-
-    box-shadow: 0 0 0 1px rgba(197, 154, 63, 0.2), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
-
-  }
-
-  .cih-action-pill--teal:hover,
-
-  .cih-action-pill--gold:hover {
-
-    border-color: #C59A3F !important;
-
-  }
-
-
 
   .cih-action-pill__left {
-
     display: flex;
-
     align-items: center;
-
-    gap: 16px;
-
+    gap: 12px;
   }
-
-
 
   .cih-action-pill__icon {
-
-    width: 48px;
-
-    height: 48px;
-
-    border-radius: 12px;
-
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     flex-shrink: 0;
-
-    transition: transform 0.3s ease;
-
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+    color: #C59A3F !important;
+    border: 1px solid #fcd34d !important;
+    box-shadow: none !important;
+    transition: transform 0.25s ease;
   }
-
-
 
   .cih-action-pill:hover .cih-action-pill__icon {
-
     transform: scale(1.05);
-
   }
-
-
-
-  .cih-action-pill--teal .cih-action-pill__icon,
-
-  .cih-action-pill--gold .cih-action-pill__icon {
-
-    background: linear-gradient(135deg, #fffbeb 0%, rgba(254, 243, 199, 0.7) 50%, #ffffff 100%);
-
-    box-shadow: 0 0 0 1px #fcd34d, 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-
-    color: #C59A3F;
-
-  }
-
-
 
   .cih-action-pill__title {
-
-    font-size: 1rem;
-
-    font-weight: 700;
-
+    font-size: 0.98rem;
+    font-weight: 800;
     color: #0f172a;
-
     transition: color 0.25s ease;
-
   }
-
-
 
   .cih-action-pill:hover .cih-action-pill__title {
-
-    color: #C59A3F;
-
+    color: #007DA5;
   }
-
-
 
   .cih-action-pill__arrow {
-
-    font-size: 0.875rem;
-
-    font-weight: 600;
-
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #C59A3F !important;
     transition: transform 0.2s ease, color 0.2s ease;
-
   }
-
-
-
-  .cih-action-pill--teal .cih-action-pill__arrow,
-
-  .cih-action-pill--gold .cih-action-pill__arrow {
-
-    color: #C59A3F;
-
-  }
-
-
 
   .cih-action-pill:hover .cih-action-pill__arrow {
-
     transform: translateX(4px);
-
-    color: #78350f;
-
+    color: #007DA5 !important;
   }
 
+  /* Highlighted Primary Pill: Đặt lịch khám */
+  #qa-booking.cih-action-pill {
+    background: linear-gradient(135deg, #007DA5 0%, #0096a6 100%) !important;
+    box-shadow: 0 8px 20px rgba(0, 125, 165, 0.3) !important;
+    border: 1px solid rgba(212, 175, 55, 0.45) !important;
+  }
 
+  #qa-booking.cih-action-pill:hover {
+    background: linear-gradient(135deg, #00668a 0%, #007DA5 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 125, 165, 0.38) !important;
+  }
 
-  /* 3-Column Floating Stats Card (Exact Demo Code Design & Colors) */
+  #qa-booking .cih-action-pill__icon {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #fde68a !important;
+    border: 1px solid rgba(253, 230, 138, 0.45) !important;
+  }
 
+  #qa-booking .cih-action-pill__title,
+  #qa-booking:hover .cih-action-pill__title,
+  #qa-booking .cih-action-pill__arrow,
+  #qa-booking:hover .cih-action-pill__arrow {
+    color: #ffffff !important;
+  }
+
+  /* 3-Column Floating Stats Card (Option 4B Unified Teal Numbers) */
   .cih-floating-stats {
-
-    max-width: 1120px;
-
-    margin: 48px auto 0;
-
-    background: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23B88928' stroke-width='1' stroke-opacity='0.11'%3E%3Cpath d='M36 0L72 36L36 72L0 36Z'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(135deg, #FFFDF7 0%, #FAF0D7 50%, #F4E2B6 100%) !important;
-
+    max-width: 1020px;
+    margin: 28px auto 0;
+    background: linear-gradient(135deg, #ffffff 0%, #fffdf7 55%, #f4f9fc 100%) !important;
     backdrop-filter: blur(16px) !important;
-
     -webkit-backdrop-filter: blur(16px) !important;
-
     border: 1.5px solid #D8B15A !important;
-
-    border-radius: 20px !important;
-
-    padding: 28px 24px !important;
-
-    box-shadow: 0 12px 30px rgba(197, 154, 63, 0.13) !important;
-
+    border-radius: 22px !important;
+    padding: 26px 18px !important;
+    box-shadow: 0 14px 34px rgba(0, 125, 165, 0.10) !important;
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 0;
-
     align-items: center;
-
     position: relative;
-
     z-index: 20;
-
   }
-
-
 
   .cih-stat-box {
-
     text-align: center;
-
-    padding: 12px;
-
-    border-right: 1px solid rgba(197, 154, 63, 0.28);
-
+    padding: 8px 16px;
+    border-right: none;
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
+    position: relative;
     transition: transform 0.2s ease;
-
   }
 
-
+  .cih-stat-box:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 14%;
+    bottom: 14%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(197, 154, 63, 0.4), transparent);
+  }
 
   .cih-stat-box:hover {
-
-    transform: translateY(-4px);
-
+    transform: translateY(-3px);
   }
 
-
-
-  .cih-stat-box:last-child {
-
-    border-right: none;
-
-  }
-
-
-
-  .cih-stat-num {
-
-    font-size: 2.65rem;
-
-    font-weight: 900;
-
-    line-height: 2.9rem;
-
-    letter-spacing: -0.025em;
-
-    margin-bottom: 0;
-
-  }
-
-
-
-  .cih-stat-num--orange {
-
-    background: linear-gradient(to right, #C59A3F, #d97706);
-
-    -webkit-background-clip: text;
-
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    color: #d97706;
-
-  }
-
-
-
-  .cih-stat-num--gold {
-
-    color: #C59A3F;
-
-  }
-
-
-
+  .cih-stat-num,
+  .cih-stat-num--orange,
+  .cih-stat-num--gold,
   .cih-stat-num--teal {
-
-    color: #007A9E;
-
+    font-size: 2.9rem;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #005f80 0%, #007DA5 65%, #0096a6 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    color: #007DA5 !important;
   }
-
-
 
   .cih-stat-title {
-
     margin-top: 6px;
-
-    font-size: 0.92rem;
-
+    font-size: 0.88rem;
     line-height: 1.25rem;
-
-    font-weight: 700;
-
-    color: #334155;
-
+    font-weight: 800;
+    color: #1e293b;
     text-transform: uppercase;
-
     letter-spacing: 0.05em;
-
     margin-bottom: 0;
-
   }
-
-
-
-  .cih-stat-desc {
-
-    font-size: 11px;
-
-    color: #64748b;
-
-    margin-top: 2px;
-
-    margin-bottom: 0;
-
-  }
-
-
 
   @media (max-width: 991px) {
-
-    .cih-standalone-actions,
-
+    #quick-actions.cih-standalone-actions,
     .cih-floating-stats {
-
       margin-left: 16px;
-
       margin-right: 16px;
-
     }
-
-    .cih-standalone-actions {
-
-      grid-template-columns: 1fr;
-
-      gap: 14px;
-
+    #quick-actions.cih-standalone-actions {
+      border-radius: 24px !important;
+      grid-template-columns: repeat(2, 1fr);
     }
-
   }
 
-
-
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
+    #quick-actions.cih-standalone-actions {
+      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      gap: 4px !important;
+      margin: -14px 12px 0 !important;
+      padding: 6px !important;
+      border-radius: 18px !important;
+    }
+    #quick-actions .cih-action-pill {
+      padding: 8px 4px !important;
+      border-radius: 13px !important;
+      justify-content: center !important;
+    }
+    #quick-actions .cih-action-pill__left {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 4px !important;
+      width: 100% !important;
+      justify-content: center !important;
+    }
+    #quick-actions .cih-action-pill__icon {
+      width: 26px !important;
+      height: 26px !important;
+      border-radius: 50% !important;
+    }
+    #quick-actions .cih-action-pill__icon svg {
+      width: 13px !important;
+      height: 13px !important;
+    }
+    #quick-actions .cih-action-pill__title {
+      font-size: 0.62rem !important;
+      line-height: 1.2 !important;
+      text-align: center !important;
+      white-space: nowrap !important;
+    }
+    #quick-actions .cih-action-pill__arrow {
+      display: none !important;
+    }
     .cih-floating-stats {
       grid-template-columns: repeat(3, 1fr) !important;
       gap: 0 !important;
-      padding: 14px 6px !important;
+      padding: 16px 6px !important;
+      margin-top: 18px !important;
+      border-radius: 18px !important;
     }
     .cih-stat-box {
       padding: 6px 4px !important;
-      border-right: 1px solid rgba(197, 154, 63, 0.28) !important;
-      border-bottom: none !important;
-    }
-    .cih-stat-box:last-child {
       border-right: none !important;
-      border-bottom: none !important;
-      padding-bottom: 6px !important;
     }
     .cih-stat-num {
-      font-size: 1.55rem !important;
-      line-height: 1.8rem !important;
+      font-size: 1.65rem !important;
+      line-height: 1.85rem !important;
     }
     .cih-stat-title {
       font-size: 0.68rem !important;
@@ -834,86 +682,6 @@
       letter-spacing: 0.02em !important;
     }
   }
-
-
-
-
-
-  @media (max-width: 768px) {
-
-    #quick-actions.cih-standalone-actions {
-
-      grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-
-      gap: 5px !important;
-
-      margin: -14px 12px 0 !important;
-
-    }
-
-    #quick-actions .cih-action-pill {
-
-      padding: 8px 4px !important;
-
-      border-radius: 12px !important;
-
-      justify-content: center !important;
-
-    }
-
-    #quick-actions .cih-action-pill__left {
-
-      flex-direction: column !important;
-
-      align-items: center !important;
-
-      gap: 4px !important;
-
-      width: 100% !important;
-
-      justify-content: center !important;
-
-    }
-
-    #quick-actions .cih-action-pill__icon {
-
-      width: 24px !important;
-
-      height: 24px !important;
-
-      border-radius: 7px !important;
-
-    }
-
-    #quick-actions .cih-action-pill__icon svg {
-
-      width: 13px !important;
-
-      height: 13px !important;
-
-    }
-
-    #quick-actions .cih-action-pill__title {
-
-      font-size: 0.62rem !important;
-
-      line-height: 1.2 !important;
-
-      text-align: center !important;
-
-      white-space: nowrap !important;
-
-    }
-
-    #quick-actions .cih-action-pill__arrow {
-
-      display: none !important;
-
-    }
-
-  }
-
-
 
   .section__title {
 

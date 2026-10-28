@@ -300,6 +300,9 @@
       overflow-x: auto;
       display: block;
     }
+    #art-body {
+      overflow: visible !important;
+    }
     .pkg-consult-grid {
       max-width: 874px;
       margin: 2rem auto 0.75rem auto;
@@ -307,18 +310,20 @@
       border: 1.5px solid #bae6fd;
       border-radius: 22px;
       padding: 0;
-      overflow: hidden;
+      overflow: visible;
       box-shadow: 0 16px 40px rgba(0, 91, 127, 0.09);
       display: grid;
       grid-template-columns: 0.92fr 1.08fr;
       gap: 1.25rem;
       align-items: stretch;
+      position: relative;
     }
     .pkg-consult-visual {
       position: relative;
       min-height: 310px;
       overflow: hidden;
       background: #e0f2fe;
+      border-radius: 20.5px 0 0 20.5px;
     }
     .pkg-consult-visual img {
       width: 100%;
@@ -333,6 +338,91 @@
       justify-content: center;
       padding: 1.5rem 2rem 1.5rem 1.25rem;
       background: #ffffff;
+      border-radius: 0 20.5px 20.5px 0;
+    }
+    .pkg-custom-select {
+      position: relative;
+      width: 100%;
+    }
+    .pkg-custom-select__trigger {
+      width: 100%;
+      padding: 0.6rem 2.2rem 0.6rem 0.75rem;
+      border-radius: 9px;
+      border: 1.5px solid #cbd5e1;
+      background: #f8fafc;
+      font-family: inherit;
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: #0f172a;
+      text-align: left;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s;
+      outline: none;
+    }
+    .pkg-custom-select__trigger:hover,
+    .pkg-custom-select.is-open .pkg-custom-select__trigger {
+      border-color: #007DA5;
+      background: #ffffff;
+    }
+    .pkg-custom-select__arrow {
+      position: absolute;
+      right: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #475569;
+      pointer-events: none;
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+    }
+    .pkg-custom-select.is-open .pkg-custom-select__arrow {
+      transform: translateY(-50%) rotate(180deg);
+      color: #007DA5;
+    }
+    .pkg-custom-select__menu {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      right: 0;
+      max-height: 235px;
+      overflow-y: auto;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.16);
+      z-index: 999;
+      display: none;
+      padding: 5px;
+      margin: 0 !important;
+      list-style: none !important;
+    }
+    .pkg-custom-select.is-open .pkg-custom-select__menu {
+      display: block;
+    }
+    .pkg-custom-select__option {
+      padding: 0.52rem 0.75rem;
+      border-radius: 7px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1e293b !important;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      margin: 0 !important;
+      line-height: 1.4 !important;
+      display: block !important;
+    }
+    .pkg-custom-select__option:hover {
+      background: #f0f9ff;
+      color: #007DA5 !important;
+    }
+    .pkg-custom-select__option.is-selected {
+      background: #007DA5;
+      color: #ffffff !important;
+      font-weight: 700;
     }
     @media (max-width: 720px) {
       .pkg-consult-grid {
@@ -342,9 +432,11 @@
       .pkg-consult-visual {
         height: 230px;
         min-height: 230px;
+        border-radius: 20.5px 20.5px 0 0;
       }
       .pkg-consult-form-col {
         padding: 1.25rem 1.35rem 1.5rem 1.35rem;
+        border-radius: 0 0 20.5px 20.5px;
       }
     }
   </style>
@@ -1070,7 +1162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 style="font-size: 1.25rem; font-weight: 800; color: #007DA5; margin: 0; text-transform: uppercase; letter-spacing: 0.3px;">ĐĂNG KÝ TƯ VẤN</h3>
           </div>
 
-          <form id="pkg-consult-form" style="padding: 0;" onsubmit="event.preventDefault(); document.getElementById('pkg-consult-success').style.display='block'; this.reset(); document.getElementById('pkg-consult-select').value='${formatTitleCase(pkg.title).replace(/'/g, "\'")}';">
+          <form id="pkg-consult-form" data-default-pkg="${formatTitleCase(pkg.title)}" style="padding: 0;" onsubmit="event.preventDefault(); document.getElementById('pkg-consult-success').style.display='block'; this.reset(); const defTitle=this.getAttribute('data-default-pkg')||''; document.getElementById('pkg-consult-select').value=defTitle; const lbl=document.getElementById('pkg-consult-trigger-label'); if(lbl) lbl.textContent=defTitle;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem;">
               <!-- 1. Họ tên -->
               <div>
@@ -1095,14 +1187,25 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
 
-            <!-- 3. Gói dịch vụ -->
+            <!-- 3. Gói dịch vụ (Dropdown mở xuống dưới & sắp xếp A-Z) -->
             <div style="margin-bottom: 0.75rem;">
-              <label for="pkg-consult-select" style="display: block; font-size: 0.92rem; font-weight: 700; color: #1e293b; margin-bottom: 0.3rem;">Gói dịch vụ <span style="color: #dc2626;">*</span></label>
-              <select id="pkg-consult-select" required style="width: 100%; padding: 0.6rem 0.7rem; border-radius: 9px; border: 1.5px solid #cbd5e1; background: #f8fafc; font-family: inherit; font-size: 0.94rem; font-weight: 600; color: #0f172a; outline: none; cursor: pointer; transition: all 0.2s;" onfocus="this.style.borderColor='#007DA5';this.style.background='#ffffff'" onblur="this.style.borderColor='#cbd5e1';this.style.background='#f8fafc'">
-                ${(allPkgs || [pkg]).map(p => `
-                  <option value="${formatTitleCase(p.title)}" ${p.id === pkg.id ? 'selected' : ''}>${formatTitleCase(p.title)}</option>
-                `).join('')}
-              </select>
+              <label for="pkg-consult-trigger" style="display: block; font-size: 0.92rem; font-weight: 700; color: #1e293b; margin-bottom: 0.3rem;">Gói dịch vụ <span style="color: #dc2626;">*</span></label>
+              <div class="pkg-custom-select" id="pkg-custom-select">
+                <input type="hidden" id="pkg-consult-select" name="pkg_service" value="${formatTitleCase(pkg.title)}" required />
+                <button type="button" class="pkg-custom-select__trigger" id="pkg-consult-trigger" aria-haspopup="listbox" aria-expanded="false">
+                  <span id="pkg-consult-trigger-label" style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${formatTitleCase(pkg.title)}</span>
+                  <span class="pkg-custom-select__arrow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </button>
+                <ul class="pkg-custom-select__menu" id="pkg-consult-menu" role="listbox">
+                  ${[...(allPkgs || [pkg])]
+                    .sort((a, b) => formatTitleCase(a.title).localeCompare(formatTitleCase(b.title), 'vi', { sensitivity: 'base' }))
+                    .map(p => `
+                      <li class="pkg-custom-select__option ${p.id === pkg.id ? 'is-selected' : ''}" role="option" data-value="${formatTitleCase(p.title)}">${formatTitleCase(p.title)}</li>
+                    `).join('')}
+                </ul>
+              </div>
             </div>
 
             <!-- 4. Ghi chú -->
@@ -1223,6 +1326,82 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     renderRelatedPackages();
+
+
+
+    // Custom downward dropdown controller for Gói dịch vụ (A-Z)
+
+    const customSelect = document.getElementById('pkg-custom-select');
+
+    const customTrigger = document.getElementById('pkg-consult-trigger');
+
+    const customMenu = document.getElementById('pkg-consult-menu');
+
+    const customInput = document.getElementById('pkg-consult-select');
+
+    const customLabel = document.getElementById('pkg-consult-trigger-label');
+
+    if (customSelect && customTrigger && customMenu && customInput && customLabel) {
+
+      customTrigger.addEventListener('click', (e) => {
+
+        e.stopPropagation();
+
+        const isOpen = customSelect.classList.toggle('is-open');
+
+        customTrigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+        if (isOpen) {
+
+          const selOpt = customMenu.querySelector('.pkg-custom-select__option.is-selected');
+
+          if (selOpt) {
+
+            customMenu.scrollTop = Math.max(0, selOpt.offsetTop - customMenu.clientHeight / 2 + selOpt.offsetHeight / 2);
+
+          }
+
+        }
+
+      });
+
+      customMenu.querySelectorAll('.pkg-custom-select__option').forEach(opt => {
+
+        opt.addEventListener('click', (e) => {
+
+          e.stopPropagation();
+
+          const val = opt.getAttribute('data-value') || opt.textContent.trim();
+
+          customInput.value = val;
+
+          customLabel.textContent = val;
+
+          customMenu.querySelectorAll('.pkg-custom-select__option').forEach(o => o.classList.remove('is-selected'));
+
+          opt.classList.add('is-selected');
+
+          customSelect.classList.remove('is-open');
+
+          customTrigger.setAttribute('aria-expanded', 'false');
+
+        });
+
+      });
+
+      document.addEventListener('click', (e) => {
+
+        if (!customSelect.contains(e.target)) {
+
+          customSelect.classList.remove('is-open');
+
+          customTrigger.setAttribute('aria-expanded', 'false');
+
+        }
+
+      });
+
+    }
 
     const pkgNextBtn = document.getElementById('pkg-rel-next-btn');
     const pkgPrevBtn = document.getElementById('pkg-rel-prev-btn');

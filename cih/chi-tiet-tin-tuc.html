@@ -1199,11 +1199,23 @@ document.addEventListener('DOMContentLoaded', () => {
                   </span>
                 </button>
                 <ul class="pkg-custom-select__menu" id="pkg-consult-menu" role="listbox">
-                  ${[...(allPkgs || [pkg])]
-                    .sort((a, b) => formatTitleCase(a.title).localeCompare(formatTitleCase(b.title), 'vi', { sensitivity: 'base' }))
-                    .map(p => `
-                      <li class="pkg-custom-select__option ${p.id === pkg.id ? 'is-selected' : ''}" role="option" data-value="${formatTitleCase(p.title)}">${formatTitleCase(p.title)}</li>
-                    `).join('')}
+                  ${(() => {
+                    const seen = new Set();
+                    const currentKey = formatTitleCase(pkg.title).toLowerCase().trim();
+                    return [...(allPkgs || [pkg])]
+                      .filter(p => {
+                        const key = formatTitleCase(p.title).toLowerCase().trim();
+                        if (!key || seen.has(key)) return false;
+                        seen.add(key);
+                        return true;
+                      })
+                      .sort((a, b) => formatTitleCase(a.title).localeCompare(formatTitleCase(b.title), 'vi', { sensitivity: 'base' }))
+                      .map(p => {
+                        const t = formatTitleCase(p.title);
+                        const isSel = t.toLowerCase().trim() === currentKey;
+                        return `<li class="pkg-custom-select__option ${isSel ? 'is-selected' : ''}" role="option" data-value="${t}">${t}</li>`;
+                      }).join('');
+                  })()}
                 </ul>
               </div>
             </div>

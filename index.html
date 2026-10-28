@@ -294,43 +294,29 @@
 
     /* ==========================================================================
        3. FLOATING AMBIENT GRADIENT ANIMATION (BackgroundGradientAnimation)
-       — Matches wppmedia.com multi-orb system with mix-blend-mode + noise
+       — Exact wppmedia.com orb system: 2 orbs, fixed, z-index -11
        ========================================================================== */
     .background-gradient-animation {
       position: fixed;
       inset: 0;
       width: 100%;
-      height: 100vh;
+      height: 80vh;
       pointer-events: none;
-      z-index: -10;
+      z-index: -11;
       overflow: hidden;
     }
 
-    /* Subtle noise texture overlay for depth (wppmedia-style grain) */
-    .background-gradient-animation::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 256px 256px;
-      opacity: 0.6;
-      mix-blend-mode: overlay;
-      z-index: 10;
-    }
-
-    /* First Orb: Large Neon Acid Lime — floats across the full viewport */
+    /* First Orb: Large Neon Acid Lime (wppmedia firstOrb: 44.25rem, blur 2rem) */
     .first-orb {
       position: absolute;
       left: 5%;
-      top: 2vh;
-      width: 52rem;
-      height: 52rem;
+      top: 0vh;
+      width: 44.25rem;
+      height: 44.25rem;
       border-radius: 50%;
-      filter: blur(4.5rem);
+      filter: blur(2rem);
       opacity: var(--opacities-orbBackground);
-      mix-blend-mode: screen;
-      animation: gtFirstOrbDrift 50s ease-in-out infinite;
+      animation: gtFirstOrbDrift 45s linear infinite;
       will-change: transform;
     }
 
@@ -340,28 +326,43 @@
       border-radius: 50%;
       background:
         radial-gradient(circle at 0% 20%, var(--colors-brand-accent) 35%, var(--colors-system-orbBackground) 0%),
+        radial-gradient(circle at 10% 60%, var(--colors-brand-accent) 10%, var(--colors-system-orbBackground) 0%),
+        radial-gradient(circle at 50% 0%, var(--colors-brand-accent) 10%, var(--colors-system-orbBackground) 0%),
         radial-gradient(circle at 60% 10%, var(--colorSystemWhite) 30%, var(--colors-system-orbBackground) 35%),
+        radial-gradient(circle at 100% 30%, var(--colorSystemWhite) 10%, var(--colors-system-orbBackground) 35%),
         radial-gradient(circle at 50% 20%, var(--colors-brand-accent) 50%, var(--colors-system-orbBackground) 50%),
         radial-gradient(circle at 100% 70%, var(--colors-brand-accent) 60%, var(--colors-system-orbBackground) 30%);
-      filter: blur(3rem);
-      opacity: 0.78;
-      animation: gtOrbRotate 24s linear infinite;
+      filter: blur(2rem);
+      opacity: 0.85;
+      animation: gtOrbRotate 20s linear infinite;
     }
 
-    /* Second Orb: Cobalt Blue + Periwinkle + Cyan Multi-Ellipse */
+    /* First Orb Lighting Overlay (bottom-left quadrant glow) */
+    .first-orb-light {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 50% 50%, var(--colors-brand-accent) 30%, transparent 70%);
+      filter: blur(4rem);
+      opacity: 0.6;
+    }
+
+    /* Second Orb: Cobalt Blue + Periwinkle + Cyan (wppmedia secondOrb: 28.75rem, blur 0.5rem) */
     .second-orb-container {
       position: absolute;
-      left: 68vw;
-      top: 8vh;
-      width: 36rem;
-      height: 36rem;
+      left: 70vw;
+      top: 0vh;
+      width: 28.75rem;
+      height: 28.75rem;
       border-radius: 50%;
       background-color: var(--colors-orb-background);
-      filter: blur(3rem);
-      opacity: 0.68;
+      filter: blur(0.5rem);
+      opacity: 0.75;
       overflow: hidden;
-      mix-blend-mode: screen;
-      animation: gtSecondOrbDrift 60s ease-in-out infinite;
+      animation: gtSecondOrbDrift 56s ease-in-out infinite;
       will-change: transform;
     }
 
@@ -369,13 +370,13 @@
       width: 100%;
       height: 100%;
       position: relative;
-      animation: gtOrbRotate 22s linear infinite;
+      animation: gtOrbRotate 20s linear infinite;
     }
 
     .second-orb .ellipse {
       position: absolute;
       inset: 0;
-      filter: blur(2.6rem);
+      filter: blur(2.8rem);
       transform-origin: 50% 50%;
     }
 
@@ -399,46 +400,22 @@
     }
 
     .second-orb .ellipse-5 {
-      background: radial-gradient(ellipse 25% 60% at 100% 45%, var(--colors-orb-primary) 55%, transparent 50%);
+      background: radial-gradient(ellipse 20% 60% at 100% 45%, var(--colors-orb-primary) 55%, transparent 50%);
       transform: rotate(-30deg);
     }
 
-    /* Third Orb: Warm Accent Glow — drifts bottom-center (wppmedia-style triple orb system) */
-    .third-orb {
+    /* Second Orb Lighting Overlay (elliptical edge blend) */
+    .second-orb-light {
       position: absolute;
-      left: 30vw;
-      bottom: -10vh;
-      width: 34rem;
-      height: 34rem;
+      inset: 0;
+      width: 60%;
+      height: 60%;
+      margin: auto;
       border-radius: 50%;
-      background: radial-gradient(circle at 50% 40%,
-        var(--colors-orb-accent) 0%,
-        var(--colors-orb-secondary) 40%,
-        transparent 70%);
-      filter: blur(5rem);
-      opacity: 0.45;
-      mix-blend-mode: screen;
-      animation: gtThirdOrbDrift 70s ease-in-out infinite;
-      will-change: transform;
-    }
-
-    /* Fourth Orb: Subtle deep-blue pulse at top-center */
-    .fourth-orb {
-      position: absolute;
-      left: 35vw;
-      top: -15vh;
-      width: 28rem;
-      height: 28rem;
-      border-radius: 50%;
-      background: radial-gradient(circle at 50% 50%,
-        var(--colors-brand-secondary) 0%,
-        var(--colors-brand-primary) 50%,
-        transparent 75%);
-      filter: blur(4rem);
-      opacity: 0.35;
-      mix-blend-mode: screen;
-      animation: gtFourthOrbDrift 55s ease-in-out infinite;
-      will-change: transform;
+      background: radial-gradient(ellipse at 50% 50%, var(--colors-orb-secondary) 20%, transparent 70%);
+      filter: blur(2.25rem);
+      transform: rotate(-140deg);
+      opacity: 0.5;
     }
 
     @keyframes gtOrbRotate {
@@ -447,41 +424,22 @@
     }
 
     @keyframes gtFirstOrbDrift {
-      0% { transform: translate(-8vw, 0vh) scale(1); }
-      20% { transform: translate(12vw, 18vh) scale(1.05); }
-      40% { transform: translate(38vw, 35vh) scale(0.95); }
-      60% { transform: translate(48vw, 42vh) scale(1.08); }
-      80% { transform: translate(20vw, 18vh) scale(0.98); }
-      100% { transform: translate(-8vw, 0vh) scale(1); }
+      0% { transform: translate(-8vw, 0vh); }
+      25% { transform: translate(18vw, 16vh); }
+      50% { transform: translate(48vw, 42vh); }
+      75% { transform: translate(20vw, 18vh); }
+      100% { transform: translate(-8vw, 0vh); }
     }
 
     @keyframes gtSecondOrbDrift {
-      0% { transform: translate(0vw, 25vh) scale(1); }
-      30% { transform: translate(-30vw, -5vh) scale(1.1); }
-      50% { transform: translate(-55vw, -18vh) scale(0.92); }
-      70% { transform: translate(-25vw, 10vh) scale(1.05); }
-      100% { transform: translate(0vw, 25vh) scale(1); }
-    }
-
-    @keyframes gtThirdOrbDrift {
-      0% { transform: translate(0vw, 0vh) scale(0.9); }
-      25% { transform: translate(15vw, -25vh) scale(1.1); }
-      50% { transform: translate(-20vw, -40vh) scale(1); }
-      75% { transform: translate(10vw, -15vh) scale(1.15); }
-      100% { transform: translate(0vw, 0vh) scale(0.9); }
-    }
-
-    @keyframes gtFourthOrbDrift {
-      0% { transform: translate(0vw, 0vh) scale(1); }
-      33% { transform: translate(20vw, 30vh) scale(1.12); }
-      66% { transform: translate(-15vw, 20vh) scale(0.88); }
-      100% { transform: translate(0vw, 0vh) scale(1); }
+      0% { transform: translate(0vw, 25vh); }
+      50% { transform: translate(-55vw, -18vh); }
+      100% { transform: translate(0vw, 25vh); }
     }
 
     /* Reduce motion for accessibility */
     @media (prefers-reduced-motion: reduce) {
-      .first-orb, .first-orb-core, .second-orb-container, .second-orb,
-      .third-orb, .fourth-orb {
+      .first-orb, .first-orb-core, .second-orb-container, .second-orb {
         animation: none !important;
       }
     }
@@ -2311,6 +2269,7 @@
   <div class="background-gradient-animation" aria-hidden="true">
     <div class="first-orb">
       <div class="first-orb-core"></div>
+      <div class="first-orb-light"></div>
     </div>
     <div class="second-orb-container">
       <div class="second-orb">
@@ -2320,9 +2279,8 @@
         <div class="ellipse ellipse-4"></div>
         <div class="ellipse ellipse-5"></div>
       </div>
+      <div class="second-orb-light"></div>
     </div>
-    <div class="third-orb"></div>
-    <div class="fourth-orb"></div>
   </div>
 
   <!-- ========================================================================

@@ -958,12 +958,129 @@
       background: #000050;
     }
 
-    .hero-showreel-canvas {
-      position: absolute;
-      inset: 0;
+    /* ═══ HERO MASONRY COLLAGE (WPP-style image grid) ═══ */
+    .hero-masonry {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 10px;
       width: 100%;
       height: 100%;
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-masonry-tile {
+      border-radius: var(--radiusLarge);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-masonry-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-masonry-tile:hover {
+      z-index: 5;
+    }
+
+    .hero-masonry-tile:hover img {
+      transform: scale(1.06);
+    }
+
+    /* Bounce animation on hover — matches WPP hero masonry */
+    @keyframes heroTileBounceIn {
+      0% { transform: rotate(0deg); }
+      40% { transform: rotate(1.8deg) scale(1.02); }
+      70% { transform: rotate(-0.6deg) scale(1.01); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+    @keyframes heroTileBounceOut {
+      0% { transform: rotate(0deg) scale(1); }
+      40% { transform: rotate(-1.2deg) scale(0.99); }
+      100% { transform: rotate(0deg) scale(1); }
+    }
+
+    .hero-masonry-tile:hover {
+      animation: heroTileBounceIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    /* Tile positions in the 12-col × 6-row grid */
+    .hm-tile-1 { grid-column: 1 / 5; grid-row: 1 / 4; }     /* abstract-data: top-left tall */
+    .hm-tile-2 { grid-column: 5 / 9; grid-row: 1 / 3; }     /* pixel-blocks: top-center */
+    .hm-tile-3 { grid-column: 9 / 13; grid-row: 1 / 4; }    /* gradient-orb: top-right tall */
+    .hm-tile-4 { grid-column: 1 / 5; grid-row: 4 / 7; }     /* globe-network: bottom-left */
+    .hm-tile-5 { grid-column: 5 / 9; grid-row: 3 / 7; }     /* digital-mind: center-bottom wide */
+    .hm-tile-6 { grid-column: 9 / 13; grid-row: 4 / 7; }    /* creative-burst: bottom-right */
+
+    /* Decorative floating elements over masonry */
+    .hero-masonry-decor {
+      position: absolute;
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    .hm-decor-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--colors-brand-accent);
+      box-shadow: 0 0 16px rgba(177, 253, 67, 0.5);
+    }
+
+    .hm-decor-arrow {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--colors-brand-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(177, 253, 67, 0.35);
+    }
+
+    .hm-decor-arrow svg {
+      width: 16px;
+      height: 16px;
+      color: var(--colors-brand-primary);
+    }
+
+    .hm-decor-pixels {
+      display: grid;
+      grid-template-columns: repeat(4, 8px);
+      gap: 3px;
+    }
+
+    .hm-decor-pixels span {
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      opacity: 0.85;
+    }
+
+    .hm-decor-pixels span:nth-child(even) {
+      opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-masonry {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 6px;
+      }
+      .hm-tile-1 { grid-column: 1 / 2; grid-row: 1 / 2; }
+      .hm-tile-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+      .hm-tile-3 { grid-column: 1 / 2; grid-row: 2 / 3; }
+      .hm-tile-4 { grid-column: 2 / 3; grid-row: 2 / 3; }
+      .hm-tile-5 { grid-column: 1 / 3; grid-row: 3 / 4; }
+      .hm-tile-6 { display: none; }
+      .hero-masonry-decor { display: none; }
     }
 
     .hero-video-overlay-ui {
@@ -1012,30 +1129,6 @@
     }
 
     .play-showreel-btn:hover span.pill {
-      background-color: var(--colors-surfaces-accent-background);
-      color: var(--colors-surfaces-accent-foreground);
-    }
-
-    /* Bottom-right Play/Pause Toggle */
-    .play-pause-corner-btn {
-      position: absolute;
-      right: 1.25rem;
-      bottom: 1.25rem;
-      z-index: 3;
-      width: 2.6rem;
-      height: 2.6rem;
-      border-radius: 50%;
-      background-color: var(--colorSystemWhite);
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      color: var(--colors-brand-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background-color 0.25s ease, color 0.25s ease;
-    }
-
-    .play-pause-corner-btn:hover {
       background-color: var(--colors-surfaces-accent-background);
       color: var(--colors-surfaces-accent-foreground);
     }
@@ -2473,10 +2566,50 @@
           </a>
         </div>
 
-        <!-- Showreel Video Block with Scroll-Driven Circular Mask Expansion -->
+        <!-- Hero Masonry Collage (WPP-style artwork grid) -->
         <div class="hero-video-block">
           <div class="hero-video-mask" id="heroVideoMask">
-            <canvas class="hero-showreel-canvas" id="heroShowreelCanvas"></canvas>
+            <!-- Masonry Image Grid -->
+            <div class="hero-masonry">
+              <div class="hero-masonry-tile hm-tile-1">
+                <img src="/demo/images/hero/hero-abstract-data.jpg" alt="AI Data Streams & Network Visualization" />
+              </div>
+              <div class="hero-masonry-tile hm-tile-2">
+                <img src="/demo/images/hero/hero-pixel-blocks.jpg" alt="Digital Pixel Blocks & Mosaic Patterns" />
+              </div>
+              <div class="hero-masonry-tile hm-tile-3">
+                <img src="/demo/images/hero/hero-gradient-orb.jpg" alt="Iridescent Gradient Sphere" />
+              </div>
+              <div class="hero-masonry-tile hm-tile-4">
+                <img src="/demo/images/hero/hero-globe-network.jpg" alt="Global Digital Network" />
+              </div>
+              <div class="hero-masonry-tile hm-tile-5">
+                <img src="/demo/images/hero/hero-digital-mind.jpg" alt="Digital Intelligence & Neural Networks" />
+              </div>
+              <div class="hero-masonry-tile hm-tile-6">
+                <img src="/demo/images/hero/hero-creative-burst.jpg" alt="Creative Technology Burst" />
+              </div>
+
+              <!-- Decorative floating elements -->
+              <div class="hero-masonry-decor hm-decor-dot" style="top: 18%; left: 34%; animation: gtOrbRotate 8s linear infinite;"></div>
+              <div class="hero-masonry-decor hm-decor-arrow" style="bottom: 12%; right: 8%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="hero-masonry-decor hm-decor-arrow" style="bottom: 18%; right: 14%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="hero-masonry-decor hm-decor-pixels" style="top: 6%; right: 4%;">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="hero-masonry-decor hm-decor-pixels" style="bottom: 28%; left: 36%;">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <!-- Central Play Button Overlay -->
             <div class="hero-video-overlay-ui">
               <button type="button" class="play-showreel-btn" onclick="openShowreelModal()" aria-label="Play the video">
                 <svg viewBox="0 0 154 154" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2499,12 +2632,6 @@
                 <span class="pill" data-i18n="play_video">Play the video</span>
               </button>
             </div>
-
-            <button type="button" class="play-pause-corner-btn" id="showreelToggleBtn" onclick="toggleShowreelCanvas()" aria-label="Pause animation">
-              <svg id="showreelPauseIcon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20.25 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3.375a1.5 1.5 0 0 1-1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h3.375a1.5 1.5 0 0 1 1.5 1.5ZM8.625 3H5.25a1.5 1.5 0 0 0-1.5 1.5v15a1.5 1.5 0 0 0 1.5 1.5h3.375a1.5 1.5 0 0 0 1.5-1.5v-15a1.5 1.5 0 0 0-1.5-1.5Z"/>
-              </svg>
-            </button>
           </div>
         </div>
       </section>
@@ -3355,109 +3482,6 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
     })();
-
-    /* 2. Interactive Showreel Canvas (AI Data Streams + Media Nodes) */
-    let showreelRunning = true;
-    (function() {
-      const canvas = document.getElementById('heroShowreelCanvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      let w = 0, h = 0, t = 0;
-
-      const bgImg = new Image();
-      bgImg.src = '/demo/images/tng-office.jpg';
-
-      const nodes = Array.from({ length: 46 }, (_, i) => ({
-        x: Math.random(),
-        y: Math.random(),
-        vx: (Math.random() - 0.5) * 0.0012,
-        vy: (Math.random() - 0.5) * 0.0012,
-        r: 2.5 + (i % 4) * 1.4,
-        accent: i % 5 === 0
-      }));
-
-      function resize() {
-        const rect = canvas.parentElement.getBoundingClientRect();
-        w = canvas.width = rect.width || 1200;
-        h = canvas.height = rect.height || 675;
-      }
-      resize();
-      window.addEventListener('resize', resize);
-
-      function render() {
-        if (showreelRunning) {
-          t += 0.012;
-          ctx.fillStyle = '#000050';
-          ctx.fillRect(0, 0, w, h);
-
-          if (bgImg.complete && bgImg.naturalWidth > 0) {
-            ctx.save();
-            ctx.globalAlpha = 0.42;
-            const scale = 1.04 + Math.sin(t * 0.5) * 0.03;
-            const dw = w * scale, dh = h * scale;
-            ctx.drawImage(bgImg, (w - dw) / 2, (h - dh) / 2, dw, dh);
-            ctx.restore();
-          }
-
-          const g1 = ctx.createRadialGradient(
-            w * (0.3 + Math.sin(t) * 0.15), h * (0.4 + Math.cos(t * 0.8) * 0.15), 10,
-            w * 0.35, h * 0.45, w * 0.45
-          );
-          g1.addColorStop(0, 'rgba(84, 101, 255, 0.55)');
-          g1.addColorStop(1, 'rgba(0, 0, 80, 0)');
-          ctx.fillStyle = g1;
-          ctx.fillRect(0, 0, w, h);
-
-          const g2 = ctx.createRadialGradient(
-            w * (0.72 + Math.cos(t * 1.1) * 0.14), h * (0.58 + Math.sin(t * 0.9) * 0.14), 10,
-            w * 0.7, h * 0.55, w * 0.35
-          );
-          g2.addColorStop(0, 'rgba(177, 253, 67, 0.35)');
-          g2.addColorStop(1, 'rgba(0, 0, 80, 0)');
-          ctx.fillStyle = g2;
-          ctx.fillRect(0, 0, w, h);
-
-          for (let i = 0; i < nodes.length; i++) {
-            const a = nodes[i];
-            a.x += a.vx; a.y += a.vy;
-            if (a.x < 0.05 || a.x > 0.95) a.vx *= -1;
-            if (a.y < 0.08 || a.y > 0.92) a.vy *= -1;
-
-            for (let j = i + 1; j < nodes.length; j++) {
-              const b = nodes[j];
-              const dx = (a.x - b.x) * w;
-              const dy = (a.y - b.y) * h;
-              const dist = Math.hypot(dx, dy);
-              if (dist < 150) {
-                ctx.strokeStyle = `rgba(148, 235, 242, ${(1 - dist / 150) * 0.28})`;
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(a.x * w, a.y * h);
-                ctx.lineTo(b.x * w, b.y * h);
-                ctx.stroke();
-              }
-            }
-
-            ctx.fillStyle = a.accent ? '#B1FD43' : '#FFFFFF';
-            ctx.beginPath();
-            ctx.arc(a.x * w, a.y * h, a.r, 0, Math.PI * 2);
-            ctx.fill();
-          }
-        }
-        requestAnimationFrame(render);
-      }
-      render();
-    })();
-
-    function toggleShowreelCanvas() {
-      showreelRunning = !showreelRunning;
-      const icon = document.getElementById('showreelPauseIcon');
-      if (icon) {
-        icon.innerHTML = showreelRunning
-          ? '<path d="M20.25 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3.375a1.5 1.5 0 0 1-1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h3.375a1.5 1.5 0 0 1 1.5 1.5ZM8.625 3H5.25a1.5 1.5 0 0 0-1.5 1.5v15a1.5 1.5 0 0 0 1.5 1.5h3.375a1.5 1.5 0 0 0 1.5-1.5v-15a1.5 1.5 0 0 0-1.5-1.5Z"/>'
-          : '<path d="m21.778 10.716-13.5-8.24a1.453 1.453 0 0 0-1.51-.028A1.481 1.481 0 0 0 6 3.75v16.5a1.481 1.481 0 0 0 .769 1.303 1.453 1.453 0 0 0 1.51-.028l13.5-8.24a1.5 1.5 0 0 0 0-2.57Z"/>';
-      }
-    }
 
     /* 3. Generate Dot-Matrix Globe in Growth Intelligence Section */
     (function() {

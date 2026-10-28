@@ -134,15 +134,15 @@
     #pkg-related-grid .related-news-card__date,
     #pkg-related-grid .related-news-card__date span {
       margin-bottom: 0.65rem !important;
-      font-weight: 400 !important;
-      color: #000000 !important;
+      font-weight: 700 !important;
+      color: #007DA5 !important;
     }
     #pkg-related-grid .related-news-card__date span {
       margin-bottom: 0 !important;
     }
     #pkg-related-grid .related-news-card__date svg {
-      color: #000000 !important;
-      stroke: #000000 !important;
+      color: #007DA5 !important;
+      stroke: #007DA5 !important;
     }
     .related-news-card:hover .related-news-card__more,
     .related-news-card__more:hover {
@@ -1327,8 +1327,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <h4 class="related-news-card__title" style="margin: 0 0 0.35rem 0 !important; min-height: 0 !important;">
               <a href="chi-tiet-tin-tuc?id=${rel.id}">${formatPkgRelatedTitle(rel.title)}</a>
             </h4>
-            <div class="related-news-card__date" style="color: #000000; font-weight: 400; font-size: 0.92rem; margin-bottom: 0.65rem !important;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+            <div class="related-news-card__date" style="color: #007DA5; font-weight: 700; font-size: 0.94rem; margin-bottom: 0.65rem !important;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#007DA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
               <span>${rel.price || 'Liên hệ'}</span>
             </div>
             <a href="chi-tiet-tin-tuc?id=${rel.id}" class="news-card__more related-news-card__more" style="align-self: flex-end !important; margin-left: auto !important;">Xem thêm <span class="arrow">→</span></a>

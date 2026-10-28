@@ -993,79 +993,79 @@
   (function() {
 
     const statEls = document.querySelectorAll('#stats-card .cih-stat-num[data-target]');
+    const statsCard = document.getElementById('stats-card');
+    if (!statEls.length || !statsCard) return;
 
-    if (!statEls.length) return;
-
-
-
-    function runCounter(el) {
-
-      const target = parseInt(el.getAttribute('data-target'), 10) || 0;
-
-      const suffix = el.getAttribute('data-suffix') || '';
-
-      const duration = 1800;
-
-      const startTime = performance.now();
-
-
-
-      function step(now) {
-
-        const progress = Math.min((now - startTime) / duration, 1);
-
-        const eased = 1 - Math.pow(1 - progress, 3); // cubic ease-out
-
-        const current = Math.floor(eased * target);
-
-        el.textContent = current + suffix;
-
-        if (progress < 1) {
-
-          requestAnimationFrame(step);
-
-        } else {
-
-          el.textContent = target + suffix;
-
+    function resetCounters() {
+      statEls.forEach(el => {
+        if (el._rafId) {
+          cancelAnimationFrame(el._rafId);
+          el._rafId = null;
         }
-
-      }
-
-      requestAnimationFrame(step);
-
+        const suffix = el.getAttribute('data-suffix') || '';
+        el.textContent = '0' + suffix;
+      });
     }
 
+    function runCounter(el) {
+      const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1800;
+      if (el._rafId) cancelAnimationFrame(el._rafId);
+      const startTime = performance.now();
 
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // cubic ease-out
+        const current = Math.floor(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          el._rafId = requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+          el._rafId = null;
+        }
+      }
 
-    const statsCard = document.getElementById('stats-card');
+      el._rafId = requestAnimationFrame(step);
+    }
 
-    if ('IntersectionObserver' in window && statsCard) {
+    function runAllCounters() {
+      resetCounters();
+      statEls.forEach(runCounter);
+    }
 
+    let hasAnimatedOnScroll = false;
+
+    if ('IntersectionObserver' in window) {
       const obs = new IntersectionObserver((entries) => {
-
         entries.forEach(entry => {
-
           if (entry.isIntersecting) {
-
-            statEls.forEach(runCounter);
-
-            obs.unobserve(entry.target);
-
+            if (window.scrollY > 15) {
+              hasAnimatedOnScroll = true;
+            }
+            runAllCounters();
+          } else {
+            resetCounters();
           }
-
         });
-
-      }, { threshold: 0.25 });
+      }, { threshold: 0.35, rootMargin: '0px 0px -10% 0px' });
 
       obs.observe(statsCard);
 
+      window.addEventListener('scroll', function onFirstScroll() {
+        if (window.scrollY > 20 && !hasAnimatedOnScroll) {
+          const rect = statsCard.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
+            hasAnimatedOnScroll = true;
+            runAllCounters();
+            window.removeEventListener('scroll', onFirstScroll);
+          }
+        }
+      }, { passive: true });
     } else {
-
-      statEls.forEach(runCounter);
-
+      runAllCounters();
     }
-
   })();
 
 </script>

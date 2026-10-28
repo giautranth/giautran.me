@@ -316,7 +316,6 @@
       border-radius: 50%;
       filter: blur(2rem);
       opacity: var(--opacities-orbBackground);
-      animation: gtFirstOrbDrift 45s linear infinite;
       will-change: transform;
     }
 
@@ -362,7 +361,6 @@
       filter: blur(0.5rem);
       opacity: 0.75;
       overflow: hidden;
-      animation: gtSecondOrbDrift 56s ease-in-out infinite;
       will-change: transform;
     }
 
@@ -421,20 +419,6 @@
     @keyframes gtOrbRotate {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
-    }
-
-    @keyframes gtFirstOrbDrift {
-      0% { transform: translate(-8vw, 0vh); }
-      25% { transform: translate(18vw, 16vh); }
-      50% { transform: translate(48vw, 42vh); }
-      75% { transform: translate(20vw, 18vh); }
-      100% { transform: translate(-8vw, 0vh); }
-    }
-
-    @keyframes gtSecondOrbDrift {
-      0% { transform: translate(0vw, 25vh); }
-      50% { transform: translate(-55vw, -18vh); }
-      100% { transform: translate(0vw, 25vh); }
     }
 
     /* Reduce motion for accessibility */

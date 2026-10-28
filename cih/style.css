@@ -3600,7 +3600,19 @@ section#doi-tac-bao-hiem.section.insurance-section {
     position: static !important;
   }
 
-  .nav__link {
+  .nav__link,
+  .nav__link.active,
+  .nav__item.active > .nav__link,
+  .nav__item--dropdown > .nav__link,
+  .nav__item--dropdown:hover > .nav__link,
+  .nav__item--dropdown:focus-within > .nav__link,
+  .nav__item--dropdown.mob-open > .nav__link,
+  .nav__link:not(.nav__link--search):hover,
+  .nav__link:not(.nav__link--search):focus,
+  .nav__link:not(.nav__link--search):active,
+  .nav__link--search,
+  .nav__link--search:hover,
+  .header-search-btn:hover {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
@@ -3611,11 +3623,23 @@ section#doi-tac-bao-hiem.section.insurance-section {
     color: #ffffff !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important;
     box-sizing: border-box !important;
+    transform: none !important;
   }
 
-  .nav__link:hover {
+  .nav__link:hover,
+  .nav__link:not(.nav__link--search):hover,
+  .nav__item--dropdown:hover > .nav__link,
+  .nav__item--dropdown.mob-open > .nav__link,
+  .nav__link.active,
+  .nav__item.active > .nav__link {
     color: #ffffff !important;
-    background: rgba(255, 255, 255, 0.08) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .nav__link .dropdown-arrow,
+  .nav__item--dropdown:hover .dropdown-arrow,
+  .nav__item--dropdown.mob-open .dropdown-arrow {
+    color: #ffffff !important;
   }
 
   /* Reset floating dropdown into inline full-width accordion */

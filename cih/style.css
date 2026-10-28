@@ -3582,7 +3582,7 @@ section#doi-tac-bao-hiem.section.insurance-section {
     left: 0 !important;
     right: auto !important;
     padding: 0 !important;
-    border-right: 2px solid #005f80 !important;
+    border: none !important;
     box-shadow: 0 14px 34px rgba(15, 23, 42, 0.22) !important;
     z-index: 999 !important;
   }

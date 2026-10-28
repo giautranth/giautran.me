@@ -23,19 +23,50 @@ document.addEventListener('DOMContentLoaded', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
 
-  /* ── HAMBURGER ── */
+  /* ── HAMBURGER & MOBILE INLINE ACCORDION SUBMENU ── */
   const hamburger = document.getElementById('hamburger-btn');
   const nav = document.querySelector('.nav');
   if (hamburger && nav) {
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
       const open = nav.style.display === 'block';
       nav.style.display = open ? '' : 'block';
-      if (!open) {
-        Object.assign(nav.style, {
-          position: 'absolute', top: '64px', left: '0', right: '0',
-          background: '#fff', padding: '1rem', boxShadow: '0 8px 32px rgba(0,0,0,.12)',
-          zIndex: '500'
-        });
+      if (open) {
+        nav.querySelectorAll('.nav__item--dropdown.mob-open').forEach(item => item.classList.remove('mob-open'));
+      }
+    });
+
+    // Inline accordion toggle for dropdown items on mobile/tablet (<= 1250px)
+    nav.querySelectorAll('.nav__item--dropdown > .nav__link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1250) {
+          e.preventDefault();
+          e.stopPropagation();
+          const parentItem = link.closest('.nav__item--dropdown');
+          if (!parentItem) return;
+          const willOpen = !parentItem.classList.contains('mob-open');
+          nav.querySelectorAll('.nav__item--dropdown.mob-open').forEach(item => {
+            if (item !== parentItem) item.classList.remove('mob-open');
+          });
+          parentItem.classList.toggle('mob-open', willOpen);
+        }
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1250 && nav.style.display === 'block') {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+          nav.style.display = '';
+          nav.querySelectorAll('.nav__item--dropdown.mob-open').forEach(item => item.classList.remove('mob-open'));
+        }
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1250) {
+        nav.style.display = '';
+        nav.querySelectorAll('.nav__item--dropdown.mob-open').forEach(item => item.classList.remove('mob-open'));
       }
     });
   }

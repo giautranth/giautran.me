@@ -192,6 +192,8 @@
     html {
       scroll-behavior: smooth;
       background-color: var(--colors-system-background);
+      overflow-x: clip;
+      max-width: 100%;
     }
 
     body {
@@ -202,7 +204,8 @@
       letter-spacing: var(--letterSpacingBase);
       line-height: var(--lineHeightLarge);
       min-height: 100vh;
-      overflow-x: hidden;
+      overflow-x: clip;
+      max-width: 100%;
       position: relative;
       transition: background-color 0.35s ease;
     }
@@ -2268,6 +2271,7 @@
         border-radius: var(--radiusLarge);
         padding: 1.25rem;
         box-shadow: var(--shadowLarge);
+        z-index: 200;
       }
       .gt-nav-list {
         flex-direction: column;
@@ -2297,10 +2301,17 @@
       }
       .open-intelligence-section {
         flex-direction: column;
+        min-height: auto;
+      }
+      .open-intelligence-left {
+        flex: none;
+        width: 100%;
       }
       .open-intelligence-right {
+        flex: none;
+        width: 100%;
         position: relative;
-        height: 440px;
+        height: 420px;
         order: -1;
       }
       .carousel-card-article {
@@ -2337,6 +2348,336 @@
       }
       .gt-footer-tagline {
         padding-right: 0;
+      }
+    }
+
+    /* Mobile Viewport Optimization (<= 768px) */
+    @media (max-width: 768px) {
+      /* 1. Compact Header & Navigation */
+      .gt-header {
+        padding: 0.75rem 0;
+      }
+      .gt-logo-svg {
+        height: 1.7rem;
+      }
+      .gt-header-actions {
+        gap: 0.45rem;
+      }
+      .gt-btn--compact .gt-btn-label {
+        padding: 0.48rem 0.9rem;
+        font-size: 0.8125rem;
+      }
+      .gt-mobile-toggle {
+        width: 2.35rem;
+        height: 2.35rem;
+      }
+      main#main-content {
+        padding-top: 72px;
+      }
+
+      /* 2. Hero & Showreel Video */
+      .hero-text-block {
+        padding: 1.75rem 0.5rem 1rem;
+        gap: 1.25rem;
+      }
+      .hero-heading {
+        font-size: clamp(1.9rem, 7.5vw, 2.5rem);
+        line-height: 1.16;
+      }
+      .hero-video-block {
+        margin: 0.25rem auto 0;
+        padding: 0 1rem;
+      }
+      .hero-video-mask {
+        border-radius: 1.25rem;
+      }
+      .play-showreel-btn svg {
+        width: 68px;
+        height: 68px;
+      }
+      .play-showreel-btn span.pill {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.95rem;
+      }
+
+      /* 3. We Believe Section */
+      .title-text-section {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        gap: 1.25rem;
+      }
+      .title-text-heading {
+        font-size: clamp(1.65rem, 6.2vw, 2.25rem);
+        line-height: 1.22;
+      }
+      .title-text-body {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      /* 4. Capabilities Stacking Cards */
+      .stacking-cards-section {
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+      }
+      .stacking-card-body {
+        padding: 1.5rem 1.25rem;
+        min-height: auto;
+      }
+      .stacking-card-content {
+        gap: 1rem;
+      }
+      .stacking-card-content h3 {
+        font-size: 1.45rem;
+        line-height: 1.22;
+        margin-bottom: 0;
+      }
+      .stacking-card-content p {
+        font-size: 0.9375rem;
+        line-height: 1.55;
+      }
+      .stacking-card-image {
+        width: 13.5rem;
+        height: 13.5rem;
+      }
+
+      /* 5. Open Intelligence Globe & Feature Blocks */
+      .open-intelligence-section {
+        margin: 2rem 0;
+        min-height: auto;
+      }
+      .open-intelligence-right {
+        flex: none;
+        width: 100%;
+        height: 330px;
+      }
+      .oi-dots-globe {
+        width: 280px;
+        height: 280px;
+      }
+      .oi-orb-node {
+        width: 76px;
+        height: 76px;
+        font-size: 9px;
+        gap: 2px;
+      }
+      .oi-orb-node svg {
+        width: 20px;
+        height: 20px;
+      }
+      .oi-orb-speed { left: 6%; top: 12%; }
+      .oi-orb-scale { right: 6%; top: 12%; }
+      .oi-orb-precision { left: 6%; bottom: 12%; }
+      .oi-orb-signals { right: 6%; bottom: 12%; }
+      .oi-center-logo {
+        padding: 0.75rem 1.15rem;
+      }
+      .oi-center-logo img {
+        height: 22px !important;
+      }
+      .open-intelligence-left {
+        padding: 2rem 1.25rem 3rem;
+        gap: 1.25rem;
+      }
+      .oi-feature-block {
+        padding: 1.25rem;
+        gap: 0.75rem;
+        max-width: 100%;
+      }
+      .oi-feature-block:hover,
+      .oi-feature-block.active {
+        transform: none;
+      }
+      .oi-title {
+        font-size: 1.25rem;
+      }
+      .oi-text {
+        font-size: 0.92rem;
+      }
+
+      /* 6. Our Work Section & 3D Card Carousel */
+      .card-carousel-section {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+      }
+      .card-carousel-header,
+      .section-title-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+      }
+      .card-carousel-title-group {
+        max-width: 100%;
+      }
+      .card-carousel-lead {
+        margin-bottom: 0.5rem;
+      }
+      .card-carousel-title-group h2,
+      .section-title-bar h2 {
+        font-size: clamp(1.8rem, 6.8vw, 2.35rem);
+        line-height: 1.18;
+      }
+      .card-stack-container {
+        height: 465px;
+      }
+      .carousel-card-image {
+        flex: 0 0 195px;
+        height: 195px;
+      }
+      .carousel-card-text {
+        flex: 1 1 auto;
+        padding: 1.15rem 1.25rem 4.25rem;
+        justify-content: flex-start;
+        gap: 0.7rem;
+      }
+      .carousel-card-top {
+        gap: 0.5rem;
+      }
+      .carousel-card-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.75rem;
+      }
+      .carousel-card-icon-wrapper {
+        width: 38px;
+        height: 38px;
+        flex-shrink: 0;
+      }
+      .carousel-card-icon-wrapper svg {
+        width: 18px;
+        height: 18px;
+      }
+      .carousel-card-body-wrap {
+        margin-top: 0;
+        padding-bottom: 0;
+        justify-content: flex-start;
+      }
+      .carousel-card-heading {
+        font-size: 1.25rem;
+        line-height: 1.28;
+        margin-bottom: 0.45rem;
+      }
+      .carousel-card-desc {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .card-carousel-controls {
+        left: 1.25rem;
+        bottom: 0.9rem;
+        padding: 0.35rem 0.65rem;
+      }
+      .card-carousel-btn {
+        width: 2.35rem;
+        height: 2.35rem;
+      }
+
+      /* 7. Partner Logo Marquee */
+      .logo-carousel-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      .logo-slide-tile {
+        width: 148px;
+        height: 74px;
+        margin-right: 0.75rem;
+        padding: 0.65rem 1rem;
+      }
+
+      /* 8. News and Views / Case Studies Grid */
+      .case-studies-section {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+      }
+      .case-studies-staggered-grid {
+        gap: 2rem;
+      }
+      .gt-case-card a {
+        padding: 0;
+      }
+      .gt-case-title {
+        font-size: 1.3rem;
+        line-height: 1.3;
+      }
+      .gt-case-subtitle {
+        font-size: 0.92rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+      .gt-case-media-box {
+        flex-direction: column;
+        min-height: auto;
+      }
+      .gt-case-img-half {
+        flex: none;
+        min-width: 100%;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        height: 205px;
+      }
+      .gt-case-stat-half {
+        flex: none;
+        width: 100%;
+        padding: 1.15rem 1.25rem;
+        justify-content: flex-start;
+      }
+      .gt-case-stat-half h4 {
+        font-size: 2.15rem;
+        margin-bottom: 0.25rem;
+      }
+      .gt-case-stat-half p {
+        font-size: 0.875rem;
+      }
+
+      /* 9. Footer Mobile Layout */
+      .gt-footer {
+        padding: 2.5rem 0 1.75rem;
+      }
+      .gt-footer-grid {
+        gap: 1.5rem;
+        padding-bottom: 1.75rem;
+      }
+      .gt-footer-pills {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+      }
+      .gt-footer-pill {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+      }
+      .gt-footer-pill-value {
+        margin-top: 0;
+        font-size: 0.85rem;
+      }
+      .gt-footer-sphere {
+        width: 4.25rem;
+        height: 4.25rem;
+        right: 0.75rem;
+        bottom: -1rem;
+        opacity: 0.85;
+      }
+      .gt-footer-legal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding-right: 4.5rem;
+      }
+
+      /* 10. Modals on Mobile */
+      .gt-modal-card {
+        padding: 1.35rem;
+        border-radius: 1.25rem;
+      }
+      #gtContactForm {
+        grid-template-columns: 1fr !important;
       }
     }
   </style>
@@ -2378,22 +2719,22 @@
         <ul class="gt-nav-list">
           <!-- About Us -->
           <li class="gt-nav-item">
-            <a href="#we-believe" class="gt-nav-trigger" data-i18n="nav_about">About us</a>
+            <a href="#we-believe" class="gt-nav-trigger" data-i18n="nav_about" onclick="document.getElementById('gtMainNav').classList.remove('mobile-open')">About us</a>
           </li>
 
           <!-- What We Do -->
           <li class="gt-nav-item">
-            <a href="#capabilities" class="gt-nav-trigger" data-i18n="nav_what">What we do</a>
+            <a href="#capabilities" class="gt-nav-trigger" data-i18n="nav_what" onclick="document.getElementById('gtMainNav').classList.remove('mobile-open')">What we do</a>
           </li>
 
           <!-- Client Successes -->
           <li class="gt-nav-item">
-            <a href="#our-work" class="gt-nav-trigger" data-i18n="nav_clients">Client Successes</a>
+            <a href="#our-work" class="gt-nav-trigger" data-i18n="nav_clients" onclick="document.getElementById('gtMainNav').classList.remove('mobile-open')">Client Successes</a>
           </li>
 
           <!-- News -->
           <li class="gt-nav-item">
-            <a href="#news-views" class="gt-nav-trigger" data-i18n="nav_news">News</a>
+            <a href="#news-views" class="gt-nav-trigger" data-i18n="nav_news" onclick="document.getElementById('gtMainNav').classList.remove('mobile-open')">News</a>
           </li>
 
         </ul>
@@ -3022,7 +3363,7 @@
           </a>
           <div style="color: rgba(255,255,255,0.9); font-size: 0.92rem; line-height: 1.85;">
             <div>Email: <a href="mailto:info@giautran.me" class="link-underline-hover-only" style="color: inherit; text-decoration: none;">info@giautran.me</a></div>
-            <div>Phone: <a href="tel:+84949998780" class="link-underline-hover-only" style="color: inherit; text-decoration: none;">+84 949 998 780</a> (VN) &nbsp;|&nbsp; <a href="tel:+4915251550458" class="link-underline-hover-only" style="color: inherit; text-decoration: none;">+49 1525 155 0458</a> (DE)</div>
+            <div>Phone: <span style="white-space: nowrap;"><a href="tel:+84949998780" class="link-underline-hover-only" style="color: inherit; text-decoration: none;">+84 949 998 780</a> (VN)</span> &nbsp;|&nbsp; <span style="white-space: nowrap;"><a href="tel:+4915251550458" class="link-underline-hover-only" style="color: inherit; text-decoration: none;">+49 1525 155 0458</a> (DE)</span></div>
           </div>
         </div>
 

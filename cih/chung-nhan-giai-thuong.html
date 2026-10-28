@@ -340,7 +340,17 @@
       left: 0;
       right: 0;
       height: 3.5px;
-      background: linear-gradient(90deg, #fcd34d 0%, #fde68a 35%, #fef9c3 70%, #fde68a 100%);
+      background: linear-gradient(90deg, #d97706 0%, #f59e0b 35%, #fbbf24 70%, #fef08a 100%);
+      z-index: 5;
+    }
+    .aaci-opt1-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3.5px;
+      background: linear-gradient(270deg, #d97706 0%, #f59e0b 35%, #fbbf24 70%, #fef08a 100%);
       z-index: 5;
     }
     .aaci-opt1-left {
@@ -537,13 +547,7 @@
       50% { transform: scale(1.08); opacity: 1; }
     }
     .aaci-opt1-wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 24px;
-      width: 100%;
-      z-index: 3;
+      display: none !important;
     }
     @media (max-width: 991px) {
       .aaci-opt1-hero {

@@ -27,6 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.getElementById('hamburger-btn');
   const nav = document.querySelector('.nav');
   if (hamburger && nav) {
+    // Ensure mobile nav parent links never turn blue on hover/active
+    nav.querySelectorAll('.nav__link').forEach(link => {
+      if (link.style && link.style.color) {
+        link.style.removeProperty('color');
+      }
+    });
+
     hamburger.addEventListener('click', (e) => {
       e.stopPropagation();
       const open = nav.style.display === 'block';

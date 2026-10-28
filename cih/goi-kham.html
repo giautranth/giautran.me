@@ -212,10 +212,26 @@
       font-weight: 700 !important;
       color: #0f172a !important;
       line-height: 1.4 !important;
-      margin: 0 0 22px 0 !important;
+      margin: 0 0 0.35rem 0 !important;
       text-align: left !important;
       text-align-last: left !important;
       width: 100% !important;
+    }
+
+    #pkg-grid .pkg-home-card .pkg-card__price {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      font-size: 0.94rem !important;
+      font-weight: 700 !important;
+      color: #007DA5 !important;
+      margin: 0 0 0.65rem 0 !important;
+    }
+
+    #pkg-grid .pkg-home-card .pkg-card__price svg {
+      color: #007DA5 !important;
+      stroke: #007DA5 !important;
+      flex-shrink: 0 !important;
     }
 
     #pkg-grid .pkg-home-card .news-card__title a {
@@ -685,6 +701,10 @@
               <div style="width: 100%;">
                 <p class="pkg-card__cat">${parts.cat}</p>
                 <h3 class="news-card__title"><a href="chi-tiet-tin-tuc?id=${pkg.id}">${parts.title}</a></h3>
+                <div class="pkg-card__price">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#007DA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                  <span>${pkg.price || 'Liên hệ'}</span>
+                </div>
               </div>
               <a href="chi-tiet-tin-tuc?id=${pkg.id}" class="news-card__more">Xem thêm <span class="arrow">→</span></a>
             </div>

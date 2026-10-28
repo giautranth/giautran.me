@@ -2572,48 +2572,10 @@
           </a>
         </div>
 
-        <!-- Hero Masonry Collage (WPP-style artwork grid) -->
+        <!-- Hero Showreel Video -->
         <div class="hero-video-block">
           <div class="hero-video-mask" id="heroVideoMask">
-            <!-- Masonry Image Grid -->
-            <div class="hero-masonry">
-              <div class="hero-masonry-tile hm-tile-1">
-                <img src="/demo/images/hero/hero-abstract-data.jpg" alt="AI Data Streams & Network Visualization" />
-              </div>
-              <div class="hero-masonry-tile hm-tile-2">
-                <img src="/demo/images/hero/hero-pixel-blocks.jpg" alt="Digital Pixel Blocks & Mosaic Patterns" />
-              </div>
-              <div class="hero-masonry-tile hm-tile-3">
-                <img src="/demo/images/hero/hero-gradient-orb.jpg" alt="Iridescent Gradient Sphere" />
-              </div>
-              <div class="hero-masonry-tile hm-tile-4">
-                <img src="/demo/images/hero/hero-globe-network.jpg" alt="Global Digital Network" />
-              </div>
-              <div class="hero-masonry-tile hm-tile-5">
-                <img src="/demo/images/hero/hero-digital-mind.jpg" alt="Digital Intelligence & Neural Networks" />
-              </div>
-              <div class="hero-masonry-tile hm-tile-6">
-                <img src="/demo/images/hero/hero-creative-burst.jpg" alt="Creative Technology Burst" />
-              </div>
-
-              <!-- Decorative floating elements -->
-              <div class="hero-masonry-decor hm-decor-dot" style="top: 18%; left: 34%; animation: gtOrbRotate 8s linear infinite;"></div>
-              <div class="hero-masonry-decor hm-decor-arrow" style="bottom: 12%; right: 8%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="hero-masonry-decor hm-decor-arrow" style="bottom: 18%; right: 14%;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="hero-masonry-decor hm-decor-pixels" style="top: 6%; right: 4%;">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-              </div>
-              <div class="hero-masonry-decor hm-decor-pixels" style="bottom: 28%; left: 36%;">
-                <span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span>
-              </div>
-            </div>
+            <video id="heroShowreelVideo" src="/tng/GT%20DIGITAL.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
 
             <!-- Central Play Button Overlay -->
             <div class="hero-video-overlay-ui">
@@ -3382,33 +3344,13 @@
 
   <!-- Showreel Modal -->
   <div class="gt-modal-backdrop" id="showreelModal" onclick="if(event.target.id==='showreelModal') closeShowreelModal()">
-    <div class="gt-modal-card" style="max-width: 60rem; background: #000050; color: #fff;">
+    <div class="gt-modal-card" style="max-width: 64rem; background: #000050; color: #fff;">
       <div class="gt-modal-header" style="border-bottom-color: rgba(255,255,255,0.15);">
-        <h3 style="color: #fff; font-size: 1.25rem;">We are GT Media — Showreel &amp; Case Study Highlights</h3>
+        <h3 style="color: #fff; font-size: 1.25rem;">GT Digital — Official Showreel</h3>
         <button type="button" class="gt-modal-close" onclick="closeShowreelModal()">Close &times;</button>
       </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
-        <a href="#our-work" onclick="closeShowreelModal()" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
-          <img src="/demo/images/project-british-council.jpg" alt="British Council IELTS PPC" style="width:100%; height:150px; object-fit:cover;" />
-          <div style="padding:1rem;">
-            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 01 • PPC</div>
-            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">British Council IELTS SEA ↗</div>
-          </div>
-        </a>
-        <a href="#our-work" onclick="closeShowreelModal()" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
-          <img src="/demo/images/project-desire-online.jpg" alt="Desire Online SEO Audit" style="width:100%; height:150px; object-fit:cover;" />
-          <div style="padding:1rem;">
-            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 02 • Technical SEO</div>
-            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">Desire Online (8,900+ URLs) ↗</div>
-          </div>
-        </a>
-        <a href="/vegangarden/" style="text-decoration:none; color:#fff; background:rgba(255,255,255,0.08); border-radius:16px; overflow:hidden; border:1px solid rgba(177,253,67,0.3);">
-          <img src="/demo/images/project-vegan-garden.jpg" alt="Vegan Garden Berlin" style="width:100%; height:150px; object-fit:cover;" />
-          <div style="padding:1rem;">
-            <div style="color:#B1FD43; font-size:0.75rem; font-weight:700; text-transform:uppercase;">Case Study 03 • Germany</div>
-            <div style="font-size:1.05rem; font-weight:600; margin-top:0.25rem;">Vegan Garden Berlin (DE) ↗</div>
-          </div>
-        </a>
+      <div>
+        <video id="showreelModalVideo" src="/tng/GT%20DIGITAL.mp4" controls playsinline style="width: 100%; max-height: 75vh; border-radius: 16px; background: #000; display: block;"></video>
       </div>
     </div>
   </div>
@@ -3597,9 +3539,16 @@
     }
     function openShowreelModal() {
       document.getElementById('showreelModal').classList.add('active');
+      const v = document.getElementById('showreelModalVideo');
+      if (v) {
+        v.currentTime = 0;
+        v.play().catch(() => {});
+      }
     }
     function closeShowreelModal() {
       document.getElementById('showreelModal').classList.remove('active');
+      const v = document.getElementById('showreelModalVideo');
+      if (v) v.pause();
     }
 
     function submitGtContact(e) {

@@ -1177,7 +1177,7 @@
 <!-- ═══════════════════════════════════════════════
      DÃY THỐNG KÊ HÀNG NGANG DƯỚI BANNER
 ═══════════════════════════════════════════════ -->
-<section class="about-stat-strip">
+<section class="about-stat-strip" id="about-stat-strip">
   <div class="container">
     <div class="about-stat-strip__grid">
 
@@ -1190,7 +1190,7 @@
           </svg>
         </div>
         <div>
-          <div class="about-stat-strip__num">16</div>
+          <div class="about-stat-strip__num" data-target="16" data-suffix="" style="font-variant-numeric: tabular-nums;">0</div>
           <div class="about-stat-strip__label">Chuyên khoa</div>
         </div>
       </div>
@@ -1205,7 +1205,7 @@
           </svg>
         </div>
         <div>
-          <div class="about-stat-strip__num">320</div>
+          <div class="about-stat-strip__num" data-target="320" data-suffix="" style="font-variant-numeric: tabular-nums;">0</div>
           <div class="about-stat-strip__label">Giường</div>
         </div>
       </div>
@@ -1220,7 +1220,7 @@
           </svg>
         </div>
         <div>
-          <div class="about-stat-strip__num">550+</div>
+          <div class="about-stat-strip__num" data-target="550" data-suffix="+" style="font-variant-numeric: tabular-nums;">0+</div>
           <div class="about-stat-strip__label">Nhân sự y tế</div>
         </div>
       </div>
@@ -1239,7 +1239,7 @@
           </svg>
         </div>
         <div>
-          <div class="about-stat-strip__num">27.000+ m<sup>2</sup></div>
+          <div class="about-stat-strip__num" data-target="27000" data-format="dots" data-suffix="+ m<sup>2</sup>" style="font-variant-numeric: tabular-nums;">0+ m<sup>2</sup></div>
           <div class="about-stat-strip__label">Diện tích</div>
         </div>
       </div>
@@ -1247,6 +1247,75 @@
     </div>
   </div>
 </section>
+<script>
+  (function() {
+    const strip = document.getElementById('about-stat-strip');
+    const statEls = document.querySelectorAll('#about-stat-strip .about-stat-strip__num[data-target]');
+    if (!strip || !statEls.length) return;
+
+    function formatVal(val, fmt) {
+      if (fmt === 'dots') {
+        return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      }
+      return String(val);
+    }
+
+    function resetCounters() {
+      statEls.forEach(el => {
+        if (el._rafId) {
+          cancelAnimationFrame(el._rafId);
+          el._rafId = null;
+        }
+        const suffix = el.getAttribute('data-suffix') || '';
+        el.innerHTML = '0' + suffix;
+      });
+    }
+
+    function runCounter(el) {
+      const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const fmt = el.getAttribute('data-format') || '';
+      const duration = 1800;
+      if (el._rafId) cancelAnimationFrame(el._rafId);
+      const startTime = performance.now();
+
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(eased * target);
+        el.innerHTML = formatVal(current, fmt) + suffix;
+        if (progress < 1) {
+          el._rafId = requestAnimationFrame(step);
+        } else {
+          el.innerHTML = formatVal(target, fmt) + suffix;
+          el._rafId = null;
+        }
+      }
+
+      el._rafId = requestAnimationFrame(step);
+    }
+
+    function runAllCounters() {
+      resetCounters();
+      statEls.forEach(runCounter);
+    }
+
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            runAllCounters();
+          } else {
+            resetCounters();
+          }
+        });
+      }, { threshold: 0.25 });
+      obs.observe(strip);
+    } else {
+      runAllCounters();
+    }
+  })();
+</script>
 
 <!-- MAIN ABOUT SECTION (Hoa Lâm Corporate Style) -->
 <main class="about-group" id="tong-quan">

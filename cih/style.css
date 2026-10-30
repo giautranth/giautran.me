@@ -1041,7 +1041,7 @@ html.translated-ltr .header__cta .btn {
   .stat-item:nth-child(2)::after{display:block}
   .stat-item:nth-child(4)::after{display:none}
   .footer__grid{grid-template-columns:1fr}
-  .footer__contact li.footer__contact-address{font-size:.78rem;gap:.4rem}
+  .footer__contact li, .footer__contact li.footer__contact-address{font-size:.85rem;gap:.6rem}
   .footer__bottom-inner{flex-direction:column;gap:.75rem;text-align:center}
   .mid-banner__countdown{flex-wrap:wrap;gap:.75rem}
   .promo-banner__inner{gap:.5rem}
@@ -1108,7 +1108,7 @@ html.translated-ltr .nav__link:not(.nav__link--search)::after { left: 0.35rem; r
 .playlist-card__body h5 { font-size: 0.925rem; font-weight: 700; color: var(--c-text); margin-bottom: 0.25rem; line-height: 1.3; }
 .playlist-card__body p { font-size: 0.8rem; color: var(--c-text3); line-height: 1.4; margin-bottom: 0.25rem; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
 .playlist-card__duration { font-size: 0.725rem; color: var(--c-primary); font-weight: 600; }
-.footer__contact-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 20px; height: 20px; margin-top: 1px; color: #fff !important; }
+.footer__contact-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 20px; height: 20px; margin-top: 0 !important; color: #fff !important; }
 .footer__contact-icon svg { width: 14px; height: 14px; color: #fff !important; }
 
 /* ═══════════════════════════════════════════════

@@ -70,6 +70,13 @@
       margin: 0 0 0.4rem 0;
       line-height: 1.3;
     }
+    .pn-doc-hero__prefix {
+      display: inline;
+      margin-right: 0.35em;
+    }
+    .pn-doc-hero__fullname {
+      display: inline;
+    }
     .pn-doc-hero__position {
       font-size: 1rem;
       font-weight: 400;
@@ -462,6 +469,24 @@
       }
       .pn-doc-hero__info {
         text-align: center;
+      }
+      .pn-doc-hero__name {
+        line-height: 1.25;
+      }
+      .pn-doc-hero__prefix {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.18rem;
+        font-size: 0.92em;
+        letter-spacing: 0.3px;
+      }
+      .pn-doc-hero__fullname {
+        display: block;
+        text-wrap: balance;
+      }
+      .pn-doc-hero__position.pos-align-left,
+      .pn-doc-hero__position.pos-align-left * {
+        text-align: left !important;
       }
       .pn-doc-hero__actions {
         justify-content: center;
@@ -1194,11 +1219,43 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
+    function formatDoctorHeroName(name) {
+      if (!name) return '';
+      const trimmed = name.trim();
+      const prefixRegex = /^((?:(?:PGS|GS|TS|ThS|BS|CKII|CKI|CK1|CK2|Thạc sĩ|Bác sĩ|Tiến sĩ|Giáo sư)\.?\s*)+)(.*)$/i;
+      const match = trimmed.match(prefixRegex);
+      if (match && match[1] && match[2].trim()) {
+        let prefix = match[1].trim();
+        prefix = prefix.replace(/\.([A-ZĐa-zÀ-ỹ])/g, '. $1').replace(/\s+/g, ' ').trim();
+        const fullName = match[2].trim();
+        return `<span class="pn-doc-hero__prefix">${prefix}</span><span class="pn-doc-hero__fullname">${fullName}</span>`;
+      }
+      return `<span class="pn-doc-hero__fullname">${trimmed}</span>`;
+    }
+
+    function checkPositionMultiline() {
+      const posEl = document.getElementById('doc-position');
+      if (!posEl || !posEl.innerHTML.trim()) return;
+
+      posEl.classList.remove('pos-align-left');
+      if (window.innerWidth <= 768) {
+        const childDivs = posEl.querySelectorAll('div');
+        const brTags = posEl.querySelectorAll('br');
+        const style = window.getComputedStyle(posEl);
+        const lh = parseFloat(style.lineHeight) || 24;
+        const lineCount = Math.round(posEl.offsetHeight / lh);
+        
+        if (lineCount >= 3 || childDivs.length >= 3 || brTags.length >= 2) {
+          posEl.classList.add('pos-align-left');
+        }
+      }
+    }
+
     // Populate page
     document.getElementById('page-title').innerText = doctor.name + ' | Bệnh viện Quốc tế City';
     document.getElementById('breadcrumb-name').innerText = doctor.name;
-    document.getElementById('doc-name').innerText = doctor.name;
-    document.getElementById('doc-photo').src = doctor.image || 'images/doctor_male_1.webp';
+    document.getElementById('doc-name').innerHTML = formatDoctorHeroName(doctor.name);
+    document.getElementById('doc-photo').src = (doctor.image || 'images/doctor_male_1.webp').replace('images/bac-si/new/', 'images/bac-si/');
     document.getElementById('doc-photo').alt = doctor.name;
 
     const specBadge = document.getElementById('doc-spec-badge');
@@ -1220,9 +1277,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (doctor.position) {
       document.getElementById('doc-position').innerHTML = doctor.position;
+      checkPositionMultiline();
     } else {
       document.getElementById('doc-position').innerHTML = '';
     }
+    window.addEventListener('resize', checkPositionMultiline);
 
     function cleanDoctorBio(content) {
       if (!content) return '';

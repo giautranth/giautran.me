@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 5 Options Doctor Hero Card - Bệnh viện Quốc tế City</title>
+  <link rel="stylesheet" href="style.css?v=20261028_mobmenu6">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f8fafc;
+      font-family: 'Montserrat', sans-serif;
+      padding: 2.5rem 1.5rem;
+      color: #1e293b;
+    }
+    .demo-wrapper {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .demo-section {
+      background: #ffffff;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .demo-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .demo-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.65rem;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .demo-desc {
+      font-size: 0.92rem;
+      color: #64748b;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Common Card Layout Base */
+    .hero-card-base {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2.25rem;
+      align-items: center;
+      padding: 1.85rem 2.25rem;
+      border-radius: 20px;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .hero-card-base .photo-box {
+      width: 240px;
+      height: 240px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+    .hero-card-base .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-card-base .info-box {
+      text-align: left;
+    }
+    .hero-card-base .doc-name {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.3;
+    }
+    .hero-card-base .doc-name .prefix {
+      display: inline;
+      margin-right: 0.4em;
+    }
+    .hero-card-base .doc-name .fullname {
+      display: inline;
+    }
+    .hero-card-base .doc-positions {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 0.38rem;
+    }
+
+    /* ═════════════════════════════════════════════════════
+       OPTION 1: TONE VÀNG HOÀNG KIM (GOLD LUXURY PRESTIGE)
+       ═════════════════════════════════════════════════════ */
+    #opt-1 {
+      background: linear-gradient(135deg, #fffdfa 0%, #fdfbf5 50%, #fbf5e6 100%);
+      border: 1.5px solid #d4af37;
+      box-shadow: 0 12px 35px rgba(212, 175, 55, 0.16);
+      position: relative;
+    }
+    #opt-1::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 19px;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      pointer-events: none;
+    }
+    #opt-1 .photo-box {
+      border: 3px solid #d4af37;
+      box-shadow: 0 10px 28px rgba(212, 175, 55, 0.22);
+    }
+    #opt-1 .doc-pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.85rem;
+      border-radius: 99px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.6rem;
+      box-shadow: 0 3px 10px rgba(184, 134, 11, 0.25);
+    }
+    #opt-1 .doc-name {
+      color: #003B5C;
+    }
+    #opt-1 .doc-name .prefix {
+      color: #b8860b;
+    }
+    #opt-1 .doc-positions {
+      color: #2d3748;
+    }
+    #opt-1 .doc-pos-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+    }
+    #opt-1 .doc-pos-item::before {
+      content: "◆";
+      color: #d4af37;
+      font-size: 0.72rem;
+      margin-top: 0.28rem;
+      flex-shrink: 0;
+    }
+
+    /* ═════════════════════════════════════════════════════
+       OPTION 2: TONE XANH CIH Y TẾ HIỆN ĐẠI (OCEAN TEAL)
+       ═════════════════════════════════════════════════════ */
+    #opt-2 {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #ffffff 100%);
+      border: 1.5px solid #007DA5;
+      box-shadow: 0 12px 35px rgba(0, 125, 165, 0.14);
+    }
+    #opt-2 .photo-box {
+      border: 3px solid #007DA5;
+      box-shadow: 0 12px 28px rgba(0, 125, 165, 0.22);
+    }
+    #opt-2 .doc-pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #007DA5;
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.85rem;
+      border-radius: 99px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.6rem;
+      box-shadow: 0 4px 12px rgba(0, 125, 165, 0.25);
+    }
+    #opt-2 .doc-name {
+      color: #007DA5;
+    }
+    #opt-2 .doc-positions {
+      color: #1e293b;
+    }
+    #opt-2 .doc-pos-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    #opt-2 .doc-pos-item::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #007DA5;
+      margin-top: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    /* ═════════════════════════════════════════════════════
+       OPTION 3: VIỀN ĐỐI XỨNG VÀNG GOLD AACI (S-GOLD BORDER)
+       ═════════════════════════════════════════════════════ */
+    #opt-3 {
+      background: #ffffff;
+      border: 1.5px solid #f1e4b8;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 32px rgba(184, 134, 11, 0.1);
+    }
+    #opt-3::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4.5px;
+      background: linear-gradient(90deg, #b8860b 0%, #e5c158 35%, #fff3b0 50%, #c59b27 80%, #996515 100%);
+    }
+    #opt-3::after {
+      content: "";
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4.5px;
+      background: linear-gradient(90deg, #996515 0%, #c59b27 20%, #fff3b0 50%, #e5c158 65%, #b8860b 100%);
+    }
+    #opt-3 .photo-box {
+      border: 2.5px solid #d4af37;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18);
+    }
+    #opt-3 .doc-pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.28rem 0.85rem;
+      border-radius: 99px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.6rem;
+    }
+    #opt-3 .doc-name {
+      color: #007DA5;
+    }
+    #opt-3 .doc-positions {
+      color: #334155;
+    }
+    #opt-3 .doc-pos-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    #opt-3 .doc-pos-item::before {
+      content: "✦";
+      color: #d4af37;
+      font-size: 0.78rem;
+      margin-top: 0.24rem;
+      flex-shrink: 0;
+    }
+
+    /* ═════════════════════════════════════════════════════
+       OPTION 4: DUAL-TONE: XANH CIH & VÀNG GOLD HARMONY
+       ═════════════════════════════════════════════════════ */
+    #opt-4 {
+      background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 50%, #fdfbf2 100%);
+      border: 1.5px solid #dbeafe;
+      border-left: 6px solid #007DA5;
+      box-shadow: 0 12px 35px rgba(0, 59, 92, 0.08);
+      position: relative;
+    }
+    #opt-4::before {
+      content: "";
+      position: absolute;
+      top: 0; right: 0;
+      width: 140px;
+      height: 140px;
+      background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #opt-4 .photo-box {
+      border: 2.5px solid #bae6fd;
+      border-top-color: #007DA5;
+      border-bottom-color: #d4af37;
+      box-shadow: 0 10px 26px rgba(0, 125, 165, 0.15);
+    }
+    #opt-4 .doc-pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: linear-gradient(90deg, #007DA5 0%, #0093c4 55%, #c59b27 100%);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.9rem;
+      border-radius: 99px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.6rem;
+      box-shadow: 0 3px 10px rgba(0, 125, 165, 0.22);
+    }
+    #opt-4 .doc-name {
+      color: #007DA5;
+    }
+    #opt-4 .doc-name .fullname {
+      color: #003B5C;
+    }
+    #opt-4 .doc-positions {
+      color: #334155;
+    }
+    #opt-4 .doc-pos-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    #opt-4 .doc-pos-item::before {
+      content: "—";
+      color: #007DA5;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ═════════════════════════════════════════════════════
+       OPTION 5: XANH NAVY HOÀNG GIA & VÀNG ÁNH KIM (PRESIDENTIAL VIP)
+       ═════════════════════════════════════════════════════ */
+    #opt-5 {
+      background: linear-gradient(135deg, #002b45 0%, #003B5C 60%, #004d73 100%);
+      border: 2px solid #d4af37;
+      box-shadow: 0 14px 40px rgba(0, 43, 69, 0.28);
+      position: relative;
+    }
+    #opt-5 .photo-box {
+      border: 3px solid #e5c158;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+    #opt-5 .doc-pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: linear-gradient(135deg, #d4af37 0%, #f3e8c8 50%, #c59b27 100%);
+      color: #002b45;
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 0.32rem 0.95rem;
+      border-radius: 99px;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.6rem;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+    }
+    #opt-5 .doc-name {
+      color: #ffffff;
+    }
+    #opt-5 .doc-name .prefix {
+      color: #e5c158;
+    }
+    #opt-5 .doc-positions {
+      color: #e2e8f0;
+    }
+    #opt-5 .doc-pos-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    #opt-5 .doc-pos-item::before {
+      content: "✦";
+      color: #e5c158;
+      font-size: 0.78rem;
+      margin-top: 0.22rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-wrapper">
+    <div style="text-align: center; margin-bottom: 2.5rem;">
+      <h1 style="color: #003B5C; font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">
+        5 OPTION MÀU SẮC & THIẾT KẾ CHO HERO BÁC SĨ
+      </h1>
+      <p style="color: #64748b; font-size: 1rem;">
+        Các phương án kết hợp tone màu Vàng Gold & Xanh thương hiệu Bệnh viện Quốc tế City (CIH)
+      </p>
+    </div>
+
+    <!-- OPTION 1 -->
+    <div class="demo-section">
+      <div class="demo-title">
+        Option 1: Tone Vàng Hoàng Kim (Gold Luxury Prestige)
+        <span class="demo-badge" style="background: #fef3c7; color: #b45309;">Tone Vàng</span>
+      </div>
+      <div class="demo-desc">
+        Nền kem ngọc trai ánh kim, viền vàng gold tinh xảo, badge vàng hoàng gia, mang lại vẻ uy tín và cao cấp cho chuyên gia/ban giám đốc.
+      </div>
+
+      <div class="hero-card-base" id="opt-1">
+        <div class="photo-box">
+          <img src="images/bac-si/bs-thanh.webp" alt="ThS.BS. Trần Quốc Thành" />
+        </div>
+        <div class="info-box">
+          <div class="doc-pill-tag">★ BAN GIÁM ĐỐC CIH</div>
+          <h2 class="doc-name">
+            <span class="prefix">ThS. BS.</span><span class="fullname">Trần Quốc Thành</span>
+          </h2>
+          <div class="doc-positions">
+            <div class="doc-pos-item">Giám đốc Điều hành Bệnh viện Quốc tế City &amp; Bệnh viện Gia An 115</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Chi hội Bệnh viện Tư nhân TP. HCM và Khu vực phía Nam</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TP. HCM</div>
+            <div class="doc-pos-item">Ủy viên BCH Hội Doanh nghiệp Phường An Lạc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 2 -->
+    <div class="demo-section">
+      <div class="demo-title">
+        Option 2: Tone Xanh CIH Y Tế Hiện Đại (Ocean Teal)
+        <span class="demo-badge" style="background: #e0f2fe; color: #0369a1;">Tone Xanh</span>
+      </div>
+      <div class="demo-desc">
+        Nền xanh ngọc dịu mát, viền xanh CIH chuẩn thương hiệu, phong cách y tế chuẩn quốc tế tươi sáng, sạch sẽ và thân thiện.
+      </div>
+
+      <div class="hero-card-base" id="opt-2">
+        <div class="photo-box">
+          <img src="images/bac-si/bs-thanh.webp" alt="ThS.BS. Trần Quốc Thành" />
+        </div>
+        <div class="info-box">
+          <div class="doc-pill-tag">BAN GIÁM ĐỐC CIH</div>
+          <h2 class="doc-name">
+            <span class="prefix">ThS. BS.</span><span class="fullname">Trần Quốc Thành</span>
+          </h2>
+          <div class="doc-positions">
+            <div class="doc-pos-item">Giám đốc Điều hành Bệnh viện Quốc tế City &amp; Bệnh viện Gia An 115</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Chi hội Bệnh viện Tư nhân TP. HCM và Khu vực phía Nam</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TP. HCM</div>
+            <div class="doc-pos-item">Ủy viên BCH Hội Doanh nghiệp Phường An Lạc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 3 -->
+    <div class="demo-section">
+      <div class="demo-title">
+        Option 3: Viền Đối Xứng Vàng Gold AACI (S-Gold Border)
+        <span class="demo-badge" style="background: #fef08a; color: #854d0e;">Chuẩn AACI Hoa Kỳ</span>
+      </div>
+      <div class="demo-desc">
+        Nền trắng tinh khôi kết hợp 2 đường viền dải gradient vàng kim đối xứng chéo trên & dưới (đồng bộ phong cách khối chứng nhận AACI/ISO).
+      </div>
+
+      <div class="hero-card-base" id="opt-3">
+        <div class="photo-box">
+          <img src="images/bac-si/bs-thanh.webp" alt="ThS.BS. Trần Quốc Thành" />
+        </div>
+        <div class="info-box">
+          <div class="doc-pill-tag">CHUYÊN GIA Y TẾ CIH</div>
+          <h2 class="doc-name">
+            <span class="prefix">ThS. BS.</span><span class="fullname">Trần Quốc Thành</span>
+          </h2>
+          <div class="doc-positions">
+            <div class="doc-pos-item">Giám đốc Điều hành Bệnh viện Quốc tế City &amp; Bệnh viện Gia An 115</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Chi hội Bệnh viện Tư nhân TP. HCM và Khu vực phía Nam</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TP. HCM</div>
+            <div class="doc-pos-item">Ủy viên BCH Hội Doanh nghiệp Phường An Lạc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 4 -->
+    <div class="demo-section">
+      <div class="demo-title">
+        Option 4: Dual-Tone: Xanh CIH & Vàng Gold Kết Hợp (Teal & Gold Harmony)
+        <span class="demo-badge" style="background: #e0f2fe; color: #b45309; border: 1px solid #fed7aa;">Phối Xanh + Vàng</span>
+      </div>
+      <div class="demo-desc">
+        Vạch nhấn bên trái màu Xanh CIH đặc trưng kết hợp góc ánh sáng vàng kim nhẹ, badge gradient xanh chuyển vàng hài hòa, hiện đại.
+      </div>
+
+      <div class="hero-card-base" id="opt-4">
+        <div class="photo-box">
+          <img src="images/bac-si/bs-thanh.webp" alt="ThS.BS. Trần Quốc Thành" />
+        </div>
+        <div class="info-box">
+          <div class="doc-pill-tag">★ BAN GIÁM ĐỐC CIH</div>
+          <h2 class="doc-name">
+            <span class="prefix">ThS. BS.</span><span class="fullname">Trần Quốc Thành</span>
+          </h2>
+          <div class="doc-positions">
+            <div class="doc-pos-item">Giám đốc Điều hành Bệnh viện Quốc tế City &amp; Bệnh viện Gia An 115</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Chi hội Bệnh viện Tư nhân TP. HCM và Khu vực phía Nam</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TP. HCM</div>
+            <div class="doc-pos-item">Ủy viên BCH Hội Doanh nghiệp Phường An Lạc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION 5 -->
+    <div class="demo-section">
+      <div class="demo-title">
+        Option 5: Xanh Navy Hoàng Gia & Vàng Ánh Kim (Presidential VIP)
+        <span class="demo-badge" style="background: #003B5C; color: #fde047;">Executive VIP</span>
+      </div>
+      <div class="demo-desc">
+        Nền xanh Navy sâu sang trọng, viền vàng gold quyền uy, chữ trắng sáng nổi bật, đậm chất ban lãnh đạo cấp cao & cố vấn quốc tế.
+      </div>
+
+      <div class="hero-card-base" id="opt-5">
+        <div class="photo-box">
+          <img src="images/bac-si/bs-thanh.webp" alt="ThS.BS. Trần Quốc Thành" />
+        </div>
+        <div class="info-box">
+          <div class="doc-pill-tag">✦ BAN GIÁM ĐỐC BỆNH VIỆN</div>
+          <h2 class="doc-name">
+            <span class="prefix">ThS. BS.</span><span class="fullname">Trần Quốc Thành</span>
+          </h2>
+          <div class="doc-positions">
+            <div class="doc-pos-item">Giám đốc Điều hành Bệnh viện Quốc tế City &amp; Bệnh viện Gia An 115</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Chi hội Bệnh viện Tư nhân TP. HCM và Khu vực phía Nam</div>
+            <div class="doc-pos-item">Phó Chủ tịch Thường trực Hội Khoa học Sức khỏe TP. HCM</div>
+            <div class="doc-pos-item">Ủy viên BCH Hội Doanh nghiệp Phường An Lạc</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

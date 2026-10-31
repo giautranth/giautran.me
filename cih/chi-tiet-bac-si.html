@@ -1255,7 +1255,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('page-title').innerText = doctor.name + ' | Bệnh viện Quốc tế City';
     document.getElementById('breadcrumb-name').innerText = doctor.name;
     document.getElementById('doc-name').innerHTML = formatDoctorHeroName(doctor.name);
-    document.getElementById('doc-photo').src = (doctor.image || 'images/doctor_male_1.webp').replace('images/bac-si/new/', 'images/bac-si/');
+    document.getElementById('doc-photo').src = doctor.image || 'images/doctor_male_1.webp';
     document.getElementById('doc-photo').alt = doctor.name;
 
     const specBadge = document.getElementById('doc-spec-badge');

@@ -52,31 +52,31 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-cki-nguyen-ngan-ha",
         "name": "BS.CKI. Nguyễn Ngân Hà",
         "title": "Bác sĩ Khoa Phụ Sản",
-        "img": "images/bac-si/new/bs-ha.webp"
+        "img": "images/bac-si/new/bs-ha.webp?v=20261031"
       },
       {
         "slug": "bs-ckii-pham-minh-khoi-nguyen",
         "name": "BS.CKII. Phạm Minh Khôi Nguyên",
         "title": "Bác sĩ Khoa Phụ Sản",
-        "img": "images/bac-si/new/bs-khoi-nguyen.webp?v=2"
+        "img": "images/bac-si/new/bs-khoi-nguyen.webp?v=20261031"
       },
       {
         "slug": "bs-cki-tran-the-loc",
         "name": "BS.CKII. Trần Thế Lộc",
         "title": "Bác sĩ Khoa Phụ Sản",
-        "img": "images/bac-si/new/bs-loc.webp?v=2"
+        "img": "images/bac-si/new/bs-loc.webp?v=20261031"
       },
       {
         "slug": "ths-bs-nguyen-xuan-cong",
         "name": "ThS.BS. Nguyễn Xuân Công",
         "title": "Bác sĩ Siêu Âm khoa Phụ Sản",
-        "img": "images/bac-si/new/bs-cong.webp"
+        "img": "images/bac-si/new/bs-cong.webp?v=20261031"
       },
       {
         "slug": "bs-ckii-nguyen-vu-my-linh",
         "name": "BS.CKII. Nguyễn Vũ Mỹ Linh",
         "title": "Phó Trưởng Khoa Phụ Sản",
-        "img": "images/bac-si/new/bs-linh.webp?v=2"
+        "img": "images/bac-si/new/bs-linh.webp?v=20261031"
       }
     ],
     "packages": [
@@ -288,7 +288,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-cki-nguyen-thi-ngoc-suong",
         "name": "BS.CKI. Nguyễn Thị Ngọc Sương",
         "title": "Trưởng Trung tâm Hỗ trợ sinh sản",
-        "img": "images/bac-si/new/bs-suong.webp"
+        "img": "images/bac-si/new/bs-suong.webp?v=20261031"
       },
       {
         "slug": "thac-si-dang-truong-son",
@@ -521,7 +521,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-bach-hue",
         "name": "BS.CKII. Nguyễn Bạch Huệ",
         "title": "Trưởng khoa Nhi<br>&amp; Hồi sức Tích cực Sơ sinh",
-        "img": "images/bac-si/new/bs-hue.webp"
+        "img": "images/bac-si/new/bs-hue.webp?v=20261031"
       },
       {
         "slug": "bscki-nguyen-xuan-tai",
@@ -666,7 +666,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "bs-ckii-nguyen-bach-hue",
         "name": "BS.CKII. Nguyễn Bạch Huệ",
         "title": "Trưởng khoa Nhi<br>&amp; Hồi sức Tích cực Sơ sinh",
-        "img": "images/bac-si/new/bs-hue.webp"
+        "img": "images/bac-si/new/bs-hue.webp?v=20261031"
       },
       {
         "slug": "bscki-nguyen-xuan-tai",
@@ -823,13 +823,13 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
-        "img": "images/bac-si/new/bs-hai.webp"
+        "img": "images/bac-si/new/bs-hai.webp?v=20261031"
       },
       {
         "slug": "bs-ckii-tran-thanh-binh",
         "name": "BS.CKII. Trần Thanh Bình",
         "title": "Trưởng Khoa Khám bệnh",
-        "img": "images/bac-si/new/bs-binh.webp"
+        "img": "images/bac-si/new/bs-binh.webp?v=20261031"
       },
       {
         "slug": "bs-cki-le-thi-ngoc-tran",
@@ -1029,13 +1029,13 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
-        "img": "images/bac-si/new/bs-hai.webp"
+        "img": "images/bac-si/new/bs-hai.webp?v=20261031"
       },
       {
         "slug": "bs-ckii-tran-thanh-binh",
         "name": "BS.CKII. Trần Thanh Bình",
         "title": "Trưởng Khoa Khám bệnh",
-        "img": "images/bac-si/new/bs-binh.webp"
+        "img": "images/bac-si/new/bs-binh.webp?v=20261031"
       },
       {
         "slug": "bs-cki-le-thi-ngoc-tran",
@@ -2315,7 +2315,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ts-bs-pham-chi-lang",
         "name": "TS.BS. Phạm Chí Lăng",
         "title": "Trưởng khoa Chấn Thương Chỉnh Hình",
-        "img": "images/bac-si/new/bs-lang.webp"
+        "img": "images/bac-si/new/bs-lang.webp?v=20261031"
       },
       {
         "slug": "ths-bs-tran-van-be-bay",
@@ -2466,7 +2466,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "pgs-ts-bs-tran-minh-hoang",
         "name": "PGS.TS. BS. Trần Minh Hoàng",
         "title": "Trưởng Đơn vị Can thiệp mạch máu (DSA)<br>và Chẩn đoán hình ảnh",
-        "img": "images/bac-si/new/bs-hoang.webp"
+        "img": "images/bac-si/new/bs-hoang.webp?v=20261031"
       },
       {
         "slug": "bs-cki-tra",
@@ -3082,7 +3082,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
-        "img": "images/bac-si/new/bs-hai.webp"
+        "img": "images/bac-si/new/bs-hai.webp?v=20261031"
       },
       {
         "slug": "bs-cki-nguyen-manh-hung",
@@ -3529,7 +3529,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
-        "img": "images/bac-si/new/bs-hai.webp"
+        "img": "images/bac-si/new/bs-hai.webp?v=20261031"
       },
       {
         "slug": "bs-cki-nguyen-manh-hung",
@@ -3686,7 +3686,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "pgs-ts-bs-tran-minh-hoang",
         "name": "PGS.TS. BS. Trần Minh Hoàng",
         "title": "Trưởng Đơn vị Can thiệp mạch máu (DSA)<br>và Chẩn đoán hình ảnh",
-        "img": "images/bac-si/new/bs-hoang.webp"
+        "img": "images/bac-si/new/bs-hoang.webp?v=20261031"
       },
       {
         "slug": "bs-cki-ong-kien-huy",
@@ -3800,19 +3800,19 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
-        "img": "images/bac-si/new/bs-hai.webp"
+        "img": "images/bac-si/new/bs-hai.webp?v=20261031"
       },
       {
         "slug": "bs-ckii-tran-thanh-binh",
         "name": "BS.CKII. Trần Thanh Bình",
         "title": "Trưởng Khoa Khám bệnh",
-        "img": "images/bac-si/new/bs-binh.webp"
+        "img": "images/bac-si/new/bs-binh.webp?v=20261031"
       },
       {
         "slug": "bs-ckii-nguyen-bach-hue",
         "name": "BS.CKII. Nguyễn Bạch Huệ",
         "title": "Trưởng khoa Nhi<br>&amp; Hồi sức Tích cực Sơ sinh",
-        "img": "images/bac-si/new/bs-hue.webp"
+        "img": "images/bac-si/new/bs-hue.webp?v=20261031"
       },
       {
         "slug": "bscki-nguyen-xuan-tai",
@@ -4011,7 +4011,7 @@ const CIH_SPECIALTY_DATA = [
         "slug": "ths-bs-tran-nhu-hai",
         "name": "ThS.BS. Trần Như Hải",
         "title": "Bác sĩ Chuyên khoa Nội tổng quát<br>Trưởng phòng khám Quốc tế - Cố vấn cấp cao",
-        "img": "images/bac-si/new/bs-hai.webp"
+        "img": "images/bac-si/new/bs-hai.webp?v=20261031"
       },
       {
         "slug": "bs-cki-nguyen-manh-hung",
